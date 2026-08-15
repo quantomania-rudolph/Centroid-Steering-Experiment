@@ -1,0 +1,37 @@
+{
+  "pass": true,
+  "phase": "batch10_round3_suites_and_curation",
+  "pipeline_version": 5,
+  "prior_batch_had_suites": true,
+  "suites_added": [
+    "p04_graph_bfs",
+    "p14_regex_email",
+    "p29_cron_field",
+    "p31_kv_flat",
+    "p35_cookie_jar",
+    "p37_hash_chain",
+    "p54_fsm_turnstile",
+    "p56_shunting_yard",
+    "p60_template_fmt",
+    "p61_markdown_strip"
+  ],
+  "suite_probe": "G18_suite10_probe.json",
+  "suite_probe_pass": true,
+  "verify_admitted": {"n_files": 29, "n_pass": 29},
+  "miner_dry_run": {"n_admitted": 29},
+  "qa_pipe_audit": {
+    "all_ten_judge_approve": true,
+    "all_ten_suite_pass": true,
+    "all_ten_pv5": true
+  },
+  "personal_review": {
+    "algorithms_real": true,
+    "soft_notes": [
+      "p31/p37 leftover Broken docstrings / awkward stub prose",
+      "p56 unused import operator (harmless)",
+      "p04 narrative slightly long but form-ok"
+    ]
+  },
+  "note": "First parallel attempt hit transformers AutoTokenizer import race; completed remaining 3 serially.",
+  "configured_suite_count": 29
+}

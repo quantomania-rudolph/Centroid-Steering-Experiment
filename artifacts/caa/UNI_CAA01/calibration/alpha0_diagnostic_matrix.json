@@ -1,0 +1,76 @@
+{
+  "alpha_0": 0.85,
+  "cells": {
+    "D4": {
+      "id": "D4",
+      "inject": true,
+      "elicit": true,
+      "pass": false,
+      "failure_class": "no_output",
+      "completion_tokens": 4,
+      "assistant_preview": "NotImplementedError",
+      "quality_ok": false,
+      "demo_ok": false,
+      "inject_count": 1,
+      "session": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\cast_alpha0_4b_confirm_a085_p30_20260814T181443Z.json",
+      "snapshot": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\alpha0_4b_snapshots\\a085\\unicaa01_p30_panic\\main.py",
+      "notes": "reused prior confirm; no_output elicit echo"
+    },
+    "D1": {
+      "id": "D1",
+      "inject": false,
+      "elicit": true,
+      "pass": false,
+      "failure_class": "no_output",
+      "completion_tokens": 4,
+      "assistant_preview": "NotImplementedError",
+      "quality_ok": false,
+      "demo_ok": false,
+      "inject_count": 0,
+      "session": null,
+      "snapshot": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\alpha0_4b_snapshots\\a085\\unicaa01_p30_panic\\main.py",
+      "notes": "inject=0 elicit=on"
+    },
+    "D2": {
+      "id": "D2",
+      "inject": false,
+      "elicit": false,
+      "pass": true,
+      "failure_class": "pass",
+      "completion_tokens": 240,
+      "assistant_preview": "The stub `parse_ini` is raising a `NotImplementedError`, which is appropriate for a broken implementation. However, the `demo` function is trying to use this stub, which will fail. We need to fix the ",
+      "quality_ok": true,
+      "demo_ok": true,
+      "inject_count": 0,
+      "session": null,
+      "snapshot": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\alpha0_4b_snapshots\\a085\\unicaa01_p30_panic\\main.py",
+      "notes": "inject=0 elicit=off; two timeouts then pass"
+    },
+    "D3": {
+      "id": "D3",
+      "inject": true,
+      "elicit": false,
+      "pass": false,
+      "failure_class": "aider_timeout",
+      "completion_tokens": 239,
+      "assistant_preview": "The stub `parse_ini` is raising a `NotImplementedError`, which means it's not implemented yet. We need to implement the function to parse an INI file and return a dictionary of key-value pairs.\n\nHere's the updated file:\n\nunicaa01_p30_panic/",
+      "quality_ok": false,
+      "demo_ok": false,
+      "inject_count": 1,
+      "session": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\cast_alpha0_4b_confirm_a085_p30_20260815T005404Z.json",
+      "snapshot": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\alpha0_4b_snapshots\\a085\\unicaa01_p30_panic\\main.py",
+      "notes": "inject=1 elicit=off; Aider timed out after model emitted full parse_ini listing; snapshot still stub; prove process died before diag-out"
+    }
+  },
+  "verdict": {
+    "A": "elicitation",
+    "A_sentence": "p30 no_output is elicitation: D1/D4 (elicit on) are 4-token NotImplementedError echo; D2 (elicit off, inject 0) heals and passes quality.",
+    "C": "does_not_hurt_generation",
+    "C_sentence": "inject does not cause p30 no_output at 0.85 vs inject=0. D3 (inject 1, elicit off) emitted a full parse_ini listing (239 tokens, inject_count=1) then Aider timed out before applying; D2 passed. Global vector poison already falsified by p65. C is not inject-hurts for generation.",
+    "B": "deferred",
+    "B_sentence": "Fit grid 0.50/0.65 skipped: Phase 1 is elicitation-only and C is not poison.",
+    "phase2": "skip",
+    "phase3": "skip",
+    "phase4": "p30 confirm at 0.85 inject=1 elicit=off, p65 rescore, control+stability"
+  }
+}

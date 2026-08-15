@@ -1,0 +1,16 @@
+{
+  "gate": "admission",
+  "version": 1,
+  "timestamp": "2026-08-10T01:52:31.892962+00:00",
+  "pass": true,
+  "source": "practice",
+  "pool_eligible": false,
+  "checks": [
+    {
+      "id": "PR1_practice_never_pool",
+      "pass": true,
+      "detail": "pool_eligible forced false for practice"
+    }
+  ],
+  "pair_slug": "practice_token_bucket"
+}

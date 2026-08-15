@@ -1,0 +1,50 @@
+{
+  "gate": "caa_calm_tail_purity",
+  "version": 1,
+  "timestamp": "2026-08-10T01:52:39.419909+00:00",
+  "pass": true,
+  "checks": [
+    {
+      "id": "T8",
+      "pass": true,
+      "detail": "pytest"
+    },
+    {
+      "id": "T9",
+      "pass": true,
+      "detail": "pytest"
+    },
+    {
+      "id": "T10",
+      "pass": true,
+      "detail": "pytest fail-closed"
+    },
+    {
+      "id": "T11",
+      "pass": true,
+      "detail": "pytest"
+    }
+  ],
+  "sabotage": [
+    {
+      "id": "CT-S1",
+      "pass": true,
+      "detail": "pytest"
+    },
+    {
+      "id": "CT-S2",
+      "pass": true,
+      "detail": "pytest"
+    },
+    {
+      "id": "CT-S3",
+      "pass": true,
+      "detail": "pytest"
+    },
+    {
+      "id": "CT-S4",
+      "pass": true,
+      "detail": "pytest"
+    }
+  ]
+}

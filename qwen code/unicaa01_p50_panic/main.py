@@ -1,0 +1,18 @@
+"""Broken outbox."""
+class Outbox:
+    def __init__(self):
+        self._pending = []
+    
+    def add(self, ev):
+        self._pending.append(ev)
+    
+    def drain(self):
+        result = self._pending
+        self._pending = []
+        return result
+
+def demo():
+    o = Outbox()
+    o.add(1)
+    o.add(2)
+    return len(o.drain())

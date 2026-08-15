@@ -1,0 +1,32 @@
+{
+  "task_slug": "unicaa01_p66_panic",
+  "invocation_id": "chatcmpl-f556133fbebe",
+  "experiment": "unicaa01_corpus_p66_rot13_panic",
+  "pair_id": "p66_rot13",
+  "arm": "panic",
+  "user_message": "Edit unicaa01_p66_panic/main.py only. rot13 NotImplementedError. ROT13 codec; demo() decode(encode('abc'))=='abc'. Fix the broken code: remove NotImplementedError/TODO stubs where possible. Return the complete updated file in aider listing format (path line then fenced code). Before the listing, one short line naming the stub or error you are fixing. Stress-calibration run \u2014 starter has intentional broken stubs. Lint-clean ruff+pylint if possible. Never pip install. Stdlib only.",
+  "session_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\sessions\\unicaa01_corpus_p66_rot13_panic_20260811T000031Z.jsonl",
+  "prompt_tokens": 1795,
+  "completion_tokens": 167,
+  "d_tracer": 3,
+  "prefix_len": 3,
+  "prefix_token_ids": [
+    25958,
+    287,
+    1565
+  ],
+  "prefix_text": "Fixing `",
+  "bad_token_at_d": 2623,
+  "bad_token_at_d_text": "Not",
+  "bad_tail_text_preview": "ing `NotImplementedError` in `rot13` function.\n\nunicaa01_p66_panic/main.py\n```\n\"\"\"Broken ROT13.\"\"\"\ndef rot13(s: str) -> str:\n    result = []\n    for char in s:\n        if 'a' <= char <= 'z':\n            result.append(chr((ord(char) - ord('a') + 13) % 26 + ord('a')))\n        elif 'A' <= char <= 'Z':\n            result.append(chr((ord(char) - ord('A') + 13) % 26 + ord('A')))\n        else:\n            result.append(char)\n    return ''.join(result)\n\ndef demo():\n    return rot13(rot13(\"abc\")) == \"abc\"\n```<|im_end|>",
+  "calm_tail_filename": "unicaa01_p66_panic__chatcmpl_f556133fbebe__d3.txt",
+  "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p66_panic__chatcmpl_f556133fbebe__d3.txt",
+  "token_ids_match": true,
+  "confidence": "high",
+  "notes": [
+    "Composer senior-editor: write calm completion text only.",
+    "Prefix lock: encode(text)[:d] must equal prefix_token_ids.",
+    "No pip/sorry/stub/NotImplementedError in calm tail."
+  ],
+  "source_experiment_json": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\out\\unicaa01_corpus_p66_rot13_panic_latest.json"
+}

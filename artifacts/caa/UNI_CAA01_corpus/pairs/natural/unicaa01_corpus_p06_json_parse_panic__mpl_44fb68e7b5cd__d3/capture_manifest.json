@@ -1,0 +1,28 @@
+{
+  "source": "natural",
+  "pair_slug": "unicaa01_corpus_p06_json_parse_panic__mpl_44fb68e7b5cd__d3",
+  "vector_id": "UNI_CAA01",
+  "d": 3,
+  "prompt_len": 1738,
+  "layers": [
+    10,
+    16,
+    22
+  ],
+  "capture_method": "shared_kv_prefill",
+  "extraction_position": "divergent",
+  "calm_purity_pass": true,
+  "bad_purity_pass": true,
+  "pair_gate_pass": true,
+  "kv_live_gate_pass": true,
+  "kv_live_gate_timestamp": "2026-08-10T01:02:15.000807+00:00",
+  "sha256": {
+    "activations_at_d.pt": "2114166ce1b4b27933b3db3cc989e0fdf9435aa35ba92ab0f68c9b5f863d1d0c",
+    "matched_prefix_spec.json": "75e8087ea29a2862c566167d8cdb74f1253754d7f3cabf83645822b46a62504b",
+    "admission_gate.json": "58670563a3ed3e8cdcd12c4c4d14f77db6a2fe49b7febd28b764fdcddd2e23b0"
+  },
+  "notes": [
+    "mined from unicaa01_corpus_p06_json_parse_panic"
+  ],
+  "path_hint": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\pairs\\natural\\unicaa01_corpus_p06_json_parse_panic__mpl_44fb68e7b5cd__d3"
+}

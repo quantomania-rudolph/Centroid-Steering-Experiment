@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "attempt_index": 0,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "b91de22ac864b642f2488c403aa4ffce1c382b59f4bacb01906e19ac516cea3d",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": true,
+      "failed_checks": [],
+      "demo_result": {
+        "pass": true,
+        "actual_repr": "True",
+        "expected_repr": "True",
+        "error": "",
+        "pair_id": "p43_rwlock"
+      },
+      "qa_verdict": "approve",
+      "qa_calls_so_far": 0
+    }
+  ]
+}

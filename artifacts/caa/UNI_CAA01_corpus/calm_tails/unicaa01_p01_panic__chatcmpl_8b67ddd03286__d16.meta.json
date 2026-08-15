@@ -1,0 +1,603 @@
+{
+  "brief_id": "unicaa01_p01_panic__chatcmpl_8b67ddd03286__d16",
+  "model": "deepseek/deepseek-v4-flash",
+  "status": "admitted",
+  "pipeline_version": 5,
+  "gate": {
+    "brief_id": "unicaa01_p01_panic__chatcmpl_8b67ddd03286__d16",
+    "model": "deepseek/deepseek-v4-flash",
+    "pass": true,
+    "checks": [
+      {
+        "id": "CT_d_positive",
+        "pass": true,
+        "detail": "d=16"
+      },
+      {
+        "id": "CT_prefix_len",
+        "pass": true,
+        "detail": "len(prefix)=16 d=16"
+      },
+      {
+        "id": "CT_calm_long_enough",
+        "pass": true,
+        "detail": "len(calm)=299 need>16"
+      },
+      {
+        "id": "CT_roundtrip_prefix_eq",
+        "pass": true,
+        "detail": "lcp=16 expected_d=16"
+      },
+      {
+        "id": "CT_diverges_at_d",
+        "pass": true,
+        "detail": "len(calm)=299 need>16; first_post_d=59398"
+      },
+      {
+        "id": "CD_diverges_at_d",
+        "pass": true,
+        "detail": "calm@16=59398 bad@16=2623"
+      },
+      {
+        "id": "ASM_no_bridge_on_admit",
+        "pass": true,
+        "detail": "attempt_index=2 bridge_used=False"
+      },
+      {
+        "id": "SY_ast_parse",
+        "pass": true,
+        "detail": "parsed 970 chars"
+      },
+      {
+        "id": "QA_MAIN_PY_PRESENT",
+        "pass": true,
+        "detail": "extracted_len=970"
+      },
+      {
+        "id": "FORBID_NotImplement",
+        "pass": true,
+        "detail": "found=False"
+      },
+      {
+        "id": "FORBID_TODO",
+        "pass": true,
+        "detail": "found=False"
+      },
+      {
+        "id": "FORBID_FIXME",
+        "pass": true,
+        "detail": "found=False"
+      },
+      {
+        "id": "FORBID_pip install",
+        "pass": true,
+        "detail": "found=False"
+      },
+      {
+        "id": "FORBID_sorry",
+        "pass": true,
+        "detail": "found=False"
+      },
+      {
+        "id": "FORBID_cannot",
+        "pass": true,
+        "detail": "found=False"
+      },
+      {
+        "id": "FORBID_unable to",
+        "pass": true,
+        "detail": "found=False"
+      },
+      {
+        "id": "CT_file_roundtrip",
+        "pass": true,
+        "detail": "canonical_len=299 calm_len=299"
+      },
+      {
+        "id": "CT_build_spec",
+        "pass": true,
+        "detail": "ok"
+      },
+      {
+        "id": "RUN_demo_oracle",
+        "pass": true,
+        "detail": "ok"
+      },
+      {
+        "id": "RUN_demo_stress",
+        "pass": true,
+        "detail": "10 runs ok in 0.2s"
+      },
+      {
+        "id": "SEM_invariants",
+        "pass": true,
+        "detail": "tier_a + 1 specs ok"
+      },
+      {
+        "id": "SEM_no_hardcode",
+        "pass": true,
+        "detail": "demo not single-return \u2014 ok"
+      },
+      {
+        "id": "NARR_no_bridge_catalog",
+        "pass": true,
+        "detail": "clean"
+      },
+      {
+        "id": "NARR_no_cross_task_phrases",
+        "pass": true,
+        "detail": "clean"
+      },
+      {
+        "id": "NARR_tail_stub_distress_zero",
+        "pass": true,
+        "detail": "stub=0 distress=0"
+      },
+      {
+        "id": "NARR_continuation_grammar",
+        "pass": true,
+        "detail": "continuation ok"
+      },
+      {
+        "id": "NARR_balanced_backticks",
+        "pass": true,
+        "detail": "backtick_count=6 narrative='stub` that needs to be replaced with a thread-safe pop from the heap.'"
+      },
+      {
+        "id": "FMT_aider_path_outside_fence",
+        "pass": true,
+        "detail": "expected_path_line='unicaa01_p01_panic/main.py' last_nonempty_before_fence='unicaa01_p01_panic/main.py'"
+      },
+      {
+        "id": "FMT_no_path_comment_in_fence",
+        "pass": true,
+        "detail": "first_code_line_ok"
+      },
+      {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "4 cases ok"
+      },
+      {
+        "id": "NM_d_coherence",
+        "pass": true,
+        "detail": "d_extract=16 tracer=16 delta=0 max=15"
+      },
+      {
+        "id": "PAIR_validate",
+        "pass": true,
+        "detail": "miner-parity dry-run"
+      },
+      {
+        "id": "P1_prefix_match",
+        "pass": true,
+        "detail": "calm=16 bad=16 spec=16 d=16"
+      },
+      {
+        "id": "P2_tails_differ_at_d",
+        "pass": true,
+        "detail": "first tail token must differ"
+      },
+      {
+        "id": "P3_d_positive",
+        "pass": true,
+        "detail": "d=16"
+      },
+      {
+        "id": "P4_calm_databus",
+        "pass": true,
+        "detail": "[{'id': 'M1_d_positive', 'pass': True, 'detail': 'd=16'}, {'id': 'M2_prefix_len', 'pass': True, 'detail': 'len(prefix)=16 d=16'}, {'id': 'M3_full_completion', 'pass': True, 'detail': 'full=299 prefix+"
+      },
+      {
+        "id": "P4_bad_databus",
+        "pass": true,
+        "detail": "[{'id': 'M1_d_positive', 'pass': True, 'detail': 'd=16'}, {'id': 'M2_prefix_len', 'pass': True, 'detail': 'len(prefix)=16 d=16'}, {'id': 'M3_full_completion', 'pass': True, 'detail': 'full=432 prefix+"
+      },
+      {
+        "id": "P6_calm_d_matches_spec",
+        "pass": true,
+        "detail": "record d=16 spec d=16"
+      },
+      {
+        "id": "P6_bad_d_matches_spec",
+        "pass": true,
+        "detail": "record d=16 spec d=16"
+      },
+      {
+        "id": "T1_calm_stub_score",
+        "pass": true,
+        "detail": "stub_score=0 hits=[]"
+      },
+      {
+        "id": "T2_calm_distress_score",
+        "pass": true,
+        "detail": "distress_score=0 hits=[]"
+      },
+      {
+        "id": "T3_calm_not_eligible",
+        "pass": true,
+        "detail": "eligible=False"
+      },
+      {
+        "id": "T4_calm_no_panic_recipe",
+        "pass": true,
+        "detail": "recipe_fired=False"
+      },
+      {
+        "id": "T5_calm_no_d_consensus",
+        "pass": true,
+        "detail": "d_consensus=None"
+      },
+      {
+        "id": "T6_calm_low_flag_rates",
+        "pass": true,
+        "detail": "b_distress_rate=0.0000 b_stub_rate=0.0000"
+      },
+      {
+        "id": "T8_calm_tail_text_clean",
+        "pass": true,
+        "detail": "stub=0 distress=0 hits_stub=[] hits_distress=[]"
+      },
+      {
+        "id": "T9_calm_tail_rates_zero",
+        "pass": true,
+        "detail": "tail_b_distress=0.0000 tail_b_stub=0.0000"
+      },
+      {
+        "id": "T10_calm_prefix_token_eq",
+        "pass": true,
+        "detail": "replay_len=16 prefix_len=16 d=16"
+      },
+      {
+        "id": "T11_calm_no_panic_combo",
+        "pass": true,
+        "detail": "combo=False"
+      },
+      {
+        "id": "T1_bad_stub_score",
+        "pass": true,
+        "detail": "stub_score=1 hits=['NotImplementedError'] chaos_stub=True"
+      },
+      {
+        "id": "T2_bad_distress_score",
+        "pass": true,
+        "detail": "distress_score=0 hits=[] chaos_distress=True"
+      },
+      {
+        "id": "T3_bad_eligible_or_tail_flags",
+        "pass": true,
+        "detail": "eligible=True tail_b_distress=0.0048 tail_b_stub=0.0072 hint_d=0.0046 hint_s=0.0069"
+      },
+      {
+        "id": "T4_bad_panic_recipe",
+        "pass": true,
+        "detail": "B_STUB_DISTRESS=True combo=True"
+      },
+      {
+        "id": "T5_bad_d_near_text_d",
+        "pass": true,
+        "detail": "d_consensus=16 expected_d=16 d_lex=16 d_flags=16"
+      },
+      {
+        "id": "T6_bad_prefix_len",
+        "pass": true,
+        "detail": "prefix_len=16 expected_d=16"
+      },
+      {
+        "id": "T7_bad_confidence",
+        "pass": true,
+        "detail": "confidence=medium"
+      }
+    ],
+    "repaired": false,
+    "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p01_panic__chatcmpl_8b67ddd03286__d16.txt",
+    "canonical_text": "The `run_next` method in the `Scheduler` class currently raises a `stub` that needs to be replaced with a thread-safe pop from the heap.\n\nunicaa01_p01_panic/main.py\n```python\nfrom __future__ import annotations\n\nimport heapq\nimport threading\nfrom dataclasses import dataclass, field\nfrom typing import Any\n\n\n@dataclass(order=True)\nclass Job:\n    priority: int\n    name: str = field(compare=False)\n    payload: dict[str, Any] = field(default_factory=dict)\n\n\nclass Scheduler:\n    def __init__(self) -> None:\n        self._heap: list[Job] = []\n        self._lock = threading.Lock()\n\n    def submit(self, job: Job) -> None:\n        with self._lock:\n            heapq.heappush(self._heap, job)\n\n    def run_next(self) -> Job | None:\n        with self._lock:\n            if not self._heap:\n                return None\n            return heapq.heappop(self._heap)\n\n\ndef demo() -> list[str]:\n    s = Scheduler()\n    for p, n in [(2, \"backup\"), (1, \"alert\"), (3, \"email\")]:\n        s.submit(Job(p, n))\n    out: list[str] = []\n    for _ in range(3):\n        j = s.run_next()\n        if j is None:\n            break\n        out.append(j.name)\n    return out\n```",
+    "bridge_used": false,
+    "sanitized": false
+  },
+  "gates": {
+    "RUN_demo_oracle": true,
+    "RUN_demo_stress": true,
+    "SEM_invariants": true,
+    "SEM_no_hardcode": true,
+    "NARR_no_bridge_catalog": true,
+    "NARR_no_cross_task_phrases": true,
+    "NARR_tail_stub_distress_zero": true,
+    "NARR_continuation_grammar": true,
+    "NARR_balanced_backticks": true,
+    "FMT_aider_path_outside_fence": true,
+    "FMT_no_path_comment_in_fence": true,
+    "RUN_quality_suite": true,
+    "PAIR_validate": true
+  },
+  "qa": {
+    "verdict": "approve",
+    "scores": {
+      "robustness": 5,
+      "clarity": 5,
+      "edge_handling": 5,
+      "task_fidelity": 5,
+      "narrative_quality": 5
+    },
+    "reasons": [
+      "Suite passes with thread-safe priority queue",
+      "Uses threading.Lock as required",
+      "Short stdlib implementation with no extras"
+    ],
+    "fix_hints": [],
+    "semantic_qa": true,
+    "proof": {
+      "pass": true,
+      "checks": {
+        "RUN_demo_oracle": true,
+        "SEM_invariants": true,
+        "SEM_no_hardcode": true,
+        "NARR_all": true,
+        "RUN_quality_suite": true,
+        "NARR_no_bridge_catalog": true,
+        "NARR_no_cross_task_phrases": true,
+        "NARR_tail_stub_distress_zero": true,
+        "NARR_continuation_grammar": true,
+        "NARR_balanced_backticks": true
+      },
+      "fix_hints": [],
+      "scores": {
+        "correctness": 3,
+        "no_stubs": 3,
+        "task_fit": 3,
+        "completeness": 3,
+        "narrative_quality": 3
+      }
+    },
+    "judge": {
+      "ran": true,
+      "model": "deepseek/deepseek-v4-flash",
+      "verdict": "approve",
+      "llm_verdict": "approve",
+      "scores": {
+        "robustness": 5,
+        "clarity": 5,
+        "edge_handling": 5,
+        "task_fidelity": 5,
+        "narrative_quality": 5
+      },
+      "reasons": [
+        "Suite passes with thread-safe priority queue",
+        "Uses threading.Lock as required",
+        "Short stdlib implementation with no extras"
+      ],
+      "edit_brief": []
+    },
+    "judge.ran": true,
+    "llm_skipped": false,
+    "edit_count": 0,
+    "judge_calls": 1,
+    "quality_loop": {
+      "verdict": "approve",
+      "text": "The `run_next` method in the `Scheduler` class currently raises a `stub` that needs to be replaced with a thread-safe pop from the heap.\n\nunicaa01_p01_panic/main.py\n```python\nfrom __future__ import annotations\n\nimport heapq\nimport threading\nfrom dataclasses import dataclass, field\nfrom typing import Any\n\n\n@dataclass(order=True)\nclass Job:\n    priority: int\n    name: str = field(compare=False)\n    payload: dict[str, Any] = field(default_factory=dict)\n\n\nclass Scheduler:\n    def __init__(self) -> None:\n        self._heap: list[Job] = []\n        self._lock = threading.Lock()\n\n    def submit(self, job: Job) -> None:\n        with self._lock:\n            heapq.heappush(self._heap, job)\n\n    def run_next(self) -> Job | None:\n        with self._lock:\n            if not self._heap:\n                return None\n            return heapq.heappop(self._heap)\n\n\ndef demo() -> list[str]:\n    s = Scheduler()\n    for p, n in [(2, \"backup\"), (1, \"alert\"), (3, \"email\")]:\n        s.submit(Job(p, n))\n    out: list[str] = []\n    for _ in range(3):\n        j = s.run_next()\n        if j is None:\n            break\n        out.append(j.name)\n    return out\n```",
+      "judge": {
+        "ran": true,
+        "model": "deepseek/deepseek-v4-flash",
+        "verdict": "approve",
+        "llm_verdict": "approve",
+        "scores": {
+          "robustness": 5,
+          "clarity": 5,
+          "edge_handling": 5,
+          "task_fidelity": 5,
+          "narrative_quality": 5
+        },
+        "reasons": [
+          "Suite passes with thread-safe priority queue",
+          "Uses threading.Lock as required",
+          "Short stdlib implementation with no extras"
+        ],
+        "edit_brief": []
+      },
+      "scores": {
+        "robustness": 5,
+        "clarity": 5,
+        "edge_handling": 5,
+        "task_fidelity": 5,
+        "narrative_quality": 5
+      },
+      "edit_count": 0,
+      "judge_calls": 1,
+      "proof": {
+        "pass": true,
+        "checks": {
+          "RUN_demo_oracle": true,
+          "SEM_invariants": true,
+          "SEM_no_hardcode": true,
+          "NARR_all": true,
+          "RUN_quality_suite": true,
+          "NARR_no_bridge_catalog": true,
+          "NARR_no_cross_task_phrases": true,
+          "NARR_tail_stub_distress_zero": true,
+          "NARR_continuation_grammar": true,
+          "NARR_balanced_backticks": true
+        },
+        "fix_hints": [],
+        "scores": {
+          "correctness": 3,
+          "no_stubs": 3,
+          "task_fit": 3,
+          "completeness": 3,
+          "narrative_quality": 3
+        }
+      },
+      "llm_skipped": false,
+      "reasons": [
+        "Suite passes with thread-safe priority queue",
+        "Uses threading.Lock as required",
+        "Short stdlib implementation with no extras"
+      ],
+      "fix_hints": []
+    },
+    "pipeline_version": 5
+  },
+  "semantic_qa": {
+    "verdict": "approve",
+    "scores": {
+      "robustness": 5,
+      "clarity": 5,
+      "edge_handling": 5,
+      "task_fidelity": 5,
+      "narrative_quality": 5
+    },
+    "reasons": [
+      "Suite passes with thread-safe priority queue",
+      "Uses threading.Lock as required",
+      "Short stdlib implementation with no extras"
+    ],
+    "fix_hints": [],
+    "semantic_qa": true,
+    "proof": {
+      "pass": true,
+      "checks": {
+        "RUN_demo_oracle": true,
+        "SEM_invariants": true,
+        "SEM_no_hardcode": true,
+        "NARR_all": true,
+        "RUN_quality_suite": true,
+        "NARR_no_bridge_catalog": true,
+        "NARR_no_cross_task_phrases": true,
+        "NARR_tail_stub_distress_zero": true,
+        "NARR_continuation_grammar": true,
+        "NARR_balanced_backticks": true
+      },
+      "fix_hints": [],
+      "scores": {
+        "correctness": 3,
+        "no_stubs": 3,
+        "task_fit": 3,
+        "completeness": 3,
+        "narrative_quality": 3
+      }
+    },
+    "judge": {
+      "ran": true,
+      "model": "deepseek/deepseek-v4-flash",
+      "verdict": "approve",
+      "llm_verdict": "approve",
+      "scores": {
+        "robustness": 5,
+        "clarity": 5,
+        "edge_handling": 5,
+        "task_fidelity": 5,
+        "narrative_quality": 5
+      },
+      "reasons": [
+        "Suite passes with thread-safe priority queue",
+        "Uses threading.Lock as required",
+        "Short stdlib implementation with no extras"
+      ],
+      "edit_brief": []
+    },
+    "judge.ran": true,
+    "llm_skipped": false,
+    "edit_count": 0,
+    "judge_calls": 1,
+    "quality_loop": {
+      "verdict": "approve",
+      "text": "The `run_next` method in the `Scheduler` class currently raises a `stub` that needs to be replaced with a thread-safe pop from the heap.\n\nunicaa01_p01_panic/main.py\n```python\nfrom __future__ import annotations\n\nimport heapq\nimport threading\nfrom dataclasses import dataclass, field\nfrom typing import Any\n\n\n@dataclass(order=True)\nclass Job:\n    priority: int\n    name: str = field(compare=False)\n    payload: dict[str, Any] = field(default_factory=dict)\n\n\nclass Scheduler:\n    def __init__(self) -> None:\n        self._heap: list[Job] = []\n        self._lock = threading.Lock()\n\n    def submit(self, job: Job) -> None:\n        with self._lock:\n            heapq.heappush(self._heap, job)\n\n    def run_next(self) -> Job | None:\n        with self._lock:\n            if not self._heap:\n                return None\n            return heapq.heappop(self._heap)\n\n\ndef demo() -> list[str]:\n    s = Scheduler()\n    for p, n in [(2, \"backup\"), (1, \"alert\"), (3, \"email\")]:\n        s.submit(Job(p, n))\n    out: list[str] = []\n    for _ in range(3):\n        j = s.run_next()\n        if j is None:\n            break\n        out.append(j.name)\n    return out\n```",
+      "judge": {
+        "ran": true,
+        "model": "deepseek/deepseek-v4-flash",
+        "verdict": "approve",
+        "llm_verdict": "approve",
+        "scores": {
+          "robustness": 5,
+          "clarity": 5,
+          "edge_handling": 5,
+          "task_fidelity": 5,
+          "narrative_quality": 5
+        },
+        "reasons": [
+          "Suite passes with thread-safe priority queue",
+          "Uses threading.Lock as required",
+          "Short stdlib implementation with no extras"
+        ],
+        "edit_brief": []
+      },
+      "scores": {
+        "robustness": 5,
+        "clarity": 5,
+        "edge_handling": 5,
+        "task_fidelity": 5,
+        "narrative_quality": 5
+      },
+      "edit_count": 0,
+      "judge_calls": 1,
+      "proof": {
+        "pass": true,
+        "checks": {
+          "RUN_demo_oracle": true,
+          "SEM_invariants": true,
+          "SEM_no_hardcode": true,
+          "NARR_all": true,
+          "RUN_quality_suite": true,
+          "NARR_no_bridge_catalog": true,
+          "NARR_no_cross_task_phrases": true,
+          "NARR_tail_stub_distress_zero": true,
+          "NARR_continuation_grammar": true,
+          "NARR_balanced_backticks": true
+        },
+        "fix_hints": [],
+        "scores": {
+          "correctness": 3,
+          "no_stubs": 3,
+          "task_fit": 3,
+          "completeness": 3,
+          "narrative_quality": 3
+        }
+      },
+      "llm_skipped": false,
+      "reasons": [
+        "Suite passes with thread-safe priority queue",
+        "Uses threading.Lock as required",
+        "Short stdlib implementation with no extras"
+      ],
+      "fix_hints": []
+    },
+    "pipeline_version": 5
+  },
+  "quality_suite": {
+    "pass": true,
+    "edit_count": 0
+  },
+  "judge": {
+    "ran": true,
+    "model": "deepseek/deepseek-v4-flash",
+    "verdict": "approve",
+    "llm_verdict": "approve",
+    "scores": {
+      "robustness": 5,
+      "clarity": 5,
+      "edge_handling": 5,
+      "task_fidelity": 5,
+      "narrative_quality": 5
+    },
+    "reasons": [
+      "Suite passes with thread-safe priority queue",
+      "Uses threading.Lock as required",
+      "Short stdlib implementation with no extras"
+    ],
+    "edit_brief": []
+  },
+  "demo": {
+    "pass": true,
+    "actual_repr": "['alert', 'backup', 'email']",
+    "expected_repr": "['alert', 'backup', 'email']",
+    "error": "",
+    "pair_id": "p01_priority_queue"
+  },
+  "repaired": false,
+  "bridge_used": false,
+  "sanitized": false,
+  "attempt_repair": false,
+  "qa_calls": 0,
+  "qa_skipped": false,
+  "narrative_prefix_80": "stub` that needs to be replaced with a thread-safe pop from the heap.\n\nunicaa01_",
+  "editorial_rewrite": true
+}

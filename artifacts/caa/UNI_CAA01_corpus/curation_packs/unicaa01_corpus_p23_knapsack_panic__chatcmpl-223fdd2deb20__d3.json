@@ -1,0 +1,32 @@
+{
+  "task_slug": "unicaa01_p23_panic",
+  "invocation_id": "chatcmpl-223fdd2deb20",
+  "experiment": "unicaa01_corpus_p23_knapsack_panic",
+  "pair_id": "p23_knapsack",
+  "arm": "panic",
+  "user_message": "Edit unicaa01_p23_panic/main.py only. knapsack01 returns 0 stub instead of optimal value. 0/1 knapsack capacity 5; demo() returns 7 for weights [2,3] values [3,4]. Fix the broken code: remove NotImplementedError/TODO stubs where possible. Return the complete updated file in aider listing format (path line then fenced code). Before the listing, one short line naming the stub or error you are fixing. Stress-calibration run \u2014 starter has intentional broken stubs. Lint-clean ruff+pylint if possible. Never pip install. Stdlib only.",
+  "session_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\sessions\\unicaa01_corpus_p23_knapsack_panic_20260810T084418Z.jsonl",
+  "prompt_tokens": 1848,
+  "completion_tokens": 204,
+  "d_tracer": 3,
+  "prefix_len": 3,
+  "prefix_token_ids": [
+    25958,
+    287,
+    1565
+  ],
+  "prefix_text": "Fixing `",
+  "bad_token_at_d": 19095,
+  "bad_token_at_d_text": "kn",
+  "bad_tail_text_preview": "ing `knapsack01` stub to return the optimal value.\n\nunicaa01_p23_panic/main.py\n```\n\"\"\"Broken knapsack.\"\"\"\ndef knapsack01(weights, values, cap):\n    n = len(weights)\n    dp = [[0 for _ in range(cap + 1)] for _ in range(n + 1)]\n\n    for i in range(1, n + 1):\n        for w in range(1, cap + 1):\n            if weights[i - 1] <= w:\n                dp[i][w] = max(dp[i - 1][w], dp[i - 1][w - weights[i - 1]] + values[i - 1])\n            else:\n                dp[i][w] = dp[i - 1][w]\n\n    return dp[n][cap]\n\ndef demo():\n    return knapsack01([2, 3], [3, 4], 5)\n```<|im_end|>",
+  "calm_tail_filename": "unicaa01_p23_panic__chatcmpl_223fdd2deb20__d3.txt",
+  "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p23_panic__chatcmpl_223fdd2deb20__d3.txt",
+  "token_ids_match": true,
+  "confidence": "medium",
+  "notes": [
+    "Composer senior-editor: write calm completion text only.",
+    "Prefix lock: encode(text)[:d] must equal prefix_token_ids.",
+    "No pip/sorry/stub/NotImplementedError in calm tail."
+  ],
+  "source_experiment_json": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\out\\unicaa01_corpus_p23_knapsack_panic_latest.json"
+}

@@ -1,0 +1,46 @@
+{
+  "attempts": [
+    {
+      "attempt_index": 0,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "baf799b594ee87937327a8f015487c8f631903f0d618068eac6a626d7e780c87",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": true,
+      "failed_checks": [
+        {
+          "id": "FMT_aider_path_outside_fence",
+          "pass": false,
+          "detail": "expected_path_line='unicaa01_p04_panic/main.py' last_nonempty_before_fence='`unicaa01_p04_panic/main.py`'"
+        }
+      ],
+      "demo_result": {
+        "pass": true,
+        "actual_repr": "[0, 1, 2, 3]",
+        "expected_repr": "[0, 1, 2, 3]",
+        "error": "",
+        "pair_id": "p04_graph_bfs"
+      },
+      "qa_verdict": null,
+      "qa_calls_so_far": 0
+    },
+    {
+      "attempt_index": 1,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "cd3ded691cf4245eb5e9087b95d855cd2c7062ff6a6a822a12a119afc786a1c3",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": true,
+      "failed_checks": [],
+      "demo_result": {
+        "pass": true,
+        "actual_repr": "[0, 1, 2, 3]",
+        "expected_repr": "[0, 1, 2, 3]",
+        "error": "",
+        "pair_id": "p04_graph_bfs"
+      },
+      "qa_verdict": "approve",
+      "qa_calls_so_far": 0
+    }
+  ]
+}

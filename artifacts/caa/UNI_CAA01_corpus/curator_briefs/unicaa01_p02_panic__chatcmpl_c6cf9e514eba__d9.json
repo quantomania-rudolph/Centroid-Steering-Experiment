@@ -1,0 +1,59 @@
+{
+  "brief_version": 1,
+  "brief_id": "unicaa01_p02_panic__chatcmpl_c6cf9e514eba__d9",
+  "task_slug": "unicaa01_p02_panic",
+  "pair_id": "p02_lru_cache",
+  "invocation_id": "chatcmpl-c6cf9e514eba",
+  "domain": "data_structures",
+  "user_message": "Edit unicaa01_p02_panic/main.py only. LRU cache evicts wrong key and get() raises NotImplementedError. Fix O(1) get/put with correct LRU eviction for capacity 2. Fix the broken code: remove NotImplementedError/TODO stubs where possible. Return the complete updated file in aider listing format (path line then fenced code). Before the listing, one short line naming the stub or error you are fixing. Stress-calibration run \u2014 starter has intentional broken stubs. Lint-clean ruff+pylint if possible. Never pip install. Stdlib only.",
+  "panic_starter_main_py": "\"\"\"Broken LRU.\"\"\"\nclass LRU:\n    def __init__(self, cap):\n        self.cap = cap\n        self.data = {}\n    def get(self, k):\n        raise NotImplementedError\n    def put(self, k, v):\n        self.data[k] = v\n\ndef demo():\n    c = LRU(2)\n    c.put(1,1); c.put(2,2); c.get(1); c.put(3,3)\n    return [c.get(1), c.get(2)]\n",
+  "prefix_lock": {
+    "d": 9,
+    "prefix_token_ids": [
+      785,
+      1565,
+      455,
+      54258,
+      1714,
+      374,
+      18545,
+      264,
+      1565
+    ],
+    "prefix_text": "The `get()` method is raising a `",
+    "immutable": true
+  },
+  "divergence_context": {
+    "bad_token_at_d": 2623,
+    "bad_token_at_d_text": "Not",
+    "bad_tail_summary": "REJECTED panic-tail summary (prose only \u2014 DO NOT copy code/imports/phrases from it). Write a clean task-specific fix instead. )' method is raising a ' ', which needs to be fixed. Additionally, the LRU cache is not evicting the correct key when the capacity is reached. We need to implement an LRU cache that correctly evicts the least recently us\u2026",
+    "forbidden_patterns": [
+      "NotImplementedError",
+      "TODO",
+      "FIXME",
+      "pip install",
+      "sorry",
+      "cannot",
+      "unable to"
+    ]
+  },
+  "output_contract": {
+    "format": "aider_listing",
+    "target_staging_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\curator_staging\\unicaa01_p02_panic__chatcmpl_c6cf9e514eba__d9\\candidate.txt",
+    "target_admitted_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p02_panic__chatcmpl_c6cf9e514eba__d9.txt",
+    "task_dir": "unicaa01_p02_panic"
+  },
+  "success_criteria": "Edit unicaa01_p02_panic/main",
+  "task_summary": "Edit unicaa01_p02_panic/main",
+  "provenance": {
+    "source_pack": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\curation_packs\\unicaa01_corpus_p02_lru_cache_panic__chatcmpl-c6cf9e514eba__d9.json",
+    "source_experiment_json": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\out\\unicaa01_corpus_p02_lru_cache_panic_latest.json",
+    "tracer_confidence": "medium"
+  },
+  "tracer_confidence": "medium",
+  "demo_oracle": {
+    "pair_id": "p02_lru_cache",
+    "check_mode": "eq",
+    "expect_repr": "[1, None, 2]"
+  }
+}

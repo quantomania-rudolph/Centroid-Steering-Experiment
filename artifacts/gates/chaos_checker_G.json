@@ -1,0 +1,27 @@
+{
+  "checker": "G",
+  "version": 1,
+  "signed_off": true,
+  "device": "xpu",
+  "unit_test": "tests/unit/test_chaos_metrics.py::test_g_atom_low_relmse",
+  "live_aider_test": "prove_chaos_live.G",
+  "speed": {
+    "p50_us": 0,
+    "p95_us": 2003352.4000000397,
+    "budget_us": 120000,
+    "pass": true
+  },
+  "verifiability": {
+    "n_g_events": 2,
+    "note": "requires >=2 flag categories"
+  },
+  "usefulness": {
+    "clean_run_value": 0.0,
+    "distressed_run_value": 0.9581467017817287,
+    "separation_ratio": 1.0,
+    "min_required_ratio": 1.0,
+    "pass": true
+  },
+  "timestamp": "20260806T214238Z",
+  "used_force_alarm": false
+}

@@ -1,0 +1,8 @@
+{
+  "gate_id": "G8_narrative",
+  "pass": true,
+  "evidence": {
+    "pass": true,
+    "returncode": 0
+  }
+}

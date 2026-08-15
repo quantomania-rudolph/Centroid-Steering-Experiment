@@ -1,0 +1,13 @@
+Fixing `b64_encode` with a working base64 implementation.
+
+unicaa01_p27_panic/main.py
+```python
+"""Base64 encode with stdlib."""
+import base64
+
+def b64_encode(data: bytes) -> str:
+    return base64.b64encode(data).decode('ascii')
+
+def demo():
+    return b64_encode(b"hi")
+```

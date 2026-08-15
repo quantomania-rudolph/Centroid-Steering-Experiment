@@ -1,0 +1,57 @@
+{
+  "gate": "caa_master",
+  "version": 2,
+  "timestamp": "2026-08-12T06:25:41.809014+00:00",
+  "pass": true,
+  "pipeline_ready": true,
+  "capture_ready": true,
+  "capture_tooling_ready": true,
+  "production_ready": true,
+  "n_natural_admitted": 39,
+  "n_natural_by_root": {
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus": 39,
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01": 0
+  },
+  "n_practice_excluded": 1,
+  "n_corpus_eligible": 54,
+  "blockers": [
+    "CAST shadow stream gate not pass (set CAA_CAST_LIVE=1 + prove_cast_stream_live)"
+  ],
+  "gate_artifacts": {
+    "provenance": "artifacts/gates/caa_provenance_schema_gate.json",
+    "kv_unit": "artifacts/gates/kv_equivalence_unit_gate.json",
+    "kv_live": "artifacts/gates/kv_equivalence_live_gate.json",
+    "calm_tail": "artifacts/gates/caa_calm_tail_purity_gate.json",
+    "natural_admission": "artifacts/gates/caa_natural_pair_admission_gate.json",
+    "natural_live": "artifacts/gates/caa_natural_pair_live_gate.json",
+    "neutral": "artifacts/gates/caa_neutral_purity_gate.json",
+    "aggregate": "artifacts/gates/caa_aggregate_natural_only_gate.json",
+    "identity": "artifacts/gates/caa_vector_identity_gate.json",
+    "cast_stream_live": "artifacts/gates/cast_stream_live_gate.json",
+    "cast_inject_live": "artifacts/gates/cast_inject_live_gate.json"
+  },
+  "sabotage": [
+    {
+      "id": "Master-S1",
+      "pass": true,
+      "detail": "practice-only cannot be production_ready"
+    },
+    {
+      "id": "Master-S2",
+      "pass": true,
+      "detail": "n_natural=0 \u21d2 production_ready false"
+    }
+  ],
+  "ready_for": [
+    "unit / fixture pipeline testing",
+    "live XPU natural capture (tooling)",
+    "KV live proof + full pipeline",
+    "production CAST vectors"
+  ],
+  "notes": [
+    "n_natural_admitted counts on-disk pool-eligible activations only (not dry-run)",
+    "Discovery roots: UNI_CAA01_corpus + legacy UNI_CAA01",
+    "Practice pair is plumbing / KV fixture only \u2014 never pooled",
+    "production_ready requires \u22653 live natural pairs + green purity/identity/aggregate gates"
+  ]
+}

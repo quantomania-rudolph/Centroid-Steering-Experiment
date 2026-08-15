@@ -1,0 +1,305 @@
+{
+  "all_pass": true,
+  "reports": [
+    {
+      "experiment": "divergence_corpus_stress_b",
+      "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\divergence_corpus_stress_b_latest.json",
+      "n_invocations": 1,
+      "n_pass": 1,
+      "all_pass": true,
+      "results": [
+        {
+          "pass": true,
+          "invocation_id": "chatcmpl-b757de025c4c",
+          "eligible": true,
+          "d_consensus": 55,
+          "confidence": "medium",
+          "checks": [
+            {
+              "id": "A1_d_lexicon",
+              "pass": true,
+              "legacy": true,
+              "detail": "hint absent (legacy) scanned=55"
+            },
+            {
+              "id": "A2_d_flags",
+              "pass": true,
+              "legacy": true,
+              "detail": "hint absent (legacy) scanned=55"
+            },
+            {
+              "id": "A3_d_distress_only",
+              "pass": true,
+              "legacy": true,
+              "detail": "hint absent (legacy) scanned=55"
+            },
+            {
+              "id": "A4_d_stub_only",
+              "pass": true,
+              "legacy": true,
+              "detail": "hint absent (legacy) scanned=55"
+            },
+            {
+              "id": "B1_d_consensus",
+              "pass": true,
+              "detail": "traced=55 expected=55"
+            },
+            {
+              "id": "B2_prefix_token_ids",
+              "pass": true,
+              "detail": "len(prefix)=55 d=55 token_ids_len=516"
+            },
+            {
+              "id": "B3_recipe_lag",
+              "pass": true,
+              "detail": "lag=0 recipe=55 d=55"
+            },
+            {
+              "id": "C1_token_ids_len",
+              "pass": true,
+              "detail": "len=516 completion_tokens=516"
+            },
+            {
+              "id": "C2_sparse_token_id_match",
+              "pass": true,
+              "detail": "mismatches=[]"
+            }
+          ],
+          "traced": {
+            "experiment": "divergence_corpus_stress_b",
+            "invocation_index": 1,
+            "invocation_id": "chatcmpl-b757de025c4c",
+            "task_slug": "live_panic_demo_scheduler",
+            "eligible": true,
+            "d_lexicon": 55,
+            "d_flags": 55,
+            "d_recipe": 55,
+            "d_distress_only": 55,
+            "d_stub_only": 55,
+            "d_text": 237,
+            "d_consensus": 55,
+            "prefix_end": 54,
+            "prefix_token_ids": [
+              1249,
+              5046,
+              279,
+              10865,
+              1565,
+              38878,
+              63,
+              323,
+              5978,
+              429,
+              279,
+              1565,
+              25762,
+              54258,
+              729,
+              23473,
+              1565,
+              677,
+              5083,
+              516,
+              364,
+              31371,
+              516,
+              364,
+              2332,
+              660,
+              7808,
+              582,
+              1184,
+              311,
+              1281,
+              279,
+              2701,
+              4344,
+              1447,
+              16,
+              13,
+              29279,
+              429,
+              279,
+              1565,
+              38878,
+              63,
+              536,
+              12440,
+              13469,
+              279,
+              10619,
+              7177,
+              624,
+              17,
+              13,
+              10783,
+              279,
+              1565
+            ],
+            "prefix_text": "",
+            "divergence_class": "simultaneous",
+            "confidence": "medium",
+            "token_ids_len": 516,
+            "completion_tokens": 516,
+            "token_ids_match": true,
+            "d_recipe_lag": 0,
+            "panic_resolving": false,
+            "recipe_id": "B_STUB_DISTRESS",
+            "method_b_record": {
+              "d": 55,
+              "prefix_end": 54,
+              "prefix_text": "",
+              "prefix_token_ids": [
+                1249,
+                5046,
+                279,
+                10865,
+                1565,
+                38878,
+                63,
+                323,
+                5978,
+                429,
+                279,
+                1565,
+                25762,
+                54258,
+                729,
+                23473,
+                1565,
+                677,
+                5083,
+                516,
+                364,
+                31371,
+                516,
+                364,
+                2332,
+                660,
+                7808,
+                582,
+                1184,
+                311,
+                1281,
+                279,
+                2701,
+                4344,
+                1447,
+                16,
+                13,
+                29279,
+                429,
+                279,
+                1565,
+                38878,
+                63,
+                536,
+                12440,
+                13469,
+                279,
+                10619,
+                7177,
+                624,
+                17,
+                13,
+                10783,
+                279,
+                1565
+              ],
+              "task_slug": "live_panic_demo_scheduler"
+            },
+            "notes": [
+              "prefix decode empty \u2014 tokenizer unavailable?"
+            ]
+          },
+          "thresh": {
+            "B_distress": 0.12,
+            "B_stub": 0.1
+          }
+        }
+      ]
+    },
+    {
+      "experiment": "divergence_live_proof",
+      "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\divergence_live_proof_latest.json",
+      "n_invocations": 1,
+      "n_pass": 1,
+      "all_pass": true,
+      "results": [
+        {
+          "pass": true,
+          "invocation_id": "chatcmpl-2e2b2fd4c0b5",
+          "eligible": false,
+          "d_consensus": null,
+          "confidence": "none",
+          "checks": [
+            {
+              "id": "A1_d_lexicon",
+              "pass": true,
+              "detail": "both absent"
+            },
+            {
+              "id": "A2_d_flags",
+              "pass": true,
+              "detail": "both absent"
+            },
+            {
+              "id": "A3_d_distress_only",
+              "pass": true,
+              "legacy": true,
+              "detail": "hint absent (legacy) scanned=25"
+            },
+            {
+              "id": "A4_d_stub_only",
+              "pass": true,
+              "detail": "both absent"
+            },
+            {
+              "id": "C1_token_ids_len",
+              "pass": true,
+              "detail": "len=164 completion_tokens=164"
+            },
+            {
+              "id": "C2_sparse_token_id_match",
+              "pass": true,
+              "detail": "mismatches=[]"
+            }
+          ],
+          "traced": {
+            "experiment": "divergence_live_proof",
+            "invocation_index": 1,
+            "invocation_id": "chatcmpl-2e2b2fd4c0b5",
+            "task_slug": "chaos_proof_clean",
+            "eligible": false,
+            "d_lexicon": null,
+            "d_flags": null,
+            "d_recipe": null,
+            "d_distress_only": 25,
+            "d_stub_only": null,
+            "d_text": null,
+            "d_consensus": null,
+            "prefix_end": null,
+            "prefix_token_ids": [],
+            "prefix_text": "",
+            "divergence_class": "distress_only",
+            "confidence": "none",
+            "token_ids_len": 164,
+            "completion_tokens": 164,
+            "token_ids_match": true,
+            "d_recipe_lag": null,
+            "panic_resolving": null,
+            "recipe_id": null,
+            "method_b_record": null,
+            "notes": [
+              "not eligible for panic trace"
+            ]
+          },
+          "thresh": {
+            "B_distress": 0.12,
+            "B_stub": 0.1
+          }
+        }
+      ]
+    }
+  ]
+}

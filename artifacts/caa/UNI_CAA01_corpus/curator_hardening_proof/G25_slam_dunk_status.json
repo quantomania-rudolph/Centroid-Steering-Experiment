@@ -1,0 +1,39 @@
+{
+  "summary": {
+    "downstream_ready": 39,
+    "quarantined_bad_prefix": 10,
+    "verify_admitted_only": "39/39",
+    "personal_review_hard_fails": 0,
+    "personal_review_soft_locked_prefix": 7,
+    "miner_dry_run": "sees ready set; quarantined excluded via meta.status"
+  },
+  "quarantine_mechanism": {
+    "how": "Set calm_tails/*.meta.json status from 'admitted' to 'quarantined'",
+    "why_it_works": "jlens_qwen.caa.calm_tail_registry._meta_passes_v4_guard requires status==admitted",
+    "manifest": "artifacts/caa/UNI_CAA01_corpus/calm_tails/_quarantine_manifest.json",
+    "tool": "research/review_and_quarantine_calm_tails.py --apply"
+  },
+  "quarantined_reasons": [
+    "prefix_stub_word (The stub `...)",
+    "prefix_first_person_i_will (p04)",
+    "prefix_fix_colon_imperative (Fix: ...)"
+  ],
+  "replacements_admitted": [
+    "unicaa01_p12_panic__chatcmpl_b743782d78b3__d12",
+    "unicaa01_p40_panic__chatcmpl_fb69d4daa220__d3"
+  ],
+  "unused_briefs_do_not_curate": [
+    "unicaa01_p43_panic__chatcmpl_a0919e91993b__d9 (I asked...)",
+    "unicaa01_p43_panic__chatcmpl_aed493529bf9__d9 (I asked...)",
+    "unicaa01_p48_panic__chatcmpl_f61140bfb11a__d4 (Fix: Remove)",
+    "unicaa01_p62_panic__chatcmpl_b3cb6761ff98__d4 (Fix: Remove)",
+    "unicaa01_p17_panic__chatcmpl_f6cb780981eb__d3 (duplicate Fixing`)"
+  ],
+  "cannot_fill_without_new_panic": [
+    "p03", "p05", "p08", "p11", "p13", "p15", "p19", "p20", "p22", "p24",
+    "p36", "p38", "p41", "p44", "p46", "p47", "p53", "p59", "p64",
+    "plus quarantined pairs lacking alternate briefs: p04,p07,p09,p30,p31,p34,p37,p65"
+  ],
+  "residual_soft_only": "7 ready tails still have mild locked wording (broken / The error in the code) that cannot be edited without new panic invocations; code+gates are green.",
+  "suite_hardening": ["p43_rwlock", "p49_saga_step", "p52_lazy_property"]
+}

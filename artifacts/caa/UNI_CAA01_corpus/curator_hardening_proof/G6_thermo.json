@@ -1,0 +1,18 @@
+{
+  "gate_id": "G6_thermo",
+  "pass": true,
+  "blockers_remaining": 0,
+  "high_remaining": 0,
+  "fixed": [
+    "Bridge-assisted pass now continues revise loop instead of terminal admit_invariant_failed",
+    "_is_hard_fail uses order-independent set logic for CT_* gates",
+    "QA budget recorded once per run_qa_review, not per HTTP retry"
+  ],
+  "deferred": [
+    {
+      "item": "USD budget_usd caps in curator_models.yaml",
+      "waiver": "Plan v2 specifies hard call-count stops only; USD tracking out of scope"
+    }
+  ],
+  "timestamp": "2026-08-11T05:30:00Z"
+}

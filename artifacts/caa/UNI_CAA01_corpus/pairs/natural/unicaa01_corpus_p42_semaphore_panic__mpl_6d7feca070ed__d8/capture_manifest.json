@@ -1,0 +1,28 @@
+{
+  "source": "natural",
+  "pair_slug": "unicaa01_corpus_p42_semaphore_panic__mpl_6d7feca070ed__d8",
+  "vector_id": "UNI_CAA01",
+  "d": 8,
+  "prompt_len": 1931,
+  "layers": [
+    10,
+    16,
+    22
+  ],
+  "capture_method": "dual_full_forward",
+  "extraction_position": "divergent",
+  "calm_purity_pass": true,
+  "bad_purity_pass": true,
+  "pair_gate_pass": true,
+  "kv_live_gate_pass": true,
+  "kv_live_gate_timestamp": "2026-08-10T01:02:15.000807+00:00",
+  "sha256": {
+    "activations_at_d.pt": "029270c231b40253a9fcb5f4afd24cfebe975837cbfb665240efbe0c2453ef41",
+    "matched_prefix_spec.json": "2399e056c078c40eeb0f0314cda9363cce72275fdd36bd77b9a9f55db8985568",
+    "admission_gate.json": "f6270263548cb7a94b58a666287b023d9966c35e26fc4634c3a65670c26417e5"
+  },
+  "notes": [
+    "mined from unicaa01_corpus_p42_semaphore_panic"
+  ],
+  "path_hint": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\pairs\\natural\\unicaa01_corpus_p42_semaphore_panic__mpl_6d7feca070ed__d8"
+}

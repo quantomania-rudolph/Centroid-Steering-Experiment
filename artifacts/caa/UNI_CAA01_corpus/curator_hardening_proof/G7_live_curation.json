@@ -1,0 +1,27 @@
+{
+  "gate_id": "G7_live_curation",
+  "pass": true,
+  "brief_id": "unicaa01_p06_panic__chatcmpl_44fb68e7b5cd__d3",
+  "status": "admitted",
+  "bridge_used": false,
+  "sanitized": false,
+  "qa_verdict": "approve",
+  "qa_calls": 1,
+  "attempts": {
+    "total": 1,
+    "ledger_path": "artifacts/caa/UNI_CAA01_corpus/curator_staging/unicaa01_p06_panic__chatcmpl_44fb68e7b5cd__d3/attempts.json"
+  },
+  "gates": {
+    "RUN_demo_oracle": true,
+    "CT_file_roundtrip": true,
+    "PAIR_validate": true,
+    "ASM_no_bridge_on_admit": true
+  },
+  "demo": {
+    "actual_repr": "[1, 2]",
+    "expected_repr": "[1, 2]"
+  },
+  "calm_tail_path": "artifacts/caa/UNI_CAA01_corpus/calm_tails/unicaa01_p06_panic__chatcmpl_44fb68e7b5cd__d3.txt",
+  "build_calm_tail_from_file": "ok",
+  "timestamp": "2026-08-11T05:41:00Z"
+}

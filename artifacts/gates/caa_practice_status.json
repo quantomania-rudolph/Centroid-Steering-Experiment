@@ -1,0 +1,12 @@
+{
+  "pass": true,
+  "calm_pass": true,
+  "bad_pass": true,
+  "d": 77,
+  "device": "xpu",
+  "model_device_confirmed": "xpu",
+  "method_b_record_calm": true,
+  "method_b_record_bad": true,
+  "out": "artifacts/caa/UNI_CAA01/practice_pair/practice_pair_result.json",
+  "note": "XPU run 2026-08-09 after review fixes; re-run practice after code fixes for final gate"
+}

@@ -1,0 +1,13 @@
+{
+  "gate_id": "G3_clean_sweep",
+  "pass": true,
+  "evidence": {
+    "pass": true,
+    "mode": "post_pilot_v3_only",
+    "n_calm_tail_txt": 1,
+    "n_admitted": 1,
+    "n_pilot_admitted": 1,
+    "v3_meta_ok": true,
+    "g10_pass": true
+  }
+}

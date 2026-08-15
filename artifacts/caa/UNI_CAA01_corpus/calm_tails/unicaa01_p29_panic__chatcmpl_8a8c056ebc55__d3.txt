@@ -1,0 +1,21 @@
+Fixing `cron_minute_matches` now handles step patterns like `*/15`.
+unicaa01_p29_panic/main.py
+```python
+def cron_minute_matches(field, minute):
+    """Return True if the given minute matches the cron field expression."""
+    field = field.strip()
+    if field == '*':
+        return True
+    if field.startswith('*/'):
+        step = int(field[2:])
+        return minute % step == 0
+    # Handle simple integer or comma-separated (not needed for demo)
+    try:
+        return int(field) == minute
+    except ValueError:
+        # Could parse ranges or commas, but out of scope
+        return False
+
+def demo():
+    return cron_minute_matches("*/15", 30)
+```

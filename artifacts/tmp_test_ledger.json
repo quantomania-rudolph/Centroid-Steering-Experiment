@@ -1,0 +1,10 @@
+{
+  "qa_by_brief": {
+    "b1": 2
+  },
+  "qa_batch_total": 2,
+  "gen_fallback_batch_total": 0,
+  "max_calls_per_brief": 2,
+  "max_calls_per_batch": 10,
+  "max_gen_fallback_per_batch": 2
+}

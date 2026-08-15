@@ -1,0 +1,45 @@
+{
+  "overall_pass": false,
+  "n_pass": 4,
+  "n_fail": 2,
+  "checks": [
+    {
+      "id": "G6.1",
+      "name": "non-verbalized concept in workspace layers",
+      "pass": true,
+      "detail": "found=True samples=[{'layer': 11, 'tokens': ['H\u00f4tel', 'ylko', 'redni', 'adamente', 'iedy', 'Tumblr', ' backpage', '----</', 'aniu', 'anzeigen']}]"
+    },
+    {
+      "id": "G6.2",
+      "name": "code bug related tokens",
+      "pass": false,
+      "detail": "hit=False sample=[{'layer': 11, 'tokens': ['>NN', 'H\u00f4tel', '-Semit', 'odyn', 'r\u00f4', 'zcze', '\u24d2', ' \u043a\u043d\u043e\u043f\u043a', 'rire', 'ecycle', 'eczy', 'esktop', 'umbn', '\u0142ad', 'owane']}, {'layer': 12, 'tokens': ['>NN', 'H\u00f4tel', 'odyn', '-Semit', 'r\u00f4', 'zcze', ' \u043a\u043d\u043e\u043f\u043a', 'ylko', 'esktop', '\u24d2', 'Prostit', 'owane', ' \u0431\u0435\u0437\u043e\u043f', 'rire', '\ufe57']}]"
+    },
+    {
+      "id": "G6.3",
+      "name": "arithmetic intermediate ranks tracked",
+      "pass": false,
+      "detail": "targets={'21': None, '42': None, '49': None} ranks_head={k: ranks[k][:5] for k in ranks}"
+    },
+    {
+      "id": "G6.4",
+      "name": "J-space sparse reconstruction",
+      "pass": true,
+      "detail": "rel_mse=0.9355792438007164"
+    },
+    {
+      "id": "G6.5",
+      "name": "slice viewer artifacts",
+      "pass": true,
+      "detail": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\slices\\introspect_slice.json C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\slices\\introspect_slice.html"
+    },
+    {
+      "id": "G6.6",
+      "name": "logit vs J divergence recorded",
+      "pass": true,
+      "detail": "divergences=[0.0, 0.0, 0.0, 0.0, 0.0, 0.0] peak_layer=9 fitted=False"
+    }
+  ],
+  "gate": "GATE-6",
+  "timestamp_utc": "2026-08-03T02:59:09.144908+00:00"
+}

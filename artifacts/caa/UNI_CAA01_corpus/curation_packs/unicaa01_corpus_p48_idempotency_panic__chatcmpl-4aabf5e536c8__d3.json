@@ -1,0 +1,32 @@
+{
+  "task_slug": "unicaa01_p48_panic",
+  "invocation_id": "chatcmpl-4aabf5e536c8",
+  "experiment": "unicaa01_corpus_p48_idempotency_panic",
+  "pair_id": "p48_idempotency",
+  "arm": "panic",
+  "user_message": "Edit unicaa01_p48_panic/main.py only. IdempotencyStore put_if_absent NotImplementedError. Store idempotency keys; demo() second put returns False. Fix the broken code: remove NotImplementedError/TODO stubs where possible. Return the complete updated file in aider listing format (path line then fenced code). Before the listing, one short line naming the stub or error you are fixing. Stress-calibration run \u2014 starter has intentional broken stubs. Lint-clean ruff+pylint if possible. Never pip install. Stdlib only.",
+  "session_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\sessions\\unicaa01_corpus_p48_idempotency_panic_20260810T205105Z.jsonl",
+  "prompt_tokens": 2021,
+  "completion_tokens": 144,
+  "d_tracer": 3,
+  "prefix_len": 3,
+  "prefix_token_ids": [
+    25958,
+    287,
+    1565
+  ],
+  "prefix_text": "Fixing `",
+  "bad_token_at_d": 2623,
+  "bad_token_at_d_text": "Not",
+  "bad_tail_text_preview": "ing `NotImplementedError` in `IdempotencyStore.put_if_absent`.\n\nunicaa01_p48_panic/main.py\n```\n\"\"\"Broken idempotency.\"\"\"\nclass IdempotencyStore:\n    def __init__(self):\n        self._seen = set()\n    \n    def put_if_absent(self, key: str) -> bool:\n        if key in self._seen:\n            return False\n        self._seen.add(key)\n        return True\n\ndef demo():\n    s = IdempotencyStore()\n    first = s.put_if_absent(\"k\")\n    second = s.put_if_absent(\"k\")\n    return first and not second\n```<|im_end|>",
+  "calm_tail_filename": "unicaa01_p48_panic__chatcmpl_4aabf5e536c8__d3.txt",
+  "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p48_panic__chatcmpl_4aabf5e536c8__d3.txt",
+  "token_ids_match": true,
+  "confidence": "high",
+  "notes": [
+    "Composer senior-editor: write calm completion text only.",
+    "Prefix lock: encode(text)[:d] must equal prefix_token_ids.",
+    "No pip/sorry/stub/NotImplementedError in calm tail."
+  ],
+  "source_experiment_json": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\out\\unicaa01_corpus_p48_idempotency_panic_latest.json"
+}

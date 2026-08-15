@@ -1,0 +1,32 @@
+{
+  "model_id": "Qwen/Qwen2.5-Coder-7B-Instruct",
+  "source_layers": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26
+  ],
+  "target_layer": 27,
+  "n_prompts": 90,
+  "dim_batch": 64,
+  "elapsed_seconds": 1258.859499938786,
+  "gpu": "NVIDIA H100 PCIe",
+  "out_file": "/workspace/jlens-rental/qwen_jacobian_lens.pt",
+  "quarter_checkpoints": true,
+  "checkpoint_path": "/workspace/jlens-rental/ckpt.pt"
+}

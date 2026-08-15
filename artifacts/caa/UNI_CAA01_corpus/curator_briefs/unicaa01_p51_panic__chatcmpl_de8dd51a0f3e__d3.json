@@ -1,0 +1,53 @@
+{
+  "brief_version": 1,
+  "brief_id": "unicaa01_p51_panic__chatcmpl_de8dd51a0f3e__d3",
+  "task_slug": "unicaa01_p51_panic",
+  "pair_id": "p51_memoize",
+  "invocation_id": "chatcmpl-de8dd51a0f3e",
+  "domain": "functional",
+  "user_message": "Edit unicaa01_p51_panic/main.py only. memoize decorator NotImplementedError. Cache function results; demo() fib(10)==55 with memo. Fix the broken code: remove NotImplementedError/TODO stubs where possible. Return the complete updated file in aider listing format (path line then fenced code). Before the listing, one short line naming the stub or error you are fixing. Stress-calibration run \u2014 starter has intentional broken stubs. Lint-clean ruff+pylint if possible. Never pip install. Stdlib only.",
+  "panic_starter_main_py": "\"\"\"Broken memoize.\"\"\"\ndef memoize(fn):\n    raise NotImplementedError(\"memoize not implemented\")\n\ndef demo():\n    @memoize\n    def fib(n):\n        if n < 2:\n            return n\n        return fib(n-1)+fib(n-2)\n    return fib(10)\n",
+  "prefix_lock": {
+    "d": 3,
+    "prefix_token_ids": [
+      25958,
+      287,
+      1565
+    ],
+    "prefix_text": "Fixing `",
+    "immutable": true
+  },
+  "divergence_context": {
+    "bad_token_at_d": 2623,
+    "bad_token_at_d_text": "Not",
+    "bad_tail_summary": "REJECTED panic-tail summary (prose only \u2014 DO NOT copy code/imports/phrases from it). Write a clean task-specific fix instead. ing ' ' in 'memoize' decorator. [task main.py] <|im_end|>",
+    "forbidden_patterns": [
+      "NotImplementedError",
+      "TODO",
+      "FIXME",
+      "pip install",
+      "sorry",
+      "cannot",
+      "unable to"
+    ]
+  },
+  "output_contract": {
+    "format": "aider_listing",
+    "target_staging_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\curator_staging\\unicaa01_p51_panic__chatcmpl_de8dd51a0f3e__d3\\candidate.txt",
+    "target_admitted_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p51_panic__chatcmpl_de8dd51a0f3e__d3.txt",
+    "task_dir": "unicaa01_p51_panic"
+  },
+  "success_criteria": "demo() fib(10)==55 with memo.",
+  "task_summary": "Edit unicaa01_p51_panic/main",
+  "provenance": {
+    "source_pack": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\curation_packs\\unicaa01_corpus_p51_memoize_panic__chatcmpl-de8dd51a0f3e__d3.json",
+    "source_experiment_json": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\out\\unicaa01_corpus_p51_memoize_panic_latest.json",
+    "tracer_confidence": "high"
+  },
+  "tracer_confidence": "high",
+  "demo_oracle": {
+    "pair_id": "p51_memoize",
+    "check_mode": "eq",
+    "expect_repr": "55"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "checker": "F",
+  "version": 1,
+  "signed_off": true,
+  "device": "xpu",
+  "unit_test": "tests/unit/test_chaos_metrics.py::test_f_disjoint_overlap_zero",
+  "live_aider_test": "prove_chaos_live.F",
+  "speed": {
+    "p50_us": 500,
+    "p95_us": 2000,
+    "budget_us": 2000,
+    "pass": true
+  },
+  "verifiability": {
+    "n_f_events": 2,
+    "min_overlap_sample": 0.0,
+    "min_overlap_naive": 0.0
+  },
+  "usefulness": {
+    "clean_run_value": 1.0,
+    "distressed_run_value": 0.0,
+    "separation_ratio": 1000000.0,
+    "min_required_ratio": 1.0,
+    "pass": true
+  },
+  "timestamp": "20260806T214238Z",
+  "used_force_alarm": false
+}

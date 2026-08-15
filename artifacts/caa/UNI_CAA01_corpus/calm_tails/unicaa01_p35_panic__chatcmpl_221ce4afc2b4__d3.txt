@@ -1,0 +1,18 @@
+Fixing `cookie_jar` by replacing stubs with real dict storage.
+
+unicaa01_p35_panic/main.py
+```python
+"""Fixed cookie jar."""
+class CookieJar:
+    def __init__(self):
+        self._c = {}
+    def set(self, k, v):
+        self._c[k] = v
+    def get(self, k):
+        return self._c.get(k)
+
+def demo():
+    j = CookieJar()
+    j.set("k", "v")
+    return j.get("k")
+```

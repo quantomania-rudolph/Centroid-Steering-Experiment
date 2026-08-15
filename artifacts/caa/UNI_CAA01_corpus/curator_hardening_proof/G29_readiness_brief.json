@@ -1,0 +1,59 @@
+{
+  "title": "Miner dry-run + live-capture + master production readiness",
+  "simple_definitions": {
+    "dry_run": "Software check only: for each panic invocation with a curated calm tail, rebuild the calm completion, check prefix/d coherence, run validate_pair. Does not load the LLM for activations and does not write pairs/natural.",
+    "live_capture": "Same checks, then run the model on the shared prompt prefix and capture hidden-state activations at divergence for calm vs panic completions. Writes activations_at_d.pt + admission_gate under pairs/natural/<slug>/.",
+    "production_ready": "Master dashboard green light for shipping CAST steering vectors. Requires tooling green + at least 3 on-disk pool-eligible natural pairs + neutral/identity/aggregate gates green. Dry-run alone can never make this true."
+  },
+  "dry_run_review": {
+    "verdict": "PASS after hardening",
+    "evidence": "G27_miner_architecture_proof.json pass=true",
+    "results": {
+      "eligible_panic_invocations": 54,
+      "pair_validated": 39,
+      "rejected_missing_calm_quarantine_only": 15,
+      "hard_validate_failures": 0
+    },
+    "bugs_fixed": [
+      "Master/extract only scanned legacy UNI_CAA01 — now discovers UNI_CAA01_corpus + legacy",
+      "Dry-run gate was vacuous (always pass) — now requires validated>=1 and zero hard validate failures",
+      "validate_pair rejects dropped root-cause detail — now serialize failed check ids",
+      "d_extract vs tracer misalignment / bad_tail_text char-sliced by token index — normalized on extract d + tokenizer decode",
+      "Metrics conflated dry-run validates with on-disk admits — environment notes now distinguish"
+    ]
+  },
+  "live_capture_review": {
+    "verdict": "PATH PROVEN (CPU); XPU currently unstable after OOM/DEVICE_LOST",
+    "evidence": "G28_live_capture_proof.json pass=true",
+    "captured": [
+      "unicaa01_corpus_p01_priority_queue_panic__mpl_8b67ddd03286__d16"
+    ],
+    "on_disk": {
+      "activations": true,
+      "admission_pass": true,
+      "pool_eligible": true,
+      "master_sees_corpus": 1,
+      "master_n_natural_total": 2
+    },
+    "xpu_status": "Small XPU allocs work; full 7B .to(xpu) hits DEVICE_LOST/OOM after earlier crash cycles. Reboot/reset Intel GPU recommended before full XPU mining batch."
+  },
+  "master_production": {
+    "capture_tooling_ready": true,
+    "pipeline_ready": false,
+    "capture_ready": false,
+    "production_ready": false,
+    "why_production_false": [
+      "caa_provenance_schema_gate.json pass=false (PR4 legacy discover quirk)",
+      "caa_neutral_purity_gate.json pass=false (N5 delta slightly over 0.15 at L10)",
+      "need >=3 on-disk natural pairs (have 2: 1 corpus + 1 legacy)",
+      "tau/sigma + CAST injection deferred by design"
+    ],
+    "what_this_means": "You are ready to mine. You are not ready to claim production CAST vectors."
+  },
+  "next_steps": [
+    "Reset XPU (reboot or GPU driver reset), then CAA_MINE_LIVE=1 mine --unicaa01-corpus --live --device xpu for the remaining ~38",
+    "Or continue CPU mining if XPU stays broken (slow but correct)",
+    "After >=3 pool-eligible pairs: re-check/fix neutral N5 and provenance PR4, then re-run caa_master_gate.py",
+    "Only then extract steering vectors / consider production_ready"
+  ]
+}

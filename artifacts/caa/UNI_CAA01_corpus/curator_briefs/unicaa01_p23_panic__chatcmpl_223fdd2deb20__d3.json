@@ -1,0 +1,53 @@
+{
+  "brief_version": 1,
+  "brief_id": "unicaa01_p23_panic__chatcmpl_223fdd2deb20__d3",
+  "task_slug": "unicaa01_p23_panic",
+  "pair_id": "p23_knapsack",
+  "invocation_id": "chatcmpl-223fdd2deb20",
+  "domain": "algorithms",
+  "user_message": "Edit unicaa01_p23_panic/main.py only. knapsack01 returns 0 stub instead of optimal value. 0/1 knapsack capacity 5; demo() returns 7 for weights [2,3] values [3,4]. Fix the broken code: remove NotImplementedError/TODO stubs where possible. Return the complete updated file in aider listing format (path line then fenced code). Before the listing, one short line naming the stub or error you are fixing. Stress-calibration run \u2014 starter has intentional broken stubs. Lint-clean ruff+pylint if possible. Never pip install. Stdlib only.",
+  "panic_starter_main_py": "\"\"\"Broken knapsack.\"\"\"\ndef knapsack01(weights, values, cap):\n    raise NotImplementedError(\"knapsack01 not implemented\")\n\ndef demo():\n    return knapsack01([2,3],[3,4],5)\n",
+  "prefix_lock": {
+    "d": 3,
+    "prefix_token_ids": [
+      25958,
+      287,
+      1565
+    ],
+    "prefix_text": "Fixing `",
+    "immutable": true
+  },
+  "divergence_context": {
+    "bad_token_at_d": 19095,
+    "bad_token_at_d_text": "kn",
+    "bad_tail_summary": "REJECTED panic-tail summary (prose only \u2014 DO NOT copy code/imports/phrases from it). Write a clean task-specific fix instead. ing 'knapsack01' stub to return the optimal value. [task main.py] <|im_end|>",
+    "forbidden_patterns": [
+      "NotImplementedError",
+      "TODO",
+      "FIXME",
+      "pip install",
+      "sorry",
+      "cannot",
+      "unable to"
+    ]
+  },
+  "output_contract": {
+    "format": "aider_listing",
+    "target_staging_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\curator_staging\\unicaa01_p23_panic__chatcmpl_223fdd2deb20__d3\\candidate.txt",
+    "target_admitted_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p23_panic__chatcmpl_223fdd2deb20__d3.txt",
+    "task_dir": "unicaa01_p23_panic"
+  },
+  "success_criteria": "demo() returns 7 for weights [2,3] values [3,4].",
+  "task_summary": "Edit unicaa01_p23_panic/main",
+  "provenance": {
+    "source_pack": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\curation_packs\\unicaa01_corpus_p23_knapsack_panic__chatcmpl-223fdd2deb20__d3.json",
+    "source_experiment_json": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\out\\unicaa01_corpus_p23_knapsack_panic_latest.json",
+    "tracer_confidence": "medium"
+  },
+  "tracer_confidence": "medium",
+  "demo_oracle": {
+    "pair_id": "p23_knapsack",
+    "check_mode": "eq",
+    "expect_repr": "7"
+  }
+}

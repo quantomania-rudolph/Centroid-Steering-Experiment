@@ -1,0 +1,125 @@
+# =============================================================================
+# PASS 1 — Secrets, credentials, tokens (never commit)
+# =============================================================================
+secrets/
+**/secrets/
+**/secrets.env
+**/*secrets*.env
+!**/*secrets*.env.example
+!**/secrets/README.md
+*.env
+!.env.example
+.env.*
+!.env.*.example
+**/openrouter.env
+**/creds.txt
+**/creds.*
+**/*creds*
+**/credentials.json
+**/credentials.*
+**/.netrc
+**/id_rsa
+**/id_rsa.*
+**/*.pem
+**/*.key
+!**/*.key.example
+
+# =============================================================================
+# PASS 2 — Virtual envs, caches, IDE, local tooling
+# =============================================================================
+.venv/
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ty_cache/
+.benchmarks/
+.coverage
+htmlcov/
+.tox/
+.cache/
+*.cache
+
+.cursor/
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Aider local history (can contain session details)
+.aider*
+**/.aider*
+
+# Nested git dirs (workspace sandboxes)
+**/.git/
+
+# =============================================================================
+# PASS 3 — Large binaries, models, experiment dumps
+# =============================================================================
+# Model weights and checkpoints
+artifacts/models/
+artifacts/checkpoints/
+artifacts/lenses/
+*.pt
+*.pth
+*.safetensors
+*.bin
+*.ckpt
+*.onnx
+*.gguf
+*.whl
+
+# Large experiment outputs
+experiments/out/
+experiments/unicaa01_corpus/
+experiments/dashboard/data.json
+# Dashboard HTML with embedded run dumps (regenerate locally via fit_dashboard.py)
+experiments/dashboard/index.html
+
+# Local scratch files
+_t.py
+_tmp_*
+
+# GPU rental outputs and bundles
+jlens-rental/output/
+jlens-rental/bundle/
+jlens-rental/secrets/
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+
+# Logs (may contain paths or session data)
+*.log
+logs/
+
+# Large data formats
+*.parquet
+*.h5
+*.hdf5
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build / packaging
+*.egg-info/
+dist/
+build/
+*.egg
+target/
+*.pyd
+*.so
+*.dylib
+pip-wheel-metadata/
+
+# Jupyter
+.ipynb_checkpoints/

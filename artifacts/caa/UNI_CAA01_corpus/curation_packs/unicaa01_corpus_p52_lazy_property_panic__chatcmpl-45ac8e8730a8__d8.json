@@ -1,0 +1,37 @@
+{
+  "task_slug": "unicaa01_p52_panic",
+  "invocation_id": "chatcmpl-45ac8e8730a8",
+  "experiment": "unicaa01_corpus_p52_lazy_property_panic",
+  "pair_id": "p52_lazy_property",
+  "arm": "panic",
+  "user_message": "Edit unicaa01_p52_panic/main.py only. lazy_property descriptor NotImplementedError. Compute-once property; demo() calls factory once. Fix the broken code: remove NotImplementedError/TODO stubs where possible. Return the complete updated file in aider listing format (path line then fenced code). Before the listing, one short line naming the stub or error you are fixing. Stress-calibration run \u2014 starter has intentional broken stubs. Lint-clean ruff+pylint if possible. Never pip install. Stdlib only.",
+  "session_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\sessions\\unicaa01_corpus_p52_lazy_property_panic_20260810T213048Z.jsonl",
+  "prompt_tokens": 1754,
+  "completion_tokens": 266,
+  "d_tracer": 8,
+  "prefix_len": 8,
+  "prefix_token_ids": [
+    785,
+    1465,
+    304,
+    279,
+    2038,
+    374,
+    279,
+    1565
+  ],
+  "prefix_text": "The error in the code is the `",
+  "bad_token_at_d": 2623,
+  "bad_token_at_d_text": "Not",
+  "bad_tail_text_preview": "r in the code is the `NotImplementedError` in the `__get__` method of the `lazy_property` descriptor. This error should be removed, and the method should correctly compute the value and store it in the instance's dictionary.\n\nHere is the updated file:\n\nunicaa01_p52_panic/main.py\n```\n\"\"\"Broken lazy property.\"\"\"\nclass lazy_property:\n    def __init__(self, fn):\n        self.fn = fn\n        self.attr = \"_lazy_\" + fn.__name__\n    def __get__(self, obj, cls):\n        if obj is None:\n            return self\n        if not hasattr(obj, self.attr):\n            setattr(obj, self.attr, self.fn(obj))\n        return getattr(obj, self.attr)\n\nclass Box:\n    def __init__(self):\n        self.calls = 0\n    @lazy_property\n    def value(self):\n        self.calls += 1\n        return 7\n\ndef demo():\n    b = Box()\n    _ = b.value\n    _ = b.value\n    return b.calls\n```\n\nThis implementation ensures that the `value` property is computed only once and stored in the instance's dictionary, and subsequent accesses return the stored value. The `demo` function will return `1` as expected.<|im_end|>",
+  "calm_tail_filename": "unicaa01_p52_panic__chatcmpl_45ac8e8730a8__d8.txt",
+  "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p52_panic__chatcmpl_45ac8e8730a8__d8.txt",
+  "token_ids_match": true,
+  "confidence": "medium",
+  "notes": [
+    "Composer senior-editor: write calm completion text only.",
+    "Prefix lock: encode(text)[:d] must equal prefix_token_ids.",
+    "No pip/sorry/stub/NotImplementedError in calm tail."
+  ],
+  "source_experiment_json": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\out\\unicaa01_corpus_p52_lazy_property_panic_latest.json"
+}

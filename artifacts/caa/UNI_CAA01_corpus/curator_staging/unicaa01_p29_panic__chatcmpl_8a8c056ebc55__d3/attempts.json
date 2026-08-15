@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "attempt_index": 0,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "02a97e192463711cabfdada8f6bd0392ed7a51cbcbac56d624984fed869dce80",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": true,
+      "failed_checks": [],
+      "demo_result": {
+        "pass": true,
+        "actual_repr": "True",
+        "expected_repr": "True",
+        "error": "",
+        "pair_id": "p29_cron_field"
+      },
+      "qa_verdict": "approve",
+      "qa_calls_so_far": 0
+    }
+  ]
+}

@@ -1,0 +1,603 @@
+{
+  "brief_id": "unicaa01_p27_panic__chatcmpl_df7c0f5ed153__d3",
+  "model": "deepseek/deepseek-v4-flash",
+  "status": "admitted",
+  "pipeline_version": 5,
+  "gate": {
+    "brief_id": "unicaa01_p27_panic__chatcmpl_df7c0f5ed153__d3",
+    "model": "deepseek/deepseek-v4-flash",
+    "pass": true,
+    "checks": [
+      {
+        "id": "CT_d_positive",
+        "pass": true,
+        "detail": "d=3"
+      },
+      {
+        "id": "CT_prefix_len",
+        "pass": true,
+        "detail": "len(prefix)=3 d=3"
+      },
+      {
+        "id": "CT_calm_long_enough",
+        "pass": true,
+        "detail": "len(calm)=86 need>3"
+      },
+      {
+        "id": "CT_roundtrip_prefix_eq",
+        "pass": true,
+        "detail": "lcp=3 expected_d=3"
+      },
+      {
+        "id": "CT_diverges_at_d",
+        "pass": true,
+        "detail": "len(calm)=86 need>3; first_post_d=59398"
+      },
+      {
+        "id": "CD_diverges_at_d",
+        "pass": true,
+        "detail": "calm@3=59398 bad@3=2623"
+      },
+      {
+        "id": "ASM_no_bridge_on_admit",
+        "pass": true,
+        "detail": "attempt_index=0 bridge_used=False"
+      },
+      {
+        "id": "SY_ast_parse",
+        "pass": true,
+        "detail": "parsed 169 chars"
+      },
+      {
+        "id": "QA_MAIN_PY_PRESENT",
+        "pass": true,
+        "detail": "extracted_len=169"
+      },
+      {
+        "id": "FORBID_NotImplement",
+        "pass": true,
+        "detail": "found=False"
+      },
+      {
+        "id": "FORBID_TODO",
+        "pass": true,
+        "detail": "found=False"
+      },
+      {
+        "id": "FORBID_FIXME",
+        "pass": true,
+        "detail": "found=False"
+      },
+      {
+        "id": "FORBID_pip install",
+        "pass": true,
+        "detail": "found=False"
+      },
+      {
+        "id": "FORBID_sorry",
+        "pass": true,
+        "detail": "found=False"
+      },
+      {
+        "id": "FORBID_cannot",
+        "pass": true,
+        "detail": "found=False"
+      },
+      {
+        "id": "FORBID_unable to",
+        "pass": true,
+        "detail": "found=False"
+      },
+      {
+        "id": "CT_file_roundtrip",
+        "pass": true,
+        "detail": "canonical_len=86 calm_len=86"
+      },
+      {
+        "id": "CT_build_spec",
+        "pass": true,
+        "detail": "ok"
+      },
+      {
+        "id": "RUN_demo_oracle",
+        "pass": true,
+        "detail": "ok"
+      },
+      {
+        "id": "RUN_demo_stress",
+        "pass": true,
+        "detail": "not tagged \u2014 skipped"
+      },
+      {
+        "id": "SEM_invariants",
+        "pass": true,
+        "detail": "tier_a + 0 specs ok"
+      },
+      {
+        "id": "SEM_no_hardcode",
+        "pass": true,
+        "detail": "non-literal return \u2014 ok"
+      },
+      {
+        "id": "NARR_no_bridge_catalog",
+        "pass": true,
+        "detail": "clean"
+      },
+      {
+        "id": "NARR_no_cross_task_phrases",
+        "pass": true,
+        "detail": "clean"
+      },
+      {
+        "id": "NARR_tail_stub_distress_zero",
+        "pass": true,
+        "detail": "stub=0 distress=0"
+      },
+      {
+        "id": "NARR_continuation_grammar",
+        "pass": true,
+        "detail": "continuation ok"
+      },
+      {
+        "id": "NARR_balanced_backticks",
+        "pass": true,
+        "detail": "backtick_count=2 narrative='stub` by replacing the stub with a working base64 implementation.'"
+      },
+      {
+        "id": "FMT_aider_path_outside_fence",
+        "pass": true,
+        "detail": "expected_path_line='unicaa01_p27_panic/main.py' last_nonempty_before_fence='unicaa01_p27_panic/main.py'"
+      },
+      {
+        "id": "FMT_no_path_comment_in_fence",
+        "pass": true,
+        "detail": "first_code_line_ok"
+      },
+      {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "5 cases ok"
+      },
+      {
+        "id": "NM_d_coherence",
+        "pass": true,
+        "detail": "d_extract=3 tracer=3 delta=0 max=15"
+      },
+      {
+        "id": "PAIR_validate",
+        "pass": true,
+        "detail": "miner-parity dry-run"
+      },
+      {
+        "id": "P1_prefix_match",
+        "pass": true,
+        "detail": "calm=3 bad=3 spec=3 d=3"
+      },
+      {
+        "id": "P2_tails_differ_at_d",
+        "pass": true,
+        "detail": "first tail token must differ"
+      },
+      {
+        "id": "P3_d_positive",
+        "pass": true,
+        "detail": "d=3"
+      },
+      {
+        "id": "P4_calm_databus",
+        "pass": true,
+        "detail": "[{'id': 'M1_d_positive', 'pass': True, 'detail': 'd=3'}, {'id': 'M2_prefix_len', 'pass': True, 'detail': 'len(prefix)=3 d=3'}, {'id': 'M3_full_completion', 'pass': True, 'detail': 'full=86 prefix+tail"
+      },
+      {
+        "id": "P4_bad_databus",
+        "pass": true,
+        "detail": "[{'id': 'M1_d_positive', 'pass': True, 'detail': 'd=3'}, {'id': 'M2_prefix_len', 'pass': True, 'detail': 'len(prefix)=3 d=3'}, {'id': 'M3_full_completion', 'pass': True, 'detail': 'full=84 prefix+tail"
+      },
+      {
+        "id": "P6_calm_d_matches_spec",
+        "pass": true,
+        "detail": "record d=3 spec d=3"
+      },
+      {
+        "id": "P6_bad_d_matches_spec",
+        "pass": true,
+        "detail": "record d=3 spec d=3"
+      },
+      {
+        "id": "T1_calm_stub_score",
+        "pass": true,
+        "detail": "stub_score=0 hits=[]"
+      },
+      {
+        "id": "T2_calm_distress_score",
+        "pass": true,
+        "detail": "distress_score=0 hits=[]"
+      },
+      {
+        "id": "T3_calm_not_eligible",
+        "pass": true,
+        "detail": "eligible=False"
+      },
+      {
+        "id": "T4_calm_no_panic_recipe",
+        "pass": true,
+        "detail": "recipe_fired=False"
+      },
+      {
+        "id": "T5_calm_no_d_consensus",
+        "pass": true,
+        "detail": "d_consensus=None"
+      },
+      {
+        "id": "T6_calm_low_flag_rates",
+        "pass": true,
+        "detail": "b_distress_rate=0.0000 b_stub_rate=0.0000"
+      },
+      {
+        "id": "T8_calm_tail_text_clean",
+        "pass": true,
+        "detail": "stub=0 distress=0 hits_stub=[] hits_distress=[]"
+      },
+      {
+        "id": "T9_calm_tail_rates_zero",
+        "pass": true,
+        "detail": "tail_b_distress=0.0000 tail_b_stub=0.0000"
+      },
+      {
+        "id": "T10_calm_prefix_token_eq",
+        "pass": true,
+        "detail": "replay_len=3 prefix_len=3 d=3"
+      },
+      {
+        "id": "T11_calm_no_panic_combo",
+        "pass": true,
+        "detail": "combo=False"
+      },
+      {
+        "id": "T1_bad_stub_score",
+        "pass": true,
+        "detail": "stub_score=1 hits=['NotImplementedError'] chaos_stub=True"
+      },
+      {
+        "id": "T2_bad_distress_score",
+        "pass": true,
+        "detail": "distress_score=0 hits=[] chaos_distress=True"
+      },
+      {
+        "id": "T3_bad_eligible_or_tail_flags",
+        "pass": true,
+        "detail": "eligible=True tail_b_distress=0.0247 tail_b_stub=0.0370 hint_d=0.0238 hint_s=0.0357"
+      },
+      {
+        "id": "T4_bad_panic_recipe",
+        "pass": true,
+        "detail": "B_STUB_DISTRESS=True combo=True"
+      },
+      {
+        "id": "T5_bad_d_near_text_d",
+        "pass": true,
+        "detail": "d_consensus=3 expected_d=3 d_lex=3 d_flags=3"
+      },
+      {
+        "id": "T6_bad_prefix_len",
+        "pass": true,
+        "detail": "prefix_len=3 expected_d=3"
+      },
+      {
+        "id": "T7_bad_confidence",
+        "pass": true,
+        "detail": "confidence=high"
+      }
+    ],
+    "repaired": false,
+    "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p27_panic__chatcmpl_df7c0f5ed153__d3.txt",
+    "canonical_text": "Fixing `stub` by replacing the stub with a working base64 implementation.\n\nunicaa01_p27_panic/main.py\n```python\n\"\"\"Fixed base64 encode.\"\"\"\nimport base64\n\ndef b64_encode(data: bytes) -> str:\n    return base64.b64encode(data).decode('ascii')\n\ndef demo():\n    return b64_encode(b\"hi\")\n```",
+    "bridge_used": false,
+    "sanitized": false
+  },
+  "gates": {
+    "RUN_demo_oracle": true,
+    "RUN_demo_stress": true,
+    "SEM_invariants": true,
+    "SEM_no_hardcode": true,
+    "NARR_no_bridge_catalog": true,
+    "NARR_no_cross_task_phrases": true,
+    "NARR_tail_stub_distress_zero": true,
+    "NARR_continuation_grammar": true,
+    "NARR_balanced_backticks": true,
+    "FMT_aider_path_outside_fence": true,
+    "FMT_no_path_comment_in_fence": true,
+    "RUN_quality_suite": true,
+    "PAIR_validate": true
+  },
+  "qa": {
+    "verdict": "approve",
+    "scores": {
+      "robustness": 5,
+      "clarity": 5,
+      "edge_handling": 5,
+      "task_fidelity": 5,
+      "narrative_quality": 5
+    },
+    "reasons": [
+      "Suite passes with short stdlib code",
+      "No extra features or boilerplate",
+      "Demo returns expected 'aGk='"
+    ],
+    "fix_hints": [],
+    "semantic_qa": true,
+    "proof": {
+      "pass": true,
+      "checks": {
+        "RUN_demo_oracle": true,
+        "SEM_invariants": true,
+        "SEM_no_hardcode": true,
+        "NARR_all": true,
+        "RUN_quality_suite": true,
+        "NARR_no_bridge_catalog": true,
+        "NARR_no_cross_task_phrases": true,
+        "NARR_tail_stub_distress_zero": true,
+        "NARR_continuation_grammar": true,
+        "NARR_balanced_backticks": true
+      },
+      "fix_hints": [],
+      "scores": {
+        "correctness": 3,
+        "no_stubs": 3,
+        "task_fit": 3,
+        "completeness": 3,
+        "narrative_quality": 3
+      }
+    },
+    "judge": {
+      "ran": true,
+      "model": "deepseek/deepseek-v4-flash",
+      "verdict": "approve",
+      "llm_verdict": "approve",
+      "scores": {
+        "robustness": 5,
+        "clarity": 5,
+        "edge_handling": 5,
+        "task_fidelity": 5,
+        "narrative_quality": 5
+      },
+      "reasons": [
+        "Suite passes with short stdlib code",
+        "No extra features or boilerplate",
+        "Demo returns expected 'aGk='"
+      ],
+      "edit_brief": []
+    },
+    "judge.ran": true,
+    "llm_skipped": false,
+    "edit_count": 0,
+    "judge_calls": 1,
+    "quality_loop": {
+      "verdict": "approve",
+      "text": "Fixing `stub` by replacing the stub with a working base64 implementation.\n\nunicaa01_p27_panic/main.py\n```python\n\"\"\"Fixed base64 encode.\"\"\"\nimport base64\n\ndef b64_encode(data: bytes) -> str:\n    return base64.b64encode(data).decode('ascii')\n\ndef demo():\n    return b64_encode(b\"hi\")\n```",
+      "judge": {
+        "ran": true,
+        "model": "deepseek/deepseek-v4-flash",
+        "verdict": "approve",
+        "llm_verdict": "approve",
+        "scores": {
+          "robustness": 5,
+          "clarity": 5,
+          "edge_handling": 5,
+          "task_fidelity": 5,
+          "narrative_quality": 5
+        },
+        "reasons": [
+          "Suite passes with short stdlib code",
+          "No extra features or boilerplate",
+          "Demo returns expected 'aGk='"
+        ],
+        "edit_brief": []
+      },
+      "scores": {
+        "robustness": 5,
+        "clarity": 5,
+        "edge_handling": 5,
+        "task_fidelity": 5,
+        "narrative_quality": 5
+      },
+      "edit_count": 0,
+      "judge_calls": 1,
+      "proof": {
+        "pass": true,
+        "checks": {
+          "RUN_demo_oracle": true,
+          "SEM_invariants": true,
+          "SEM_no_hardcode": true,
+          "NARR_all": true,
+          "RUN_quality_suite": true,
+          "NARR_no_bridge_catalog": true,
+          "NARR_no_cross_task_phrases": true,
+          "NARR_tail_stub_distress_zero": true,
+          "NARR_continuation_grammar": true,
+          "NARR_balanced_backticks": true
+        },
+        "fix_hints": [],
+        "scores": {
+          "correctness": 3,
+          "no_stubs": 3,
+          "task_fit": 3,
+          "completeness": 3,
+          "narrative_quality": 3
+        }
+      },
+      "llm_skipped": false,
+      "reasons": [
+        "Suite passes with short stdlib code",
+        "No extra features or boilerplate",
+        "Demo returns expected 'aGk='"
+      ],
+      "fix_hints": []
+    },
+    "pipeline_version": 5
+  },
+  "semantic_qa": {
+    "verdict": "approve",
+    "scores": {
+      "robustness": 5,
+      "clarity": 5,
+      "edge_handling": 5,
+      "task_fidelity": 5,
+      "narrative_quality": 5
+    },
+    "reasons": [
+      "Suite passes with short stdlib code",
+      "No extra features or boilerplate",
+      "Demo returns expected 'aGk='"
+    ],
+    "fix_hints": [],
+    "semantic_qa": true,
+    "proof": {
+      "pass": true,
+      "checks": {
+        "RUN_demo_oracle": true,
+        "SEM_invariants": true,
+        "SEM_no_hardcode": true,
+        "NARR_all": true,
+        "RUN_quality_suite": true,
+        "NARR_no_bridge_catalog": true,
+        "NARR_no_cross_task_phrases": true,
+        "NARR_tail_stub_distress_zero": true,
+        "NARR_continuation_grammar": true,
+        "NARR_balanced_backticks": true
+      },
+      "fix_hints": [],
+      "scores": {
+        "correctness": 3,
+        "no_stubs": 3,
+        "task_fit": 3,
+        "completeness": 3,
+        "narrative_quality": 3
+      }
+    },
+    "judge": {
+      "ran": true,
+      "model": "deepseek/deepseek-v4-flash",
+      "verdict": "approve",
+      "llm_verdict": "approve",
+      "scores": {
+        "robustness": 5,
+        "clarity": 5,
+        "edge_handling": 5,
+        "task_fidelity": 5,
+        "narrative_quality": 5
+      },
+      "reasons": [
+        "Suite passes with short stdlib code",
+        "No extra features or boilerplate",
+        "Demo returns expected 'aGk='"
+      ],
+      "edit_brief": []
+    },
+    "judge.ran": true,
+    "llm_skipped": false,
+    "edit_count": 0,
+    "judge_calls": 1,
+    "quality_loop": {
+      "verdict": "approve",
+      "text": "Fixing `stub` by replacing the stub with a working base64 implementation.\n\nunicaa01_p27_panic/main.py\n```python\n\"\"\"Fixed base64 encode.\"\"\"\nimport base64\n\ndef b64_encode(data: bytes) -> str:\n    return base64.b64encode(data).decode('ascii')\n\ndef demo():\n    return b64_encode(b\"hi\")\n```",
+      "judge": {
+        "ran": true,
+        "model": "deepseek/deepseek-v4-flash",
+        "verdict": "approve",
+        "llm_verdict": "approve",
+        "scores": {
+          "robustness": 5,
+          "clarity": 5,
+          "edge_handling": 5,
+          "task_fidelity": 5,
+          "narrative_quality": 5
+        },
+        "reasons": [
+          "Suite passes with short stdlib code",
+          "No extra features or boilerplate",
+          "Demo returns expected 'aGk='"
+        ],
+        "edit_brief": []
+      },
+      "scores": {
+        "robustness": 5,
+        "clarity": 5,
+        "edge_handling": 5,
+        "task_fidelity": 5,
+        "narrative_quality": 5
+      },
+      "edit_count": 0,
+      "judge_calls": 1,
+      "proof": {
+        "pass": true,
+        "checks": {
+          "RUN_demo_oracle": true,
+          "SEM_invariants": true,
+          "SEM_no_hardcode": true,
+          "NARR_all": true,
+          "RUN_quality_suite": true,
+          "NARR_no_bridge_catalog": true,
+          "NARR_no_cross_task_phrases": true,
+          "NARR_tail_stub_distress_zero": true,
+          "NARR_continuation_grammar": true,
+          "NARR_balanced_backticks": true
+        },
+        "fix_hints": [],
+        "scores": {
+          "correctness": 3,
+          "no_stubs": 3,
+          "task_fit": 3,
+          "completeness": 3,
+          "narrative_quality": 3
+        }
+      },
+      "llm_skipped": false,
+      "reasons": [
+        "Suite passes with short stdlib code",
+        "No extra features or boilerplate",
+        "Demo returns expected 'aGk='"
+      ],
+      "fix_hints": []
+    },
+    "pipeline_version": 5
+  },
+  "quality_suite": {
+    "pass": true,
+    "edit_count": 0
+  },
+  "judge": {
+    "ran": true,
+    "model": "deepseek/deepseek-v4-flash",
+    "verdict": "approve",
+    "llm_verdict": "approve",
+    "scores": {
+      "robustness": 5,
+      "clarity": 5,
+      "edge_handling": 5,
+      "task_fidelity": 5,
+      "narrative_quality": 5
+    },
+    "reasons": [
+      "Suite passes with short stdlib code",
+      "No extra features or boilerplate",
+      "Demo returns expected 'aGk='"
+    ],
+    "edit_brief": []
+  },
+  "demo": {
+    "pass": true,
+    "actual_repr": "'aGk='",
+    "expected_repr": "'aGk='",
+    "error": "",
+    "pair_id": "p27_base64_pad"
+  },
+  "repaired": false,
+  "bridge_used": false,
+  "sanitized": false,
+  "attempt_repair": false,
+  "qa_calls": 0,
+  "qa_skipped": false,
+  "narrative_prefix_80": "stub` by replacing the stub with a working base64 implementation.\n\nunicaa01_p27_",
+  "editorial_rewrite": true
+}

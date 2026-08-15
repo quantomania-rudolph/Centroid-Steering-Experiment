@@ -1,0 +1,35 @@
+The error in the code is the `drain path` — empty the queue into a list.
+
+unicaa01_p45_panic/main.py
+```python
+"""Drain a queue into a list."""
+import queue
+import threading
+
+def drain(q: queue.Queue) -> list[int]:
+    items = []
+    event = threading.Event()
+    
+    def worker():
+        while True:
+            try:
+                item = q.get_nowait()
+                items.append(item)
+            except queue.Empty:
+                event.set()
+                return
+    
+    thread = threading.Thread(target=worker, daemon=True)
+    thread.start()
+    event.wait()
+    return items
+
+def demo():
+    q = queue.Queue()
+    q.put(1)
+    q.put(2)
+    return drain(q)
+
+if __name__ == "__main__":
+    print(demo())
+```

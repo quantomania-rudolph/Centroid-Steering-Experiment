@@ -1,0 +1,75 @@
+{
+  "overall_pass": false,
+  "n_pass": 10,
+  "n_fail": 1,
+  "checks": [
+    {
+      "id": "G1.1.num_hidden_layers",
+      "name": "config num_hidden_layers",
+      "pass": true,
+      "detail": "got=28 expected=28"
+    },
+    {
+      "id": "G1.1.hidden_size",
+      "name": "config hidden_size",
+      "pass": true,
+      "detail": "got=3584 expected=3584"
+    },
+    {
+      "id": "G1.1.vocab_size",
+      "name": "config vocab_size",
+      "pass": true,
+      "detail": "got=152064 expected=152064"
+    },
+    {
+      "id": "G1.1.tie_word_embeddings",
+      "name": "config tie_word_embeddings",
+      "pass": true,
+      "detail": "got=False expected=False"
+    },
+    {
+      "id": "G1.2a",
+      "name": "W_U shape",
+      "pass": true,
+      "detail": "shape=(152064, 3584)"
+    },
+    {
+      "id": "G1.2b",
+      "name": "gamma shape",
+      "pass": true,
+      "detail": "shape=(3584,)"
+    },
+    {
+      "id": "G1.3",
+      "name": "fp16 on preferred device",
+      "pass": true,
+      "detail": "device=xpu all_fp16=True"
+    },
+    {
+      "id": "G1.4",
+      "name": "peak VRAM < 15.5 GB",
+      "pass": true,
+      "detail": "peak_vram_gb=14.291031837463379"
+    },
+    {
+      "id": "G1.5",
+      "name": "forward latency < 10s (128-512 tok median)",
+      "pass": true,
+      "detail": "median_s=0.239 times=[10.23515980000957, 0.2389780000085011, 0.2310404000163544]"
+    },
+    {
+      "id": "G1.6",
+      "name": "28 layer hooks",
+      "pass": true,
+      "detail": "n=28 shapes=[[1, 84, 3584], [1, 84, 3584], [1, 84, 3584]]..."
+    },
+    {
+      "id": "G1.7",
+      "name": "deterministic forward",
+      "pass": false,
+      "detail": "max_diff=0.03125"
+    }
+  ],
+  "gate": "GATE-1",
+  "timestamp_utc": "2026-08-03T02:53:49.544309+00:00"
+}

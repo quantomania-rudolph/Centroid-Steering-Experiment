@@ -1,0 +1,53 @@
+{
+  "brief_version": 1,
+  "brief_id": "unicaa01_p56_panic__chatcmpl_17d1fcefd00c__d3",
+  "task_slug": "unicaa01_p56_panic",
+  "pair_id": "p56_shunting_yard",
+  "invocation_id": "chatcmpl-17d1fcefd00c",
+  "domain": "compilers",
+  "user_message": "Edit unicaa01_p56_panic/main.py only. to_rpn NotImplementedError. Shunting-yard RPN; demo() RPN for '1+2*3'. Fix the broken code: remove NotImplementedError/TODO stubs where possible. Return the complete updated file in aider listing format (path line then fenced code). Before the listing, one short line naming the stub or error you are fixing. Stress-calibration run \u2014 starter has intentional broken stubs. Lint-clean ruff+pylint if possible. Never pip install. Stdlib only.",
+  "panic_starter_main_py": "\"\"\"Broken shunting yard.\"\"\"\ndef to_rpn(expr: str) -> list[str]:\n    raise NotImplementedError(\"to_rpn not implemented\")\n\ndef demo():\n    return to_rpn(\"1+2*3\")\n",
+  "prefix_lock": {
+    "d": 3,
+    "prefix_token_ids": [
+      25958,
+      287,
+      1565
+    ],
+    "prefix_text": "Fixing `",
+    "immutable": true
+  },
+  "divergence_context": {
+    "bad_token_at_d": 2623,
+    "bad_token_at_d_text": "Not",
+    "bad_tail_summary": "REJECTED panic-tail summary (prose only \u2014 DO NOT copy code/imports/phrases from it). Write a clean task-specific fix instead. ing ' ' in 'to_rpn' function. [task main.py] This implementation uses the Shunting Yard algorithm to convert an infix expression to Reverse Polish Notation (RPN). The 'demo' function now returns the RPN for the expressio\u2026",
+    "forbidden_patterns": [
+      "NotImplementedError",
+      "TODO",
+      "FIXME",
+      "pip install",
+      "sorry",
+      "cannot",
+      "unable to"
+    ]
+  },
+  "output_contract": {
+    "format": "aider_listing",
+    "target_staging_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\curator_staging\\unicaa01_p56_panic__chatcmpl_17d1fcefd00c__d3\\candidate.txt",
+    "target_admitted_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p56_panic__chatcmpl_17d1fcefd00c__d3.txt",
+    "task_dir": "unicaa01_p56_panic"
+  },
+  "success_criteria": "demo() RPN for '1+2*3'.",
+  "task_summary": "Edit unicaa01_p56_panic/main",
+  "provenance": {
+    "source_pack": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\curation_packs\\unicaa01_corpus_p56_shunting_yard_panic__chatcmpl-17d1fcefd00c__d3.json",
+    "source_experiment_json": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\out\\unicaa01_corpus_p56_shunting_yard_panic_latest.json",
+    "tracer_confidence": "high"
+  },
+  "tracer_confidence": "high",
+  "demo_oracle": {
+    "pair_id": "p56_shunting_yard",
+    "check_mode": "eq",
+    "expect_repr": "['1', '2', '3', '*', '+']"
+  }
+}

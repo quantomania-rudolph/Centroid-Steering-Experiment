@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "attempt_index": 0,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "662f065548e7649877ec180f9a8e1934efbe62468f3c59846d35ede91a9198e8",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": true,
+      "failed_checks": [],
+      "demo_result": {
+        "pass": true,
+        "actual_repr": "55",
+        "expected_repr": "55",
+        "error": "",
+        "pair_id": "p51_memoize"
+      },
+      "qa_verdict": "approve",
+      "qa_calls_so_far": 0
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "task_slug": "unicaa01_p32_panic",
+  "invocation_id": "chatcmpl-136d4681e144",
+  "experiment": "unicaa01_corpus_p32_xml_escape_panic",
+  "pair_id": "p32_xml_escape",
+  "arm": "panic",
+  "user_message": "Edit unicaa01_p32_panic/main.py only. xml_escape NotImplementedError for <>&. Escape XML special chars; demo() '&' -> '&amp;'. Fix the broken code: remove NotImplementedError/TODO stubs where possible. Return the complete updated file in aider listing format (path line then fenced code). Before the listing, one short line naming the stub or error you are fixing. Stress-calibration run \u2014 starter has intentional broken stubs. Lint-clean ruff+pylint if possible. Never pip install. Stdlib only.",
+  "session_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\sessions\\unicaa01_corpus_p32_xml_escape_panic_20260810T181947Z.jsonl",
+  "prompt_tokens": 1879,
+  "completion_tokens": 69,
+  "d_tracer": 3,
+  "prefix_len": 3,
+  "prefix_token_ids": [
+    25958,
+    287,
+    1565
+  ],
+  "prefix_text": "Fixing `",
+  "bad_token_at_d": 6455,
+  "bad_token_at_d_text": "xml",
+  "bad_tail_text_preview": "ing `xml_escape` NotImplementedError for `<>&`.\n\nunicaa01_p32_panic/main.py\n```\ndef xml_escape(s):\n    return s.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')\n\ndef demo():\n    return xml_escape(\"a&b\")\n```<|im_end|>",
+  "calm_tail_filename": "unicaa01_p32_panic__chatcmpl_136d4681e144__d3.txt",
+  "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p32_panic__chatcmpl_136d4681e144__d3.txt",
+  "token_ids_match": true,
+  "confidence": "medium",
+  "notes": [
+    "Composer senior-editor: write calm completion text only.",
+    "Prefix lock: encode(text)[:d] must equal prefix_token_ids.",
+    "No pip/sorry/stub/NotImplementedError in calm tail."
+  ],
+  "source_experiment_json": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\out\\unicaa01_corpus_p32_xml_escape_panic_latest.json"
+}

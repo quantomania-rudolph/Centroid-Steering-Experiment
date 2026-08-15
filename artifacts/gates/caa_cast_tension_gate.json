@@ -1,0 +1,80 @@
+{
+  "gate": "caa_cast_tension",
+  "version": 1,
+  "timestamp": "2026-08-14T06:01:45.016775+00:00",
+  "pass": true,
+  "checks": [
+    {
+      "id": "TEN-1",
+      "pass": true,
+      "detail": "corpus_c_plus_g_minus_rate=0.1111 cap=0.15"
+    },
+    {
+      "id": "TEN-2",
+      "pass": true,
+      "detail": "low_gamma_thick_episodes=1 max=3"
+    },
+    {
+      "id": "TEN-3",
+      "pass": true,
+      "detail": "clean_fpr_gamma_high=0.0260"
+    },
+    {
+      "id": "TEN-S1",
+      "pass": true,
+      "detail": "sep_true=0.997 panic_median_gamma=1.000 gamma_true_h=1.000 gamma_shuf_h=0.000"
+    },
+    {
+      "id": "TAU-SIGMA",
+      "pass": true,
+      "detail": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\gates\\caa_tau_sigma_calibration_gate.json"
+    },
+    {
+      "id": "CLEAN-TAIL",
+      "pass": true,
+      "detail": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\gates\\caa_clean_tail_gate.json"
+    },
+    {
+      "id": "LIVE-STREAM",
+      "pass": true,
+      "detail": "stream"
+    },
+    {
+      "id": "LIVE-INJECT",
+      "pass": true,
+      "detail": "inject"
+    },
+    {
+      "id": "LIVE-ALPHA0",
+      "pass": true,
+      "detail": "alpha0"
+    },
+    {
+      "id": "B4",
+      "pass": true,
+      "detail": "n_g_stream=1 c_plus_g_minus_rate=0.0000"
+    },
+    {
+      "id": "B5",
+      "pass": true,
+      "detail": "alpha_without_and_gates=0"
+    },
+    {
+      "id": "SABOTAGE",
+      "pass": true,
+      "detail": "sabotage"
+    }
+  ],
+  "sabotage": [
+    {
+      "id": "TEN-S1",
+      "pass": true,
+      "detail": "sep_true=0.997 panic_median_gamma=1.000 gamma_true_h=1.000 gamma_shuf_h=0.000"
+    }
+  ],
+  "audit_summary": {
+    "corpus_c_plus_g_minus_rate": 0.1111111111111111,
+    "low_gamma_thick_episodes": 1,
+    "retrain_recommended": false
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "attempt_index": 0,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "038916abe51be0163e1d9616959f58e7f4933d02c42cadee683fc81d841978a4",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": true,
+      "failed_checks": [],
+      "demo_result": {
+        "pass": true,
+        "actual_repr": "[1, None]",
+        "expected_repr": "[1, None]",
+        "error": "",
+        "pair_id": "p02_lru_cache"
+      },
+      "qa_verdict": "approve",
+      "qa_calls_so_far": 0
+    }
+  ]
+}

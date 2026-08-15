@@ -1,0 +1,30 @@
+The error in the code is the `missing implementation` in the `__get__` method.
+unicaa01_p52_panic/main.py
+```python
+"""Fixed lazy property."""
+class lazy_property:
+    def __init__(self, fn):
+        self.fn = fn
+        self.attr = "_lazy_" + fn.__name__
+
+    def __get__(self, obj, cls):
+        if obj is None:
+            return self
+        if self.attr not in obj.__dict__:
+            obj.__dict__[self.attr] = self.fn(obj)
+        return obj.__dict__[self.attr]
+
+class Box:
+    def __init__(self):
+        self.calls = 0
+    @lazy_property
+    def value(self):
+        self.calls += 1
+        return 7
+
+def demo():
+    b = Box()
+    _ = b.value
+    _ = b.value
+    return b.calls
+```

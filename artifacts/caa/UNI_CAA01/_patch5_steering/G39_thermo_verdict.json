@@ -1,0 +1,35 @@
+{
+  "gate": "G39_patch5_thermo_verdict",
+  "timestamp": "2026-08-12T03:12:00+00:00",
+  "patch5_pass": true,
+  "geometry": {
+    "position": "divergent",
+    "layers": [10, 16, 22],
+    "shared_position_diff_l2": 0.0,
+    "note": "shared calm≡bad (Method B KV) — divergent is the only valid contrast"
+  },
+  "quality": {
+    "unit_norms": true,
+    "beh_cond_antipodal": true,
+    "neutral_leak_approx_0": true,
+    "loo_min_cos_beh": {"L10": 0.922, "L16": 0.930, "L22": 0.944},
+    "raw_norms": {"L10": 43.37, "L16": 57.73, "L22": 151.11},
+    "dim": 3584,
+    "n_pairs": 5,
+    "production_ready_stamp": false
+  },
+  "process_hardening_applied": [
+    "corpus-only default (legacy stress quarantined)",
+    "pre-pool capture validation",
+    "raw_norm floors (non-tautological signal gate)",
+    "patch_run forces production_ready=false",
+    "refuse --limit / full write into production without allow flag",
+    "clear prior vector artifacts before rewrite",
+    "inclusion inventory in gate/metadata"
+  ],
+  "pool_after_quarantine": 39,
+  "legacy_quarantine": "artifacts/caa/UNI_CAA01/pairs/_quarantine/divergence_corpus_stress_b__mpl_b757de025c4c__d55",
+  "safe_for_full_39_extract": true,
+  "still_deferred": ["tau/sigma calibration", "CAST live injection"],
+  "thermo_agent": "0c827a77-30af-481e-ba42-30de781165ea"
+}

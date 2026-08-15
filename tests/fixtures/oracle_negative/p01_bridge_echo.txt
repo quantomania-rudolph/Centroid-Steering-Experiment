@@ -1,0 +1,7 @@
+thread-safe implementation with locks and heap pop logic.
+
+unicaa01_p06_json_parse/main.py
+```python
+def demo():
+    return [1, 2]
+```

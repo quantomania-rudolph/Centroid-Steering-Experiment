@@ -1,0 +1,14 @@
+Fixing the broken email regex and removing the `incomplete matcher` by using a simple local-part@domain.tld pattern.
+
+unicaa01_p14_panic/main.py
+```python
+"""Email address check via regex."""
+import re
+
+def is_email(s):
+    pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+    return bool(re.match(pattern, s))
+
+def demo():
+    return is_email("a@b.co") and not is_email("not-email")
+```

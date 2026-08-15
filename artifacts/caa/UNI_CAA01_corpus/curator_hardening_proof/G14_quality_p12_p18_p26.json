@@ -1,0 +1,75 @@
+{
+  "pass": true,
+  "production_path": true,
+  "pipeline_version": 4,
+  "model": "deepseek/deepseek-v4-flash",
+  "scope": "full live pipeline for p12, p18, p26 (plus prior p06)",
+  "verify_admitted": {
+    "n_files": 4,
+    "n_pass": 4
+  },
+  "miner_dry_run": {
+    "n_admitted": 4,
+    "admitted_slugs": [
+      "unicaa01_corpus_p06_json_parse_panic__mpl_44fb68e7b5cd__d3",
+      "unicaa01_corpus_p12_fibonacci_panic__mpl_9fcda159903f__d14",
+      "unicaa01_corpus_p18_trie_prefix_panic__mpl_2ba03f73cbb9__d3",
+      "unicaa01_corpus_p26_rle_compress_panic__mpl_80322492584d__d3"
+    ]
+  },
+  "admissions": [
+    {
+      "pair_id": "p12_fibonacci",
+      "brief_id": "unicaa01_p12_panic__chatcmpl_9fcda159903f__d14",
+      "status": "admitted",
+      "judge": {
+        "ran": true,
+        "verdict": "approve",
+        "scores": {
+          "robustness": 5,
+          "clarity": 5,
+          "edge_handling": 5,
+          "task_fidelity": 5,
+          "narrative_quality": 5
+        }
+      }
+    },
+    {
+      "pair_id": "p18_trie_prefix",
+      "brief_id": "unicaa01_p18_panic__chatcmpl_2ba03f73cbb9__d3",
+      "status": "admitted",
+      "judge": {
+        "ran": true,
+        "verdict": "approve",
+        "scores": {
+          "robustness": 4,
+          "clarity": 5,
+          "edge_handling": 4,
+          "task_fidelity": 5,
+          "narrative_quality": 4
+        }
+      }
+    },
+    {
+      "pair_id": "p26_rle_compress",
+      "brief_id": "unicaa01_p26_panic__chatcmpl_80322492584d__d3",
+      "status": "admitted",
+      "judge": {
+        "ran": true,
+        "verdict": "approve",
+        "scores": {
+          "robustness": 4,
+          "clarity": 5,
+          "edge_handling": 4,
+          "task_fidelity": 5,
+          "narrative_quality": 4
+        }
+      }
+    }
+  ],
+  "notes": [
+    "Pilot selection fixed to one brief per pair_id (best confidence).",
+    "p12 alt brief unicaa01_p12_panic__chatcmpl_b743782d78b3__d12 gate_failed; not required.",
+    "All admissions are pipeline v4 with RUN_quality_suite + required judge."
+  ]
+}

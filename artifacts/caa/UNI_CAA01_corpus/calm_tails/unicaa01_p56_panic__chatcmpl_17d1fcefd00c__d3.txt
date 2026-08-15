@@ -1,0 +1,33 @@
+Fixing `shunting_yard` implementing RPN conversion.
+
+unicaa01_p56_panic/main.py
+```python
+"""Shunting yard algorithm for RPN conversion."""
+import operator
+from typing import List
+
+def to_rpn(expr: str) -> List[str]:
+    precedence = {'+': 1, '-': 1, '*': 2, '/': 2}
+    output = []
+    ops = []
+    for token in expr:
+        if token.isdigit():
+            output.append(token)
+        elif token in precedence:
+            while (ops and ops[-1] != '(' and
+                   precedence.get(ops[-1], 0) >= precedence[token]):
+                output.append(ops.pop())
+            ops.append(token)
+        elif token == '(':
+            ops.append(token)
+        elif token == ')':
+            while ops and ops[-1] != '(':
+                output.append(ops.pop())
+            ops.pop()
+    while ops:
+        output.append(ops.pop())
+    return output
+
+def demo():
+    return to_rpn("1+2*3")
+```

@@ -1,0 +1,45 @@
+#!/bin/bash
+set -euo pipefail
+
+WORKDIR="${RENTAL_REMOTE_DIR:-/workspace/jlens-rental}"
+cd "$WORKDIR"
+
+echo "=== jlens-rental GPU fit ==="
+echo "Workdir: $WORKDIR"
+
+sed -i 's/\r$//' secrets/secrets.env run_fit.sh fit_on_gpu.py checkpoint_fit.py 2>/dev/null || true
+
+if [[ -f secrets/secrets.env ]]; then
+  set -a
+  source secrets/secrets.env
+  set +a
+fi
+
+PY="$(command -v python3 || command -v python)"
+echo "Using Python: $PY"
+nvidia-smi -L
+
+echo "Force-reinstalling PyTorch cu124 for driver 12.8..."
+"$PY" -m pip uninstall -y torch torchvision torchaudio 2>/dev/null || true
+"$PY" -m pip install -q --force-reinstall torch --index-url https://download.pytorch.org/whl/cu124
+"$PY" - <<'PY'
+import torch, sys
+print('torch', torch.__version__, 'cuda', torch.cuda.is_available())
+if not torch.cuda.is_available():
+    print('CUDA still unavailable', file=sys.stderr)
+    sys.exit(2)
+print('GPU', torch.cuda.get_device_name(0))
+PY
+
+if [[ -n "${HF_TOKEN:-}" ]]; then
+  export HUGGING_FACE_HUB_TOKEN="$HF_TOKEN"
+fi
+
+echo "Installing jlens + deps..."
+"$PY" -m pip install -q "git+https://github.com/anthropics/jacobian-lens.git" transformers accelerate huggingface_hub safetensors pyyaml tqdm
+
+echo "Starting quarter-checkpoint GPU fit..."
+"$PY" fit_on_gpu.py --work-dir "$WORKDIR" --config fit_config.yaml
+
+echo "=== DONE ==="
+ls -lh qwen_jacobian_lens.pt fit_meta.json ckpt.pt fit_progress.json 2>/dev/null || true

@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "attempt_index": 0,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "ce7a650581d17ab63aeaadf6ba60f56839d59e82c0ef73dec52364ce1a950d9b",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": true,
+      "failed_checks": [],
+      "demo_result": {
+        "pass": true,
+        "actual_repr": "5",
+        "expected_repr": "5",
+        "error": "",
+        "pair_id": "p63_heap_kth"
+      },
+      "qa_verdict": "approve",
+      "qa_calls_so_far": 0
+    }
+  ]
+}

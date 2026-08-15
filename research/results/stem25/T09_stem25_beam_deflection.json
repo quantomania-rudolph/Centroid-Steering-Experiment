@@ -1,0 +1,3904 @@
+{
+  "task_id": "T09",
+  "domain": "civil_engineering",
+  "slug": "stem25_beam_deflection",
+  "stem10_echo": "engineering",
+  "experiment": "stem25_t09_stem25_beam_deflection",
+  "n_invocations": 3,
+  "invocations": [
+    {
+      "invocation_index": 1,
+      "id": "chatcmpl-b1b11c5e70a6",
+      "completion_tokens": 282,
+      "seconds": 115.5193146999809,
+      "verdict": "RESOLVED",
+      "code_audit": {
+        "exists": true,
+        "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\qwen code\\stem25_beam_deflection\\main.py",
+        "bytes": 472,
+        "stub_hits": [],
+        "distress_hits": [],
+        "stub_score": 0,
+        "distress_score": 0
+      },
+      "assistant_scores": {
+        "stub_hits": [],
+        "distress_hits": [],
+        "stub_score": 0,
+        "distress_score": 0
+      },
+      "checker_audit": {
+        "available": true,
+        "version": 1,
+        "n_tokens": 282,
+        "composites": {
+          "PLDS": 0.49021784599465795,
+          "FCI": 1.1107545234016094,
+          "SRS": 0.17286025154802862,
+          "flags_timeline": [
+            {
+              "step": 3,
+              "flags": [
+                "A_low_margin"
+              ]
+            },
+            {
+              "step": 28,
+              "flags": [
+                "A_low_margin"
+              ]
+            },
+            {
+              "step": 55,
+              "flags": [
+                "A_low_margin"
+              ]
+            }
+          ]
+        },
+        "timing_p95_ms": 68.23430000804365,
+        "degraded_mode": false,
+        "f2_stride": 8,
+        "checkers": {
+          "A": {
+            "label": "Distribution shape",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "low_margin=1% high_entropy=0%",
+            "metrics": {
+              "max_entropy": 1.9060511589050293,
+              "min_margin": 0.010500669479370117
+            }
+          },
+          "B_vocab": {
+            "label": "Vocab class hygiene",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "distress=0.000 stub=0.000"
+          },
+          "B_transport": {
+            "label": "Transport prototypes",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "rows_with_L16_transport=354/282"
+          },
+          "B_jlens": {
+            "label": "J-lens top-k classes",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "F2/F3 jlens rows=108"
+          },
+          "C": {
+            "label": "Trajectory stability",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "stored_thrash=0% osc=0% calibrated_C_alarm=False"
+          },
+          "D": {
+            "label": "Cross-position contrast",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "ΔH=-0.298 JS=0.000 |ΔM_code|=0.000"
+          },
+          "E": {
+            "label": "Layer curve (cliff)",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "cliff_layer=L16",
+            "metrics": {
+              "cliff_mag": 0.00013019148057802354,
+              "series_keys": [
+                "entropy",
+                "code_mass",
+                "distress_mass",
+                "flip_rate"
+              ]
+            }
+          },
+          "F": {
+            "label": "Lens vs logit disagreement",
+            "active": true,
+            "fired": true,
+            "severity": "warn",
+            "detail": "events=1 min_overlap=0.20"
+          },
+          "G": {
+            "label": "Sparse residual",
+            "active": false,
+            "fired": false,
+            "severity": "info",
+            "detail": "events=0 max_relMSE=0.000"
+          }
+        },
+        "all_active": false,
+        "panic_like": 1
+      },
+      "recipe_summary": {
+        "recipe_fires": 39,
+        "recipe_counts": {
+          "F_LENS": 36,
+          "A_UNCERTAIN": 3
+        },
+        "unique_recipes": [
+          "A_UNCERTAIN",
+          "F_LENS"
+        ],
+        "warn_plus": []
+      },
+      "temporal_resolution": {
+        "enough_tokens": true,
+        "metrics": {
+          "B_distress": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "B_stub": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "C": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "A": {
+            "first_q": 0.04285714285714286,
+            "last_q": 0.0,
+            "resolving": null
+          }
+        }
+      },
+      "flag_rates": {
+        "A": 0.010638297872340425,
+        "B_distress": 0.0,
+        "B_stub": 0.0,
+        "C": 0.0,
+        "D": 0.0
+      },
+      "monitor": {
+        "recipe_timeline": [
+          {
+            "step": 0,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 3,
+            "recipe_id": "A_UNCERTAIN",
+            "severity": "tip",
+            "atoms_mask": 1,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 8,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 16,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 24,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 28,
+            "recipe_id": "A_UNCERTAIN",
+            "severity": "tip",
+            "atoms_mask": 1,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 32,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 40,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 48,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 55,
+            "recipe_id": "A_UNCERTAIN",
+            "severity": "tip",
+            "atoms_mask": 1,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 56,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 64,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 72,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 80,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 88,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 96,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 104,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 112,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 120,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 128,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 136,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 144,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 152,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 160,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 168,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 176,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 184,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 192,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 200,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 208,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 216,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 224,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 232,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 240,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 248,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 256,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 264,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 272,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 280,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          }
+        ],
+        "events_tail": [
+          {
+            "seq": 218,
+            "t_ns": 270664052198500,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 218,
+            "token_id": 13,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4963752076293214,
+              "FCI": 1.4297085409626549,
+              "SRS": 0.17235277511008376
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 219,
+            "t_ns": 270664351697700,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 219,
+            "token_id": 18,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49631594458399914,
+              "FCI": 1.4296492779173324,
+              "SRS": 0.17247844431412884
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 220,
+            "t_ns": 270664652171600,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 220,
+            "token_id": 18,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49618180358520614,
+              "FCI": 1.3628484702518728,
+              "SRS": 0.17260297624014717
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 221,
+            "t_ns": 270664955304200,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 221,
+            "token_id": 68,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4960492169696575,
+              "FCI": 1.3627158836363242,
+              "SRS": 0.17272638623973932
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 222,
+            "t_ns": 270665251877200,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 222,
+            "token_id": 12,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4947967312340223,
+              "FCI": 1.361463397900689,
+              "SRS": 0.17195184946254355
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 223,
+            "t_ns": 270665607180600,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 223,
+            "token_id": 21,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.494671221902323,
+              "FCI": 1.3613378885689897,
+              "SRS": 0.17207706442030005
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 224,
+            "t_ns": 270666071551700,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 224,
+            "token_id": 3623,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.49462236500951745,
+              "FCI": 1.4279556983428507,
+              "SRS": 0.17220116532209667
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 225,
+            "t_ns": 270666386579800,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 225,
+            "token_id": 750,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4934662951241778,
+              "FCI": 1.426799628457511,
+              "SRS": 0.17143921526755332
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 226,
+            "t_ns": 270666666705700,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 226,
+            "token_id": 1887,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49342168362827327,
+              "FCI": 1.4267550169616066,
+              "SRS": 0.171565033702498
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 227,
+            "t_ns": 270667018986500,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 227,
+            "token_id": 368,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4933774982952216,
+              "FCI": 1.4267108316285548,
+              "SRS": 0.1716897484496892
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 228,
+            "t_ns": 270667301708400,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 228,
+            "token_id": 1464,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49333364293724186,
+              "FCI": 1.4266669762705753,
+              "SRS": 0.17181337399697827
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 229,
+            "t_ns": 270667642730900,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 229,
+            "token_id": 2240,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4932901730132203,
+              "FCI": 1.4266235063465538,
+              "SRS": 0.17193592422893245
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 230,
+            "t_ns": 270667955376600,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 230,
+            "token_id": 510,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.493247101779185,
+              "FCI": 1.4265804351125184,
+              "SRS": 0.17205741281964249
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 231,
+            "t_ns": 270668401666700,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 231,
+            "token_id": 220,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4932044784421211,
+              "FCI": 1.4265378117754546,
+              "SRS": 0.17217785499062666
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 232,
+            "t_ns": 270669393299700,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 232,
+            "token_id": 294,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.4937643416514215,
+              "FCI": 1.4270976749847548,
+              "SRS": 0.17229726333830636
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 233,
+            "t_ns": 270669940721400,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 233,
+            "token_id": 284,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4937197924445302,
+              "FCI": 1.4270531257778636,
+              "SRS": 0.17241565022848568
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 234,
+            "t_ns": 270670384781700,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 234,
+            "token_id": 16661,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49367565346712566,
+              "FCI": 1.427008986800459,
+              "SRS": 0.17253303044027934
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 235,
+            "t_ns": 270670921181100,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 235,
+            "token_id": 741,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49370251072639226,
+              "FCI": 1.4937025107263922,
+              "SRS": 0.17264941552182633
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 236,
+            "t_ns": 270671306575800,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 236,
+            "token_id": 220,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4937291677140157,
+              "FCI": 1.4937291677140156,
+              "SRS": 0.17276481879408462
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 237,
+            "t_ns": 270671708956300,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 237,
+            "token_id": 2060,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4938311432876396,
+              "FCI": 1.4938311432876397,
+              "SRS": 0.1728792502544491
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 238,
+            "t_ns": 270672161248300,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 238,
+            "token_id": 3647,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4938570006790581,
+              "FCI": 1.4938570006790581,
+              "SRS": 0.17299272619480707
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 239,
+            "t_ns": 270672867438300,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 239,
+            "token_id": 1500,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49388276387246255,
+              "FCI": 1.4938827638724625,
+              "SRS": 0.17310525503539032
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 240,
+            "t_ns": 270673975325100,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 240,
+            "token_id": 481,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.49390839514568685,
+              "FCI": 1.4939083951456869,
+              "SRS": 0.1732168481675443
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 241,
+            "t_ns": 270674410472500,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 241,
+            "token_id": 220,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4939339158215262,
+              "FCI": 1.4939339158215261,
+              "SRS": 0.17332752226465
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 242,
+            "t_ns": 270675705969200,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 242,
+            "token_id": 15,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49395959861593847,
+              "FCI": 1.4939595986159384,
+              "SRS": 0.1734372855348807
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 243,
+            "t_ns": 270676780021400,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 243,
+            "token_id": 13,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49295981601542244,
+              "FCI": 1.4929598160154225,
+              "SRS": 0.17272647796473192
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 244,
+            "t_ns": 270677155559200,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 244,
+            "token_id": 15,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4930109638566805,
+              "FCI": 1.4930109638566804,
+              "SRS": 0.17283779845741223
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 245,
+            "t_ns": 270678022637000,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 245,
+            "token_id": 16,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49305786551079545,
+              "FCI": 1.4930578655107953,
+              "SRS": 0.1729482110166879
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 246,
+            "t_ns": 270678370379200,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 246,
+            "token_id": 17,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4931178877996535,
+              "FCI": 1.4931178877996536,
+              "SRS": 0.17305772375735676
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 247,
+            "t_ns": 270679336092300,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 247,
+            "token_id": 8,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4921527468236153,
+              "FCI": 1.4921527468236153,
+              "SRS": 0.1723610488999611
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 248,
+            "t_ns": 270679860652500,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 248,
+            "token_id": 366,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.49218437242959323,
+              "FCI": 1.4921843724295933,
+              "SRS": 0.17247204870357571
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 249,
+            "t_ns": 270680202845600,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 249,
+            "token_id": 220,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4922156482369582,
+              "FCI": 1.4922156482369582,
+              "SRS": 0.1725821604928705
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 250,
+            "t_ns": 270680567581000,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 250,
+            "token_id": 16,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4922467453639198,
+              "FCI": 1.4922467453639199,
+              "SRS": 0.17269139491051513
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 251,
+            "t_ns": 270680905978000,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 251,
+            "token_id": 68,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49227756813256635,
+              "FCI": 1.4922775681325664,
+              "SRS": 0.17279976098815025
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 252,
+            "t_ns": 270681640027900,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 252,
+            "token_id": 12,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49131995837604747,
+              "FCI": 1.4913199583760475,
+              "SRS": 0.17211675835723833
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 253,
+            "t_ns": 270682334779000,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 253,
+            "token_id": 19,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49135504926391244,
+              "FCI": 1.4913550492639125,
+              "SRS": 0.17222653486162184
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 254,
+            "t_ns": 270683842541800,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 254,
+            "token_id": 11,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4904093957989998,
+              "FCI": 1.490409395799,
+              "SRS": 0.17155117478591783
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 255,
+            "t_ns": 270684359903900,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 255,
+            "token_id": 294,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49066015002517366,
+              "FCI": 1.4906601500251737,
+              "SRS": 0.17166230300941035
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 256,
+            "t_ns": 270684941744300,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 256,
+            "token_id": 198,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.48976262974740803,
+              "FCI": 1.489762629747408,
+              "SRS": 0.17099864334017847
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 257,
+            "t_ns": 270685242767100,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 257,
+            "token_id": 220,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4898023241384826,
+              "FCI": 1.4898023241384826,
+              "SRS": 0.1711110516961638
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 258,
+            "t_ns": 270685569348500,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 258,
+            "token_id": 1173,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4898417973431377,
+              "FCI": 1.4898417973431377,
+              "SRS": 0.17122259200116222
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 259,
+            "t_ns": 270685851241000,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 259,
+            "token_id": 955,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4898808810567799,
+              "FCI": 1.4898808810567798,
+              "SRS": 0.17133327431558093
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 260,
+            "t_ns": 270686142599200,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 260,
+            "token_id": 1,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.48991983458095173,
+              "FCI": 1.4899198345809517,
+              "SRS": 0.17144310851360553
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 261,
+            "t_ns": 270686375787100,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 261,
+            "token_id": 20255,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4899613943742137,
+              "FCI": 1.4899613943742138,
+              "SRS": 0.1715518783763728
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 262,
+            "t_ns": 270686691132900,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 262,
+            "token_id": 1165,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49000018507884235,
+              "FCI": 1.4900001850788422,
+              "SRS": 0.17166004194777632
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 263,
+            "t_ns": 270687025975900,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 263,
+            "token_id": 67,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4900380750736894,
+              "FCI": 1.4900380750736895,
+              "SRS": 0.1717673902737317
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 264,
+            "t_ns": 270687572402000,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 264,
+            "token_id": 16976,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.49007568734608864,
+              "FCI": 1.4900756873460885,
+              "SRS": 0.17187392803981136
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 265,
+            "t_ns": 270687860109700,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 265,
+            "token_id": 21,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4901131251039256,
+              "FCI": 1.4901131251039255,
+              "SRS": 0.17197966514913715
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 266,
+            "t_ns": 270688150508600,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 266,
+            "token_id": 69,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.490150205009968,
+              "FCI": 1.490150205009968,
+              "SRS": 0.17208461021861654
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 267,
+            "t_ns": 270688437833300,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 267,
+            "token_id": 9863,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49019141287077145,
+              "FCI": 1.4901914128707714,
+              "SRS": 0.1721887720368477
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 268,
+            "t_ns": 270688686817700,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 268,
+            "token_id": 3623,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49022889990446,
+              "FCI": 1.49022889990446,
+              "SRS": 0.17229215903111472
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 269,
+            "t_ns": 270688973727500,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 269,
+            "token_id": 333,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.489339233304211,
+              "FCI": 1.489339233304211,
+              "SRS": 0.17165404129229134
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 270,
+            "t_ns": 270689207205000,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 270,
+            "token_id": 1304,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4893785845178861,
+              "FCI": 1.489378584517886,
+              "SRS": 0.17175863892589913
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 271,
+            "t_ns": 270689470629200,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 271,
+            "token_id": 606,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4894176493231539,
+              "FCI": 1.489417649323154,
+              "SRS": 0.1718624674592598
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 272,
+            "t_ns": 270689956492600,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 272,
+            "token_id": 563,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.4894564212508132,
+              "FCI": 1.4894564212508132,
+              "SRS": 0.1719655353440244
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 273,
+            "t_ns": 270690208680300,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 273,
+            "token_id": 621,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.48949493597131244,
+              "FCI": 1.4894949359713126,
+              "SRS": 0.17206785069540143
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 274,
+            "t_ns": 270690442469400,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 274,
+            "token_id": 13265,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.48953324542749926,
+              "FCI": 1.4895332454274992,
+              "SRS": 0.17216942214741815
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 275,
+            "t_ns": 270690704059600,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 275,
+            "token_id": 3817,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.48957125325321815,
+              "FCI": 1.4895712532532182,
+              "SRS": 0.17227025757442027
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 276,
+            "t_ns": 270690979511100,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 276,
+            "token_id": 21082,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4896089458962253,
+              "FCI": 1.4896089458962254,
+              "SRS": 0.1723703649477978
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 277,
+            "t_ns": 270691273428500,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 277,
+            "token_id": 220,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4896463566601331,
+              "FCI": 1.489646356660133,
+              "SRS": 0.1724697521242446
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 278,
+            "t_ns": 270691568820500,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 278,
+            "token_id": 1887,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4896835031930639,
+              "FCI": 1.489683503193064,
+              "SRS": 0.1725684268478136
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 279,
+            "t_ns": 270691870324200,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 279,
+            "token_id": 741,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.48972046081750004,
+              "FCI": 1.4897204608175,
+              "SRS": 0.17266639641260792
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 280,
+            "t_ns": 270692423738700,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 280,
+            "token_id": 73594,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.49018293595956297,
+              "FCI": 1.490182935959563,
+              "SRS": 0.17276366888662847
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 281,
+            "t_ns": 270692700223500,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-b1b11c5e70a6",
+            "step": 281,
+            "token_id": 151645,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49021784599465806,
+              "FCI": 1.490217845994658,
+              "SRS": 0.17286025154802867
+            },
+            "degraded_mode": false,
+            "flags": []
+          }
+        ],
+        "recipe_eval": {
+          "n": 282.0,
+          "p50_us": 3.5,
+          "p95_us": 29.2,
+          "max_us": 163.6
+        },
+        "publish": {
+          "n": 282.0,
+          "p50_us": 33.7,
+          "p95_us": 84.4,
+          "max_us": 1026.8
+        },
+        "n_recipe_fires": 39
+      },
+      "runtime_ok": true,
+      "runtime_stderr": "",
+      "lint_ok": true
+    },
+    {
+      "invocation_index": 2,
+      "id": "chatcmpl-6cb7371641be",
+      "completion_tokens": 12,
+      "seconds": 6.162740500003565,
+      "verdict": "RESOLVED",
+      "code_audit": {
+        "exists": true,
+        "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\qwen code\\stem25_beam_deflection\\main.py",
+        "bytes": 472,
+        "stub_hits": [],
+        "distress_hits": [],
+        "stub_score": 0,
+        "distress_score": 0
+      },
+      "assistant_scores": {
+        "stub_hits": [],
+        "distress_hits": [],
+        "stub_score": 0,
+        "distress_score": 0
+      },
+      "checker_audit": {
+        "available": true,
+        "version": 1,
+        "n_tokens": 12,
+        "composites": {
+          "PLDS": 0.5123843209812237,
+          "FCI": 1.1859169947762591,
+          "SRS": 0.18939072449639383,
+          "flags_timeline": []
+        },
+        "timing_p95_ms": 27.998800040222704,
+        "degraded_mode": false,
+        "f2_stride": 8,
+        "checkers": {
+          "A": {
+            "label": "Distribution shape",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "low_margin=0% high_entropy=0%",
+            "metrics": {
+              "max_entropy": 0.7223435044288635,
+              "min_margin": 0.2783973515033722
+            }
+          },
+          "B_vocab": {
+            "label": "Vocab class hygiene",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "distress=0.000 stub=0.000"
+          },
+          "B_transport": {
+            "label": "Transport prototypes",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "rows_with_L16_transport=16/12"
+          },
+          "B_jlens": {
+            "label": "J-lens top-k classes",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "F2/F3 jlens rows=6"
+          },
+          "C": {
+            "label": "Trajectory stability",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "stored_thrash=0% osc=0% calibrated_C_alarm=False"
+          },
+          "D": {
+            "label": "Cross-position contrast",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "ΔH=-0.018 JS=0.000 |ΔM_code|=0.000"
+          },
+          "E": {
+            "label": "Layer curve (cliff)",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "cliff_layer=L16",
+            "metrics": {
+              "cliff_mag": 0.0003249943256378174,
+              "series_keys": [
+                "entropy",
+                "code_mass",
+                "distress_mass",
+                "flip_rate"
+              ]
+            }
+          },
+          "F": {
+            "label": "Lens vs logit disagreement",
+            "active": true,
+            "fired": true,
+            "severity": "warn",
+            "detail": "events=1 min_overlap=0.00"
+          },
+          "G": {
+            "label": "Sparse residual",
+            "active": false,
+            "fired": false,
+            "severity": "info",
+            "detail": "events=0 max_relMSE=0.000"
+          }
+        },
+        "all_active": false,
+        "panic_like": 1
+      },
+      "recipe_summary": {
+        "recipe_fires": 2,
+        "recipe_counts": {
+          "F_LENS": 2
+        },
+        "unique_recipes": [
+          "F_LENS"
+        ],
+        "warn_plus": []
+      },
+      "temporal_resolution": {
+        "enough_tokens": true,
+        "metrics": {
+          "B_distress": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "B_stub": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "C": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "A": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          }
+        }
+      },
+      "flag_rates": {
+        "A": 0.0,
+        "B_distress": 0.0,
+        "B_stub": 0.0,
+        "C": 0.0,
+        "D": 0.0
+      },
+      "monitor": {
+        "recipe_timeline": [
+          {
+            "step": 0,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 8,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          }
+        ],
+        "events_tail": [
+          {
+            "seq": 0,
+            "t_ns": 270695574583900,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-6cb7371641be",
+            "step": 0,
+            "token_id": 44644,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.290808591991663,
+              "FCI": 0.290808591991663,
+              "SRS": 0.2
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 1,
+            "t_ns": 270695908398200,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-6cb7371641be",
+            "step": 1,
+            "token_id": 25,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4061758238822222,
+              "FCI": 1.4061758238822222,
+              "SRS": 0.13638287186622622
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 2,
+            "t_ns": 270696251975000,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-6cb7371641be",
+            "step": 2,
+            "token_id": 912,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.46350786959131557,
+              "FCI": 1.4635078695913155,
+              "SRS": 0.15758858124415082
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 3,
+            "t_ns": 270696605456700,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-6cb7371641be",
+            "step": 3,
+            "token_id": 19101,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5161193711683154,
+              "FCI": 1.5161193711683154,
+              "SRS": 0.16819143593311311
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 4,
+            "t_ns": 270696920159400,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-6cb7371641be",
+            "step": 4,
+            "token_id": 17,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5129072393248748,
+              "FCI": 1.5129072393248748,
+              "SRS": 0.17455312499790127
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 5,
+            "t_ns": 270697282312900,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-6cb7371641be",
+            "step": 5,
+            "token_id": 20,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5107581037743185,
+              "FCI": 1.5107581037743185,
+              "SRS": 0.17879426966090306
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 6,
+            "t_ns": 270697550663100,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-6cb7371641be",
+            "step": 6,
+            "token_id": 85350,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5101325818359463,
+              "FCI": 1.5101325818359463,
+              "SRS": 0.18182365970934547
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 7,
+            "t_ns": 270697892443100,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-6cb7371641be",
+            "step": 7,
+            "token_id": 7844,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5088734667797444,
+              "FCI": 1.5088734667797445,
+              "SRS": 0.18409570224567728
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 8,
+            "t_ns": 270698407526800,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-6cb7371641be",
+            "step": 8,
+            "token_id": 1170,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.507895038649127,
+              "FCI": 1.507895038649127,
+              "SRS": 0.18586284644060203
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 9,
+            "t_ns": 270698667678400,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-6cb7371641be",
+            "step": 9,
+            "token_id": 15351,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5088922477472901,
+              "FCI": 1.5088922477472901,
+              "SRS": 0.1872705627648323
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 10,
+            "t_ns": 270699020400500,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-6cb7371641be",
+            "step": 10,
+            "token_id": 7197,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.508088302868649,
+              "FCI": 1.5080883028686491,
+              "SRS": 0.188427770989642
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 11,
+            "t_ns": 270699302560900,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-6cb7371641be",
+            "step": 11,
+            "token_id": 151645,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5123843209812238,
+              "FCI": 1.5123843209812238,
+              "SRS": 0.1893907244963938
+            },
+            "degraded_mode": false,
+            "flags": []
+          }
+        ],
+        "recipe_eval": {
+          "n": 12.0,
+          "p50_us": 3.9,
+          "p95_us": 29.5,
+          "max_us": 29.5
+        },
+        "publish": {
+          "n": 12.0,
+          "p50_us": 35.6,
+          "p95_us": 212.9,
+          "max_us": 212.9
+        },
+        "n_recipe_fires": 2
+      },
+      "runtime_ok": true,
+      "runtime_stderr": "",
+      "lint_ok": true
+    },
+    {
+      "invocation_index": 3,
+      "id": "chatcmpl-2d9270207717",
+      "completion_tokens": 13,
+      "seconds": 6.452061599993613,
+      "verdict": "RESOLVED",
+      "code_audit": {
+        "exists": true,
+        "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\qwen code\\stem25_beam_deflection\\main.py",
+        "bytes": 472,
+        "stub_hits": [],
+        "distress_hits": [],
+        "stub_score": 0,
+        "distress_score": 0
+      },
+      "assistant_scores": {
+        "stub_hits": [],
+        "distress_hits": [],
+        "stub_score": 0,
+        "distress_score": 0
+      },
+      "checker_audit": {
+        "available": true,
+        "version": 1,
+        "n_tokens": 13,
+        "composites": {
+          "PLDS": 0.5993137933046805,
+          "FCI": 1.516463894201549,
+          "SRS": 0.19154287118805002,
+          "flags_timeline": []
+        },
+        "timing_p95_ms": 36.743100034072995,
+        "degraded_mode": false,
+        "f2_stride": 8,
+        "checkers": {
+          "A": {
+            "label": "Distribution shape",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "low_margin=0% high_entropy=0%",
+            "metrics": {
+              "max_entropy": 1.3440929651260376,
+              "min_margin": 0.11418160796165466
+            }
+          },
+          "B_vocab": {
+            "label": "Vocab class hygiene",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "distress=0.000 stub=0.000"
+          },
+          "B_transport": {
+            "label": "Transport prototypes",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "rows_with_L16_transport=17/13"
+          },
+          "B_jlens": {
+            "label": "J-lens top-k classes",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "F2/F3 jlens rows=6"
+          },
+          "C": {
+            "label": "Trajectory stability",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "stored_thrash=0% osc=0% calibrated_C_alarm=False"
+          },
+          "D": {
+            "label": "Cross-position contrast",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "ΔH=-0.019 JS=0.000 |ΔM_code|=0.000"
+          },
+          "E": {
+            "label": "Layer curve (cliff)",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "cliff_layer=L10",
+            "metrics": {
+              "cliff_mag": -0.0002769506894624296,
+              "series_keys": [
+                "entropy",
+                "code_mass",
+                "distress_mass",
+                "flip_rate"
+              ]
+            }
+          },
+          "F": {
+            "label": "Lens vs logit disagreement",
+            "active": true,
+            "fired": true,
+            "severity": "warn",
+            "detail": "events=1 min_overlap=0.00"
+          },
+          "G": {
+            "label": "Sparse residual",
+            "active": false,
+            "fired": false,
+            "severity": "info",
+            "detail": "events=0 max_relMSE=0.000"
+          }
+        },
+        "all_active": false,
+        "panic_like": 1
+      },
+      "recipe_summary": {
+        "recipe_fires": 2,
+        "recipe_counts": {
+          "F_LENS": 2
+        },
+        "unique_recipes": [
+          "F_LENS"
+        ],
+        "warn_plus": []
+      },
+      "temporal_resolution": {
+        "enough_tokens": true,
+        "metrics": {
+          "B_distress": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "B_stub": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "C": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "A": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          }
+        }
+      },
+      "flag_rates": {
+        "A": 0.0,
+        "B_distress": 0.0,
+        "B_stub": 0.0,
+        "C": 0.0,
+        "D": 0.0
+      },
+      "monitor": {
+        "recipe_timeline": [
+          {
+            "step": 0,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 8,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          }
+        ],
+        "events_tail": [
+          {
+            "seq": 0,
+            "t_ns": 270702289047300,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-2d9270207717",
+            "step": 0,
+            "token_id": 5743,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.34075180932632065,
+              "FCI": 0.34075180932632065,
+              "SRS": 0.19998687302868348
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 1,
+            "t_ns": 270702564117100,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-2d9270207717",
+            "step": 1,
+            "token_id": 25,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4537568601208477,
+              "FCI": 1.4537568601208477,
+              "SRS": 0.1451530207981705
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 2,
+            "t_ns": 270702875957700,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-2d9270207717",
+            "step": 2,
+            "token_id": 39970,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5481665920706291,
+              "FCI": 1.5481665920706291,
+              "SRS": 0.16343534719878033
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 3,
+            "t_ns": 270703249359000,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-2d9270207717",
+            "step": 3,
+            "token_id": 707,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.6201307543733492,
+              "FCI": 1.6201307543733492,
+              "SRS": 0.17257651039908525
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 4,
+            "t_ns": 270703638024200,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-2d9270207717",
+            "step": 4,
+            "token_id": 1170,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5961052344008749,
+              "FCI": 1.5961052344008748,
+              "SRS": 0.1780612083192682
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 5,
+            "t_ns": 270703972740200,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-2d9270207717",
+            "step": 5,
+            "token_id": 14806,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.580226264210296,
+              "FCI": 1.580226264210296,
+              "SRS": 0.18171767359939017
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 6,
+            "t_ns": 270704337301900,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-2d9270207717",
+            "step": 6,
+            "token_id": 323,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5853963679850105,
+              "FCI": 1.5853963679850105,
+              "SRS": 0.18431827821311475
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 7,
+            "t_ns": 270704673297200,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-2d9270207717",
+            "step": 7,
+            "token_id": 2647,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5904865855656567,
+              "FCI": 1.5904865855656567,
+              "SRS": 0.1862784934364754
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 8,
+            "t_ns": 270705269399500,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-2d9270207717",
+            "step": 8,
+            "token_id": 27419,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.5813308541831046,
+              "FCI": 1.5813308541831046,
+              "SRS": 0.18780310527686703
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 9,
+            "t_ns": 270705626137100,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-2d9270207717",
+            "step": 9,
+            "token_id": 304,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5854383793155193,
+              "FCI": 1.5854383793155193,
+              "SRS": 0.18901932180975564
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 10,
+            "t_ns": 270705985942100,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-2d9270207717",
+            "step": 10,
+            "token_id": 1887,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5909017064065499,
+              "FCI": 1.5909017064065498,
+              "SRS": 0.19001756528159605
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 11,
+            "t_ns": 270706349774700,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-2d9270207717",
+            "step": 11,
+            "token_id": 368,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.6063093360224153,
+              "FCI": 1.6063093360224152,
+              "SRS": 0.19083811045372084
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 12,
+            "t_ns": 270706708120200,
+            "session_id": "stem25_t09_stem25_beam_deflection_20260806T080104Z",
+            "invocation_id": "chatcmpl-2d9270207717",
+            "step": 12,
+            "token_id": 151645,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5993137933046805,
+              "FCI": 1.5993137933046806,
+              "SRS": 0.19154287118805002
+            },
+            "degraded_mode": false,
+            "flags": []
+          }
+        ],
+        "recipe_eval": {
+          "n": 13.0,
+          "p50_us": 3.9,
+          "p95_us": 30.8,
+          "max_us": 30.8
+        },
+        "publish": {
+          "n": 13.0,
+          "p50_us": 35.5,
+          "p95_us": 81.9,
+          "max_us": 81.9
+        },
+        "n_recipe_fires": 2
+      },
+      "runtime_ok": true,
+      "runtime_stderr": "",
+      "lint_ok": true
+    }
+  ],
+  "evidence": {
+    "checks": [
+      {
+        "id": "A1",
+        "name": "at least one LLM invocation logged",
+        "pass": true,
+        "detail": "n_invocations=3"
+      },
+      {
+        "id": "A3",
+        "name": "J-space attached to invocations",
+        "pass": true,
+        "detail": "skip_jspace=True with_jspace=0/3"
+      },
+      {
+        "id": "A4",
+        "name": "nested invocations indexed",
+        "pass": true,
+        "detail": "indexed=3"
+      },
+      {
+        "id": "A5",
+        "name": "layer readouts for browsing",
+        "pass": true,
+        "detail": "skip_jspace=True n_layers=0"
+      },
+      {
+        "id": "C1",
+        "name": "chaos attached to invocations",
+        "pass": true,
+        "detail": "with_chaos=3/3 enabled=True"
+      },
+      {
+        "id": "A2",
+        "name": "aider process completed",
+        "pass": true,
+        "detail": "rc=0 seconds=143.4"
+      },
+      {
+        "id": "A6",
+        "name": "task main.py exists after run",
+        "pass": true,
+        "detail": "size=496"
+      },
+      {
+        "id": "A7",
+        "name": "ruff+pylint pass on task files",
+        "pass": true,
+        "detail": "[{\"tool\": \"ruff\", \"rc\": 0}, {\"tool\": \"ruff_verify\", \"rc\": 0}, {\"tool\": \"pylint\", \"rc\": 0}]"
+      }
+    ],
+    "passed": 8,
+    "total": 8,
+    "overall_pass": true
+  },
+  "lint": {
+    "ok": true,
+    "checks": [
+      {
+        "tool": "ruff",
+        "file": "stem25_beam_deflection\\main.py",
+        "returncode": 0,
+        "stdout": "\u001b[1;32mAll checks passed!\u001b[0m\n",
+        "stderr": "",
+        "pass": true
+      },
+      {
+        "tool": "ruff_verify",
+        "file": "stem25_beam_deflection\\main.py",
+        "returncode": 0,
+        "stdout": "\u001b[1;32mAll checks passed!\u001b[0m\n",
+        "stderr": "",
+        "pass": true
+      },
+      {
+        "tool": "pylint",
+        "file": "stem25_beam_deflection\\main.py",
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "",
+        "pass": true
+      }
+    ]
+  },
+  "aider": {
+    "returncode": 0,
+    "seconds": 143.41752570000244,
+    "stdout_tail": "Detected dumb terminal, disabling fancy input and pretty output.\n\nAider v0.86.2\nModel: openai/qwen-local with whole edit format\nGit repo: .git with 32 files\nRepo-map: using 1024 tokens, auto refresh\nAdded stem25_beam_deflection\\main.py to the chat.\n\nTo fix the deflection formula and update the assertion in the `main` function, \nI will:\n\n\n\n1. Correct the deflection formula to `P * L**3 / (3 * E * I)`.\n\n2. Update the assertion in the `main` function to `abs(delta - 0.012) < 1e-4`.\n\n\n\nHere is the updated content of `stem25_beam_deflection/main.py`:\n\n\n\nstem25_beam_deflection/main.py\n\n```diff\n@@ -2,12 +2,12 @@\n \n from __future__ import annotations\n \n \n def max_tip_deflection(p: float, l: float, e: float, i_moment: float) -> \nfloat:\n-  # BUG: wrong formula P*L/(E*I)\n-  return p * l / (e * i_moment)\n+  # Corrected formula P*L^3/(3*E*I)\n+  return p * l**3 / (3 * e * i_moment)\n \n \n def demo() -> float:\n   return max_tip_deflection(p=7500.0, l=2.0, e=200e9, i_moment=8.33e-6)\n \n```\n\n\nTokens: 1.8k sent, 282 received.\nCommitting stem25_beam_deflection/main.py before applying edits.\nCommit 591e82f feat: add stem25_beam_deflection/main.py\nApplied edit to stem25_beam_deflection/main.py\nCommit 5eda61f fix: Correct deflection formula and update assertion in main()\n",
+    "stderr_tail": "",
+    "cwd": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\qwen code",
+    "task_dir": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\qwen code\\stem25_beam_deflection"
+  },
+  "elapsed_s": 169.8054013000219,
+  "aider_rc": 0,
+  "attempt": 1,
+  "success": true
+}

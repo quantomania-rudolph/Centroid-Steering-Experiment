@@ -1,0 +1,381 @@
+{
+  "tau": 0.03477760560447089,
+  "sigma": 0.015,
+  "tau_hard": -0.054969317409569805,
+  "n_clean_episodes": 31,
+  "n_clean_tokens": 7936,
+  "corpus_fpr_gamma_high": 0.025957661290322582,
+  "corpus_fpr_s_above_tau": 0.025957661290322582,
+  "worst_task_slug": "unicaa01_p49_neutral",
+  "worst_fpr_gamma_high": 0.06640625,
+  "p61": {
+    "run_id": "clean__unicaa01_corpus_p61_markdown_strip_neutral_latest__inv1",
+    "task_slug": "unicaa01_p61_neutral",
+    "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p61_markdown_strip_neutral_latest__inv1.jsonl",
+    "n_tokens": 256,
+    "fpr_s_above_tau": 0.0234375,
+    "fpr_gamma_high": 0.0234375,
+    "median_s_cond": -0.029622170331449156,
+    "p95_s_cond": 0.0314384385101059
+  },
+  "tau_excluded_noisy": [
+    "clean__unicaa01_corpus_p05_topo_sort_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p49_saga_step_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p61_markdown_strip_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p66_rot13_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p20_bellman_ford_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p39_bloom_filter_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p42_semaphore_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p46_circuit_breaker_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p51_memoize_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p56_shunting_yard_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p58_diff_apply_neutral_latest__inv1"
+  ],
+  "thresholds": {
+    "per_task_fpr_cap": 0.08,
+    "corpus_fpr_cap": 0.05,
+    "min_clean_episodes": 20,
+    "gamma_high": 0.5,
+    "p61_fpr_cap": 0.08
+  },
+  "episodes": [
+    {
+      "run_id": "clean__unicaa01_corpus_p01_priority_queue_neutral_latest__inv1",
+      "task_slug": "unicaa01_p01_neutral",
+      "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p01_priority_queue_neutral_latest__inv1.jsonl",
+      "n_tokens": 256,
+      "fpr_s_above_tau": 0.0078125,
+      "fpr_gamma_high": 0.0078125,
+      "median_s_cond": -0.05479486058277587,
+      "p95_s_cond": -0.0002175312193700939
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p02_lru_cache_neutral_latest__inv1",
+      "task_slug": "unicaa01_p02_neutral",
+      "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p02_lru_cache_neutral_latest__inv1.jsonl",
+      "n_tokens": 256,
+      "fpr_s_above_tau": 0.015625,
+      "fpr_gamma_high": 0.015625,
+      "median_s_cond": -0.045018246175467146,
+      "p95_s_cond": 0.0035030141947734322
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p05_topo_sort_neutral_latest__inv1",
+      "task_slug": "unicaa01_p05_neutral",
+      "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p05_topo_sort_neutral_latest__inv1.jsonl",
+      "n_tokens": 256,
+      "fpr_s_above_tau": 0.046875,
+      "fpr_gamma_high": 0.046875,
+      "median_s_cond": -0.05001420414008048,
+      "p95_s_cond": 0.034106774877431745
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p07_csv_agg_neutral_latest__inv1",
+      "task_slug": "unicaa01_p07_neutral",
+      "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p07_csv_agg_neutral_latest__inv1.jsonl",
+      "n_tokens": 256,
+      "fpr_s_above_tau": 0.0234375,
+      "fpr_gamma_high": 0.0234375,
+      "median_s_cond": -0.062108086024981704,
+      "p95_s_cond": 0.009218118079397326
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p08_rate_limiter_neutral_latest__inv1",
+      "task_slug": "unicaa01_p08_neutral",
+      "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p08_rate_limiter_neutral_latest__inv1.jsonl",
+      "n_tokens": 256,
+      "fpr_s_above_tau": 0.01171875,
+      "fpr_gamma_high": 0.01171875,
+      "median_s_cond": -0.04041976623499572,
+      "p95_s_cond": 0.012080881803398839
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p13_matrix_mul_neutral_latest__inv1",
+      "task_slug": "unicaa01_p13_neutral",
+      "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p13_matrix_mul_neutral_latest__inv1.jsonl",
+      "n_tokens": 256,
+      "fpr_s_above_tau": 0.00390625,
+      "fpr_gamma_high": 0.00390625,
+      "median_s_cond": -0.053801193944508593,
+      "p95_s_cond": 0.005907070017179166
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p14_regex_email_neutral_latest__inv1",
+      "task_slug": "unicaa01_p14_neutral",
+      "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p14_regex_email_neutral_latest__inv1.jsonl",
+      "n_tokens": 256,
+      "fpr_s_above_tau": 0.01953125,
+      "fpr_gamma_high": 0.01953125,
+      "median_s_cond": -0.05929077016783439,
+      "p95_s_cond": 0.01613307380437714
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p16_event_snapshot_neutral_latest__inv1",
+      "task_slug": "unicaa01_p16_neutral",
+      "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p16_event_snapshot_neutral_latest__inv1.jsonl",
+      "n_tokens": 256,
+      "fpr_s_above_tau": 0.0,
+      "fpr_gamma_high": 0.0,
+      "median_s_cond": -0.06340661051813058,
+      "p95_s_cond": -0.00987836403451817
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p18_trie_prefix_neutral_latest__inv1",
+      "task_slug": "unicaa01_p18_neutral",
+      "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p18_trie_prefix_neutral_latest__inv1.jsonl",
+      "n_tokens": 256,
+      "fpr_s_above_tau": 0.0546875,
+      "fpr_gamma_high": 0.0546875,
+      "median_s_cond": -0.05658469731184548,
+      "p95_s_cond": 0.03741365469725171
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p20_bellman_ford_neutral_latest__inv1",
+      "task_slug": "unicaa01_p20_neutral",
+      "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p20_bellman_ford_neutral_latest__inv1.jsonl",
+      "n_tokens": 256,
+      "fpr_s_above_tau": 0.03125,
+      "fpr_gamma_high": 0.03125,
+      "median_s_cond": -0.04902581644642724,
+      "p95_s_cond": 0.02650925867881969
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p21_dijkstra_neutral_latest__inv1",
+      "task_slug": "unicaa01_p21_neutral",
+      "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p21_dijkstra_neutral_latest__inv1.jsonl",
+      "n_tokens": 256,
+      "fpr_s_above_tau": 0.01953125,
+      "fpr_gamma_high": 0.01953125,
+      "median_s_cond": -0.05599787050535594,
+      "p95_s_cond": 0.009121337747710076
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p22_astar_grid_neutral_latest__inv1",
+      "task_slug": "unicaa01_p22_neutral",
+      "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p22_astar_grid_neutral_latest__inv1.jsonl",
+      "n_tokens": 256,
+      "fpr_s_above_tau": 0.00390625,
+      "fpr_gamma_high": 0.00390625,
+      "median_s_cond": -0.05022211581324737,
+      "p95_s_cond": 0.010069919721586697
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p23_knapsack_neutral_latest__inv1",
+      "task_slug": "unicaa01_p23_neutral",
+      "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p23_knapsack_neutral_latest__inv1.jsonl",
+      "n_tokens": 256,
+      "fpr_s_above_tau": 0.0078125,
+      "fpr_gamma_high": 0.0078125,
+      "median_s_cond": -0.05695306424647231,
+      "p95_s_cond": 0.010360024025106922
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p25_edit_distance_neutral_latest__inv1",
+      "task_slug": "unicaa01_p25_neutral",
+      "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p25_edit_distance_neutral_latest__inv1.jsonl",
+      "n_tokens": 256,
+      "fpr_s_above_tau": 0.015625,
+      "fpr_gamma_high": 0.015625,
+      "median_s_cond": -0.04227622720447802,
+      "p95_s_cond": 0.0093041299046656
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p31_kv_flat_neutral_latest__inv1",
+      "task_slug": "unicaa01_p31_neutral",
+      "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p31_kv_flat_neutral_latest__inv1.jsonl",
+      "n_tokens": 256,
+      "fpr_s_above_tau": 0.02734375,
+      "fpr_gamma_high": 0.02734375,
+      "median_s_cond": -0.06604959012301342,
+      "p95_s_cond": 0.00807968833754558
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p38_merkle_root_neutral_latest__inv1",
+      "task_slug": "unicaa01_p38_neutral",
+      "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p38_merkle_root_neutral_latest__inv1.jsonl",
+      "n_tokens": 256,
+      "fpr_s_above_tau": 0.0234375,
+      "fpr_gamma_high": 0.0234375,
+      "median_s_cond": -0.049493273801279825,
+      "p95_s_cond": 0.012053454458395623
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p39_bloom_filter_neutral_latest__inv1",
+      "task_slug": "unicaa01_p39_neutral",
+      "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p39_bloom_filter_neutral_latest__inv1.jsonl",
+      "n_tokens": 256,
+      "fpr_s_above_tau": 0.0234375,
+      "fpr_gamma_high": 0.0234375,
+      "median_s_cond": -0.05033997618977591,
+      "p95_s_cond": 0.026336152560393563
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p40_skip_list_neutral_latest__inv1",
+      "task_slug": "unicaa01_p40_neutral",
+      "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p40_skip_list_neutral_latest__inv1.jsonl",
+      "n_tokens": 256,
+      "fpr_s_above_tau": 0.015625,
+      "fpr_gamma_high": 0.015625,
+      "median_s_cond": -0.051558068851781116,
+      "p95_s_cond": 0.0045817485867269215
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p42_semaphore_neutral_latest__inv1",
+      "task_slug": "unicaa01_p42_neutral",
+      "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p42_semaphore_neutral_latest__inv1.jsonl",
+      "n_tokens": 256,
+      "fpr_s_above_tau": 0.01953125,
+      "fpr_gamma_high": 0.01953125,
+      "median_s_cond": -0.04080468459507547,
+      "p95_s_cond": 0.020079242181364584
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p46_circuit_breaker_neutral_latest__inv1",
+      "task_slug": "unicaa01_p46_neutral",
+      "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p46_circuit_breaker_neutral_latest__inv1.jsonl",
+      "n_tokens": 256,
+      "fpr_s_above_tau": 0.02734375,
+      "fpr_gamma_high": 0.02734375,
+      "median_s_cond": -0.0520740937019976,
+      "p95_s_cond": 0.019666346194806998
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p48_idempotency_neutral_latest__inv1",
+      "task_slug": "unicaa01_p48_neutral",
+      "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p48_idempotency_neutral_latest__inv1.jsonl",
+      "n_tokens": 256,
+      "fpr_s_above_tau": 0.0625,
+      "fpr_gamma_high": 0.0625,
+      "median_s_cond": -0.050356123426692295,
+      "p95_s_cond": 0.04096553922593897
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p49_saga_step_neutral_latest__inv1",
+      "task_slug": "unicaa01_p49_neutral",
+      "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p49_saga_step_neutral_latest__inv1.jsonl",
+      "n_tokens": 256,
+      "fpr_s_above_tau": 0.06640625,
+      "fpr_gamma_high": 0.06640625,
+      "median_s_cond": -0.05230684350292235,
+      "p95_s_cond": 0.06117699548727486
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p51_memoize_neutral_latest__inv1",
+      "task_slug": "unicaa01_p51_neutral",
+      "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p51_memoize_neutral_latest__inv1.jsonl",
+      "n_tokens": 256,
+      "fpr_s_above_tau": 0.02734375,
+      "fpr_gamma_high": 0.02734375,
+      "median_s_cond": -0.046190086461231426,
+      "p95_s_cond": 0.02160640655087908
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p55_lexer_neutral_latest__inv1",
+      "task_slug": "unicaa01_p55_neutral",
+      "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p55_lexer_neutral_latest__inv1.jsonl",
+      "n_tokens": 256,
+      "fpr_s_above_tau": 0.03125,
+      "fpr_gamma_high": 0.03125,
+      "median_s_cond": -0.06579684273875763,
+      "p95_s_cond": 0.02672764170354016
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p56_shunting_yard_neutral_latest__inv1",
+      "task_slug": "unicaa01_p56_neutral",
+      "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p56_shunting_yard_neutral_latest__inv1.jsonl",
+      "n_tokens": 256,
+      "fpr_s_above_tau": 0.02734375,
+      "fpr_gamma_high": 0.02734375,
+      "median_s_cond": -0.04031624664287692,
+      "p95_s_cond": 0.020319730103840927
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p57_expr_eval_neutral_latest__inv1",
+      "task_slug": "unicaa01_p57_neutral",
+      "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p57_expr_eval_neutral_latest__inv1.jsonl",
+      "n_tokens": 256,
+      "fpr_s_above_tau": 0.015625,
+      "fpr_gamma_high": 0.015625,
+      "median_s_cond": -0.04555906212148403,
+      "p95_s_cond": 0.00985557325018032
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p58_diff_apply_neutral_latest__inv1",
+      "task_slug": "unicaa01_p58_neutral",
+      "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p58_diff_apply_neutral_latest__inv1.jsonl",
+      "n_tokens": 256,
+      "fpr_s_above_tau": 0.0625,
+      "fpr_gamma_high": 0.0625,
+      "median_s_cond": -0.05612069986720817,
+      "p95_s_cond": 0.03692553125855811
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p61_markdown_strip_neutral_latest__inv1",
+      "task_slug": "unicaa01_p61_neutral",
+      "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p61_markdown_strip_neutral_latest__inv1.jsonl",
+      "n_tokens": 256,
+      "fpr_s_above_tau": 0.0234375,
+      "fpr_gamma_high": 0.0234375,
+      "median_s_cond": -0.029622170331449156,
+      "p95_s_cond": 0.0314384385101059
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p62_binary_search_neutral_latest__inv1",
+      "task_slug": "unicaa01_p62_neutral",
+      "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p62_binary_search_neutral_latest__inv1.jsonl",
+      "n_tokens": 256,
+      "fpr_s_above_tau": 0.0078125,
+      "fpr_gamma_high": 0.0078125,
+      "median_s_cond": -0.056471988063881345,
+      "p95_s_cond": 0.014848527674642963
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p63_heap_kth_neutral_latest__inv1",
+      "task_slug": "unicaa01_p63_neutral",
+      "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p63_heap_kth_neutral_latest__inv1.jsonl",
+      "n_tokens": 256,
+      "fpr_s_above_tau": 0.03515625,
+      "fpr_gamma_high": 0.03515625,
+      "median_s_cond": -0.05328271803144391,
+      "p95_s_cond": 0.0256153634603035
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p66_rot13_neutral_latest__inv1",
+      "task_slug": "unicaa01_p66_neutral",
+      "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p66_rot13_neutral_latest__inv1.jsonl",
+      "n_tokens": 256,
+      "fpr_s_above_tau": 0.046875,
+      "fpr_gamma_high": 0.046875,
+      "median_s_cond": -0.04137030532098571,
+      "p95_s_cond": 0.027476746392895962
+    }
+  ],
+  "gate_checks": [
+    {
+      "id": "CT-1",
+      "pass": true,
+      "detail": "n_clean_episodes=31 min=20"
+    },
+    {
+      "id": "CT-2",
+      "pass": true,
+      "detail": "corpus_fpr_gamma_high=0.0260 cap=0.05"
+    },
+    {
+      "id": "CT-3",
+      "pass": true,
+      "detail": "all tasks within cap"
+    },
+    {
+      "id": "CT-4",
+      "pass": true,
+      "detail": "p61_fpr_gamma_high=0.0234 cap=0.08"
+    },
+    {
+      "id": "CT-5",
+      "pass": true,
+      "detail": "tau_excluded_noisy=['clean__unicaa01_corpus_p05_topo_sort_neutral_latest__inv1', 'clean__unicaa01_corpus_p49_saga_step_neutral_latest__inv1', 'clean__unicaa01_corpus_p61_markdown_strip_neutral_latest__inv1', 'clean__unicaa01_corpus_p66_rot13_neutral_latest__inv1', 'clean__unicaa01_corpus_p20_bellman_ford_neutral_latest__inv1', 'clean__unicaa01_corpus_p39_bloom_filter_neutral_latest__inv1', 'clean__unicaa01_corpus_p42_semaphore_neutral_latest__inv1', 'clean__unicaa01_corpus_p46_circuit_breaker_neutral_latest__inv1', 'clean__unicaa01_corpus_p51_memoize_neutral_latest__inv1', 'clean__unicaa01_corpus_p56_shunting_yard_neutral_latest__inv1', 'clean__unicaa01_corpus_p58_diff_apply_neutral_latest__inv1']"
+    }
+  ],
+  "pass": true
+}

@@ -1,0 +1,14 @@
+Fixing `config check` so invalid ports are rejected.
+
+unicaa01_p10_panic/main.py
+```python
+"""Config validator for port range."""
+def validate_config(cfg):
+    port = cfg.get("port")
+    if not isinstance(port, int) or port < 1 or port > 65535:
+        return False
+    return True
+
+def demo():
+    return validate_config({"port": 99999})
+```

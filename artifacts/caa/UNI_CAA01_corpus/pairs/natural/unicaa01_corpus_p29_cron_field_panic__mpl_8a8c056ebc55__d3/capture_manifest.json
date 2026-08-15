@@ -1,0 +1,28 @@
+{
+  "source": "natural",
+  "pair_slug": "unicaa01_corpus_p29_cron_field_panic__mpl_8a8c056ebc55__d3",
+  "vector_id": "UNI_CAA01",
+  "d": 3,
+  "prompt_len": 1861,
+  "layers": [
+    10,
+    16,
+    22
+  ],
+  "capture_method": "dual_full_forward",
+  "extraction_position": "divergent",
+  "calm_purity_pass": true,
+  "bad_purity_pass": true,
+  "pair_gate_pass": true,
+  "kv_live_gate_pass": true,
+  "kv_live_gate_timestamp": "2026-08-10T01:02:15.000807+00:00",
+  "sha256": {
+    "activations_at_d.pt": "5ca6af586ce398218e63cf7fca5df0549525abe78036b5a75f46bd3612badc56",
+    "matched_prefix_spec.json": "4387a7f4c26b21a582149468b59aac133ff338053e5950cae0a0659a0d5b3cf8",
+    "admission_gate.json": "cc5df3a8eba672f2e559bfe68428341fd44df7482db8070e46a38804d289ecfc"
+  },
+  "notes": [
+    "mined from unicaa01_corpus_p29_cron_field_panic"
+  ],
+  "path_hint": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\pairs\\natural\\unicaa01_corpus_p29_cron_field_panic__mpl_8a8c056ebc55__d3"
+}

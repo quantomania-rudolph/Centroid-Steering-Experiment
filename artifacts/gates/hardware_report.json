@@ -1,0 +1,26 @@
+{
+  "timestamp_utc": "2026-08-03T04:54:53.472945+00:00",
+  "cpu": {
+    "model": "Intel64 Family 6 Model 189 Stepping 1, GenuineIntel",
+    "logical_cores": 8,
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "total_ram_gb": 31.54,
+  "intel_gpus": [
+    {
+      "name": "Intel(R) Arc(TM) 140V GPU (16GB)",
+      "type": "discrete",
+      "driver": "32.0.101.8826"
+    }
+  ],
+  "sycl_devices": [],
+  "torch_xpu": {
+    "torch_installed": true,
+    "torch_version": "2.10.0+xpu",
+    "xpu_available": true,
+    "device_name": "Intel(R) Arc(TM) 140V GPU (16GB)",
+    "matmul_ok": true,
+    "error": null
+  },
+  "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]"
+}

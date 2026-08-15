@@ -1,0 +1,62 @@
+{
+  "bug": "F compared J-lens (transport+norm+unembed) to naive same-layer logit-lens. With fitted J at L10/L16/L22, mid-layer naive readout intentionally diverges (gate4 G4.4 expects >=50% top-1 mismatch). Overlap<=0.4 fired on virtually every token \u2192 F_LENS recipe spam (2000+ fires) even on clean fibonacci.",
+  "fix": "Compare J-lens top-k to sampling-head top-k (actual decode logits). Store overlap_sample + overlap_naive diagnostic. CAST uses overlap_sample only.",
+  "synthetic": {
+    "identical_jlens_sampling": {
+      "overlap": 1.0,
+      "f_alarm": false,
+      "expect_alarm": false
+    },
+    "jlens_vs_naive_midlayer": {
+      "overlap": 0.0,
+      "f_alarm": true,
+      "expect_alarm": true,
+      "note": "Old bug compared to naive logit-lens \u2014 always low at fitted mid-layer"
+    },
+    "threshold": 0.4
+  },
+  "legacy_persisted_runs": [
+    {
+      "file": "aider_chaos_proof_clean_latest.json",
+      "n_invocations": 1,
+      "f_checker_fired": 1,
+      "legacy_f_atom_tokens": 62,
+      "legacy_overlap_min": 0.0,
+      "legacy_overlap_p50": 0.2,
+      "has_overlap_sample": true,
+      "verdicts": [
+        null
+      ]
+    },
+    {
+      "file": "aider_live_panic_demo_scheduler_latest.json",
+      "n_invocations": 3,
+      "f_checker_fired": 0,
+      "legacy_f_atom_tokens": 0,
+      "legacy_overlap_min": 0.0,
+      "legacy_overlap_p50": 0.0,
+      "has_overlap_sample": false,
+      "verdicts": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "file": "stem25_t01_stem25_alm_duration_match_latest.json",
+      "n_invocations": 3,
+      "f_checker_fired": 0,
+      "legacy_f_atom_tokens": 0,
+      "legacy_overlap_min": 0.0,
+      "legacy_overlap_p50": 0.2,
+      "has_overlap_sample": false,
+      "verdicts": [
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "legacy_f_fired_rate": 0.14285714285714285,
+  "unit_tests": "pytest tests/unit/test_chaos_metrics.py -k f_alarm"
+}

@@ -1,0 +1,97 @@
+{
+  "attempts": [
+    {
+      "attempt_index": 0,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "13b940505072bdf2366a9039ecd0f78d55dcc5e158b9973a419b92d29c2ba3ef",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": false,
+      "failed_checks": [
+        {
+          "id": "SY_ast_parse",
+          "pass": false,
+          "detail": "no fenced main.py block"
+        },
+        {
+          "id": "QA_MAIN_PY_PRESENT",
+          "pass": false,
+          "detail": "extracted_len=0"
+        }
+      ],
+      "demo_result": {
+        "pass": false,
+        "actual_repr": "",
+        "expected_repr": "",
+        "error": "no main.py"
+      },
+      "qa_verdict": null,
+      "qa_calls_so_far": 0
+    },
+    {
+      "attempt_index": 1,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "779d2c064e4dfdd6944f74003ecbfc9c8900e71754cdb599f06d4b58d9f5e42d",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": true,
+      "failed_checks": [
+        {
+          "id": "RUN_quality_suite",
+          "pass": false,
+          "detail": "FAIL:keys_sorted:expected ['x', 'y'] got [('x', '9'), ('y', '8')]"
+        }
+      ],
+      "demo_result": {
+        "pass": true,
+        "actual_repr": "2",
+        "expected_repr": "2",
+        "error": "",
+        "pair_id": "p31_kv_flat"
+      },
+      "qa_verdict": null,
+      "qa_calls_so_far": 0
+    },
+    {
+      "attempt_index": 2,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "afdf1930adec7e09ceb7ac35e67339c6a260ce286ef306fe3a0a58d4e02bd724",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": false,
+      "failed_checks": [
+        {
+          "id": "CT_assemble",
+          "pass": false,
+          "detail": "prefix lock or CD divergence failed at d=11 (bad_token=2623 bad_text='Not')"
+        }
+      ],
+      "demo_result": {
+        "pass": false,
+        "actual_repr": "",
+        "expected_repr": "",
+        "error": "no main.py"
+      },
+      "qa_verdict": null,
+      "qa_calls_so_far": 0
+    },
+    {
+      "attempt_index": 3,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "2df6ca77a6aada750c026eb277eadad54cb0ccf1e88b701e8b9fb5e31c9ba021",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": true,
+      "failed_checks": [],
+      "demo_result": {
+        "pass": true,
+        "actual_repr": "2",
+        "expected_repr": "2",
+        "error": "",
+        "pair_id": "p31_kv_flat"
+      },
+      "qa_verdict": "approve",
+      "qa_calls_so_far": 0
+    }
+  ]
+}

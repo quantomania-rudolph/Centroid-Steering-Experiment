@@ -1,0 +1,28 @@
+{
+  "source": "natural",
+  "pair_slug": "unicaa01_corpus_p55_lexer_panic__mpl_e40ff3e0676f__d3",
+  "vector_id": "UNI_CAA01",
+  "d": 3,
+  "prompt_len": 1768,
+  "layers": [
+    10,
+    16,
+    22
+  ],
+  "capture_method": "dual_full_forward",
+  "extraction_position": "divergent",
+  "calm_purity_pass": true,
+  "bad_purity_pass": true,
+  "pair_gate_pass": true,
+  "kv_live_gate_pass": true,
+  "kv_live_gate_timestamp": "2026-08-10T01:02:15.000807+00:00",
+  "sha256": {
+    "activations_at_d.pt": "02a56ffc6230c2597e8b4c14e7837bf89674303eb1d0cf09dc5d74904f83e969",
+    "matched_prefix_spec.json": "e0029f3ccb25e643000ff16096896f9f9401992d476515fcdb4b7dad19646904",
+    "admission_gate.json": "1fc3121ae6bf366b806ff4e057bc84ccedf5a864328072e0af89d3fc759c7b19"
+  },
+  "notes": [
+    "mined from unicaa01_corpus_p55_lexer_panic"
+  ],
+  "path_hint": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\pairs\\natural\\unicaa01_corpus_p55_lexer_panic__mpl_e40ff3e0676f__d3"
+}

@@ -1,0 +1,58 @@
+{
+  "brief_version": 1,
+  "brief_id": "unicaa01_p42_panic__chatcmpl_6d7feca070ed__d8",
+  "task_slug": "unicaa01_p42_panic",
+  "pair_id": "p42_semaphore",
+  "invocation_id": "chatcmpl-6d7feca070ed",
+  "domain": "concurrency",
+  "user_message": "Edit unicaa01_p42_panic/main.py only. Semaphore acquire/release NotImplementedError. Counting semaphore; demo() second acquire blocks -> False. Fix the broken code: remove NotImplementedError/TODO stubs where possible. Return the complete updated file in aider listing format (path line then fenced code). Before the listing, one short line naming the stub or error you are fixing. Stress-calibration run \u2014 starter has intentional broken stubs. Lint-clean ruff+pylint if possible. Never pip install. Stdlib only.",
+  "panic_starter_main_py": "\"\"\"Broken semaphore.\"\"\"\nimport threading\n\nclass Semaphore:\n    def __init__(self, n: int):\n        self.n = n\n    def acquire(self) -> bool:\n        raise NotImplementedError(\"acquire not implemented\")\n    def release(self):\n        raise NotImplementedError(\"release not implemented\")\n\ndef demo():\n    s = Semaphore(1)\n    ok1 = s.acquire()\n    ok2 = s.acquire()\n    return ok1 and not ok2\n",
+  "prefix_lock": {
+    "d": 8,
+    "prefix_token_ids": [
+      785,
+      1465,
+      304,
+      279,
+      2038,
+      374,
+      279,
+      1565
+    ],
+    "prefix_text": "The error in the code is the `",
+    "immutable": true
+  },
+  "divergence_context": {
+    "bad_token_at_d": 2623,
+    "bad_token_at_d_text": "Not",
+    "bad_tail_summary": "REJECTED panic-tail summary (prose only \u2014 DO NOT copy code/imports/phrases from it). Write a clean task-specific fix instead. r in the code is the ' ' in the 'acquire' and 'release' methods of the 'Semaphore' class. We need to implement these methods to make the semaphore functional. Here is the updated file: [task main.py] Explanation of chang\u2026",
+    "forbidden_patterns": [
+      "NotImplementedError",
+      "TODO",
+      "FIXME",
+      "pip install",
+      "sorry",
+      "cannot",
+      "unable to"
+    ]
+  },
+  "output_contract": {
+    "format": "aider_listing",
+    "target_staging_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\curator_staging\\unicaa01_p42_panic__chatcmpl_6d7feca070ed__d8\\candidate.txt",
+    "target_admitted_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p42_panic__chatcmpl_6d7feca070ed__d8.txt",
+    "task_dir": "unicaa01_p42_panic"
+  },
+  "success_criteria": "demo() second acquire blocks -> False.",
+  "task_summary": "Edit unicaa01_p42_panic/main",
+  "provenance": {
+    "source_pack": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\curation_packs\\unicaa01_corpus_p42_semaphore_panic__chatcmpl-6d7feca070ed__d8.json",
+    "source_experiment_json": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\out\\unicaa01_corpus_p42_semaphore_panic_latest.json",
+    "tracer_confidence": "medium"
+  },
+  "tracer_confidence": "medium",
+  "demo_oracle": {
+    "pair_id": "p42_semaphore",
+    "check_mode": "eq",
+    "expect_repr": "True"
+  }
+}

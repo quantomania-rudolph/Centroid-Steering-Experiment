@@ -1,0 +1,35 @@
+{
+  "gate_id": "G3_oracle_pilot",
+  "pass": true,
+  "evidence": {
+    "pass": true,
+    "n_pass": 3,
+    "n_total": 3,
+    "results": [
+      {
+        "file": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p01_panic__chatcmpl_8b67ddd03286__d16.txt",
+        "pair_id": "p01_priority_queue",
+        "pass": true,
+        "actual_repr": "['alert', 'backup', 'email']",
+        "expected_repr": "['alert', 'backup', 'email']",
+        "error": ""
+      },
+      {
+        "file": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p12_panic__chatcmpl_9fcda159903f__d14.txt",
+        "pair_id": "p12_fibonacci",
+        "pass": true,
+        "actual_repr": "55",
+        "expected_repr": "55",
+        "error": ""
+      },
+      {
+        "file": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p18_panic__chatcmpl_2ba03f73cbb9__d3.txt",
+        "pair_id": "p18_trie_prefix",
+        "pass": true,
+        "actual_repr": "True",
+        "expected_repr": "True",
+        "error": ""
+      }
+    ]
+  }
+}

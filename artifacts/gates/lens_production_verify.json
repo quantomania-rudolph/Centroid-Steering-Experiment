@@ -1,0 +1,71 @@
+{
+  "overall_pass": true,
+  "lens_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\lenses\\qwen_jacobian_lens.pt",
+  "n_prompts": 90,
+  "source_layers": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26
+  ],
+  "checks": [
+    {
+      "id": "P1",
+      "name": "all source layers present",
+      "pass": true,
+      "detail": "expected=[8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26] got=[8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26] missing=[]"
+    },
+    {
+      "id": "P2",
+      "name": "each J is 3584x3584",
+      "pass": true,
+      "detail": "d_model=3584"
+    },
+    {
+      "id": "P3",
+      "name": "all entries finite",
+      "pass": true,
+      "detail": "finite check over layers"
+    },
+    {
+      "id": "P4",
+      "name": "Frobenius norms sane",
+      "pass": true,
+      "detail": {
+        "8": 23.573,
+        "9": 24.608,
+        "10": 26.508,
+        "11": 28.461,
+        "12": 30.862,
+        "n_layers_checked": 19
+      }
+    },
+    {
+      "id": "P5",
+      "name": "n_prompts >= 50 (production)",
+      "pass": true,
+      "detail": "n_prompts=90"
+    },
+    {
+      "id": "P6",
+      "name": "apply finite logits (L15/L24)",
+      "pass": true,
+      "detail": "layers=[15, 24]"
+    }
+  ]
+}

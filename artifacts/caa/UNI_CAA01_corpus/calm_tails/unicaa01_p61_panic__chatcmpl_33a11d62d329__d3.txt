@@ -1,0 +1,11 @@
+Fixing `md_to_text` to strip bold markers.
+
+unicaa01_p61_panic/main.py
+```python
+"""Strip markdown bold markers."""
+def md_to_text(md: str) -> str:
+    return md.replace('**', '')
+
+def demo():
+    return md_to_text("**bold**")
+```

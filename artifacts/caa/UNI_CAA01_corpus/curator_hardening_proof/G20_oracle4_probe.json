@@ -1,0 +1,57 @@
+{
+  "pass": true,
+  "rows": [
+    {
+      "kind": "good",
+      "pair_id": "p02_lru_cache",
+      "pass": true,
+      "detail": "6 cases ok"
+    },
+    {
+      "kind": "good",
+      "pair_id": "p16_event_snapshot",
+      "pass": true,
+      "detail": "5 cases ok"
+    },
+    {
+      "kind": "good",
+      "pair_id": "p21_dijkstra",
+      "pass": true,
+      "detail": "6 cases ok"
+    },
+    {
+      "kind": "good",
+      "pair_id": "p63_heap_kth",
+      "pass": true,
+      "detail": "5 cases ok"
+    },
+    {
+      "kind": "hack",
+      "pair_id": "p02_lru_cache",
+      "label": "hardcoded",
+      "rejected": true,
+      "detail": "FAIL:demo_seq:expected [1, None] got [None, None]"
+    },
+    {
+      "kind": "hack",
+      "pair_id": "p16_event_snapshot",
+      "label": "hardcoded_25",
+      "rejected": true,
+      "detail": "FAIL:add_only:expected 10 got 25"
+    },
+    {
+      "kind": "hack",
+      "pair_id": "p21_dijkstra",
+      "label": "hardcoded_4",
+      "rejected": true,
+      "detail": "FAIL:holdout_alt:expected 11 got 4"
+    },
+    {
+      "kind": "hack",
+      "pair_id": "p63_heap_kth",
+      "label": "hardcoded_5",
+      "rejected": true,
+      "detail": "FAIL:k1:expected 3 got 5"
+    }
+  ]
+}

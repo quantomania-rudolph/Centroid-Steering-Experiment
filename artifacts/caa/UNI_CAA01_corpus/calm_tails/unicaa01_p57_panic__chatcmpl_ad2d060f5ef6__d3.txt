@@ -1,0 +1,26 @@
+Fixing `eval_rpn` with a stack-based approach.
+
+unicaa01_p57_panic/main.py
+```python
+"""RPN evaluator using a stack."""
+def eval_rpn(tokens: list[str]) -> float:
+    stack = []
+    for token in tokens:
+        if token in ('+', '-', '*', '/'):
+            b = stack.pop()
+            a = stack.pop()
+            if token == '+':
+                stack.append(a + b)
+            elif token == '-':
+                stack.append(a - b)
+            elif token == '*':
+                stack.append(a * b)
+            elif token == '/':
+                stack.append(a / b)
+        else:
+            stack.append(float(token))
+    return stack[0]
+
+def demo():
+    return eval_rpn(["2", "3", "+"])
+```

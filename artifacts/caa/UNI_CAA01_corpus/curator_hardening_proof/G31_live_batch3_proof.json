@@ -1,0 +1,95 @@
+{
+  "gate": "G31_live_batch3_proof",
+  "pass": true,
+  "n_corpus_pool": 5,
+  "n_both_roots": 6,
+  "new_batch": [
+    "unicaa01_corpus_p16_event_snapshot_panic__mpl_67e7b38d50e5__d16",
+    "unicaa01_corpus_p21_dijkstra_panic__mpl_2da782af8cb0__d3",
+    "unicaa01_corpus_p43_rwlock_panic__mpl_0c1386eff216__d7"
+  ],
+  "pairs": [
+    {
+      "slug": "unicaa01_corpus_p01_priority_queue_panic__mpl_8b67ddd03286__d16",
+      "pool": true,
+      "pass": true,
+      "kv_ts": null,
+      "hash_ok": true,
+      "cap7": null,
+      "d": 16,
+      "layers": [
+        10,
+        16,
+        22
+      ]
+    },
+    {
+      "slug": "unicaa01_corpus_p02_lru_cache_panic__mpl_c6cf9e514eba__d9",
+      "pool": true,
+      "pass": true,
+      "kv_ts": null,
+      "hash_ok": true,
+      "cap7": null,
+      "d": 9,
+      "layers": [
+        10,
+        16,
+        22
+      ]
+    },
+    {
+      "slug": "unicaa01_corpus_p16_event_snapshot_panic__mpl_67e7b38d50e5__d16",
+      "pool": true,
+      "pass": true,
+      "kv_ts": "2026-08-10T01:02:15.000807+00:00",
+      "hash_ok": true,
+      "cap7": {
+        "id": "CAP7_finite_activations",
+        "pass": true,
+        "detail": "all shared/divergent activation vectors non-empty and finite"
+      },
+      "d": 16,
+      "layers": [
+        10,
+        16,
+        22
+      ]
+    },
+    {
+      "slug": "unicaa01_corpus_p21_dijkstra_panic__mpl_2da782af8cb0__d3",
+      "pool": true,
+      "pass": true,
+      "kv_ts": "2026-08-10T01:02:15.000807+00:00",
+      "hash_ok": true,
+      "cap7": {
+        "id": "CAP7_finite_activations",
+        "pass": true,
+        "detail": "all shared/divergent activation vectors non-empty and finite"
+      },
+      "d": 3,
+      "layers": [
+        10,
+        16,
+        22
+      ]
+    },
+    {
+      "slug": "unicaa01_corpus_p43_rwlock_panic__mpl_0c1386eff216__d7",
+      "pool": true,
+      "pass": true,
+      "kv_ts": "2026-08-10T01:02:15.000807+00:00",
+      "hash_ok": true,
+      "cap7": {
+        "id": "CAP7_finite_activations",
+        "pass": true,
+        "detail": "all shared/divergent activation vectors non-empty and finite"
+      },
+      "d": 7,
+      "layers": [
+        10,
+        16,
+        22
+      ]
+    }
+  ]
+}

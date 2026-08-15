@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "attempt_index": 0,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "faf449c22f64536e7b776692e215043e9b4c6afabbfe1357d44840fb5b8d4a38",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": true,
+      "failed_checks": [],
+      "demo_result": {
+        "pass": true,
+        "actual_repr": "'localhost'",
+        "expected_repr": "'localhost'",
+        "error": "",
+        "pair_id": "p30_ini_parse"
+      },
+      "qa_verdict": "approve",
+      "qa_calls_so_far": 0
+    }
+  ]
+}

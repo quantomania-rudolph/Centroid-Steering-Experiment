@@ -1,0 +1,79 @@
+{
+  "generated_at": "2026-08-04T06:45:06.246661+00:00",
+  "job": {
+    "job_id": "L8-L26_n100",
+    "pid": 22192,
+    "started_at": "2026-08-03T20:32:40.339270+00:00",
+    "script": "fit_jacobian.py",
+    "source_layers": "8-26",
+    "n_prompts": 100,
+    "dim_batch": 14,
+    "max_seq_len": 128,
+    "omp_threads": 8,
+    "compile_model": false,
+    "out_path": "artifacts\\lenses\\qwen_jacobian_lens.pt",
+    "checkpoint_path": "artifacts\\checkpoints\\fit_production.pt",
+    "d_model": 3584,
+    "status": "running",
+    "extra": {}
+  },
+  "plan": {
+    "logical_cores": 8,
+    "omp_threads": 8,
+    "workers": 1,
+    "max_concurrent": 1,
+    "dim_batch": 14,
+    "compile": false,
+    "available_ram_gb": 20.52,
+    "notes": [
+      "machine has 8 logical CPUs (not 16); using 8 compute threads"
+    ]
+  },
+  "progress": {
+    "updated_at": "2026-08-04T06:32:40.488858+00:00",
+    "phase": "backward",
+    "prompt_index": 1,
+    "n_prompts": 100,
+    "backward_pass": 228,
+    "backward_passes_total": 256,
+    "pass_rate_per_min": null,
+    "eta_seconds": null,
+    "elapsed_seconds": 35964.19294333458,
+    "notes": [],
+    "fraction": 0.0189
+  },
+  "process": null,
+  "health": "complete",
+  "cpu_cores_equiv": null,
+  "layers": "8-26",
+  "n_prompts": 100,
+  "dim_batch": 14,
+  "backward_passes_total": 256,
+  "backward_pass_estimate": 228,
+  "fraction_estimate": 0.0189,
+  "eta_seconds": null,
+  "eta_human": "\u2014",
+  "eta_source": "measured (per-pass timing)",
+  "l15_lens_exists": true,
+  "readout_exists": true,
+  "log_tail": "Loading weights:  93%|#########3| 316/339 [00:11<00:00, 31.10it/s]\nLoading weights:  97%|#########6| 328/339 [00:11<00:00, 26.85it/s]\nLoading weights:  98%|#########7| 331/339 [00:13<00:00,  9.40it/s]\nLoading weights: 100%|##########| 339/339 [00:13<00:00, 24.47it/s]\n2026-08-02 22:32:31,148 INFO fit: n_layers=28 d_model=3584, fitting 1 source layers (target=L27) on 1 prompts\n2026-08-03 03:27:24,236 INFO   prompt 1/1  seq_len=64 n_valid=47  17693s  max||J||/sqrt(d)=0.928  max_d_mean=nan\n2026-08-03 03:27:24,587 INFO fit: done, 1 prompts\n2026-08-03 03:27:24,666 INFO Saved lens to artifacts\\lenses\\qwen_jacobian_lens_L15.pt (n_prompts=1)",
+  "pipeline": [
+    {
+      "step": "L15 smoke fit",
+      "done": true,
+      "active": false
+    },
+    {
+      "step": "verify_lens_smoke",
+      "done": true
+    },
+    {
+      "step": "show_layer_readout",
+      "done": true
+    },
+    {
+      "step": "production fit",
+      "done": false
+    }
+  ]
+}

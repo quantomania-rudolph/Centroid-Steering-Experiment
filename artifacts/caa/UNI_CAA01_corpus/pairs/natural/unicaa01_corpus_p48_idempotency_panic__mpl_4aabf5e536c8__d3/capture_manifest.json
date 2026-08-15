@@ -1,0 +1,28 @@
+{
+  "source": "natural",
+  "pair_slug": "unicaa01_corpus_p48_idempotency_panic__mpl_4aabf5e536c8__d3",
+  "vector_id": "UNI_CAA01",
+  "d": 3,
+  "prompt_len": 2021,
+  "layers": [
+    10,
+    16,
+    22
+  ],
+  "capture_method": "dual_full_forward",
+  "extraction_position": "divergent",
+  "calm_purity_pass": true,
+  "bad_purity_pass": true,
+  "pair_gate_pass": true,
+  "kv_live_gate_pass": true,
+  "kv_live_gate_timestamp": "2026-08-10T01:02:15.000807+00:00",
+  "sha256": {
+    "activations_at_d.pt": "f995727ca3e146519e8a1e876678dcde3960b95dd5afa3160070dcd20df84ac5",
+    "matched_prefix_spec.json": "b97cd71048d73535e20426425d1bda2e93a848239321fa9fd6cfc384dcc2b37b",
+    "admission_gate.json": "86b1e5868b9a258eab15c98b9ced44fc8279d30588ed2cabce6ebd177db3ed22"
+  },
+  "notes": [
+    "mined from unicaa01_corpus_p48_idempotency_panic"
+  ],
+  "path_hint": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\pairs\\natural\\unicaa01_corpus_p48_idempotency_panic__mpl_4aabf5e536c8__d3"
+}

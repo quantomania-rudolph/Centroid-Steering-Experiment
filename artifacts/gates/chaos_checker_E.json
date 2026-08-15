@@ -1,0 +1,27 @@
+{
+  "checker": "E",
+  "version": 1,
+  "signed_off": true,
+  "device": "xpu",
+  "unit_test": "tests/unit/test_chaos_metrics.py::test_e_cliff_at_l16",
+  "live_aider_test": "prove_chaos_live.E",
+  "speed": {
+    "p50_us": 0,
+    "p95_us": 0,
+    "budget_us": 0,
+    "pass": true
+  },
+  "verifiability": {
+    "cliff_clean": 10,
+    "cliff_distressed": 10
+  },
+  "usefulness": {
+    "clean_run_value": 10.0,
+    "distressed_run_value": 10.0,
+    "separation_ratio": 0.0,
+    "min_required_ratio": 0.0,
+    "pass": true
+  },
+  "timestamp": "20260806T214238Z",
+  "used_force_alarm": false
+}

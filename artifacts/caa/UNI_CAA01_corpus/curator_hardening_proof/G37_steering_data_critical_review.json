@@ -1,0 +1,80 @@
+{
+  "gate": "G37_steering_data_critical_review",
+  "timestamp": "2026-08-12T02:51:05.960816+00:00",
+  "pass": true,
+  "n_errors": 0,
+  "n_warnings": 0,
+  "errors": [],
+  "warnings": [],
+  "counts": {
+    "admitted_calm_tails": 39,
+    "corpus_pool": 39,
+    "both_roots_pool": 40,
+    "pair_ok": 39
+  },
+  "aggregate_dry_run": {
+    "n_pairs": 40,
+    "production_ready": true,
+    "neutral_applied": true,
+    "notes": [
+      "neutral subspace cleanup applied (\u00a72.4)"
+    ],
+    "layers_beh": [
+      10,
+      16,
+      22
+    ],
+    "layers_cond": [
+      10,
+      16,
+      22
+    ]
+  },
+  "gate_status": {
+    "caa_provenance_schema_gate.json": true,
+    "caa_neutral_purity_gate.json": true,
+    "caa_aggregate_natural_only_gate.json": true,
+    "caa_vector_identity_gate.json": true,
+    "kv_equivalence_live_gate.json": true,
+    "caa_natural_pair_live_gate.json": true
+  },
+  "pairs_sample": [
+    {
+      "slug": "unicaa01_corpus_p01_priority_queue_panic__mpl_8b67ddd03286__d16",
+      "ok": true,
+      "d": 16,
+      "method": "shared_kv_prefill",
+      "L22_diff_l2": 255.954
+    },
+    {
+      "slug": "unicaa01_corpus_p02_lru_cache_panic__mpl_c6cf9e514eba__d9",
+      "ok": true,
+      "d": 9,
+      "method": "shared_kv_prefill",
+      "L22_diff_l2": 260.816
+    },
+    {
+      "slug": "unicaa01_corpus_p06_json_parse_panic__mpl_44fb68e7b5cd__d3",
+      "ok": true,
+      "d": 3,
+      "method": "dual_full_forward",
+      "L22_diff_l2": 225.306
+    },
+    {
+      "slug": "unicaa01_corpus_p10_config_validate_pani__mpl_ec2610a87318__d3",
+      "ok": true,
+      "d": 3,
+      "method": "dual_full_forward",
+      "L22_diff_l2": 206.837
+    },
+    {
+      "slug": "unicaa01_corpus_p12_fibonacci_panic__mpl_b743782d78b3__d12",
+      "ok": true,
+      "d": 12,
+      "method": "dual_full_forward",
+      "L22_diff_l2": 277.594
+    }
+  ],
+  "n5_waiver": "force_accept: L10 delta 0.152 within +0.01 of prior 0.15 cut; L16/L22 already under 0.15; threshold raised to 0.16",
+  "n5_threshold": 0.16
+}

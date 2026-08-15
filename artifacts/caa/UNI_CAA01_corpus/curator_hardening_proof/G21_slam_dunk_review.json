@@ -1,0 +1,585 @@
+{
+  "dry_run": false,
+  "n_reviewed": 47,
+  "n_keep": 36,
+  "n_watch": 1,
+  "n_quarantine": 10,
+  "n_downstream_ready": 37,
+  "quarantine": [
+    {
+      "brief_id": "unicaa01_p04_panic__chatcmpl_2665d408d246__d49",
+      "pair_id": "p04_graph_bfs",
+      "file": "unicaa01_p04_panic__chatcmpl_2665d408d246__d49.txt",
+      "status_now": "admitted",
+      "verdict": "quarantine",
+      "prefix_hits": [
+        "prefix_first_person_i_will",
+        "prefix_stub_word"
+      ],
+      "narr_hits": [
+        "narr_stub_word",
+        "narr_first_person",
+        "narr_broken_doc_leak"
+      ],
+      "code_hits": [],
+      "verify_pass": true,
+      "failed_checks": [],
+      "low_scores": {},
+      "prefix_text": "The stub `bfs` is incomplete and may loop forever on cyclic graphs due to the lack of a visited set. I will fix the BFS implementation and ensure it returns the correct path from n",
+      "narrative": "The stub `bfs` is incomplete and may loop forever on cyclic graphs due to the lack of a visited set. I will fix the BFS implementation and ensure it returns the correct path from node 0. Additionally, I will remove the `",
+      "pipeline_version": 5,
+      "editorial_hand_admit": false,
+      "editorial_rewrite": true
+    },
+    {
+      "brief_id": "unicaa01_p07_panic__chatcmpl_30255b182620__d3",
+      "pair_id": "p07_csv_agg",
+      "file": "unicaa01_p07_panic__chatcmpl_30255b182620__d3.txt",
+      "status_now": "admitted",
+      "verdict": "quarantine",
+      "prefix_hits": [
+        "prefix_stub_word"
+      ],
+      "narr_hits": [
+        "narr_stub_word"
+      ],
+      "code_hits": [],
+      "verify_pass": true,
+      "failed_checks": [],
+      "low_scores": {},
+      "prefix_text": "The stub `",
+      "narrative": "The stub `CSV parser` that totals the amount column.",
+      "pipeline_version": 5,
+      "editorial_hand_admit": false,
+      "editorial_rewrite": true
+    },
+    {
+      "brief_id": "unicaa01_p09_panic__chatcmpl_ab4f64e17fde__d10",
+      "pair_id": "p09_thread_pool",
+      "file": "unicaa01_p09_panic__chatcmpl_ab4f64e17fde__d10.txt",
+      "status_now": "admitted",
+      "verdict": "quarantine",
+      "prefix_hits": [
+        "prefix_stub_word"
+      ],
+      "narr_hits": [
+        "narr_stub_word"
+      ],
+      "code_hits": [],
+      "verify_pass": true,
+      "failed_checks": [],
+      "low_scores": {},
+      "prefix_text": "The stub `run_pool` is raising a `",
+      "narrative": "The stub `run_pool` is raising a `RuntimeError` \u2014 map the callable across items with ThreadPoolExecutor.",
+      "pipeline_version": 5,
+      "editorial_hand_admit": false,
+      "editorial_rewrite": true
+    },
+    {
+      "brief_id": "unicaa01_p12_panic__chatcmpl_9fcda159903f__d14",
+      "pair_id": "p12_fibonacci",
+      "file": "unicaa01_p12_panic__chatcmpl_9fcda159903f__d14.txt",
+      "status_now": "admitted",
+      "verdict": "quarantine",
+      "prefix_hits": [
+        "prefix_fix_colon_imperative"
+      ],
+      "narr_hits": [],
+      "code_hits": [],
+      "verify_pass": true,
+      "failed_checks": [],
+      "low_scores": {},
+      "prefix_text": "fix: update `fib` function to use iterative approach and remove `",
+      "narrative": "fix: update `fib` function to use iterative approach and remove `incomplete body`.",
+      "pipeline_version": 5,
+      "editorial_hand_admit": false,
+      "editorial_rewrite": true
+    },
+    {
+      "brief_id": "unicaa01_p30_panic__chatcmpl_d222a9ac16f1__d3",
+      "pair_id": "p30_ini_parse",
+      "file": "unicaa01_p30_panic__chatcmpl_d222a9ac16f1__d3.txt",
+      "status_now": "admitted",
+      "verdict": "quarantine",
+      "prefix_hits": [
+        "prefix_stub_word"
+      ],
+      "narr_hits": [
+        "narr_stub_word"
+      ],
+      "code_hits": [],
+      "verify_pass": true,
+      "failed_checks": [],
+      "low_scores": {},
+      "prefix_text": "The stub `",
+      "narrative": "The stub `INI parser` that splits key=value lines into a dict.",
+      "pipeline_version": 5,
+      "editorial_hand_admit": false,
+      "editorial_rewrite": true
+    },
+    {
+      "brief_id": "unicaa01_p31_panic__chatcmpl_1b6f807a66ad__d11",
+      "pair_id": "p31_kv_flat",
+      "file": "unicaa01_p31_panic__chatcmpl_1b6f807a66ad__d11.txt",
+      "status_now": "admitted",
+      "verdict": "quarantine",
+      "prefix_hits": [
+        "prefix_stub_word"
+      ],
+      "narr_hits": [
+        "narr_stub_word"
+      ],
+      "code_hits": [],
+      "verify_pass": true,
+      "failed_checks": [],
+      "low_scores": {},
+      "prefix_text": "The stub `parse_kv_lines` is raising a `",
+      "narrative": "The stub `parse_kv_lines` is raising a `RuntimeError` \u2014 fold lines into a returned key/value dict.",
+      "pipeline_version": 5,
+      "editorial_hand_admit": false,
+      "editorial_rewrite": true
+    },
+    {
+      "brief_id": "unicaa01_p34_panic__chatcmpl_0e4fa30316ca__d3",
+      "pair_id": "p34_url_query",
+      "file": "unicaa01_p34_panic__chatcmpl_0e4fa30316ca__d3.txt",
+      "status_now": "admitted",
+      "verdict": "quarantine",
+      "prefix_hits": [
+        "prefix_stub_word"
+      ],
+      "narr_hits": [
+        "narr_stub_word"
+      ],
+      "code_hits": [],
+      "verify_pass": true,
+      "failed_checks": [],
+      "low_scores": {},
+      "prefix_text": "The stub `",
+      "narrative": "The stub `query parser` that splits ampersand pairs into a dict.",
+      "pipeline_version": 5,
+      "editorial_hand_admit": false,
+      "editorial_rewrite": true
+    },
+    {
+      "brief_id": "unicaa01_p37_panic__chatcmpl_4e836a4fb67c__d3",
+      "pair_id": "p37_hash_chain",
+      "file": "unicaa01_p37_panic__chatcmpl_4e836a4fb67c__d3.txt",
+      "status_now": "admitted",
+      "verdict": "quarantine",
+      "prefix_hits": [
+        "prefix_stub_word"
+      ],
+      "narr_hits": [
+        "narr_stub_word"
+      ],
+      "code_hits": [],
+      "verify_pass": true,
+      "failed_checks": [],
+      "low_scores": {},
+      "prefix_text": "The stub `",
+      "narrative": "The stub `SHA-256 chain` walked iteratively from the seed.",
+      "pipeline_version": 5,
+      "editorial_hand_admit": false,
+      "editorial_rewrite": true
+    },
+    {
+      "brief_id": "unicaa01_p40_panic__chatcmpl_c378061644c0__d4",
+      "pair_id": "p40_skip_list",
+      "file": "unicaa01_p40_panic__chatcmpl_c378061644c0__d4.txt",
+      "status_now": "admitted",
+      "verdict": "quarantine",
+      "prefix_hits": [
+        "prefix_fix_colon_imperative"
+      ],
+      "narr_hits": [],
+      "code_hits": [],
+      "verify_pass": true,
+      "failed_checks": [],
+      "low_scores": {},
+      "prefix_text": "fix: Remove `",
+      "narrative": "fix: Remove `blank methods` from SkipList.",
+      "pipeline_version": 5,
+      "editorial_hand_admit": false,
+      "editorial_rewrite": false
+    },
+    {
+      "brief_id": "unicaa01_p65_panic__chatcmpl_b9ffc3b14249__d3",
+      "pair_id": "p65_interval_merge",
+      "file": "unicaa01_p65_panic__chatcmpl_b9ffc3b14249__d3.txt",
+      "status_now": "admitted",
+      "verdict": "quarantine",
+      "prefix_hits": [
+        "prefix_stub_word"
+      ],
+      "narr_hits": [
+        "narr_stub_word"
+      ],
+      "code_hits": [],
+      "verify_pass": true,
+      "failed_checks": [],
+      "low_scores": {},
+      "prefix_text": "The stub `",
+      "narrative": "The stub `interval merge` that collapses overlaps after sorting by start.",
+      "pipeline_version": 5,
+      "editorial_hand_admit": false,
+      "editorial_rewrite": true
+    }
+  ],
+  "watch": [
+    {
+      "brief_id": "unicaa01_p14_panic__chatcmpl_fe69aa9a2766__d10",
+      "pair_id": "p14_regex_email",
+      "file": "unicaa01_p14_panic__chatcmpl_fe69aa9a2766__d10.txt",
+      "status_now": "admitted",
+      "verdict": "watch",
+      "prefix_hits": [],
+      "narr_hits": [
+        "narr_broken_doc_leak"
+      ],
+      "code_hits": [],
+      "verify_pass": true,
+      "failed_checks": [],
+      "low_scores": {},
+      "prefix_text": "Fixing the broken email regex and removing the `",
+      "narrative": "Fixing the broken email regex and removing the `incomplete matcher` by using a simple local-part@domain.tld pattern.",
+      "pipeline_version": 5,
+      "editorial_hand_admit": false,
+      "editorial_rewrite": true
+    }
+  ],
+  "keep": [
+    {
+      "brief_id": "unicaa01_p01_panic__chatcmpl_8b67ddd03286__d16",
+      "pair_id": "p01_priority_queue",
+      "file": "unicaa01_p01_panic__chatcmpl_8b67ddd03286__d16.txt"
+    },
+    {
+      "brief_id": "unicaa01_p02_panic__chatcmpl_c6cf9e514eba__d9",
+      "pair_id": "p02_lru_cache",
+      "file": "unicaa01_p02_panic__chatcmpl_c6cf9e514eba__d9.txt"
+    },
+    {
+      "brief_id": "unicaa01_p06_panic__chatcmpl_44fb68e7b5cd__d3",
+      "pair_id": "p06_json_parse",
+      "file": "unicaa01_p06_panic__chatcmpl_44fb68e7b5cd__d3.txt"
+    },
+    {
+      "brief_id": "unicaa01_p10_panic__chatcmpl_ec2610a87318__d3",
+      "pair_id": "p10_config_validate",
+      "file": "unicaa01_p10_panic__chatcmpl_ec2610a87318__d3.txt"
+    },
+    {
+      "brief_id": "unicaa01_p16_panic__chatcmpl_67e7b38d50e5__d16",
+      "pair_id": "p16_event_snapshot",
+      "file": "unicaa01_p16_panic__chatcmpl_67e7b38d50e5__d16.txt"
+    },
+    {
+      "brief_id": "unicaa01_p17_panic__chatcmpl_e3c52ddea24e__d3",
+      "pair_id": "p17_deque_queue",
+      "file": "unicaa01_p17_panic__chatcmpl_e3c52ddea24e__d3.txt"
+    },
+    {
+      "brief_id": "unicaa01_p18_panic__chatcmpl_2ba03f73cbb9__d3",
+      "pair_id": "p18_trie_prefix",
+      "file": "unicaa01_p18_panic__chatcmpl_2ba03f73cbb9__d3.txt"
+    },
+    {
+      "brief_id": "unicaa01_p21_panic__chatcmpl_2da782af8cb0__d3",
+      "pair_id": "p21_dijkstra",
+      "file": "unicaa01_p21_panic__chatcmpl_2da782af8cb0__d3.txt"
+    },
+    {
+      "brief_id": "unicaa01_p23_panic__chatcmpl_223fdd2deb20__d3",
+      "pair_id": "p23_knapsack",
+      "file": "unicaa01_p23_panic__chatcmpl_223fdd2deb20__d3.txt"
+    },
+    {
+      "brief_id": "unicaa01_p25_panic__chatcmpl_5f47c2976091__d3",
+      "pair_id": "p25_edit_distance",
+      "file": "unicaa01_p25_panic__chatcmpl_5f47c2976091__d3.txt"
+    },
+    {
+      "brief_id": "unicaa01_p26_panic__chatcmpl_80322492584d__d3",
+      "pair_id": "p26_rle_compress",
+      "file": "unicaa01_p26_panic__chatcmpl_80322492584d__d3.txt"
+    },
+    {
+      "brief_id": "unicaa01_p27_panic__chatcmpl_df7c0f5ed153__d3",
+      "pair_id": "p27_base64_pad",
+      "file": "unicaa01_p27_panic__chatcmpl_df7c0f5ed153__d3.txt"
+    },
+    {
+      "brief_id": "unicaa01_p28_panic__chatcmpl_bbd3c08f5fca__d3",
+      "pair_id": "p28_glob_match",
+      "file": "unicaa01_p28_panic__chatcmpl_bbd3c08f5fca__d3.txt"
+    },
+    {
+      "brief_id": "unicaa01_p29_panic__chatcmpl_8a8c056ebc55__d3",
+      "pair_id": "p29_cron_field",
+      "file": "unicaa01_p29_panic__chatcmpl_8a8c056ebc55__d3.txt"
+    },
+    {
+      "brief_id": "unicaa01_p32_panic__chatcmpl_136d4681e144__d3",
+      "pair_id": "p32_xml_escape",
+      "file": "unicaa01_p32_panic__chatcmpl_136d4681e144__d3.txt"
+    },
+    {
+      "brief_id": "unicaa01_p33_panic__chatcmpl_5d81120833b1__d3",
+      "pair_id": "p33_html_strip",
+      "file": "unicaa01_p33_panic__chatcmpl_5d81120833b1__d3.txt"
+    },
+    {
+      "brief_id": "unicaa01_p35_panic__chatcmpl_221ce4afc2b4__d3",
+      "pair_id": "p35_cookie_jar",
+      "file": "unicaa01_p35_panic__chatcmpl_221ce4afc2b4__d3.txt"
+    },
+    {
+      "brief_id": "unicaa01_p39_panic__chatcmpl_2dd7949f151c__d3",
+      "pair_id": "p39_bloom_filter",
+      "file": "unicaa01_p39_panic__chatcmpl_2dd7949f151c__d3.txt"
+    },
+    {
+      "brief_id": "unicaa01_p42_panic__chatcmpl_6d7feca070ed__d8",
+      "pair_id": "p42_semaphore",
+      "file": "unicaa01_p42_panic__chatcmpl_6d7feca070ed__d8.txt"
+    },
+    {
+      "brief_id": "unicaa01_p43_panic__chatcmpl_0c1386eff216__d7",
+      "pair_id": "p43_rwlock",
+      "file": "unicaa01_p43_panic__chatcmpl_0c1386eff216__d7.txt"
+    },
+    {
+      "brief_id": "unicaa01_p45_panic__chatcmpl_e8dcf81d0af7__d8",
+      "pair_id": "p45_producer_consumer",
+      "file": "unicaa01_p45_panic__chatcmpl_e8dcf81d0af7__d8.txt"
+    },
+    {
+      "brief_id": "unicaa01_p48_panic__chatcmpl_4aabf5e536c8__d3",
+      "pair_id": "p48_idempotency",
+      "file": "unicaa01_p48_panic__chatcmpl_4aabf5e536c8__d3.txt"
+    },
+    {
+      "brief_id": "unicaa01_p49_panic__chatcmpl_a3aa397db5d9__d2",
+      "pair_id": "p49_saga_step",
+      "file": "unicaa01_p49_panic__chatcmpl_a3aa397db5d9__d2.txt"
+    },
+    {
+      "brief_id": "unicaa01_p50_panic__chatcmpl_6f078e4d2153__d3",
+      "pair_id": "p50_outbox",
+      "file": "unicaa01_p50_panic__chatcmpl_6f078e4d2153__d3.txt"
+    },
+    {
+      "brief_id": "unicaa01_p51_panic__chatcmpl_de8dd51a0f3e__d3",
+      "pair_id": "p51_memoize",
+      "file": "unicaa01_p51_panic__chatcmpl_de8dd51a0f3e__d3.txt"
+    },
+    {
+      "brief_id": "unicaa01_p52_panic__chatcmpl_45ac8e8730a8__d8",
+      "pair_id": "p52_lazy_property",
+      "file": "unicaa01_p52_panic__chatcmpl_45ac8e8730a8__d8.txt"
+    },
+    {
+      "brief_id": "unicaa01_p54_panic__chatcmpl_1170b3ad6d58__d8",
+      "pair_id": "p54_fsm_turnstile",
+      "file": "unicaa01_p54_panic__chatcmpl_1170b3ad6d58__d8.txt"
+    },
+    {
+      "brief_id": "unicaa01_p55_panic__chatcmpl_e40ff3e0676f__d3",
+      "pair_id": "p55_lexer",
+      "file": "unicaa01_p55_panic__chatcmpl_e40ff3e0676f__d3.txt"
+    },
+    {
+      "brief_id": "unicaa01_p56_panic__chatcmpl_17d1fcefd00c__d3",
+      "pair_id": "p56_shunting_yard",
+      "file": "unicaa01_p56_panic__chatcmpl_17d1fcefd00c__d3.txt"
+    },
+    {
+      "brief_id": "unicaa01_p57_panic__chatcmpl_ad2d060f5ef6__d3",
+      "pair_id": "p57_expr_eval",
+      "file": "unicaa01_p57_panic__chatcmpl_ad2d060f5ef6__d3.txt"
+    },
+    {
+      "brief_id": "unicaa01_p58_panic__chatcmpl_a3a63544106f__d3",
+      "pair_id": "p58_diff_apply",
+      "file": "unicaa01_p58_panic__chatcmpl_a3a63544106f__d3.txt"
+    },
+    {
+      "brief_id": "unicaa01_p60_panic__chatcmpl_1990b3d4152b__d3",
+      "pair_id": "p60_template_fmt",
+      "file": "unicaa01_p60_panic__chatcmpl_1990b3d4152b__d3.txt"
+    },
+    {
+      "brief_id": "unicaa01_p61_panic__chatcmpl_33a11d62d329__d3",
+      "pair_id": "p61_markdown_strip",
+      "file": "unicaa01_p61_panic__chatcmpl_33a11d62d329__d3.txt"
+    },
+    {
+      "brief_id": "unicaa01_p62_panic__chatcmpl_55716bdd6c36__d3",
+      "pair_id": "p62_binary_search",
+      "file": "unicaa01_p62_panic__chatcmpl_55716bdd6c36__d3.txt"
+    },
+    {
+      "brief_id": "unicaa01_p63_panic__chatcmpl_e98e0696f1c6__d3",
+      "pair_id": "p63_heap_kth",
+      "file": "unicaa01_p63_panic__chatcmpl_e98e0696f1c6__d3.txt"
+    },
+    {
+      "brief_id": "unicaa01_p66_panic__chatcmpl_f556133fbebe__d3",
+      "pair_id": "p66_rot13",
+      "file": "unicaa01_p66_panic__chatcmpl_f556133fbebe__d3.txt"
+    }
+  ],
+  "downstream_ready_files": [
+    "unicaa01_p01_panic__chatcmpl_8b67ddd03286__d16.txt",
+    "unicaa01_p02_panic__chatcmpl_c6cf9e514eba__d9.txt",
+    "unicaa01_p06_panic__chatcmpl_44fb68e7b5cd__d3.txt",
+    "unicaa01_p10_panic__chatcmpl_ec2610a87318__d3.txt",
+    "unicaa01_p14_panic__chatcmpl_fe69aa9a2766__d10.txt",
+    "unicaa01_p16_panic__chatcmpl_67e7b38d50e5__d16.txt",
+    "unicaa01_p17_panic__chatcmpl_e3c52ddea24e__d3.txt",
+    "unicaa01_p18_panic__chatcmpl_2ba03f73cbb9__d3.txt",
+    "unicaa01_p21_panic__chatcmpl_2da782af8cb0__d3.txt",
+    "unicaa01_p23_panic__chatcmpl_223fdd2deb20__d3.txt",
+    "unicaa01_p25_panic__chatcmpl_5f47c2976091__d3.txt",
+    "unicaa01_p26_panic__chatcmpl_80322492584d__d3.txt",
+    "unicaa01_p27_panic__chatcmpl_df7c0f5ed153__d3.txt",
+    "unicaa01_p28_panic__chatcmpl_bbd3c08f5fca__d3.txt",
+    "unicaa01_p29_panic__chatcmpl_8a8c056ebc55__d3.txt",
+    "unicaa01_p32_panic__chatcmpl_136d4681e144__d3.txt",
+    "unicaa01_p33_panic__chatcmpl_5d81120833b1__d3.txt",
+    "unicaa01_p35_panic__chatcmpl_221ce4afc2b4__d3.txt",
+    "unicaa01_p39_panic__chatcmpl_2dd7949f151c__d3.txt",
+    "unicaa01_p42_panic__chatcmpl_6d7feca070ed__d8.txt",
+    "unicaa01_p43_panic__chatcmpl_0c1386eff216__d7.txt",
+    "unicaa01_p45_panic__chatcmpl_e8dcf81d0af7__d8.txt",
+    "unicaa01_p48_panic__chatcmpl_4aabf5e536c8__d3.txt",
+    "unicaa01_p49_panic__chatcmpl_a3aa397db5d9__d2.txt",
+    "unicaa01_p50_panic__chatcmpl_6f078e4d2153__d3.txt",
+    "unicaa01_p51_panic__chatcmpl_de8dd51a0f3e__d3.txt",
+    "unicaa01_p52_panic__chatcmpl_45ac8e8730a8__d8.txt",
+    "unicaa01_p54_panic__chatcmpl_1170b3ad6d58__d8.txt",
+    "unicaa01_p55_panic__chatcmpl_e40ff3e0676f__d3.txt",
+    "unicaa01_p56_panic__chatcmpl_17d1fcefd00c__d3.txt",
+    "unicaa01_p57_panic__chatcmpl_ad2d060f5ef6__d3.txt",
+    "unicaa01_p58_panic__chatcmpl_a3a63544106f__d3.txt",
+    "unicaa01_p60_panic__chatcmpl_1990b3d4152b__d3.txt",
+    "unicaa01_p61_panic__chatcmpl_33a11d62d329__d3.txt",
+    "unicaa01_p62_panic__chatcmpl_55716bdd6c36__d3.txt",
+    "unicaa01_p63_panic__chatcmpl_e98e0696f1c6__d3.txt",
+    "unicaa01_p66_panic__chatcmpl_f556133fbebe__d3.txt"
+  ],
+  "applied": [
+    {
+      "file": "unicaa01_p04_panic__chatcmpl_2665d408d246__d49.txt",
+      "brief_id": "unicaa01_p04_panic__chatcmpl_2665d408d246__d49",
+      "pair_id": "p04_graph_bfs",
+      "reason": "prefix_first_person_i_will,prefix_stub_word",
+      "prefix_hits": [
+        "prefix_first_person_i_will",
+        "prefix_stub_word"
+      ],
+      "code_hits": [],
+      "prefix_text": "The stub `bfs` is incomplete and may loop forever on cyclic graphs due to the lack of a visited set. I will fix the BFS implementation and ensure it returns the correct path from n"
+    },
+    {
+      "file": "unicaa01_p07_panic__chatcmpl_30255b182620__d3.txt",
+      "brief_id": "unicaa01_p07_panic__chatcmpl_30255b182620__d3",
+      "pair_id": "p07_csv_agg",
+      "reason": "prefix_stub_word",
+      "prefix_hits": [
+        "prefix_stub_word"
+      ],
+      "code_hits": [],
+      "prefix_text": "The stub `"
+    },
+    {
+      "file": "unicaa01_p09_panic__chatcmpl_ab4f64e17fde__d10.txt",
+      "brief_id": "unicaa01_p09_panic__chatcmpl_ab4f64e17fde__d10",
+      "pair_id": "p09_thread_pool",
+      "reason": "prefix_stub_word",
+      "prefix_hits": [
+        "prefix_stub_word"
+      ],
+      "code_hits": [],
+      "prefix_text": "The stub `run_pool` is raising a `"
+    },
+    {
+      "file": "unicaa01_p12_panic__chatcmpl_9fcda159903f__d14.txt",
+      "brief_id": "unicaa01_p12_panic__chatcmpl_9fcda159903f__d14",
+      "pair_id": "p12_fibonacci",
+      "reason": "prefix_fix_colon_imperative",
+      "prefix_hits": [
+        "prefix_fix_colon_imperative"
+      ],
+      "code_hits": [],
+      "prefix_text": "fix: update `fib` function to use iterative approach and remove `"
+    },
+    {
+      "file": "unicaa01_p30_panic__chatcmpl_d222a9ac16f1__d3.txt",
+      "brief_id": "unicaa01_p30_panic__chatcmpl_d222a9ac16f1__d3",
+      "pair_id": "p30_ini_parse",
+      "reason": "prefix_stub_word",
+      "prefix_hits": [
+        "prefix_stub_word"
+      ],
+      "code_hits": [],
+      "prefix_text": "The stub `"
+    },
+    {
+      "file": "unicaa01_p31_panic__chatcmpl_1b6f807a66ad__d11.txt",
+      "brief_id": "unicaa01_p31_panic__chatcmpl_1b6f807a66ad__d11",
+      "pair_id": "p31_kv_flat",
+      "reason": "prefix_stub_word",
+      "prefix_hits": [
+        "prefix_stub_word"
+      ],
+      "code_hits": [],
+      "prefix_text": "The stub `parse_kv_lines` is raising a `"
+    },
+    {
+      "file": "unicaa01_p34_panic__chatcmpl_0e4fa30316ca__d3.txt",
+      "brief_id": "unicaa01_p34_panic__chatcmpl_0e4fa30316ca__d3",
+      "pair_id": "p34_url_query",
+      "reason": "prefix_stub_word",
+      "prefix_hits": [
+        "prefix_stub_word"
+      ],
+      "code_hits": [],
+      "prefix_text": "The stub `"
+    },
+    {
+      "file": "unicaa01_p37_panic__chatcmpl_4e836a4fb67c__d3.txt",
+      "brief_id": "unicaa01_p37_panic__chatcmpl_4e836a4fb67c__d3",
+      "pair_id": "p37_hash_chain",
+      "reason": "prefix_stub_word",
+      "prefix_hits": [
+        "prefix_stub_word"
+      ],
+      "code_hits": [],
+      "prefix_text": "The stub `"
+    },
+    {
+      "file": "unicaa01_p40_panic__chatcmpl_c378061644c0__d4.txt",
+      "brief_id": "unicaa01_p40_panic__chatcmpl_c378061644c0__d4",
+      "pair_id": "p40_skip_list",
+      "reason": "prefix_fix_colon_imperative",
+      "prefix_hits": [
+        "prefix_fix_colon_imperative"
+      ],
+      "code_hits": [],
+      "prefix_text": "fix: Remove `"
+    },
+    {
+      "file": "unicaa01_p65_panic__chatcmpl_b9ffc3b14249__d3.txt",
+      "brief_id": "unicaa01_p65_panic__chatcmpl_b9ffc3b14249__d3",
+      "pair_id": "p65_interval_merge",
+      "reason": "prefix_stub_word",
+      "prefix_hits": [
+        "prefix_stub_word"
+      ],
+      "code_hits": [],
+      "prefix_text": "The stub `"
+    }
+  ]
+}

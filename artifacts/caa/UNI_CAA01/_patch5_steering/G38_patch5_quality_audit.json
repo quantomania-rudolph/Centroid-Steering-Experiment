@@ -1,0 +1,166 @@
+{
+  "pairs": [
+    {
+      "slug": "unicaa01_corpus_p01_priority_queue_panic__mpl_8b67ddd03286__d16",
+      "d": 16,
+      "method": "shared_kv_prefill",
+      "layers": {
+        "10": {
+          "diff_l2": 82.07779693603516,
+          "cos_to_full_beh": 0.7433640956878662
+        },
+        "16": {
+          "diff_l2": 103.7867660522461,
+          "cos_to_full_beh": 0.7425165772438049
+        },
+        "22": {
+          "diff_l2": 255.95423889160156,
+          "cos_to_full_beh": 0.7730945944786072
+        }
+      }
+    },
+    {
+      "slug": "unicaa01_corpus_p02_lru_cache_panic__mpl_c6cf9e514eba__d9",
+      "d": 9,
+      "method": "shared_kv_prefill",
+      "layers": {
+        "10": {
+          "diff_l2": 73.45497131347656,
+          "cos_to_full_beh": 0.6632357835769653
+        },
+        "16": {
+          "diff_l2": 102.21832275390625,
+          "cos_to_full_beh": 0.6111081838607788
+        },
+        "22": {
+          "diff_l2": 260.81585693359375,
+          "cos_to_full_beh": 0.7115261554718018
+        }
+      }
+    },
+    {
+      "slug": "unicaa01_corpus_p06_json_parse_panic__mpl_44fb68e7b5cd__d3",
+      "d": 3,
+      "method": "dual_full_forward",
+      "layers": {
+        "10": {
+          "diff_l2": 79.80839538574219,
+          "cos_to_full_beh": 0.3814582824707031
+        },
+        "16": {
+          "diff_l2": 107.47482299804688,
+          "cos_to_full_beh": 0.5164351463317871
+        },
+        "22": {
+          "diff_l2": 225.30557250976562,
+          "cos_to_full_beh": 0.40161293745040894
+        }
+      }
+    },
+    {
+      "slug": "unicaa01_corpus_p10_config_validate_pani__mpl_ec2610a87318__d3",
+      "d": 3,
+      "method": "dual_full_forward",
+      "layers": {
+        "10": {
+          "diff_l2": 65.38378143310547,
+          "cos_to_full_beh": 0.3551415801048279
+        },
+        "16": {
+          "diff_l2": 85.0772933959961,
+          "cos_to_full_beh": 0.46509289741516113
+        },
+        "22": {
+          "diff_l2": 206.83656311035156,
+          "cos_to_full_beh": 0.4082801342010498
+        }
+      }
+    },
+    {
+      "slug": "unicaa01_corpus_p12_fibonacci_panic__mpl_b743782d78b3__d12",
+      "d": 12,
+      "method": "dual_full_forward",
+      "layers": {
+        "10": {
+          "diff_l2": 87.12945556640625,
+          "cos_to_full_beh": 0.6086510419845581
+        },
+        "16": {
+          "diff_l2": 100.91026306152344,
+          "cos_to_full_beh": 0.5306204557418823
+        },
+        "22": {
+          "diff_l2": 277.5937194824219,
+          "cos_to_full_beh": 0.7087604999542236
+        }
+      }
+    }
+  ],
+  "loo": [
+    {
+      "left_out": "unicaa01_corpus_p01_priority_queue_panic__mpl_8b67ddd03286__d16",
+      "cos": {
+        "10": 0.9429260492324829,
+        "16": 0.9507578015327454,
+        "22": 0.9601562023162842
+      }
+    },
+    {
+      "left_out": "unicaa01_corpus_p02_lru_cache_panic__mpl_c6cf9e514eba__d9",
+      "cos": {
+        "10": 0.9506775140762329,
+        "16": 0.9417530298233032,
+        "22": 0.9522570371627808
+      }
+    },
+    {
+      "left_out": "unicaa01_corpus_p06_json_parse_panic__mpl_44fb68e7b5cd__d3",
+      "cos": {
+        "10": 0.929681658744812,
+        "16": 0.9300389885902405,
+        "22": 0.9551142454147339
+      }
+    },
+    {
+      "left_out": "unicaa01_corpus_p10_config_validate_pani__mpl_ec2610a87318__d3",
+      "cos": {
+        "10": 0.9536710977554321,
+        "16": 0.9570386409759521,
+        "22": 0.9626179337501526
+      }
+    },
+    {
+      "left_out": "unicaa01_corpus_p12_fibonacci_panic__mpl_b743782d78b3__d12",
+      "cos": {
+        "10": 0.9215210676193237,
+        "16": 0.9397128820419312,
+        "22": 0.9436856508255005
+      }
+    }
+  ],
+  "neutral_leak": {
+    "10": {
+      "beh_dot_n": -1.5366822481155396e-08,
+      "cond_dot_n": 1.5366822481155396e-08
+    },
+    "16": {
+      "beh_dot_n": -9.313225746154785e-09,
+      "cond_dot_n": 9.313225746154785e-09
+    },
+    "22": {
+      "beh_dot_n": 4.656612873077393e-10,
+      "cond_dot_n": -4.656612873077393e-10
+    }
+  },
+  "shared_vs_div": {
+    "10": 0.0,
+    "16": 0.0,
+    "22": 0.0
+  },
+  "process_guards": {
+    "limit_to_prod_rc": 1,
+    "limit_to_prod_err": "refusing to write limited (--limit) extract into production UNI_CAA01 root; use --out-dir or default C:\\Users\\Rudol\\Desk",
+    "full_without_allow_rc": 1,
+    "full_without_allow_err": "refusing production overwrite without --allow-overwrite-production"
+  }
+}

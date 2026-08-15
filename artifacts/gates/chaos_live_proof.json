@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "timestamp": "20260806T214255Z",
+  "device": "xpu",
+  "gpu_name": "Intel(R) Arc(TM) 140V GPU (16GB)",
+  "all_signed_off": true,
+  "checkers": {
+    "A": true,
+    "B_vocab": true,
+    "B_transport": true,
+    "B_jlens": true,
+    "C": true,
+    "D": true,
+    "E": true,
+    "F": true,
+    "G": true
+  },
+  "overhead": {
+    "chaos_ms_total": 3307.091099995432,
+    "gen_ms_total": 67168.89609999998,
+    "overhead_pct": 4.923545408684234,
+    "chaos_ms_per_token_p95": 31.77030000006198,
+    "pass": true
+  },
+  "separation": {
+    "clean_plds": 0.5071041890455698,
+    "distressed_plds": 0.5940300141583722,
+    "pass": true
+  },
+  "experiments": [
+    "aider_chaos_proof_clean_latest.json",
+    "aider_chaos_proof_lint_stress_latest.json",
+    "aider_chaos_proof_meta_wipe_latest.json"
+  ],
+  "dashboard_chaos_runs": 81,
+  "used_force_alarm": false,
+  "signoff_ok": true
+}

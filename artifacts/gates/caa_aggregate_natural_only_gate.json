@@ -1,0 +1,60 @@
+{
+  "gate": "caa_aggregate_natural_only",
+  "version": 1,
+  "timestamp": "2026-08-10T01:52:39.423108+00:00",
+  "pass": true,
+  "checks": [
+    {
+      "id": "AGG1",
+      "pass": true,
+      "detail": "pytest"
+    },
+    {
+      "id": "AGG2",
+      "pass": true,
+      "detail": "pytest"
+    },
+    {
+      "id": "AGG3",
+      "pass": true,
+      "detail": "pytest"
+    },
+    {
+      "id": "AGG4",
+      "pass": true,
+      "detail": "pytest"
+    },
+    {
+      "id": "AGG5",
+      "pass": true,
+      "detail": "pytest"
+    },
+    {
+      "id": "AGG6",
+      "pass": true,
+      "detail": "pytest"
+    },
+    {
+      "id": "AGG7",
+      "pass": true,
+      "detail": "pytest"
+    },
+    {
+      "id": "AGG8",
+      "pass": true,
+      "detail": "pytest"
+    },
+    {
+      "id": "AGG9",
+      "pass": true,
+      "detail": "pytest"
+    }
+  ],
+  "sabotage": [
+    {
+      "id": "AGG-S1",
+      "pass": true,
+      "detail": "identity covers swap"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "attempt_index": 0,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "f7d46a97987312f37f9dab51f22001da145ea39ef11503df65713f96d7ea1d21",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": true,
+      "failed_checks": [],
+      "demo_result": {
+        "pass": true,
+        "actual_repr": "'a3b2c1'",
+        "expected_repr": "'a3b2c1'",
+        "error": "",
+        "pair_id": "p26_rle_compress"
+      },
+      "qa_verdict": "approve",
+      "qa_calls_so_far": 0
+    }
+  ]
+}

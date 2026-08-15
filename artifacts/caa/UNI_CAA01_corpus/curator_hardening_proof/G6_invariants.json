@@ -1,0 +1,19 @@
+{
+  "gate_id": "G6_invariants",
+  "pass": true,
+  "evidence": {
+    "pass": true,
+    "coverage": {
+      "n_pairs": 66,
+      "n_with_extra_invariants": 9,
+      "n_stress": 7,
+      "missing_oracles": [],
+      "pass": true
+    },
+    "negative_fixtures_fail": [
+      true,
+      true,
+      true
+    ]
+  }
+}

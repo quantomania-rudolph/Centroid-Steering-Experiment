@@ -1,0 +1,84 @@
+{
+  "gate": "cast_inject_live",
+  "version": 1,
+  "timestamp": "2026-08-14T02:37:12.458324+00:00",
+  "pass": true,
+  "checks": [
+    {
+      "id": "PRE1",
+      "pass": true,
+      "detail": "shadow gate green"
+    },
+    {
+      "id": "PRE2",
+      "pass": true,
+      "detail": "shadow=True inject=True"
+    },
+    {
+      "id": "C1",
+      "pass": true,
+      "detail": "{'n': 85, 'mean_alpha': 0.009999999282833603, 'inject_count': 1, 'max_alpha': 0.8499999390408562}"
+    },
+    {
+      "id": "C2",
+      "pass": true,
+      "detail": "max_alpha=0.8499999390408562"
+    },
+    {
+      "id": "C3",
+      "pass": true,
+      "detail": "inject_count=1"
+    },
+    {
+      "id": "D1",
+      "pass": true,
+      "detail": "mean_alpha=0.0"
+    },
+    {
+      "id": "D2",
+      "pass": true,
+      "detail": "mean_stub=4.3425721425755024e-08"
+    },
+    {
+      "id": "KV1",
+      "pass": true,
+      "detail": "completion produced tokens"
+    }
+  ],
+  "sabotage": [
+    {
+      "id": "INJ-S1",
+      "pass": true,
+      "detail": "inject off => no pending alpha"
+    },
+    {
+      "id": "INJ-S2",
+      "pass": true,
+      "detail": "shuffled_u_beh dot u_cond=-0.0011"
+    }
+  ],
+  "environment": {
+    "health": {
+      "ok": true,
+      "device": "xpu",
+      "gpu_name": "Intel(R) Arc(TM) 140V GPU (16GB)",
+      "refuses_cpu_fallback": true,
+      "session_id": "boot_20260814T022600Z",
+      "invocations": 0,
+      "session_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\aider_sessions\\boot_20260814T022600Z.jsonl",
+      "chaos_enabled": true,
+      "cast_shadow": true,
+      "cast_inject": true,
+      "cast_vector_id": "UNI_CAA01",
+      "degraded_mode": false,
+      "probe_layers": [
+        10,
+        16,
+        22
+      ],
+      "chaos_timing": {}
+    }
+  },
+  "panic_session": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\cast_inject_gate_panic_latest.json",
+  "clean_session": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\cast_inject_gate_clean_latest.json"
+}

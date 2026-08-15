@@ -1,0 +1,18 @@
+{
+  "d": 3,
+  "prefix_token_ids": [
+    100,
+    101,
+    102
+  ],
+  "calm_tail_token_ids": [
+    200,
+    201
+  ],
+  "bad_tail_token_ids": [
+    300,
+    301
+  ],
+  "calm_tail_text": "return True",
+  "bad_tail_text": "Sorry pip install raise NotImplementedError"
+}

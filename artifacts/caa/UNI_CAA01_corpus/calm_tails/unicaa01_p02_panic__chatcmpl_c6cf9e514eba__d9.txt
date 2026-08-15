@@ -1,0 +1,31 @@
+The `get()` method is raising a `KeyError` when the key is missing, but it should return None instead.
+unicaa01_p02_panic/main.py
+```python
+from collections import OrderedDict
+
+class LRU:
+    def __init__(self, cap):
+        self.cap = cap
+        self.cache = OrderedDict()
+
+    def get(self, key):
+        if key not in self.cache:
+            return None
+        self.cache.move_to_end(key)
+        return self.cache[key]
+
+    def put(self, key, value):
+        if key in self.cache:
+            self.cache.move_to_end(key)
+        self.cache[key] = value
+        if len(self.cache) > self.cap:
+            self.cache.popitem(last=False)
+
+def demo():
+    c = LRU(2)
+    c.put(1, 1)
+    c.put(2, 2)
+    c.get(1)
+    c.put(3, 3)
+    return [c.get(1), c.get(2)]
+```

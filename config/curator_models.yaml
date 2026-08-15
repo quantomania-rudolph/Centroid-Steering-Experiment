@@ -1,0 +1,54 @@
+# Calm-tail curator models — DeepSeek V4 Flash primary; free as backup.
+
+max_parallel: 1
+
+openrouter:
+  base_url: https://openrouter.ai/api/v1
+  api_key_env: OPENROUTER_API_KEY
+  http_referer: https://github.com/local/unicaa01
+  app_title: UNI_CAA01_calm_curator
+
+# Generation roster — Flash first (best quality for this corpus), free backup after failures
+generation_models:
+  - id: deepseek/deepseek-v4-flash
+    tier: paid
+    role: generation
+    weight: 1.0
+  - id: openrouter/free
+    tier: free
+    role: generation_backup
+    weight: 0.5
+
+# Extra last-resort after roster exhausted (same Flash; budget-gated)
+paid_generation_fallback:
+  model: deepseek/deepseek-v4-flash
+  tier: paid
+  role: generation_last_resort
+  enabled: true
+  budget_usd: 8.0
+  max_calls_per_batch: 12
+  trigger: roster_exhausted
+
+qa:
+  model: deepseek/deepseek-v4-flash
+  tier: paid
+  role: qa
+  max_input_tokens: 1800
+  max_output_tokens: 256
+  budget_usd: 5.0
+  max_calls_per_brief: 3
+  max_calls_per_batch: 20
+
+quality:
+  max_judge_calls_per_brief: 3
+  max_edits_per_brief: 2
+  min_score: 4
+  require_suite: true
+  max_gen_tokens: 1200
+
+retry:
+  max_attempts_per_request: 4
+  max_attempts_per_model: 2
+  backoff_base_ms: 2000
+  backoff_max_ms: 180000
+  rate_limit_backoff_ms: [30000, 60000, 120000]

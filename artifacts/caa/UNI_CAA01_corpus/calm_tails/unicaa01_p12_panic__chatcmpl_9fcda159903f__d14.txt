@@ -1,0 +1,16 @@
+fix: update `fib` function to use iterative approach and remove `incomplete body`.
+unicaa01_p12_panic/main.py
+```python
+"""Compute Fibonacci iteratively."""
+def fib(n):
+    """Return the nth Fibonacci number (iterative)."""
+    if n < 0:
+        raise ValueError("n must be non-negative")
+    a, b = 0, 1
+    for _ in range(n):
+        a, b = b, a + b
+    return a
+
+def demo():
+    return fib(10)
+```

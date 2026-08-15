@@ -1,0 +1,88 @@
+{
+  "hacks_all_rejected": true,
+  "goods_all_pass": true,
+  "pass": true,
+  "hack_probes": [
+    {
+      "pair_id": "p07_csv_agg",
+      "label": "hardcoded_60",
+      "rejected": true,
+      "detail": "FAIL:single_row:expected 5.0 got 60.0"
+    },
+    {
+      "pair_id": "p07_csv_agg",
+      "label": "sum_all_cells",
+      "rejected": true,
+      "detail": "FAIL:demo_csv:expected 60.0 got 66.0"
+    },
+    {
+      "pair_id": "p17_deque_queue",
+      "label": "lifo_mistake",
+      "rejected": true,
+      "detail": "FAIL:fifo_123:expected [1, 2, 3] got [3, 2, 1]"
+    },
+    {
+      "pair_id": "p17_deque_queue",
+      "label": "hardcoded_demo_only",
+      "rejected": true,
+      "detail": "FAIL:demo_ok:expected [1, 2, 3] got [9, 9, 9]"
+    },
+    {
+      "pair_id": "p25_edit_distance",
+      "label": "lookup_table",
+      "rejected": true,
+      "detail": "FAIL:to_empty:expected 1 got 0"
+    },
+    {
+      "pair_id": "p62_binary_search",
+      "label": "hardcoded_1",
+      "rejected": true,
+      "detail": "FAIL:empty:expected 0 got 1"
+    },
+    {
+      "pair_id": "p62_binary_search",
+      "label": "bisect_right_behavior",
+      "rejected": true,
+      "detail": "FAIL:exact_first:expected 0 got 1"
+    },
+    {
+      "pair_id": "p66_rot13",
+      "label": "identity",
+      "rejected": true,
+      "detail": "FAIL:encode_abc:expected 'nop' got 'abc'"
+    },
+    {
+      "pair_id": "p66_rot13",
+      "label": "hardcoded_abc_demo",
+      "rejected": true,
+      "detail": "FAIL:roundtrip_abc:expected 'abc' got 'nop'"
+    }
+  ],
+  "good_probes": [
+    {
+      "pair_id": "p07_csv_agg",
+      "pass": true,
+      "detail": "7 cases ok"
+    },
+    {
+      "pair_id": "p17_deque_queue",
+      "pass": true,
+      "detail": "5 cases ok"
+    },
+    {
+      "pair_id": "p25_edit_distance",
+      "pass": true,
+      "detail": "8 cases ok"
+    },
+    {
+      "pair_id": "p62_binary_search",
+      "pass": true,
+      "detail": "9 cases ok"
+    },
+    {
+      "pair_id": "p66_rot13",
+      "pass": true,
+      "detail": "7 cases ok"
+    }
+  ]
+}

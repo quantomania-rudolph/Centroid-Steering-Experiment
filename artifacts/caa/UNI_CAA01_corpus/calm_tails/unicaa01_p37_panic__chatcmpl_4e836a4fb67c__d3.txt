@@ -1,0 +1,19 @@
+The stub `SHA-256 chain` walked iteratively from the seed.
+
+unicaa01_p37_panic/main.py
+```python
+"""Iterative SHA-256 hash chain."""
+import hashlib
+
+def hash_chain(seed: str, n: int) -> list[str]:
+    result = []
+    current = seed
+    for _ in range(n):
+        h = hashlib.sha256(current.encode()).hexdigest()
+        result.append(h)
+        current = h
+    return result
+
+def demo():
+    return len(hash_chain("a", 3))
+```

@@ -1,0 +1,3855 @@
+{
+  "task_id": "T02",
+  "domain": "quant_trading",
+  "slug": "stem25_market_impact",
+  "stem10_echo": "T02 VaR/trading",
+  "experiment": "stem25_t02_stem25_market_impact",
+  "n_invocations": 3,
+  "invocations": [
+    {
+      "invocation_index": 1,
+      "id": "chatcmpl-8fd15ae52aa0",
+      "completion_tokens": 253,
+      "seconds": 162.37087939999765,
+      "verdict": "RESOLVED",
+      "code_audit": {
+        "exists": true,
+        "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\qwen code\\stem25_market_impact\\main.py",
+        "bytes": 521,
+        "stub_hits": [],
+        "distress_hits": [],
+        "stub_score": 0,
+        "distress_score": 0
+      },
+      "assistant_scores": {
+        "stub_hits": [],
+        "distress_hits": [],
+        "stub_score": 0,
+        "distress_score": 0
+      },
+      "checker_audit": {
+        "available": true,
+        "version": 1,
+        "n_tokens": 253,
+        "composites": {
+          "PLDS": 0.49850193691338296,
+          "FCI": 1.1410916841158882,
+          "SRS": 0.172954754209505,
+          "flags_timeline": [
+            {
+              "step": 22,
+              "flags": [
+                "A_low_margin"
+              ]
+            },
+            {
+              "step": 49,
+              "flags": [
+                "A_low_margin"
+              ]
+            },
+            {
+              "step": 52,
+              "flags": [
+                "A_low_margin"
+              ]
+            },
+            {
+              "step": 92,
+              "flags": [
+                "A_low_margin"
+              ]
+            },
+            {
+              "step": 134,
+              "flags": [
+                "A_low_margin"
+              ]
+            }
+          ]
+        },
+        "timing_p95_ms": 92.45779999764636,
+        "degraded_mode": false,
+        "f2_stride": 8,
+        "checkers": {
+          "A": {
+            "label": "Distribution shape",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "low_margin=2% high_entropy=0%",
+            "metrics": {
+              "max_entropy": 1.6184606552124023,
+              "min_margin": 0.005107909440994263
+            }
+          },
+          "B_vocab": {
+            "label": "Vocab class hygiene",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "distress=0.000 stub=0.000"
+          },
+          "B_transport": {
+            "label": "Transport prototypes",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "rows_with_L16_transport=317/253"
+          },
+          "B_jlens": {
+            "label": "J-lens top-k classes",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "F2/F3 jlens rows=96"
+          },
+          "C": {
+            "label": "Trajectory stability",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "stored_thrash=0% osc=0% calibrated_C_alarm=False"
+          },
+          "D": {
+            "label": "Cross-position contrast",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "ΔH=-0.194 JS=0.000 |ΔM_code|=0.000"
+          },
+          "E": {
+            "label": "Layer curve (cliff)",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "cliff_layer=L10",
+            "metrics": {
+              "cliff_mag": -0.00023890322022768196,
+              "series_keys": [
+                "entropy",
+                "code_mass",
+                "distress_mass",
+                "flip_rate"
+              ]
+            }
+          },
+          "F": {
+            "label": "Lens vs logit disagreement",
+            "active": true,
+            "fired": true,
+            "severity": "warn",
+            "detail": "events=1 min_overlap=0.20"
+          },
+          "G": {
+            "label": "Sparse residual",
+            "active": false,
+            "fired": false,
+            "severity": "info",
+            "detail": "events=0 max_relMSE=0.000"
+          }
+        },
+        "all_active": false,
+        "panic_like": 1
+      },
+      "recipe_summary": {
+        "recipe_fires": 36,
+        "recipe_counts": {
+          "F_LENS": 32,
+          "A_UNCERTAIN": 4
+        },
+        "unique_recipes": [
+          "A_UNCERTAIN",
+          "F_LENS"
+        ],
+        "warn_plus": []
+      },
+      "temporal_resolution": {
+        "enough_tokens": true,
+        "metrics": {
+          "B_distress": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "B_stub": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "C": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "A": {
+            "first_q": 0.047619047619047616,
+            "last_q": 0.0,
+            "resolving": null
+          }
+        }
+      },
+      "flag_rates": {
+        "A": 0.019762845849802372,
+        "B_distress": 0.0,
+        "B_stub": 0.0,
+        "C": 0.0,
+        "D": 0.0
+      },
+      "monitor": {
+        "recipe_timeline": [
+          {
+            "step": 0,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 8,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 16,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 22,
+            "recipe_id": "A_UNCERTAIN",
+            "severity": "tip",
+            "atoms_mask": 1,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 24,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 32,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 40,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 48,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 49,
+            "recipe_id": "A_UNCERTAIN",
+            "severity": "tip",
+            "atoms_mask": 1,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 56,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 64,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 72,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 80,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 88,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 92,
+            "recipe_id": "A_UNCERTAIN",
+            "severity": "tip",
+            "atoms_mask": 1,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 96,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 104,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 112,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 120,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 128,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 134,
+            "recipe_id": "A_UNCERTAIN",
+            "severity": "tip",
+            "atoms_mask": 1,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 136,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 144,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 152,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 160,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 168,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 176,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 184,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 192,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 200,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 208,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 216,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 224,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 232,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 240,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 248,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          }
+        ],
+        "events_tail": [
+          {
+            "seq": 189,
+            "t_ns": 267637999651700,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 189,
+            "token_id": 15,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5070433107848965,
+              "FCI": 1.5070433107848964,
+              "SRS": 0.17239308125412833
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 190,
+            "t_ns": 267638476006000,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 190,
+            "token_id": 13,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5056975353942188,
+              "FCI": 1.5056975353942188,
+              "SRS": 0.1714904996768816
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 191,
+            "t_ns": 267639394727500,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 191,
+            "token_id": 15,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.505668007564608,
+              "FCI": 1.505668007564608,
+              "SRS": 0.17163898665725968
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 192,
+            "t_ns": 267640265029700,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 192,
+            "token_id": 17,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.505638727454597,
+              "FCI": 1.505638727454597,
+              "SRS": 0.17178593490589303
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 193,
+            "t_ns": 267641627509700,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 193,
+            "token_id": 11,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5043210321227608,
+              "FCI": 1.504321032122761,
+              "SRS": 0.17090044174792676
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 194,
+            "t_ns": 267642359727100,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 194,
+            "token_id": 38997,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5042989358655784,
+              "FCI": 1.5042989358655783,
+              "SRS": 0.17104967025178355
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 195,
+            "t_ns": 267643224009900,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 195,
+            "token_id": 28,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.503001499596242,
+              "FCI": 1.503001499596242,
+              "SRS": 0.17017696809582403
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 196,
+            "t_ns": 267645662781200,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 196,
+            "token_id": 15,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5029863614133746,
+              "FCI": 1.5029863614133747,
+              "SRS": 0.17032835404233015
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 197,
+            "t_ns": 267646744421700,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 197,
+            "token_id": 13,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5017086663449076,
+              "FCI": 1.5017086663449075,
+              "SRS": 0.16946811049226898
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 198,
+            "t_ns": 267647419322800,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 198,
+            "token_id": 16,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.501700727467727,
+              "FCI": 1.501700727467727,
+              "SRS": 0.16962153707262087
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 199,
+            "t_ns": 267647878614000,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 199,
+            "token_id": 3623,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5016959831962152,
+              "FCI": 1.5016959831962153,
+              "SRS": 0.1697734272809842
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 200,
+            "t_ns": 267648712373500,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 200,
+            "token_id": 750,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.5004440489743668,
+              "FCI": 1.5004440489743667,
+              "SRS": 0.1689287873378064
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 201,
+            "t_ns": 267649300042900,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 201,
+            "token_id": 1887,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5004418811555256,
+              "FCI": 1.5004418811555256,
+              "SRS": 0.1690826052222727
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 202,
+            "t_ns": 267649962631900,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 202,
+            "token_id": 368,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5004397530326639,
+              "FCI": 1.5004397530326639,
+              "SRS": 0.16923490764604854
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 203,
+            "t_ns": 267650609198200,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 203,
+            "token_id": 1464,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5004376018787504,
+              "FCI": 1.5004376018787504,
+              "SRS": 0.16938571691973894
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 204,
+            "t_ns": 267651095165000,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 204,
+            "token_id": 2240,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5004354794948512,
+              "FCI": 1.5004354794948513,
+              "SRS": 0.16953505445848696
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 205,
+            "t_ns": 267653155126500,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 205,
+            "token_id": 510,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5004333970011546,
+              "FCI": 1.5004333970011547,
+              "SRS": 0.169682941688675
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 206,
+            "t_ns": 267653866197500,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 206,
+            "token_id": 220,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5004314425116951,
+              "FCI": 1.5004314425116951,
+              "SRS": 0.16982940086603612
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 207,
+            "t_ns": 267654331718500,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 207,
+            "token_id": 2783,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5004436254024748,
+              "FCI": 1.500443625402475,
+              "SRS": 0.1699744515475169
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 208,
+            "t_ns": 267655232113200,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 208,
+            "token_id": 284,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.5004415065799797,
+              "FCI": 1.5004415065799797,
+              "SRS": 0.17011811432672047
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 209,
+            "t_ns": 267655696145400,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 209,
+            "token_id": 16661,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5004394561775514,
+              "FCI": 1.5004394561775514,
+              "SRS": 0.17026040902040276
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 210,
+            "t_ns": 267656280068000,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 210,
+            "token_id": 741,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5004374355916277,
+              "FCI": 1.5004374355916277,
+              "SRS": 0.170401354706277
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 211,
+            "t_ns": 267657229378900,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 211,
+            "token_id": 220,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5004372572916517,
+              "FCI": 1.5004372572916518,
+              "SRS": 0.17054097085083383
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 212,
+            "t_ns": 267657848051200,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 212,
+            "token_id": 2060,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5006683168576671,
+              "FCI": 1.500668316857667,
+              "SRS": 0.1706792697423124
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 213,
+            "t_ns": 267659030742400,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 213,
+            "token_id": 220,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5006699199129174,
+              "FCI": 1.5006699199129174,
+              "SRS": 0.17081628250052588
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 214,
+            "t_ns": 267659825108100,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 214,
+            "token_id": 17,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5017321870800974,
+              "FCI": 1.5017321870800973,
+              "SRS": 0.17095202068141732
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 215,
+            "t_ns": 267660365224700,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 215,
+            "token_id": 15,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5023199893934717,
+              "FCI": 1.5023199893934716,
+              "SRS": 0.17108356389684642
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 216,
+            "t_ns": 267661132536800,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 216,
+            "token_id": 15,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.5023883135025704,
+              "FCI": 1.4357216468359038,
+              "SRS": 0.17121232190089744
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 217,
+            "t_ns": 267661675841500,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 217,
+            "token_id": 366,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5023339435932652,
+              "FCI": 1.4356672769265986,
+              "SRS": 0.17134407007538915
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 218,
+            "t_ns": 267662208775000,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 218,
+            "token_id": 2783,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5022473930840041,
+              "FCI": 1.4355807264173375,
+              "SRS": 0.1714749190704787
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 219,
+            "t_ns": 267662665378300,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 219,
+            "token_id": 366,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5021616727320882,
+              "FCI": 1.4354950060654215,
+              "SRS": 0.1716045772640701
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 220,
+            "t_ns": 267663112211100,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 220,
+            "token_id": 220,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5020764886645762,
+              "FCI": 1.4354098219979097,
+              "SRS": 0.17173306333050875
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 221,
+            "t_ns": 267663477259900,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 221,
+            "token_id": 19,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5020400522778946,
+              "FCI": 1.435373385611228,
+              "SRS": 0.17186039187186106
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 222,
+            "t_ns": 267664030335800,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 222,
+            "token_id": 15,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5019633973091009,
+              "FCI": 1.4352967306424342,
+              "SRS": 0.17198657758533148
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 223,
+            "t_ns": 267664478810600,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 223,
+            "token_id": 15,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5018095126168866,
+              "FCI": 1.3684761792835531,
+              "SRS": 0.17211163599499948
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 224,
+            "t_ns": 267665224550300,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 224,
+            "token_id": 11,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.5005432819182949,
+              "FCI": 1.3672099485849616,
+              "SRS": 0.17134672172258478
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 225,
+            "t_ns": 267665663919300,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 225,
+            "token_id": 2783,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5008699556466213,
+              "FCI": 1.3675366223132879,
+              "SRS": 0.1714735061397415
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 226,
+            "t_ns": 267666080919700,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 226,
+            "token_id": 198,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49976310115168066,
+              "FCI": 1.3664297678183472,
+              "SRS": 0.17073812134915298
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 227,
+            "t_ns": 267666512483300,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 227,
+            "token_id": 220,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4996179572375152,
+              "FCI": 1.366284623904182,
+              "SRS": 0.1708664629196728
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 228,
+            "t_ns": 267666939588300,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 228,
+            "token_id": 1173,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4994742773543175,
+              "FCI": 1.3661409440209842,
+              "SRS": 0.17099368352966623
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 229,
+            "t_ns": 267667328081700,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 229,
+            "token_id": 955,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49933165214325226,
+              "FCI": 1.365998318809919,
+              "SRS": 0.17111979791366116
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 230,
+            "t_ns": 267667690651200,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 230,
+            "token_id": 1,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49919032487312637,
+              "FCI": 1.3658569915397931,
+              "SRS": 0.17124482043351544
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 231,
+            "t_ns": 267668062432400,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 231,
+            "token_id": 57300,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49912211444095744,
+              "FCI": 1.4324554477742908,
+              "SRS": 0.1713687651589406
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 232,
+            "t_ns": 267668611243400,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 232,
+            "token_id": 15890,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.4990545187876806,
+              "FCI": 1.432387852121014,
+              "SRS": 0.1714916459951683
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 233,
+            "t_ns": 267668962421900,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 233,
+            "token_id": 1165,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49898761524528695,
+              "FCI": 1.4323209485786204,
+              "SRS": 0.17161347291638365
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 234,
+            "t_ns": 267669599590400,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 234,
+            "token_id": 16440,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49892105038083456,
+              "FCI": 1.432254383714168,
+              "SRS": 0.17173426664865435
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 235,
+            "t_ns": 267670028270500,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 235,
+            "token_id": 16976,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4988550098213099,
+              "FCI": 1.4321883431546434,
+              "SRS": 0.1718540364583805
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 236,
+            "t_ns": 267670513431800,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 236,
+            "token_id": 17,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4987895558909202,
+              "FCI": 1.4321228892242535,
+              "SRS": 0.17197279579680463
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 237,
+            "t_ns": 267671027599400,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 237,
+            "token_id": 69,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49872463640613246,
+              "FCI": 1.4320579697394658,
+              "SRS": 0.17209055715370933
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 238,
+            "t_ns": 267671490037500,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 238,
+            "token_id": 9863,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4987328507320574,
+              "FCI": 1.4987328507320574,
+              "SRS": 0.17220733303266392
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 239,
+            "t_ns": 267671925797100,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 239,
+            "token_id": 3623,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49873951525300547,
+              "FCI": 1.4987395152530054,
+              "SRS": 0.17232313537812016
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 240,
+            "t_ns": 267672549047100,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 240,
+            "token_id": 333,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.4977075037624395,
+              "FCI": 1.4977075037624394,
+              "SRS": 0.17160810364940635
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 241,
+            "t_ns": 267672929323700,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 241,
+            "token_id": 1304,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4977169889673797,
+              "FCI": 1.4977169889673796,
+              "SRS": 0.1717254255348657
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 242,
+            "t_ns": 267673339161700,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 242,
+            "token_id": 606,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4977264038612782,
+              "FCI": 1.4977264038612783,
+              "SRS": 0.17184178180838477
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 243,
+            "t_ns": 267673689834300,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 243,
+            "token_id": 563,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49773573093008405,
+              "FCI": 1.497735730930084,
+              "SRS": 0.17195718434195698
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 244,
+            "t_ns": 267674031630100,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 244,
+            "token_id": 621,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49774500821789086,
+              "FCI": 1.497745008217891,
+              "SRS": 0.17207164460700908
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 245,
+            "t_ns": 267674409890600,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 245,
+            "token_id": 13265,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.497754276885373,
+              "FCI": 1.4977542768853729,
+              "SRS": 0.1721851745069806
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 246,
+            "t_ns": 267674807126300,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 246,
+            "token_id": 3817,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49776339210736137,
+              "FCI": 1.4977633921073614,
+              "SRS": 0.17229778513650698
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 247,
+            "t_ns": 267675163124500,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 247,
+            "token_id": 21082,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49777245853592483,
+              "FCI": 1.4977724585359249,
+              "SRS": 0.17240948761579525
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 248,
+            "t_ns": 267675729172500,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 248,
+            "token_id": 220,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.4977814428341769,
+              "FCI": 1.497781442834177,
+              "SRS": 0.17252029288576115
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 249,
+            "t_ns": 267676182423200,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 249,
+            "token_id": 1887,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49779036036899793,
+              "FCI": 1.497790360368998,
+              "SRS": 0.1726302117142181
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 250,
+            "t_ns": 267676606931200,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 250,
+            "token_id": 741,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4977993164626283,
+              "FCI": 1.4977993164626282,
+              "SRS": 0.1727392543354681
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 251,
+            "t_ns": 267677028981500,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 251,
+            "token_id": 73594,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49849578067504546,
+              "FCI": 1.4984957806750454,
+              "SRS": 0.17284743189762894
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 252,
+            "t_ns": 267677510347800,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-8fd15ae52aa0",
+            "step": 252,
+            "token_id": 151645,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4985019369133832,
+              "FCI": 1.4985019369133832,
+              "SRS": 0.17295475420950507
+            },
+            "degraded_mode": false,
+            "flags": []
+          }
+        ],
+        "recipe_eval": {
+          "n": 253.0,
+          "p50_us": 4.3,
+          "p95_us": 36.8,
+          "max_us": 4293.7
+        },
+        "publish": {
+          "n": 253.0,
+          "p50_us": 39.2,
+          "p95_us": 114.5,
+          "max_us": 4433.5
+        },
+        "n_recipe_fires": 36
+      },
+      "runtime_ok": true,
+      "runtime_stderr": "",
+      "lint_ok": true
+    },
+    {
+      "invocation_index": 2,
+      "id": "chatcmpl-bfe901bb0956",
+      "completion_tokens": 12,
+      "seconds": 9.822910799994133,
+      "verdict": "RESOLVED",
+      "code_audit": {
+        "exists": true,
+        "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\qwen code\\stem25_market_impact\\main.py",
+        "bytes": 521,
+        "stub_hits": [],
+        "distress_hits": [],
+        "stub_score": 0,
+        "distress_score": 0
+      },
+      "assistant_scores": {
+        "stub_hits": [],
+        "distress_hits": [],
+        "stub_score": 0,
+        "distress_score": 0
+      },
+      "checker_audit": {
+        "available": true,
+        "version": 1,
+        "n_tokens": 12,
+        "composites": {
+          "PLDS": 0.512822970408242,
+          "FCI": 1.1818332199967851,
+          "SRS": 0.19055839899390326,
+          "flags_timeline": []
+        },
+        "timing_p95_ms": 65.43879996752366,
+        "degraded_mode": false,
+        "f2_stride": 8,
+        "checkers": {
+          "A": {
+            "label": "Distribution shape",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "low_margin=0% high_entropy=0%",
+            "metrics": {
+              "max_entropy": 0.7717207670211792,
+              "min_margin": 0.1451510787010193
+            }
+          },
+          "B_vocab": {
+            "label": "Vocab class hygiene",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "distress=0.000 stub=0.000"
+          },
+          "B_transport": {
+            "label": "Transport prototypes",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "rows_with_L16_transport=16/12"
+          },
+          "B_jlens": {
+            "label": "J-lens top-k classes",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "F2/F3 jlens rows=6"
+          },
+          "C": {
+            "label": "Trajectory stability",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "stored_thrash=0% osc=0% calibrated_C_alarm=False"
+          },
+          "D": {
+            "label": "Cross-position contrast",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "ΔH=-0.017 JS=0.000 |ΔM_code|=0.000"
+          },
+          "E": {
+            "label": "Layer curve (cliff)",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "cliff_layer=L16",
+            "metrics": {
+              "cliff_mag": 0.000321576992670769,
+              "series_keys": [
+                "entropy",
+                "code_mass",
+                "distress_mass",
+                "flip_rate"
+              ]
+            }
+          },
+          "F": {
+            "label": "Lens vs logit disagreement",
+            "active": true,
+            "fired": true,
+            "severity": "warn",
+            "detail": "events=1 min_overlap=0.00"
+          },
+          "G": {
+            "label": "Sparse residual",
+            "active": false,
+            "fired": false,
+            "severity": "info",
+            "detail": "events=0 max_relMSE=0.000"
+          }
+        },
+        "all_active": false,
+        "panic_like": 1
+      },
+      "recipe_summary": {
+        "recipe_fires": 2,
+        "recipe_counts": {
+          "F_LENS": 2
+        },
+        "unique_recipes": [
+          "F_LENS"
+        ],
+        "warn_plus": []
+      },
+      "temporal_resolution": {
+        "enough_tokens": true,
+        "metrics": {
+          "B_distress": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "B_stub": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "C": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "A": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          }
+        }
+      },
+      "flag_rates": {
+        "A": 0.0,
+        "B_distress": 0.0,
+        "B_stub": 0.0,
+        "C": 0.0,
+        "D": 0.0
+      },
+      "monitor": {
+        "recipe_timeline": [
+          {
+            "step": 0,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 8,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          }
+        ],
+        "events_tail": [
+          {
+            "seq": 0,
+            "t_ns": 267681114263200,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-bfe901bb0956",
+            "step": 0,
+            "token_id": 44644,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.2858872078359127,
+              "FCI": 0.2858872078359127,
+              "SRS": 0.2
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 1,
+            "t_ns": 267681632343400,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-bfe901bb0956",
+            "step": 1,
+            "token_id": 25,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4186293836683035,
+              "FCI": 1.4186293836683035,
+              "SRS": 0.1433765470981598
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 2,
+            "t_ns": 267682032126200,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-bfe901bb0956",
+            "step": 2,
+            "token_id": 912,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.47429273650050163,
+              "FCI": 1.4742927365005016,
+              "SRS": 0.1622510313987732
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 3,
+            "t_ns": 267682462130900,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-bfe901bb0956",
+            "step": 3,
+            "token_id": 19101,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5247719334438443,
+              "FCI": 1.5247719334438443,
+              "SRS": 0.1716882735490799
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 4,
+            "t_ns": 267682845199300,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-bfe901bb0956",
+            "step": 4,
+            "token_id": 17,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.519824705806404,
+              "FCI": 1.519824705806404,
+              "SRS": 0.1773506126396967
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 5,
+            "t_ns": 267684221550100,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-bfe901bb0956",
+            "step": 5,
+            "token_id": 20,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5165227348747321,
+              "FCI": 1.516522734874732,
+              "SRS": 0.18112551016742368
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 6,
+            "t_ns": 267685012416800,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-bfe901bb0956",
+            "step": 6,
+            "token_id": 68725,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.514300423959161,
+              "FCI": 1.514300423959161,
+              "SRS": 0.18382186585779173
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 7,
+            "t_ns": 267685914158600,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-bfe901bb0956",
+            "step": 7,
+            "token_id": 36788,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5125132095397269,
+              "FCI": 1.512513209539727,
+              "SRS": 0.18584413262556776
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 8,
+            "t_ns": 267686579101000,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-bfe901bb0956",
+            "step": 8,
+            "token_id": 531,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.5111234919305648,
+              "FCI": 1.5111234919305647,
+              "SRS": 0.18741700660942673
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 9,
+            "t_ns": 267687070622200,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-bfe901bb0956",
+            "step": 9,
+            "token_id": 15351,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5106274037123655,
+              "FCI": 1.5106274037123655,
+              "SRS": 0.18867152402125842
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 10,
+            "t_ns": 267687411477000,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-bfe901bb0956",
+            "step": 10,
+            "token_id": 7197,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5096646147139733,
+              "FCI": 1.5096646147139734,
+              "SRS": 0.18970137397228348
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 11,
+            "t_ns": 267687796133700,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-bfe901bb0956",
+            "step": 11,
+            "token_id": 151645,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.512822970408242,
+              "FCI": 1.512822970408242,
+              "SRS": 0.19055839899390326
+            },
+            "degraded_mode": false,
+            "flags": []
+          }
+        ],
+        "recipe_eval": {
+          "n": 12.0,
+          "p50_us": 4.5,
+          "p95_us": 34.1,
+          "max_us": 34.1
+        },
+        "publish": {
+          "n": 12.0,
+          "p50_us": 42.5,
+          "p95_us": 182.2,
+          "max_us": 182.2
+        },
+        "n_recipe_fires": 2
+      },
+      "runtime_ok": true,
+      "runtime_stderr": "",
+      "lint_ok": true
+    },
+    {
+      "invocation_index": 3,
+      "id": "chatcmpl-d3e6443edd38",
+      "completion_tokens": 12,
+      "seconds": 7.978009700018447,
+      "verdict": "RESOLVED",
+      "code_audit": {
+        "exists": true,
+        "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\qwen code\\stem25_market_impact\\main.py",
+        "bytes": 521,
+        "stub_hits": [],
+        "distress_hits": [],
+        "stub_score": 0,
+        "distress_score": 0
+      },
+      "assistant_scores": {
+        "stub_hits": [],
+        "distress_hits": [],
+        "stub_score": 0,
+        "distress_score": 0
+      },
+      "checker_audit": {
+        "available": true,
+        "version": 1,
+        "n_tokens": 12,
+        "composites": {
+          "PLDS": 0.5725476373792789,
+          "FCI": 1.4354914410893496,
+          "SRS": 0.18760648835221996,
+          "flags_timeline": []
+        },
+        "timing_p95_ms": 136.46139996126294,
+        "degraded_mode": false,
+        "f2_stride": 8,
+        "checkers": {
+          "A": {
+            "label": "Distribution shape",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "low_margin=0% high_entropy=0%",
+            "metrics": {
+              "max_entropy": 1.2327808141708374,
+              "min_margin": 0.06900089979171753
+            }
+          },
+          "B_vocab": {
+            "label": "Vocab class hygiene",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "distress=0.000 stub=0.000"
+          },
+          "B_transport": {
+            "label": "Transport prototypes",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "rows_with_L16_transport=16/12"
+          },
+          "B_jlens": {
+            "label": "J-lens top-k classes",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "F2/F3 jlens rows=6"
+          },
+          "C": {
+            "label": "Trajectory stability",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "stored_thrash=0% osc=0% calibrated_C_alarm=False"
+          },
+          "D": {
+            "label": "Cross-position contrast",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "ΔH=-0.025 JS=0.000 |ΔM_code|=0.000"
+          },
+          "E": {
+            "label": "Layer curve (cliff)",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "cliff_layer=L10",
+            "metrics": {
+              "cliff_mag": -0.0003052254517872388,
+              "series_keys": [
+                "entropy",
+                "code_mass",
+                "distress_mass",
+                "flip_rate"
+              ]
+            }
+          },
+          "F": {
+            "label": "Lens vs logit disagreement",
+            "active": true,
+            "fired": true,
+            "severity": "warn",
+            "detail": "events=1 min_overlap=0.00"
+          },
+          "G": {
+            "label": "Sparse residual",
+            "active": false,
+            "fired": false,
+            "severity": "info",
+            "detail": "events=0 max_relMSE=0.000"
+          }
+        },
+        "all_active": false,
+        "panic_like": 1
+      },
+      "recipe_summary": {
+        "recipe_fires": 2,
+        "recipe_counts": {
+          "F_LENS": 2
+        },
+        "unique_recipes": [
+          "F_LENS"
+        ],
+        "warn_plus": []
+      },
+      "temporal_resolution": {
+        "enough_tokens": true,
+        "metrics": {
+          "B_distress": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "B_stub": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "C": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "A": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          }
+        }
+      },
+      "flag_rates": {
+        "A": 0.0,
+        "B_distress": 0.0,
+        "B_stub": 0.0,
+        "C": 0.0,
+        "D": 0.0
+      },
+      "monitor": {
+        "recipe_timeline": [
+          {
+            "step": 0,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 8,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          }
+        ],
+        "events_tail": [
+          {
+            "seq": 0,
+            "t_ns": 267690977010400,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-d3e6443edd38",
+            "step": 0,
+            "token_id": 5743,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.32249643093200575,
+              "FCI": 0.32249643093200575,
+              "SRS": 0.19997695236088475
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 1,
+            "t_ns": 267691959133100,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-d3e6443edd38",
+            "step": 1,
+            "token_id": 25,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.41058414521739905,
+              "FCI": 1.410584145217399,
+              "SRS": 0.1257812894815288
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 2,
+            "t_ns": 267692457696800,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-d3e6443edd38",
+            "step": 2,
+            "token_id": 4396,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5431211646591692,
+              "FCI": 1.5431211646591692,
+              "SRS": 0.15052085965435255
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 3,
+            "t_ns": 267692904873100,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-d3e6443edd38",
+            "step": 3,
+            "token_id": 9334,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5618662894662521,
+              "FCI": 1.561866289466252,
+              "SRS": 0.16289064474076442
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 4,
+            "t_ns": 267693224773500,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-d3e6443edd38",
+            "step": 4,
+            "token_id": 39214,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5506162395282445,
+              "FCI": 1.5506162395282446,
+              "SRS": 0.17031237509479982
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 5,
+            "t_ns": 267693558901400,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-d3e6443edd38",
+            "step": 5,
+            "token_id": 3081,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5496178497211682,
+              "FCI": 1.5496178497211681,
+              "SRS": 0.17526031257899985
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 6,
+            "t_ns": 267693875226900,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-d3e6443edd38",
+            "step": 6,
+            "token_id": 5421,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5425531324280236,
+              "FCI": 1.5425531324280235,
+              "SRS": 0.1787945391169891
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 7,
+            "t_ns": 267694188169800,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-d3e6443edd38",
+            "step": 7,
+            "token_id": 14806,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5464070451226152,
+              "FCI": 1.5464070451226153,
+              "SRS": 0.18144522172736546
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 8,
+            "t_ns": 267694727925000,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-d3e6443edd38",
+            "step": 8,
+            "token_id": 304,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.5706149064507602,
+              "FCI": 1.5706149064507602,
+              "SRS": 0.1834892906423458
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 9,
+            "t_ns": 267695307733300,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-d3e6443edd38",
+            "step": 9,
+            "token_id": 1887,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5849985694593058,
+              "FCI": 1.5849985694593058,
+              "SRS": 0.1851403615781112
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 10,
+            "t_ns": 267695728374100,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-d3e6443edd38",
+            "step": 10,
+            "token_id": 7197,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5780155121010737,
+              "FCI": 1.5780155121010737,
+              "SRS": 0.18649087609389364
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 11,
+            "t_ns": 267696743306200,
+            "session_id": "stem25_t02_stem25_market_impact_20260806T070952Z",
+            "invocation_id": "chatcmpl-d3e6443edd38",
+            "step": 11,
+            "token_id": 151645,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5725476373792789,
+              "FCI": 1.5725476373792788,
+              "SRS": 0.18760648835221996
+            },
+            "degraded_mode": false,
+            "flags": []
+          }
+        ],
+        "recipe_eval": {
+          "n": 12.0,
+          "p50_us": 4.3,
+          "p95_us": 30.6,
+          "max_us": 30.6
+        },
+        "publish": {
+          "n": 12.0,
+          "p50_us": 41.4,
+          "p95_us": 81.7,
+          "max_us": 81.7
+        },
+        "n_recipe_fires": 2
+      },
+      "runtime_ok": true,
+      "runtime_stderr": "",
+      "lint_ok": true
+    }
+  ],
+  "evidence": {
+    "checks": [
+      {
+        "id": "A1",
+        "name": "at least one LLM invocation logged",
+        "pass": true,
+        "detail": "n_invocations=3"
+      },
+      {
+        "id": "A3",
+        "name": "J-space attached to invocations",
+        "pass": true,
+        "detail": "skip_jspace=True with_jspace=0/3"
+      },
+      {
+        "id": "A4",
+        "name": "nested invocations indexed",
+        "pass": true,
+        "detail": "indexed=3"
+      },
+      {
+        "id": "A5",
+        "name": "layer readouts for browsing",
+        "pass": true,
+        "detail": "skip_jspace=True n_layers=0"
+      },
+      {
+        "id": "C1",
+        "name": "chaos attached to invocations",
+        "pass": true,
+        "detail": "with_chaos=3/3 enabled=True"
+      },
+      {
+        "id": "A2",
+        "name": "aider process completed",
+        "pass": true,
+        "detail": "rc=0 seconds=206.7"
+      },
+      {
+        "id": "A6",
+        "name": "task main.py exists after run",
+        "pass": true,
+        "detail": "size=547"
+      },
+      {
+        "id": "A7",
+        "name": "ruff+pylint pass on task files",
+        "pass": true,
+        "detail": "[{\"tool\": \"ruff\", \"rc\": 0}, {\"tool\": \"ruff_verify\", \"rc\": 0}, {\"tool\": \"pylint\", \"rc\": 0}]"
+      }
+    ],
+    "passed": 8,
+    "total": 8,
+    "overall_pass": true
+  },
+  "lint": {
+    "ok": true,
+    "checks": [
+      {
+        "tool": "ruff",
+        "file": "stem25_market_impact\\main.py",
+        "returncode": 0,
+        "stdout": "\u001b[1;32mAll checks passed!\u001b[0m\n",
+        "stderr": "",
+        "pass": true
+      },
+      {
+        "tool": "ruff_verify",
+        "file": "stem25_market_impact\\main.py",
+        "returncode": 0,
+        "stdout": "\u001b[1;32mAll checks passed!\u001b[0m\n",
+        "stderr": "",
+        "pass": true
+      },
+      {
+        "tool": "pylint",
+        "file": "stem25_market_impact\\main.py",
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "",
+        "pass": true
+      }
+    ]
+  },
+  "aider": {
+    "returncode": 0,
+    "seconds": 206.69774520001374,
+    "stdout_tail": "Detected dumb terminal, disabling fancy input and pretty output.\n\nAider v0.86.2\nModel: openai/qwen-local with whole edit format\nGit repo: .git with 25 files\nRepo-map: using 1024 tokens, auto refresh\nAdded stem25_market_impact\\main.py to the chat.\n\nTo fix the square-root market impact formula and adjust the `main()` assert \nstatement, I will:\n\n\n\n1. Update the `temporary_impact_cost` function to use the correct square-root \nformula.\n\n2. Adjust the `main()` assert statement to match the new formula.\n\n\n\nHere is the updated content of `stem25_market_impact/main.py`:\n\n\n\nstem25_market_impact/main.py\n\n```diff\n@@ -1,15 +1,15 @@\n-\"\"\"Almgren-Chriss temporary impact — broken cost formula.\"\"\"\n+\"\"\"Almgren-Chriss temporary impact — fixed cost formula.\"\"\"\n \n from __future__ import annotations\n \n import math\n \n \n def temporary_impact_cost(q: float, v: float, sigma: float, eta: float) -> \nfloat:\n-  # BUG: linear in Q instead of square-root law\n-  return eta * sigma * (q / v) * q\n+  # Corrected formula: cost = eta*sigma*sqrt(Q/V)*Q\n+  return eta * sigma * math.sqrt(q / v) * q\n \n \n def demo() -> float:\n   return temporary_impact_cost(q=1e6, v=5e7, sigma=0.02, eta=0.1)\n \n```\n\n\nTokens: 1.9k sent, 253 received.\nCommitting stem25_market_impact/main.py before applying edits.\nCommit 14c2ec6 feat: add stem25_market_impact/main.py\nApplied edit to stem25_market_impact/main.py\nCommit 6f3615d fix: correct square-root market impact formula in main.py\n",
+    "stderr_tail": "",
+    "cwd": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\qwen code",
+    "task_dir": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\qwen code\\stem25_market_impact"
+  },
+  "elapsed_s": 250.9499032999738,
+  "aider_rc": 0,
+  "attempt": 1,
+  "success": true
+}

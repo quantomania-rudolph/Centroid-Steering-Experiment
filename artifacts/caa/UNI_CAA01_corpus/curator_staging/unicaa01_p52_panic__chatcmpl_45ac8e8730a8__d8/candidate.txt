@@ -1,0 +1,32 @@
+The error in the code is the `lazy_property` descriptor’s `__get__` never stores the computed value, so every access recomputes it and increments `calls`.
+
+unicaa01_p52_panic/main.py
+```python
+"""Lazy property that caches its result."""
+class lazy_property:
+    def __init__(self, fn):
+        self.fn = fn
+        self.attr = "_lazy_" + fn.__name__
+
+    def __get__(self, obj, cls):
+        if obj is None:
+            return self
+        if not hasattr(obj, self.attr):
+            setattr(obj, self.attr, self.fn(obj))
+        return getattr(obj, self.attr)
+
+class Box:
+    def __init__(self):
+        self.calls = 0
+
+    @lazy_property
+    def value(self):
+        self.calls += 1
+        return 7
+
+def demo():
+    b = Box()
+    _ = b.value
+    _ = b.value
+    return b.calls
+```

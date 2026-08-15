@@ -1,0 +1,73 @@
+{
+  "gate": "caa_vector_identity",
+  "version": 1,
+  "timestamp": "2026-08-10T01:52:47.451149+00:00",
+  "pass": true,
+  "checks": [
+    {
+      "id": "ID1",
+      "pass": true,
+      "detail": "sep=1.3418"
+    },
+    {
+      "id": "ID2",
+      "pass": true,
+      "detail": "sep=1.3418"
+    },
+    {
+      "id": "ID3",
+      "pass": true,
+      "detail": "beh closer to calm"
+    },
+    {
+      "id": "ID4",
+      "pass": true,
+      "detail": "cond closer to bad"
+    },
+    {
+      "id": "ID5",
+      "pass": true,
+      "detail": "cos=-1.0000"
+    },
+    {
+      "id": "ID6",
+      "pass": true,
+      "detail": "neutral vs cond"
+    },
+    {
+      "id": "ID7",
+      "pass": true,
+      "detail": "neutral vs beh"
+    },
+    {
+      "id": "ID8",
+      "pass": true,
+      "detail": "swap labels fail separation"
+    },
+    {
+      "id": "ID9",
+      "pass": true,
+      "detail": "before=0.9806 after=0.0000"
+    },
+    {
+      "id": "ID10",
+      "pass": true,
+      "detail": "n=1 pool matches single"
+    }
+  ],
+  "sabotage": [
+    {
+      "id": "ID-S1",
+      "pass": true,
+      "detail": "swap sabotage"
+    },
+    {
+      "id": "ID-S2",
+      "pass": true,
+      "detail": "neutral is not cond"
+    }
+  ],
+  "environment": {
+    "mode": "fixture"
+  }
+}

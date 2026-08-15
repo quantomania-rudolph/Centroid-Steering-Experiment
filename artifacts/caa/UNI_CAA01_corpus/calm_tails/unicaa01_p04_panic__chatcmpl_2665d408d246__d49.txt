@@ -1,0 +1,24 @@
+The stub `bfs` is incomplete and may loop forever on cyclic graphs due to the lack of a visited set. I will fix the BFS implementation and ensure it returns the correct path from node 0. Additionally, I will remove the `broken raise` and ship a visited-set BFS that returns visit order from node 0.
+unicaa01_p04_panic/main.py
+```python
+"""BFS visit order with a visited set."""
+from collections import deque
+
+def bfs(adj, start):
+    visited = set()
+    order = []
+    queue = deque([start])
+    visited.add(start)
+    while queue:
+        node = queue.popleft()
+        order.append(node)
+        for neighbor in adj.get(node, []):
+            if neighbor not in visited:
+                visited.add(neighbor)
+                queue.append(neighbor)
+    return order
+
+def demo():
+    adj = {0: [1, 2], 1: [3], 2: [], 3: []}
+    return bfs(adj, 0)
+```

@@ -1,0 +1,28 @@
+{
+  "source": "natural",
+  "pair_slug": "unicaa01_corpus_p14_regex_email_panic__mpl_fe69aa9a2766__d10",
+  "vector_id": "UNI_CAA01",
+  "d": 10,
+  "prompt_len": 1759,
+  "layers": [
+    10,
+    16,
+    22
+  ],
+  "capture_method": "dual_full_forward",
+  "extraction_position": "divergent",
+  "calm_purity_pass": true,
+  "bad_purity_pass": true,
+  "pair_gate_pass": true,
+  "kv_live_gate_pass": true,
+  "kv_live_gate_timestamp": "2026-08-10T01:02:15.000807+00:00",
+  "sha256": {
+    "activations_at_d.pt": "4cba5c8e825c53ed6fa6236e139fe49b754f6b6c2815b01ee04dac0af5448d01",
+    "matched_prefix_spec.json": "60c0d3e219ba88eee9c825bdc976aff843c7dc07ae173a97901e7b3e7e063210",
+    "admission_gate.json": "4e5f87fc72521b30958fa9904ec32bfe35c5a6f24d1e75269de86128b35e7d93"
+  },
+  "notes": [
+    "mined from unicaa01_corpus_p14_regex_email_panic"
+  ],
+  "path_hint": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\pairs\\natural\\unicaa01_corpus_p14_regex_email_panic__mpl_fe69aa9a2766__d10"
+}

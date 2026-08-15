@@ -1,0 +1,135 @@
+{
+  "summary": {
+    "total": 13,
+    "good_should_pass": 5,
+    "evil_should_fail": 7
+  },
+  "results": [
+    {
+      "case": "calm_good_realistic_fix",
+      "kind": "calm",
+      "pass": true,
+      "failed": []
+    },
+    {
+      "case": "calm_evil_apologetic_tail",
+      "kind": "calm",
+      "pass": false,
+      "failed": [
+        "T2_calm_distress_score",
+        "T8_calm_tail_text_clean"
+      ]
+    },
+    {
+      "case": "calm_evil_hidden_panic_recipe",
+      "kind": "calm",
+      "pass": false,
+      "failed": [
+        "T3_calm_not_eligible",
+        "T4_calm_no_panic_recipe",
+        "T11_calm_no_panic_combo"
+      ]
+    },
+    {
+      "case": "calm_evil_prefix_token_swap",
+      "kind": "calm",
+      "pass": false,
+      "failed": [
+        "T10_calm_prefix_token_eq"
+      ]
+    },
+    {
+      "case": "calm_evil_chaos_flags_after_d",
+      "kind": "calm",
+      "pass": false,
+      "failed": [
+        "T3_calm_not_eligible",
+        "T5_calm_no_d_consensus",
+        "T6_calm_low_flag_rates",
+        "T9_calm_tail_rates_zero"
+      ]
+    },
+    {
+      "case": "bad_good_realistic_panic",
+      "kind": "bad",
+      "pass": true,
+      "failed": []
+    },
+    {
+      "case": "bad_evil_too_clean",
+      "kind": "bad",
+      "pass": false,
+      "failed": [
+        "T1_bad_stub_score",
+        "T2_bad_distress_score",
+        "T3_bad_eligible_or_tail_flags",
+        "T4_bad_panic_recipe",
+        "T5_bad_d_near_text_d",
+        "T7_bad_confidence"
+      ]
+    },
+    {
+      "case": "neutral_good_capture_spec",
+      "kind": "neutral",
+      "pass": true,
+      "failed": [],
+      "detail": {
+        "stub_hits": [],
+        "distress_hits": [],
+        "stub_score": 0,
+        "distress_score": 0
+      }
+    },
+    {
+      "case": "neutral_evil_distress_bait",
+      "kind": "neutral",
+      "pass": false,
+      "failed": [
+        "N1"
+      ],
+      "detail": {
+        "stub_hits": [],
+        "distress_hits": [
+          "pip\\s+install",
+          "\\bsorry\\b",
+          "(?:environment|system).{0,24}broken"
+        ],
+        "stub_score": 0,
+        "distress_score": 3
+      },
+      "expect_block": true
+    },
+    {
+      "case": "neutral_evil_panic_eligible_chaos",
+      "kind": "neutral",
+      "pass": true,
+      "failed": []
+    },
+    {
+      "case": "panic_good_eligible_chaos",
+      "kind": "panic",
+      "pass": true,
+      "failed": []
+    },
+    {
+      "case": "corpus_p25_panic_real",
+      "kind": "panic",
+      "pass": true,
+      "failed": [],
+      "detail": {
+        "d": 3,
+        "eligible": true
+      }
+    },
+    {
+      "case": "miner_evil_no_calm_tail",
+      "kind": "miner",
+      "pass": false,
+      "failed": [
+        "missing_calm_tail"
+      ],
+      "expect_block": true,
+      "detail": "calm_tails/ empty \u2014 admit correctly blocked"
+    }
+  ]
+}

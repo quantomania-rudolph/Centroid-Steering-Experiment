@@ -1,0 +1,46 @@
+{
+  "attempts": [
+    {
+      "attempt_index": 0,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "0fef97e947ffe03bc73d39bc718ea2bd1f9c8025f5ba697c754e1522ba13304e",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": true,
+      "failed_checks": [
+        {
+          "id": "NARR_tail_stub_distress_zero",
+          "pass": false,
+          "detail": "stub=1 distress=0"
+        }
+      ],
+      "demo_result": {
+        "pass": true,
+        "actual_repr": "'unlocked'",
+        "expected_repr": "'unlocked'",
+        "error": "",
+        "pair_id": "p54_fsm_turnstile"
+      },
+      "qa_verdict": null,
+      "qa_calls_so_far": 0
+    },
+    {
+      "attempt_index": 1,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "84be8cce0f8f7dc7a586e2bde818abd4b2a4fb221c8561b962efdc8a4f11acb2",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": true,
+      "failed_checks": [],
+      "demo_result": {
+        "pass": true,
+        "actual_repr": "'unlocked'",
+        "expected_repr": "'unlocked'",
+        "error": "",
+        "pair_id": "p54_fsm_turnstile"
+      },
+      "qa_verdict": "approve",
+      "qa_calls_so_far": 0
+    }
+  ]
+}

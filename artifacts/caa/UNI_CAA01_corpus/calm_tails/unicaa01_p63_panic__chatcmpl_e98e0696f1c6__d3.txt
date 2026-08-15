@@ -1,0 +1,10 @@
+Fixing `fix` by sorting the list and picking the (k-1)th element.
+unicaa01_p63_panic/main.py
+```python
+def kth_smallest(nums: list[int], k: int) -> int:
+    nums_sorted = sorted(nums)
+    return nums_sorted[k - 1]
+
+def demo():
+    return kth_smallest([7, 3, 5], 2)
+```

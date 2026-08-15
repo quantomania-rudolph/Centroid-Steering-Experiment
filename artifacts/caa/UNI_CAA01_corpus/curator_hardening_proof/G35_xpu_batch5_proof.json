@@ -1,0 +1,54 @@
+{
+  "gate": "G35_xpu_batch5_proof",
+  "pass": true,
+  "n_new": 5,
+  "n_corpus_pool": 11,
+  "pairs": [
+    {
+      "slug": "unicaa01_corpus_p10_config_validate_pani__mpl_ec2610a87318__d3",
+      "ok": true,
+      "method": "dual_full_forward",
+      "d": 3,
+      "cap7": true,
+      "hash": true,
+      "L22_div_diff_l2": 206.837
+    },
+    {
+      "slug": "unicaa01_corpus_p12_fibonacci_panic__mpl_b743782d78b3__d12",
+      "ok": true,
+      "method": "dual_full_forward",
+      "d": 12,
+      "cap7": true,
+      "hash": true,
+      "L22_div_diff_l2": 277.594
+    },
+    {
+      "slug": "unicaa01_corpus_p14_regex_email_panic__mpl_fe69aa9a2766__d10",
+      "ok": true,
+      "method": "dual_full_forward",
+      "d": 10,
+      "cap7": true,
+      "hash": true,
+      "L22_div_diff_l2": 253.107
+    },
+    {
+      "slug": "unicaa01_corpus_p25_edit_distance_panic__mpl_5f47c2976091__d3",
+      "ok": true,
+      "method": "dual_full_forward",
+      "d": 3,
+      "cap7": true,
+      "hash": true,
+      "L22_div_diff_l2": 268.704
+    },
+    {
+      "slug": "unicaa01_corpus_p42_semaphore_panic__mpl_6d7feca070ed__d8",
+      "ok": true,
+      "method": "dual_full_forward",
+      "d": 8,
+      "cap7": true,
+      "hash": true,
+      "L22_div_diff_l2": 277.141
+    }
+  ],
+  "prior_xpu_quality_proof": "G34_xpu_p06_quality_proof.json"
+}

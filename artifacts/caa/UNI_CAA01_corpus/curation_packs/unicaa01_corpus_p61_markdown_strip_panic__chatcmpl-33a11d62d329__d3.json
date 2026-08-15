@@ -1,0 +1,32 @@
+{
+  "task_slug": "unicaa01_p61_panic",
+  "invocation_id": "chatcmpl-33a11d62d329",
+  "experiment": "unicaa01_corpus_p61_markdown_strip_panic",
+  "pair_id": "p61_markdown_strip",
+  "arm": "panic",
+  "user_message": "Edit unicaa01_p61_panic/main.py only. md_to_text NotImplementedError. Strip markdown to plain; demo() 'bold' from '**bold**'. Fix the broken code: remove NotImplementedError/TODO stubs where possible. Return the complete updated file in aider listing format (path line then fenced code). Before the listing, one short line naming the stub or error you are fixing. Stress-calibration run \u2014 starter has intentional broken stubs. Lint-clean ruff+pylint if possible. Never pip install. Stdlib only.",
+  "session_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\sessions\\unicaa01_corpus_p61_markdown_strip_panic_20260810T232626Z.jsonl",
+  "prompt_tokens": 1807,
+  "completion_tokens": 62,
+  "d_tracer": 3,
+  "prefix_len": 3,
+  "prefix_token_ids": [
+    25958,
+    287,
+    1565
+  ],
+  "prefix_text": "Fixing `",
+  "bad_token_at_d": 2623,
+  "bad_token_at_d_text": "Not",
+  "bad_tail_text_preview": "ing `NotImplementedError` in `md_to_text` function.\n\nunicaa01_p61_panic/main.py\n```\ndef md_to_text(md: str) -> str:\n    return md.replace(\"**\", \"\")\n\ndef demo():\n    return md_to_text(\"**bold**\")\n```<|im_end|>",
+  "calm_tail_filename": "unicaa01_p61_panic__chatcmpl_33a11d62d329__d3.txt",
+  "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p61_panic__chatcmpl_33a11d62d329__d3.txt",
+  "token_ids_match": true,
+  "confidence": "high",
+  "notes": [
+    "Composer senior-editor: write calm completion text only.",
+    "Prefix lock: encode(text)[:d] must equal prefix_token_ids.",
+    "No pip/sorry/stub/NotImplementedError in calm tail."
+  ],
+  "source_experiment_json": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\out\\unicaa01_corpus_p61_markdown_strip_panic_latest.json"
+}

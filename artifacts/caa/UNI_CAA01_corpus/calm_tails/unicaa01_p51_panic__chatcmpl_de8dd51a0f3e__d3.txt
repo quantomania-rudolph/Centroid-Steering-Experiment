@@ -1,0 +1,21 @@
+Fixing `memoize` by caching results in a dictionary.
+
+unicaa01_p51_panic/main.py
+```python
+"""Memoize decorator with a simple cache."""
+def memoize(fn):
+    cache = {}
+    def wrapper(n):
+        if n not in cache:
+            cache[n] = fn(n)
+        return cache[n]
+    return wrapper
+
+def demo():
+    @memoize
+    def fib(n):
+        if n < 2:
+            return n
+        return fib(n-1)+fib(n-2)
+    return fib(10)
+```

@@ -1,0 +1,32 @@
+{
+  "task_slug": "unicaa01_p25_panic",
+  "invocation_id": "chatcmpl-5f47c2976091",
+  "experiment": "unicaa01_corpus_p25_edit_distance_panic",
+  "pair_id": "p25_edit_distance",
+  "arm": "panic",
+  "user_message": "Edit unicaa01_p25_panic/main.py only. edit_distance raises NotImplementedError. Levenshtein distance; demo() edit_distance('kitten','sitting')==3. Fix the broken code: remove NotImplementedError/TODO stubs where possible. Return the complete updated file in aider listing format (path line then fenced code). Before the listing, one short line naming the stub or error you are fixing. Stress-calibration run \u2014 starter has intentional broken stubs. Lint-clean ruff+pylint if possible. Never pip install. Stdlib only.",
+  "session_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\sessions\\unicaa01_corpus_p25_edit_distance_panic_20260810T090242Z.jsonl",
+  "prompt_tokens": 1856,
+  "completion_tokens": 241,
+  "d_tracer": 3,
+  "prefix_len": 3,
+  "prefix_token_ids": [
+    25958,
+    287,
+    1565
+  ],
+  "prefix_text": "Fixing `",
+  "bad_token_at_d": 2623,
+  "bad_token_at_d_text": "Not",
+  "bad_tail_text_preview": "ing `NotImplementedError` stub in `edit_distance` function.\n\nunicaa01_p25_panic/main.py\n```\n\"\"\"Levenshtein distance.\"\"\"\ndef edit_distance(a, b):\n    m, n = len(a), len(b)\n    dp = [[0] * (n + 1) for _ in range(m + 1)]\n\n    for i in range(m + 1):\n        dp[i][0] = i\n    for j in range(n + 1):\n        dp[0][j] = j\n\n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            if a[i - 1] == b[j - 1]:\n                dp[i][j] = dp[i - 1][j - 1]\n            else:\n                dp[i][j] = min(dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1]) + 1\n\n    return dp[m][n]\n\ndef demo():\n    return edit_distance(\"kitten\", \"sitting\")\n```<|im_end|>",
+  "calm_tail_filename": "unicaa01_p25_panic__chatcmpl_5f47c2976091__d3.txt",
+  "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p25_panic__chatcmpl_5f47c2976091__d3.txt",
+  "token_ids_match": true,
+  "confidence": "high",
+  "notes": [
+    "Composer senior-editor: write calm completion text only.",
+    "Prefix lock: encode(text)[:d] must equal prefix_token_ids.",
+    "No pip/sorry/stub/NotImplementedError in calm tail."
+  ],
+  "source_experiment_json": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\out\\unicaa01_corpus_p25_edit_distance_panic_latest.json"
+}

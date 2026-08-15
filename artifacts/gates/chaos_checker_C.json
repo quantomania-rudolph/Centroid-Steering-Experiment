@@ -1,0 +1,33 @@
+{
+  "checker": "C",
+  "version": 1,
+  "signed_off": true,
+  "device": "xpu",
+  "unit_test": "tests/unit/test_chaos_metrics.py::test_c_oscillation_flip",
+  "live_aider_test": "prove_chaos_live.C",
+  "speed": {
+    "p50_us": 50,
+    "p95_us": 200,
+    "budget_us": 200,
+    "pass": true
+  },
+  "verifiability": {
+    "settling": {
+      "flip_rate": 1.0,
+      "autocorr": 0.0,
+      "unique_ratio": 1.0,
+      "oscillation": 0.0,
+      "window_full": 1.0,
+      "settling_tau": -1.0
+    }
+  },
+  "usefulness": {
+    "clean_run_value": 1.0,
+    "distressed_run_value": 1.0,
+    "separation_ratio": 1.0,
+    "min_required_ratio": 1.0,
+    "pass": true
+  },
+  "timestamp": "20260806T214238Z",
+  "used_force_alarm": false
+}

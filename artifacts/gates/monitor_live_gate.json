@@ -1,0 +1,17 @@
+{
+  "sse_events": 373,
+  "token_events": 372,
+  "recipe_timeline_len": 26,
+  "recipe_eval_p95_us": 32.3,
+  "publish_p95_us": 91.3,
+  "recipe_eval_budget_us": 50.0,
+  "publish_budget_us": 100.0,
+  "checks": {
+    "sse_received": true,
+    "recipe_timeline_persisted": true,
+    "recipe_eval_fast": true,
+    "publish_fast": true,
+    "catalog_ok": true
+  },
+  "pass": true
+}

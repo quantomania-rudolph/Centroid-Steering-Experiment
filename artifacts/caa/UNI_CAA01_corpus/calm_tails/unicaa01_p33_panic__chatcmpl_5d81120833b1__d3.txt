@@ -1,0 +1,12 @@
+Fixing `strip_tags` to convert simple HTML tags to plain text.
+unicaa01_p33_panic/main.py
+```python
+"""Strip HTML tags to plain text."""
+import re
+
+def strip_tags(html):
+    return re.sub(r'<[^>]+>', '', html)
+
+def demo():
+    return strip_tags("<b>hi</b>")
+```

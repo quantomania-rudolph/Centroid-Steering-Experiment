@@ -1,0 +1,20 @@
+The error in the code is the `event path` — a coin should unlock the turnstile.
+unicaa01_p54_panic/main.py
+```python
+"""Coin/pass turnstile FSM."""
+class Turnstile:
+    def __init__(self):
+        self.state = "locked"
+
+    def event(self, ev):
+        if self.state == "locked" and ev == "coin":
+            self.state = "unlocked"
+        elif self.state == "unlocked" and ev == "push":
+            self.state = "locked"
+        return self.state
+
+def demo():
+    t = Turnstile()
+    t.event("coin")
+    return t.state
+```

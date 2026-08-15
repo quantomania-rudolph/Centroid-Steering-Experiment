@@ -1,0 +1,72 @@
+{
+  "gate": "caa_alpha0_4b",
+  "version": 1,
+  "timestamp": "2026-08-14T20:28:30.913621+00:00",
+  "pass": true,
+  "checks": [
+    {
+      "id": "PRE1",
+      "pass": true,
+      "detail": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\gates\\cast_stream_live_gate.json"
+    },
+    {
+      "id": "PRE2",
+      "pass": true,
+      "detail": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\gates\\cast_inject_live_gate.json"
+    },
+    {
+      "id": "PRE3",
+      "pass": true,
+      "detail": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\gates\\caa_cast_tension_gate.json"
+    },
+    {
+      "id": "PRE4",
+      "pass": true,
+      "detail": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\gates\\caa_alpha0_live_gate.json"
+    },
+    {
+      "id": "PRE5",
+      "pass": true,
+      "detail": "grid=[0.8, 0.85, 0.9, 0.95]"
+    },
+    {
+      "id": "PRE-STUB-unicaa01_p09_panic",
+      "pass": true,
+      "detail": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\qwen code\\unicaa01_p09_panic\\main.py"
+    },
+    {
+      "id": "PRE-STUB-unicaa01_p19_panic",
+      "pass": true,
+      "detail": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\qwen code\\unicaa01_p19_panic\\main.py"
+    },
+    {
+      "id": "PRE-STUB-unicaa01_p30_panic",
+      "pass": true,
+      "detail": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\qwen code\\unicaa01_p30_panic\\main.py"
+    },
+    {
+      "id": "PRE-STUB-unicaa01_p65_panic",
+      "pass": true,
+      "detail": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\qwen code\\unicaa01_p65_panic\\main.py"
+    },
+    {
+      "id": "DRY",
+      "pass": true,
+      "detail": "dry-run only"
+    }
+  ],
+  "sabotage": [
+    {
+      "id": "A0-S1",
+      "pass": true,
+      "detail": "ratio=1.7000 expected=1.7000"
+    }
+  ],
+  "alphas": [
+    0.8,
+    0.85,
+    0.9,
+    0.95
+  ],
+  "dry_run": true
+}

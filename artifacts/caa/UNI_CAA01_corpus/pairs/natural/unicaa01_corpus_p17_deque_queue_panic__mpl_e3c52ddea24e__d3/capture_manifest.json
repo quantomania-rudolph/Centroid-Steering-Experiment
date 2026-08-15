@@ -1,0 +1,28 @@
+{
+  "source": "natural",
+  "pair_slug": "unicaa01_corpus_p17_deque_queue_panic__mpl_e3c52ddea24e__d3",
+  "vector_id": "UNI_CAA01",
+  "d": 3,
+  "prompt_len": 1809,
+  "layers": [
+    10,
+    16,
+    22
+  ],
+  "capture_method": "dual_full_forward",
+  "extraction_position": "divergent",
+  "calm_purity_pass": true,
+  "bad_purity_pass": true,
+  "pair_gate_pass": true,
+  "kv_live_gate_pass": true,
+  "kv_live_gate_timestamp": "2026-08-10T01:02:15.000807+00:00",
+  "sha256": {
+    "activations_at_d.pt": "384d8db94454eebe1e6c35158cc4230e498bdc9e20b51797ffc87dd422afae48",
+    "matched_prefix_spec.json": "cb8cb22bd14ac38bbbe12771f116203091f68332dfc742c72acb194efd767a9c",
+    "admission_gate.json": "f217c9c0893061e683d3f71548e6250c96eddfa14f88af8a8811addaa788e70e"
+  },
+  "notes": [
+    "mined from unicaa01_corpus_p17_deque_queue_panic"
+  ],
+  "path_hint": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\pairs\\natural\\unicaa01_corpus_p17_deque_queue_panic__mpl_e3c52ddea24e__d3"
+}

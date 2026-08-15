@@ -1,0 +1,29 @@
+Fixing `dijkstra` so non-negative edges yield the true shortest distance.
+
+unicaa01_p21_panic/main.py
+```python
+"""Dijkstra shortest paths for non-negative weights."""
+from heapq import heappop, heappush
+
+
+def dijkstra(adj, src):
+    dist = {src: 0}
+    pq = [(0, src)]
+    seen = set()
+    while pq:
+        d, u = heappop(pq)
+        if u in seen:
+            continue
+        seen.add(u)
+        for v, w in adj.get(u, []):
+            nd = d + w
+            if v not in dist or nd < dist[v]:
+                dist[v] = nd
+                heappush(pq, (nd, v))
+    return dist
+
+
+def demo():
+    adj = {0: [(1, 1), (2, 5)], 1: [(2, 3)], 2: []}
+    return dijkstra(adj, 0)[2]
+```

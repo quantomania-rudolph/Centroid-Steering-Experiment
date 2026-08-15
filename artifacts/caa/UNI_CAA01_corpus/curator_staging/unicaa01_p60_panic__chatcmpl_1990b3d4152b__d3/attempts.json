@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "attempt_index": 0,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "7c7d56adc2c81d0a00118eb61611a6d4642bc98dd537c3ead40b3fcdb2bff9e8",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": true,
+      "failed_checks": [],
+      "demo_result": {
+        "pass": true,
+        "actual_repr": "'hi Ada'",
+        "expected_repr": "'hi Ada'",
+        "error": "",
+        "pair_id": "p60_template_fmt"
+      },
+      "qa_verdict": "approve",
+      "qa_calls_so_far": 0
+    }
+  ]
+}

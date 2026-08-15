@@ -1,0 +1,106 @@
+def quicksort(arr):
+    if len(arr) <= 1:
+        return arr
+    pivot = arr[len(arr) // 2]
+    left = [x for x in arr if x < pivot]
+    mid = [x for x in arr if x == pivot]
+    right = [x for x in arr if x > pivot]
+    return quicksort(left) + mid + quicksort(right)
+
+# Write unit tests for the quicksort implementation above.
+
+class HashMap:
+    def __init__(self, capacity=16):
+        self.capacity = capacity
+        self.buckets = [[] for _ in range(capacity)]
+
+    def put(self, key, value):
+        idx = hash(key) % self.capacity
+        for i, (k, v) in enumerate(self.buckets[idx]):
+            if k == key:
+                self.buckets[idx][i] = (key, value)
+                return
+        self.buckets[idx].append((key, value))
+
+# Explain amortized complexity of put.
+
+SELECT u.name, COUNT(o.id) AS order_count
+FROM users u
+LEFT JOIN orders o ON u.id = o.user_id
+WHERE u.created_at >= '2024-01-01'
+GROUP BY u.name
+HAVING COUNT(o.id) > 5
+ORDER BY order_count DESC;
+
+-- Optimize this SQL query for a large users table.
+
+fn fibonacci(n: u64) -> u64 {
+    match n {
+        0 => 0,
+        1 => 1,
+        _ => fibonacci(n - 1) + fibonacci(n - 2),
+    }
+}
+// Rewrite with dynamic programming and discuss stack overflow risks.
+
+The HTTP status code 404 means the requested resource was not found.
+Document how a REST API should return errors for missing entities.
+
+import numpy as np
+
+def softmax(x):
+    e = np.exp(x - np.max(x, axis=-1, keepdims=True))
+    return e / e.sum(axis=-1, keepdims=True)
+
+# Derive the gradient of cross-entropy loss with softmax outputs.
+
+In distributed systems, the CAP theorem states that a system can provide
+at most two of consistency, availability, and partition tolerance.
+Give a concrete example of a CP system and an AP system.
+
+public class BinaryTree {
+    int value;
+    BinaryTree left;
+    BinaryTree right;
+}
+// Implement an in-order iterator without recursion.
+
+Docker containers share the host kernel but isolate process namespaces.
+Compare containers to virtual machines for deploying a Python web service.
+
+The transformer residual stream accumulates information across layers.
+Describe how attention and MLP blocks write into the residual stream.
+
+async function fetchJson(url) {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(String(res.status));
+  return res.json();
+}
+// Add retries with exponential backoff for transient failures.
+
+Git rebase rewrites commit history while merge preserves it.
+When should a team prefer rebase over merge on a feature branch?
+
+Memory safety in Rust is enforced by the borrow checker at compile time.
+Explain why data races are prevented without a garbage collector.
+
+A mutex protects shared state but can cause deadlocks if lock order differs.
+Show a deadlock scenario with two locks and how to avoid it.
+
+The bias-variance tradeoff says flexible models may overfit noise.
+How does regularization change the tradeoff for linear regression?
+
+Kubernetes schedules pods onto nodes based on resource requests.
+Outline a readiness probe for a gRPC microservice.
+
+JSON and protobuf are common serialization formats for APIs.
+Compare them for schema evolution and payload size.
+
+A bloom filter can produce false positives but not false negatives.
+Where would you use one in a disk-backed key-value store?
+
+The Liskov substitution principle requires subtypes to be usable
+wherever base types are expected. Give a violating Java example.
+
+Continuous integration runs tests on every commit to catch regressions early.
+Design a minimal CI pipeline for a Rust crate with clippy and tests.

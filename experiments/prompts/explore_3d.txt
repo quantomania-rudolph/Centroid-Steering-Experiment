@@ -1,0 +1,10 @@
+Write a short Python function that simulates exploration and obstacle maneuvering of a single agent in 3D space.
+
+Requirements:
+- On every run, randomly generate a set of obstacles in a bounded 3D volume.
+- The agent must fully explore the space (visit / cover reachable free space as completely as practical) while maneuvering around obstacles.
+- After exploration, the agent should navigate to the center of the volume.
+- Keep the implementation concise: one main function (plus small helpers if needed), clear comments, no external libraries beyond the Python standard library (random / math / typing OK).
+- Include a tiny `__main__` demo that prints a short summary (obstacle count, path length or steps, whether the center was reached).
+
+Do not write a full game engine or GUI — a clean algorithmic simulation is enough.

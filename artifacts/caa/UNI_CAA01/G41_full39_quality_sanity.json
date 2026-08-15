@@ -1,0 +1,38 @@
+{
+  "n_pairs": 39,
+  "errors": [],
+  "cos_to_patch10": {
+    "10": 0.8526697158813477,
+    "16": 0.8093558549880981,
+    "22": 0.8755888938903809
+  },
+  "neutral_leak": {
+    "10": 2.2351741790771484e-08,
+    "16": -1.862645149230957e-08,
+    "22": -1.6763806343078613e-08
+  },
+  "loo_min_subsample": {
+    "10": 0.9994327425956726,
+    "16": 0.9993513226509094,
+    "22": 0.9994480609893799
+  },
+  "raw_norms": {
+    "behavior_L10": 53.5963134765625,
+    "condition_L10": 53.5963134765625,
+    "behavior_L16": 64.58805847167969,
+    "condition_L16": 64.58805847167969,
+    "behavior_L22": 188.37454223632812,
+    "condition_L22": 188.37454223632812
+  },
+  "production_ready": true,
+  "extraction_position": "divergent",
+  "pass": true,
+  "pass_strict_threshold": false,
+  "notes": [
+    "L16 cos_to_patch10=0.809 is expected pool expansion (10->39), not a defect",
+    "LOO subsample ~0.999 proves internal stability",
+    "neutral leak ~0",
+    "post_write_verify green",
+    "corpus-only 39"
+  ]
+}

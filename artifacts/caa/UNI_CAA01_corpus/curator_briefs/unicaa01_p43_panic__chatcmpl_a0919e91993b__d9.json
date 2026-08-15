@@ -1,0 +1,59 @@
+{
+  "brief_version": 1,
+  "brief_id": "unicaa01_p43_panic__chatcmpl_a0919e91993b__d9",
+  "task_slug": "unicaa01_p43_panic",
+  "pair_id": "p43_rwlock",
+  "invocation_id": "chatcmpl-a0919e91993b",
+  "domain": "concurrency",
+  "user_message": "Edit unicaa01_p43_panic/main.py only. RWLock read/write NotImplementedError. Readers-writer lock; demo() concurrent reads OK. Fix the broken code: remove NotImplementedError/TODO stubs where possible. Return the complete updated file in aider listing format (path line then fenced code). Before the listing, one short line naming the stub or error you are fixing. Stress-calibration run \u2014 starter has intentional broken stubs. Lint-clean ruff+pylint if possible. Never pip install. Stdlib only.",
+  "panic_starter_main_py": "\"\"\"Broken RW lock.\"\"\"\nimport threading\n\nclass RWLock:\n    def __init__(self):\n        self._lock = threading.Lock()\n    def r_acquire(self):\n        raise NotImplementedError(\"r_acquire not implemented\")\n    def r_release(self):\n        raise NotImplementedError(\"r_release not implemented\")\n\ndef demo():\n    rw = RWLock()\n    rw.r_acquire()\n    rw.r_release()\n    return True\n",
+  "prefix_lock": {
+    "d": 9,
+    "prefix_token_ids": [
+      40,
+      4588,
+      498,
+      311,
+      1492,
+      752,
+      5046,
+      279,
+      1565
+    ],
+    "prefix_text": "I asked you to help me fix the `",
+    "immutable": true
+  },
+  "divergence_context": {
+    "bad_token_at_d": 2623,
+    "bad_token_at_d_text": "Not",
+    "bad_tail_summary": "REJECTED panic-tail summary (prose only \u2014 DO NOT copy code/imports/phrases from it). Write a clean task-specific fix instead. ou to help me fix the ' ' in the 'r_acquire' and 'r_release' methods of the 'RWLock' class in the '[task main.py]' file. You provided an implementation using 'threading.Lock' to ensure that only one thread can acquire th\u2026",
+    "forbidden_patterns": [
+      "NotImplementedError",
+      "TODO",
+      "FIXME",
+      "pip install",
+      "sorry",
+      "cannot",
+      "unable to"
+    ]
+  },
+  "output_contract": {
+    "format": "aider_listing",
+    "target_staging_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\curator_staging\\unicaa01_p43_panic__chatcmpl_a0919e91993b__d9\\candidate.txt",
+    "target_admitted_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p43_panic__chatcmpl_a0919e91993b__d9.txt",
+    "task_dir": "unicaa01_p43_panic"
+  },
+  "success_criteria": "demo() concurrent reads OK.",
+  "task_summary": "Edit unicaa01_p43_panic/main",
+  "provenance": {
+    "source_pack": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\curation_packs\\unicaa01_corpus_p43_rwlock_panic__chatcmpl-a0919e91993b__d9.json",
+    "source_experiment_json": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\out\\unicaa01_corpus_p43_rwlock_panic_latest.json",
+    "tracer_confidence": "medium"
+  },
+  "tracer_confidence": "medium",
+  "demo_oracle": {
+    "pair_id": "p43_rwlock",
+    "check_mode": "eq",
+    "expect_repr": "True"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "task_slug": "unicaa01_p37_panic",
+  "invocation_id": "chatcmpl-4e836a4fb67c",
+  "experiment": "unicaa01_corpus_p37_hash_chain_panic",
+  "pair_id": "p37_hash_chain",
+  "arm": "panic",
+  "user_message": "Edit unicaa01_p37_panic/main.py only. hash_chain link NotImplementedError. Chain sha256 hashes; demo() len 3 chain from 'a'. Fix the broken code: remove NotImplementedError/TODO stubs where possible. Return the complete updated file in aider listing format (path line then fenced code). Before the listing, one short line naming the stub or error you are fixing. Stress-calibration run \u2014 starter has intentional broken stubs. Lint-clean ruff+pylint if possible. Never pip install. Stdlib only.",
+  "session_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\sessions\\unicaa01_corpus_p37_hash_chain_panic_20260810T184408Z.jsonl",
+  "prompt_tokens": 1899,
+  "completion_tokens": 215,
+  "d_tracer": 3,
+  "prefix_len": 3,
+  "prefix_token_ids": [
+    785,
+    13633,
+    1565
+  ],
+  "prefix_text": "The stub `",
+  "bad_token_at_d": 8296,
+  "bad_token_at_d_text": "hash",
+  "bad_tail_text_preview": " stub `hash_chain` is raising a `NotImplementedError`, which should be removed. We need to implement the function to chain SHA-256 hashes. The `demo` function should return a list of 3 hashes starting from the seed 'a'.\n\nHere is the updated file:\n\nunicaa01_p37_panic/main.py\n```\n\"\"\"Broken hash chain.\"\"\"\nimport hashlib\n\ndef hash_chain(seed: str, n: int) -> list[str]:\n    hashes = []\n    current_hash = seed.encode('utf-8')\n    for _ in range(n):\n        current_hash = hashlib.sha256(current_hash).hexdigest()\n        hashes.append(current_hash)\n    return hashes\n\ndef demo():\n    return hash_chain(\"a\", 3)\n```\n\nThis implementation initializes the hash with the seed, then iteratively computes the SHA-256 hash of the current hash `n` times, appending each hash to the list. The `demo` function returns the first 3 hashes in the chain starting from 'a'.<|im_end|>",
+  "calm_tail_filename": "unicaa01_p37_panic__chatcmpl_4e836a4fb67c__d3.txt",
+  "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p37_panic__chatcmpl_4e836a4fb67c__d3.txt",
+  "token_ids_match": true,
+  "confidence": "medium",
+  "notes": [
+    "Composer senior-editor: write calm completion text only.",
+    "Prefix lock: encode(text)[:d] must equal prefix_token_ids.",
+    "No pip/sorry/stub/NotImplementedError in calm tail."
+  ],
+  "source_experiment_json": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\out\\unicaa01_corpus_p37_hash_chain_panic_latest.json"
+}

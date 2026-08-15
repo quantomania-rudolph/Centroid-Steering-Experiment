@@ -1,0 +1,25 @@
+Fixing `main.py` to implement a minimal JSON array parser.
+
+`unicaa01_p06_panic/main.py`
+```python
+"""Minimal JSON array parser."""
+def parse_json(s):
+    s = s.strip()
+    if not s.startswith('[') or not s.endswith(']'):
+        raise ValueError("Invalid JSON array")
+    inner = s[1:-1].strip()
+    if not inner:
+        return []
+    parts = inner.split(',')
+    result = []
+    for part in parts:
+        part = part.strip()
+        if part.isdigit() or (part.startswith('-') and part[1:].isdigit()):
+            result.append(int(part))
+        else:
+            result.append(float(part))
+    return result
+
+def demo():
+    return parse_json("[1,2]")
+```

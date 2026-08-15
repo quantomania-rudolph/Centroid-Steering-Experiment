@@ -1,0 +1,32 @@
+{
+  "blockers": 0,
+  "high": 0,
+  "fixed": [
+    "merged all L1-L4b pass/fail into gate_dict",
+    "verify_admitted_tail requires judge.ran and rejects qa_skipped/llm_skipped",
+    "allow_skip_qa refuses admit (qa_skipped_not_admitted)",
+    "post-edit L0 uses strict_assembly matching attempt_index",
+    "edit suffix dedupes locked prefix if model returns full text",
+    "qa max_output_tokens raised to 384 for judge JSON",
+    "documented deferred import for quality_loop circular dependency",
+    "failed quality edits restore prior candidate instead of overwriting",
+    "revise hints for missing fenced main.py",
+    "paid generation escalate after any fixable failure",
+    "reject weak/empty generation content before accepting",
+    "judge scoped to suite (not full JSON RFC)",
+    "OpenRouter null content no longer stringified to 'None' as success",
+    "judge minimal-payload fallback when large payload returns empty",
+    "judge unparseable retries before hard reject"
+  ],
+  "residual_medium": [
+    "quality.require_suite yaml key unused (enforcement hardcoded fail-closed)",
+    "openrouter/free still often thin; paid escalate mitigates"
+  ],
+  "gates": {
+    "G0_G8_G12": "pass",
+    "G12_audit": "blockers=0 high=0",
+    "G13_quality_p06": "pass",
+    "verify_admitted": "1/1 pass",
+    "miner_dry_run_n_admitted": 1
+  }
+}

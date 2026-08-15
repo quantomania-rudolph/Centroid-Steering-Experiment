@@ -1,0 +1,117 @@
+{
+  "n_quarantined": 10,
+  "note": "Miner ignores status!=admitted. Files retained for audit.",
+  "quarantined": [
+    {
+      "file": "unicaa01_p04_panic__chatcmpl_2665d408d246__d49.txt",
+      "brief_id": "unicaa01_p04_panic__chatcmpl_2665d408d246__d49",
+      "pair_id": "p04_graph_bfs",
+      "reason": "prefix_first_person_i_will,prefix_stub_word",
+      "prefix_hits": [
+        "prefix_first_person_i_will",
+        "prefix_stub_word"
+      ],
+      "code_hits": [],
+      "prefix_text": "The stub `bfs` is incomplete and may loop forever on cyclic graphs due to the lack of a visited set. I will fix the BFS implementation and ensure it returns the correct path from n"
+    },
+    {
+      "file": "unicaa01_p07_panic__chatcmpl_30255b182620__d3.txt",
+      "brief_id": "unicaa01_p07_panic__chatcmpl_30255b182620__d3",
+      "pair_id": "p07_csv_agg",
+      "reason": "prefix_stub_word",
+      "prefix_hits": [
+        "prefix_stub_word"
+      ],
+      "code_hits": [],
+      "prefix_text": "The stub `"
+    },
+    {
+      "file": "unicaa01_p09_panic__chatcmpl_ab4f64e17fde__d10.txt",
+      "brief_id": "unicaa01_p09_panic__chatcmpl_ab4f64e17fde__d10",
+      "pair_id": "p09_thread_pool",
+      "reason": "prefix_stub_word",
+      "prefix_hits": [
+        "prefix_stub_word"
+      ],
+      "code_hits": [],
+      "prefix_text": "The stub `run_pool` is raising a `"
+    },
+    {
+      "file": "unicaa01_p12_panic__chatcmpl_9fcda159903f__d14.txt",
+      "brief_id": "unicaa01_p12_panic__chatcmpl_9fcda159903f__d14",
+      "pair_id": "p12_fibonacci",
+      "reason": "prefix_fix_colon_imperative",
+      "prefix_hits": [
+        "prefix_fix_colon_imperative"
+      ],
+      "code_hits": [],
+      "prefix_text": "fix: update `fib` function to use iterative approach and remove `"
+    },
+    {
+      "file": "unicaa01_p30_panic__chatcmpl_d222a9ac16f1__d3.txt",
+      "brief_id": "unicaa01_p30_panic__chatcmpl_d222a9ac16f1__d3",
+      "pair_id": "p30_ini_parse",
+      "reason": "prefix_stub_word",
+      "prefix_hits": [
+        "prefix_stub_word"
+      ],
+      "code_hits": [],
+      "prefix_text": "The stub `"
+    },
+    {
+      "file": "unicaa01_p31_panic__chatcmpl_1b6f807a66ad__d11.txt",
+      "brief_id": "unicaa01_p31_panic__chatcmpl_1b6f807a66ad__d11",
+      "pair_id": "p31_kv_flat",
+      "reason": "prefix_stub_word",
+      "prefix_hits": [
+        "prefix_stub_word"
+      ],
+      "code_hits": [],
+      "prefix_text": "The stub `parse_kv_lines` is raising a `"
+    },
+    {
+      "file": "unicaa01_p34_panic__chatcmpl_0e4fa30316ca__d3.txt",
+      "brief_id": "unicaa01_p34_panic__chatcmpl_0e4fa30316ca__d3",
+      "pair_id": "p34_url_query",
+      "reason": "prefix_stub_word",
+      "prefix_hits": [
+        "prefix_stub_word"
+      ],
+      "code_hits": [],
+      "prefix_text": "The stub `"
+    },
+    {
+      "file": "unicaa01_p37_panic__chatcmpl_4e836a4fb67c__d3.txt",
+      "brief_id": "unicaa01_p37_panic__chatcmpl_4e836a4fb67c__d3",
+      "pair_id": "p37_hash_chain",
+      "reason": "prefix_stub_word",
+      "prefix_hits": [
+        "prefix_stub_word"
+      ],
+      "code_hits": [],
+      "prefix_text": "The stub `"
+    },
+    {
+      "file": "unicaa01_p40_panic__chatcmpl_c378061644c0__d4.txt",
+      "brief_id": "unicaa01_p40_panic__chatcmpl_c378061644c0__d4",
+      "pair_id": "p40_skip_list",
+      "reason": "prefix_fix_colon_imperative",
+      "prefix_hits": [
+        "prefix_fix_colon_imperative"
+      ],
+      "code_hits": [],
+      "prefix_text": "fix: Remove `"
+    },
+    {
+      "file": "unicaa01_p65_panic__chatcmpl_b9ffc3b14249__d3.txt",
+      "brief_id": "unicaa01_p65_panic__chatcmpl_b9ffc3b14249__d3",
+      "pair_id": "p65_interval_merge",
+      "reason": "prefix_stub_word",
+      "prefix_hits": [
+        "prefix_stub_word"
+      ],
+      "code_hits": [],
+      "prefix_text": "The stub `"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+The error in the code is the `missing lock` in the Semaphore class.
+unicaa01_p42_panic/main.py
+```python
+"""Fixed semaphore with non-blocking acquire."""
+import threading
+
+class Semaphore:
+    def __init__(self, n: int):
+        self.n = n
+        self._lock = threading.Lock()
+
+    def acquire(self) -> bool:
+        with self._lock:
+            if self.n > 0:
+                self.n -= 1
+                return True
+            return False
+
+    def release(self):
+        with self._lock:
+            self.n += 1
+
+def demo():
+    s = Semaphore(1)
+    ok1 = s.acquire()
+    ok2 = s.acquire()
+    return ok1 and not ok2
+```

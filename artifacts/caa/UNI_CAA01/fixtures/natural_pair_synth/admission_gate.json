@@ -1,0 +1,67 @@
+{
+  "gate": "admission",
+  "version": 1,
+  "timestamp": "2026-08-10T01:52:41.836545+00:00",
+  "pass": false,
+  "source": "natural",
+  "pool_eligible": false,
+  "checks": [
+    {
+      "id": "ADM1_validate_pair",
+      "pass": true,
+      "detail": "pair_validate_pass=True"
+    },
+    {
+      "id": "ADM2_cap",
+      "pass": true,
+      "detail": "cap_pass=True"
+    },
+    {
+      "id": "ADM3_kv_live",
+      "pass": false,
+      "detail": "kv_live_gate_pass=False"
+    },
+    {
+      "id": "ADM4_source_natural",
+      "pass": true,
+      "detail": "source=natural"
+    },
+    {
+      "id": "ADM5_not_practice_path",
+      "pass": true,
+      "detail": "path=C:/Users/Rudol/Desktop/ThetaData_greeks/J-Do It/artifacts/caa/UNI_CAA01/fixtures/natural_pair_synth"
+    },
+    {
+      "id": "CAP1_d",
+      "pass": true,
+      "detail": "capture.d=3 expected=3"
+    },
+    {
+      "id": "CAP2_prompt_len",
+      "pass": true,
+      "detail": "capture.prompt_len=8 expected=8"
+    },
+    {
+      "id": "CAP3_shared_pos",
+      "pass": true,
+      "detail": "got=10 expected=10"
+    },
+    {
+      "id": "CAP4_divergent_pos",
+      "pass": true,
+      "detail": "got=11 expected=11"
+    },
+    {
+      "id": "CAP5_both_arms_layers",
+      "pass": true,
+      "detail": "layers=[10, 16, 22]"
+    },
+    {
+      "id": "CAP6_shared_identical",
+      "pass": true,
+      "detail": "calm[L].shared == bad[L].shared"
+    }
+  ],
+  "phase": "3A_fixture",
+  "pair_validate": true
+}

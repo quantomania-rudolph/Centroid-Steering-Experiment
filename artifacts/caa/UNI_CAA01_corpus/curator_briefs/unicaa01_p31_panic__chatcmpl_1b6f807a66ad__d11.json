@@ -1,0 +1,61 @@
+{
+  "brief_version": 1,
+  "brief_id": "unicaa01_p31_panic__chatcmpl_1b6f807a66ad__d11",
+  "task_slug": "unicaa01_p31_panic",
+  "pair_id": "p31_kv_flat",
+  "invocation_id": "chatcmpl-1b6f807a66ad",
+  "domain": "parsing",
+  "user_message": "Edit unicaa01_p31_panic/main.py only. parse_kv_lines NotImplementedError for duplicate keys. Parse k=v lines; demo() len==2 for sample. Fix the broken code: remove NotImplementedError/TODO stubs where possible. Return the complete updated file in aider listing format (path line then fenced code). Before the listing, one short line naming the stub or error you are fixing. Stress-calibration run \u2014 starter has intentional broken stubs. Lint-clean ruff+pylint if possible. Never pip install. Stdlib only.",
+  "panic_starter_main_py": "\"\"\"Broken KV.\"\"\"\ndef parse_kv_lines(text):\n    raise NotImplementedError(\"parse_kv_lines not implemented\")\n\ndef demo():\n    return len(parse_kv_lines(\"a=1\\nb=2\"))\n",
+  "prefix_lock": {
+    "d": 11,
+    "prefix_token_ids": [
+      785,
+      13633,
+      1565,
+      6400,
+      97066,
+      18323,
+      63,
+      374,
+      18545,
+      264,
+      1565
+    ],
+    "prefix_text": "The stub `parse_kv_lines` is raising a `",
+    "immutable": true
+  },
+  "divergence_context": {
+    "bad_token_at_d": 2623,
+    "bad_token_at_d_text": "Not",
+    "bad_tail_summary": "REJECTED panic-tail summary (prose only \u2014 DO NOT copy code/imports/phrases from it). Write a clean task-specific fix instead. arse_kv_lines' is raising a ' ', which indicates that the function is not yet implemented. To fix this, we need to implement the function to parse key-value pairs from a string and handle duplicate keys appropriately. He\u2026",
+    "forbidden_patterns": [
+      "NotImplementedError",
+      "TODO",
+      "FIXME",
+      "pip install",
+      "sorry",
+      "cannot",
+      "unable to"
+    ]
+  },
+  "output_contract": {
+    "format": "aider_listing",
+    "target_staging_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\curator_staging\\unicaa01_p31_panic__chatcmpl_1b6f807a66ad__d11\\candidate.txt",
+    "target_admitted_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p31_panic__chatcmpl_1b6f807a66ad__d11.txt",
+    "task_dir": "unicaa01_p31_panic"
+  },
+  "success_criteria": "demo() len==2 for sample.",
+  "task_summary": "Edit unicaa01_p31_panic/main",
+  "provenance": {
+    "source_pack": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\curation_packs\\unicaa01_corpus_p31_kv_flat_panic__chatcmpl-1b6f807a66ad__d11.json",
+    "source_experiment_json": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\out\\unicaa01_corpus_p31_kv_flat_panic_latest.json",
+    "tracer_confidence": "medium"
+  },
+  "tracer_confidence": "medium",
+  "demo_oracle": {
+    "pair_id": "p31_kv_flat",
+    "check_mode": "eq",
+    "expect_repr": "2"
+  }
+}

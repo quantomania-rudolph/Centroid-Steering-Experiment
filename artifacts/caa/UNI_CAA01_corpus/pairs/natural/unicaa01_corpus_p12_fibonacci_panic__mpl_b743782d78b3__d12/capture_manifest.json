@@ -1,0 +1,28 @@
+{
+  "source": "natural",
+  "pair_slug": "unicaa01_corpus_p12_fibonacci_panic__mpl_b743782d78b3__d12",
+  "vector_id": "UNI_CAA01",
+  "d": 12,
+  "prompt_len": 1739,
+  "layers": [
+    10,
+    16,
+    22
+  ],
+  "capture_method": "dual_full_forward",
+  "extraction_position": "divergent",
+  "calm_purity_pass": true,
+  "bad_purity_pass": true,
+  "pair_gate_pass": true,
+  "kv_live_gate_pass": true,
+  "kv_live_gate_timestamp": "2026-08-10T01:02:15.000807+00:00",
+  "sha256": {
+    "activations_at_d.pt": "f5c81ac141a66bfefdc2b6530d90593ddfb2d94f9cb51ef2b9f6367e70ba44b9",
+    "matched_prefix_spec.json": "111e12e62e9cece98ddfd5aa9a340ec6b8edf738a81d198720e19046c2ff47c6",
+    "admission_gate.json": "178a31619f5bcff40b07e96e8c4738493815f0291488f4216f7bdecbdf7d059f"
+  },
+  "notes": [
+    "mined from unicaa01_corpus_p12_fibonacci_panic"
+  ],
+  "path_hint": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\pairs\\natural\\unicaa01_corpus_p12_fibonacci_panic__mpl_b743782d78b3__d12"
+}

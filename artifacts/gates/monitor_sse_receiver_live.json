@@ -1,0 +1,31 @@
+{
+  "server": "http://127.0.0.1:8767",
+  "duration_s": 90.0,
+  "events_received": 384,
+  "validation_errors": 0,
+  "error_samples": [],
+  "recipes_seen": [
+    "A_UNCERTAIN",
+    "F_LENS"
+  ],
+  "seq_monotonic_violations": 0,
+  "inter_arrival_ms": {
+    "n": 383,
+    "p50": 0.01889999839477241,
+    "p95": 3.476300014881417,
+    "max": 31124.73010001122
+  },
+  "server_publish_us": {
+    "n": 128.0,
+    "p50_us": 32.0,
+    "p95_us": 77.5,
+    "max_us": 120.1
+  },
+  "server_recipe_eval_us": {
+    "n": 128.0,
+    "p50_us": 3.4,
+    "p95_us": 29.4,
+    "max_us": 44.3
+  },
+  "pass": true
+}

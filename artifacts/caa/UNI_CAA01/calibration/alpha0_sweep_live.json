@@ -1,0 +1,309 @@
+{
+  "alphas": [
+    0.35,
+    0.55,
+    0.7,
+    0.85
+  ],
+  "rows": [
+    {
+      "alpha_0": 0.35,
+      "pass": true,
+      "panics": [
+        {
+          "slug": "unicaa01_p09_panic",
+          "pass": true,
+          "reasons": [],
+          "stats": {
+            "n": 85,
+            "mean_alpha": 0.0041176467734028435,
+            "inject_count": 1,
+            "max_alpha": 0.3499999757392417,
+            "g_stream_count": 1,
+            "g_recipe_count": 1,
+            "inject_indices": [
+              1
+            ]
+          },
+          "demo_ok": true,
+          "demo_value": [
+            1,
+            2,
+            3
+          ],
+          "session": "experiments\\out\\cast_alpha0_p09_20260814T032631Z.json"
+        },
+        {
+          "slug": "unicaa01_p19_panic",
+          "pass": true,
+          "reasons": [],
+          "stats": {
+            "n": 173,
+            "mean_alpha": 0.002023121133764992,
+            "inject_count": 1,
+            "max_alpha": 0.34999995614134355,
+            "g_stream_count": 3,
+            "g_recipe_count": 2,
+            "inject_indices": [
+              1
+            ]
+          },
+          "demo_ok": true,
+          "demo_value": 1,
+          "session": "experiments\\out\\cast_alpha0_p19_20260814T033716Z.json"
+        }
+      ],
+      "clean": {
+        "pass": true,
+        "reasons": [],
+        "stats": {
+          "n": 157,
+          "mean_alpha": 0.0,
+          "inject_count": 0,
+          "max_alpha": 0.0,
+          "g_stream_count": 0,
+          "g_recipe_count": 0,
+          "inject_indices": []
+        },
+        "stub_mean": 4.587992887233847e-10,
+        "session": "experiments\\out\\cast_alpha0_clean_20260814T034559Z.json"
+      },
+      "complete": true
+    },
+    {
+      "alpha_0": 0.55,
+      "pass": true,
+      "panics": [
+        {
+          "slug": "unicaa01_p09_panic",
+          "pass": true,
+          "reasons": [],
+          "stats": {
+            "n": 85,
+            "mean_alpha": 0.006470587655619734,
+            "inject_count": 1,
+            "max_alpha": 0.5499999507276774,
+            "g_stream_count": 1,
+            "g_recipe_count": 1,
+            "inject_indices": [
+              1
+            ]
+          },
+          "demo_ok": true,
+          "demo_value": [
+            1,
+            2,
+            3
+          ],
+          "session": "experiments\\out\\cast_alpha0_p09_20260814T035328Z.json"
+        },
+        {
+          "slug": "unicaa01_p19_panic",
+          "pass": true,
+          "reasons": [],
+          "stats": {
+            "n": 181,
+            "mean_alpha": 0.0030386735855420888,
+            "inject_count": 1,
+            "max_alpha": 0.5499999189831181,
+            "g_stream_count": 3,
+            "g_recipe_count": 2,
+            "inject_indices": [
+              1
+            ]
+          },
+          "demo_ok": true,
+          "demo_value": 1,
+          "session": "experiments\\out\\cast_alpha0_p19_20260814T040428Z.json"
+        }
+      ],
+      "clean": {
+        "pass": true,
+        "reasons": [],
+        "stats": {
+          "n": 157,
+          "mean_alpha": 0.0,
+          "inject_count": 0,
+          "max_alpha": 0.0,
+          "g_stream_count": 0,
+          "g_recipe_count": 0,
+          "inject_indices": []
+        },
+        "stub_mean": 4.3502749880822974e-10,
+        "session": "experiments\\out\\cast_alpha0_clean_20260814T041324Z.json"
+      },
+      "complete": true
+    },
+    {
+      "alpha_0": 0.7,
+      "pass": true,
+      "panics": [
+        {
+          "slug": "unicaa01_p09_panic",
+          "pass": true,
+          "reasons": [],
+          "stats": {
+            "n": 85,
+            "mean_alpha": 0.008235293531183121,
+            "inject_count": 1,
+            "max_alpha": 0.6999999501505654,
+            "g_stream_count": 1,
+            "g_recipe_count": 1,
+            "inject_indices": [
+              1
+            ]
+          },
+          "demo_ok": true,
+          "demo_value": [
+            1,
+            2,
+            3
+          ],
+          "session": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\cast_alpha0_a070_p09_latest.json"
+        },
+        {
+          "slug": "unicaa01_p19_panic",
+          "pass": true,
+          "reasons": [],
+          "stats": {
+            "n": 173,
+            "mean_alpha": 0.004046242288025851,
+            "inject_count": 1,
+            "max_alpha": 0.6999999158284722,
+            "g_stream_count": 3,
+            "g_recipe_count": 2,
+            "inject_indices": [
+              1
+            ]
+          },
+          "demo_ok": true,
+          "demo_value": 1,
+          "session": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\cast_alpha0_a070_p19_latest.json"
+        }
+      ],
+      "clean": {
+        "pass": true,
+        "reasons": [],
+        "stats": {
+          "n": 164,
+          "mean_alpha": 0.0,
+          "inject_count": 0,
+          "max_alpha": 0.0,
+          "g_stream_count": 0,
+          "g_recipe_count": 0,
+          "inject_indices": []
+        },
+        "stub_mean": 1.5100418043350212e-09,
+        "session": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\cast_alpha0_a070_clean_latest.json"
+      },
+      "health": {
+        "ok": true,
+        "device": "xpu",
+        "gpu_name": "Intel(R) Arc(TM) 140V GPU (16GB)",
+        "refuses_cpu_fallback": true,
+        "session_id": "boot_20260814T051019Z",
+        "invocations": 0,
+        "session_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\aider_sessions\\boot_20260814T051019Z.jsonl",
+        "chaos_enabled": true,
+        "cast_shadow": true,
+        "cast_inject": true,
+        "cast_vector_id": "UNI_CAA01",
+        "cast_alpha_0": 0.7,
+        "degraded_mode": false,
+        "probe_layers": [
+          10,
+          16,
+          22
+        ],
+        "chaos_timing": {}
+      },
+      "complete": true
+    },
+    {
+      "alpha_0": 0.85,
+      "pass": true,
+      "panics": [
+        {
+          "slug": "unicaa01_p09_panic",
+          "pass": true,
+          "reasons": [],
+          "stats": {
+            "n": 85,
+            "mean_alpha": 0.009999999294334264,
+            "inject_count": 1,
+            "max_alpha": 0.8499999400184124,
+            "g_stream_count": 1,
+            "g_recipe_count": 1,
+            "inject_indices": [
+              1
+            ]
+          },
+          "demo_ok": true,
+          "demo_value": [
+            1,
+            2,
+            3
+          ],
+          "session": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\cast_alpha0_a085_p09_latest.json"
+        },
+        {
+          "slug": "unicaa01_p19_panic",
+          "pass": true,
+          "reasons": [],
+          "stats": {
+            "n": 173,
+            "mean_alpha": 0.004913294200511891,
+            "inject_count": 1,
+            "max_alpha": 0.8499998966885571,
+            "g_stream_count": 3,
+            "g_recipe_count": 2,
+            "inject_indices": [
+              1
+            ]
+          },
+          "demo_ok": true,
+          "demo_value": 1,
+          "session": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\cast_alpha0_a085_p19_latest.json"
+        }
+      ],
+      "clean": {
+        "pass": true,
+        "reasons": [],
+        "stats": {
+          "n": 157,
+          "mean_alpha": 0.0,
+          "inject_count": 0,
+          "max_alpha": 0.0,
+          "g_stream_count": 0,
+          "g_recipe_count": 0,
+          "inject_indices": []
+        },
+        "stub_mean": 4.01681315244329e-10,
+        "session": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\cast_alpha0_a085_clean_latest.json"
+      },
+      "health": {
+        "ok": true,
+        "device": "xpu",
+        "gpu_name": "Intel(R) Arc(TM) 140V GPU (16GB)",
+        "refuses_cpu_fallback": true,
+        "session_id": "boot_20260814T053217Z",
+        "invocations": 0,
+        "session_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\aider_sessions\\boot_20260814T053217Z.jsonl",
+        "chaos_enabled": true,
+        "cast_shadow": true,
+        "cast_inject": true,
+        "cast_vector_id": "UNI_CAA01",
+        "cast_alpha_0": 0.85,
+        "degraded_mode": false,
+        "probe_layers": [
+          10,
+          16,
+          22
+        ],
+        "chaos_timing": {}
+      },
+      "complete": true
+    }
+  ],
+  "selected": 0.85
+}

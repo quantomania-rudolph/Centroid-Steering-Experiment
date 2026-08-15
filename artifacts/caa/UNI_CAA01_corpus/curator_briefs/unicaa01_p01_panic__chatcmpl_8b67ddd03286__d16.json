@@ -1,0 +1,66 @@
+{
+  "brief_version": 1,
+  "brief_id": "unicaa01_p01_panic__chatcmpl_8b67ddd03286__d16",
+  "task_slug": "unicaa01_p01_panic",
+  "pair_id": "p01_priority_queue",
+  "invocation_id": "chatcmpl-8b67ddd03286",
+  "domain": "concurrency",
+  "user_message": "Edit unicaa01_p01_panic/main.py only. The Scheduler raises NotImplementedError in run_next; threading/locking is missing. Import threading, lock submit/run_next, demo() must print ['alert','backup','email']. Fix the broken code: remove NotImplementedError/TODO stubs where possible. Return the complete updated file in aider listing format (path line then fenced code). Before the listing, one short line naming the stub or error you are fixing. Stress-calibration run \u2014 starter has intentional broken stubs. Lint-clean ruff+pylint if possible. Never pip install. Stdlib only.",
+  "panic_starter_main_py": "\"\"\"Broken priority scheduler \u2014 panic starter (stress_b style).\"\"\"\nfrom __future__ import annotations\n\nimport heapq\nimport threading\nfrom dataclasses import dataclass, field\nfrom typing import Any\n\n\n@dataclass(order=True)\nclass Job:\n    priority: int\n    name: str = field(compare=False)\n    payload: dict[str, Any] = field(default_factory=dict)\n\n\nclass Scheduler:\n    def __init__(self) -> None:\n        self._heap: list[Job] = []\n        self._lock = threading.Lock()\n\n    def submit(self, job: Job) -> None:\n        heapq.heappush(self._heap, job)\n\n    def run_next(self) -> Job | None:\n        raise NotImplementedError(\"run_next not implemented\")\n\n\ndef demo() -> list[str]:\n    s = Scheduler()\n    for p, n in [(2, \"backup\"), (1, \"alert\"), (3, \"email\")]:\n        s.submit(Job(p, n))\n    out: list[str] = []\n    for _ in range(3):\n        j = s.run_next()\n        if j is None:\n            break\n        out.append(j.name)\n    return out\n",
+  "prefix_lock": {
+    "d": 16,
+    "prefix_token_ids": [
+      785,
+      1565,
+      6108,
+      11257,
+      63,
+      1714,
+      304,
+      279,
+      1565,
+      38878,
+      63,
+      536,
+      5023,
+      24886,
+      264,
+      1565
+    ],
+    "prefix_text": "The `run_next` method in the `Scheduler` class currently raises a `",
+    "immutable": true
+  },
+  "divergence_context": {
+    "bad_token_at_d": 2623,
+    "bad_token_at_d_text": "Not",
+    "bad_tail_summary": "REJECTED panic-tail summary (prose only \u2014 DO NOT copy code/imports/phrases from it). Write a clean task-specific fix instead. ethod in the 'Scheduler' class currently raises a ' '. To fix this, we need to implement the logic to pop the highest priority job from the heap and return it. Additionally, we need to ensure that the 'run_next' method i\u2026",
+    "forbidden_patterns": [
+      "NotImplementedError",
+      "TODO",
+      "FIXME",
+      "pip install",
+      "sorry",
+      "cannot",
+      "unable to"
+    ]
+  },
+  "output_contract": {
+    "format": "aider_listing",
+    "target_staging_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\curator_staging\\unicaa01_p01_panic__chatcmpl_8b67ddd03286__d16\\candidate.txt",
+    "target_admitted_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p01_panic__chatcmpl_8b67ddd03286__d16.txt",
+    "task_dir": "unicaa01_p01_panic"
+  },
+  "success_criteria": "demo() must print ['alert','backup','email'].",
+  "task_summary": "Edit unicaa01_p01_panic/main",
+  "provenance": {
+    "source_pack": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\curation_packs\\unicaa01_corpus_p01_priority_queue_panic__chatcmpl-8b67ddd03286__d16.json",
+    "source_experiment_json": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\out\\unicaa01_corpus_p01_priority_queue_panic_latest.json",
+    "tracer_confidence": "medium"
+  },
+  "tracer_confidence": "medium",
+  "demo_oracle": {
+    "pair_id": "p01_priority_queue",
+    "check_mode": "eq",
+    "expect_repr": "['alert', 'backup', 'email']"
+  }
+}

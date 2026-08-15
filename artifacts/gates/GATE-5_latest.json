@@ -1,0 +1,147 @@
+{
+  "overall_pass": true,
+  "n_pass": 7,
+  "n_fail": 0,
+  "checks": [
+    {
+      "id": "G5.1",
+      "name": "early topk_acc < late (sensory vs motor)",
+      "pass": true,
+      "detail": "early=[0.002777777798473835, 0.002777777798473835, 0.0] late=[0.5438520014286041, 0.833493447303772, 0.9873640060424804]"
+    },
+    {
+      "id": "G5.2",
+      "name": "workspace onset layer",
+      "pass": true,
+      "detail": "onset=20"
+    },
+    {
+      "id": "G5.3",
+      "name": "motor transition layer",
+      "pass": true,
+      "detail": "motor=24"
+    },
+    {
+      "id": "G5.4",
+      "name": "kurtosis peak in mid band",
+      "pass": true,
+      "detail": "kurt_peak=26"
+    },
+    {
+      "id": "G5.5",
+      "name": "autocorr peak in mid band",
+      "pass": true,
+      "detail": "ac_peak=22"
+    },
+    {
+      "id": "G5.6",
+      "name": "effective dim metric computed",
+      "pass": true,
+      "detail": "computed in per_layer.effective_dim"
+    },
+    {
+      "id": "G5.7",
+      "name": "hypothesis band overlap",
+      "pass": true,
+      "detail": "overlap=2 onset=20 motor=24 use_j=False"
+    }
+  ],
+  "metrics": {
+    "per_layer": {
+      "0": {
+        "topk_acc": 0.002777777798473835,
+        "kurtosis": 0.5225310219658745,
+        "autocorr": 0.038827061839401725,
+        "effective_dim": 0.33984375
+      },
+      "2": {
+        "topk_acc": 0.002777777798473835,
+        "kurtosis": 0.7398766994476318,
+        "autocorr": 0.022271465696394443,
+        "effective_dim": 0.33872767857142855
+      },
+      "4": {
+        "topk_acc": 0.0,
+        "kurtosis": 0.6467311329311795,
+        "autocorr": 0.016917360574007036,
+        "effective_dim": 0.33900669642857145
+      },
+      "6": {
+        "topk_acc": 0.0,
+        "kurtosis": 0.705683766471015,
+        "autocorr": 0.027452302165329456,
+        "effective_dim": 0.3392857142857143
+      },
+      "8": {
+        "topk_acc": 0.02708101011812687,
+        "kurtosis": 0.6242749902937146,
+        "autocorr": 0.053889450058341025,
+        "effective_dim": 0.33816964285714285
+      },
+      "10": {
+        "topk_acc": 0.018191551230847834,
+        "kurtosis": 0.6483637915717231,
+        "autocorr": 0.060521476157009604,
+        "effective_dim": 0.3384486607142857
+      },
+      "12": {
+        "topk_acc": 0.018153499439358713,
+        "kurtosis": 0.6190300252702501,
+        "autocorr": 0.04474417604506016,
+        "effective_dim": 0.33900669642857145
+      },
+      "14": {
+        "topk_acc": 0.04335311893373728,
+        "kurtosis": 0.5670846674177381,
+        "autocorr": 0.028760812431573867,
+        "effective_dim": 0.3359375
+      },
+      "16": {
+        "topk_acc": 0.050950173661112784,
+        "kurtosis": 0.6074895011054146,
+        "autocorr": 0.03789306450635195,
+        "effective_dim": 0.33816964285714285
+      },
+      "18": {
+        "topk_acc": 0.08227120712399483,
+        "kurtosis": 0.608036126030816,
+        "autocorr": 0.032702358067035676,
+        "effective_dim": 0.33984375
+      },
+      "20": {
+        "topk_acc": 0.21172783970832826,
+        "kurtosis": 0.5731414688958061,
+        "autocorr": 0.04093500003218651,
+        "effective_dim": 0.33956473214285715
+      },
+      "22": {
+        "topk_acc": 0.5438520014286041,
+        "kurtosis": 0.662769831551446,
+        "autocorr": 0.08490213453769684,
+        "effective_dim": 0.34012276785714285
+      },
+      "24": {
+        "topk_acc": 0.833493447303772,
+        "kurtosis": 0.8219433360629612,
+        "autocorr": 0.06118626371026039,
+        "effective_dim": 0.341796875
+      },
+      "26": {
+        "topk_acc": 0.9873640060424804,
+        "kurtosis": 1.1002311123742,
+        "autocorr": 0.008257229812443256,
+        "effective_dim": 0.3404017857142857
+      }
+    },
+    "onset_layer": 20,
+    "motor_layer": 24,
+    "kurtosis_peak_layer": 26,
+    "autocorr_peak_layer": 22,
+    "workspace_band": [
+      20,
+      24
+    ]
+  },
+  "gate": "GATE-5",
+  "timestamp_utc": "2026-08-03T02:58:49.792032+00:00"
+}

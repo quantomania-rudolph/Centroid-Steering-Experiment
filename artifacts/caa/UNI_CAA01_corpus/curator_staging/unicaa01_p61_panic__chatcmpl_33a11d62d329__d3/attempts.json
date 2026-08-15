@@ -1,0 +1,46 @@
+{
+  "attempts": [
+    {
+      "attempt_index": 0,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "081aba73ecae8fec245bbe7624c2176a8955afa26d1787febdb227d55300ac10",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": true,
+      "failed_checks": [
+        {
+          "id": "RUN_quality_suite",
+          "pass": false,
+          "detail": "FAIL:inner:expected 'abc' got 'a**b**c'"
+        }
+      ],
+      "demo_result": {
+        "pass": true,
+        "actual_repr": "'bold'",
+        "expected_repr": "'bold'",
+        "error": "",
+        "pair_id": "p61_markdown_strip"
+      },
+      "qa_verdict": null,
+      "qa_calls_so_far": 0
+    },
+    {
+      "attempt_index": 1,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "f7c4849e7734557f44bd1bdfa607dc2072e888c133b4aa44d6993b85488fd227",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": true,
+      "failed_checks": [],
+      "demo_result": {
+        "pass": true,
+        "actual_repr": "'bold'",
+        "expected_repr": "'bold'",
+        "error": "",
+        "pair_id": "p61_markdown_strip"
+      },
+      "qa_verdict": "approve",
+      "qa_calls_so_far": 0
+    }
+  ]
+}

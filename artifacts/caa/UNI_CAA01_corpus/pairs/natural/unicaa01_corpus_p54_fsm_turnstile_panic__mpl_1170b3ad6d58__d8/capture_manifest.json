@@ -1,0 +1,28 @@
+{
+  "source": "natural",
+  "pair_slug": "unicaa01_corpus_p54_fsm_turnstile_panic__mpl_1170b3ad6d58__d8",
+  "vector_id": "UNI_CAA01",
+  "d": 8,
+  "prompt_len": 1954,
+  "layers": [
+    10,
+    16,
+    22
+  ],
+  "capture_method": "dual_full_forward",
+  "extraction_position": "divergent",
+  "calm_purity_pass": true,
+  "bad_purity_pass": true,
+  "pair_gate_pass": true,
+  "kv_live_gate_pass": true,
+  "kv_live_gate_timestamp": "2026-08-10T01:02:15.000807+00:00",
+  "sha256": {
+    "activations_at_d.pt": "00ba313cdc4eee64c9e4e7c854d58ceb6b6329b205eadbbf9c7d60b2a26e53df",
+    "matched_prefix_spec.json": "3d3ffe61222025da40fbd58daa30dbe2f590da96c75adee09fe74434ba246410",
+    "admission_gate.json": "db8f0aa8a1d7c685cdd7d7d0b177df925a16c1fe3921a7b78e7b5e0b8d2be1bf"
+  },
+  "notes": [
+    "mined from unicaa01_corpus_p54_fsm_turnstile_panic"
+  ],
+  "path_hint": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\pairs\\natural\\unicaa01_corpus_p54_fsm_turnstile_panic__mpl_1170b3ad6d58__d8"
+}

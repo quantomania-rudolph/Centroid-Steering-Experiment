@@ -1,0 +1,18 @@
+Fixing `rot13` function to correctly apply the ROT13 cipher.
+unicaa01_p66_panic/main.py
+```python
+"""ROT13 cipher implementation."""
+def rot13(s: str) -> str:
+    result = []
+    for ch in s:
+        if 'a' <= ch <= 'z':
+            result.append(chr((ord(ch) - ord('a') + 13) % 26 + ord('a')))
+        elif 'A' <= ch <= 'Z':
+            result.append(chr((ord(ch) - ord('A') + 13) % 26 + ord('A')))
+        else:
+            result.append(ch)
+    return ''.join(result)
+
+def demo():
+    return rot13(rot13("abc"))
+```

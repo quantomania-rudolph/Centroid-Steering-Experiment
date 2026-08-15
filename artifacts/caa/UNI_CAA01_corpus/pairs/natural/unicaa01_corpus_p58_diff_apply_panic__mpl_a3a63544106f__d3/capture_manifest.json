@@ -1,0 +1,28 @@
+{
+  "source": "natural",
+  "pair_slug": "unicaa01_corpus_p58_diff_apply_panic__mpl_a3a63544106f__d3",
+  "vector_id": "UNI_CAA01",
+  "d": 3,
+  "prompt_len": 1960,
+  "layers": [
+    10,
+    16,
+    22
+  ],
+  "capture_method": "dual_full_forward",
+  "extraction_position": "divergent",
+  "calm_purity_pass": true,
+  "bad_purity_pass": true,
+  "pair_gate_pass": true,
+  "kv_live_gate_pass": true,
+  "kv_live_gate_timestamp": "2026-08-10T01:02:15.000807+00:00",
+  "sha256": {
+    "activations_at_d.pt": "85f30bca4de7a72b4e3510feb64772a34d1b62e8340726b4f54b3841025f2e61",
+    "matched_prefix_spec.json": "0e1bc7a7a8efe8ab35b1ae189afd9952e90987bf1d75c7b487f201b143256a94",
+    "admission_gate.json": "d1f2d3f21f11afa3e66d3f75c46560b0fbdbcb75e2581a33f88d01be01346a21"
+  },
+  "notes": [
+    "mined from unicaa01_corpus_p58_diff_apply_panic"
+  ],
+  "path_hint": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\pairs\\natural\\unicaa01_corpus_p58_diff_apply_panic__mpl_a3a63544106f__d3"
+}

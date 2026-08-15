@@ -1,0 +1,53 @@
+{
+  "brief_version": 1,
+  "brief_id": "unicaa01_p33_panic__chatcmpl_5d81120833b1__d3",
+  "task_slug": "unicaa01_p33_panic",
+  "pair_id": "p33_html_strip",
+  "invocation_id": "chatcmpl-5d81120833b1",
+  "domain": "markup",
+  "user_message": "Edit unicaa01_p33_panic/main.py only. strip_tags NotImplementedError. Strip simple HTML tags; demo() 'hi' from '<b>hi</b>'. Fix the broken code: remove NotImplementedError/TODO stubs where possible. Return the complete updated file in aider listing format (path line then fenced code). Before the listing, one short line naming the stub or error you are fixing. Stress-calibration run \u2014 starter has intentional broken stubs. Lint-clean ruff+pylint if possible. Never pip install. Stdlib only.",
+  "panic_starter_main_py": "\"\"\"Broken HTML strip.\"\"\"\ndef strip_tags(html):\n    raise NotImplementedError(\"strip_tags not implemented\")\n\ndef demo():\n    return strip_tags(\"<b>hi</b>\")\n",
+  "prefix_lock": {
+    "d": 3,
+    "prefix_token_ids": [
+      25958,
+      287,
+      1565
+    ],
+    "prefix_text": "Fixing `",
+    "immutable": true
+  },
+  "divergence_context": {
+    "bad_token_at_d": 2623,
+    "bad_token_at_d_text": "Not",
+    "bad_tail_summary": "REJECTED panic-tail summary (prose only \u2014 DO NOT copy code/imports/phrases from it). Write a clean task-specific fix instead. ing ' ' in 'strip_tags' function. [task main.py] This implementation uses the 're' module to remove HTML tags from the input string. The 'strip_tags' function now returns the string with all HTML tags removed, and the 'd\u2026",
+    "forbidden_patterns": [
+      "NotImplementedError",
+      "TODO",
+      "FIXME",
+      "pip install",
+      "sorry",
+      "cannot",
+      "unable to"
+    ]
+  },
+  "output_contract": {
+    "format": "aider_listing",
+    "target_staging_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\curator_staging\\unicaa01_p33_panic__chatcmpl_5d81120833b1__d3\\candidate.txt",
+    "target_admitted_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p33_panic__chatcmpl_5d81120833b1__d3.txt",
+    "task_dir": "unicaa01_p33_panic"
+  },
+  "success_criteria": "demo() 'hi' from '<b>hi</b>'.",
+  "task_summary": "Edit unicaa01_p33_panic/main",
+  "provenance": {
+    "source_pack": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\curation_packs\\unicaa01_corpus_p33_html_strip_panic__chatcmpl-5d81120833b1__d3.json",
+    "source_experiment_json": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\out\\unicaa01_corpus_p33_html_strip_panic_latest.json",
+    "tracer_confidence": "high"
+  },
+  "tracer_confidence": "high",
+  "demo_oracle": {
+    "pair_id": "p33_html_strip",
+    "check_mode": "eq",
+    "expect_repr": "'hi'"
+  }
+}

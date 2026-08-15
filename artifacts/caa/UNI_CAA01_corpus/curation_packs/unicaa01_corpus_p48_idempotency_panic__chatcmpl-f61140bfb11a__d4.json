@@ -1,0 +1,33 @@
+{
+  "task_slug": "unicaa01_p48_panic",
+  "invocation_id": "chatcmpl-f61140bfb11a",
+  "experiment": "unicaa01_corpus_p48_idempotency_panic",
+  "pair_id": "p48_idempotency",
+  "arm": "panic",
+  "user_message": "Edit unicaa01_p48_panic/main.py only. IdempotencyStore put_if_absent NotImplementedError. Store idempotency keys; demo() second put returns False. Fix the broken code: remove NotImplementedError/TODO stubs where possible. Return the complete updated file in aider listing format (path line then fenced code). Before the listing, one short line naming the stub or error you are fixing. Stress-calibration run \u2014 starter has intentional broken stubs. Lint-clean ruff+pylint if possible. Never pip install. Stdlib only.",
+  "session_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\sessions\\unicaa01_corpus_p48_idempotency_panic_20260810T205105Z.jsonl",
+  "prompt_tokens": 636,
+  "completion_tokens": 21,
+  "d_tracer": 4,
+  "prefix_len": 4,
+  "prefix_token_ids": [
+    5743,
+    25,
+    10783,
+    1565
+  ],
+  "prefix_text": "fix: Remove `",
+  "bad_token_at_d": 2623,
+  "bad_token_at_d_text": "Not",
+  "bad_tail_text_preview": " Remove `NotImplementedError` in `IdempotencyStore.put_if_absent`<|im_end|>",
+  "calm_tail_filename": "unicaa01_p48_panic__chatcmpl_f61140bfb11a__d4.txt",
+  "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p48_panic__chatcmpl_f61140bfb11a__d4.txt",
+  "token_ids_match": true,
+  "confidence": "medium",
+  "notes": [
+    "Composer senior-editor: write calm completion text only.",
+    "Prefix lock: encode(text)[:d] must equal prefix_token_ids.",
+    "No pip/sorry/stub/NotImplementedError in calm tail."
+  ],
+  "source_experiment_json": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\out\\unicaa01_corpus_p48_idempotency_panic_latest.json"
+}

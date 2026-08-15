@@ -1,0 +1,45 @@
+{
+  "attempts": [
+    {
+      "attempt_index": 0,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "90816d4b73aa8e777d79807c368ba323cc3d713be7e3e977db5f901bd5572ffe",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": false,
+      "failed_checks": [
+        {
+          "id": "CT_assemble",
+          "pass": false,
+          "detail": "prefix lock or CD divergence failed at d=10 (bad_token=2623 bad_text='Not')"
+        }
+      ],
+      "demo_result": {
+        "pass": false,
+        "actual_repr": "",
+        "expected_repr": "",
+        "error": "no main.py"
+      },
+      "qa_verdict": null,
+      "qa_calls_so_far": 0
+    },
+    {
+      "attempt_index": 1,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "9dfed295d651bc321973f7f8446030b86b35a3f4980ec820f73c911222b807e7",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": true,
+      "failed_checks": [],
+      "demo_result": {
+        "pass": true,
+        "actual_repr": "[1, 2, 3]",
+        "expected_repr": "[1, 2, 3]",
+        "error": "",
+        "pair_id": "p09_thread_pool"
+      },
+      "qa_verdict": "approve",
+      "qa_calls_so_far": 0
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "gate_id": "G8_miner",
+  "pass": true,
+  "n_admitted": 4,
+  "admitted_slugs": [
+    "unicaa01_corpus_p01_priority_queue_panic__mpl_8b67ddd03286__d16",
+    "unicaa01_corpus_p06_json_parse_panic__mpl_44fb68e7b5cd__d3",
+    "unicaa01_corpus_p12_fibonacci_panic__mpl_9fcda159903f__d14",
+    "unicaa01_corpus_p18_trie_prefix_panic__mpl_2ba03f73cbb9__d3"
+  ],
+  "p06_new_slug": "unicaa01_corpus_p06_json_parse_panic__mpl_44fb68e7b5cd__d3",
+  "timestamp": "2026-08-11T05:42:00Z"
+}

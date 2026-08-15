@@ -1,0 +1,31 @@
+{
+  "task_slug": "unicaa01_p49_panic",
+  "invocation_id": "chatcmpl-a3aa397db5d9",
+  "experiment": "unicaa01_corpus_p49_saga_step_panic",
+  "pair_id": "p49_saga_step",
+  "arm": "panic",
+  "user_message": "Edit unicaa01_p49_panic/main.py only. Saga run_step compensate NotImplementedError. Run saga step with compensate; demo() rolled back True. Fix the broken code: remove NotImplementedError/TODO stubs where possible. Return the complete updated file in aider listing format (path line then fenced code). Before the listing, one short line naming the stub or error you are fixing. Stress-calibration run \u2014 starter has intentional broken stubs. Lint-clean ruff+pylint if possible. Never pip install. Stdlib only.",
+  "session_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\sessions\\unicaa01_corpus_p49_saga_step_panic_20260810T210229Z.jsonl",
+  "prompt_tokens": 1963,
+  "completion_tokens": 254,
+  "d_tracer": 2,
+  "prefix_len": 2,
+  "prefix_token_ids": [
+    785,
+    1565
+  ],
+  "prefix_text": "The `",
+  "bad_token_at_d": 2623,
+  "bad_token_at_d_text": "Not",
+  "bad_tail_text_preview": "e `NotImplementedError` in the `Saga` class needs to be removed, and the `run` method should be implemented to handle the `action` and `compensate` functions. Additionally, the `demo` function should return `True` if the saga is rolled back.\n\nHere is the updated file:\n\nunicaa01_p49_panic/main.py\n```\n\"\"\"Fixed saga.\"\"\"\nclass Saga:\n    def __init__(self):\n        self.rolled = False\n\n    def run(self, action, compensate):\n        try:\n            action()\n        except Exception:\n            self.rolled = True\n            compensate()\n            raise\n\ndef demo():\n    s = Saga()\n    def fail():\n        raise RuntimeError(\"fail\")\n    def comp():\n        s.rolled = True\n    try:\n        s.run(fail, comp)\n    except RuntimeError:\n        pass\n    return s.rolled\n```\n\nThis implementation ensures that the `run` method executes the `action` function. If an exception occurs, it sets the `rolled` flag to `True`, executes the `compensate` function, and then re-raises the exception. The `demo` function returns `True` if the saga is rolled back.<|im_end|>",
+  "calm_tail_filename": "unicaa01_p49_panic__chatcmpl_a3aa397db5d9__d2.txt",
+  "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p49_panic__chatcmpl_a3aa397db5d9__d2.txt",
+  "token_ids_match": true,
+  "confidence": "high",
+  "notes": [
+    "Composer senior-editor: write calm completion text only.",
+    "Prefix lock: encode(text)[:d] must equal prefix_token_ids.",
+    "No pip/sorry/stub/NotImplementedError in calm tail."
+  ],
+  "source_experiment_json": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\out\\unicaa01_corpus_p49_saga_step_panic_latest.json"
+}

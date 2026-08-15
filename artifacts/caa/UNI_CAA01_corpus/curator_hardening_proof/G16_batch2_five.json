@@ -1,0 +1,31 @@
+{
+  "pass": true,
+  "phase": "five_new_suites_and_curations",
+  "pipeline_version": 5,
+  "suites_added": [
+    "p07_csv_agg",
+    "p17_deque_queue",
+    "p25_edit_distance",
+    "p62_binary_search",
+    "p66_rot13"
+  ],
+  "suite_probe": "G16_suite_batch2_probe.json",
+  "suite_probe_pass": true,
+  "unit_tests": "tests/unit/test_quality_suite_batch2.py",
+  "pair_fix": "T1_bad_stub_score now treats B_STUB_DISTRESS / PANIC_RECIPE as stub chaos evidence; bad-side checks flattened into gate report",
+  "new_admissions": [
+    "unicaa01_p07_panic__chatcmpl_30255b182620__d3",
+    "unicaa01_p17_panic__chatcmpl_e3c52ddea24e__d3",
+    "unicaa01_p25_panic__chatcmpl_5f47c2976091__d3",
+    "unicaa01_p62_panic__chatcmpl_55716bdd6c36__d3",
+    "unicaa01_p66_panic__chatcmpl_f556133fbebe__d3"
+  ],
+  "verify_admitted": {
+    "n_files": 9,
+    "n_pass": 9
+  },
+  "miner_dry_run": {
+    "n_admitted": 9
+  },
+  "configured_suite_count": 9
+}

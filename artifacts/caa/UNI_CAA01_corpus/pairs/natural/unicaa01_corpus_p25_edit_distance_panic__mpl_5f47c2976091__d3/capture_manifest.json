@@ -1,0 +1,28 @@
+{
+  "source": "natural",
+  "pair_slug": "unicaa01_corpus_p25_edit_distance_panic__mpl_5f47c2976091__d3",
+  "vector_id": "UNI_CAA01",
+  "d": 3,
+  "prompt_len": 1856,
+  "layers": [
+    10,
+    16,
+    22
+  ],
+  "capture_method": "dual_full_forward",
+  "extraction_position": "divergent",
+  "calm_purity_pass": true,
+  "bad_purity_pass": true,
+  "pair_gate_pass": true,
+  "kv_live_gate_pass": true,
+  "kv_live_gate_timestamp": "2026-08-10T01:02:15.000807+00:00",
+  "sha256": {
+    "activations_at_d.pt": "c915eed56c66ee97eb4676e691bd2e1d561a1998c988bce98d7f58a4a415036e",
+    "matched_prefix_spec.json": "e5ddf2826dbd8ce28771cbb3ff6b1d9849076cc04d04c4a27377329987e4bd5b",
+    "admission_gate.json": "7dd6216f68367985613d96e0f650b304b18226ca1018ca736ebdbcc25a10d0c0"
+  },
+  "notes": [
+    "mined from unicaa01_corpus_p25_edit_distance_panic"
+  ],
+  "path_hint": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\pairs\\natural\\unicaa01_corpus_p25_edit_distance_panic__mpl_5f47c2976091__d3"
+}

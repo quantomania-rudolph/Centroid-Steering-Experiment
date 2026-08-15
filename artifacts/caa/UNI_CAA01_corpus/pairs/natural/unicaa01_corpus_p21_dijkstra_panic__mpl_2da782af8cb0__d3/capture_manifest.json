@@ -1,0 +1,28 @@
+{
+  "source": "natural",
+  "pair_slug": "unicaa01_corpus_p21_dijkstra_panic__mpl_2da782af8cb0__d3",
+  "vector_id": "UNI_CAA01",
+  "d": 3,
+  "prompt_len": 1764,
+  "layers": [
+    10,
+    16,
+    22
+  ],
+  "capture_method": "shared_kv_prefill",
+  "extraction_position": "divergent",
+  "calm_purity_pass": true,
+  "bad_purity_pass": true,
+  "pair_gate_pass": true,
+  "kv_live_gate_pass": true,
+  "kv_live_gate_timestamp": "2026-08-10T01:02:15.000807+00:00",
+  "sha256": {
+    "activations_at_d.pt": "949cf5974308e40e1a3fd0340519105a8ce9d26d1855f98ea812760fea311083",
+    "matched_prefix_spec.json": "1985ef89a3e58c1b349e9063c43b0188a8a6d6e4511443786d075514797f92c8",
+    "admission_gate.json": "70bf8d3659679ea00ff372709068a6b6db2f1bd0fe0dc221c6efc644cfe83e04"
+  },
+  "notes": [
+    "mined from unicaa01_corpus_p21_dijkstra_panic"
+  ],
+  "path_hint": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\pairs\\natural\\unicaa01_corpus_p21_dijkstra_panic__mpl_2da782af8cb0__d3"
+}

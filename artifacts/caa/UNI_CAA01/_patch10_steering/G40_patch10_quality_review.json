@@ -1,0 +1,215 @@
+{
+  "n_pairs": 10,
+  "errors": [],
+  "warnings": [
+    "weak polarity unicaa01_corpus_p06_json_parse_panic__mpl_44fb68e7b5cd__d3 L10 cos=0.162",
+    "weak polarity unicaa01_corpus_p06_json_parse_panic__mpl_44fb68e7b5cd__d3 L16 cos=0.267",
+    "weak polarity unicaa01_corpus_p06_json_parse_panic__mpl_44fb68e7b5cd__d3 L22 cos=0.221",
+    "weak polarity unicaa01_corpus_p10_config_validate_pani__mpl_ec2610a87318__d3 L10 cos=0.161",
+    "weak polarity unicaa01_corpus_p10_config_validate_pani__mpl_ec2610a87318__d3 L16 cos=0.242",
+    "weak polarity unicaa01_corpus_p10_config_validate_pani__mpl_ec2610a87318__d3 L22 cos=0.223",
+    "weak polarity unicaa01_corpus_p17_deque_queue_panic__mpl_e3c52ddea24e__d3 L10 cos=0.196",
+    "weak polarity unicaa01_corpus_p17_deque_queue_panic__mpl_e3c52ddea24e__d3 L16 cos=0.251",
+    "weak polarity unicaa01_corpus_p17_deque_queue_panic__mpl_e3c52ddea24e__d3 L22 cos=0.215"
+  ],
+  "checks": {
+    "L10": {
+      "cos_to_patch5_beh": 0.8852477073669434,
+      "neutral_leak": -1.1408701539039612e-08,
+      "raw_norm": 42.096622467041016,
+      "unit": 1.0,
+      "dot_beh_cond": -1.0
+    },
+    "L16": {
+      "cos_to_patch5_beh": 0.8486114144325256,
+      "neutral_leak": -3.4458935260772705e-08,
+      "raw_norm": 50.799583435058594,
+      "unit": 1.0,
+      "dot_beh_cond": -0.9999999403953552
+    },
+    "L22": {
+      "cos_to_patch5_beh": 0.9021267890930176,
+      "neutral_leak": -1.862645149230957e-09,
+      "raw_norm": 152.31246948242188,
+      "unit": 1.0,
+      "dot_beh_cond": -1.000000238418579
+    }
+  },
+  "loo_min_cos": {
+    "10": 0.9817873239517212,
+    "16": 0.9772852659225464,
+    "22": 0.9880198240280151
+  },
+  "loo": [
+    {
+      "left_out": "unicaa01_corpus_p01_priority_queue_panic__mpl_8b67ddd03286__d16",
+      "cos": {
+        "10": 0.9891129732131958,
+        "16": 0.9865831136703491,
+        "22": 0.9933146238327026
+      }
+    },
+    {
+      "left_out": "unicaa01_corpus_p02_lru_cache_panic__mpl_c6cf9e514eba__d9",
+      "cos": {
+        "10": 0.9898136258125305,
+        "16": 0.9842920303344727,
+        "22": 0.9904560446739197
+      }
+    },
+    {
+      "left_out": "unicaa01_corpus_p06_json_parse_panic__mpl_44fb68e7b5cd__d3",
+      "cos": {
+        "10": 0.9817873239517212,
+        "16": 0.9772852659225464,
+        "22": 0.9890439510345459
+      }
+    },
+    {
+      "left_out": "unicaa01_corpus_p10_config_validate_pani__mpl_ec2610a87318__d3",
+      "cos": {
+        "10": 0.9878405332565308,
+        "16": 0.985837459564209,
+        "22": 0.9907892942428589
+      }
+    },
+    {
+      "left_out": "unicaa01_corpus_p12_fibonacci_panic__mpl_b743782d78b3__d12",
+      "cos": {
+        "10": 0.9833972454071045,
+        "16": 0.983158528804779,
+        "22": 0.989388108253479
+      }
+    },
+    {
+      "left_out": "unicaa01_corpus_p14_regex_email_panic__mpl_fe69aa9a2766__d10",
+      "cos": {
+        "10": 0.9914498329162598,
+        "16": 0.9899588823318481,
+        "22": 0.9937044382095337
+      }
+    },
+    {
+      "left_out": "unicaa01_corpus_p16_event_snapshot_panic__mpl_67e7b38d50e5__d16",
+      "cos": {
+        "10": 0.9864366054534912,
+        "16": 0.986681342124939,
+        "22": 0.9894642233848572
+      }
+    },
+    {
+      "left_out": "unicaa01_corpus_p17_deque_queue_panic__mpl_e3c52ddea24e__d3",
+      "cos": {
+        "10": 0.9837583303451538,
+        "16": 0.9810473918914795,
+        "22": 0.9880198240280151
+      }
+    },
+    {
+      "left_out": "unicaa01_corpus_p18_trie_prefix_panic__mpl_2ba03f73cbb9__d3",
+      "cos": {
+        "10": 0.9925631880760193,
+        "16": 0.989505410194397,
+        "22": 0.9928323030471802
+      }
+    },
+    {
+      "left_out": "unicaa01_corpus_p21_dijkstra_panic__mpl_2da782af8cb0__d3",
+      "cos": {
+        "10": 0.991470992565155,
+        "16": 0.9879075288772583,
+        "22": 0.9928096532821655
+      }
+    }
+  ],
+  "pair_polarity": [
+    {
+      "slug": "unicaa01_corpus_p01_priority_queue_panic__mpl_8b67ddd03286__d16",
+      "cos": {
+        "10": 0.762309193611145,
+        "16": 0.7200079560279846,
+        "22": 0.8015000820159912
+      }
+    },
+    {
+      "slug": "unicaa01_corpus_p02_lru_cache_panic__mpl_c6cf9e514eba__d9",
+      "cos": {
+        "10": 0.6875230073928833,
+        "16": 0.6281084418296814,
+        "22": 0.6972088813781738
+      }
+    },
+    {
+      "slug": "unicaa01_corpus_p06_json_parse_panic__mpl_44fb68e7b5cd__d3",
+      "cos": {
+        "10": 0.16245144605636597,
+        "16": 0.26694393157958984,
+        "22": 0.22120338678359985
+      }
+    },
+    {
+      "slug": "unicaa01_corpus_p10_config_validate_pani__mpl_ec2610a87318__d3",
+      "cos": {
+        "10": 0.16075313091278076,
+        "16": 0.24175278842449188,
+        "22": 0.22298511862754822
+      }
+    },
+    {
+      "slug": "unicaa01_corpus_p12_fibonacci_panic__mpl_b743782d78b3__d12",
+      "cos": {
+        "10": 0.6317651271820068,
+        "16": 0.5582814812660217,
+        "22": 0.7142691612243652
+      }
+    },
+    {
+      "slug": "unicaa01_corpus_p14_regex_email_panic__mpl_fe69aa9a2766__d10",
+      "cos": {
+        "10": 0.7286781072616577,
+        "16": 0.6752254366874695,
+        "22": 0.8079144954681396
+      }
+    },
+    {
+      "slug": "unicaa01_corpus_p16_event_snapshot_panic__mpl_67e7b38d50e5__d16",
+      "cos": {
+        "10": 0.6361302137374878,
+        "16": 0.6071445941925049,
+        "22": 0.6981483697891235
+      }
+    },
+    {
+      "slug": "unicaa01_corpus_p17_deque_queue_panic__mpl_e3c52ddea24e__d3",
+      "cos": {
+        "10": 0.1963229924440384,
+        "16": 0.2507714331150055,
+        "22": 0.21512259542942047
+      }
+    },
+    {
+      "slug": "unicaa01_corpus_p18_trie_prefix_panic__mpl_2ba03f73cbb9__d3",
+      "cos": {
+        "10": 0.7587845921516418,
+        "16": 0.6799637079238892,
+        "22": 0.7681024670600891
+      }
+    },
+    {
+      "slug": "unicaa01_corpus_p21_dijkstra_panic__mpl_2da782af8cb0__d3",
+      "cos": {
+        "10": 0.7666974067687988,
+        "16": 0.6512749195098877,
+        "22": 0.7820013761520386
+      }
+    }
+  ],
+  "pair_polarity_min": {
+    "10": 0.16075313091278076,
+    "16": 0.24175278842449188,
+    "22": 0.21512259542942047
+  },
+  "extract_gate_pass": true,
+  "production_ready_stamp": false,
+  "pass": false
+}

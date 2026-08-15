@@ -1,0 +1,36 @@
+{
+  "model_id": "Qwen/Qwen2.5-Coder-7B-Instruct",
+  "config": {
+    "num_hidden_layers": 28,
+    "hidden_size": 3584,
+    "vocab_size": 152064,
+    "tie_word_embeddings": false,
+    "rms_norm_eps": 1e-06,
+    "architectures": [
+      "Qwen2ForCausalLM"
+    ],
+    "model_type": "qwen2",
+    "torch_dtype": "float16",
+    "device": "xpu"
+  },
+  "W_U_shape": [
+    152064,
+    3584
+  ],
+  "gamma_shape": [
+    3584
+  ],
+  "rms_eps": 1e-06,
+  "expected": {
+    "num_hidden_layers": 28,
+    "hidden_size": 3584,
+    "vocab_size": 152064,
+    "tie_word_embeddings": false
+  },
+  "matches_expected": {
+    "num_hidden_layers": true,
+    "hidden_size": true,
+    "vocab_size": true,
+    "tie_word_embeddings": true
+  }
+}

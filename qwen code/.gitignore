@@ -1,0 +1,5 @@
+﻿# Qwen Aider workspace
+*.pyc
+__pycache__/
+.ruff_cache/
+.aider*

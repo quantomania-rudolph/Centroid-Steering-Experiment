@@ -1,0 +1,8 @@
+{
+  "gate_id": "G7_stress",
+  "pass": true,
+  "evidence": {
+    "pass": true,
+    "returncode": 0
+  }
+}

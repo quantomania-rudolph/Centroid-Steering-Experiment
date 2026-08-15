@@ -1,0 +1,84 @@
+{
+  "gate": "divergence_tracer",
+  "version": 1,
+  "timestamp": "20260809T194204Z",
+  "signoff_ok": true,
+  "offline_pass": true,
+  "live_pass": true,
+  "checks": {
+    "offline": [
+      {
+        "id": "O1",
+        "pass": true,
+        "n": 1,
+        "detail": "false_panic=0"
+      },
+      {
+        "id": "O2",
+        "pass": true,
+        "detail": "medium_high=1 panic=1"
+      },
+      {
+        "id": "O3",
+        "pass": true,
+        "detail": "lags=[1]"
+      },
+      {
+        "id": "O4",
+        "pass": true,
+        "detail": "prefix_samples=[\"To the `` ensure thedemo function `alert '',email`, need make following:\\n\\n. Remo\"]"
+      },
+      {
+        "id": "O5",
+        "pass": true,
+        "detail": "resolving_set=1"
+      },
+      {
+        "id": "O6",
+        "pass": true,
+        "detail": "aggregate offline"
+      }
+    ],
+    "live": [
+      {
+        "id": "L1",
+        "pass": true,
+        "detail": "divergence_live_proof_latest.json"
+      },
+      {
+        "id": "L2",
+        "pass": true,
+        "detail": "len(token_ids)=164 completion_tokens=164"
+      },
+      {
+        "id": "L3",
+        "pass": true,
+        "detail": "n=1"
+      },
+      {
+        "id": "L4",
+        "pass": true,
+        "detail": "conf=['none']"
+      },
+      {
+        "id": "L5",
+        "pass": true,
+        "detail": "aider.returncode=0"
+      },
+      {
+        "id": "L6",
+        "pass": true,
+        "detail": "gate artifact"
+      }
+    ]
+  },
+  "gold_consensus": [
+    {
+      "inv": 1,
+      "d": 40,
+      "confidence": "medium",
+      "lag": 1,
+      "class": "simultaneous"
+    }
+  ]
+}

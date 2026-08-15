@@ -1,0 +1,13 @@
+{
+  "pass": false,
+  "checks": [
+    {
+      "id": "CT_file_roundtrip",
+      "pass": false,
+      "detail": "fail"
+    }
+  ],
+  "canonical_text": "",
+  "bridge_used": false,
+  "sanitized": false
+}

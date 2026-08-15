@@ -1,0 +1,45 @@
+{
+  "overall_pass": true,
+  "n_pass": 6,
+  "n_fail": 0,
+  "checks": [
+    {
+      "id": "G2.1",
+      "name": "RMSNorm parity vs model.norm",
+      "pass": true,
+      "detail": "max_abs_diff=0.015625"
+    },
+    {
+      "id": "G2.2",
+      "name": "fp16/fp32 norm stability",
+      "pass": true,
+      "detail": "max_abs_diff=0.00698089599609375"
+    },
+    {
+      "id": "G2.3",
+      "name": "Layer-27 logit lens == model logits",
+      "pass": true,
+      "detail": "max_abs_diff=0.0"
+    },
+    {
+      "id": "G2.4",
+      "name": "Layer-0 != model logits",
+      "pass": true,
+      "detail": "max_abs_diff=30.3125"
+    },
+    {
+      "id": "G2.5",
+      "name": "softmax sums to 1",
+      "pass": true,
+      "detail": "sum=1.000004768371582"
+    },
+    {
+      "id": "G2.6",
+      "name": "W_U not tied to embed",
+      "pass": true,
+      "detail": "tied=False"
+    }
+  ],
+  "gate": "GATE-2",
+  "timestamp_utc": "2026-08-03T02:57:29.986722+00:00"
+}

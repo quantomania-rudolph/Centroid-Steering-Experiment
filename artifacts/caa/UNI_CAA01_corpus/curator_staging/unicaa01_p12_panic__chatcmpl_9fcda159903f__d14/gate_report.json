@@ -1,0 +1,174 @@
+{
+  "brief_id": "unicaa01_p12_panic__chatcmpl_9fcda159903f__d14",
+  "model": "poolside/laguna-s-2.1:free",
+  "pass": false,
+  "checks": [
+    {
+      "id": "CT_d_positive",
+      "pass": true,
+      "detail": "d=14"
+    },
+    {
+      "id": "CT_prefix_len",
+      "pass": true,
+      "detail": "len(prefix)=14 d=14"
+    },
+    {
+      "id": "CT_calm_long_enough",
+      "pass": true,
+      "detail": "len(calm)=195 need>14"
+    },
+    {
+      "id": "CT_roundtrip_prefix_eq",
+      "pass": true,
+      "detail": "lcp=14 expected_d=14"
+    },
+    {
+      "id": "CT_diverges_at_d",
+      "pass": true,
+      "detail": "len(calm)=195 need>14; first_post_d=18300"
+    },
+    {
+      "id": "CD_diverges_at_d",
+      "pass": true,
+      "detail": "calm@14=18300 bad@14=2623"
+    },
+    {
+      "id": "SY_ast_parse",
+      "pass": true,
+      "detail": "parsed 424 chars"
+    },
+    {
+      "id": "FORBID_NotImplement",
+      "pass": true,
+      "detail": "found=False"
+    },
+    {
+      "id": "FORBID_TODO",
+      "pass": true,
+      "detail": "found=False"
+    },
+    {
+      "id": "FORBID_FIXME",
+      "pass": true,
+      "detail": "found=False"
+    },
+    {
+      "id": "FORBID_pip install",
+      "pass": true,
+      "detail": "found=False"
+    },
+    {
+      "id": "FORBID_sorry",
+      "pass": true,
+      "detail": "found=False"
+    },
+    {
+      "id": "FORBID_cannot",
+      "pass": true,
+      "detail": "found=False"
+    },
+    {
+      "id": "FORBID_unable to",
+      "pass": true,
+      "detail": "found=False"
+    },
+    {
+      "id": "NM_d_coherence",
+      "pass": true,
+      "detail": "d_extract=14 tracer=14 delta=0 max=15"
+    },
+    {
+      "id": "PAIR_validate",
+      "pass": false,
+      "detail": "miner-parity dry-run"
+    },
+    {
+      "id": "P1_prefix_match",
+      "pass": true,
+      "detail": "calm=14 bad=14 spec=14 d=14"
+    },
+    {
+      "id": "P2_tails_differ_at_d",
+      "pass": true,
+      "detail": "first tail token must differ"
+    },
+    {
+      "id": "P3_d_positive",
+      "pass": true,
+      "detail": "d=14"
+    },
+    {
+      "id": "P4_calm_databus",
+      "pass": true,
+      "detail": "[{'id': 'M1_d_positive', 'pass': True, 'detail': 'd=14'}, {'id': 'M2_prefix_len', 'pass': True, 'detail': 'len(prefix)=14 d=14'}, {'id': 'M3_full_completion', 'pass': True, 'detail': 'full=195 prefix+"
+    },
+    {
+      "id": "P4_bad_databus",
+      "pass": true,
+      "detail": "[{'id': 'M1_d_positive', 'pass': True, 'detail': 'd=14'}, {'id': 'M2_prefix_len', 'pass': True, 'detail': 'len(prefix)=14 d=14'}, {'id': 'M3_full_completion', 'pass': True, 'detail': 'full=20 prefix+t"
+    },
+    {
+      "id": "P6_calm_d_matches_spec",
+      "pass": true,
+      "detail": "record d=14 spec d=14"
+    },
+    {
+      "id": "P6_bad_d_matches_spec",
+      "pass": true,
+      "detail": "record d=14 spec d=14"
+    },
+    {
+      "id": "T1_calm_stub_score",
+      "pass": false,
+      "detail": "stub_score=1 hits=['NotImplementedError']"
+    },
+    {
+      "id": "T2_calm_distress_score",
+      "pass": true,
+      "detail": "distress_score=0 hits=[]"
+    },
+    {
+      "id": "T3_calm_not_eligible",
+      "pass": true,
+      "detail": "eligible=False"
+    },
+    {
+      "id": "T4_calm_no_panic_recipe",
+      "pass": true,
+      "detail": "recipe_fired=False"
+    },
+    {
+      "id": "T5_calm_no_d_consensus",
+      "pass": true,
+      "detail": "d_consensus=None"
+    },
+    {
+      "id": "T6_calm_low_flag_rates",
+      "pass": true,
+      "detail": "b_distress_rate=0.0000 b_stub_rate=0.0000"
+    },
+    {
+      "id": "T8_calm_tail_text_clean",
+      "pass": false,
+      "detail": "stub=1 distress=0 hits_stub=['NotImplementedError'] hits_distress=[]"
+    },
+    {
+      "id": "T9_calm_tail_rates_zero",
+      "pass": true,
+      "detail": "tail_b_distress=0.0000 tail_b_stub=0.0000"
+    },
+    {
+      "id": "T10_calm_prefix_token_eq",
+      "pass": true,
+      "detail": "replay_len=14 prefix_len=14 d=14"
+    },
+    {
+      "id": "T11_calm_no_panic_combo",
+      "pass": true,
+      "detail": "combo=False"
+    }
+  ],
+  "repaired": false,
+  "calm_tail_path": ""
+}

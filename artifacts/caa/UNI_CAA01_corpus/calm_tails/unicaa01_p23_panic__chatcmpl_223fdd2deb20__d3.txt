@@ -1,0 +1,15 @@
+Fixing `max_val` knapsack path to return the optimal 0/1 value.
+unicaa01_p23_panic/main.py
+```python
+"""0/1 knapsack via DP."""
+def knapsack01(weights, values, cap):
+    n = len(weights)
+    dp = [0] * (cap + 1)
+    for i in range(n):
+        for w in range(cap, weights[i] - 1, -1):
+            dp[w] = max(dp[w], dp[w - weights[i]] + values[i])
+    return dp[cap]
+
+def demo():
+    return knapsack01([2, 3], [3, 4], 5)
+```

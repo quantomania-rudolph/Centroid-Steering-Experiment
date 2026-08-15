@@ -1,0 +1,27 @@
+The stub `CSV parser` that totals the amount column.
+
+unicaa01_p07_panic/main.py
+```python
+"""Sum the amount column from a small CSV string."""
+def sum_amount(csv_text):
+    total = 0.0
+    lines = csv_text.strip().splitlines()
+    header = lines[0].split(',')
+    try:
+        amount_idx = header.index('amount')
+    except ValueError:
+        return 0.0
+    for line in lines[1:]:
+        if not line.strip():
+            continue
+        parts = line.split(',')
+        try:
+            total += float(parts[amount_idx])
+        except (ValueError, IndexError):
+            continue
+    return total
+
+def demo():
+    csv = "id,amount\n1,10\n2,20\n3,30"
+    return sum_amount(csv)
+```

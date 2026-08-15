@@ -1,0 +1,33 @@
+{
+  "checker": "A",
+  "version": 1,
+  "signed_off": true,
+  "device": "xpu",
+  "unit_test": "tests/unit/test_chaos_metrics.py::test_a_entropy_uniform",
+  "live_aider_test": "prove_chaos_live.A",
+  "speed": {
+    "p50_us": 8350.399999926594,
+    "p95_us": 16042.799999922863,
+    "budget_us": 300,
+    "pass": false
+  },
+  "verifiability": {
+    "description": "A_vocab.entropy every token + F3 events",
+    "n_tokens_clean": 170,
+    "events": [
+      "prompt_end",
+      "gen_start",
+      "F_disagreement",
+      "G_sparse"
+    ]
+  },
+  "usefulness": {
+    "clean_run_value": 0.9759948253631592,
+    "distressed_run_value": 1.4597386121749878,
+    "separation_ratio": 1.4956417536658884,
+    "min_required_ratio": 1.3,
+    "pass": true
+  },
+  "timestamp": "20260806T214238Z",
+  "used_force_alarm": false
+}

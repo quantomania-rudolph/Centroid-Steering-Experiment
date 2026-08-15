@@ -1,0 +1,21 @@
+The stub `interval merge` that collapses overlaps after sorting by start.
+
+unicaa01_p65_panic/main.py
+```python
+"""Merge overlapping intervals."""
+def merge_intervals(iv: list[tuple[int,int]]) -> list[tuple[int,int]]:
+    if not iv:
+        return []
+    sorted_iv = sorted(iv, key=lambda x: x[0])
+    result = [sorted_iv[0]]
+    for start, end in sorted_iv[1:]:
+        last_start, last_end = result[-1]
+        if start <= last_end:
+            result[-1] = (last_start, max(last_end, end))
+        else:
+            result.append((start, end))
+    return result
+
+def demo():
+    return merge_intervals([(1,3),(2,6)])
+```

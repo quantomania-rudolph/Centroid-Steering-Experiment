@@ -1,0 +1,18 @@
+{
+  "pass": true,
+  "n_layers_beh": 3,
+  "n_layers_cond": 3,
+  "n_pairs": 1,
+  "notes": [
+    "n_pairs=1: bootstrap only \u2014 add more Method B pairs before production CAST"
+  ],
+  "artifacts": {
+    "behavior_L10": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\behavior_L10.pt",
+    "condition_L10": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\condition_L10.pt",
+    "behavior_L16": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\behavior_L16.pt",
+    "condition_L16": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\condition_L16.pt",
+    "behavior_L22": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\behavior_L22.pt",
+    "condition_L22": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\condition_L22.pt",
+    "metadata": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\metadata.json"
+  }
+}

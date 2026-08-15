@@ -1,0 +1,29 @@
+{
+  "d": 3,
+  "prefix_token_ids": [
+    100,
+    101,
+    102
+  ],
+  "tail_token_ids": [
+    200,
+    201
+  ],
+  "full_completion_token_ids": [
+    100,
+    101,
+    102,
+    200,
+    201
+  ],
+  "extract_positions": [
+    10,
+    11
+  ],
+  "extract_layers": [
+    10,
+    16,
+    22
+  ],
+  "tail_kind": "calm"
+}

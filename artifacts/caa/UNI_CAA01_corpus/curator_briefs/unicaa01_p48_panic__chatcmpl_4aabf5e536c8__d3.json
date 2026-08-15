@@ -1,0 +1,53 @@
+{
+  "brief_version": 1,
+  "brief_id": "unicaa01_p48_panic__chatcmpl_4aabf5e536c8__d3",
+  "task_slug": "unicaa01_p48_panic",
+  "pair_id": "p48_idempotency",
+  "invocation_id": "chatcmpl-4aabf5e536c8",
+  "domain": "distributed_systems",
+  "user_message": "Edit unicaa01_p48_panic/main.py only. IdempotencyStore put_if_absent NotImplementedError. Store idempotency keys; demo() second put returns False. Fix the broken code: remove NotImplementedError/TODO stubs where possible. Return the complete updated file in aider listing format (path line then fenced code). Before the listing, one short line naming the stub or error you are fixing. Stress-calibration run \u2014 starter has intentional broken stubs. Lint-clean ruff+pylint if possible. Never pip install. Stdlib only.",
+  "panic_starter_main_py": "\"\"\"Broken idempotency.\"\"\"\nclass IdempotencyStore:\n    def __init__(self):\n        self._seen = set()\n    def put_if_absent(self, key: str) -> bool:\n        raise NotImplementedError(\"put_if_absent not implemented\")\n\ndef demo():\n    s = IdempotencyStore()\n    first = s.put_if_absent(\"k\")\n    second = s.put_if_absent(\"k\")\n    return first and not second\n",
+  "prefix_lock": {
+    "d": 3,
+    "prefix_token_ids": [
+      25958,
+      287,
+      1565
+    ],
+    "prefix_text": "Fixing `",
+    "immutable": true
+  },
+  "divergence_context": {
+    "bad_token_at_d": 2623,
+    "bad_token_at_d_text": "Not",
+    "bad_tail_summary": "REJECTED panic-tail summary (prose only \u2014 DO NOT copy code/imports/phrases from it). Write a clean task-specific fix instead. ing ' ' in 'IdempotencyStore.put_if_absent'. [task main.py] <|im_end|>",
+    "forbidden_patterns": [
+      "NotImplementedError",
+      "TODO",
+      "FIXME",
+      "pip install",
+      "sorry",
+      "cannot",
+      "unable to"
+    ]
+  },
+  "output_contract": {
+    "format": "aider_listing",
+    "target_staging_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\curator_staging\\unicaa01_p48_panic__chatcmpl_4aabf5e536c8__d3\\candidate.txt",
+    "target_admitted_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p48_panic__chatcmpl_4aabf5e536c8__d3.txt",
+    "task_dir": "unicaa01_p48_panic"
+  },
+  "success_criteria": "demo() second put returns False.",
+  "task_summary": "Edit unicaa01_p48_panic/main",
+  "provenance": {
+    "source_pack": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\curation_packs\\unicaa01_corpus_p48_idempotency_panic__chatcmpl-4aabf5e536c8__d3.json",
+    "source_experiment_json": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\out\\unicaa01_corpus_p48_idempotency_panic_latest.json",
+    "tracer_confidence": "high"
+  },
+  "tracer_confidence": "high",
+  "demo_oracle": {
+    "pair_id": "p48_idempotency",
+    "check_mode": "eq",
+    "expect_repr": "True"
+  }
+}

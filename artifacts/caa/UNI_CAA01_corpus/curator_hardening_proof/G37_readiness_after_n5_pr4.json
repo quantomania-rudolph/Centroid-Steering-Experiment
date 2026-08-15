@@ -1,0 +1,15 @@
+{
+  "n5_pass": true,
+  "pr_pass": true,
+  "audit_pass": true,
+  "pipeline_ready": true,
+  "capture_ready": true,
+  "capture_tooling_ready": true,
+  "production_ready": true,
+  "n_natural_admitted": 40,
+  "blockers": [
+    "tau/sigma not calibrated (deferred)",
+    "live injection hook not wired (CAST \u00a73 deferred)"
+  ],
+  "master_rc": 0
+}

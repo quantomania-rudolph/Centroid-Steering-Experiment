@@ -1,0 +1,5750 @@
+{
+  "task_id": "T18",
+  "domain": "pharmacology",
+  "slug": "stem25_competitive_inhibition",
+  "stem10_echo": "T08 Michaelis-Menten",
+  "experiment": "stem25_t18_stem25_competitive_inhibition",
+  "n_invocations": 5,
+  "invocations": [
+    {
+      "invocation_index": 1,
+      "id": "chatcmpl-9bfe53a57a56",
+      "completion_tokens": 18,
+      "seconds": 7.091930900001898,
+      "verdict": "RESOLVED",
+      "code_audit": {
+        "exists": true,
+        "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\qwen code\\stem25_competitive_inhibition\\main.py",
+        "bytes": 584,
+        "stub_hits": [],
+        "distress_hits": [],
+        "stub_score": 0,
+        "distress_score": 0
+      },
+      "assistant_scores": {
+        "stub_hits": [],
+        "distress_hits": [],
+        "stub_score": 0,
+        "distress_score": 0
+      },
+      "checker_audit": {
+        "available": true,
+        "version": 1,
+        "n_tokens": 18,
+        "composites": {
+          "PLDS": 0.5697413653564616,
+          "FCI": 1.3548978070450377,
+          "SRS": 0.19592464198727286,
+          "flags_timeline": []
+        },
+        "timing_p95_ms": 218.27370004029945,
+        "degraded_mode": false,
+        "f2_stride": 8,
+        "checkers": {
+          "A": {
+            "label": "Distribution shape",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "low_margin=0% high_entropy=0%",
+            "metrics": {
+              "max_entropy": 1.3846418857574463,
+              "min_margin": 0.07745873928070068
+            }
+          },
+          "B_vocab": {
+            "label": "Vocab class hygiene",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "distress=0.000 stub=0.000"
+          },
+          "B_transport": {
+            "label": "Transport prototypes",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "rows_with_L16_transport=24/18"
+          },
+          "B_jlens": {
+            "label": "J-lens top-k classes",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "F2/F3 jlens rows=9"
+          },
+          "C": {
+            "label": "Trajectory stability",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "stored_thrash=0% osc=0% calibrated_C_alarm=False"
+          },
+          "D": {
+            "label": "Cross-position contrast",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "ΔH=-0.039 JS=0.000 |ΔM_code|=0.000"
+          },
+          "E": {
+            "label": "Layer curve (cliff)",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "cliff_layer=L16",
+            "metrics": {
+              "cliff_mag": 1.1662642160903403e-05,
+              "series_keys": [
+                "entropy",
+                "code_mass",
+                "distress_mass",
+                "flip_rate"
+              ]
+            }
+          },
+          "F": {
+            "label": "Lens vs logit disagreement",
+            "active": true,
+            "fired": true,
+            "severity": "warn",
+            "detail": "events=1 min_overlap=0.00"
+          },
+          "G": {
+            "label": "Sparse residual",
+            "active": false,
+            "fired": false,
+            "severity": "info",
+            "detail": "events=0 max_relMSE=0.000"
+          }
+        },
+        "all_active": false,
+        "panic_like": 1
+      },
+      "recipe_summary": {
+        "recipe_fires": 3,
+        "recipe_counts": {
+          "F_LENS": 3
+        },
+        "unique_recipes": [
+          "F_LENS"
+        ],
+        "warn_plus": []
+      },
+      "temporal_resolution": {
+        "enough_tokens": true,
+        "metrics": {
+          "B_distress": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "B_stub": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "C": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "A": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          }
+        }
+      },
+      "flag_rates": {
+        "A": 0.0,
+        "B_distress": 0.0,
+        "B_stub": 0.0,
+        "C": 0.0,
+        "D": 0.0
+      },
+      "monitor": {
+        "recipe_timeline": [
+          {
+            "step": 0,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 8,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 16,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          }
+        ],
+        "events_tail": [
+          {
+            "seq": 0,
+            "t_ns": 289691312021100,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9bfe53a57a56",
+            "step": 0,
+            "token_id": 5743,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.433503121137619,
+              "FCI": 0.433503121137619,
+              "SRS": 0.2
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 1,
+            "t_ns": 289691916279000,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9bfe53a57a56",
+            "step": 1,
+            "token_id": 5895,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5270132571458817,
+              "FCI": 1.5270132571458817,
+              "SRS": 0.16341963410377502
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 2,
+            "t_ns": 289692431270400,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9bfe53a57a56",
+            "step": 2,
+            "token_id": 336,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5180103188607367,
+              "FCI": 1.5180103188607368,
+              "SRS": 0.1756130894025167
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 3,
+            "t_ns": 289692615531800,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9bfe53a57a56",
+            "step": 3,
+            "token_id": 17,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5135303945018848,
+              "FCI": 1.5135303945018848,
+              "SRS": 0.181709612856298
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 4,
+            "t_ns": 289692814784400,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9bfe53a57a56",
+            "step": 4,
+            "token_id": 20,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5108252083946722,
+              "FCI": 1.5108252083946723,
+              "SRS": 0.1853676888368794
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 5,
+            "t_ns": 289693017266000,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9bfe53a57a56",
+            "step": 5,
+            "token_id": 761,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5091774086651264,
+              "FCI": 1.5091774086651264,
+              "SRS": 0.18780616093875047
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 6,
+            "t_ns": 289693269426700,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9bfe53a57a56",
+            "step": 6,
+            "token_id": 336,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.507868086224848,
+              "FCI": 1.507868086224848,
+              "SRS": 0.1895481379475004
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 7,
+            "t_ns": 289693560768500,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9bfe53a57a56",
+            "step": 7,
+            "token_id": 14388,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5068864209625267,
+              "FCI": 1.5068864209625268,
+              "SRS": 0.19085462013249235
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 8,
+            "t_ns": 289693905238300,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9bfe53a57a56",
+            "step": 8,
+            "token_id": 15351,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.5174394391579444,
+              "FCI": 1.5174394391579444,
+              "SRS": 0.1918645261606166
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 9,
+            "t_ns": 289694147321600,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9bfe53a57a56",
+            "step": 9,
+            "token_id": 7197,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5157014707200932,
+              "FCI": 1.515701470720093,
+              "SRS": 0.19267806945683472
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 10,
+            "t_ns": 289694386317900,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9bfe53a57a56",
+            "step": 10,
+            "token_id": 1648,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5142946921626363,
+              "FCI": 1.5142946921626363,
+              "SRS": 0.19334254868889938
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 11,
+            "t_ns": 289694669484800,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9bfe53a57a56",
+            "step": 11,
+            "token_id": 4396,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5187765627787839,
+              "FCI": 1.518776562778784,
+              "SRS": 0.19389733629815778
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 12,
+            "t_ns": 289694908672100,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9bfe53a57a56",
+            "step": 12,
+            "token_id": 11929,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5439599403680592,
+              "FCI": 1.543959940368059,
+              "SRS": 0.19436677196753027
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 13,
+            "t_ns": 289695464008900,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9bfe53a57a56",
+            "step": 13,
+            "token_id": 304,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5539008172227937,
+              "FCI": 1.5539008172227937,
+              "SRS": 0.19476914539842097
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 14,
+            "t_ns": 289695824121000,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9bfe53a57a56",
+            "step": 14,
+            "token_id": 3619,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5566625158736175,
+              "FCI": 1.5566625158736174,
+              "SRS": 0.19511786903852624
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 15,
+            "t_ns": 289696094473000,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9bfe53a57a56",
+            "step": 15,
+            "token_id": 69234,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.562832464533771,
+              "FCI": 1.562832464533771,
+              "SRS": 0.19542300222361836
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 16,
+            "t_ns": 289696699927800,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9bfe53a57a56",
+            "step": 16,
+            "token_id": 6172,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.5715020404799077,
+              "FCI": 1.5715020404799076,
+              "SRS": 0.19569223738693492
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 17,
+            "t_ns": 289697075893200,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9bfe53a57a56",
+            "step": 17,
+            "token_id": 151645,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5697413653564616,
+              "FCI": 1.5697413653564616,
+              "SRS": 0.19592464198727286
+            },
+            "degraded_mode": false,
+            "flags": []
+          }
+        ],
+        "recipe_eval": {
+          "n": 18.0,
+          "p50_us": 3.9,
+          "p95_us": 32.5,
+          "max_us": 32.5
+        },
+        "publish": {
+          "n": 18.0,
+          "p50_us": 43.3,
+          "p95_us": 118.1,
+          "max_us": 118.1
+        },
+        "n_recipe_fires": 3
+      },
+      "runtime_ok": true,
+      "runtime_stderr": "",
+      "lint_ok": true
+    },
+    {
+      "invocation_index": 2,
+      "id": "chatcmpl-9ae6113eecbb",
+      "completion_tokens": 22,
+      "seconds": 6.996678699972108,
+      "verdict": "RESOLVED",
+      "code_audit": {
+        "exists": true,
+        "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\qwen code\\stem25_competitive_inhibition\\main.py",
+        "bytes": 584,
+        "stub_hits": [],
+        "distress_hits": [],
+        "stub_score": 0,
+        "distress_score": 0
+      },
+      "assistant_scores": {
+        "stub_hits": [],
+        "distress_hits": [],
+        "stub_score": 0,
+        "distress_score": 0
+      },
+      "checker_audit": {
+        "available": true,
+        "version": 1,
+        "n_tokens": 22,
+        "composites": {
+          "PLDS": 0.5718655682314558,
+          "FCI": 1.352510903769619,
+          "SRS": 0.19608118292215,
+          "flags_timeline": [
+            {
+              "step": 18,
+              "flags": [
+                "A_low_margin"
+              ]
+            }
+          ]
+        },
+        "timing_p95_ms": 32.97480003675446,
+        "degraded_mode": false,
+        "f2_stride": 8,
+        "checkers": {
+          "A": {
+            "label": "Distribution shape",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "low_margin=5% high_entropy=0%",
+            "metrics": {
+              "max_entropy": 1.3193669319152832,
+              "min_margin": 0.020898759365081787
+            }
+          },
+          "B_vocab": {
+            "label": "Vocab class hygiene",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "distress=0.000 stub=0.000"
+          },
+          "B_transport": {
+            "label": "Transport prototypes",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "rows_with_L16_transport=28/22"
+          },
+          "B_jlens": {
+            "label": "J-lens top-k classes",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "F2/F3 jlens rows=9"
+          },
+          "C": {
+            "label": "Trajectory stability",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "stored_thrash=0% osc=0% calibrated_C_alarm=False"
+          },
+          "D": {
+            "label": "Cross-position contrast",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "ΔH=-0.024 JS=0.000 |ΔM_code|=0.000"
+          },
+          "E": {
+            "label": "Layer curve (cliff)",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "cliff_layer=L16",
+            "metrics": {
+              "cliff_mag": 0.0002065517685629903,
+              "series_keys": [
+                "entropy",
+                "code_mass",
+                "distress_mass",
+                "flip_rate"
+              ]
+            }
+          },
+          "F": {
+            "label": "Lens vs logit disagreement",
+            "active": true,
+            "fired": true,
+            "severity": "warn",
+            "detail": "events=1 min_overlap=0.00"
+          },
+          "G": {
+            "label": "Sparse residual",
+            "active": false,
+            "fired": false,
+            "severity": "info",
+            "detail": "events=0 max_relMSE=0.000"
+          }
+        },
+        "all_active": false,
+        "panic_like": 1
+      },
+      "recipe_summary": {
+        "recipe_fires": 4,
+        "recipe_counts": {
+          "F_LENS": 3,
+          "A_UNCERTAIN": 1
+        },
+        "unique_recipes": [
+          "A_UNCERTAIN",
+          "F_LENS"
+        ],
+        "warn_plus": []
+      },
+      "temporal_resolution": {
+        "enough_tokens": true,
+        "metrics": {
+          "B_distress": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "B_stub": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "C": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "A": {
+            "first_q": 0.0,
+            "last_q": 0.2,
+            "resolving": null
+          }
+        }
+      },
+      "flag_rates": {
+        "A": 0.045454545454545456,
+        "B_distress": 0.0,
+        "B_stub": 0.0,
+        "C": 0.0,
+        "D": 0.0
+      },
+      "monitor": {
+        "recipe_timeline": [
+          {
+            "step": 0,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 8,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 16,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 18,
+            "recipe_id": "A_UNCERTAIN",
+            "severity": "tip",
+            "atoms_mask": 1,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          }
+        ],
+        "events_tail": [
+          {
+            "seq": 0,
+            "t_ns": 289699792841500,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9ae6113eecbb",
+            "step": 0,
+            "token_id": 5743,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.32479926536507264,
+              "FCI": 0.32479926536507264,
+              "SRS": 0.19998460682254518
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 1,
+            "t_ns": 289700003358000,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9ae6113eecbb",
+            "step": 1,
+            "token_id": 5895,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.45731730182978936,
+              "FCI": 1.4573173018297894,
+              "SRS": 0.15721042887380465
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 2,
+            "t_ns": 289700217757700,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9ae6113eecbb",
+            "step": 2,
+            "token_id": 336,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.47154542267795324,
+              "FCI": 1.4715454226779532,
+              "SRS": 0.1714736192492031
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 3,
+            "t_ns": 289700428141400,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9ae6113eecbb",
+            "step": 3,
+            "token_id": 17,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.47866289840453646,
+              "FCI": 1.4786628984045365,
+              "SRS": 0.1786051470015309
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 4,
+            "t_ns": 289700634224800,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9ae6113eecbb",
+            "step": 4,
+            "token_id": 20,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4829320988240351,
+              "FCI": 1.482932098824035,
+              "SRS": 0.18288411628289028
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 5,
+            "t_ns": 289700899496200,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9ae6113eecbb",
+            "step": 5,
+            "token_id": 761,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4858441662123652,
+              "FCI": 1.4858441662123651,
+              "SRS": 0.18573667400122604
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 6,
+            "t_ns": 289701138013000,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9ae6113eecbb",
+            "step": 6,
+            "token_id": 336,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4878700685263002,
+              "FCI": 1.4878700685263002,
+              "SRS": 0.1877742920010509
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 7,
+            "t_ns": 289701382508800,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9ae6113eecbb",
+            "step": 7,
+            "token_id": 14388,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4893899221110345,
+              "FCI": 1.4893899221110345,
+              "SRS": 0.18930250550091954
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 8,
+            "t_ns": 289701727861500,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9ae6113eecbb",
+            "step": 8,
+            "token_id": 15351,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.4930947610508749,
+              "FCI": 1.493094761050875,
+              "SRS": 0.1904894172935029
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 9,
+            "t_ns": 289701929939000,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9ae6113eecbb",
+            "step": 9,
+            "token_id": 7197,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4937880258569818,
+              "FCI": 1.4937880258569818,
+              "SRS": 0.1914404728494411
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 10,
+            "t_ns": 289702176239300,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9ae6113eecbb",
+            "step": 10,
+            "token_id": 1648,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4943798484892776,
+              "FCI": 1.4943798484892776,
+              "SRS": 0.1922167510545115
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 11,
+            "t_ns": 289702551041000,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9ae6113eecbb",
+            "step": 11,
+            "token_id": 4396,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5076876582983668,
+              "FCI": 1.5076876582983667,
+              "SRS": 0.19286535513330222
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 12,
+            "t_ns": 289702860726500,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9ae6113eecbb",
+            "step": 12,
+            "token_id": 11929,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5295889425537711,
+              "FCI": 1.529588942553771,
+              "SRS": 0.19341417396920205
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 13,
+            "t_ns": 289703117872700,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9ae6113eecbb",
+            "step": 13,
+            "token_id": 389,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5435918372025218,
+              "FCI": 1.5435918372025217,
+              "SRS": 0.1938839730001201
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 14,
+            "t_ns": 289703369651100,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9ae6113eecbb",
+            "step": 14,
+            "token_id": 1007,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5505752190358226,
+              "FCI": 1.5505752190358226,
+              "SRS": 0.19429170813344543
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 15,
+            "t_ns": 289703582852000,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9ae6113eecbb",
+            "step": 15,
+            "token_id": 50289,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5474152120117841,
+              "FCI": 1.5474152120117841,
+              "SRS": 0.19464847626231224
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 16,
+            "t_ns": 289703957285600,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9ae6113eecbb",
+            "step": 16,
+            "token_id": 23450,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.5446372613518143,
+              "FCI": 1.5446372613518142,
+              "SRS": 0.19496327177629388
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 17,
+            "t_ns": 289704163015500,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9ae6113eecbb",
+            "step": 17,
+            "token_id": 5424,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5604747177085672,
+              "FCI": 1.5604747177085672,
+              "SRS": 0.19523730080181287
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 18,
+            "t_ns": 289704367515200,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9ae6113eecbb",
+            "step": 18,
+            "token_id": 323,
+            "atoms": {
+              "A_uncertain": 1,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": "A_UNCERTAIN",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "A_UNCERTAIN"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.5745064340562621,
+              "FCI": 1.574506434056262,
+              "SRS": 0.19547172656571757
+            },
+            "degraded_mode": false,
+            "flags": [
+              "A_low_margin"
+            ]
+          },
+          {
+            "seq": 19,
+            "t_ns": 289704599747000,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9ae6113eecbb",
+            "step": 19,
+            "token_id": 2647,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5743463991984178,
+              "FCI": 1.5743463991984177,
+              "SRS": 0.19569814023743168
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 20,
+            "t_ns": 289704852651600,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9ae6113eecbb",
+            "step": 20,
+            "token_id": 54836,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5732480435526985,
+              "FCI": 1.5732480435526985,
+              "SRS": 0.19590299070231587
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 21,
+            "t_ns": 289705064115900,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-9ae6113eecbb",
+            "step": 21,
+            "token_id": 151645,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5718655682314557,
+              "FCI": 1.5718655682314557,
+              "SRS": 0.19608118292215
+            },
+            "degraded_mode": false,
+            "flags": []
+          }
+        ],
+        "recipe_eval": {
+          "n": 22.0,
+          "p50_us": 2.9,
+          "p95_us": 17.9,
+          "max_us": 21.6
+        },
+        "publish": {
+          "n": 22.0,
+          "p50_us": 32.3,
+          "p95_us": 117.1,
+          "max_us": 1082.2
+        },
+        "n_recipe_fires": 4
+      },
+      "runtime_ok": true,
+      "runtime_stderr": "",
+      "lint_ok": true
+    },
+    {
+      "invocation_index": 3,
+      "id": "chatcmpl-a5b82b6f4e14",
+      "completion_tokens": 308,
+      "seconds": 81.80922200001078,
+      "verdict": "RESOLVED",
+      "code_audit": {
+        "exists": true,
+        "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\qwen code\\stem25_competitive_inhibition\\main.py",
+        "bytes": 584,
+        "stub_hits": [],
+        "distress_hits": [],
+        "stub_score": 0,
+        "distress_score": 0
+      },
+      "assistant_scores": {
+        "stub_hits": [],
+        "distress_hits": [],
+        "stub_score": 0,
+        "distress_score": 0
+      },
+      "checker_audit": {
+        "available": true,
+        "version": 1,
+        "n_tokens": 308,
+        "composites": {
+          "PLDS": 0.491233497792531,
+          "FCI": 1.1186972172478196,
+          "SRS": 0.16989707195195858,
+          "flags_timeline": [
+            {
+              "step": 55,
+              "flags": [
+                "A_low_margin"
+              ]
+            },
+            {
+              "step": 298,
+              "flags": [
+                "A_low_margin"
+              ]
+            },
+            {
+              "step": 299,
+              "flags": [
+                "A_low_margin"
+              ]
+            }
+          ]
+        },
+        "timing_p95_ms": 30.345900042448193,
+        "degraded_mode": false,
+        "f2_stride": 8,
+        "checkers": {
+          "A": {
+            "label": "Distribution shape",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "low_margin=1% high_entropy=0%",
+            "metrics": {
+              "max_entropy": 1.9234505891799927,
+              "min_margin": 0.015623360872268677
+            }
+          },
+          "B_vocab": {
+            "label": "Vocab class hygiene",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "distress=0.001 stub=0.000"
+          },
+          "B_transport": {
+            "label": "Transport prototypes",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "rows_with_L16_transport=386/308"
+          },
+          "B_jlens": {
+            "label": "J-lens top-k classes",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "F2/F3 jlens rows=117"
+          },
+          "C": {
+            "label": "Trajectory stability",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "stored_thrash=0% osc=0% calibrated_C_alarm=False"
+          },
+          "D": {
+            "label": "Cross-position contrast",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "ΔH=-0.166 JS=0.000 |ΔM_code|=0.000"
+          },
+          "E": {
+            "label": "Layer curve (cliff)",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "cliff_layer=L10",
+            "metrics": {
+              "cliff_mag": -0.00019566424481287648,
+              "series_keys": [
+                "entropy",
+                "code_mass",
+                "distress_mass",
+                "flip_rate"
+              ]
+            }
+          },
+          "F": {
+            "label": "Lens vs logit disagreement",
+            "active": true,
+            "fired": true,
+            "severity": "warn",
+            "detail": "events=1 min_overlap=0.00"
+          },
+          "G": {
+            "label": "Sparse residual",
+            "active": false,
+            "fired": false,
+            "severity": "info",
+            "detail": "events=0 max_relMSE=0.000"
+          }
+        },
+        "all_active": false,
+        "panic_like": 1
+      },
+      "recipe_summary": {
+        "recipe_fires": 41,
+        "recipe_counts": {
+          "F_LENS": 39,
+          "A_UNCERTAIN": 2
+        },
+        "unique_recipes": [
+          "A_UNCERTAIN",
+          "F_LENS"
+        ],
+        "warn_plus": []
+      },
+      "temporal_resolution": {
+        "enough_tokens": true,
+        "metrics": {
+          "B_distress": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "B_stub": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "C": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "A": {
+            "first_q": 0.012987012987012988,
+            "last_q": 0.025974025974025976,
+            "resolving": null
+          }
+        }
+      },
+      "flag_rates": {
+        "A": 0.00974025974025974,
+        "B_distress": 0.0,
+        "B_stub": 0.0,
+        "C": 0.0,
+        "D": 0.0
+      },
+      "monitor": {
+        "recipe_timeline": [
+          {
+            "step": 0,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 8,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 16,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 24,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 32,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 40,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 48,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 55,
+            "recipe_id": "A_UNCERTAIN",
+            "severity": "tip",
+            "atoms_mask": 1,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 56,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 64,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 72,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 80,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 88,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 96,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 104,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 112,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 120,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 128,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 136,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 144,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 152,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 160,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 168,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 176,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 184,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 192,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 200,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 208,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 216,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 224,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 232,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 240,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 248,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 256,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 264,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 272,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 280,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 288,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 296,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 298,
+            "recipe_id": "A_UNCERTAIN",
+            "severity": "tip",
+            "atoms_mask": 1,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 304,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          }
+        ],
+        "events_tail": [
+          {
+            "seq": 244,
+            "t_ns": 289771499587800,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 244,
+            "token_id": 1887,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4867475265106136,
+              "FCI": 1.4867475265106136,
+              "SRS": 0.16817847449239562
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 245,
+            "t_ns": 289771708728500,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 245,
+            "token_id": 368,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4868015101750946,
+              "FCI": 1.4868015101750947,
+              "SRS": 0.16830783024365217
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 246,
+            "t_ns": 289771925658600,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 246,
+            "token_id": 1464,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.48685495198910445,
+              "FCI": 1.4868549519891046,
+              "SRS": 0.1684361386168348
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 247,
+            "t_ns": 289772130093700,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 247,
+            "token_id": 2240,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.48690797600098606,
+              "FCI": 1.486907976000986,
+              "SRS": 0.16856341167786096
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 248,
+            "t_ns": 289772473298500,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 248,
+            "token_id": 510,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.48696063940822876,
+              "FCI": 1.4869606394082289,
+              "SRS": 0.16868965912018113
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 249,
+            "t_ns": 289772687440400,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 249,
+            "token_id": 220,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4870130311932855,
+              "FCI": 1.4870130311932854,
+              "SRS": 0.16881490038834474
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 250,
+            "t_ns": 289772896858500,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 250,
+            "token_id": 348,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4877067728432341,
+              "FCI": 1.487706772843234,
+              "SRS": 0.16893914381309236
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 251,
+            "t_ns": 289773104970300,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 251,
+            "token_id": 284,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.48776139611686015,
+              "FCI": 1.48776139611686,
+              "SRS": 0.1690623826420486
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 252,
+            "t_ns": 289773338677100,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 252,
+            "token_id": 16661,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.48782791685273447,
+              "FCI": 1.4878279168527344,
+              "SRS": 0.16918466571460966
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 253,
+            "t_ns": 289773543725900,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 253,
+            "token_id": 741,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4878784721218827,
+              "FCI": 1.4878784721218827,
+              "SRS": 0.16930598373992664
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 254,
+            "t_ns": 289773748377900,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 254,
+            "token_id": 220,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.48792737341680037,
+              "FCI": 1.4879273734168004,
+              "SRS": 0.16942635221016264
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 255,
+            "t_ns": 289773990078800,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 255,
+            "token_id": 2060,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4883362143140014,
+              "FCI": 1.4883362143140015,
+              "SRS": 0.16954572857152705
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 256,
+            "t_ns": 289774364334000,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 256,
+            "token_id": 3647,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.4883827417361723,
+              "FCI": 1.4883827417361724,
+              "SRS": 0.16966422768214368
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 257,
+            "t_ns": 289774576417500,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 257,
+            "token_id": 3747,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4884359793321795,
+              "FCI": 1.4884359793321795,
+              "SRS": 0.16978088737038366
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 258,
+            "t_ns": 289774807375000,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 258,
+            "token_id": 481,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4884812791894552,
+              "FCI": 1.4884812791894553,
+              "SRS": 0.1698975479832201
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 259,
+            "t_ns": 289775039964700,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 259,
+            "token_id": 220,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.48852997638095447,
+              "FCI": 1.4885299763809545,
+              "SRS": 0.1700133266448231
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 260,
+            "t_ns": 289775256829800,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 260,
+            "token_id": 20,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4888859625067739,
+              "FCI": 1.4888859625067739,
+              "SRS": 0.17012821811088957
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 261,
+            "t_ns": 289775481454400,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 261,
+            "token_id": 13,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4879773886926837,
+              "FCI": 1.4879773886926837,
+              "SRS": 0.16947907505775525
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 262,
+            "t_ns": 289775698262000,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 262,
+            "token_id": 15,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.48803206305025765,
+              "FCI": 1.4880320630502577,
+              "SRS": 0.1695951241733817
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 263,
+            "t_ns": 289775914771800,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 263,
+            "token_id": 8,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.48713136764759185,
+              "FCI": 1.487131367647592,
+              "SRS": 0.16895277028313166
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 264,
+            "t_ns": 289776263452700,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 264,
+            "token_id": 366,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.4871800539148011,
+              "FCI": 1.487180053914801,
+              "SRS": 0.1690699296405538
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 265,
+            "t_ns": 289776477211600,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 265,
+            "token_id": 220,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4872282714213645,
+              "FCI": 1.4872282714213645,
+              "SRS": 0.1691862080865855
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 266,
+            "t_ns": 289776714198600,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 266,
+            "token_id": 15,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.487276731844686,
+              "FCI": 1.487276731844686,
+              "SRS": 0.16930161554471995
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 267,
+            "t_ns": 289776941904200,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 267,
+            "token_id": 13,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4863913745945711,
+              "FCI": 1.4863913745945712,
+              "SRS": 0.16866989309865757
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 268,
+            "t_ns": 289777172861700,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 268,
+            "token_id": 20,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4864467051069825,
+              "FCI": 1.4864467051069825,
+              "SRS": 0.1687863618964006
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 269,
+            "t_ns": 289777505300600,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 269,
+            "token_id": 11,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.48557364798901964,
+              "FCI": 1.4855736479890196,
+              "SRS": 0.16816131724779962
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 270,
+            "t_ns": 289777772772500,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 270,
+            "token_id": 348,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4857495303450546,
+              "FCI": 1.4857495303450545,
+              "SRS": 0.16827880316201438
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 271,
+            "t_ns": 289777978851900,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 271,
+            "token_id": 198,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.48491109727038606,
+              "FCI": 1.484911097270386,
+              "SRS": 0.16766311071022735
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 272,
+            "t_ns": 289778343736800,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 272,
+            "token_id": 220,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.4849663945759753,
+              "FCI": 1.4849663945759752,
+              "SRS": 0.16778156084934717
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 273,
+            "t_ns": 289778572348000,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 273,
+            "token_id": 1173,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4850237152202752,
+              "FCI": 1.4850237152202752,
+              "SRS": 0.16789914616871363
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 274,
+            "t_ns": 289778777975300,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 274,
+            "token_id": 955,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.48507825002141153,
+              "FCI": 1.4850782500214115,
+              "SRS": 0.1680158764717628
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 275,
+            "t_ns": 289778977586200,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 275,
+            "token_id": 1,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4851324094097314,
+              "FCI": 1.4851324094097313,
+              "SRS": 0.1681317609772999
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 276,
+            "t_ns": 289779180225000,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 276,
+            "token_id": 85,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.48518633919173243,
+              "FCI": 1.4851863391917324,
+              "SRS": 0.16824680877160567
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 277,
+            "t_ns": 289779394884800,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 277,
+            "token_id": 1165,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4852401906032791,
+              "FCI": 1.485240190603279,
+              "SRS": 0.16836102260171917
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 278,
+            "t_ns": 289779618769900,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 278,
+            "token_id": 85,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4852931929105189,
+              "FCI": 1.4852931929105189,
+              "SRS": 0.16847442395440118
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 279,
+            "t_ns": 289779831190400,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 279,
+            "token_id": 16976,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.48534575775843286,
+              "FCI": 1.4853457577584328,
+              "SRS": 0.16858701397334727
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 280,
+            "t_ns": 289780202460900,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 280,
+            "token_id": 19,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.48539815165305117,
+              "FCI": 1.4853981516530512,
+              "SRS": 0.1686988039581911
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 281,
+            "t_ns": 289780411349600,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 281,
+            "token_id": 69,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4854499671393768,
+              "FCI": 1.4854499671393768,
+              "SRS": 0.16880980108946705
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 282,
+            "t_ns": 289780614938000,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 282,
+            "token_id": 9863,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4855074732291207,
+              "FCI": 1.4855074732291207,
+              "SRS": 0.16892001369784493
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 283,
+            "t_ns": 289780823524200,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 283,
+            "token_id": 3623,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.48555908504262335,
+              "FCI": 1.4855590850426235,
+              "SRS": 0.1690294494813897
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 284,
+            "t_ns": 289781027310100,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 284,
+            "token_id": 333,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4847326803019019,
+              "FCI": 1.4847326803019019,
+              "SRS": 0.168436367123617
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 285,
+            "t_ns": 289781231658900,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 285,
+            "token_id": 1304,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4847860755857828,
+              "FCI": 1.4847860755857827,
+              "SRS": 0.16854672947564006
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 286,
+            "t_ns": 289781498383400,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 286,
+            "token_id": 606,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.484839239088071,
+              "FCI": 1.484839239088071,
+              "SRS": 0.16865632275272843
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 287,
+            "t_ns": 289781712366300,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 287,
+            "token_id": 563,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4848918913747193,
+              "FCI": 1.4848918913747193,
+              "SRS": 0.16876515496539257
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 288,
+            "t_ns": 289782080633400,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 288,
+            "token_id": 621,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.484944203728763,
+              "FCI": 1.484944203728763,
+              "SRS": 0.16887323376645685
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 289,
+            "t_ns": 289782288415700,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 289,
+            "token_id": 13265,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.48499624047901896,
+              "FCI": 1.484996240479019,
+              "SRS": 0.16898056744312426
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 290,
+            "t_ns": 289782493656900,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 290,
+            "token_id": 3817,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.48504782457638734,
+              "FCI": 1.4850478245763874,
+              "SRS": 0.1690871634312922
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 291,
+            "t_ns": 289782736893300,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 291,
+            "token_id": 21082,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.48509909412773,
+              "FCI": 1.48509909412773,
+              "SRS": 0.16919302930995217
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 292,
+            "t_ns": 289783029139800,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 292,
+            "token_id": 220,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.48514999266472586,
+              "FCI": 1.4851499926647258,
+              "SRS": 0.16929817255379453
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 293,
+            "t_ns": 289783313010000,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 293,
+            "token_id": 1887,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.48520058398806054,
+              "FCI": 1.4852005839880604,
+              "SRS": 0.16940260053830544
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 294,
+            "t_ns": 289783591343000,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 294,
+            "token_id": 741,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.48525088367353303,
+              "FCI": 1.485250883673533,
+              "SRS": 0.16950632021846082
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 295,
+            "t_ns": 289783826236500,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 295,
+            "token_id": 13874,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.48588626925631295,
+              "FCI": 1.485886269256313,
+              "SRS": 0.16960933932388347
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 296,
+            "t_ns": 289784226181300,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 296,
+            "token_id": 19324,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.4862023453592466,
+              "FCI": 1.4862023453592466,
+              "SRS": 0.1697116647807054
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 297,
+            "t_ns": 289784443262000,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 297,
+            "token_id": 1986,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.48659124238603213,
+              "FCI": 1.4865912423860321,
+              "SRS": 0.16981330348949497
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 298,
+            "t_ns": 289784737182200,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 298,
+            "token_id": 1265,
+            "atoms": {
+              "A_uncertain": 1,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": "A_UNCERTAIN",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "A_UNCERTAIN"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.4879179519975479,
+              "FCI": 1.4879179519975478,
+              "SRS": 0.16991426234070067
+            },
+            "degraded_mode": false,
+            "flags": [
+              "A_low_margin"
+            ]
+          },
+          {
+            "seq": 299,
+            "t_ns": 289784965126100,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 299,
+            "token_id": 3367,
+            "atoms": {
+              "A_uncertain": 1,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4894051458261822,
+              "FCI": 1.4894051458261823,
+              "SRS": 0.17001454813289835
+            },
+            "degraded_mode": false,
+            "flags": [
+              "A_low_margin"
+            ]
+          },
+          {
+            "seq": 300,
+            "t_ns": 289785179306300,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 300,
+            "token_id": 279,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4894809786493858,
+              "FCI": 1.489480978649386,
+              "SRS": 0.1701141675743173
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 301,
+            "t_ns": 289785421115700,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 301,
+            "token_id": 8502,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.489932175723593,
+              "FCI": 1.489932175723593,
+              "SRS": 0.1702131272843361
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 302,
+            "t_ns": 289785639249100,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 302,
+            "token_id": 5189,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49094867664594405,
+              "FCI": 1.490948676645944,
+              "SRS": 0.17030707235047324
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 303,
+            "t_ns": 289785841799300,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 303,
+            "token_id": 304,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49123379605380274,
+              "FCI": 1.4912337960538027,
+              "SRS": 0.17015885368830863
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 304,
+            "t_ns": 289786199203500,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 304,
+            "token_id": 279,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.49172704066017753,
+              "FCI": 1.4917270406601775,
+              "SRS": 0.1702566935122814
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 305,
+            "t_ns": 289786411680800,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 305,
+            "token_id": 1681,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4919819291325483,
+              "FCI": 1.4919819291325482,
+              "SRS": 0.1703538938602805
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 306,
+            "t_ns": 289786664443800,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 306,
+            "token_id": 13,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49119442900749805,
+              "FCI": 1.491194429007498,
+              "SRS": 0.169799016811737
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 307,
+            "t_ns": 289786898212500,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-a5b82b6f4e14",
+            "step": 307,
+            "token_id": 151645,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.491233497792531,
+              "FCI": 1.491233497792531,
+              "SRS": 0.16989707195195863
+            },
+            "degraded_mode": false,
+            "flags": []
+          }
+        ],
+        "recipe_eval": {
+          "n": 308.0,
+          "p50_us": 3.2,
+          "p95_us": 35.8,
+          "max_us": 331.3
+        },
+        "publish": {
+          "n": 308.0,
+          "p50_us": 28.9,
+          "p95_us": 131.1,
+          "max_us": 452.1
+        },
+        "n_recipe_fires": 41
+      },
+      "runtime_ok": true,
+      "runtime_stderr": "",
+      "lint_ok": true
+    },
+    {
+      "invocation_index": 4,
+      "id": "chatcmpl-cdfd4ee8eb5b",
+      "completion_tokens": 12,
+      "seconds": 4.623234999948181,
+      "verdict": "RESOLVED",
+      "code_audit": {
+        "exists": true,
+        "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\qwen code\\stem25_competitive_inhibition\\main.py",
+        "bytes": 584,
+        "stub_hits": [],
+        "distress_hits": [],
+        "stub_score": 0,
+        "distress_score": 0
+      },
+      "assistant_scores": {
+        "stub_hits": [],
+        "distress_hits": [],
+        "stub_score": 0,
+        "distress_score": 0
+      },
+      "checker_audit": {
+        "available": true,
+        "version": 1,
+        "n_tokens": 12,
+        "composites": {
+          "PLDS": 0.6946552480638198,
+          "FCI": 1.9129437225637957,
+          "SRS": 0.18980212060496343,
+          "flags_timeline": [
+            {
+              "step": 3,
+              "flags": [
+                "A_low_margin"
+              ]
+            },
+            {
+              "step": 10,
+              "flags": [
+                "A_low_margin"
+              ]
+            }
+          ]
+        },
+        "timing_p95_ms": 18.050999962724745,
+        "degraded_mode": false,
+        "f2_stride": 8,
+        "checkers": {
+          "A": {
+            "label": "Distribution shape",
+            "active": true,
+            "fired": true,
+            "severity": "warn",
+            "detail": "low_margin=17% high_entropy=0%",
+            "metrics": {
+              "max_entropy": 1.5564298629760742,
+              "min_margin": 0.016704559326171875
+            }
+          },
+          "B_vocab": {
+            "label": "Vocab class hygiene",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "distress=0.000 stub=0.000"
+          },
+          "B_transport": {
+            "label": "Transport prototypes",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "rows_with_L16_transport=16/12"
+          },
+          "B_jlens": {
+            "label": "J-lens top-k classes",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "F2/F3 jlens rows=6"
+          },
+          "C": {
+            "label": "Trajectory stability",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "stored_thrash=0% osc=0% calibrated_C_alarm=False"
+          },
+          "D": {
+            "label": "Cross-position contrast",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "ΔH=-0.046 JS=0.000 |ΔM_code|=0.000"
+          },
+          "E": {
+            "label": "Layer curve (cliff)",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "cliff_layer=L10",
+            "metrics": {
+              "cliff_mag": -0.0002455612023670728,
+              "series_keys": [
+                "entropy",
+                "code_mass",
+                "distress_mass",
+                "flip_rate"
+              ]
+            }
+          },
+          "F": {
+            "label": "Lens vs logit disagreement",
+            "active": true,
+            "fired": true,
+            "severity": "warn",
+            "detail": "events=1 min_overlap=0.00"
+          },
+          "G": {
+            "label": "Sparse residual",
+            "active": false,
+            "fired": false,
+            "severity": "info",
+            "detail": "events=0 max_relMSE=0.000"
+          }
+        },
+        "all_active": false,
+        "panic_like": 2
+      },
+      "recipe_summary": {
+        "recipe_fires": 4,
+        "recipe_counts": {
+          "F_LENS": 2,
+          "A_UNCERTAIN": 2
+        },
+        "unique_recipes": [
+          "A_UNCERTAIN",
+          "F_LENS"
+        ],
+        "warn_plus": []
+      },
+      "temporal_resolution": {
+        "enough_tokens": true,
+        "metrics": {
+          "B_distress": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "B_stub": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "C": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "A": {
+            "first_q": 0.0,
+            "last_q": 0.3333333333333333,
+            "resolving": null
+          }
+        }
+      },
+      "flag_rates": {
+        "A": 0.16666666666666666,
+        "B_distress": 0.0,
+        "B_stub": 0.0,
+        "C": 0.0,
+        "D": 0.0
+      },
+      "monitor": {
+        "recipe_timeline": [
+          {
+            "step": 0,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 3,
+            "recipe_id": "A_UNCERTAIN",
+            "severity": "tip",
+            "atoms_mask": 1,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 8,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 10,
+            "recipe_id": "A_UNCERTAIN",
+            "severity": "tip",
+            "atoms_mask": 1,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          }
+        ],
+        "events_tail": [
+          {
+            "seq": 0,
+            "t_ns": 289789613424300,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-cdfd4ee8eb5b",
+            "step": 0,
+            "token_id": 5743,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.40965865552425385,
+              "FCI": 0.40965865552425385,
+              "SRS": 0.2
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 1,
+            "t_ns": 289789925750400,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-cdfd4ee8eb5b",
+            "step": 1,
+            "token_id": 25,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.513952448964119,
+              "FCI": 1.513952448964119,
+              "SRS": 0.1389406979084015
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 2,
+            "t_ns": 289790163527000,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-cdfd4ee8eb5b",
+            "step": 2,
+            "token_id": 4396,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5709654043118159,
+              "FCI": 1.5709654043118157,
+              "SRS": 0.159293798605601
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 3,
+            "t_ns": 289790394888800,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-cdfd4ee8eb5b",
+            "step": 3,
+            "token_id": 14806,
+            "atoms": {
+              "A_uncertain": 1,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": "A_UNCERTAIN",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "A_UNCERTAIN"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.6505009196698666,
+              "FCI": 1.6505009196698666,
+              "SRS": 0.16947034895420077
+            },
+            "degraded_mode": false,
+            "flags": [
+              "A_low_margin"
+            ]
+          },
+          {
+            "seq": 4,
+            "t_ns": 289790593845200,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-cdfd4ee8eb5b",
+            "step": 4,
+            "token_id": 369,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.6536891817725519,
+              "FCI": 1.6536891817725519,
+              "SRS": 0.1755754255991633
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 5,
+            "t_ns": 289790790379200,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-cdfd4ee8eb5b",
+            "step": 5,
+            "token_id": 92482,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.6657561585039579,
+              "FCI": 1.665756158503958,
+              "SRS": 0.17964618799930276
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 6,
+            "t_ns": 289790988631600,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-cdfd4ee8eb5b",
+            "step": 6,
+            "token_id": 8191,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.6421653954914421,
+              "FCI": 1.6421653954914421,
+              "SRS": 0.1825538754279738
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 7,
+            "t_ns": 289791220618600,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-cdfd4ee8eb5b",
+            "step": 7,
+            "token_id": 323,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.6532410776580377,
+              "FCI": 1.6532410776580377,
+              "SRS": 0.1847060840823815
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 8,
+            "t_ns": 289791580248000,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-cdfd4ee8eb5b",
+            "step": 8,
+            "token_id": 7500,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.667907319330728,
+              "FCI": 1.667907319330728,
+              "SRS": 0.186405408073228
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 9,
+            "t_ns": 289791777824100,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-cdfd4ee8eb5b",
+            "step": 9,
+            "token_id": 1273,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.6877550916643941,
+              "FCI": 1.687755091664394,
+              "SRS": 0.1877648672659052
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 10,
+            "t_ns": 289791977017100,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-cdfd4ee8eb5b",
+            "step": 10,
+            "token_id": 27419,
+            "atoms": {
+              "A_uncertain": 1,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": "A_UNCERTAIN",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "A_UNCERTAIN"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.705255943425858,
+              "FCI": 1.705255943425858,
+              "SRS": 0.18887715205991382
+            },
+            "degraded_mode": false,
+            "flags": [
+              "A_low_margin"
+            ]
+          },
+          {
+            "seq": 11,
+            "t_ns": 289792271096100,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-cdfd4ee8eb5b",
+            "step": 11,
+            "token_id": 151645,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.6946552480638198,
+              "FCI": 1.6946552480638197,
+              "SRS": 0.18980212060496343
+            },
+            "degraded_mode": false,
+            "flags": []
+          }
+        ],
+        "recipe_eval": {
+          "n": 12.0,
+          "p50_us": 3.2,
+          "p95_us": 43.6,
+          "max_us": 43.6
+        },
+        "publish": {
+          "n": 12.0,
+          "p50_us": 28.5,
+          "p95_us": 85.8,
+          "max_us": 85.8
+        },
+        "n_recipe_fires": 4
+      },
+      "runtime_ok": true,
+      "runtime_stderr": "",
+      "lint_ok": true
+    },
+    {
+      "invocation_index": 5,
+      "id": "chatcmpl-b351dc064521",
+      "completion_tokens": 15,
+      "seconds": 5.492049699998461,
+      "verdict": "RESOLVED",
+      "code_audit": {
+        "exists": true,
+        "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\qwen code\\stem25_competitive_inhibition\\main.py",
+        "bytes": 584,
+        "stub_hits": [],
+        "distress_hits": [],
+        "stub_score": 0,
+        "distress_score": 0
+      },
+      "assistant_scores": {
+        "stub_hits": [],
+        "distress_hits": [],
+        "stub_score": 0,
+        "distress_score": 0
+      },
+      "checker_audit": {
+        "available": true,
+        "version": 1,
+        "n_tokens": 15,
+        "composites": {
+          "PLDS": 0.5827626667423298,
+          "FCI": 1.4398056318905825,
+          "SRS": 0.1915846979917903,
+          "flags_timeline": []
+        },
+        "timing_p95_ms": 58.928599988576025,
+        "degraded_mode": false,
+        "f2_stride": 8,
+        "checkers": {
+          "A": {
+            "label": "Distribution shape",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "low_margin=0% high_entropy=0%",
+            "metrics": {
+              "max_entropy": 1.2652567625045776,
+              "min_margin": 0.15160426497459412
+            }
+          },
+          "B_vocab": {
+            "label": "Vocab class hygiene",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "distress=0.000 stub=0.000"
+          },
+          "B_transport": {
+            "label": "Transport prototypes",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "rows_with_L16_transport=19/15"
+          },
+          "B_jlens": {
+            "label": "J-lens top-k classes",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "F2/F3 jlens rows=6"
+          },
+          "C": {
+            "label": "Trajectory stability",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "stored_thrash=0% osc=0% calibrated_C_alarm=False"
+          },
+          "D": {
+            "label": "Cross-position contrast",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "ΔH=-0.055 JS=0.000 |ΔM_code|=0.000"
+          },
+          "E": {
+            "label": "Layer curve (cliff)",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "cliff_layer=L16",
+            "metrics": {
+              "cliff_mag": -0.00019765297571816554,
+              "series_keys": [
+                "entropy",
+                "code_mass",
+                "distress_mass",
+                "flip_rate"
+              ]
+            }
+          },
+          "F": {
+            "label": "Lens vs logit disagreement",
+            "active": true,
+            "fired": true,
+            "severity": "warn",
+            "detail": "events=1 min_overlap=0.00"
+          },
+          "G": {
+            "label": "Sparse residual",
+            "active": false,
+            "fired": false,
+            "severity": "info",
+            "detail": "events=0 max_relMSE=0.000"
+          }
+        },
+        "all_active": false,
+        "panic_like": 1
+      },
+      "recipe_summary": {
+        "recipe_fires": 2,
+        "recipe_counts": {
+          "F_LENS": 2
+        },
+        "unique_recipes": [
+          "F_LENS"
+        ],
+        "warn_plus": []
+      },
+      "temporal_resolution": {
+        "enough_tokens": true,
+        "metrics": {
+          "B_distress": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "B_stub": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "C": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "A": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          }
+        }
+      },
+      "flag_rates": {
+        "A": 0.0,
+        "B_distress": 0.0,
+        "B_stub": 0.0,
+        "C": 0.0,
+        "D": 0.0
+      },
+      "monitor": {
+        "recipe_timeline": [
+          {
+            "step": 0,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 8,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          }
+        ],
+        "events_tail": [
+          {
+            "seq": 0,
+            "t_ns": 289814929916000,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-b351dc064521",
+            "step": 0,
+            "token_id": 5743,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.4814535677433014,
+              "FCI": 0.4814535677433014,
+              "SRS": 0.2
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 1,
+            "t_ns": 289815139922200,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-b351dc064521",
+            "step": 1,
+            "token_id": 25,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5159739777445793,
+              "FCI": 1.5159739777445793,
+              "SRS": 0.13694832921028138
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 2,
+            "t_ns": 289815331447100,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-b351dc064521",
+            "step": 2,
+            "token_id": 39970,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5778871923685074,
+              "FCI": 1.5778871923685074,
+              "SRS": 0.15796555280685426
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 3,
+            "t_ns": 289815555589600,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-b351dc064521",
+            "step": 3,
+            "token_id": 14806,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.6374939419329166,
+              "FCI": 1.6374939419329166,
+              "SRS": 0.1684741646051407
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 4,
+            "t_ns": 289815756931100,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-b351dc064521",
+            "step": 4,
+            "token_id": 369,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.6189327427730632,
+              "FCI": 1.618932742773063,
+              "SRS": 0.17477906238918878
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 5,
+            "t_ns": 289815977258100,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-b351dc064521",
+            "step": 5,
+            "token_id": 92482,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.6126752776392361,
+              "FCI": 1.6126752776392361,
+              "SRS": 0.17898255199099064
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 6,
+            "t_ns": 289816222760900,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-b351dc064521",
+            "step": 6,
+            "token_id": 8191,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5966193500056209,
+              "FCI": 1.596619350005621,
+              "SRS": 0.18198504456370626
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 7,
+            "t_ns": 289816422176700,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-b351dc064521",
+            "step": 7,
+            "token_id": 323,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.6066602055811217,
+              "FCI": 1.6066602055811217,
+              "SRS": 0.18421632373168678
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 8,
+            "t_ns": 289816940395100,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-b351dc064521",
+            "step": 8,
+            "token_id": 4057,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.5975923777776365,
+              "FCI": 1.5975923777776364,
+              "SRS": 0.18597006553927714
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 9,
+            "t_ns": 289817159854700,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-b351dc064521",
+            "step": 9,
+            "token_id": 5614,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.6098208011247493,
+              "FCI": 1.6098208011247492,
+              "SRS": 0.1873801319134782
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 10,
+            "t_ns": 289817412278600,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-b351dc064521",
+            "step": 10,
+            "token_id": 77015,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.6000283584953959,
+              "FCI": 1.600028358495396,
+              "SRS": 0.18852739264861654
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 11,
+            "t_ns": 289817629198100,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-b351dc064521",
+            "step": 11,
+            "token_id": 304,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.6010390412576403,
+              "FCI": 1.6010390412576403,
+              "SRS": 0.18948173685065892
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 12,
+            "t_ns": 289817837294900,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-b351dc064521",
+            "step": 12,
+            "token_id": 1887,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.593598726381926,
+              "FCI": 1.593598726381926,
+              "SRS": 0.19029083401599284
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 13,
+            "t_ns": 289818026479900,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-b351dc064521",
+            "step": 13,
+            "token_id": 368,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5885884743636893,
+              "FCI": 1.5885884743636893,
+              "SRS": 0.1909836707013775
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 14,
+            "t_ns": 289818227792500,
+            "session_id": "stem25_t18_stem25_competitive_inhibition_20260806T131945Z",
+            "invocation_id": "chatcmpl-b351dc064521",
+            "step": 14,
+            "token_id": 151645,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5827626667423298,
+              "FCI": 1.5827626667423298,
+              "SRS": 0.19158469799179026
+            },
+            "degraded_mode": false,
+            "flags": []
+          }
+        ],
+        "recipe_eval": {
+          "n": 15.0,
+          "p50_us": 3.6,
+          "p95_us": 23.2,
+          "max_us": 23.2
+        },
+        "publish": {
+          "n": 15.0,
+          "p50_us": 34.7,
+          "p95_us": 87.3,
+          "max_us": 87.3
+        },
+        "n_recipe_fires": 2
+      },
+      "runtime_ok": true,
+      "runtime_stderr": "",
+      "lint_ok": true
+    }
+  ],
+  "evidence": {
+    "checks": [
+      {
+        "id": "A1",
+        "name": "at least one LLM invocation logged",
+        "pass": true,
+        "detail": "n_invocations=5"
+      },
+      {
+        "id": "A3",
+        "name": "J-space attached to invocations",
+        "pass": true,
+        "detail": "skip_jspace=True with_jspace=0/5"
+      },
+      {
+        "id": "A4",
+        "name": "nested invocations indexed",
+        "pass": true,
+        "detail": "indexed=5"
+      },
+      {
+        "id": "A5",
+        "name": "layer readouts for browsing",
+        "pass": true,
+        "detail": "skip_jspace=True n_layers=0"
+      },
+      {
+        "id": "C1",
+        "name": "chaos attached to invocations",
+        "pass": true,
+        "detail": "with_chaos=5/5 enabled=True"
+      },
+      {
+        "id": "A2",
+        "name": "aider process completed",
+        "pass": true,
+        "detail": "rc=0 seconds=132.9"
+      },
+      {
+        "id": "A6",
+        "name": "task main.py exists after run",
+        "pass": true,
+        "detail": "size=614"
+      },
+      {
+        "id": "A7",
+        "name": "ruff+pylint pass on task files",
+        "pass": true,
+        "detail": "[{\"tool\": \"ruff\", \"rc\": 0}, {\"tool\": \"ruff_verify\", \"rc\": 0}, {\"tool\": \"pylint\", \"rc\": 0}]"
+      }
+    ],
+    "passed": 8,
+    "total": 8,
+    "overall_pass": true
+  },
+  "lint": {
+    "ok": true,
+    "checks": [
+      {
+        "tool": "ruff",
+        "file": "stem25_competitive_inhibition\\main.py",
+        "returncode": 0,
+        "stdout": "\u001b[1;32mAll checks passed!\u001b[0m\n",
+        "stderr": "",
+        "pass": true
+      },
+      {
+        "tool": "ruff_verify",
+        "file": "stem25_competitive_inhibition\\main.py",
+        "returncode": 0,
+        "stdout": "\u001b[1;32mAll checks passed!\u001b[0m\n",
+        "stderr": "",
+        "pass": true
+      },
+      {
+        "tool": "pylint",
+        "file": "stem25_competitive_inhibition\\main.py",
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "",
+        "pass": true
+      }
+    ]
+  },
+  "aider": {
+    "returncode": 0,
+    "seconds": 132.9073840000201,
+    "stdout_tail": "Detected dumb terminal, disabling fancy input and pretty output.\n\nAider v0.86.2\nModel: openai/qwen-local with whole edit format\nGit repo: .git with 46 files\nRepo-map: using 1024 tokens, auto refresh\nAdded stem25_competitive_inhibition\\main.py to the chat.\n\nTo address the request, I will:\n\n\n\n1. Correct the formula for `Km_app` to `Km * (1 + [I] / Ki)`.\n\n2. Remove the use of `vmax` in the `main()` function since it is not defined.\n\n\n\nHere is the updated content of `stem25_competitive_inhibition/main.py`:\n\n\n\nstem25_competitive_inhibition/main.py\n\n```diff\n@@ -1,17 +1,17 @@\n-\"\"\"Competitive inhibition — wrong Km_app.\"\"\"\n+\"\"\"Competitive inhibition — correct Km_app.\"\"\"\n \n from __future__ import annotations\n \n \n def mm_rate(s: float, vmax: float, km: float) -> float:\n   return vmax * s / (km + s)\n \n \n def competitive_km_app(km: float, i_conc: float, ki: float) -> float:\n-  # BUG: divides instead of multiplies\n-  return km / (1 + i_conc / ki)\n+  # Correct formula for Km_app\n+  return km * (1 + i_conc / ki)\n \n \n def demo() -> float:\n   km, ki, i_conc, vmax = 2.0, 1.0, 1.0, 10.0\n   km_app = competitive_km_app(km, i_conc, ki)\n```\n\n\n\nThis should meet the requirements specified in the request.\n\nTokens: 1.9k sent, 308 received.\nCommitting stem25_competitive_inhibition/main.py before applying edits.\nCommit 0de852c fix: correct formula for Km_app and adjust test assertion\nApplied edit to stem25_competitive_inhibition/main.py\nCommit c6419c4 fix: Correct formula for Km_app and remove undefined vmax in \nmain()\n",
+    "stderr_tail": "",
+    "cwd": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\qwen code",
+    "task_dir": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\qwen code\\stem25_competitive_inhibition"
+  },
+  "elapsed_s": 167.05729199998314,
+  "aider_rc": 0,
+  "attempt": 1,
+  "success": true
+}

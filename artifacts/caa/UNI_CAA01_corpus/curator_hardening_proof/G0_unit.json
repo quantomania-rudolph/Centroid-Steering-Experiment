@@ -1,0 +1,12 @@
+{
+  "gate_id": "G0_unit",
+  "pass": true,
+  "evidence": {
+    "pass": true,
+    "returncode": 0,
+    "n_tests_collected": 58,
+    "n_passed": 58,
+    "stdout_tail": "..........................................................               [100%]\n58 passed in 29.84s\n",
+    "stderr_tail": ""
+  }
+}

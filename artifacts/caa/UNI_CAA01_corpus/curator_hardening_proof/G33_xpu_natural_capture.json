@@ -1,0 +1,13 @@
+{
+  "gate": "G33_xpu_natural_capture",
+  "pass": true,
+  "slug": "unicaa01_corpus_p06_json_parse_panic__mpl_44fb68e7b5cd__d3",
+  "capture_method": "dual_full_forward",
+  "pool_eligible": true,
+  "n_corpus_pool": 6,
+  "notes": [
+    "XPU is recommended for natural extraction",
+    "Root cause of prior failures: shared-RAM OOM + hung probe + KV-cache DEVICE_LOST on hybrid accelerate",
+    "Fix: device_map auto hybrid load + dual_full_forward capture on hybrid XPU"
+  ]
+}

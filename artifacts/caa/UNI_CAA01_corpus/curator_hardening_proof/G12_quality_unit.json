@@ -1,0 +1,9 @@
+{
+  "gate_id": "G12_quality_unit",
+  "pass": true,
+  "evidence": {
+    "pass": true,
+    "returncode": 0,
+    "thin_fixture_fails_suite": true
+  }
+}

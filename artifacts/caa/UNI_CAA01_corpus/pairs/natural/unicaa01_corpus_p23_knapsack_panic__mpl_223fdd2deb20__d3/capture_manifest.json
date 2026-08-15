@@ -1,0 +1,28 @@
+{
+  "source": "natural",
+  "pair_slug": "unicaa01_corpus_p23_knapsack_panic__mpl_223fdd2deb20__d3",
+  "vector_id": "UNI_CAA01",
+  "d": 3,
+  "prompt_len": 1848,
+  "layers": [
+    10,
+    16,
+    22
+  ],
+  "capture_method": "dual_full_forward",
+  "extraction_position": "divergent",
+  "calm_purity_pass": true,
+  "bad_purity_pass": true,
+  "pair_gate_pass": true,
+  "kv_live_gate_pass": true,
+  "kv_live_gate_timestamp": "2026-08-10T01:02:15.000807+00:00",
+  "sha256": {
+    "activations_at_d.pt": "12dfb3702002d5d3ca6147718a043f1e5ec25f95955d74fbe733bbf72f975fad",
+    "matched_prefix_spec.json": "850df2c1305d0a570720b0fbe2d7b82ddc4d8b75a11dbd196e61a470aca01a34",
+    "admission_gate.json": "6fcb836ec77ec681f5a582ecdad5db011133da41bfefe583f3cb7ad6e59cf8ab"
+  },
+  "notes": [
+    "mined from unicaa01_corpus_p23_knapsack_panic"
+  ],
+  "path_hint": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\pairs\\natural\\unicaa01_corpus_p23_knapsack_panic__mpl_223fdd2deb20__d3"
+}

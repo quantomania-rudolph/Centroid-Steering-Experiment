@@ -1,0 +1,15 @@
+The stub `parse_kv_lines` is raising a `RuntimeError` — fold lines into a returned key/value dict.
+unicaa01_p31_panic/main.py
+```python
+"""Parse flat key=value lines."""
+def parse_kv_lines(text):
+    result = {}
+    for line in text.strip().split("\n"):
+        if "=" in line:
+            key, value = line.split("=", 1)
+            result[key.strip()] = value.strip()
+    return result
+
+def demo():
+    return len(parse_kv_lines("a=1\nb=2"))
+```

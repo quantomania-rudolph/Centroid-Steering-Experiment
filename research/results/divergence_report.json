@@ -1,0 +1,36 @@
+{
+  "n": 1,
+  "eligible": 0,
+  "with_consensus": 0,
+  "results": [
+    {
+      "experiment": "divergence_live_proof",
+      "invocation_index": 1,
+      "invocation_id": "chatcmpl-2e2b2fd4c0b5",
+      "task_slug": "chaos_proof_clean",
+      "eligible": false,
+      "d_lexicon": null,
+      "d_flags": null,
+      "d_recipe": null,
+      "d_distress_only": 25,
+      "d_stub_only": null,
+      "d_text": null,
+      "d_consensus": null,
+      "prefix_end": null,
+      "prefix_token_ids": [],
+      "prefix_text": "",
+      "divergence_class": "distress_only",
+      "confidence": "none",
+      "token_ids_len": 164,
+      "completion_tokens": 164,
+      "token_ids_match": true,
+      "d_recipe_lag": null,
+      "panic_resolving": true,
+      "recipe_id": null,
+      "method_b_record": null,
+      "notes": [
+        "not eligible for panic trace"
+      ]
+    }
+  ]
+}

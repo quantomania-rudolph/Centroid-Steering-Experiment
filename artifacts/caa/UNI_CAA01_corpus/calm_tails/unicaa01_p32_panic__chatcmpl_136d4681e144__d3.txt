@@ -1,0 +1,18 @@
+Fixing `escape` for XML reserved characters.
+unicaa01_p32_panic/main.py
+```python
+"""Simple XML escape."""
+
+def xml_escape(s: str) -> str:
+    """Replace special XML characters with their entity equivalents."""
+    # Must replace & first to avoid double escaping
+    s = s.replace("&", "&amp;")
+    s = s.replace("<", "&lt;")
+    s = s.replace(">", "&gt;")
+    s = s.replace('"', "&quot;")
+    s = s.replace("'", "&apos;")
+    return s
+
+def demo() -> str:
+    return xml_escape("a&b")
+```

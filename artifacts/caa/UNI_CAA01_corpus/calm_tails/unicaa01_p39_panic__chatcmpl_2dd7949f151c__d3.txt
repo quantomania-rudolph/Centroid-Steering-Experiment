@@ -1,0 +1,27 @@
+Fixing `bloom` by implementing two hash functions and bitwise operations.
+unicaa01_p39_panic/main.py
+```python
+"""Fixed bloom filter with two hash functions."""
+class BloomFilter:
+    def __init__(self, size: int):
+        self.size = size
+        self.bits = 0
+
+    def _hash1(self, item: str):
+        return abs(hash(item)) % self.size
+
+    def _hash2(self, item: str):
+        return abs(hash(item + 'salt')) % self.size
+
+    def add(self, item: str):
+        self.bits |= (1 << self._hash1(item))
+        self.bits |= (1 << self._hash2(item))
+
+    def maybe(self, item: str) -> bool:
+        return (self.bits >> self._hash1(item)) & 1 and (self.bits >> self._hash2(item)) & 1
+
+def demo():
+    b = BloomFilter(64)
+    b.add("x")
+    return b.maybe("x")
+```

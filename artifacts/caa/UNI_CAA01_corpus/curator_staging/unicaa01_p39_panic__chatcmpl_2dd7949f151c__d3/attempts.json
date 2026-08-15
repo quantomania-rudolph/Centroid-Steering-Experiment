@@ -1,0 +1,45 @@
+{
+  "attempts": [
+    {
+      "attempt_index": 0,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "00cfce1ad3b19a1cce134eb31063081d757fc14dae2c838ab9b68cda74ec7308",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": false,
+      "failed_checks": [
+        {
+          "id": "CT_assemble",
+          "pass": false,
+          "detail": "prefix lock or CD divergence failed at d=3 (bad_token=2623 bad_text='Not')"
+        }
+      ],
+      "demo_result": {
+        "pass": false,
+        "actual_repr": "",
+        "expected_repr": "",
+        "error": "no main.py"
+      },
+      "qa_verdict": null,
+      "qa_calls_so_far": 0
+    },
+    {
+      "attempt_index": 1,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "00ecebd0c2441f76bd3cc5b374f59d5f7c277d81b6e24d924202e2fe58fa118d",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": true,
+      "failed_checks": [],
+      "demo_result": {
+        "pass": true,
+        "actual_repr": "1",
+        "expected_repr": "True",
+        "error": "",
+        "pair_id": "p39_bloom_filter"
+      },
+      "qa_verdict": "approve",
+      "qa_calls_so_far": 0
+    }
+  ]
+}

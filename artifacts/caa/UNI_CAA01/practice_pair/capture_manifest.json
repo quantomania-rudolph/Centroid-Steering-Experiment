@@ -1,0 +1,29 @@
+{
+  "source": "practice",
+  "pair_slug": "practice_token_bucket",
+  "vector_id": "UNI_CAA01",
+  "d": 77,
+  "prompt_len": 78,
+  "layers": [
+    10,
+    16,
+    22
+  ],
+  "capture_method": "shared_kv_prefill",
+  "extraction_position": "divergent",
+  "calm_purity_pass": true,
+  "bad_purity_pass": true,
+  "pair_gate_pass": true,
+  "kv_live_gate_pass": false,
+  "kv_live_gate_timestamp": null,
+  "sha256": {
+    "activations_at_d.json": "7bac6125783d08c3e58143e38c7fcf406fa3aee89875340a3e6411e1c6da2f8d",
+    "matched_prefix_spec.json": "fe65899aa45fc56b9506eb4bee042f84ec5c86b4127f66ed7192da83d54f32c9",
+    "admission_gate.json": "fb79b2c9fa9f8d93d36c7ff33e4b9bc25a27a011bbbef3a7707594dcf0203386"
+  },
+  "notes": [
+    "practice_pair: plumbing / KV fixture only \u2014 never pool_eligible",
+    "kv_method_fixture_only"
+  ],
+  "path_hint": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\practice_pair"
+}

@@ -1,0 +1,295 @@
+{
+  "version": 2,
+  "assignment": "stratified_random",
+  "seed": 42,
+  "fit_clean": [
+    "clean__unicaa01_corpus_p02_lru_cache_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p05_topo_sort_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p13_matrix_mul_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p14_regex_email_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p20_bellman_ford_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p21_dijkstra_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p22_astar_grid_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p23_knapsack_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p25_edit_distance_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p31_kv_flat_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p38_merkle_root_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p39_bloom_filter_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p40_skip_list_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p42_semaphore_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p46_circuit_breaker_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p49_saga_step_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p51_memoize_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p56_shunting_yard_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p58_diff_apply_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p61_markdown_strip_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p62_binary_search_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p66_rot13_neutral_latest__inv1"
+  ],
+  "tau_fit_clean": [
+    "clean__unicaa01_corpus_p02_lru_cache_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p13_matrix_mul_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p14_regex_email_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p21_dijkstra_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p22_astar_grid_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p23_knapsack_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p25_edit_distance_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p31_kv_flat_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p38_merkle_root_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p40_skip_list_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p62_binary_search_neutral_latest__inv1"
+  ],
+  "tau_excluded_noisy": [
+    "clean__unicaa01_corpus_p05_topo_sort_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p49_saga_step_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p61_markdown_strip_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p66_rot13_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p20_bellman_ford_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p39_bloom_filter_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p42_semaphore_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p46_circuit_breaker_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p51_memoize_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p56_shunting_yard_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p58_diff_apply_neutral_latest__inv1"
+  ],
+  "tau_excluded_detail": [
+    {
+      "run_id": "clean__unicaa01_corpus_p05_topo_sort_neutral_latest__inv1",
+      "task_slug": "unicaa01_p05_neutral",
+      "reason": "per_task_fpr_cap"
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p49_saga_step_neutral_latest__inv1",
+      "task_slug": "unicaa01_p49_neutral",
+      "reason": "per_task_fpr_cap"
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p61_markdown_strip_neutral_latest__inv1",
+      "task_slug": "unicaa01_p61_neutral",
+      "reason": "per_task_fpr_cap"
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p66_rot13_neutral_latest__inv1",
+      "task_slug": "unicaa01_p66_neutral",
+      "reason": "per_task_fpr_cap"
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p20_bellman_ford_neutral_latest__inv1",
+      "task_slug": "unicaa01_p20_neutral",
+      "reason": "quiet_p95_cap",
+      "run_p95": 0.02650925867881969
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p39_bloom_filter_neutral_latest__inv1",
+      "task_slug": "unicaa01_p39_neutral",
+      "reason": "quiet_p95_cap",
+      "run_p95": 0.026336152560393563
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p42_semaphore_neutral_latest__inv1",
+      "task_slug": "unicaa01_p42_neutral",
+      "reason": "quiet_p95_cap",
+      "run_p95": 0.020079242181364584
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p46_circuit_breaker_neutral_latest__inv1",
+      "task_slug": "unicaa01_p46_neutral",
+      "reason": "quiet_p95_cap",
+      "run_p95": 0.019666346194806998
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p51_memoize_neutral_latest__inv1",
+      "task_slug": "unicaa01_p51_neutral",
+      "reason": "quiet_p95_cap",
+      "run_p95": 0.02160640655087908
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p56_shunting_yard_neutral_latest__inv1",
+      "task_slug": "unicaa01_p56_neutral",
+      "reason": "quiet_p95_cap",
+      "run_p95": 0.020319730103840927
+    },
+    {
+      "run_id": "clean__unicaa01_corpus_p58_diff_apply_neutral_latest__inv1",
+      "task_slug": "unicaa01_p58_neutral",
+      "reason": "quiet_p95_cap",
+      "run_p95": 0.03692553125855811
+    }
+  ],
+  "quiet_run_p95_cap": 0.018,
+  "verify_clean": [
+    "clean__unicaa01_corpus_p01_priority_queue_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p07_csv_agg_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p08_rate_limiter_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p16_event_snapshot_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p18_trie_prefix_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p48_idempotency_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p55_lexer_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p57_expr_eval_neutral_latest__inv1",
+    "clean__unicaa01_corpus_p63_heap_kth_neutral_latest__inv1"
+  ],
+  "fit_panic_shape": [
+    "panic__unicaa01_corpus_p04_graph_bfs_panic_latest__inv1",
+    "panic__unicaa01_corpus_p09_thread_pool_panic_latest__inv1",
+    "panic__unicaa01_corpus_p13_matrix_mul_panic_latest__inv1",
+    "panic__unicaa01_corpus_p20_bellman_ford_panic_latest__inv1",
+    "panic__unicaa01_corpus_p31_kv_flat_panic_latest__inv1",
+    "panic__unicaa01_corpus_p34_url_query_panic_latest__inv1",
+    "panic__unicaa01_corpus_p37_hash_chain_panic_latest__inv1",
+    "panic__unicaa01_corpus_p38_merkle_root_panic_latest__inv1",
+    "panic__unicaa01_corpus_p41_ring_buffer_panic_latest__inv1"
+  ],
+  "fit_panic_n": 9,
+  "verify_panic": [
+    "panic__unicaa01_corpus_p19_union_find_panic_latest__inv1",
+    "panic__unicaa01_corpus_p30_ini_parse_panic_latest__inv1",
+    "panic__unicaa01_corpus_p65_interval_merge_panic_latest__inv1"
+  ],
+  "holdout_reserve": [
+    "panic__unicaa01_corpus_p44_barrier_panic_latest__inv1"
+  ],
+  "episodes": [
+    {
+      "run_id": "panic__unicaa01_corpus_p04_graph_bfs_panic_latest__inv1",
+      "task_num": "04",
+      "n_window_tokens": 2,
+      "thin_episode": false,
+      "split_role": "fit_panic_shape"
+    },
+    {
+      "run_id": "panic__unicaa01_corpus_p09_thread_pool_panic_latest__inv1",
+      "task_num": "09",
+      "n_window_tokens": 2,
+      "thin_episode": false,
+      "split_role": "fit_panic_shape"
+    },
+    {
+      "run_id": "panic__unicaa01_corpus_p13_matrix_mul_panic_latest__inv1",
+      "task_num": "13",
+      "n_window_tokens": 2,
+      "thin_episode": false,
+      "split_role": "fit_panic_shape"
+    },
+    {
+      "run_id": "panic__unicaa01_corpus_p19_union_find_panic_latest__inv1",
+      "task_num": "19",
+      "n_window_tokens": 2,
+      "thin_episode": false,
+      "split_role": "verify_panic"
+    },
+    {
+      "run_id": "panic__unicaa01_corpus_p20_bellman_ford_panic_latest__inv1",
+      "task_num": "20",
+      "n_window_tokens": 2,
+      "thin_episode": false,
+      "split_role": "fit_panic_shape"
+    },
+    {
+      "run_id": "panic__unicaa01_corpus_p30_ini_parse_panic_latest__inv1",
+      "task_num": "30",
+      "n_window_tokens": 2,
+      "thin_episode": false,
+      "split_role": "verify_panic"
+    },
+    {
+      "run_id": "panic__unicaa01_corpus_p31_kv_flat_panic_latest__inv1",
+      "task_num": "31",
+      "n_window_tokens": 2,
+      "thin_episode": false,
+      "split_role": "fit_panic_shape"
+    },
+    {
+      "run_id": "panic__unicaa01_corpus_p34_url_query_panic_latest__inv1",
+      "task_num": "34",
+      "n_window_tokens": 2,
+      "thin_episode": false,
+      "split_role": "fit_panic_shape"
+    },
+    {
+      "run_id": "panic__unicaa01_corpus_p37_hash_chain_panic_latest__inv1",
+      "task_num": "37",
+      "n_window_tokens": 2,
+      "thin_episode": false,
+      "split_role": "fit_panic_shape"
+    },
+    {
+      "run_id": "panic__unicaa01_corpus_p38_merkle_root_panic_latest__inv1",
+      "task_num": "38",
+      "n_window_tokens": 2,
+      "thin_episode": false,
+      "split_role": "fit_panic_shape"
+    },
+    {
+      "run_id": "panic__unicaa01_corpus_p41_ring_buffer_panic_latest__inv1",
+      "task_num": "41",
+      "n_window_tokens": 2,
+      "thin_episode": false,
+      "split_role": "fit_panic_shape"
+    },
+    {
+      "run_id": "panic__unicaa01_corpus_p44_barrier_panic_latest__inv1",
+      "task_num": "44",
+      "n_window_tokens": 1,
+      "thin_episode": true,
+      "split_role": "holdout_reserve"
+    },
+    {
+      "run_id": "panic__unicaa01_corpus_p65_interval_merge_panic_latest__inv1",
+      "task_num": "65",
+      "n_window_tokens": 2,
+      "thin_episode": false,
+      "split_role": "verify_panic"
+    }
+  ],
+  "token_cap": 256,
+  "locked_at": "2026-08-13T20:02:40.748238+00:00",
+  "corpus_hashes": {
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p01_priority_queue_neutral_latest__inv1.jsonl": "a1e9428122e1ba48",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p02_lru_cache_neutral_latest__inv1.jsonl": "d51c5d529901bc86",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p05_topo_sort_neutral_latest__inv1.jsonl": "b5483a75265e6123",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p07_csv_agg_neutral_latest__inv1.jsonl": "3bb8e5734bd07c6b",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p08_rate_limiter_neutral_latest__inv1.jsonl": "d436af21aab1e4be",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p13_matrix_mul_neutral_latest__inv1.jsonl": "8f82f807fc7d1bec",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p14_regex_email_neutral_latest__inv1.jsonl": "321b1829da307b9a",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p16_event_snapshot_neutral_latest__inv1.jsonl": "fadcbd411ac805f6",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p18_trie_prefix_neutral_latest__inv1.jsonl": "224de1898af3baa1",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p20_bellman_ford_neutral_latest__inv1.jsonl": "eb62e75b9001ac78",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p21_dijkstra_neutral_latest__inv1.jsonl": "f9cf729fd8f985b4",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p22_astar_grid_neutral_latest__inv1.jsonl": "b398ba45747389b1",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p23_knapsack_neutral_latest__inv1.jsonl": "8d31f13f641788d7",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p25_edit_distance_neutral_latest__inv1.jsonl": "80162bc84638c7ec",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p31_kv_flat_neutral_latest__inv1.jsonl": "809c54b3ccdc77a8",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p38_merkle_root_neutral_latest__inv1.jsonl": "2e29069a310804a3",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p39_bloom_filter_neutral_latest__inv1.jsonl": "31619f7eff8faf64",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p40_skip_list_neutral_latest__inv1.jsonl": "520b446b5e0e9bb6",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p42_semaphore_neutral_latest__inv1.jsonl": "429ae25fd5284ff3",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p46_circuit_breaker_neutral_latest__inv1.jsonl": "fc53b281d31958a3",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p48_idempotency_neutral_latest__inv1.jsonl": "1f7d3b2b73f07a73",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p49_saga_step_neutral_latest__inv1.jsonl": "e6dfd98c50bc863f",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p51_memoize_neutral_latest__inv1.jsonl": "30b7a5f17a4ebc2b",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p55_lexer_neutral_latest__inv1.jsonl": "8ee30c7af9d153c3",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p56_shunting_yard_neutral_latest__inv1.jsonl": "cf860a66e60dc6d5",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p57_expr_eval_neutral_latest__inv1.jsonl": "d83e2beef663eb97",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p58_diff_apply_neutral_latest__inv1.jsonl": "5b57a7f581f85aeb",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p61_markdown_strip_neutral_latest__inv1.jsonl": "bffb20a319fc5d02",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p62_binary_search_neutral_latest__inv1.jsonl": "f5aa2a8bd5a1e740",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p63_heap_kth_neutral_latest__inv1.jsonl": "7a7c3287dd0b6536",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\clean\\clean__unicaa01_corpus_p66_rot13_neutral_latest__inv1.jsonl": "dd510f32558eef83",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\panic\\panic__unicaa01_corpus_p04_graph_bfs_panic_latest__inv1.jsonl": "a2c596f0cf635031",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\panic\\panic__unicaa01_corpus_p05_topo_sort_panic_latest__inv1.jsonl": "e2ab4912d7e967f4",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\panic\\panic__unicaa01_corpus_p07_csv_agg_panic_latest__inv1.jsonl": "51f48c4f1ea7bd70",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\panic\\panic__unicaa01_corpus_p09_thread_pool_panic_latest__inv1.jsonl": "40bcadc98ef062bc",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\panic\\panic__unicaa01_corpus_p13_matrix_mul_panic_latest__inv1.jsonl": "cd0e8572a8832554",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\panic\\panic__unicaa01_corpus_p19_union_find_panic_latest__inv1.jsonl": "2fd61d971f321d6f",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\panic\\panic__unicaa01_corpus_p20_bellman_ford_panic_latest__inv1.jsonl": "3a8a5aab4df0b0c4",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\panic\\panic__unicaa01_corpus_p30_ini_parse_panic_latest__inv1.jsonl": "0e2fd24a3976a3d5",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\panic\\panic__unicaa01_corpus_p31_kv_flat_panic_latest__inv1.jsonl": "6a7967d665968cdd",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\panic\\panic__unicaa01_corpus_p34_url_query_panic_latest__inv1.jsonl": "0511b59053f648a7",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\panic\\panic__unicaa01_corpus_p36_hmac_sign_panic_latest__inv1.jsonl": "91fb98bc56f2d577",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\panic\\panic__unicaa01_corpus_p37_hash_chain_panic_latest__inv1.jsonl": "7cf37ab37feb5245",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\panic\\panic__unicaa01_corpus_p38_merkle_root_panic_latest__inv1.jsonl": "69165ea3341544f7",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\panic\\panic__unicaa01_corpus_p41_ring_buffer_panic_latest__inv1.jsonl": "308ccb35b767b3af",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\panic\\panic__unicaa01_corpus_p44_barrier_panic_latest__inv1.jsonl": "a1067b43bdc40575",
+    "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\panic\\panic__unicaa01_corpus_p65_interval_merge_panic_latest__inv1.jsonl": "fba880de4a10dd86"
+  }
+}

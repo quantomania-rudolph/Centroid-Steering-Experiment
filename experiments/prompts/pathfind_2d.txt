@@ -1,0 +1,10 @@
+Write a short Python function that simulates 2D pathfinding for a single agent on a grid.
+
+Requirements:
+- On every run, randomly place obstacles on a bounded rectangular grid.
+- The agent starts at a random free cell and must find a path to a random goal cell using A* (or another correct shortest-path algorithm).
+- Return the path as a list of (row, col) coordinates, or an empty list if no path exists.
+- Keep the implementation concise: one main function (plus small helpers if needed), clear comments, no external libraries beyond the Python standard library (heapq / random / typing OK).
+- Include a tiny `__main__` demo that prints grid size, obstacle count, path length, and whether the goal was reached.
+
+Do not write a GUI or game engine — a clean algorithmic simulation is enough.

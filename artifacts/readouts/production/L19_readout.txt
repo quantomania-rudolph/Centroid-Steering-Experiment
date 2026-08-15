@@ -1,0 +1,671 @@
+Layer 19 readout — J-lens vs logit lens vs model
+Lens: C:\Users\Rudol\Desktop\ThetaData_greeks\J-Do It\artifacts\lenses\qwen_jacobian_lens.pt (fitted on 90 prompt(s))
+
+Prompt:
+def quicksort(arr):
+    if len(arr) <= 1:
+        return arr
+    pivot = arr[len(arr) // 2]
+    left = [x for x in arr if x < pivot]
+    mid = [x for x in arr if x == pivot]
+    right = [x for x in arr if x > pivot]
+    return quicksort(left) + mid + quicksort(right)
+
+========================================================================
+
+Position 0: 'def'
+  Context: 'def'
+  Model next-token:  ' string'  (p=0.3021, id=914)
+  Logit lens L19: 'ampie'  (p=0.1722, id=48298)
+  J-lens L19:    'põe'  (p=0.2501, id=139566)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: 'põe', '住房公积', 'dão', 'FRINGEMENT', '℅'
+
+Position 1: ' quick'
+  Context: 'def quick'
+  Model next-token:  '_sort'  (p=0.7885, id=18435)
+  Logit lens L19: 'TableWidgetItem'  (p=0.4503, id=74093)
+  J-lens L19:    '_sort'  (p=0.6628, id=18435)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: '_sort', 'Sort', 'sort', '排序', ' sorting'
+
+Position 2: 'sort'
+  Context: 'def quicksort'
+  Model next-token:  '(arr'  (p=0.8418, id=10939)
+  Logit lens L19: 'TableWidgetItem'  (p=0.0402, id=74093)
+  J-lens L19:    'algorithm'  (p=0.2462, id=19688)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: 'algorithm', ' algorithm', '算法', '_algorithm', 'Algorithm'
+
+Position 3: '(arr'
+  Context: 'def quicksort(arr'
+  Model next-token:  '):\n'  (p=0.8301, id=982)
+  Logit lens L19: ' Şu'  (p=0.1536, id=133805)
+  J-lens L19:    '):\n'  (p=0.5699, id=982)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: '):\n', '=None', ' arr', 'array', ' array'
+
+Position 4: '):\n'
+  Context: 'def quicksort(arr):\n'
+  Model next-token:  '   '  (p=0.9889, id=262)
+  Logit lens L19: 'présent'  (p=0.1090, id=130312)
+  J-lens L19:    ' """\n'  (p=0.3488, id=3190)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: ' """\n', ' """', '"""', 'return', ' return'
+
+Position 5: '   '
+  Context: 'def quicksort(arr):\n   '
+  Model next-token:  ' if'  (p=0.8961, id=421)
+  Logit lens L19: ' if'  (p=0.8088, id=421)
+  J-lens L19:    ' if'  (p=0.9802, id=421)
+  J-lens top-5: ' if', '\tif', '如果有', 'if', 'recursive'
+
+Position 6: ' if'
+  Context: 'def quicksort(arr):\n    if'
+  Model next-token:  ' len'  (p=0.9988, id=2422)
+  Logit lens L19: '<quote'  (p=0.1233, id=5647)
+  J-lens L19:    ' len'  (p=0.6363, id=2422)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: ' len', ' isinstance', 'len', '(len', '.isArray'
+
+Position 7: ' len'
+  Context: 'def quicksort(arr):\n    if len'
+  Model next-token:  '(arr'  (p=1.0000, id=10939)
+  Logit lens L19: ' Nacht'  (p=0.4164, id=98359)
+  J-lens L19:    '(arr'  (p=0.0719, id=10939)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: '(arr', 'crast', 'tá', ' Nacht', '小于'
+
+Position 8: '(arr'
+  Context: 'def quicksort(arr):\n    if len(arr'
+  Model next-token:  ')'  (p=0.9993, id=8)
+  Logit lens L19: 'Deque'  (p=0.0333, id=73891)
+  J-lens L19:    ' <='  (p=0.2887, id=2651)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: ' <=', ' ==', 'Deque', 'ण', 'arkin'
+
+Position 9: ')'
+  Context: 'def quicksort(arr):\n    if len(arr)'
+  Model next-token:  ' <='  (p=0.9951, id=2651)
+  Logit lens L19: 'phants'  (p=0.0728, id=52567)
+  J-lens L19:    ' <='  (p=0.7340, id=2651)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: ' <=', ' ==', 'Deque', ':@""', 'isEmpty'
+
+Position 10: ' <='
+  Context: 'def quicksort(arr):\n    if len(arr) <='
+  Model next-token:  ' '  (p=0.9996, id=220)
+  Logit lens L19: ' controvers'  (p=0.0284, id=13365)
+  J-lens L19:    ' '  (p=0.0658, id=220)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: ' ', ' threshold', 'sorted', ' sorted', 'TableWidgetItem'
+
+Position 11: ' '
+  Context: 'def quicksort(arr):\n    if len(arr) <= '
+  Model next-token:  '1'  (p=1.0000, id=16)
+  Logit lens L19: 'iedy'  (p=0.1472, id=81619)
+  J-lens L19:    'ivot'  (p=0.2539, id=16084)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: 'ivot', 'Median', 'pivot', 'median', '的选择'
+
+Position 12: '1'
+  Context: 'def quicksort(arr):\n    if len(arr) <= 1'
+  Model next-token:  ':\n'  (p=0.9861, id=510)
+  Logit lens L19: '️'  (p=0.2171, id=30543)
+  J-lens L19:    ' return'  (p=0.3842, id=470)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: ' return', ':\n', '):\n', 'return', '():\n'
+
+Position 13: ':\n'
+  Context: 'def quicksort(arr):\n    if len(arr) <= 1:\n'
+  Model next-token:  '       '  (p=1.0000, id=286)
+  Logit lens L19: ' return'  (p=0.8451, id=470)
+  J-lens L19:    ' return'  (p=0.6447, id=470)
+  J-lens top-5: ' return', 'return', '\treturn', '.return', 'RETURN'
+
+Position 14: '       '
+  Context: 'def quicksort(arr):\n    if len(arr) <= 1:\n       '
+  Model next-token:  ' return'  (p=0.9997, id=470)
+  Logit lens L19: ' return'  (p=0.9916, id=470)
+  J-lens L19:    ' return'  (p=0.9756, id=470)
+  J-lens top-5: ' return', 'return', '\treturn', '.return', '返回'
+
+Position 15: ' return'
+  Context: 'def quicksort(arr):\n    if len(arr) <= 1:\n        return'
+  Model next-token:  ' arr'  (p=0.9999, id=2890)
+  Logit lens L19: ' self'  (p=0.4860, id=656)
+  J-lens L19:    ' None'  (p=0.5750, id=2240)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: ' None', ' []\n\n', ' []\n', ' False', ' True'
+
+Position 16: ' arr'
+  Context: 'def quicksort(arr):\n    if len(arr) <= 1:\n        return arr'
+  Model next-token:  '\n'  (p=0.8498, id=198)
+  Logit lens L19: ' antioxid'  (p=0.0599, id=45712)
+  J-lens L19:    'sorted'  (p=0.0996, id=28298)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: 'sorted', '排序', '.sorted', ' elif', '_sorted'
+
+Position 17: '\n'
+  Context: 'def quicksort(arr):\n    if len(arr) <= 1:\n        return arr\n'
+  Model next-token:  '   '  (p=0.9999, id=262)
+  Logit lens L19: 'azon'  (p=0.4196, id=5522)
+  J-lens L19:    ' elif'  (p=0.3995, id=4409)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: ' elif', ' else', 'elif', 'else', '否则'
+
+Position 18: '   '
+  Context: 'def quicksort(arr):\n    if len(arr) <= 1:\n        return arr\n   '
+  Model next-token:  ' pivot'  (p=0.5514, id=26045)
+  Logit lens L19: 'azon'  (p=0.1554, id=5522)
+  J-lens L19:    'pivot'  (p=0.2853, id=68441)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: 'pivot', ' pivot', ' else', ' elif', ' midpoint'
+
+Position 19: ' pivot'
+  Context: 'def quicksort(arr):\n    if len(arr) <= 1:\n        return arr\n    pivot'
+  Model next-token:  ' ='  (p=0.9988, id=284)
+  Logit lens L19: 'IFn'  (p=0.8861, id=50390)
+  J-lens L19:    ' ='  (p=0.9239, id=284)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: ' =', 'pivot', '_value', '的选择', 'ivot'
+
+Position 20: ' ='
+  Context: 'def quicksort(arr):\n    if len(arr) <= 1:\n        return arr\n    pivot ='
+  Model next-token:  ' arr'  (p=0.9997, id=2890)
+  Logit lens L19: ' @"";\n'  (p=0.0584, id=70878)
+  J-lens L19:    'pivot'  (p=0.2115, id=68441)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: 'pivot', '_median', 'median', 'Median', 'chosen'
+
+Position 21: ' arr'
+  Context: 'def quicksort(arr):\n    if len(arr) <= 1:\n        return arr\n    pivot = arr'
+  Model next-token:  '[len'  (p=0.9948, id=24693)
+  Logit lens L19: '�'  (p=0.0439, id=6142)
+  J-lens L19:    ' midpoint'  (p=0.5459, id=81963)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: ' midpoint', '[len', '[mid', ' mid', '[:'
+
+Position 22: '[len'
+  Context: 'def quicksort(arr):\n    if len(arr) <= 1:\n        return arr\n    pivot = arr[len'
+  Model next-token:  '(arr'  (p=1.0000, id=10939)
+  Logit lens L19: '-'  (p=0.1059, id=12)
+  J-lens L19:    ' midpoint'  (p=0.1390, id=81963)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: ' midpoint', '(arr', ' mid', '_median', '(mid'
+
+Position 23: '(arr'
+  Context: 'quicksort(arr):\n    if len(arr) <= 1:\n        return arr\n    pivot = arr[len(arr'
+  Model next-token:  ')'  (p=0.9954, id=8)
+  Logit lens L19: ' meisten'  (p=0.0315, id=84701)
+  J-lens L19:    '一半'  (p=0.2125, id=104950)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: '一半', ' midpoint', ' mid', 'Deque', '[:'
+
+Position 24: ')'
+  Context: 'uicksort(arr):\n    if len(arr) <= 1:\n        return arr\n    pivot = arr[len(arr)'
+  Model next-token:  ' //'  (p=0.9998, id=442)
+  Logit lens L19: ' antioxid'  (p=0.5563, id=45712)
+  J-lens L19:    'Deque'  (p=0.2512, id=73891)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: 'Deque', '[:-', ' antioxid', ' -', ' mid'
+
+Position 25: ' //'
+  Context: 'ksort(arr):\n    if len(arr) <= 1:\n        return arr\n    pivot = arr[len(arr) //'
+  Model next-token:  ' '  (p=1.0000, id=220)
+  Logit lens L19: 's'  (p=0.0552, id=82)
+  J-lens L19:    ' midpoint'  (p=0.1685, id=81963)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: ' midpoint', 'chia', 'arkin', 'ptrdiff', ' median'
+
+Position 26: ' '
+  Context: 'sort(arr):\n    if len(arr) <= 1:\n        return arr\n    pivot = arr[len(arr) // '
+  Model next-token:  '2'  (p=1.0000, id=17)
+  Logit lens L19: 'eczy'  (p=0.0977, id=96495)
+  J-lens L19:    'Sorting'  (p=0.3749, id=71681)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: 'Sorting', 'sorting', 'sorted', '排序', ' sorting'
+
+Position 27: '2'
+  Context: 'ort(arr):\n    if len(arr) <= 1:\n        return arr\n    pivot = arr[len(arr) // 2'
+  Model next-token:  ']\n'  (p=0.9761, id=921)
+  Logit lens L19: '⽀'  (p=0.0303, id=149389)
+  J-lens L19:    ']\n'  (p=0.1581, id=921)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: ']\n', ';\n', ' midpoint', '(mid', ' @"";\n'
+
+Position 28: ']\n'
+  Context: 't(arr):\n    if len(arr) <= 1:\n        return arr\n    pivot = arr[len(arr) // 2]\n'
+  Model next-token:  '   '  (p=0.9996, id=262)
+  Logit lens L19: 'ibili'  (p=0.2024, id=85948)
+  J-lens L19:    'ará'  (p=0.0186, id=30741)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: 'ará', 'threshold', 'filtered', '数组', 'SplitOptions'
+
+Position 29: '   '
+  Context: 'rr):\n    if len(arr) <= 1:\n        return arr\n    pivot = arr[len(arr) // 2]\n   '
+  Model next-token:  ' left'  (p=0.9988, id=2115)
+  Logit lens L19: ' domina'  (p=0.1107, id=89037)
+  J-lens L19:    '分成'  (p=0.2388, id=109245)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: '分成', 'sorted', '.Elements', 'divide', '数组'
+
+Position 30: ' left'
+  Context: '    if len(arr) <= 1:\n        return arr\n    pivot = arr[len(arr) // 2]\n    left'
+  Model next-token:  ' ='  (p=0.9994, id=284)
+  Logit lens L19: ' ='  (p=0.5243, id=284)
+  J-lens L19:    ' ='  (p=0.4964, id=284)
+  J-lens top-5: ' =', '/right', ',right', '低端', '(left'
+
+Position 31: ' ='
+  Context: '  if len(arr) <= 1:\n        return arr\n    pivot = arr[len(arr) // 2]\n    left ='
+  Model next-token:  ' ['  (p=0.9968, id=508)
+  Logit lens L19: '低端'  (p=0.1295, id=115345)
+  J-lens L19:    ' []\n'  (p=0.6653, id=4167)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: ' []\n', '数组', ' []\r\n', '[]\n', '([])\n'
+
+Position 32: ' ['
+  Context: 'if len(arr) <= 1:\n        return arr\n    pivot = arr[len(arr) // 2]\n    left = ['
+  Model next-token:  'x'  (p=0.9998, id=87)
+  Logit lens L19: 'elem'  (p=0.0372, id=18871)
+  J-lens L19:    'elem'  (p=0.1375, id=18871)
+  J-lens top-5: 'elem', '.elem', '元素', ' elem', '低端'
+
+Position 33: 'x'
+  Context: 'f len(arr) <= 1:\n        return arr\n    pivot = arr[len(arr) // 2]\n    left = [x'
+  Model next-token:  ' for'  (p=1.0000, id=369)
+  Logit lens L19: '较小'  (p=0.3400, id=109413)
+  J-lens L19:    '较小'  (p=0.1262, id=109413)
+  J-lens top-5: '较小', '小于', 'stantiate', '更低', ' smaller'
+
+Position 34: ' for'
+  Context: 'n(arr) <= 1:\n        return arr\n    pivot = arr[len(arr) // 2]\n    left = [x for'
+  Model next-token:  ' x'  (p=1.0000, id=856)
+  Logit lens L19: ' _,'  (p=0.0853, id=8358)
+  J-lens L19:    ' sublist'  (p=0.6870, id=93893)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: ' sublist', ' _,', ' Aydın', ' x', '后排'
+
+Position 35: ' x'
+  Context: 'arr) <= 1:\n        return arr\n    pivot = arr[len(arr) // 2]\n    left = [x for x'
+  Model next-token:  ' in'  (p=1.0000, id=304)
+  Logit lens L19: '较小'  (p=0.1106, id=109413)
+  J-lens L19:    ' where'  (p=0.1378, id=1380)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: ' where', '在内的', '较小', ' smaller', '小于'
+
+Position 36: ' in'
+  Context: ') <= 1:\n        return arr\n    pivot = arr[len(arr) // 2]\n    left = [x for x in'
+  Model next-token:  ' arr'  (p=1.0000, id=2890)
+  Logit lens L19: ' list'  (p=0.1030, id=1140)
+  J-lens L19:    ' list'  (p=0.6184, id=1140)
+  J-lens top-5: ' list', ' sublist', ' xrange', '列表', '数组'
+
+Position 37: ' arr'
+  Context: ' 1:\n        return arr\n    pivot = arr[len(arr) // 2]\n    left = [x for x in arr'
+  Model next-token:  ' if'  (p=1.0000, id=421)
+  Logit lens L19: 'SMTP'  (p=0.0182, id=58198)
+  J-lens L19:    '[:-'  (p=0.7371, id=26049)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: '[:-', ' where', '[:', ' WHERE', '.where'
+
+Position 38: ' if'
+  Context: '\n        return arr\n    pivot = arr[len(arr) // 2]\n    left = [x for x in arr if'
+  Model next-token:  ' x'  (p=1.0000, id=856)
+  Logit lens L19: ' abs'  (p=0.0264, id=3647)
+  J-lens L19:    '小于'  (p=0.1979, id=110089)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: '小于', ' isinstance', '低于', '_greater', ' comparisons'
+
+Position 39: ' x'
+  Context: '       return arr\n    pivot = arr[len(arr) // 2]\n    left = [x for x in arr if x'
+  Model next-token:  ' <'  (p=1.0000, id=366)
+  Logit lens L19: '较小'  (p=0.0595, id=109413)
+  J-lens L19:    '小于'  (p=0.7529, id=110089)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: '小于', ' меньше', ' smaller', ' <=', '[:-'
+
+Position 40: ' <'
+  Context: '     return arr\n    pivot = arr[len(arr) // 2]\n    left = [x for x in arr if x <'
+  Model next-token:  ' pivot'  (p=1.0000, id=26045)
+  Logit lens L19: ' acheter'  (p=0.0293, id=98390)
+  J-lens L19:    'nier'  (p=0.0766, id=88983)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: 'nier', '阈', ' pivot', '目标', 'pivot'
+
+Position 41: ' pivot'
+  Context: 'eturn arr\n    pivot = arr[len(arr) // 2]\n    left = [x for x in arr if x < pivot'
+  Model next-token:  ']\n'  (p=0.9985, id=921)
+  Logit lens L19: 'makt'  (p=0.0759, id=126389)
+  J-lens L19:    ']\n'  (p=0.4027, id=921)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: ']\n', '}\n', '万台', ')\n', '值'
+
+Position 42: ']\n'
+  Context: 'urn arr\n    pivot = arr[len(arr) // 2]\n    left = [x for x in arr if x < pivot]\n'
+  Model next-token:  '   '  (p=1.0000, id=262)
+  Logit lens L19: ' domina'  (p=0.2025, id=89037)
+  J-lens L19:    'filtered'  (p=0.0983, id=41131)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: 'filtered', 'odzi', 'sorted', 'ificados', ' Aydın'
+
+Position 43: '   '
+  Context: ' arr\n    pivot = arr[len(arr) // 2]\n    left = [x for x in arr if x < pivot]\n   '
+  Model next-token:  ' middle'  (p=0.9967, id=6149)
+  Logit lens L19: 'azon'  (p=0.0563, id=5522)
+  J-lens L19:    ' middle'  (p=0.4658, id=6149)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: ' middle', 'middle', '中间', 'Middle', '.Middle'
+
+Position 44: ' mid'
+  Context: '\n    pivot = arr[len(arr) // 2]\n    left = [x for x in arr if x < pivot]\n    mid'
+  Model next-token:  ' ='  (p=1.0000, id=284)
+  Logit lens L19: 'NSUserDefaults'  (p=0.0856, id=54438)
+  J-lens L19:    ' ='  (p=0.7501, id=284)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: ' =', '_range', '_eq', 'range', '低端'
+
+Position 45: ' ='
+  Context: '   pivot = arr[len(arr) // 2]\n    left = [x for x in arr if x < pivot]\n    mid ='
+  Model next-token:  ' ['  (p=1.0000, id=508)
+  Logit lens L19: ' enqu'  (p=0.0898, id=76707)
+  J-lens L19:    'EqualTo'  (p=0.0704, id=22759)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: 'EqualTo', ' equal', '这部分', 'equal', '(equal'
+
+Position 46: ' ['
+  Context: ' pivot = arr[len(arr) // 2]\n    left = [x for x in arr if x < pivot]\n    mid = ['
+  Model next-token:  'x'  (p=1.0000, id=87)
+  Logit lens L19: ' PropertyChangedEventArgs'  (p=0.1001, id=92116)
+  J-lens L19:    '相同的'  (p=0.2595, id=107668)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: '相同的', 'Equal', '同等', '_equal', '相同'
+
+Position 47: 'x'
+  Context: 'pivot = arr[len(arr) // 2]\n    left = [x for x in arr if x < pivot]\n    mid = [x'
+  Model next-token:  ' for'  (p=1.0000, id=369)
+  Logit lens L19: ' equality'  (p=0.0344, id=21777)
+  J-lens L19:    ' equality'  (p=0.2868, id=21777)
+  J-lens top-5: ' equality', ' equal', '_equal', '平等', '.equal'
+
+Position 48: ' for'
+  Context: 't = arr[len(arr) // 2]\n    left = [x for x in arr if x < pivot]\n    mid = [x for'
+  Model next-token:  ' x'  (p=1.0000, id=856)
+  Logit lens L19: ' _,'  (p=0.0659, id=8358)
+  J-lens L19:    ' _,'  (p=0.3170, id=8358)
+  J-lens top-5: ' _,', ' sublist', ' x', 'EqualTo', '中介'
+
+Position 49: ' x'
+  Context: '= arr[len(arr) // 2]\n    left = [x for x in arr if x < pivot]\n    mid = [x for x'
+  Model next-token:  ' in'  (p=1.0000, id=304)
+  Logit lens L19: 'ylko'  (p=0.0504, id=49576)
+  J-lens L19:    '.SOCK'  (p=0.1123, id=78922)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: '.SOCK', ' //=', ' middle', ' mid', ' range'
+
+Position 50: ' in'
+  Context: 'rr[len(arr) // 2]\n    left = [x for x in arr if x < pivot]\n    mid = [x for x in'
+  Model next-token:  ' arr'  (p=1.0000, id=2890)
+  Logit lens L19: ' PropertyChangedEventArgs'  (p=0.1537, id=92116)
+  J-lens L19:    ' xrange'  (p=0.7619, id=33073)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: ' xrange', ' range', ' sorted', '集合', 'EqualTo'
+
+Position 51: ' arr'
+  Context: 'en(arr) // 2]\n    left = [x for x in arr if x < pivot]\n    mid = [x for x in arr'
+  Model next-token:  ' if'  (p=1.0000, id=421)
+  Logit lens L19: ' enqu'  (p=0.0771, id=76707)
+  J-lens L19:    ' where'  (p=0.6105, id=1380)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: ' where', ' equalTo', 'middle', ' middle', ' equal'
+
+Position 52: ' if'
+  Context: 'arr) // 2]\n    left = [x for x in arr if x < pivot]\n    mid = [x for x in arr if'
+  Model next-token:  ' x'  (p=1.0000, id=856)
+  Logit lens L19: ' PropertyChangedEventArgs'  (p=0.0715, id=92116)
+  J-lens L19:    '.equal'  (p=0.4193, id=9102)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: '.equal', ' equal', ' equality', ' isEqual', 'Equal'
+
+Position 53: ' x'
+  Context: 'r) // 2]\n    left = [x for x in arr if x < pivot]\n    mid = [x for x in arr if x'
+  Model next-token:  ' =='  (p=1.0000, id=621)
+  Logit lens L19: ' equal'  (p=0.0723, id=6144)
+  J-lens L19:    ' equal'  (p=0.4963, id=6144)
+  J-lens top-5: ' equal', ' ==', '_equal', '.equal', ' equals'
+
+Position 54: ' =='
+  Context: '// 2]\n    left = [x for x in arr if x < pivot]\n    mid = [x for x in arr if x =='
+  Model next-token:  ' pivot'  (p=1.0000, id=26045)
+  Logit lens L19: ' @"";\n'  (p=0.1884, id=70878)
+  J-lens L19:    ' @"";\n'  (p=0.1396, id=70878)
+  J-lens top-5: ' @"";\n', ' equalTo', '.Comparator', ' centerX', '排序'
+
+Position 55: ' pivot'
+  Context: '    left = [x for x in arr if x < pivot]\n    mid = [x for x in arr if x == pivot'
+  Model next-token:  ']\n'  (p=0.9998, id=921)
+  Logit lens L19: 'IFn'  (p=0.1043, id=50390)
+  J-lens L19:    ']\n'  (p=0.3018, id=921)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: ']\n', ')\n', ' @"";\n', '}\n', '])\n'
+
+Position 56: ']\n'
+  Context: '  left = [x for x in arr if x < pivot]\n    mid = [x for x in arr if x == pivot]\n'
+  Model next-token:  '   '  (p=1.0000, id=262)
+  Logit lens L19: ' @"";\n'  (p=0.0759, id=70878)
+  J-lens L19:    '合并'  (p=0.2775, id=106080)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: '合并', '这部分', ' @"";\n', 'setVisibility', '行动'
+
+Position 57: '   '
+  Context: 'eft = [x for x in arr if x < pivot]\n    mid = [x for x in arr if x == pivot]\n   '
+  Model next-token:  ' right'  (p=1.0000, id=1290)
+  Logit lens L19: ' return'  (p=0.6282, id=470)
+  J-lens L19:    ' return'  (p=0.8863, id=470)
+  J-lens top-5: ' return', 'return', '\treturn', '排序', '右边'
+
+Position 58: ' right'
+  Context: '[x for x in arr if x < pivot]\n    mid = [x for x in arr if x == pivot]\n    right'
+  Model next-token:  ' ='  (p=1.0000, id=284)
+  Logit lens L19: ' ='  (p=0.0634, id=284)
+  J-lens L19:    ' ='  (p=0.7909, id=284)
+  J-lens top-5: ' =', 'ToLeft', '(right', '这部分', '右边'
+
+Position 59: ' ='
+  Context: ' for x in arr if x < pivot]\n    mid = [x for x in arr if x == pivot]\n    right ='
+  Model next-token:  ' ['  (p=1.0000, id=508)
+  Logit lens L19: 'PointerException'  (p=0.1024, id=39618)
+  J-lens L19:    ' []\n'  (p=0.1304, id=4167)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: ' []\n', ' None', '右边', '这部分', ' []\n\n'
+
+Position 60: ' ['
+  Context: 'or x in arr if x < pivot]\n    mid = [x for x in arr if x == pivot]\n    right = ['
+  Model next-token:  'x'  (p=1.0000, id=87)
+  Logit lens L19: '你喜欢'  (p=0.0633, id=113540)
+  J-lens L19:    'elem'  (p=0.1662, id=18871)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: 'elem', 'x', 'e', '(x', ' elem'
+
+Position 61: 'x'
+  Context: 'r x in arr if x < pivot]\n    mid = [x for x in arr if x == pivot]\n    right = [x'
+  Model next-token:  ' for'  (p=1.0000, id=369)
+  Logit lens L19: 'TINGS'  (p=0.1533, id=24876)
+  J-lens L19:    ' where'  (p=0.0861, id=1380)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: ' where', '.SOCK', ' for', '右边', 'ería'
+
+Position 62: ' for'
+  Context: 'in arr if x < pivot]\n    mid = [x for x in arr if x == pivot]\n    right = [x for'
+  Model next-token:  ' x'  (p=1.0000, id=856)
+  Logit lens L19: '<quote'  (p=0.0193, id=5647)
+  J-lens L19:    ' sublist'  (p=0.6298, id=93893)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: ' sublist', ' _,', '分成', '分解', '分开'
+
+Position 63: ' x'
+  Context: ' arr if x < pivot]\n    mid = [x for x in arr if x == pivot]\n    right = [x for x'
+  Model next-token:  ' in'  (p=1.0000, id=304)
+  Logit lens L19: 'ład'  (p=0.1812, id=44871)
+  J-lens L19:    'sorted'  (p=0.2619, id=28298)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: 'sorted', ' sorting', ' sorted', 'sorting', '_sort'
+
+Position 64: ' in'
+  Context: 'r if x < pivot]\n    mid = [x for x in arr if x == pivot]\n    right = [x for x in'
+  Model next-token:  ' arr'  (p=1.0000, id=2890)
+  Logit lens L19: ' fkk'  (p=0.1427, id=60798)
+  J-lens L19:    ' xrange'  (p=0.2292, id=33073)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: ' xrange', ' itertools', ' range', '其余', ' MEDIATEK'
+
+Position 65: ' arr'
+  Context: ' x < pivot]\n    mid = [x for x in arr if x == pivot]\n    right = [x for x in arr'
+  Model next-token:  ' if'  (p=1.0000, id=421)
+  Logit lens L19: ' réalis'  (p=0.0622, id=85495)
+  J-lens L19:    '[:-'  (p=0.4269, id=26049)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: '[:-', '[:', ' where', 'Deque', '数组'
+
+Position 66: ' if'
+  Context: '< pivot]\n    mid = [x for x in arr if x == pivot]\n    right = [x for x in arr if'
+  Model next-token:  ' x'  (p=1.0000, id=856)
+  Logit lens L19: '女朋友'  (p=0.0363, id=108508)
+  J-lens L19:    ' hasattr'  (p=0.1858, id=31056)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: ' hasattr', ' isinstance', ' greater', '高于', ' !'
+
+Position 67: ' x'
+  Context: 'pivot]\n    mid = [x for x in arr if x == pivot]\n    right = [x for x in arr if x'
+  Model next-token:  ' >'  (p=1.0000, id=861)
+  Logit lens L19: 'ieres'  (p=0.1287, id=64488)
+  J-lens L19:    ' greater'  (p=0.3203, id=7046)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: ' greater', ' >=', ' ==', ' >', '大于'
+
+Position 68: ' >'
+  Context: 'vot]\n    mid = [x for x in arr if x == pivot]\n    right = [x for x in arr if x >'
+  Model next-token:  ' pivot'  (p=1.0000, id=26045)
+  Logit lens L19: 'nier'  (p=0.2094, id=88983)
+  J-lens L19:    'nier'  (p=0.1170, id=88983)
+  J-lens top-5: 'nier', 'sorted', '使用者或', ' pivot', '排序'
+
+Position 69: ' pivot'
+  Context: '   mid = [x for x in arr if x == pivot]\n    right = [x for x in arr if x > pivot'
+  Model next-token:  ']\n'  (p=0.9990, id=921)
+  Logit lens L19: 'ieres'  (p=0.0387, id=64488)
+  J-lens L19:    'return'  (p=0.4628, id=689)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: 'return', ' return', ']\n', '\treturn', 'RETURN'
+
+Position 70: ']\n'
+  Context: ' mid = [x for x in arr if x == pivot]\n    right = [x for x in arr if x > pivot]\n'
+  Model next-token:  '   '  (p=0.9983, id=262)
+  Logit lens L19: ' return'  (p=0.2445, id=470)
+  J-lens L19:    'return'  (p=0.7215, id=689)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: 'return', ' return', '\treturn', 'RETURN', '.return'
+
+Position 71: '   '
+  Context: 'd = [x for x in arr if x == pivot]\n    right = [x for x in arr if x > pivot]\n   '
+  Model next-token:  ' return'  (p=0.9997, id=470)
+  Logit lens L19: ' return'  (p=0.9958, id=470)
+  J-lens L19:    ' return'  (p=0.9637, id=470)
+  J-lens top-5: ' return', 'return', '\treturn', '.return', '返回'
+
+Position 72: ' return'
+  Context: 'for x in arr if x == pivot]\n    right = [x for x in arr if x > pivot]\n    return'
+  Model next-token:  ' quick'  (p=0.9999, id=3974)
+  Logit lens L19: ' controvers'  (p=0.1338, id=13365)
+  J-lens L19:    '递'  (p=0.3534, id=100520)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: '递', 'recur', '排序', ' sublist', 'sorted'
+
+Position 73: ' quick'
+  Context: 'in arr if x == pivot]\n    right = [x for x in arr if x > pivot]\n    return quick'
+  Model next-token:  'sort'  (p=1.0000, id=6860)
+  Logit lens L19: ' Влад'  (p=0.0308, id=136182)
+  J-lens L19:    '递'  (p=0.3085, id=100520)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: '递', '_recursive', 'Recursive', 'recursive', ' recursion'
+
+Position 74: 'sort'
+  Context: 'rr if x == pivot]\n    right = [x for x in arr if x > pivot]\n    return quicksort'
+  Model next-token:  '(left'  (p=1.0000, id=17671)
+  Logit lens L19: ' horm'  (p=0.0219, id=20878)
+  J-lens L19:    '递'  (p=0.2484, id=100520)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: '递', ' sublist', 'Recursive', '.concat', '(concat'
+
+Position 75: '(left'
+  Context: ' x == pivot]\n    right = [x for x in arr if x > pivot]\n    return quicksort(left'
+  Model next-token:  ')'  (p=1.0000, id=8)
+  Logit lens L19: ' antioxid'  (p=0.2361, id=45712)
+  J-lens L19:    ' +'  (p=0.8970, id=488)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: ' +', '.concat', '合并', 'concat', '.append'
+
+Position 76: ')'
+  Context: 'x == pivot]\n    right = [x for x in arr if x > pivot]\n    return quicksort(left)'
+  Model next-token:  ' +'  (p=1.0000, id=488)
+  Logit lens L19: ' antioxid'  (p=0.1039, id=45712)
+  J-lens L19:    ' +'  (p=0.9854, id=488)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: ' +', ' concaten', ' concatenate', '.concat', ' concatenated'
+
+Position 77: ' +'
+  Context: '== pivot]\n    right = [x for x in arr if x > pivot]\n    return quicksort(left) +'
+  Model next-token:  ' mid'  (p=1.0000, id=5099)
+  Logit lens L19: ' \\\n'  (p=0.0758, id=3044)
+  J-lens L19:    ' sublist'  (p=0.0476, id=93893)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: ' sublist', '列表', ' list', '合并', ' список'
+
+Position 78: ' mid'
+  Context: 'ivot]\n    right = [x for x in arr if x > pivot]\n    return quicksort(left) + mid'
+  Model next-token:  ' +'  (p=1.0000, id=488)
+  Logit lens L19: ' antioxid'  (p=0.0509, id=45712)
+  J-lens L19:    ' +'  (p=0.1069, id=488)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: ' +', '全体', '再到', '合并', ' antioxid'
+
+Position 79: ' +'
+  Context: 'ot]\n    right = [x for x in arr if x > pivot]\n    return quicksort(left) + mid +'
+  Model next-token:  ' quick'  (p=1.0000, id=3974)
+  Logit lens L19: ' controvers'  (p=0.0621, id=13365)
+  J-lens L19:    '\n\n\n'  (p=0.4569, id=1406)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: '\n\n\n', '\n\n', ']\n\n', ' \n\n\n', ' \n\n'
+
+Position 80: ' quick'
+  Context: '  right = [x for x in arr if x > pivot]\n    return quicksort(left) + mid + quick'
+  Model next-token:  'sort'  (p=1.0000, id=6860)
+  Logit lens L19: 'ómo'  (p=0.0876, id=71461)
+  J-lens L19:    '排序'  (p=0.5431, id=74661)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: '排序', 'sorted', '算法', 'sorting', 'Sort'
+
+Position 81: 'sort'
+  Context: 'ght = [x for x in arr if x > pivot]\n    return quicksort(left) + mid + quicksort'
+  Model next-token:  '(right'  (p=1.0000, id=27704)
+  Logit lens L19: '$MESS'  (p=0.1005, id=39869)
+  J-lens L19:    '()\n\n'  (p=0.4464, id=2822)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: '()\n\n', '\n\n\n', '()\n\n\n', '\n\n', '\n\n\n\n'
+
+Position 82: '(right'
+  Context: '[x for x in arr if x > pivot]\n    return quicksort(left) + mid + quicksort(right'
+  Model next-token:  ')\n\n'  (p=0.9388, id=692)
+  Logit lens L19: 'eworthy'  (p=0.1494, id=56138)
+  J-lens L19:    '\n\n\n'  (p=0.3634, id=1406)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: '\n\n\n', ']\n\n', ')\n\n\n', ']\n\n\n', ')\n\n'
+
+Position 83: ')'
+  Context: 'x for x in arr if x > pivot]\n    return quicksort(left) + mid + quicksort(right)'
+  Model next-token:  ' \n\n'  (p=0.2895, id=4710)
+  Logit lens L19: ' antioxid'  (p=0.1253, id=45712)
+  J-lens L19:    ' \n\n'  (p=0.3654, id=4710)
+  ^ J-lens differs from logit lens at this position
+  J-lens top-5: ' \n\n', '\n\n\n', '\n\n', '\n\n\n\n', '`\n\n'

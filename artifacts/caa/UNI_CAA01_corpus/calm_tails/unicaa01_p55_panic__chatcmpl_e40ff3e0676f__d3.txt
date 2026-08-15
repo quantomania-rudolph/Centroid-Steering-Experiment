@@ -1,0 +1,10 @@
+Fixing `lexer` by implementing a simple whitespace split.
+unicaa01_p55_panic/main.py
+```python
+"""Fixed lexer."""
+def tokenize(src: str) -> list[str]:
+    return src.split()
+
+def demo():
+    return len(tokenize("a1 = 2"))
+```

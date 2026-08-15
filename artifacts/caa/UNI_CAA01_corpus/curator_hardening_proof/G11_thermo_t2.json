@@ -1,0 +1,13 @@
+{
+  "blockers_remaining": 0,
+  "high_remaining": 0,
+  "fixed": [],
+  "deferred": [],
+  "review_agent": "thermo-nuclear-review-subagent",
+  "pilot_files": [
+    "artifacts/caa/UNI_CAA01_corpus/calm_tails/unicaa01_p06_panic__chatcmpl_44fb68e7b5cd__d3.txt",
+    "artifacts/caa/UNI_CAA01_corpus/calm_tails/unicaa01_p06_panic__chatcmpl_44fb68e7b5cd__d3.meta.json"
+  ],
+  "admit_contract_verified": true,
+  "notes": "T2: 0 blockers/high; p06 pilot pipeline_version=3, all gates re-verified"
+}

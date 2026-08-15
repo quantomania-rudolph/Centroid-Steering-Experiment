@@ -1,0 +1,17 @@
+# Install torch XPU first (Windows / Intel Arc):
+#   pip install torch==2.10.0 torchvision==0.25.0 torchaudio==2.10.0 --index-url https://download.pytorch.org/whl/xpu
+#
+# Then:
+#   pip install -r requirements.txt
+#   pip install -e .
+#   pip install "git+https://github.com/anthropics/jacobian-lens.git"
+
+transformers>=4.44.0
+accelerate>=0.33.0
+huggingface_hub>=0.24.0
+safetensors>=0.4.0
+numpy>=1.26.0
+psutil>=5.9.0
+pytest>=8.0.0
+sentencepiece>=0.2.0
+protobuf>=4.25.0

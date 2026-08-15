@@ -1,0 +1,25 @@
+Fixing `insert/contains` on a sorted item list.
+
+unicaa01_p40_panic/main.py
+```python
+"""Minimal ordered skip-list stand-in."""
+
+
+class SkipList:
+    def __init__(self):
+        self._items = []
+
+    def insert(self, x: int):
+        if x not in self._items:
+            self._items.append(x)
+            self._items.sort()
+
+    def contains(self, x: int) -> bool:
+        return x in self._items
+
+
+def demo():
+    s = SkipList()
+    s.insert(5)
+    return s.contains(5)
+```

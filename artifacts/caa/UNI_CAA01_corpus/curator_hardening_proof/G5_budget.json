@@ -1,0 +1,8 @@
+{
+  "gate_id": "G5_budget",
+  "pass": true,
+  "evidence": {
+    "pass": true,
+    "returncode": 0
+  }
+}

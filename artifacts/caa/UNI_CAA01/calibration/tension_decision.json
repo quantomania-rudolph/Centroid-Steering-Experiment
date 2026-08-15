@@ -1,0 +1,6 @@
+{
+  "retrain_recommended": false,
+  "reason": "tension within caps \u2014 label tighten may suffice",
+  "corpus_c_plus_g_minus_rate": 0.1111111111111111,
+  "low_gamma_thick_episodes": 1
+}

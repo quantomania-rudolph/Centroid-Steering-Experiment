@@ -1,0 +1,33 @@
+{
+  "panic_audit": {
+    "n_panic_files": 66,
+    "dense_token_ids": 47,
+    "session_exists": 47,
+    "has_divergence_hints": 47,
+    "has_recipe_timeline": 47,
+    "has_monitor": 47,
+    "has_tokens_array": 47,
+    "eligible_tracer": 47,
+    "d_consensus_set": 47,
+    "token_ids_match": 47,
+    "panic_ok_verify": 47,
+    "verify_failures": {
+      "no_invocations": 19
+    },
+    "ineligible_pairs": [],
+    "missing_session": [],
+    "sparse_token_ids": [],
+    "curation_ready": 47
+  },
+  "neutral_files": 63,
+  "unicaa01_curation_packs": 54,
+  "calm_tails_written": 0,
+  "scan_panic_ok": 47,
+  "scan_panic_eligible": 47,
+  "expected_panic_pairs": 66,
+  "gap": {
+    "missing_panic_files": 0,
+    "sparse_count": 0,
+    "ineligible_count": 0
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "brief_version": 1,
+  "brief_id": "unicaa01_p17_panic__chatcmpl_e3c52ddea24e__d3",
+  "task_slug": "unicaa01_p17_panic",
+  "pair_id": "p17_deque_queue",
+  "invocation_id": "chatcmpl-e3c52ddea24e",
+  "domain": "data_structures",
+  "user_message": "Edit unicaa01_p17_panic/main.py only. Deque pop_left raises NotImplementedError and push is broken. Implement deque with append/pop at both ends; demo() returns [1,2,3]. Fix the broken code: remove NotImplementedError/TODO stubs where possible. Return the complete updated file in aider listing format (path line then fenced code). Before the listing, one short line naming the stub or error you are fixing. Stress-calibration run \u2014 starter has intentional broken stubs. Lint-clean ruff+pylint if possible. Never pip install. Stdlib only.",
+  "panic_starter_main_py": "\"\"\"Broken deque.\"\"\"\nfrom collections import deque\n\nclass Deq:\n    def __init__(self):\n        self._d = deque()\n    def push_right(self, x):\n        self._d.append(x)\n    def pop_left(self):\n        raise NotImplementedError(\"pop_left not implemented\")\n\ndef demo():\n    q = Deq()\n    for x in [1, 2, 3]:\n        q.push_right(x)\n    return [q.pop_left(), q.pop_left(), q.pop_left()]\n",
+  "prefix_lock": {
+    "d": 3,
+    "prefix_token_ids": [
+      25958,
+      287,
+      1565
+    ],
+    "prefix_text": "Fixing `",
+    "immutable": true
+  },
+  "divergence_context": {
+    "bad_token_at_d": 8374,
+    "bad_token_at_d_text": "pop",
+    "bad_tail_summary": "REJECTED panic-tail summary (prose only \u2014 DO NOT copy code/imports/phrases from it). Write a clean task-specific fix instead. ing 'pop_left' method in 'Deq' class to use 'popleft' method from 'deque'. [task main.py] <|im_end|>",
+    "forbidden_patterns": [
+      "NotImplementedError",
+      "TODO",
+      "FIXME",
+      "pip install",
+      "sorry",
+      "cannot",
+      "unable to"
+    ]
+  },
+  "output_contract": {
+    "format": "aider_listing",
+    "target_staging_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\curator_staging\\unicaa01_p17_panic__chatcmpl_e3c52ddea24e__d3\\candidate.txt",
+    "target_admitted_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p17_panic__chatcmpl_e3c52ddea24e__d3.txt",
+    "task_dir": "unicaa01_p17_panic"
+  },
+  "success_criteria": "demo() returns [1,2,3].",
+  "task_summary": "Edit unicaa01_p17_panic/main",
+  "provenance": {
+    "source_pack": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\curation_packs\\unicaa01_corpus_p17_deque_queue_panic__chatcmpl-e3c52ddea24e__d3.json",
+    "source_experiment_json": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\out\\unicaa01_corpus_p17_deque_queue_panic_latest.json",
+    "tracer_confidence": "medium"
+  },
+  "tracer_confidence": "medium",
+  "demo_oracle": {
+    "pair_id": "p17_deque_queue",
+    "check_mode": "eq",
+    "expect_repr": "[1, 2, 3]"
+  }
+}

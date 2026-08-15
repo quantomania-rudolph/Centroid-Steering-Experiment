@@ -1,0 +1,19 @@
+from collections import deque
+
+
+class Deq:
+    def __init__(self):
+        self._d = deque()
+
+    def push_right(self, x):
+        self._d.append(x)
+
+    def pop_left(self):
+        return self._d.popleft()
+
+
+def demo():
+    q = Deq()
+    for x in [1, 2, 3]:
+        q.push_right(x)
+    return [q.pop_left(), q.pop_left(), q.pop_left()]

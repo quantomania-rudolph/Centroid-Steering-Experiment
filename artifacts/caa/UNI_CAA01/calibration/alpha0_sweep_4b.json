@@ -1,0 +1,871 @@
+{
+  "alphas": [
+    0.8,
+    0.85,
+    0.9,
+    0.95
+  ],
+  "fit_rows": [
+    {
+      "alpha_0": 0.8,
+      "pass": true,
+      "panics": [
+        {
+          "slug": "unicaa01_p09_panic",
+          "pass": true,
+          "reasons": [],
+          "stats": {
+            "n": 89,
+            "mean_alpha": 0.008988763146609437,
+            "inject_count": 1,
+            "max_alpha": 0.7999999200482398,
+            "g_stream_count": 1,
+            "g_recipe_count": 1,
+            "inject_indices": [
+              1
+            ]
+          },
+          "demo_ok": true,
+          "demo_value": [
+            1,
+            2,
+            3
+          ],
+          "quality_ok": true,
+          "quality": {
+            "ok": true,
+            "garbled_ok": true,
+            "ruff_ok": true,
+            "pytest_ok": true,
+            "reasons": [],
+            "garbled": {
+              "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\alpha0_4b_snapshots\\a080\\unicaa01_p09_panic\\main.py",
+              "bytes": 296
+            },
+            "ruff": {
+              "returncode": 0,
+              "stdout": "\u001b[1;32mAll checks passed!\u001b[0m\n",
+              "stderr": ""
+            },
+            "pytest": {
+              "returncode": 0,
+              "test": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\tests\\cast_alpha0_tasks\\test_p09.py",
+              "stdout": ".....                                                                    [100%]\n5 passed in 0.04s\n",
+              "stderr": ""
+            }
+          },
+          "session": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\cast_alpha0_4b_fit_a080_p09_latest.json",
+          "snapshot": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\alpha0_4b_snapshots\\a080\\unicaa01_p09_panic\\main.py"
+        },
+        {
+          "slug": "unicaa01_p19_panic",
+          "pass": true,
+          "reasons": [],
+          "stats": {
+            "n": 173,
+            "mean_alpha": 0.004624276951280526,
+            "inject_count": 1,
+            "max_alpha": 0.7999999125715309,
+            "g_stream_count": 3,
+            "g_recipe_count": 2,
+            "inject_indices": [
+              1
+            ]
+          },
+          "demo_ok": true,
+          "demo_value": 1,
+          "quality_ok": true,
+          "quality": {
+            "ok": true,
+            "garbled_ok": true,
+            "ruff_ok": true,
+            "pytest_ok": true,
+            "reasons": [],
+            "garbled": {
+              "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\alpha0_4b_snapshots\\a080\\unicaa01_p19_panic\\main.py",
+              "bytes": 544
+            },
+            "ruff": {
+              "returncode": 0,
+              "stdout": "\u001b[1;32mAll checks passed!\u001b[0m\n",
+              "stderr": ""
+            },
+            "pytest": {
+              "returncode": 0,
+              "test": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\tests\\cast_alpha0_tasks\\test_p19.py",
+              "stdout": "....                                                                     [100%]\n4 passed in 0.08s\n",
+              "stderr": ""
+            }
+          },
+          "session": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\cast_alpha0_4b_fit_a080_p19_latest.json",
+          "snapshot": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\alpha0_4b_snapshots\\a080\\unicaa01_p19_panic\\main.py"
+        }
+      ],
+      "clean": {
+        "pass": true,
+        "reasons": [],
+        "stats": {
+          "n": 157,
+          "mean_alpha": 0.0,
+          "inject_count": 0,
+          "max_alpha": 0.0,
+          "g_stream_count": 0,
+          "g_recipe_count": 0,
+          "inject_indices": []
+        },
+        "stub_mean": 4.958640829861987e-10,
+        "session": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\cast_alpha0_4b_fit_a080_clean_latest.json"
+      },
+      "health": {
+        "ok": true,
+        "device": "xpu",
+        "gpu_name": "Intel(R) Arc(TM) 140V GPU (16GB)",
+        "refuses_cpu_fallback": true,
+        "session_id": "boot_20260814T073630Z",
+        "invocations": 0,
+        "session_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\aider_sessions\\boot_20260814T073630Z.jsonl",
+        "chaos_enabled": true,
+        "cast_shadow": true,
+        "cast_inject": true,
+        "cast_vector_id": "UNI_CAA01",
+        "cast_alpha_0": 0.8,
+        "degraded_mode": false,
+        "probe_layers": [
+          10,
+          16,
+          22
+        ],
+        "chaos_timing": {}
+      },
+      "complete": true,
+      "phase": "fit"
+    },
+    {
+      "alpha_0": 0.85,
+      "pass": true,
+      "panics": [
+        {
+          "slug": "unicaa01_p09_panic",
+          "pass": true,
+          "reasons": [],
+          "stats": {
+            "n": 85,
+            "mean_alpha": 0.00999999924760999,
+            "inject_count": 1,
+            "max_alpha": 0.8499999360468492,
+            "g_stream_count": 1,
+            "g_recipe_count": 1,
+            "inject_indices": [
+              1
+            ]
+          },
+          "demo_ok": true,
+          "demo_value": [
+            1,
+            2,
+            3
+          ],
+          "quality_ok": true,
+          "quality": {
+            "ok": true,
+            "garbled_ok": true,
+            "ruff_ok": true,
+            "pytest_ok": true,
+            "reasons": [],
+            "garbled": {
+              "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\alpha0_4b_snapshots\\a085\\unicaa01_p09_panic\\main.py",
+              "bytes": 277
+            },
+            "ruff": {
+              "returncode": 0,
+              "stdout": "\u001b[1;32mAll checks passed!\u001b[0m\n",
+              "stderr": ""
+            },
+            "pytest": {
+              "returncode": 0,
+              "test": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\tests\\cast_alpha0_tasks\\test_p09.py",
+              "stdout": ".....                                                                    [100%]\n5 passed in 0.07s\n",
+              "stderr": ""
+            }
+          },
+          "session": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\cast_alpha0_4b_fit_a085_p09_latest.json",
+          "snapshot": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\alpha0_4b_snapshots\\a085\\unicaa01_p09_panic\\main.py"
+        },
+        {
+          "slug": "unicaa01_p19_panic",
+          "pass": true,
+          "reasons": [],
+          "stats": {
+            "n": 173,
+            "mean_alpha": 0.004913294172854826,
+            "inject_count": 1,
+            "max_alpha": 0.8499998919038849,
+            "g_stream_count": 3,
+            "g_recipe_count": 2,
+            "inject_indices": [
+              1
+            ]
+          },
+          "demo_ok": true,
+          "demo_value": 1,
+          "quality_ok": true,
+          "quality": {
+            "ok": true,
+            "garbled_ok": true,
+            "ruff_ok": true,
+            "pytest_ok": true,
+            "reasons": [],
+            "garbled": {
+              "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\alpha0_4b_snapshots\\a085\\unicaa01_p19_panic\\main.py",
+              "bytes": 544
+            },
+            "ruff": {
+              "returncode": 0,
+              "stdout": "\u001b[1;32mAll checks passed!\u001b[0m\n",
+              "stderr": ""
+            },
+            "pytest": {
+              "returncode": 0,
+              "test": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\tests\\cast_alpha0_tasks\\test_p19.py",
+              "stdout": "....                                                                     [100%]\n4 passed in 0.04s\n",
+              "stderr": ""
+            }
+          },
+          "session": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\cast_alpha0_4b_fit_a085_p19_latest.json",
+          "snapshot": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\alpha0_4b_snapshots\\a085\\unicaa01_p19_panic\\main.py"
+        }
+      ],
+      "clean": {
+        "pass": true,
+        "reasons": [],
+        "stats": {
+          "n": 157,
+          "mean_alpha": 0.0,
+          "inject_count": 0,
+          "max_alpha": 0.0,
+          "g_stream_count": 0,
+          "g_recipe_count": 0,
+          "inject_indices": []
+        },
+        "stub_mean": 4.335963661719109e-10,
+        "session": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\cast_alpha0_4b_fit_a085_clean_latest.json"
+      },
+      "health": {
+        "ok": true,
+        "device": "xpu",
+        "gpu_name": "Intel(R) Arc(TM) 140V GPU (16GB)",
+        "refuses_cpu_fallback": true,
+        "session_id": "boot_20260814T081010Z",
+        "invocations": 0,
+        "session_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\aider_sessions\\boot_20260814T081010Z.jsonl",
+        "chaos_enabled": true,
+        "cast_shadow": true,
+        "cast_inject": true,
+        "cast_vector_id": "UNI_CAA01",
+        "cast_alpha_0": 0.85,
+        "degraded_mode": false,
+        "probe_layers": [
+          10,
+          16,
+          22
+        ],
+        "chaos_timing": {}
+      },
+      "complete": true,
+      "phase": "fit"
+    },
+    {
+      "alpha_0": 0.9,
+      "pass": true,
+      "panics": [
+        {
+          "slug": "unicaa01_p09_panic",
+          "pass": true,
+          "reasons": [],
+          "stats": {
+            "n": 85,
+            "mean_alpha": 0.010588234356034785,
+            "inject_count": 1,
+            "max_alpha": 0.8999999202629567,
+            "g_stream_count": 1,
+            "g_recipe_count": 1,
+            "inject_indices": [
+              1
+            ]
+          },
+          "demo_ok": true,
+          "demo_value": [
+            1,
+            2,
+            3
+          ],
+          "quality_ok": true,
+          "quality": {
+            "ok": true,
+            "garbled_ok": true,
+            "ruff_ok": true,
+            "pytest_ok": true,
+            "reasons": [],
+            "garbled": {
+              "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\alpha0_4b_snapshots\\a090\\unicaa01_p09_panic\\main.py",
+              "bytes": 277
+            },
+            "ruff": {
+              "returncode": 0,
+              "stdout": "\u001b[1;32mAll checks passed!\u001b[0m\n",
+              "stderr": ""
+            },
+            "pytest": {
+              "returncode": 0,
+              "test": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\tests\\cast_alpha0_tasks\\test_p09.py",
+              "stdout": ".....                                                                    [100%]\n5 passed in 0.04s\n",
+              "stderr": ""
+            }
+          },
+          "session": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\cast_alpha0_4b_fit_a090_p09_latest.json",
+          "snapshot": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\alpha0_4b_snapshots\\a090\\unicaa01_p09_panic\\main.py"
+        },
+        {
+          "slug": "unicaa01_p19_panic",
+          "pass": true,
+          "reasons": [],
+          "stats": {
+            "n": 181,
+            "mean_alpha": 0.004972375089433419,
+            "inject_count": 1,
+            "max_alpha": 0.8999998911874488,
+            "g_stream_count": 3,
+            "g_recipe_count": 2,
+            "inject_indices": [
+              1
+            ]
+          },
+          "demo_ok": true,
+          "demo_value": 1,
+          "quality_ok": true,
+          "quality": {
+            "ok": true,
+            "garbled_ok": true,
+            "ruff_ok": true,
+            "pytest_ok": true,
+            "reasons": [],
+            "garbled": {
+              "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\alpha0_4b_snapshots\\a090\\unicaa01_p19_panic\\main.py",
+              "bytes": 583
+            },
+            "ruff": {
+              "returncode": 0,
+              "stdout": "\u001b[1;32mAll checks passed!\u001b[0m\n",
+              "stderr": ""
+            },
+            "pytest": {
+              "returncode": 0,
+              "test": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\tests\\cast_alpha0_tasks\\test_p19.py",
+              "stdout": "....                                                                     [100%]\n4 passed in 0.03s\n",
+              "stderr": ""
+            }
+          },
+          "session": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\cast_alpha0_4b_fit_a090_p19_latest.json",
+          "snapshot": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\alpha0_4b_snapshots\\a090\\unicaa01_p19_panic\\main.py"
+        }
+      ],
+      "clean": {
+        "pass": true,
+        "reasons": [],
+        "stats": {
+          "n": 164,
+          "mean_alpha": 0.0,
+          "inject_count": 0,
+          "max_alpha": 0.0,
+          "g_stream_count": 0,
+          "g_recipe_count": 0,
+          "inject_indices": []
+        },
+        "stub_mean": 1.5890294391960109e-09,
+        "session": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\cast_alpha0_4b_fit_a090_clean_latest.json"
+      },
+      "health": {
+        "ok": true,
+        "device": "xpu",
+        "gpu_name": "Intel(R) Arc(TM) 140V GPU (16GB)",
+        "refuses_cpu_fallback": true,
+        "session_id": "boot_20260814T093112Z",
+        "invocations": 0,
+        "session_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\aider_sessions\\boot_20260814T093112Z.jsonl",
+        "chaos_enabled": true,
+        "cast_shadow": true,
+        "cast_inject": true,
+        "cast_vector_id": "UNI_CAA01",
+        "cast_alpha_0": 0.9,
+        "degraded_mode": false,
+        "probe_layers": [
+          10,
+          16,
+          22
+        ],
+        "chaos_timing": {}
+      },
+      "complete": true,
+      "phase": "fit"
+    },
+    {
+      "alpha_0": 0.95,
+      "pass": true,
+      "panics": [
+        {
+          "slug": "unicaa01_p09_panic",
+          "pass": true,
+          "reasons": [],
+          "stats": {
+            "n": 85,
+            "mean_alpha": 0.011176469621895217,
+            "inject_count": 1,
+            "max_alpha": 0.9499999178610935,
+            "g_stream_count": 1,
+            "g_recipe_count": 1,
+            "inject_indices": [
+              1
+            ]
+          },
+          "demo_ok": true,
+          "demo_value": [
+            1,
+            2,
+            3
+          ],
+          "quality_ok": true,
+          "quality": {
+            "ok": true,
+            "garbled_ok": true,
+            "ruff_ok": true,
+            "pytest_ok": true,
+            "reasons": [],
+            "garbled": {
+              "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\alpha0_4b_snapshots\\a095\\unicaa01_p09_panic\\main.py",
+              "bytes": 277
+            },
+            "ruff": {
+              "returncode": 0,
+              "stdout": "\u001b[1;32mAll checks passed!\u001b[0m\n",
+              "stderr": ""
+            },
+            "pytest": {
+              "returncode": 0,
+              "test": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\tests\\cast_alpha0_tasks\\test_p09.py",
+              "stdout": ".....                                                                    [100%]\n5 passed in 0.04s\n",
+              "stderr": ""
+            }
+          },
+          "session": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\cast_alpha0_4b_fit_a095_p09_latest.json",
+          "snapshot": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\alpha0_4b_snapshots\\a095\\unicaa01_p09_panic\\main.py"
+        },
+        {
+          "slug": "unicaa01_p19_panic",
+          "pass": true,
+          "reasons": [],
+          "stats": {
+            "n": 173,
+            "mean_alpha": 0.005491328791647834,
+            "inject_count": 1,
+            "max_alpha": 0.9499998809550753,
+            "g_stream_count": 3,
+            "g_recipe_count": 2,
+            "inject_indices": [
+              1
+            ]
+          },
+          "demo_ok": true,
+          "demo_value": 1,
+          "quality_ok": true,
+          "quality": {
+            "ok": true,
+            "garbled_ok": true,
+            "ruff_ok": true,
+            "pytest_ok": true,
+            "reasons": [],
+            "garbled": {
+              "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\alpha0_4b_snapshots\\a095\\unicaa01_p19_panic\\main.py",
+              "bytes": 544
+            },
+            "ruff": {
+              "returncode": 0,
+              "stdout": "\u001b[1;32mAll checks passed!\u001b[0m\n",
+              "stderr": ""
+            },
+            "pytest": {
+              "returncode": 0,
+              "test": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\tests\\cast_alpha0_tasks\\test_p19.py",
+              "stdout": "....                                                                     [100%]\n4 passed in 0.04s\n",
+              "stderr": ""
+            }
+          },
+          "session": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\cast_alpha0_4b_fit_a095_p19_latest.json",
+          "snapshot": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\alpha0_4b_snapshots\\a095\\unicaa01_p19_panic\\main.py"
+        }
+      ],
+      "clean": {
+        "pass": true,
+        "reasons": [],
+        "stats": {
+          "n": 164,
+          "mean_alpha": 0.0,
+          "inject_count": 0,
+          "max_alpha": 0.0,
+          "g_stream_count": 0,
+          "g_recipe_count": 0,
+          "inject_indices": []
+        },
+        "stub_mean": 1.5696729011433879e-09,
+        "session": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\cast_alpha0_4b_fit_a095_clean_latest.json"
+      },
+      "health": {
+        "ok": true,
+        "device": "xpu",
+        "gpu_name": "Intel(R) Arc(TM) 140V GPU (16GB)",
+        "refuses_cpu_fallback": true,
+        "session_id": "boot_20260814T095004Z",
+        "invocations": 0,
+        "session_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\aider_sessions\\boot_20260814T095004Z.jsonl",
+        "chaos_enabled": true,
+        "cast_shadow": true,
+        "cast_inject": true,
+        "cast_vector_id": "UNI_CAA01",
+        "cast_alpha_0": 0.95,
+        "degraded_mode": false,
+        "probe_layers": [
+          10,
+          16,
+          22
+        ],
+        "chaos_timing": {}
+      },
+      "complete": true,
+      "phase": "fit"
+    }
+  ],
+  "selected": 0.85,
+  "confirm": {
+    "alpha_0": 0.85,
+    "health": {
+      "ok": true,
+      "device": "xpu",
+      "gpu_name": "Intel(R) Arc(TM) 140V GPU (16GB)",
+      "refuses_cpu_fallback": true,
+      "session_id": "boot_20260814T175607Z",
+      "invocations": 0,
+      "session_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\aider_sessions\\boot_20260814T175607Z.jsonl",
+      "chaos_enabled": true,
+      "cast_shadow": true,
+      "cast_inject": true,
+      "cast_vector_id": "UNI_CAA01",
+      "cast_alpha_0": 0.85,
+      "degraded_mode": false,
+      "probe_layers": [
+        10,
+        16,
+        22
+      ],
+      "chaos_timing": {}
+    },
+    "rows": [
+      {
+        "slug": "unicaa01_p30_panic",
+        "stats": {
+          "n": 4,
+          "mean_alpha": 0.21249998885389254,
+          "inject_count": 1,
+          "max_alpha": 0.8499999554155702,
+          "g_stream_count": 1,
+          "g_recipe_count": 1,
+          "inject_indices": [
+            1
+          ]
+        },
+        "demo_ok": false,
+        "demo_value": null,
+        "demo_err": "Traceback (most recent call last):\n  File \"<string>\", line 3, in <module>\n  File \"C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\alpha0_4b_snapshots\\a085\\unicaa01_p30_panic\\main.py\", line 9, in demo\n    return parse_ini(\"host=localhost\\nport=8080\")[\"host\"]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\alpha0_4b_snapshots\\a085\\unicaa01_p30_panic\\main.py\", line 5, in parse_ini\n    raise NotImplementedError(\"parse_ini not implemented\")\nNotImplementedError: parse_ini not implemented",
+        "quality_ok": false,
+        "quality": {
+          "ok": false,
+          "garbled_ok": false,
+          "ruff_ok": true,
+          "pytest_ok": false,
+          "reasons": [
+            "garbled: NotImplementedError still present",
+            "pytest failed"
+          ],
+          "garbled": {
+            "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\alpha0_4b_snapshots\\a085\\unicaa01_p30_panic\\main.py",
+            "bytes": 181,
+            "error": "NotImplementedError still present"
+          },
+          "ruff": {
+            "returncode": 0,
+            "stdout": "\u001b[1;32mAll checks passed!\u001b[0m\n",
+            "stderr": ""
+          },
+          "pytest": {
+            "returncode": 1,
+            "test": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\tests\\cast_alpha0_tasks\\test_p30.py",
+            "stdout": "FFFF                                                                     [100%]\n================================== FAILURES ===================================\n_____________________________ test_demo_localhost _____________________________\ntests\\cast_alpha0_tasks\\test_p30.py:9: in test_demo_localhost\n    assert main.demo() == \"localhost\"\n           ^^^^^^^^^^^\nartifacts\\caa\\UNI_CAA01\\calibration\\alpha0_4b_snapshots\\a085\\unicaa01_p30_panic\\main.py:9: in demo\n    return parse_ini(\"host=localhost\\nport=8080\")[\"host\"]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nartifacts\\caa\\UNI_CAA01\\calibration\\alpha0_4b_snapshots\\a085\\unicaa01_p30_panic\\main.py:5: in parse_ini\n    raise NotImplementedError(\"parse_ini not implemented\")\nE   NotImplementedError: parse_ini not implemented\n_______________________ test_parse_ini_ignores_comments _______________________\ntests\\cast_alpha0_tasks\\test_p30.py:13: in test_parse_ini_ignores_comments\n    parsed = main.parse_ini(\"# comment\\nhost=127.0.0.1\\nport=9\")\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nartifacts\\caa\\UNI_CAA01\\calibration\\alpha0_4b_snapshots\\a085\\unicaa01_p30_panic\\main.py:5: in parse_ini\n    raise NotImplementedError(\"parse_ini not implemented\")\nE   NotImplementedError: parse_ini not implemented\n______________________ test_parse_ini_skips_empty_lines _______________________\ntests\\cast_alpha0_tasks\\test_p30.py:19: in test_parse_ini_skips_empty_lines\n    parsed = main.parse_ini(\"\\n\\nhost=alpha\\n\\nport=42\\n\")\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nartifacts\\caa\\UNI_CAA01\\calibration\\alpha0_4b_snapshots\\a085\\unicaa01_p30_panic\\main.py:5: in parse_ini\n    raise NotImplementedError(\"parse_ini not implemented\")\nE   NotImplementedError: parse_ini not implemented\n___________________ test_parse_ini_last_wins_duplicate_keys ___________________\ntests\\cast_alpha0_tasks\\test_p30.py:25: in test_parse_ini_last_wins_duplicate_keys\n    parsed = main.parse_ini(\"port=1\\nport=8080\")\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nartifacts\\caa\\UNI_CAA01\\calibration\\alpha0_4b_snapshots\\a085\\unicaa01_p30_panic\\main.py:5: in parse_ini\n    raise NotImplementedError(\"parse_ini not implemented\")\nE   NotImplementedError: parse_ini not implemented\n=========================== short test summary info ===========================\nFAILED tests/cast_alpha0_tasks/test_p30.py::test_demo_localhost - NotImplemen...\nFAILED tests/cast_alpha0_tasks/test_p30.py::test_parse_ini_ignores_comments\nFAILED tests/cast_alpha0_tasks/test_p30.py::test_parse_ini_skips_empty_lines\nFAILED tests/cast_alpha0_tasks/test_p30.py::test_parse_ini_last_wins_duplicate_keys\n4 failed in 0.26s\n",
+            "stderr": ""
+          }
+        },
+        "session": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\cast_alpha0_4b_confirm_a085_p30_latest.json",
+        "snapshot": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\alpha0_4b_snapshots\\a085\\unicaa01_p30_panic\\main.py",
+        "attempt": 3,
+        "phase": "confirm",
+        "require_inject": true,
+        "pass": false
+      },
+      {
+        "slug": "unicaa01_p65_panic",
+        "stats": {
+          "n": 166,
+          "mean_alpha": 0.005120481795093263,
+          "inject_count": 1,
+          "max_alpha": 0.8499999779854817,
+          "g_stream_count": 1,
+          "g_recipe_count": 1,
+          "inject_indices": [
+            1
+          ]
+        },
+        "demo_ok": true,
+        "demo_value": [
+          [
+            1,
+            6
+          ]
+        ],
+        "demo_err": null,
+        "quality_ok": true,
+        "quality": {
+          "ok": true,
+          "garbled_ok": true,
+          "ruff_ok": true,
+          "pytest_ok": true,
+          "reasons": [],
+          "garbled": {
+            "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\alpha0_4b_snapshots\\a085\\unicaa01_p65_panic\\main.py",
+            "bytes": 483
+          },
+          "ruff": {
+            "returncode": 0,
+            "stdout": "\u001b[1;32mAll checks passed!\u001b[0m\n",
+            "stderr": ""
+          },
+          "pytest": {
+            "returncode": 0,
+            "test": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\tests\\cast_alpha0_tasks\\test_p65.py",
+            "stdout": "....                                                                     [100%]\n4 passed in 0.06s\n",
+            "stderr": ""
+          }
+        },
+        "session": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\cast_alpha0_4b_confirm_a085_p65_latest.json",
+        "snapshot": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\alpha0_4b_snapshots\\a085\\unicaa01_p65_panic\\main.py",
+        "attempt": 0,
+        "phase": "confirm",
+        "require_inject": true,
+        "rescore_only": true,
+        "pass": true
+      }
+    ],
+    "pass": false
+  },
+  "control": {
+    "alpha_0": 0.85,
+    "health": {
+      "ok": true,
+      "device": "xpu",
+      "gpu_name": "Intel(R) Arc(TM) 140V GPU (16GB)",
+      "refuses_cpu_fallback": true,
+      "session_id": "boot_20260814T181941Z",
+      "invocations": 0,
+      "session_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\aider_sessions\\boot_20260814T181941Z.jsonl",
+      "chaos_enabled": true,
+      "cast_shadow": true,
+      "cast_inject": false,
+      "cast_vector_id": "UNI_CAA01",
+      "cast_alpha_0": 0.85,
+      "degraded_mode": false,
+      "probe_layers": [
+        10,
+        16,
+        22
+      ],
+      "chaos_timing": {}
+    },
+    "rows": [
+      {
+        "slug": "unicaa01_p09_panic",
+        "stats": {
+          "n": 85,
+          "mean_alpha": 0.00999999912010571,
+          "inject_count": 0,
+          "max_alpha": 0.8499999252089855,
+          "g_stream_count": 1,
+          "g_recipe_count": 1,
+          "inject_indices": []
+        },
+        "demo_ok": true,
+        "demo_value": [
+          1,
+          2,
+          3
+        ],
+        "demo_err": null,
+        "quality_ok": true,
+        "quality": {
+          "ok": true,
+          "garbled_ok": true,
+          "ruff_ok": true,
+          "pytest_ok": true,
+          "reasons": [],
+          "garbled": {
+            "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\alpha0_4b_snapshots\\a085\\unicaa01_p09_panic\\main.py",
+            "bytes": 277
+          },
+          "ruff": {
+            "returncode": 0,
+            "stdout": "\u001b[1;32mAll checks passed!\u001b[0m\n",
+            "stderr": ""
+          },
+          "pytest": {
+            "returncode": 0,
+            "test": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\tests\\cast_alpha0_tasks\\test_p09.py",
+            "stdout": ".....                                                                    [100%]\n5 passed in 0.13s\n",
+            "stderr": ""
+          }
+        },
+        "session": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\cast_alpha0_4b_control_a085_p09_latest.json",
+        "snapshot": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\alpha0_4b_snapshots\\a085\\unicaa01_p09_panic\\main.py",
+        "attempt": 1,
+        "phase": "control",
+        "require_inject": false,
+        "pass": true
+      },
+      {
+        "slug": "unicaa01_p19_panic",
+        "stats": {
+          "n": 173,
+          "mean_alpha": 0.004913294287353723,
+          "inject_count": 0,
+          "max_alpha": 0.849999911712194,
+          "g_stream_count": 3,
+          "g_recipe_count": 2,
+          "inject_indices": []
+        },
+        "demo_ok": true,
+        "demo_value": 1,
+        "demo_err": null,
+        "quality_ok": true,
+        "quality": {
+          "ok": true,
+          "garbled_ok": true,
+          "ruff_ok": true,
+          "pytest_ok": true,
+          "reasons": [],
+          "garbled": {
+            "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\alpha0_4b_snapshots\\a085\\unicaa01_p19_panic\\main.py",
+            "bytes": 544
+          },
+          "ruff": {
+            "returncode": 0,
+            "stdout": "\u001b[1;32mAll checks passed!\u001b[0m\n",
+            "stderr": ""
+          },
+          "pytest": {
+            "returncode": 0,
+            "test": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\tests\\cast_alpha0_tasks\\test_p19.py",
+            "stdout": "....                                                                     [100%]\n4 passed in 0.19s\n",
+            "stderr": ""
+          }
+        },
+        "session": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\cast_alpha0_4b_control_a085_p19_latest.json",
+        "snapshot": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\alpha0_4b_snapshots\\a085\\unicaa01_p19_panic\\main.py",
+        "attempt": 1,
+        "phase": "control",
+        "require_inject": false,
+        "pass": true
+      }
+    ],
+    "pass": true,
+    "oversteer": false
+  },
+  "stability": {
+    "alpha_0": 0.85,
+    "health": {
+      "ok": true,
+      "device": "xpu",
+      "gpu_name": "Intel(R) Arc(TM) 140V GPU (16GB)",
+      "refuses_cpu_fallback": true,
+      "session_id": "boot_20260814T184944Z",
+      "invocations": 0,
+      "session_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\aider_sessions\\boot_20260814T184944Z.jsonl",
+      "chaos_enabled": true,
+      "cast_shadow": true,
+      "cast_inject": true,
+      "cast_vector_id": "UNI_CAA01",
+      "cast_alpha_0": 0.85,
+      "degraded_mode": false,
+      "probe_layers": [
+        10,
+        16,
+        22
+      ],
+      "chaos_timing": {}
+    },
+    "row": {
+      "slug": "unicaa01_p09_panic",
+      "stats": {
+        "n": 85,
+        "mean_alpha": 0.00999999912266873,
+        "inject_count": 1,
+        "max_alpha": 0.849999925426842,
+        "g_stream_count": 1,
+        "g_recipe_count": 1,
+        "inject_indices": [
+          1
+        ]
+      },
+      "demo_ok": true,
+      "demo_value": [
+        1,
+        2,
+        3
+      ],
+      "demo_err": null,
+      "quality_ok": true,
+      "quality": {
+        "ok": true,
+        "garbled_ok": true,
+        "ruff_ok": true,
+        "pytest_ok": true,
+        "reasons": [],
+        "garbled": {
+          "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\alpha0_4b_snapshots\\a085\\unicaa01_p09_panic\\main.py",
+          "bytes": 277
+        },
+        "ruff": {
+          "returncode": 0,
+          "stdout": "\u001b[1;32mAll checks passed!\u001b[0m\n",
+          "stderr": ""
+        },
+        "pytest": {
+          "returncode": 0,
+          "test": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\tests\\cast_alpha0_tasks\\test_p09.py",
+          "stdout": ".....                                                                    [100%]\n5 passed in 0.13s\n",
+          "stderr": ""
+        }
+      },
+      "session": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\cast_alpha0_4b_stability_a085_p09_latest.json",
+      "snapshot": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\alpha0_4b_snapshots\\a085\\unicaa01_p09_panic\\main.py",
+      "attempt": 1,
+      "phase": "stability",
+      "require_inject": true,
+      "pass": true
+    },
+    "pass": true
+  }
+}

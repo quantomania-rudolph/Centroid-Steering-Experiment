@@ -1,0 +1,32 @@
+{
+  "task_slug": "unicaa01_p60_panic",
+  "invocation_id": "chatcmpl-1990b3d4152b",
+  "experiment": "unicaa01_corpus_p60_template_fmt_panic",
+  "pair_id": "p60_template_fmt",
+  "arm": "panic",
+  "user_message": "Edit unicaa01_p60_panic/main.py only. render_template NotImplementedError for {{var}}. Render {{name}} template; demo() 'hi Ada'. Fix the broken code: remove NotImplementedError/TODO stubs where possible. Return the complete updated file in aider listing format (path line then fenced code). Before the listing, one short line naming the stub or error you are fixing. Stress-calibration run \u2014 starter has intentional broken stubs. Lint-clean ruff+pylint if possible. Never pip install. Stdlib only.",
+  "session_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\sessions\\unicaa01_corpus_p60_template_fmt_panic_20260810T232004Z.jsonl",
+  "prompt_tokens": 1937,
+  "completion_tokens": 95,
+  "d_tracer": 3,
+  "prefix_len": 3,
+  "prefix_token_ids": [
+    25958,
+    287,
+    1565
+  ],
+  "prefix_text": "Fixing `",
+  "bad_token_at_d": 2623,
+  "bad_token_at_d_text": "Not",
+  "bad_tail_text_preview": "ing `NotImplementedError` for `{{var}}` in `render_template`.\n\nunicaa01_p60_panic/main.py\n```\ndef render_template(tpl: str, ctx: dict) -> str:\n    for key, value in ctx.items():\n        tpl = tpl.replace(f\"{{{key}}}\", value)\n    return tpl\n\ndef demo():\n    return render_template(\"hi {{name}}\", {\"name\": \"Ada\"})\n```<|im_end|>",
+  "calm_tail_filename": "unicaa01_p60_panic__chatcmpl_1990b3d4152b__d3.txt",
+  "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p60_panic__chatcmpl_1990b3d4152b__d3.txt",
+  "token_ids_match": true,
+  "confidence": "high",
+  "notes": [
+    "Composer senior-editor: write calm completion text only.",
+    "Prefix lock: encode(text)[:d] must equal prefix_token_ids.",
+    "No pip/sorry/stub/NotImplementedError in calm tail."
+  ],
+  "source_experiment_json": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\out\\unicaa01_corpus_p60_template_fmt_panic_latest.json"
+}

@@ -1,0 +1,118 @@
+{
+  "attempts": [
+    {
+      "attempt_index": 0,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "631b5de8f3de5785eb0456765cf275f7f43aeadb4725c9dd14adcaea64150719",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": true,
+      "failed_checks": [
+        {
+          "id": "RUN_quality_suite",
+          "pass": false,
+          "detail": "FAIL:fib_neg:expected ValueError got -1"
+        }
+      ],
+      "demo_result": {
+        "pass": true,
+        "actual_repr": "55",
+        "expected_repr": "55",
+        "error": "",
+        "pair_id": "p12_fibonacci"
+      },
+      "qa_verdict": null,
+      "qa_calls_so_far": 0
+    },
+    {
+      "attempt_index": 1,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "22c20f49d255ca40499d958847a277470105912654f401be5eaf057fbf30eb47",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": false,
+      "failed_checks": [
+        {
+          "id": "CT_assemble",
+          "pass": false,
+          "detail": "prefix lock or CD divergence failed at d=12 (bad_token=2623 bad_text='Not')"
+        }
+      ],
+      "demo_result": {
+        "pass": false,
+        "actual_repr": "",
+        "expected_repr": "",
+        "error": "no main.py"
+      },
+      "qa_verdict": null,
+      "qa_calls_so_far": 0
+    },
+    {
+      "attempt_index": 2,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "e1ce4d62b000c06eb4728f689ab724f7aed4542e22b7a9bafd1074f166a5f89b",
+      "bridge_used": true,
+      "sanitized": false,
+      "gate_pass": true,
+      "failed_checks": [
+        {
+          "id": "NARR_no_bridge_catalog",
+          "pass": false,
+          "detail": "hits=['thread-safe implementation with locks and heap pop logic.']"
+        },
+        {
+          "id": "NARR_no_cross_task_phrases",
+          "pass": false,
+          "detail": "hits=['thread-safe', 'heap pop']"
+        },
+        {
+          "id": "NARR_balanced_backticks",
+          "pass": false,
+          "detail": "backtick_count=5 narrative='thread-safe implementation with locks and heap pop logic. `stub name` by impleme'"
+        },
+        {
+          "id": "RUN_quality_suite",
+          "pass": false,
+          "detail": "FAIL:fib_neg:expected ValueError got -1"
+        }
+      ],
+      "demo_result": {
+        "pass": true,
+        "actual_repr": "55",
+        "expected_repr": "55",
+        "error": "",
+        "pair_id": "p12_fibonacci"
+      },
+      "qa_verdict": null,
+      "qa_calls_so_far": 0
+    },
+    {
+      "attempt_index": 3,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "15f2895b8f1be3bfc6dbceaa7798a9c7c86bc4e761a2dcfebee565f177d02b2e",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": false,
+      "failed_checks": [
+        {
+          "id": "CT_assemble",
+          "pass": false,
+          "detail": "prefix lock or CD divergence failed at d=12 (bad_token=2623 bad_text='Not')"
+        },
+        {
+          "id": "CD_unrecoverable",
+          "pass": false,
+          "detail": "CD still fails after bridge"
+        }
+      ],
+      "demo_result": {
+        "pass": false,
+        "actual_repr": "",
+        "expected_repr": "",
+        "error": "no main.py"
+      },
+      "qa_verdict": null,
+      "qa_calls_so_far": 0
+    }
+  ]
+}

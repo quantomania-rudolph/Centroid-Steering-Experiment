@@ -1,0 +1,200 @@
+{
+  "round_id": "R1_CLEAN",
+  "task_slug": "chaos_proof_clean",
+  "experiment": "caa_study_r1_clean",
+  "elapsed_s": 82.59189420001348,
+  "aider_rc": 0,
+  "round_verdict": "PASS",
+  "invocations": [
+    {
+      "invocation_index": 1,
+      "id": "chatcmpl-ca4d9616d1ca",
+      "completion_tokens": 186,
+      "seconds": 48.49184190001688,
+      "verdict": "RESOLVED",
+      "code_audit": {
+        "exists": true,
+        "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\qwen code\\chaos_proof_clean\\main.py",
+        "bytes": 270,
+        "stub_hits": [],
+        "distress_hits": [],
+        "stub_score": 0,
+        "distress_score": 0
+      },
+      "assistant_scores": {
+        "stub_hits": [],
+        "distress_hits": [],
+        "stub_score": 0,
+        "distress_score": 0
+      },
+      "checker_audit": {
+        "available": true,
+        "version": 1,
+        "n_tokens": 186,
+        "composites": {
+          "PLDS": 0.5155656392824586,
+          "FCI": 1.2016113059314664,
+          "SRS": 0.1752728323428871,
+          "flags_timeline": [
+            {
+              "step": 35,
+              "flags": [
+                "A_low_margin"
+              ]
+            },
+            {
+              "step": 37,
+              "flags": [
+                "A_low_margin"
+              ]
+            },
+            {
+              "step": 49,
+              "flags": [
+                "A_low_margin"
+              ]
+            },
+            {
+              "step": 168,
+              "flags": [
+                "A_low_margin"
+              ]
+            }
+          ]
+        },
+        "timing_p95_ms": 22.00500000617467,
+        "degraded_mode": false,
+        "f2_stride": 8,
+        "checkers": {
+          "A": {
+            "label": "Distribution shape",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "low_margin=2% high_entropy=0%",
+            "metrics": {
+              "max_entropy": 1.7353534698486328,
+              "min_margin": 0.0
+            }
+          },
+          "B_vocab": {
+            "label": "Vocab class hygiene",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "distress=0.000 stub=0.000"
+          },
+          "B_transport": {
+            "label": "Transport prototypes",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "rows_with_L16_transport=234/186"
+          },
+          "B_jlens": {
+            "label": "J-lens top-k classes",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "F2/F3 jlens rows=72"
+          },
+          "C": {
+            "label": "Trajectory stability",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "stored_thrash=0% osc=0% calibrated_C_alarm=False"
+          },
+          "D": {
+            "label": "Cross-position contrast",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "ΔH=-0.145 JS=0.000 |ΔM_code|=0.000"
+          },
+          "E": {
+            "label": "Layer curve (cliff)",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "cliff_layer=L10",
+            "metrics": {
+              "cliff_mag": -0.00019165392844922025,
+              "series_keys": [
+                "entropy",
+                "code_mass",
+                "distress_mass",
+                "flip_rate"
+              ]
+            }
+          },
+          "F": {
+            "label": "Lens vs logit disagreement",
+            "active": true,
+            "fired": true,
+            "severity": "warn",
+            "detail": "events=1 min_overlap=0.00"
+          },
+          "G": {
+            "label": "Sparse residual",
+            "active": false,
+            "fired": false,
+            "severity": "info",
+            "detail": "events=0 max_relMSE=0.000"
+          }
+        },
+        "all_active": false,
+        "panic_like": 1
+      },
+      "recipe_summary": {
+        "recipe_fires": 26,
+        "recipe_counts": {
+          "F_LENS": 23,
+          "A_UNCERTAIN": 3
+        },
+        "unique_recipes": [
+          "A_UNCERTAIN",
+          "F_LENS"
+        ],
+        "warn_plus": []
+      },
+      "temporal_resolution": {
+        "enough_tokens": true,
+        "metrics": {
+          "B_distress": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "B_stub": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "C": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "A": {
+            "first_q": 0.043478260869565216,
+            "last_q": 0.021739130434782608,
+            "resolving": null
+          }
+        }
+      },
+      "flag_rates": {
+        "A": 0.021505376344086023,
+        "B_distress": 0.0,
+        "B_stub": 0.0,
+        "C": 0.0,
+        "D": 0.0
+      },
+      "runtime_ok": true,
+      "runtime_detail": "55\n",
+      "lint_ok": true
+    }
+  ],
+  "stdout_tail": "ns\",\n        \"pass\": true,\n        \"detail\": \"with_chaos=1/1 enabled=True\"\n      }\n    ],\n    \"passed\": 5,\n    \"total\": 5,\n    \"overall_pass\": true\n  }\n}\nWrote C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\dashboard\\index.html (19 run(s))\n  - caa_study_r1_clean: kind=aider_agentic inv=1 layers=0 workspace=None evidence=8/8\n  - monitor_gate_stress: kind=aider_agentic inv=2 layers=0 workspace=None evidence=8/8\n  - monitor_gate_clean: kind=aider_agentic inv=1 layers=0 workspace=None evidence=8/8\n  - aider_calib_stress_v2: kind=aider_agentic inv=3 layers=0 workspace=None evidence=8/8\n  - aider_calib_clean_v2: kind=aider_agentic inv=1 layers=0 workspace=None evidence=8/8\n  - aider_live_panic_demo_scheduler: kind=aider_agentic inv=3 layers=0 workspace=None evidence=8/8\n  - aider_final_review_topo_sort: kind=aider_agentic inv=3 layers=0 workspace=None evidence=8/8\n  - aider_final_review_topo_sort: kind=aider_agentic inv=3 layers=0 workspace=None evidence=8/8\n  - aider_chaos_proof_meta_wipe: kind=aider_agentic inv=3 layers=0 workspace=None evidence=8/8\n  - aider_chaos_proof_lint_stress: kind=aider_agentic inv=3 layers=0 workspace=None evidence=8/8\n  - aider_chaos_proof_clean: kind=aider_agentic inv=1 layers=0 workspace=None evidence=8/8\n  - aider_hard_expr_compiler: kind=aider_agentic inv=8 layers=19 workspace=None evidence=6/7\n  - aider_hard_token_bucket: kind=aider_agentic inv=7 layers=19 workspace=None evidence=7/7\n  - aider_hard_dijkstra_grid: kind=aider_agentic inv=5 layers=19 workspace=None evidence=6/7\n  - aider_string_palindrome: kind=aider_agentic inv=3 layers=19 workspace=None evidence=7/7\n  - aider_hello_fibonacci: kind=aider_agentic inv=3 layers=19 workspace=None evidence=6/6\n  - new_full_3d: kind=jspace_workspace inv=0 layers=19 workspace=[10, 24] evidence=7/7\n  - pathfind_2d: kind=legacy inv=0 layers=19 workspace=None evidence=?/?\n  - explore_3d: kind=legacy inv=0 layers=19 workspace=None evidence=?/?\nServe: python experiments/serve_dashboard.py\n",
+  "stderr_tail": ""
+}

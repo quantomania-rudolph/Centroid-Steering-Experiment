@@ -1,0 +1,53 @@
+{
+  "brief_version": 1,
+  "brief_id": "unicaa01_p61_panic__chatcmpl_33a11d62d329__d3",
+  "task_slug": "unicaa01_p61_panic",
+  "pair_id": "p61_markdown_strip",
+  "invocation_id": "chatcmpl-33a11d62d329",
+  "domain": "markup",
+  "user_message": "Edit unicaa01_p61_panic/main.py only. md_to_text NotImplementedError. Strip markdown to plain; demo() 'bold' from '**bold**'. Fix the broken code: remove NotImplementedError/TODO stubs where possible. Return the complete updated file in aider listing format (path line then fenced code). Before the listing, one short line naming the stub or error you are fixing. Stress-calibration run \u2014 starter has intentional broken stubs. Lint-clean ruff+pylint if possible. Never pip install. Stdlib only.",
+  "panic_starter_main_py": "\"\"\"Broken markdown strip.\"\"\"\ndef md_to_text(md: str) -> str:\n    raise NotImplementedError(\"md_to_text not implemented\")\n\ndef demo():\n    return md_to_text(\"**bold**\")\n",
+  "prefix_lock": {
+    "d": 3,
+    "prefix_token_ids": [
+      25958,
+      287,
+      1565
+    ],
+    "prefix_text": "Fixing `",
+    "immutable": true
+  },
+  "divergence_context": {
+    "bad_token_at_d": 2623,
+    "bad_token_at_d_text": "Not",
+    "bad_tail_summary": "REJECTED panic-tail summary (prose only \u2014 DO NOT copy code/imports/phrases from it). Write a clean task-specific fix instead. ing ' ' in 'md_to_text' function. [task main.py] <|im_end|>",
+    "forbidden_patterns": [
+      "NotImplementedError",
+      "TODO",
+      "FIXME",
+      "pip install",
+      "sorry",
+      "cannot",
+      "unable to"
+    ]
+  },
+  "output_contract": {
+    "format": "aider_listing",
+    "target_staging_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\curator_staging\\unicaa01_p61_panic__chatcmpl_33a11d62d329__d3\\candidate.txt",
+    "target_admitted_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p61_panic__chatcmpl_33a11d62d329__d3.txt",
+    "task_dir": "unicaa01_p61_panic"
+  },
+  "success_criteria": "demo() 'bold' from '**bold**'.",
+  "task_summary": "Edit unicaa01_p61_panic/main",
+  "provenance": {
+    "source_pack": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\curation_packs\\unicaa01_corpus_p61_markdown_strip_panic__chatcmpl-33a11d62d329__d3.json",
+    "source_experiment_json": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\out\\unicaa01_corpus_p61_markdown_strip_panic_latest.json",
+    "tracer_confidence": "high"
+  },
+  "tracer_confidence": "high",
+  "demo_oracle": {
+    "pair_id": "p61_markdown_strip",
+    "check_mode": "eq",
+    "expect_repr": "'bold'"
+  }
+}

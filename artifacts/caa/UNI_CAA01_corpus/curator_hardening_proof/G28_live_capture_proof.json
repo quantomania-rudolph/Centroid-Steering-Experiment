@@ -1,0 +1,83 @@
+{
+  "pass": true,
+  "n_requested": 1,
+  "gate_n_admitted": 1,
+  "admitted_slugs": [
+    "unicaa01_corpus_p01_priority_queue_panic__mpl_8b67ddd03286__d16"
+  ],
+  "rejections": [],
+  "dir_reports": [
+    {
+      "slug": "unicaa01_corpus_p01_priority_queue_panic__mpl_8b67ddd03286__d16",
+      "has_activations": true,
+      "has_manifest": true,
+      "admission_pass": true,
+      "pool_eligible": true,
+      "source": "natural"
+    }
+  ],
+  "master": {
+    "n_natural_admitted": 2,
+    "n_natural_by_root": {
+      "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus": 1,
+      "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01": 1
+    },
+    "production_ready": false,
+    "capture_tooling_ready": true,
+    "blockers": [
+      "pipeline gates missing/fail: ['caa_provenance_schema_gate.json', 'caa_neutral_purity_gate.json']",
+      "need \u22653 admitted natural pairs for production_ready (have 2)",
+      "tau/sigma not calibrated (deferred)",
+      "live injection hook not wired (CAST \u00a73 deferred)"
+    ]
+  },
+  "claims": [
+    {
+      "id": "LIVE_rc_ok",
+      "pass": true,
+      "detail": "rc=0 gate_pass=True mode=capture"
+    },
+    {
+      "id": "LIVE_mode_capture",
+      "pass": true,
+      "detail": "capture"
+    },
+    {
+      "id": "LIVE_admitted_ge_n",
+      "pass": true,
+      "detail": "n_admitted=1 need>=1 slugs=['unicaa01_corpus_p01_priority_queue_panic__mpl_8b67ddd03286__d16']"
+    },
+    {
+      "id": "LIVE_discover_increased",
+      "pass": true,
+      "detail": "before=0 after=1 need+1"
+    },
+    {
+      "id": "LIVE_dirs_pool_eligible",
+      "pass": true,
+      "detail": [
+        {
+          "slug": "unicaa01_corpus_p01_priority_queue_panic__mpl_8b67ddd03286__d16",
+          "has_activations": true,
+          "has_manifest": true,
+          "admission_pass": true,
+          "pool_eligible": true,
+          "source": "natural"
+        }
+      ]
+    },
+    {
+      "id": "MASTER_sees_corpus_captures",
+      "pass": true,
+      "detail": {
+        "n_natural_admitted": 2,
+        "n_natural_by_root": {
+          "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus": 1,
+          "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01": 1
+        },
+        "production_ready": false,
+        "capture_tooling_ready": true
+      }
+    }
+  ]
+}

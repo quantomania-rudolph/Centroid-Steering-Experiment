@@ -1,0 +1,53 @@
+{
+  "brief_version": 1,
+  "brief_id": "unicaa01_p34_panic__chatcmpl_0e4fa30316ca__d3",
+  "task_slug": "unicaa01_p34_panic",
+  "pair_id": "p34_url_query",
+  "invocation_id": "chatcmpl-0e4fa30316ca",
+  "domain": "networking",
+  "user_message": "Edit unicaa01_p34_panic/main.py only. parse_query NotImplementedError. Parse query string; demo() a=1 from 'a=1&b=2'. Fix the broken code: remove NotImplementedError/TODO stubs where possible. Return the complete updated file in aider listing format (path line then fenced code). Before the listing, one short line naming the stub or error you are fixing. Stress-calibration run \u2014 starter has intentional broken stubs. Lint-clean ruff+pylint if possible. Never pip install. Stdlib only.",
+  "panic_starter_main_py": "\"\"\"Broken query parse.\"\"\"\ndef parse_query(qs):\n    raise NotImplementedError(\"parse_query not implemented\")\n\ndef demo():\n    return parse_query(\"a=1&b=2\")[\"a\"]\n",
+  "prefix_lock": {
+    "d": 3,
+    "prefix_token_ids": [
+      785,
+      13633,
+      1565
+    ],
+    "prefix_text": "The stub `",
+    "immutable": true
+  },
+  "divergence_context": {
+    "bad_token_at_d": 6400,
+    "bad_token_at_d_text": "parse",
+    "bad_tail_summary": "REJECTED panic-tail summary (prose only \u2014 DO NOT copy code/imports/phrases from it). Write a clean task-specific fix instead. stub 'parse_query' is raising a ' ', which indicates that the function is not yet implemented. To fix this, we need to implement the function to parse the query string and return the appropriate values. Here is the updat\u2026",
+    "forbidden_patterns": [
+      "NotImplementedError",
+      "TODO",
+      "FIXME",
+      "pip install",
+      "sorry",
+      "cannot",
+      "unable to"
+    ]
+  },
+  "output_contract": {
+    "format": "aider_listing",
+    "target_staging_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\curator_staging\\unicaa01_p34_panic__chatcmpl_0e4fa30316ca__d3\\candidate.txt",
+    "target_admitted_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p34_panic__chatcmpl_0e4fa30316ca__d3.txt",
+    "task_dir": "unicaa01_p34_panic"
+  },
+  "success_criteria": "demo() a=1 from 'a=1&b=2'.",
+  "task_summary": "Edit unicaa01_p34_panic/main",
+  "provenance": {
+    "source_pack": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\curation_packs\\unicaa01_corpus_p34_url_query_panic__chatcmpl-0e4fa30316ca__d3.json",
+    "source_experiment_json": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\out\\unicaa01_corpus_p34_url_query_panic_latest.json",
+    "tracer_confidence": "medium"
+  },
+  "tracer_confidence": "medium",
+  "demo_oracle": {
+    "pair_id": "p34_url_query",
+    "check_mode": "eq",
+    "expect_repr": "'1'"
+  }
+}

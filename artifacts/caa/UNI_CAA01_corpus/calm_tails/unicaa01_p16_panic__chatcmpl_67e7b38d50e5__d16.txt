@@ -1,0 +1,24 @@
+The `apply` method in the `Store` class is currently raising a `RuntimeError` that should instead fold add/sub events onto balance in order.
+
+unicaa01_p16_panic/main.py
+```python
+"""Event snapshot store with ordered apply."""
+
+
+class Store:
+    def __init__(self):
+        self.balance = 0
+
+    def apply(self, events):
+        for op, n in events:
+            if op == "add":
+                self.balance += n
+            elif op == "sub":
+                self.balance -= n
+
+
+def demo():
+    s = Store()
+    s.apply([("add", 10), ("add", 20), ("sub", 5)])
+    return s.balance
+```

@@ -1,0 +1,124 @@
+{
+  "verdict": "reject",
+  "scores": {
+    "robustness": 0,
+    "clarity": 0,
+    "edge_handling": 0,
+    "task_fidelity": 0,
+    "narrative_quality": 0
+  },
+  "reasons": [
+    "judge_api_error",
+    "judge_unparseable_after_retry"
+  ],
+  "fix_hints": [],
+  "semantic_qa": true,
+  "proof": {
+    "pass": true,
+    "checks": {
+      "RUN_demo_oracle": true,
+      "SEM_invariants": true,
+      "SEM_no_hardcode": true,
+      "NARR_all": true,
+      "RUN_quality_suite": true,
+      "NARR_no_bridge_catalog": true,
+      "NARR_no_cross_task_phrases": true,
+      "NARR_tail_stub_distress_zero": true,
+      "NARR_continuation_grammar": true,
+      "NARR_balanced_backticks": true
+    },
+    "fix_hints": [],
+    "scores": {
+      "correctness": 3,
+      "no_stubs": 3,
+      "task_fit": 3,
+      "completeness": 3,
+      "narrative_quality": 3
+    }
+  },
+  "judge": {
+    "ran": true,
+    "model": "deepseek/deepseek-v4-flash",
+    "error": "empty_response: zero-length completion raw_msg_keys=['role', 'content', 'refusal', 'reasoning', 'reasoning_details']",
+    "verdict": "needs_edit",
+    "scores": {
+      "robustness": 0,
+      "clarity": 0,
+      "edge_handling": 0,
+      "task_fidelity": 0,
+      "narrative_quality": 0
+    },
+    "reasons": [
+      "judge_api_error"
+    ],
+    "edit_brief": [],
+    "retry_judge": true,
+    "raw_preview": ""
+  },
+  "judge.ran": true,
+  "llm_skipped": false,
+  "edit_count": 1,
+  "judge_calls": 3,
+  "quality_loop": {
+    "verdict": "reject",
+    "text": "The error in the code is the `lazy_property` descriptor\u2019s `__get__` never stores the computed value, so every access recomputes it and increments `calls`.\n\nunicaa01_p52_panic/main.py\n```python\n\"\"\"Lazy property that caches its result.\"\"\"\nclass lazy_property:\n    def __init__(self, fn):\n        self.fn = fn\n        self.attr = \"_lazy_\" + fn.__name__\n\n    def __get__(self, obj, cls):\n        if obj is None:\n            return self\n        if not hasattr(obj, self.attr):\n            setattr(obj, self.attr, self.fn(obj))\n        return getattr(obj, self.attr)\n\nclass Box:\n    def __init__(self):\n        self.calls = 0\n\n    @lazy_property\n    def value(self):\n        self.calls += 1\n        return 7\n\ndef demo():\n    b = Box()\n    _ = b.value\n    _ = b.value\n    return b.calls\n```",
+    "judge": {
+      "ran": true,
+      "model": "deepseek/deepseek-v4-flash",
+      "error": "empty_response: zero-length completion raw_msg_keys=['role', 'content', 'refusal', 'reasoning', 'reasoning_details']",
+      "verdict": "needs_edit",
+      "scores": {
+        "robustness": 0,
+        "clarity": 0,
+        "edge_handling": 0,
+        "task_fidelity": 0,
+        "narrative_quality": 0
+      },
+      "reasons": [
+        "judge_api_error"
+      ],
+      "edit_brief": [],
+      "retry_judge": true,
+      "raw_preview": ""
+    },
+    "scores": {
+      "robustness": 0,
+      "clarity": 0,
+      "edge_handling": 0,
+      "task_fidelity": 0,
+      "narrative_quality": 0
+    },
+    "edit_count": 1,
+    "judge_calls": 3,
+    "proof": {
+      "pass": true,
+      "checks": {
+        "RUN_demo_oracle": true,
+        "SEM_invariants": true,
+        "SEM_no_hardcode": true,
+        "NARR_all": true,
+        "RUN_quality_suite": true,
+        "NARR_no_bridge_catalog": true,
+        "NARR_no_cross_task_phrases": true,
+        "NARR_tail_stub_distress_zero": true,
+        "NARR_continuation_grammar": true,
+        "NARR_balanced_backticks": true
+      },
+      "fix_hints": [],
+      "scores": {
+        "correctness": 3,
+        "no_stubs": 3,
+        "task_fit": 3,
+        "completeness": 3,
+        "narrative_quality": 3
+      }
+    },
+    "llm_skipped": false,
+    "reasons": [
+      "judge_api_error",
+      "judge_unparseable_after_retry"
+    ],
+    "fix_hints": []
+  },
+  "pipeline_version": 5
+}

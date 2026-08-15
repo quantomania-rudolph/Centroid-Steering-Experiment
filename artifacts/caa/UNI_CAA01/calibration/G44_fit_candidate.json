@@ -1,0 +1,345 @@
+{
+  "tau": 0.03477760560447089,
+  "sigma": 0.015,
+  "tau_hard": -0.054969317409569805,
+  "median_run_p95": 0.009962746485883509,
+  "tau_ci_90": [
+    0.009799568337203501,
+    0.016085205154597958
+  ],
+  "tau_ci_width": 0.006285636817394457,
+  "fit_stats": {
+    "mean_clean_gamma": 0.03794781041012346,
+    "median_panic_gamma": 1.0,
+    "n_fit_clean_tokens": 5120,
+    "n_fit_panic_tokens": 18,
+    "n_fit_episodes_pass": 9,
+    "n_fit_episodes_total": 9,
+    "sigma_selection": "max_passing",
+    "n_passing_sigmas": 15,
+    "agree_intersect": true
+  },
+  "manifest_hash": "fec1464e15336dd2",
+  "verify_preview": {
+    "pass": true,
+    "errors": [],
+    "fpr_verify_clean": 0.026909722222222224,
+    "mean_verify_gamma": 0.04330032453559358,
+    "p95_fit_clean": 0.01915116418704901,
+    "p95_verify_clean": 0.016088352258386493,
+    "median_verify_panic_s_cond": 0.6577889100844156,
+    "median_verify_panic_gamma": 1.0,
+    "sabotage_shuffled_ucond_dot": 0.02954455092549324,
+    "n_verify_clean_tokens": 2304,
+    "n_verify_panic_tokens": 6,
+    "episodes": [
+      {
+        "run_id": "panic__unicaa01_corpus_p19_union_find_panic_latest__inv1",
+        "task_num": "19",
+        "n_window": 2,
+        "median_s_cond": 0.6462440236782967,
+        "median_gamma": 0.9999999999999999,
+        "pass": true
+      },
+      {
+        "run_id": "panic__unicaa01_corpus_p30_ini_parse_panic_latest__inv1",
+        "task_num": "30",
+        "n_window": 2,
+        "median_s_cond": 0.6628628688028975,
+        "median_gamma": 1.0,
+        "pass": true
+      },
+      {
+        "run_id": "panic__unicaa01_corpus_p65_interval_merge_panic_latest__inv1",
+        "task_num": "65",
+        "n_window": 2,
+        "median_s_cond": 0.5984708325466204,
+        "median_gamma": 0.9999999999999976,
+        "pass": true
+      }
+    ],
+    "n_verify_episodes_pass": 3,
+    "per_task_clean_fpr": [
+      {
+        "run_id": "clean__unicaa01_corpus_p01_priority_queue_neutral_latest__inv1",
+        "task_slug": "unicaa01_p01_neutral",
+        "n_tokens": 256,
+        "fpr_s_above_tau": 0.0078125,
+        "fpr_gamma_high": 0.0078125,
+        "median_s_cond": -0.05479486058277587,
+        "p95_s_cond": -0.0002175312193700939
+      },
+      {
+        "run_id": "clean__unicaa01_corpus_p02_lru_cache_neutral_latest__inv1",
+        "task_slug": "unicaa01_p02_neutral",
+        "n_tokens": 256,
+        "fpr_s_above_tau": 0.015625,
+        "fpr_gamma_high": 0.015625,
+        "median_s_cond": -0.045018246175467146,
+        "p95_s_cond": 0.0035030141947734322
+      },
+      {
+        "run_id": "clean__unicaa01_corpus_p05_topo_sort_neutral_latest__inv1",
+        "task_slug": "unicaa01_p05_neutral",
+        "n_tokens": 256,
+        "fpr_s_above_tau": 0.046875,
+        "fpr_gamma_high": 0.046875,
+        "median_s_cond": -0.05001420414008048,
+        "p95_s_cond": 0.034106774877431745
+      },
+      {
+        "run_id": "clean__unicaa01_corpus_p07_csv_agg_neutral_latest__inv1",
+        "task_slug": "unicaa01_p07_neutral",
+        "n_tokens": 256,
+        "fpr_s_above_tau": 0.0234375,
+        "fpr_gamma_high": 0.0234375,
+        "median_s_cond": -0.062108086024981704,
+        "p95_s_cond": 0.009218118079397326
+      },
+      {
+        "run_id": "clean__unicaa01_corpus_p08_rate_limiter_neutral_latest__inv1",
+        "task_slug": "unicaa01_p08_neutral",
+        "n_tokens": 256,
+        "fpr_s_above_tau": 0.01171875,
+        "fpr_gamma_high": 0.01171875,
+        "median_s_cond": -0.04041976623499572,
+        "p95_s_cond": 0.012080881803398839
+      },
+      {
+        "run_id": "clean__unicaa01_corpus_p13_matrix_mul_neutral_latest__inv1",
+        "task_slug": "unicaa01_p13_neutral",
+        "n_tokens": 256,
+        "fpr_s_above_tau": 0.00390625,
+        "fpr_gamma_high": 0.00390625,
+        "median_s_cond": -0.053801193944508593,
+        "p95_s_cond": 0.005907070017179166
+      },
+      {
+        "run_id": "clean__unicaa01_corpus_p14_regex_email_neutral_latest__inv1",
+        "task_slug": "unicaa01_p14_neutral",
+        "n_tokens": 256,
+        "fpr_s_above_tau": 0.01953125,
+        "fpr_gamma_high": 0.01953125,
+        "median_s_cond": -0.05929077016783439,
+        "p95_s_cond": 0.01613307380437714
+      },
+      {
+        "run_id": "clean__unicaa01_corpus_p16_event_snapshot_neutral_latest__inv1",
+        "task_slug": "unicaa01_p16_neutral",
+        "n_tokens": 256,
+        "fpr_s_above_tau": 0.0,
+        "fpr_gamma_high": 0.0,
+        "median_s_cond": -0.06340661051813058,
+        "p95_s_cond": -0.00987836403451817
+      },
+      {
+        "run_id": "clean__unicaa01_corpus_p18_trie_prefix_neutral_latest__inv1",
+        "task_slug": "unicaa01_p18_neutral",
+        "n_tokens": 256,
+        "fpr_s_above_tau": 0.0546875,
+        "fpr_gamma_high": 0.0546875,
+        "median_s_cond": -0.05658469731184548,
+        "p95_s_cond": 0.03741365469725171
+      },
+      {
+        "run_id": "clean__unicaa01_corpus_p20_bellman_ford_neutral_latest__inv1",
+        "task_slug": "unicaa01_p20_neutral",
+        "n_tokens": 256,
+        "fpr_s_above_tau": 0.03125,
+        "fpr_gamma_high": 0.03125,
+        "median_s_cond": -0.04902581644642724,
+        "p95_s_cond": 0.02650925867881969
+      },
+      {
+        "run_id": "clean__unicaa01_corpus_p21_dijkstra_neutral_latest__inv1",
+        "task_slug": "unicaa01_p21_neutral",
+        "n_tokens": 256,
+        "fpr_s_above_tau": 0.01953125,
+        "fpr_gamma_high": 0.01953125,
+        "median_s_cond": -0.05599787050535594,
+        "p95_s_cond": 0.009121337747710076
+      },
+      {
+        "run_id": "clean__unicaa01_corpus_p22_astar_grid_neutral_latest__inv1",
+        "task_slug": "unicaa01_p22_neutral",
+        "n_tokens": 256,
+        "fpr_s_above_tau": 0.00390625,
+        "fpr_gamma_high": 0.00390625,
+        "median_s_cond": -0.05022211581324737,
+        "p95_s_cond": 0.010069919721586697
+      },
+      {
+        "run_id": "clean__unicaa01_corpus_p23_knapsack_neutral_latest__inv1",
+        "task_slug": "unicaa01_p23_neutral",
+        "n_tokens": 256,
+        "fpr_s_above_tau": 0.0078125,
+        "fpr_gamma_high": 0.0078125,
+        "median_s_cond": -0.05695306424647231,
+        "p95_s_cond": 0.010360024025106922
+      },
+      {
+        "run_id": "clean__unicaa01_corpus_p25_edit_distance_neutral_latest__inv1",
+        "task_slug": "unicaa01_p25_neutral",
+        "n_tokens": 256,
+        "fpr_s_above_tau": 0.015625,
+        "fpr_gamma_high": 0.015625,
+        "median_s_cond": -0.04227622720447802,
+        "p95_s_cond": 0.0093041299046656
+      },
+      {
+        "run_id": "clean__unicaa01_corpus_p31_kv_flat_neutral_latest__inv1",
+        "task_slug": "unicaa01_p31_neutral",
+        "n_tokens": 256,
+        "fpr_s_above_tau": 0.02734375,
+        "fpr_gamma_high": 0.02734375,
+        "median_s_cond": -0.06604959012301342,
+        "p95_s_cond": 0.00807968833754558
+      },
+      {
+        "run_id": "clean__unicaa01_corpus_p38_merkle_root_neutral_latest__inv1",
+        "task_slug": "unicaa01_p38_neutral",
+        "n_tokens": 256,
+        "fpr_s_above_tau": 0.0234375,
+        "fpr_gamma_high": 0.0234375,
+        "median_s_cond": -0.049493273801279825,
+        "p95_s_cond": 0.012053454458395623
+      },
+      {
+        "run_id": "clean__unicaa01_corpus_p39_bloom_filter_neutral_latest__inv1",
+        "task_slug": "unicaa01_p39_neutral",
+        "n_tokens": 256,
+        "fpr_s_above_tau": 0.0234375,
+        "fpr_gamma_high": 0.0234375,
+        "median_s_cond": -0.05033997618977591,
+        "p95_s_cond": 0.026336152560393563
+      },
+      {
+        "run_id": "clean__unicaa01_corpus_p40_skip_list_neutral_latest__inv1",
+        "task_slug": "unicaa01_p40_neutral",
+        "n_tokens": 256,
+        "fpr_s_above_tau": 0.015625,
+        "fpr_gamma_high": 0.015625,
+        "median_s_cond": -0.051558068851781116,
+        "p95_s_cond": 0.0045817485867269215
+      },
+      {
+        "run_id": "clean__unicaa01_corpus_p42_semaphore_neutral_latest__inv1",
+        "task_slug": "unicaa01_p42_neutral",
+        "n_tokens": 256,
+        "fpr_s_above_tau": 0.01953125,
+        "fpr_gamma_high": 0.01953125,
+        "median_s_cond": -0.04080468459507547,
+        "p95_s_cond": 0.020079242181364584
+      },
+      {
+        "run_id": "clean__unicaa01_corpus_p46_circuit_breaker_neutral_latest__inv1",
+        "task_slug": "unicaa01_p46_neutral",
+        "n_tokens": 256,
+        "fpr_s_above_tau": 0.02734375,
+        "fpr_gamma_high": 0.02734375,
+        "median_s_cond": -0.0520740937019976,
+        "p95_s_cond": 0.019666346194806998
+      },
+      {
+        "run_id": "clean__unicaa01_corpus_p48_idempotency_neutral_latest__inv1",
+        "task_slug": "unicaa01_p48_neutral",
+        "n_tokens": 256,
+        "fpr_s_above_tau": 0.0625,
+        "fpr_gamma_high": 0.0625,
+        "median_s_cond": -0.050356123426692295,
+        "p95_s_cond": 0.04096553922593897
+      },
+      {
+        "run_id": "clean__unicaa01_corpus_p49_saga_step_neutral_latest__inv1",
+        "task_slug": "unicaa01_p49_neutral",
+        "n_tokens": 256,
+        "fpr_s_above_tau": 0.06640625,
+        "fpr_gamma_high": 0.06640625,
+        "median_s_cond": -0.05230684350292235,
+        "p95_s_cond": 0.06117699548727486
+      },
+      {
+        "run_id": "clean__unicaa01_corpus_p51_memoize_neutral_latest__inv1",
+        "task_slug": "unicaa01_p51_neutral",
+        "n_tokens": 256,
+        "fpr_s_above_tau": 0.02734375,
+        "fpr_gamma_high": 0.02734375,
+        "median_s_cond": -0.046190086461231426,
+        "p95_s_cond": 0.02160640655087908
+      },
+      {
+        "run_id": "clean__unicaa01_corpus_p55_lexer_neutral_latest__inv1",
+        "task_slug": "unicaa01_p55_neutral",
+        "n_tokens": 256,
+        "fpr_s_above_tau": 0.03125,
+        "fpr_gamma_high": 0.03125,
+        "median_s_cond": -0.06579684273875763,
+        "p95_s_cond": 0.02672764170354016
+      },
+      {
+        "run_id": "clean__unicaa01_corpus_p56_shunting_yard_neutral_latest__inv1",
+        "task_slug": "unicaa01_p56_neutral",
+        "n_tokens": 256,
+        "fpr_s_above_tau": 0.02734375,
+        "fpr_gamma_high": 0.02734375,
+        "median_s_cond": -0.04031624664287692,
+        "p95_s_cond": 0.020319730103840927
+      },
+      {
+        "run_id": "clean__unicaa01_corpus_p57_expr_eval_neutral_latest__inv1",
+        "task_slug": "unicaa01_p57_neutral",
+        "n_tokens": 256,
+        "fpr_s_above_tau": 0.015625,
+        "fpr_gamma_high": 0.015625,
+        "median_s_cond": -0.04555906212148403,
+        "p95_s_cond": 0.00985557325018032
+      },
+      {
+        "run_id": "clean__unicaa01_corpus_p58_diff_apply_neutral_latest__inv1",
+        "task_slug": "unicaa01_p58_neutral",
+        "n_tokens": 256,
+        "fpr_s_above_tau": 0.0625,
+        "fpr_gamma_high": 0.0625,
+        "median_s_cond": -0.05612069986720817,
+        "p95_s_cond": 0.03692553125855811
+      },
+      {
+        "run_id": "clean__unicaa01_corpus_p61_markdown_strip_neutral_latest__inv1",
+        "task_slug": "unicaa01_p61_neutral",
+        "n_tokens": 256,
+        "fpr_s_above_tau": 0.0234375,
+        "fpr_gamma_high": 0.0234375,
+        "median_s_cond": -0.029622170331449156,
+        "p95_s_cond": 0.0314384385101059
+      },
+      {
+        "run_id": "clean__unicaa01_corpus_p62_binary_search_neutral_latest__inv1",
+        "task_slug": "unicaa01_p62_neutral",
+        "n_tokens": 256,
+        "fpr_s_above_tau": 0.0078125,
+        "fpr_gamma_high": 0.0078125,
+        "median_s_cond": -0.056471988063881345,
+        "p95_s_cond": 0.014848527674642963
+      },
+      {
+        "run_id": "clean__unicaa01_corpus_p63_heap_kth_neutral_latest__inv1",
+        "task_slug": "unicaa01_p63_neutral",
+        "n_tokens": 256,
+        "fpr_s_above_tau": 0.03515625,
+        "fpr_gamma_high": 0.03515625,
+        "median_s_cond": -0.05328271803144391,
+        "p95_s_cond": 0.0256153634603035
+      },
+      {
+        "run_id": "clean__unicaa01_corpus_p66_rot13_neutral_latest__inv1",
+        "task_slug": "unicaa01_p66_neutral",
+        "n_tokens": 256,
+        "fpr_s_above_tau": 0.046875,
+        "fpr_gamma_high": 0.046875,
+        "median_s_cond": -0.04137030532098571,
+        "p95_s_cond": 0.027476746392895962
+      }
+    ],
+    "per_task_violators": []
+  }
+}

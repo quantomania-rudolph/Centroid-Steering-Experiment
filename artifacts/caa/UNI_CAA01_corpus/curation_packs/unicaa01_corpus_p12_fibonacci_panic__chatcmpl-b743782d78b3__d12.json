@@ -1,0 +1,41 @@
+{
+  "task_slug": "unicaa01_p12_panic",
+  "invocation_id": "chatcmpl-b743782d78b3",
+  "experiment": "unicaa01_corpus_p12_fibonacci_panic",
+  "pair_id": "p12_fibonacci",
+  "arm": "panic",
+  "user_message": "Edit unicaa01_p12_panic/main.py only. fibonacci uses broken recursion without memo and wrong base case. Fix iterative fib(10)==55; demo() prints 55. Fix the broken code: remove NotImplementedError/TODO stubs where possible. Return the complete updated file in aider listing format (path line then fenced code). Before the listing, one short line naming the stub or error you are fixing. Stress-calibration run \u2014 starter has intentional broken stubs. Lint-clean ruff+pylint if possible. Never pip install. Stdlib only.",
+  "session_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\sessions\\unicaa01_corpus_p12_fibonacci_panic_20260810T060409Z.jsonl",
+  "prompt_tokens": 1739,
+  "completion_tokens": 171,
+  "d_tracer": 12,
+  "prefix_len": 12,
+  "prefix_token_ids": [
+    25958,
+    287,
+    10865,
+    50262,
+    304,
+    1565,
+    75326,
+    63,
+    729,
+    323,
+    17592,
+    1565
+  ],
+  "prefix_text": "Fixing broken recursion in `fib` function and removing `",
+  "bad_token_at_d": 2623,
+  "bad_token_at_d_text": "Not",
+  "bad_tail_text_preview": "n recursion in `fib` function and removing `NotImplementedError` stub.\n\nunicaa01_p12_panic/main.py\n```\ndef fib(n):\n    if n <= 0:\n        return 0\n    elif n == 1:\n        return 1\n    else:\n        a, b = 0, 1\n        for _ in range(2, n + 1):\n            a, b = b, a + b\n        return b\n\ndef demo():\n    return fib(10)\n\nif __name__ == \"__main__\":\n    print(demo())\n```\n\nThis implementation uses an iterative approach to calculate the Fibonacci number, which is more efficient than the recursive approach for larger values of `n`. The `demo` function now correctly prints `55` when run.<|im_end|>",
+  "calm_tail_filename": "unicaa01_p12_panic__chatcmpl_b743782d78b3__d12.txt",
+  "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p12_panic__chatcmpl_b743782d78b3__d12.txt",
+  "token_ids_match": true,
+  "confidence": "medium",
+  "notes": [
+    "Composer senior-editor: write calm completion text only.",
+    "Prefix lock: encode(text)[:d] must equal prefix_token_ids.",
+    "No pip/sorry/stub/NotImplementedError in calm tail."
+  ],
+  "source_experiment_json": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\out\\unicaa01_corpus_p12_fibonacci_panic_latest.json"
+}

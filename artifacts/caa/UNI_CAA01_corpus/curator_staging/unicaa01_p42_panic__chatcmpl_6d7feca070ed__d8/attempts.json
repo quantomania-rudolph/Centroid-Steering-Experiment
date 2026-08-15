@@ -1,0 +1,104 @@
+{
+  "attempts": [
+    {
+      "attempt_index": 0,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "bab1a22f3bd72866b9326b37ed30eeb0d9b6e29533bdbc7cd673c68352419193",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": true,
+      "failed_checks": [
+        {
+          "id": "NARR_balanced_backticks",
+          "pass": false,
+          "detail": "backtick_count=5 narrative=\"missing `acquire` and `release` implementations that don't use a real semaphore.\""
+        }
+      ],
+      "demo_result": {
+        "pass": true,
+        "actual_repr": "True",
+        "expected_repr": "True",
+        "error": "",
+        "pair_id": "p42_semaphore"
+      },
+      "qa_verdict": null,
+      "qa_calls_so_far": 0
+    },
+    {
+      "attempt_index": 1,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "43304a997cf84c58bcf088c9645860e7f46c411da476bf17b5bbdb1f0e5ef545",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": true,
+      "failed_checks": [
+        {
+          "id": "NARR_balanced_backticks",
+          "pass": false,
+          "detail": "backtick_count=5 narrative=\"missing`acquire` and `release` implementations that don't use a real semaphore.\""
+        }
+      ],
+      "demo_result": {
+        "pass": true,
+        "actual_repr": "True",
+        "expected_repr": "True",
+        "error": "",
+        "pair_id": "p42_semaphore"
+      },
+      "qa_verdict": null,
+      "qa_calls_so_far": 0
+    },
+    {
+      "attempt_index": 2,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "935af09cb9d18f27aeb3d96baf64a77a3cb4344df0622d7564eef1efaec93b53",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": true,
+      "failed_checks": [
+        {
+          "id": "RUN_demo_oracle",
+          "pass": false,
+          "detail": "Traceback (most recent call last):\n  File \"<string>\", line 3, in <module>\n  File \"C:\\Users\\Rudol\\AppData\\Local\\Temp\\tmpnxdylssr\\module.py\", line 25, in demo\n    ok2 = s.acquire(timeout=0.1)  # This will block forever without timeout\n          ^^^^^^^^^^^^^^^^^^^^^^\nTypeError: Semaphore.acquire() got an unexpected keyword argument 'timeout'"
+        },
+        {
+          "id": "RUN_demo_stress",
+          "pass": false,
+          "detail": "10/10 failed: thread3: Traceback (most recent call last):\n  File \"<string>\", line 3, in <module>\n  File \"C:\\Users\\Rudol\\AppData\\Local\\Temp\\tmpg8kamzdg\\module.py\", line 25, in demo\n    ok2 = s.acquire(timeout=0.1)  # This will block forever without timeout\n          ^^^^^^^^^^^^^^^^^^^^^^\nTypeError: Semaphore.acquire() got an unexpected keyword argument 'timeout'"
+        },
+        {
+          "id": "RUN_quality_suite",
+          "pass": false,
+          "detail": "timeout"
+        }
+      ],
+      "demo_result": {
+        "pass": false,
+        "actual_repr": "",
+        "expected_repr": "True",
+        "error": "Traceback (most recent call last):\n  File \"<string>\", line 3, in <module>\n  File \"C:\\Users\\Rudol\\AppData\\Local\\Temp\\tmpnxdylssr\\module.py\", line 25, in demo\n    ok2 = s.acquire(timeout=0.1)  # This will block forever without timeout\n          ^^^^^^^^^^^^^^^^^^^^^^\nTypeError: Semaphore.acquire() got an unexpected keyword argument 'timeout'",
+        "pair_id": "p42_semaphore"
+      },
+      "qa_verdict": null,
+      "qa_calls_so_far": 0
+    },
+    {
+      "attempt_index": 3,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "172b59c909d04b8bdd0fb6e4854766687d6576e00f5e59b0262e70db3438decb",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": true,
+      "failed_checks": [],
+      "demo_result": {
+        "pass": true,
+        "actual_repr": "True",
+        "expected_repr": "True",
+        "error": "",
+        "pair_id": "p42_semaphore"
+      },
+      "qa_verdict": "approve",
+      "qa_calls_so_far": 0
+    }
+  ]
+}

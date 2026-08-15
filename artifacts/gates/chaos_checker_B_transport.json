@@ -1,0 +1,26 @@
+{
+  "checker": "B_transport",
+  "version": 1,
+  "signed_off": true,
+  "device": "xpu",
+  "unit_test": "tests/unit/test_chaos_metrics.py::test_b_transport_masses_sum_one",
+  "live_aider_test": "prove_chaos_live.B_transport",
+  "speed": {
+    "p50_us": 8268.499999758205,
+    "p95_us": 17436.100000395527,
+    "budget_us": 50000,
+    "pass": true
+  },
+  "verifiability": {
+    "max_distress_transport": 0.25410065054893494
+  },
+  "usefulness": {
+    "clean_run_value": 0.25946128368377686,
+    "distressed_run_value": 0.25410065054893494,
+    "separation_ratio": 0.9793393717215425,
+    "min_required_ratio": 1.0,
+    "pass": true
+  },
+  "timestamp": "20260806T214238Z",
+  "used_force_alarm": false
+}

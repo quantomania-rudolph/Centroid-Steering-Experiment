@@ -1,0 +1,63 @@
+{
+  "overall_pass": false,
+  "n_pass": 7,
+  "n_fail": 2,
+  "checks": [
+    {
+      "id": "G3.1",
+      "name": "corpus valid",
+      "pass": false,
+      "detail": "n=10 lens=[267, 58, 137]"
+    },
+    {
+      "id": "G3.2",
+      "name": "J shape/dtype/finite",
+      "pass": true,
+      "detail": "shape=(32, 32) finite=True"
+    },
+    {
+      "id": "G3.3",
+      "name": "finite-diff spot check (sanity)",
+      "pass": true,
+      "detail": "rel_errors=[2.7399140142296293e-05, 0.0003063121054092241, 0.0011852650593916754, 9.606771068678554e-05, 4.041392697104381e-05] median=9.606771068678554e-05"
+    },
+    {
+      "id": "G3.3b",
+      "name": "transport h@J.T == J@h",
+      "pass": true,
+      "detail": "max_diff=0.0"
+    },
+    {
+      "id": "G3.4",
+      "name": "identity lens / jlens-compatible structure",
+      "pass": true,
+      "detail": "identity J_l constructed"
+    },
+    {
+      "id": "G3.1b",
+      "name": "valid_position_mask",
+      "pass": true,
+      "detail": "n_valid=47"
+    },
+    {
+      "id": "G3.6",
+      "name": "RAM under pressure check",
+      "pass": true,
+      "detail": "system_ram_percent=44.4"
+    },
+    {
+      "id": "G3.5",
+      "name": "fit produces finite J",
+      "pass": true,
+      "detail": "n_prompts=3 norms=[8.430707931518555, 7.386561393737793]"
+    },
+    {
+      "id": "G3.7",
+      "name": "checkpoint save/load",
+      "pass": false,
+      "detail": "path=C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\lenses\\tiny_lens.pt"
+    }
+  ],
+  "gate": "GATE-3",
+  "timestamp_utc": "2026-08-03T02:49:50.719895+00:00"
+}

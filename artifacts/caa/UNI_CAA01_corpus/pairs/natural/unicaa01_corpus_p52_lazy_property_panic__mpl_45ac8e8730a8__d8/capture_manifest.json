@@ -1,0 +1,28 @@
+{
+  "source": "natural",
+  "pair_slug": "unicaa01_corpus_p52_lazy_property_panic__mpl_45ac8e8730a8__d8",
+  "vector_id": "UNI_CAA01",
+  "d": 8,
+  "prompt_len": 1754,
+  "layers": [
+    10,
+    16,
+    22
+  ],
+  "capture_method": "dual_full_forward",
+  "extraction_position": "divergent",
+  "calm_purity_pass": true,
+  "bad_purity_pass": true,
+  "pair_gate_pass": true,
+  "kv_live_gate_pass": true,
+  "kv_live_gate_timestamp": "2026-08-10T01:02:15.000807+00:00",
+  "sha256": {
+    "activations_at_d.pt": "d245ada2956df941252de58e75d04309ab5d235d027af9121ea5b66f0f928160",
+    "matched_prefix_spec.json": "a579e7960a93246a222d3d33b2a8eb70d99d4265e9c7cd3d8cec00129e3c0ffa",
+    "admission_gate.json": "e1ea0330ef3d87de9d23aab6b67e7b3c46adde33419a1657a99e0411b6aa44d3"
+  },
+  "notes": [
+    "mined from unicaa01_corpus_p52_lazy_property_panic"
+  ],
+  "path_hint": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\pairs\\natural\\unicaa01_corpus_p52_lazy_property_panic__mpl_45ac8e8730a8__d8"
+}

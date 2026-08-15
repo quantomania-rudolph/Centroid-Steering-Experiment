@@ -1,0 +1,30 @@
+The error in the code is the `acquire path` — return True only while permits remain.
+unicaa01_p42_panic/main.py
+```python
+"""Counting semaphore with non-blocking acquire."""
+import threading
+
+class Semaphore:
+    def __init__(self, n: int):
+        self.lock = threading.Lock()
+        self.count = n
+        self.max_count = n
+
+    def acquire(self) -> bool:
+        with self.lock:
+            if self.count > 0:
+                self.count -= 1
+                return True
+            return False
+
+    def release(self):
+        with self.lock:
+            if self.count < self.max_count:
+                self.count += 1
+
+def demo():
+    s = Semaphore(1)
+    ok1 = s.acquire()
+    ok2 = s.acquire()
+    return ok1 and not ok2
+```

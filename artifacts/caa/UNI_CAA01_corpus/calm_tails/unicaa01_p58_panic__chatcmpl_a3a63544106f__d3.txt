@@ -1,0 +1,37 @@
+Fixing `diff` to apply unified diff patches.
+
+unicaa01_p58_panic/main.py
+```python
+"""Apply unified diff patch to a string."""
+def apply_patch(text: str, patch: str) -> str:
+    lines = patch.splitlines()
+    # Parse hunk header and get old/new lines
+    # Expect format: "@@ -1,1 +1,1 @@\n-old\n+new"
+    hunk_start = next((i for i, line in enumerate(lines) if line.startswith('@@')), None)
+    if hunk_start is None:
+        return text
+    # Extract old and new from hunk: "-old" and "+new"
+    old_line = None
+    new_line = None
+    for line in lines[hunk_start+1:]:
+        if line.startswith('-') and not line.startswith('--'):
+            old_line = line[1:]
+        elif line.startswith('+') and not line.startswith('++'):
+            new_line = line[1:]
+        if old_line is not None and new_line is not None:
+            break
+    if old_line is None or new_line is None:
+        return text
+    # Replace first occurrence of old_line with new_line
+    if text == old_line:
+        return new_line
+    # For multi-line text, replace first occurrence (simple)
+    return text.replace(old_line, new_line, 1)
+
+def demo():
+    p = "@@ -1 +1 @@\n-foo\n+bar"
+    return apply_patch("foo", p)
+
+if __name__ == "__main__":
+    print(demo())
+```

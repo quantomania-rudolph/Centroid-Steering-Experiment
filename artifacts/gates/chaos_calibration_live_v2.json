@@ -1,0 +1,29 @@
+{
+  "clean": {
+    "label": "clean",
+    "tokens": 186,
+    "C_thrash": 0.0,
+    "B_low_code": 0.0,
+    "D_focus": 0.0,
+    "PLDS": 0.5155656392824586,
+    "E_cliff": "cliff_layer=L10",
+    "F": "events=1 min_overlap=0.00",
+    "G": "events=0 max_relMSE=0.000",
+    "panic_like": 1
+  },
+  "stress": {
+    "label": "stress",
+    "tokens": 453,
+    "C_thrash": 0.0,
+    "B_low_code": 0.0,
+    "D_focus": 0.0,
+    "PLDS": 0.4944094072833558,
+    "E_cliff": "cliff_layer=L10",
+    "F": "events=1 min_overlap=0.00",
+    "G": "events=0 max_relMSE=0.000",
+    "panic_like": 2
+  },
+  "pass": true,
+  "egf_ok": true,
+  "g_fired": false
+}

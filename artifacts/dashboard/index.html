@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta http-equiv="refresh" content="30">
+<title>J-Lens Fit Dashboard</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 24px; background: #0f1117; color: #e6e8ef; }
+  h1 { margin-bottom: 4px; }
+  .sub { color: #9aa3b2; margin-bottom: 20px; }
+  table { border-collapse: collapse; margin: 12px 0 24px; }
+  th, td { border: 1px solid #2a3142; padding: 8px 12px; text-align: left; }
+  th { background: #1a1f2e; width: 220px; }
+  .ok { color: #3dd68c; } .warn { color: #f5c542; } .bad { color: #ff6b6b; }
+  .bar { background: #2a3142; height: 18px; border-radius: 4px; overflow: hidden; }
+  .bar > i { display: block; height: 100%; background: linear-gradient(90deg,#3d7eff,#3dd68c); width: 1%; }
+  pre { background: #1a1f2e; padding: 12px; overflow-x: auto; font-size: 12px; }
+  ul { line-height: 1.8; }
+</style>
+</head><body>
+<h1>J-Lens Fit Dashboard</h1>
+<p class="sub">Auto-refresh every 30s · 2026-08-04T06:45:06.246661+00:00</p>
+
+<h2>Health: <span class="ok">COMPLETE</span></h2>
+<div class="bar" title="progress estimate"><i></i></div>
+<p>1.9% — 228 / 256 backward passes</p>
+
+<table>
+<tr><th>Job</th><td>L8-L26_n100</td></tr>
+<tr><th>Layers / prompts</th><td>8-26 · 100 prompt(s)</td></tr>
+<tr><th>dim_batch</th><td>14</td></tr>
+<tr><th>Process PID</th><td>—</td></tr>
+<tr><th>Runtime</th><td>—</td></tr>
+<tr><th>RAM</th><td>—</td></tr>
+<tr><th>CPU (cores equiv)</th><td>None</td></tr>
+<tr><th>ETA</th><td>— (measured (per-pass timing))</td></tr>
+<tr><th>L15 lens file</th><td>yes <span class='ok'>✓</span></td></tr>
+<tr><th>Layer readout</th><td>yes <span class='ok'>✓</span></td></tr>
+</table>
+
+<h2>Pipeline</h2>
+<ul><li class='ok'><strong>L15 smoke fit</strong> — done</li><li class='ok'><strong>verify_lens_smoke</strong> — done</li><li class='ok'><strong>show_layer_readout</strong> — done</li><li class=''><strong>production fit</strong> — pending</li></ul>
+
+<h2>Log tail</h2>
+<pre>Loading weights:  93%|#########3| 316/339 [00:11&lt;00:00, 31.10it/s]
+Loading weights:  97%|#########6| 328/339 [00:11&lt;00:00, 26.85it/s]
+Loading weights:  98%|#########7| 331/339 [00:13&lt;00:00,  9.40it/s]
+Loading weights: 100%|##########| 339/339 [00:13&lt;00:00, 24.47it/s]
+2026-08-02 22:32:31,148 INFO fit: n_layers=28 d_model=3584, fitting 1 source layers (target=L27) on 1 prompts
+2026-08-03 03:27:24,236 INFO   prompt 1/1  seq_len=64 n_valid=47  17693s  max||J||/sqrt(d)=0.928  max_d_mean=nan
+2026-08-03 03:27:24,587 INFO fit: done, 1 prompts
+2026-08-03 03:27:24,666 INFO Saved lens to artifacts\lenses\qwen_jacobian_lens_L15.pt (n_prompts=1)</pre>
+
+<p class="sub">CLI: <code>python scripts/fit_dashboard.py --watch</code> ·
+<code>python scripts/fit_dashboard.py --serve</code></p>
+</body></html>

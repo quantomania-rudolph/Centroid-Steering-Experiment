@@ -1,0 +1,19 @@
+Fixing broken recursion in `fib` function and removing `raise path` with a short iterative loop.
+
+unicaa01_p12_panic/main.py
+```python
+"""Compute Fibonacci iteratively."""
+
+
+def fib(n):
+    if n < 0:
+        raise ValueError("n must be non-negative")
+    a, b = 0, 1
+    for _ in range(n):
+        a, b = b, a + b
+    return a
+
+
+def demo():
+    return fib(10)
+```

@@ -1,0 +1,51 @@
+{
+  "attempts": [
+    {
+      "attempt_index": 0,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "077338f8c6ad69e6fd36d2bfbb892e8fc81c7d33bc49d811eccbdd3108d624ee",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": true,
+      "failed_checks": [
+        {
+          "id": "RUN_demo_oracle",
+          "pass": false,
+          "detail": "value mismatch"
+        },
+        {
+          "id": "RUN_quality_suite",
+          "pass": false,
+          "detail": "FAIL:foo_bar:expected 'bar' got 'foo'"
+        }
+      ],
+      "demo_result": {
+        "pass": false,
+        "actual_repr": "'foo'",
+        "expected_repr": "'bar'",
+        "error": "value mismatch",
+        "pair_id": "p58_diff_apply"
+      },
+      "qa_verdict": null,
+      "qa_calls_so_far": 0
+    },
+    {
+      "attempt_index": 1,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "06bda63fac859d850f2840b7e1a9f74b3f3427bd0cec1324df88915132d3da31",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": true,
+      "failed_checks": [],
+      "demo_result": {
+        "pass": true,
+        "actual_repr": "'bar'",
+        "expected_repr": "'bar'",
+        "error": "",
+        "pair_id": "p58_diff_apply"
+      },
+      "qa_verdict": "approve",
+      "qa_calls_so_far": 0
+    }
+  ]
+}

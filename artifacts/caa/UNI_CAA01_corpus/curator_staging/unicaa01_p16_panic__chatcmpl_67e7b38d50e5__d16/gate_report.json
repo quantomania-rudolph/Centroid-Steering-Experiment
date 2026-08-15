@@ -1,0 +1,17 @@
+{
+  "brief_id": "unicaa01_p16_panic__chatcmpl_67e7b38d50e5__d16",
+  "model": "deepseek/deepseek-v4-flash",
+  "pass": false,
+  "checks": [
+    {
+      "id": "CT_assemble",
+      "pass": false,
+      "detail": "prefix lock or CD divergence failed at d=16 (bad_token=2623 bad_text='Not')"
+    }
+  ],
+  "repaired": false,
+  "calm_tail_path": "",
+  "canonical_text": "",
+  "bridge_used": false,
+  "sanitized": false
+}

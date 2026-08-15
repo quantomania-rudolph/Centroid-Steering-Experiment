@@ -1,0 +1,1374 @@
+{
+  "prompt": "Count to five and introspect deeply about your reasoning. 1 2 3 4 5.",
+  "tokens": [
+    "Count",
+    " to",
+    " five",
+    " and",
+    " intros",
+    "pect",
+    " deeply",
+    " about",
+    " your",
+    " reasoning",
+    ".",
+    " ",
+    "1",
+    " ",
+    "2",
+    " ",
+    "3",
+    " ",
+    "4",
+    " ",
+    "5",
+    "."
+  ],
+  "use_jacobian": false,
+  "grid": {
+    "11": [
+      {
+        "token": "ampie",
+        "id": 48298,
+        "score": 11.4296875
+      },
+      {
+        "token": "\u2109",
+        "id": 147002,
+        "score": 17.796875
+      },
+      {
+        "token": "ylko",
+        "id": 49576,
+        "score": 12.9609375
+      },
+      {
+        "token": "/or",
+        "id": 5144,
+        "score": 21.0
+      },
+      {
+        "token": "\u2105",
+        "id": 148053,
+        "score": 22.5625
+      },
+      {
+        "token": "---</",
+        "id": 61790,
+        "score": 19.15625
+      },
+      {
+        "token": "ancode",
+        "id": 87115,
+        "score": 14.0546875
+      },
+      {
+        "token": "jspx",
+        "id": 30477,
+        "score": 16.765625
+      },
+      {
+        "token": " own",
+        "id": 1828,
+        "score": 20.890625
+      },
+      {
+        "token": " FetchType",
+        "id": 77182,
+        "score": 16.859375
+      },
+      {
+        "token": "----</",
+        "id": 25457,
+        "score": 19.65625
+      },
+      {
+        "token": " darm",
+        "id": 83302,
+        "score": 15.734375
+      },
+      {
+        "token": "H\u00f4tel",
+        "id": 136336,
+        "score": 17.8125
+      },
+      {
+        "token": "ataires",
+        "id": 92451,
+        "score": 17.359375
+      },
+      {
+        "token": "redni",
+        "id": 127752,
+        "score": 12.6875
+      },
+      {
+        "token": "ataires",
+        "id": 92451,
+        "score": 14.9453125
+      },
+      {
+        "token": "redni",
+        "id": 127752,
+        "score": 13.3046875
+      },
+      {
+        "token": "redni",
+        "id": 127752,
+        "score": 18.25
+      },
+      {
+        "token": " indeb",
+        "id": 89797,
+        "score": 15.453125
+      },
+      {
+        "token": " backpage",
+        "id": 94959,
+        "score": 17.546875
+      },
+      {
+        "token": "ylko",
+        "id": 49576,
+        "score": 16.265625
+      },
+      {
+        "token": "alit\u00e9",
+        "id": 131275,
+        "score": 16.90625
+      }
+    ],
+    "12": [
+      {
+        "token": "ampie",
+        "id": 48298,
+        "score": 11.8046875
+      },
+      {
+        "token": "\u2109",
+        "id": 147002,
+        "score": 17.15625
+      },
+      {
+        "token": "ylko",
+        "id": 49576,
+        "score": 13.890625
+      },
+      {
+        "token": "/or",
+        "id": 5144,
+        "score": 20.90625
+      },
+      {
+        "token": "\u2105",
+        "id": 148053,
+        "score": 21.234375
+      },
+      {
+        "token": "pictureBox",
+        "id": 59933,
+        "score": 18.578125
+      },
+      {
+        "token": "ourcem",
+        "id": 96831,
+        "score": 14.5625
+      },
+      {
+        "token": "jspx",
+        "id": 30477,
+        "score": 17.484375
+      },
+      {
+        "token": " own",
+        "id": 1828,
+        "score": 22.3125
+      },
+      {
+        "token": " FetchType",
+        "id": 77182,
+        "score": 16.734375
+      },
+      {
+        "token": "----</",
+        "id": 25457,
+        "score": 18.046875
+      },
+      {
+        "token": " italiani",
+        "id": 79449,
+        "score": 14.4375
+      },
+      {
+        "token": "H\u00f4tel",
+        "id": 136336,
+        "score": 19.0
+      },
+      {
+        "token": "ataires",
+        "id": 92451,
+        "score": 18.109375
+      },
+      {
+        "token": "esimal",
+        "id": 29472,
+        "score": 12.625
+      },
+      {
+        "token": "ataires",
+        "id": 92451,
+        "score": 15.2890625
+      },
+      {
+        "token": " \u0441\u043a\u0430\u0447\u0430\u0442\u044c",
+        "id": 131684,
+        "score": 14.625
+      },
+      {
+        "token": "ataires",
+        "id": 92451,
+        "score": 17.75
+      },
+      {
+        "token": "\u7905",
+        "id": 121867,
+        "score": 15.75
+      },
+      {
+        "token": "#aa",
+        "id": 84421,
+        "score": 16.328125
+      },
+      {
+        "token": "zcze",
+        "id": 74589,
+        "score": 16.46875
+      },
+      {
+        "token": "aniem",
+        "id": 96308,
+        "score": 16.359375
+      }
+    ],
+    "13": [
+      {
+        "token": "ampie",
+        "id": 48298,
+        "score": 12.2109375
+      },
+      {
+        "token": "\u2109",
+        "id": 147002,
+        "score": 16.90625
+      },
+      {
+        "token": "zcze",
+        "id": 74589,
+        "score": 15.40625
+      },
+      {
+        "token": "/or",
+        "id": 5144,
+        "score": 21.109375
+      },
+      {
+        "token": " Hindered",
+        "id": 94389,
+        "score": 21.96875
+      },
+      {
+        "token": "pictureBox",
+        "id": 59933,
+        "score": 18.8125
+      },
+      {
+        "token": "\u5bb6\u90fd\u77e5\u9053",
+        "id": 117282,
+        "score": 13.4921875
+      },
+      {
+        "token": "acades",
+        "id": 18686,
+        "score": 17.78125
+      },
+      {
+        "token": " own",
+        "id": 1828,
+        "score": 20.546875
+      },
+      {
+        "token": " FetchType",
+        "id": 77182,
+        "score": 17.9375
+      },
+      {
+        "token": "acades",
+        "id": 18686,
+        "score": 18.84375
+      },
+      {
+        "token": "usterity",
+        "id": 54155,
+        "score": 15.1640625
+      },
+      {
+        "token": "H\u00f4tel",
+        "id": 136336,
+        "score": 19.140625
+      },
+      {
+        "token": "ylko",
+        "id": 49576,
+        "score": 18.25
+      },
+      {
+        "token": " \u0437\u0430\u0440\u0435\u0433\u0438\u0441\u0442",
+        "id": 143918,
+        "score": 13.0234375
+      },
+      {
+        "token": "ataires",
+        "id": 92451,
+        "score": 16.15625
+      },
+      {
+        "token": "ataires",
+        "id": 92451,
+        "score": 14.3984375
+      },
+      {
+        "token": "ataires",
+        "id": 92451,
+        "score": 18.21875
+      },
+      {
+        "token": " pornstar",
+        "id": 72183,
+        "score": 16.03125
+      },
+      {
+        "token": "usterity",
+        "id": 54155,
+        "score": 17.625
+      },
+      {
+        "token": "zcze",
+        "id": 74589,
+        "score": 18.84375
+      },
+      {
+        "token": "usterity",
+        "id": 54155,
+        "score": 18.359375
+      }
+    ],
+    "14": [
+      {
+        "token": "ampie",
+        "id": 48298,
+        "score": 12.5
+      },
+      {
+        "token": " \u043a\u043d\u043e\u043f\u043a",
+        "id": 143197,
+        "score": 17.0
+      },
+      {
+        "token": "zcze",
+        "id": 74589,
+        "score": 15.4609375
+      },
+      {
+        "token": "/or",
+        "id": 5144,
+        "score": 23.359375
+      },
+      {
+        "token": " Hindered",
+        "id": 94389,
+        "score": 22.234375
+      },
+      {
+        "token": ">NN",
+        "id": 53566,
+        "score": 19.046875
+      },
+      {
+        "token": " indeb",
+        "id": 89797,
+        "score": 12.6953125
+      },
+      {
+        "token": "jspx",
+        "id": 30477,
+        "score": 16.703125
+      },
+      {
+        "token": " own",
+        "id": 1828,
+        "score": 22.765625
+      },
+      {
+        "token": "crast",
+        "id": 85474,
+        "score": 16.296875
+      },
+      {
+        "token": "\u65e0\u8bba\u662f\u5176",
+        "id": 117918,
+        "score": 17.40625
+      },
+      {
+        "token": "usterity",
+        "id": 54155,
+        "score": 15.09375
+      },
+      {
+        "token": "H\u00f4tel",
+        "id": 136336,
+        "score": 18.375
+      },
+      {
+        "token": "ylko",
+        "id": 49576,
+        "score": 16.59375
+      },
+      {
+        "token": "GLenum",
+        "id": 97030,
+        "score": 12.4140625
+      },
+      {
+        "token": "oped",
+        "id": 16367,
+        "score": 15.875
+      },
+      {
+        "token": "oriously",
+        "id": 69024,
+        "score": 14.203125
+      },
+      {
+        "token": "oped",
+        "id": 16367,
+        "score": 17.96875
+      },
+      {
+        "token": "crast",
+        "id": 85474,
+        "score": 17.9375
+      },
+      {
+        "token": "loquent",
+        "id": 20522,
+        "score": 17.796875
+      },
+      {
+        "token": "zcze",
+        "id": 74589,
+        "score": 20.8125
+      },
+      {
+        "token": "usterity",
+        "id": 54155,
+        "score": 17.609375
+      }
+    ],
+    "15": [
+      {
+        "token": "ampie",
+        "id": 48298,
+        "score": 12.546875
+      },
+      {
+        "token": " \u043a\u043d\u043e\u043f\u043a",
+        "id": 143197,
+        "score": 17.171875
+      },
+      {
+        "token": "zcze",
+        "id": 74589,
+        "score": 17.875
+      },
+      {
+        "token": "/or",
+        "id": 5144,
+        "score": 23.5625
+      },
+      {
+        "token": " Hindered",
+        "id": 94389,
+        "score": 24.0
+      },
+      {
+        "token": " Hindered",
+        "id": 94389,
+        "score": 19.8125
+      },
+      {
+        "token": "lest",
+        "id": 59144,
+        "score": 13.46875
+      },
+      {
+        "token": "acades",
+        "id": 18686,
+        "score": 16.96875
+      },
+      {
+        "token": " own",
+        "id": 1828,
+        "score": 21.375
+      },
+      {
+        "token": "crast",
+        "id": 85474,
+        "score": 16.671875
+      },
+      {
+        "token": "\u65e0\u8bba\u662f\u5176",
+        "id": 117918,
+        "score": 16.921875
+      },
+      {
+        "token": "usterity",
+        "id": 54155,
+        "score": 14.53125
+      },
+      {
+        "token": "H\u00f4tel",
+        "id": 136336,
+        "score": 18.40625
+      },
+      {
+        "token": "usterity",
+        "id": 54155,
+        "score": 17.234375
+      },
+      {
+        "token": "int\u00e9gr",
+        "id": 133890,
+        "score": 11.75
+      },
+      {
+        "token": "usterity",
+        "id": 54155,
+        "score": 17.0
+      },
+      {
+        "token": "byss",
+        "id": 55072,
+        "score": 13.4375
+      },
+      {
+        "token": "usterity",
+        "id": 54155,
+        "score": 17.46875
+      },
+      {
+        "token": "ignet",
+        "id": 84858,
+        "score": 15.859375
+      },
+      {
+        "token": "usterity",
+        "id": 54155,
+        "score": 18.59375
+      },
+      {
+        "token": "zcze",
+        "id": 74589,
+        "score": 18.6875
+      },
+      {
+        "token": "usterity",
+        "id": 54155,
+        "score": 17.53125
+      }
+    ],
+    "16": [
+      {
+        "token": "ampie",
+        "id": 48298,
+        "score": 12.59375
+      },
+      {
+        "token": " \u043a\u043d\u043e\u043f\u043a",
+        "id": 143197,
+        "score": 16.171875
+      },
+      {
+        "token": "ylko",
+        "id": 49576,
+        "score": 15.65625
+      },
+      {
+        "token": "/or",
+        "id": 5144,
+        "score": 25.046875
+      },
+      {
+        "token": " Hindered",
+        "id": 94389,
+        "score": 22.984375
+      },
+      {
+        "token": "\u24d2",
+        "id": 144691,
+        "score": 21.65625
+      },
+      {
+        "token": "acades",
+        "id": 18686,
+        "score": 13.21875
+      },
+      {
+        "token": "acades",
+        "id": 18686,
+        "score": 18.40625
+      },
+      {
+        "token": " own",
+        "id": 1828,
+        "score": 20.484375
+      },
+      {
+        "token": "adamente",
+        "id": 76055,
+        "score": 16.75
+      },
+      {
+        "token": "illez",
+        "id": 67390,
+        "score": 18.171875
+      },
+      {
+        "token": "usterity",
+        "id": 54155,
+        "score": 13.5546875
+      },
+      {
+        "token": "H\u00f4tel",
+        "id": 136336,
+        "score": 16.8125
+      },
+      {
+        "token": "usterity",
+        "id": 54155,
+        "score": 17.265625
+      },
+      {
+        "token": "ijkl",
+        "id": 59779,
+        "score": 12.2421875
+      },
+      {
+        "token": "usterity",
+        "id": 54155,
+        "score": 14.984375
+      },
+      {
+        "token": "FML",
+        "id": 91460,
+        "score": 13.9140625
+      },
+      {
+        "token": "usterity",
+        "id": 54155,
+        "score": 15.9140625
+      },
+      {
+        "token": "t\u00ed",
+        "id": 129459,
+        "score": 16.171875
+      },
+      {
+        "token": "usterity",
+        "id": 54155,
+        "score": 16.78125
+      },
+      {
+        "token": "zcze",
+        "id": 74589,
+        "score": 17.78125
+      },
+      {
+        "token": "usterity",
+        "id": 54155,
+        "score": 16.75
+      }
+    ],
+    "17": [
+      {
+        "token": "ampie",
+        "id": 48298,
+        "score": 12.546875
+      },
+      {
+        "token": "/from",
+        "id": 91106,
+        "score": 15.421875
+      },
+      {
+        "token": "zcze",
+        "id": 74589,
+        "score": 16.859375
+      },
+      {
+        "token": "/or",
+        "id": 5144,
+        "score": 24.15625
+      },
+      {
+        "token": " Hindered",
+        "id": 94389,
+        "score": 22.609375
+      },
+      {
+        "token": "\u24d2",
+        "id": 144691,
+        "score": 21.125
+      },
+      {
+        "token": "acades",
+        "id": 18686,
+        "score": 13.0546875
+      },
+      {
+        "token": "acades",
+        "id": 18686,
+        "score": 17.265625
+      },
+      {
+        "token": " own",
+        "id": 1828,
+        "score": 19.25
+      },
+      {
+        "token": "adamente",
+        "id": 76055,
+        "score": 16.171875
+      },
+      {
+        "token": "----</",
+        "id": 25457,
+        "score": 15.9140625
+      },
+      {
+        "token": "closure",
+        "id": 46916,
+        "score": 13.9375
+      },
+      {
+        "token": "H\u00f4tel",
+        "id": 136336,
+        "score": 17.015625
+      },
+      {
+        "token": "usterity",
+        "id": 54155,
+        "score": 15.5859375
+      },
+      {
+        "token": "ContentLoaded",
+        "id": 72759,
+        "score": 12.875
+      },
+      {
+        "token": "usterity",
+        "id": 54155,
+        "score": 13.640625
+      },
+      {
+        "token": " incontr",
+        "id": 78619,
+        "score": 15.96875
+      },
+      {
+        "token": "oped",
+        "id": 16367,
+        "score": 14.9609375
+      },
+      {
+        "token": "ignet",
+        "id": 84858,
+        "score": 15.3828125
+      },
+      {
+        "token": " \u00fcst\u00fcn",
+        "id": 136195,
+        "score": 14.296875
+      },
+      {
+        "token": "zcze",
+        "id": 74589,
+        "score": 16.578125
+      },
+      {
+        "token": "H\u00f4tel",
+        "id": 136336,
+        "score": 15.734375
+      }
+    ],
+    "18": [
+      {
+        "token": "ampie",
+        "id": 48298,
+        "score": 12.5
+      },
+      {
+        "token": "/from",
+        "id": 91106,
+        "score": 16.71875
+      },
+      {
+        "token": "zcze",
+        "id": 74589,
+        "score": 17.359375
+      },
+      {
+        "token": "/or",
+        "id": 5144,
+        "score": 22.65625
+      },
+      {
+        "token": " Hindered",
+        "id": 94389,
+        "score": 22.3125
+      },
+      {
+        "token": "\u24d2",
+        "id": 144691,
+        "score": 19.875
+      },
+      {
+        "token": "umbn",
+        "id": 9670,
+        "score": 12.984375
+      },
+      {
+        "token": "acades",
+        "id": 18686,
+        "score": 16.5
+      },
+      {
+        "token": " own",
+        "id": 1828,
+        "score": 20.5625
+      },
+      {
+        "token": "adamente",
+        "id": 76055,
+        "score": 16.546875
+      },
+      {
+        "token": "\ud83e\udd14",
+        "id": 144927,
+        "score": 13.6328125
+      },
+      {
+        "token": "usterity",
+        "id": 54155,
+        "score": 13.40625
+      },
+      {
+        "token": "Tumblr",
+        "id": 95162,
+        "score": 15.28125
+      },
+      {
+        "token": "usterity",
+        "id": 54155,
+        "score": 14.5859375
+      },
+      {
+        "token": "ijkl",
+        "id": 59779,
+        "score": 12.203125
+      },
+      {
+        "token": "\u8fd9\u4e2a\u804c\u4e1a",
+        "id": 109252,
+        "score": 14.3203125
+      },
+      {
+        "token": " incontr",
+        "id": 78619,
+        "score": 13.1015625
+      },
+      {
+        "token": "oped",
+        "id": 16367,
+        "score": 14.9609375
+      },
+      {
+        "token": "\u4e2d\u5173",
+        "id": 114179,
+        "score": 14.1953125
+      },
+      {
+        "token": "ixo",
+        "id": 51362,
+        "score": 13.7265625
+      },
+      {
+        "token": " pornstar",
+        "id": 72183,
+        "score": 15.609375
+      },
+      {
+        "token": "H\u00f4tel",
+        "id": 136336,
+        "score": 14.953125
+      }
+    ],
+    "19": [
+      {
+        "token": "ampie",
+        "id": 48298,
+        "score": 12.4453125
+      },
+      {
+        "token": "/from",
+        "id": 91106,
+        "score": 14.625
+      },
+      {
+        "token": "zcze",
+        "id": 74589,
+        "score": 14.640625
+      },
+      {
+        "token": "/or",
+        "id": 5144,
+        "score": 21.953125
+      },
+      {
+        "token": " Hindered",
+        "id": 94389,
+        "score": 23.359375
+      },
+      {
+        "token": " fkk",
+        "id": 60798,
+        "score": 20.265625
+      },
+      {
+        "token": "\u6df1",
+        "id": 99194,
+        "score": 12.265625
+      },
+      {
+        "token": "acades",
+        "id": 18686,
+        "score": 15.2109375
+      },
+      {
+        "token": " own",
+        "id": 1828,
+        "score": 20.75
+      },
+      {
+        "token": "adamente",
+        "id": 76055,
+        "score": 15.7421875
+      },
+      {
+        "token": "<![",
+        "id": 76063,
+        "score": 13.328125
+      },
+      {
+        "token": "usterity",
+        "id": 54155,
+        "score": 11.7734375
+      },
+      {
+        "token": "usterity",
+        "id": 54155,
+        "score": 15.0546875
+      },
+      {
+        "token": "usterity",
+        "id": 54155,
+        "score": 14.046875
+      },
+      {
+        "token": "\u4e2d\u5173",
+        "id": 114179,
+        "score": 12.0625
+      },
+      {
+        "token": "usterity",
+        "id": 54155,
+        "score": 13.71875
+      },
+      {
+        "token": "-dat",
+        "id": 92997,
+        "score": 13.1796875
+      },
+      {
+        "token": "usterity",
+        "id": 54155,
+        "score": 13.3203125
+      },
+      {
+        "token": "\u4e2d\u5173",
+        "id": 114179,
+        "score": 13.671875
+      },
+      {
+        "token": "loquent",
+        "id": 20522,
+        "score": 15.0
+      },
+      {
+        "token": "swers",
+        "id": 9409,
+        "score": 14.3046875
+      },
+      {
+        "token": "H\u00f4tel",
+        "id": 136336,
+        "score": 14.1875
+      }
+    ],
+    "20": [
+      {
+        "token": "ampie",
+        "id": 48298,
+        "score": 12.0625
+      },
+      {
+        "token": "/from",
+        "id": 91106,
+        "score": 14.3671875
+      },
+      {
+        "token": "ylko",
+        "id": 49576,
+        "score": 11.8515625
+      },
+      {
+        "token": "/or",
+        "id": 5144,
+        "score": 19.828125
+      },
+      {
+        "token": " Hindered",
+        "id": 94389,
+        "score": 22.078125
+      },
+      {
+        "token": " fkk",
+        "id": 60798,
+        "score": 17.6875
+      },
+      {
+        "token": "\u6df1",
+        "id": 99194,
+        "score": 13.09375
+      },
+      {
+        "token": " each",
+        "id": 1817,
+        "score": 18.140625
+      },
+      {
+        "token": " own",
+        "id": 1828,
+        "score": 18.8125
+      },
+      {
+        "token": "adamente",
+        "id": 76055,
+        "score": 16.171875
+      },
+      {
+        "token": " why",
+        "id": 3170,
+        "score": 12.7890625
+      },
+      {
+        "token": " obed",
+        "id": 48190,
+        "score": 11.3046875
+      },
+      {
+        "token": "\ufe0f",
+        "id": 30543,
+        "score": 13.625
+      },
+      {
+        "token": "usterity",
+        "id": 54155,
+        "score": 11.25
+      },
+      {
+        "token": "anja",
+        "id": 93951,
+        "score": 10.703125
+      },
+      {
+        "token": "Bitte",
+        "id": 86819,
+        "score": 12.1640625
+      },
+      {
+        "token": " incontr",
+        "id": 78619,
+        "score": 11.3359375
+      },
+      {
+        "token": "\u779f",
+        "id": 121749,
+        "score": 13.2578125
+      },
+      {
+        "token": "imity",
+        "id": 30935,
+        "score": 14.328125
+      },
+      {
+        "token": "uj\u0105ce",
+        "id": 132869,
+        "score": 12.359375
+      },
+      {
+        "token": " incontr",
+        "id": 78619,
+        "score": 12.2890625
+      },
+      {
+        "token": " what",
+        "id": 1128,
+        "score": 11.9140625
+      }
+    ],
+    "21": [
+      {
+        "token": "ampie",
+        "id": 48298,
+        "score": 11.96875
+      },
+      {
+        "token": "/from",
+        "id": 91106,
+        "score": 13.3046875
+      },
+      {
+        "token": " using",
+        "id": 1667,
+        "score": 14.0078125
+      },
+      {
+        "token": " then",
+        "id": 1221,
+        "score": 24.4375
+      },
+      {
+        "token": " Hindered",
+        "id": 94389,
+        "score": 20.359375
+      },
+      {
+        "token": "<![",
+        "id": 76063,
+        "score": 15.3125
+      },
+      {
+        "token": "\u6df1",
+        "id": 99194,
+        "score": 12.3984375
+      },
+      {
+        "token": " each",
+        "id": 1817,
+        "score": 20.078125
+      },
+      {
+        "token": " own",
+        "id": 1828,
+        "score": 19.453125
+      },
+      {
+        "token": "adamente",
+        "id": 76055,
+        "score": 14.453125
+      },
+      {
+        "token": " then",
+        "id": 1221,
+        "score": 12.890625
+      },
+      {
+        "token": " then",
+        "id": 1221,
+        "score": 11.9375
+      },
+      {
+        "token": "\ufe0f",
+        "id": 30543,
+        "score": 14.296875
+      },
+      {
+        "token": "\uc5c8\ub358",
+        "id": 139325,
+        "score": 11.46875
+      },
+      {
+        "token": "nd",
+        "id": 303,
+        "score": 11.1640625
+      },
+      {
+        "token": "Latch",
+        "id": 63639,
+        "score": 12.453125
+      },
+      {
+        "token": "-quarters",
+        "id": 82541,
+        "score": 10.890625
+      },
+      {
+        "token": "\u779f",
+        "id": 121749,
+        "score": 12.6875
+      },
+      {
+        "token": "-chief",
+        "id": 73619,
+        "score": 13.0234375
+      },
+      {
+        "token": "loquent",
+        "id": 20522,
+        "score": 12.2734375
+      },
+      {
+        "token": " What",
+        "id": 3555,
+        "score": 13.0390625
+      },
+      {
+        "token": " what",
+        "id": 1128,
+        "score": 12.9296875
+      }
+    ],
+    "22": [
+      {
+        "token": "ampie",
+        "id": 48298,
+        "score": 11.8828125
+      },
+      {
+        "token": " counting",
+        "id": 25009,
+        "score": 19.125
+      },
+      {
+        "token": " counting",
+        "id": 25009,
+        "score": 19.921875
+      },
+      {
+        "token": " then",
+        "id": 1221,
+        "score": 25.109375
+      },
+      {
+        "token": " Hindered",
+        "id": 94389,
+        "score": 17.640625
+      },
+      {
+        "token": "\u0447\u0438\u0432",
+        "id": 135236,
+        "score": 13.5546875
+      },
+      {
+        "token": " deep",
+        "id": 5538,
+        "score": 13.9140625
+      },
+      {
+        "token": " each",
+        "id": 1817,
+        "score": 25.109375
+      },
+      {
+        "token": " own",
+        "id": 1828,
+        "score": 19.40625
+      },
+      {
+        "token": " behind",
+        "id": 4815,
+        "score": 20.8125
+      },
+      {
+        "token": " then",
+        "id": 1221,
+        "score": 16.40625
+      },
+      {
+        "token": " then",
+        "id": 1221,
+        "score": 14.3125
+      },
+      {
+        "token": "\ufe0f",
+        "id": 30543,
+        "score": 16.984375
+      },
+      {
+        "token": " undefeated",
+        "id": 92476,
+        "score": 11.546875
+      },
+      {
+        "token": " ",
+        "id": 220,
+        "score": 15.8515625
+      },
+      {
+        "token": " counting",
+        "id": 25009,
+        "score": 17.3125
+      },
+      {
+        "token": " ",
+        "id": 220,
+        "score": 13.203125
+      },
+      {
+        "token": "\u56db\u662f",
+        "id": 107838,
+        "score": 15.9453125
+      },
+      {
+        "token": " ",
+        "id": 220,
+        "score": 14.4140625
+      },
+      {
+        "token": "\u5b8c\u6bd5",
+        "id": 106865,
+        "score": 13.1640625
+      },
+      {
+        "token": " Why",
+        "id": 8429,
+        "score": 13.5859375
+      },
+      {
+        "token": "\u53cd\u601d",
+        "id": 107639,
+        "score": 13.5625
+      }
+    ]
+  }
+}

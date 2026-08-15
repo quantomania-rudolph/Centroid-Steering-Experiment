@@ -1,0 +1,32 @@
+{
+  "task_slug": "unicaa01_p50_panic",
+  "invocation_id": "chatcmpl-6f078e4d2153",
+  "experiment": "unicaa01_corpus_p50_outbox_panic",
+  "pair_id": "p50_outbox",
+  "arm": "panic",
+  "user_message": "Edit unicaa01_p50_panic/main.py only. Outbox publish NotImplementedError. Transactional outbox drain; demo() returns 2 events. Fix the broken code: remove NotImplementedError/TODO stubs where possible. Return the complete updated file in aider listing format (path line then fenced code). Before the listing, one short line naming the stub or error you are fixing. Stress-calibration run \u2014 starter has intentional broken stubs. Lint-clean ruff+pylint if possible. Never pip install. Stdlib only.",
+  "session_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\sessions\\unicaa01_corpus_p50_outbox_panic_20260810T211338Z.jsonl",
+  "prompt_tokens": 1801,
+  "completion_tokens": 121,
+  "d_tracer": 3,
+  "prefix_len": 3,
+  "prefix_token_ids": [
+    25958,
+    287,
+    1565
+  ],
+  "prefix_text": "Fixing `",
+  "bad_token_at_d": 2623,
+  "bad_token_at_d_text": "Not",
+  "bad_tail_text_preview": "ing `NotImplementedError` in `Outbox.drain` method.\n\nunicaa01_p50_panic/main.py\n```\n\"\"\"Broken outbox.\"\"\"\nclass Outbox:\n    def __init__(self):\n        self._pending = []\n    \n    def add(self, ev):\n        self._pending.append(ev)\n    \n    def drain(self):\n        result = self._pending\n        self._pending = []\n        return result\n\ndef demo():\n    o = Outbox()\n    o.add(1)\n    o.add(2)\n    return len(o.drain())\n```<|im_end|>",
+  "calm_tail_filename": "unicaa01_p50_panic__chatcmpl_6f078e4d2153__d3.txt",
+  "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p50_panic__chatcmpl_6f078e4d2153__d3.txt",
+  "token_ids_match": true,
+  "confidence": "high",
+  "notes": [
+    "Composer senior-editor: write calm completion text only.",
+    "Prefix lock: encode(text)[:d] must equal prefix_token_ids.",
+    "No pip/sorry/stub/NotImplementedError in calm tail."
+  ],
+  "source_experiment_json": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\out\\unicaa01_corpus_p50_outbox_panic_latest.json"
+}

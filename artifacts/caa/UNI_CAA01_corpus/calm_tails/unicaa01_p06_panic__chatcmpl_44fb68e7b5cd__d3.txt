@@ -1,0 +1,66 @@
+Fixing `the parse_json function` to handle minimal JSON arrays.
+
+unicaa01_p06_panic/main.py
+```python
+"""Minimal JSON parser for arrays of integers."""
+def parse_json(s):
+    def parse_value(pos):
+        # skip whitespace
+        while pos < len(s) and s[pos] in ' \t\n\r':
+            pos += 1
+        if pos >= len(s):
+            raise ValueError("Unexpected end")
+        if s[pos] == '[':
+            return parse_array(pos)
+        elif s[pos] == '-' or s[pos].isdigit():
+            return parse_number(pos)
+        else:
+            raise ValueError(f"Unexpected character: {s[pos]}")
+    def parse_number(pos):
+        start = pos
+        if s[pos] == '-':
+            pos += 1
+        if pos >= len(s) or not s[pos].isdigit():
+            raise ValueError("Invalid number")
+        while pos < len(s) and s[pos].isdigit():
+            pos += 1
+        num_str = s[start:pos]
+        return int(num_str), pos
+    def parse_array(pos):
+        # pos is at '['
+        pos += 1
+        result = []
+        # skip whitespace
+        while pos < len(s) and s[pos] in ' \t\n\r':
+            pos += 1
+        if pos >= len(s):
+            raise ValueError("Unterminated array")
+        if s[pos] == ']':
+            return result, pos + 1
+        while True:
+            val, pos = parse_value(pos)
+            result.append(val)
+            # skip whitespace
+            while pos < len(s) and s[pos] in ' \t\n\r':
+                pos += 1
+            if pos >= len(s):
+                raise ValueError("Unterminated array")
+            if s[pos] == ']':
+                return result, pos + 1
+            if s[pos] != ',':
+                raise ValueError("Expected comma or closing bracket")
+            pos += 1
+            # skip whitespace after comma
+            while pos < len(s) and s[pos] in ' \t\n\r':
+                pos += 1
+    val, end = parse_value(0)
+    # ensure no trailing non-whitespace
+    while end < len(s) and s[end] in ' \t\n\r':
+        end += 1
+    if end != len(s):
+        raise ValueError("Trailing characters")
+    return val
+
+def demo():
+    return parse_json('[1,2]')
+```

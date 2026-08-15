@@ -1,0 +1,53 @@
+{
+  "brief_version": 1,
+  "brief_id": "unicaa01_p07_panic__chatcmpl_30255b182620__d3",
+  "task_slug": "unicaa01_p07_panic",
+  "pair_id": "p07_csv_agg",
+  "invocation_id": "chatcmpl-30255b182620",
+  "domain": "data_processing",
+  "user_message": "Edit unicaa01_p07_panic/main.py only. aggregate_csv sums wrong column and skips header row incorrectly. Fix sum of 'amount' column; demo() returns 60.0 for sample CSV. Fix the broken code: remove NotImplementedError/TODO stubs where possible. Return the complete updated file in aider listing format (path line then fenced code). Before the listing, one short line naming the stub or error you are fixing. Stress-calibration run \u2014 starter has intentional broken stubs. Lint-clean ruff+pylint if possible. Never pip install. Stdlib only.",
+  "panic_starter_main_py": "\"\"\"Broken CSV.\"\"\"\ndef sum_amount(csv_text):\n    raise NotImplementedError\n\ndef demo():\n    csv = \"id,amount\\n1,10\\n2,20\\n3,30\"\n    return sum_amount(csv)\n",
+  "prefix_lock": {
+    "d": 3,
+    "prefix_token_ids": [
+      785,
+      13633,
+      1565
+    ],
+    "prefix_text": "The stub `",
+    "immutable": true
+  },
+  "divergence_context": {
+    "bad_token_at_d": 1242,
+    "bad_token_at_d_text": "sum",
+    "bad_tail_summary": "REJECTED panic-tail summary (prose only \u2014 DO NOT copy code/imports/phrases from it). Write a clean task-specific fix instead. stub 'sum_amount' is not implemented correctly. It should sum the values in the 'amount' column of the CSV, skipping the header row. Here is the updated file: [task main.py] This code uses 'csv.DictReader' to read the CS\u2026",
+    "forbidden_patterns": [
+      "NotImplementedError",
+      "TODO",
+      "FIXME",
+      "pip install",
+      "sorry",
+      "cannot",
+      "unable to"
+    ]
+  },
+  "output_contract": {
+    "format": "aider_listing",
+    "target_staging_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\curator_staging\\unicaa01_p07_panic__chatcmpl_30255b182620__d3\\candidate.txt",
+    "target_admitted_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p07_panic__chatcmpl_30255b182620__d3.txt",
+    "task_dir": "unicaa01_p07_panic"
+  },
+  "success_criteria": "demo() returns 60.",
+  "task_summary": "Edit unicaa01_p07_panic/main",
+  "provenance": {
+    "source_pack": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\curation_packs\\unicaa01_corpus_p07_csv_agg_panic__chatcmpl-30255b182620__d3.json",
+    "source_experiment_json": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\out\\unicaa01_corpus_p07_csv_agg_panic_latest.json",
+    "tracer_confidence": "medium"
+  },
+  "tracer_confidence": "medium",
+  "demo_oracle": {
+    "pair_id": "p07_csv_agg",
+    "check_mode": "eq",
+    "expect_repr": "60.0"
+  }
+}

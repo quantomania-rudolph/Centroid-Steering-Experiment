@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "attempt_index": 0,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "0b2965244811a26b637d7f3646133d6f9e818f082ffa6b04da512b29bc8f067e",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": true,
+      "failed_checks": [],
+      "demo_result": {
+        "pass": true,
+        "actual_repr": "['1', '2', '3', '*', '+']",
+        "expected_repr": "['1', '2', '3', '*', '+']",
+        "error": "",
+        "pair_id": "p56_shunting_yard"
+      },
+      "qa_verdict": "approve",
+      "qa_calls_so_far": 0
+    }
+  ]
+}

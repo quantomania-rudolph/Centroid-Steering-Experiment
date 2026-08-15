@@ -1,0 +1,32 @@
+{
+  "task_slug": "unicaa01_p29_panic",
+  "invocation_id": "chatcmpl-8a8c056ebc55",
+  "experiment": "unicaa01_corpus_p29_cron_field_panic",
+  "pair_id": "p29_cron_field",
+  "arm": "panic",
+  "user_message": "Edit unicaa01_p29_panic/main.py only. cron_matches minute field NotImplementedError. Parse minute field */15; demo() matches minute 30. Fix the broken code: remove NotImplementedError/TODO stubs where possible. Return the complete updated file in aider listing format (path line then fenced code). Before the listing, one short line naming the stub or error you are fixing. Stress-calibration run \u2014 starter has intentional broken stubs. Lint-clean ruff+pylint if possible. Never pip install. Stdlib only.",
+  "session_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\sessions\\unicaa01_corpus_p29_cron_field_panic_20260810T180526Z.jsonl",
+  "prompt_tokens": 1861,
+  "completion_tokens": 90,
+  "d_tracer": 3,
+  "prefix_len": 3,
+  "prefix_token_ids": [
+    25958,
+    287,
+    1565
+  ],
+  "prefix_text": "Fixing `",
+  "bad_token_at_d": 2623,
+  "bad_token_at_d_text": "Not",
+  "bad_tail_text_preview": "ing `NotImplementedError` in `cron_minute_matches` function.\n\nunicaa01_p29_panic/main.py\n```\n\"\"\"Broken cron.\"\"\"\ndef cron_minute_matches(field, minute):\n    if field == \"*/15\":\n        return minute % 15 == 0\n    raise ValueError(\"Unsupported cron minute field\")\n\ndef demo():\n    return cron_minute_matches(\"*/15\", 30)\n```<|im_end|>",
+  "calm_tail_filename": "unicaa01_p29_panic__chatcmpl_8a8c056ebc55__d3.txt",
+  "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p29_panic__chatcmpl_8a8c056ebc55__d3.txt",
+  "token_ids_match": true,
+  "confidence": "high",
+  "notes": [
+    "Composer senior-editor: write calm completion text only.",
+    "Prefix lock: encode(text)[:d] must equal prefix_token_ids.",
+    "No pip/sorry/stub/NotImplementedError in calm tail."
+  ],
+  "source_experiment_json": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\out\\unicaa01_corpus_p29_cron_field_panic_latest.json"
+}

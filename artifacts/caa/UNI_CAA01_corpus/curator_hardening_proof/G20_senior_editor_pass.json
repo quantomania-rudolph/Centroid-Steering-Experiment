@@ -1,0 +1,18 @@
+{
+  "editorial_pass": {
+    "G20_editorial_rewrite": "23/23",
+    "residual_slop_flags": "8/47",
+    "residual_note": "All remaining stub_word hits are locked prefix text ('The stub …' / long p04 first-person lock). Continuations no longer use tautological `stub` closers; CD-safe concrete names used instead."
+  },
+  "oracle4": {
+    "p02_lru_cache": {"expect": "[1, None]", "admitted": true},
+    "p16_event_snapshot": {"expect": "25", "admitted": true, "path": "editorial_hand_admit"},
+    "p21_dijkstra": {"expect": "4", "admitted": true, "path": "editorial_hand_admit", "note": "heappop/heappush imports avoid NARR heapq.heappop"},
+    "p63_heap_kth": {"expect": "5", "admitted": true}
+  },
+  "verify": {"n_files": 47, "n_pass": 47},
+  "judge_hand_admits": {
+    "p16": {"narrative_quality": 4, "clarity": 4, "task_fidelity": 4},
+    "p21": {"narrative_quality": 5, "clarity": 5, "task_fidelity": 5}
+  }
+}

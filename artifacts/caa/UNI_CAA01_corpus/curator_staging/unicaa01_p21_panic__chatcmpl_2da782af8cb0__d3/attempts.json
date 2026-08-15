@@ -1,0 +1,113 @@
+{
+  "attempts": [
+    {
+      "attempt_index": 0,
+      "model": "openrouter/free",
+      "suffix_sha256": "dc63e77e5b9dc76b4a38f5c951e2c7a031864af6942348ad1d3342f82b7f985f",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": true,
+      "failed_checks": [
+        {
+          "id": "NARR_no_cross_task_phrases",
+          "pass": false,
+          "detail": "hits=['heapq.heappop']"
+        }
+      ],
+      "demo_result": {
+        "pass": true,
+        "actual_repr": "4",
+        "expected_repr": "4",
+        "error": "",
+        "pair_id": "p21_dijkstra"
+      },
+      "qa_verdict": null,
+      "qa_calls_so_far": 0
+    },
+    {
+      "attempt_index": 1,
+      "model": "openrouter/free",
+      "suffix_sha256": "ffc896f6cdce368a7b3a68852cc419c56e94179cb80ef6482b38bb3ca59b409a",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": false,
+      "failed_checks": [
+        {
+          "id": "SY_ast_parse",
+          "pass": false,
+          "detail": "no fenced main.py block"
+        },
+        {
+          "id": "QA_MAIN_PY_PRESENT",
+          "pass": false,
+          "detail": "extracted_len=0"
+        }
+      ],
+      "demo_result": {
+        "pass": false,
+        "actual_repr": "",
+        "expected_repr": "",
+        "error": "no main.py"
+      },
+      "qa_verdict": null,
+      "qa_calls_so_far": 0
+    },
+    {
+      "attempt_index": 2,
+      "model": "openrouter/free",
+      "suffix_sha256": "299eaeb46ef14c67c97fea05fefd9962acc2bbcf2da8b49126d518c5548e018e",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": true,
+      "failed_checks": [
+        {
+          "id": "RUN_demo_oracle",
+          "pass": false,
+          "detail": "value mismatch"
+        },
+        {
+          "id": "RUN_quality_suite",
+          "pass": false,
+          "detail": "FAIL:demo_dist:unexpected NameError: name 'dijkstra' is not defined"
+        }
+      ],
+      "demo_result": {
+        "pass": false,
+        "actual_repr": "5",
+        "expected_repr": "4",
+        "error": "value mismatch",
+        "pair_id": "p21_dijkstra"
+      },
+      "qa_verdict": null,
+      "qa_calls_so_far": 0
+    },
+    {
+      "attempt_index": 3,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "8aa5b3f21cd35085ff5baedf8aac99d29d5d5537391e9199fe17218cc678082e",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": false,
+      "failed_checks": [
+        {
+          "id": "SY_ast_parse",
+          "pass": false,
+          "detail": "no fenced main.py block"
+        },
+        {
+          "id": "QA_MAIN_PY_PRESENT",
+          "pass": false,
+          "detail": "extracted_len=0"
+        }
+      ],
+      "demo_result": {
+        "pass": false,
+        "actual_repr": "",
+        "expected_repr": "",
+        "error": "no main.py"
+      },
+      "qa_verdict": null,
+      "qa_calls_so_far": 0
+    }
+  ]
+}

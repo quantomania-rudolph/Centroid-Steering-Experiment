@@ -1,0 +1,70 @@
+{
+  "gate": "caa_provenance_schema",
+  "version": 1,
+  "timestamp": "2026-08-12T02:51:02.671662+00:00",
+  "pass": true,
+  "checks": [
+    {
+      "id": "PR1",
+      "pass": true,
+      "detail": "practice tagged"
+    },
+    {
+      "id": "PR4",
+      "pass": true,
+      "detail": "empty_root_discover=[]"
+    },
+    {
+      "id": "PR4b_live_excludes_practice",
+      "pass": true,
+      "detail": "n_live_natural=1 practice_leaks=False"
+    },
+    {
+      "id": "PR_empty_agg",
+      "pass": true,
+      "detail": "fail closed"
+    },
+    {
+      "id": "PR6",
+      "pass": true,
+      "detail": "[10, 16, 22]"
+    },
+    {
+      "id": "PR7",
+      "pass": true,
+      "detail": "extraction_position=divergent default"
+    },
+    {
+      "id": "PR2",
+      "pass": true,
+      "detail": "pytest test_capture_manifest"
+    },
+    {
+      "id": "PR3",
+      "pass": true,
+      "detail": "pytest tamper test"
+    },
+    {
+      "id": "PR5",
+      "pass": true,
+      "detail": "pytest practice path guard"
+    },
+    {
+      "id": "PR8",
+      "pass": true,
+      "detail": "pytest kv_live required"
+    }
+  ],
+  "sabotage": [
+    {
+      "id": "PR-S1",
+      "pass": true,
+      "detail": "tamper covered in unit tests"
+    },
+    {
+      "id": "PR-S2",
+      "pass": true,
+      "detail": "practice path guard unit tested"
+    }
+  ]
+}

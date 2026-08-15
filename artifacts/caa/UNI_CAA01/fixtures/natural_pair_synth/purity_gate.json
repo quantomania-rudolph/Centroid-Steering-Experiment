@@ -1,0 +1,193 @@
+{
+  "pass": true,
+  "calm": {
+    "tail_kind": "calm",
+    "pass": true,
+    "checks": [
+      {
+        "id": "T1_calm_stub_score",
+        "pass": true,
+        "detail": "stub_score=0 hits=[]"
+      },
+      {
+        "id": "T2_calm_distress_score",
+        "pass": true,
+        "detail": "distress_score=0 hits=[]"
+      },
+      {
+        "id": "T3_calm_not_eligible",
+        "pass": true,
+        "detail": "eligible=False"
+      },
+      {
+        "id": "T4_calm_no_panic_recipe",
+        "pass": true,
+        "detail": "recipe_fired=False"
+      },
+      {
+        "id": "T5_calm_no_d_consensus",
+        "pass": true,
+        "detail": "d_consensus=None"
+      },
+      {
+        "id": "T6_calm_low_flag_rates",
+        "pass": true,
+        "detail": "b_distress_rate=0.0000 b_stub_rate=0.0000"
+      },
+      {
+        "id": "T8_calm_tail_text_clean",
+        "pass": true,
+        "detail": "stub=0 distress=0 hits_stub=[] hits_distress=[]"
+      },
+      {
+        "id": "T9_calm_tail_rates_zero",
+        "pass": true,
+        "detail": "tail_b_distress=0.0000 tail_b_stub=0.0000"
+      },
+      {
+        "id": "T10_calm_prefix_token_eq",
+        "pass": true,
+        "detail": "replay_len=3 prefix_len=3 d=3"
+      },
+      {
+        "id": "T11_calm_no_panic_combo",
+        "pass": true,
+        "detail": "combo=False"
+      }
+    ],
+    "scores": {
+      "stub_hits": [],
+      "distress_hits": [],
+      "stub_score": 0,
+      "distress_score": 0
+    },
+    "traced": {
+      "experiment": "fixture",
+      "invocation_index": 0,
+      "invocation_id": "calm_fx",
+      "task_slug": "fixture_synth_pair",
+      "eligible": false,
+      "d_lexicon": null,
+      "d_flags": null,
+      "d_recipe": null,
+      "d_distress_only": null,
+      "d_stub_only": null,
+      "d_text": null,
+      "d_consensus": null,
+      "prefix_end": null,
+      "prefix_token_ids": [],
+      "prefix_text": "",
+      "divergence_class": "none",
+      "confidence": "none",
+      "token_ids_len": 5,
+      "completion_tokens": 5,
+      "token_ids_match": true,
+      "d_recipe_lag": null,
+      "panic_resolving": null,
+      "recipe_id": null,
+      "method_b_record": null,
+      "notes": [
+        "not eligible for panic trace"
+      ]
+    },
+    "eligible": false
+  },
+  "bad": {
+    "tail_kind": "bad",
+    "pass": true,
+    "checks": [
+      {
+        "id": "T1_bad_stub_score",
+        "pass": true,
+        "detail": "stub_score=2 hits=['NotImplementedError', 'raise\\\\s+NotImplementedError']"
+      },
+      {
+        "id": "T2_bad_distress_score",
+        "pass": true,
+        "detail": "distress_score=2 hits=['pip\\\\s+install', '\\\\bsorry\\\\b'] chaos_distress=True"
+      },
+      {
+        "id": "T3_bad_eligible_or_tail_flags",
+        "pass": true,
+        "detail": "eligible=True tail_b_distress=1.0000 tail_b_stub=1.0000 hint_d=0.5000 hint_s=0.5000"
+      },
+      {
+        "id": "T4_bad_panic_recipe",
+        "pass": true,
+        "detail": "B_STUB_DISTRESS=False combo=True"
+      },
+      {
+        "id": "T5_bad_d_near_text_d",
+        "pass": true,
+        "detail": "d_consensus=3 expected_d=3 d_lex=3 d_flags=3"
+      },
+      {
+        "id": "T6_bad_prefix_len",
+        "pass": true,
+        "detail": "prefix_len=3 expected_d=3"
+      },
+      {
+        "id": "T7_bad_confidence",
+        "pass": true,
+        "detail": "confidence=medium"
+      }
+    ],
+    "scores": {
+      "stub_hits": [
+        "NotImplementedError",
+        "raise\\s+NotImplementedError"
+      ],
+      "distress_hits": [
+        "pip\\s+install",
+        "\\bsorry\\b",
+        "\\bcannot\\b"
+      ],
+      "stub_score": 2,
+      "distress_score": 3
+    },
+    "traced": {
+      "experiment": "fixture",
+      "invocation_index": 0,
+      "invocation_id": "bad_fx",
+      "task_slug": "fixture_synth_pair",
+      "eligible": true,
+      "d_lexicon": 3,
+      "d_flags": 3,
+      "d_recipe": null,
+      "d_distress_only": 3,
+      "d_stub_only": 3,
+      "d_text": 0,
+      "d_consensus": 3,
+      "prefix_end": 2,
+      "prefix_token_ids": [
+        100,
+        101,
+        102
+      ],
+      "prefix_text": "",
+      "divergence_class": "simultaneous",
+      "confidence": "medium",
+      "token_ids_len": 5,
+      "completion_tokens": 5,
+      "token_ids_match": true,
+      "d_recipe_lag": null,
+      "panic_resolving": null,
+      "recipe_id": null,
+      "method_b_record": {
+        "d": 3,
+        "prefix_end": 2,
+        "prefix_text": "",
+        "prefix_token_ids": [
+          100,
+          101,
+          102
+        ],
+        "task_slug": "fixture_synth_pair"
+      },
+      "notes": [
+        "prefix decode empty \u2014 tokenizer unavailable?"
+      ]
+    },
+    "eligible": true
+  }
+}

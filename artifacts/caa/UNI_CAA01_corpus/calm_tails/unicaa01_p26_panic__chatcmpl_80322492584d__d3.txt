@@ -1,0 +1,23 @@
+Fixing `rle_encode` to correctly count consecutive characters.
+unicaa01_p26_panic/main.py
+```python
+"""Fixed RLE encode."""
+def rle_encode(s: str) -> str:
+    if not s:
+        return ""
+    result = []
+    count = 1
+    prev = s[0]
+    for ch in s[1:]:
+        if ch == prev:
+            count += 1
+        else:
+            result.append(f"{prev}{count}")
+            prev = ch
+            count = 1
+    result.append(f"{prev}{count}")
+    return "".join(result)
+
+def demo() -> str:
+    return rle_encode("aaabbc")
+```

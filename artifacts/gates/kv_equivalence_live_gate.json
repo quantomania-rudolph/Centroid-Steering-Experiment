@@ -1,0 +1,190 @@
+{
+  "gate": "kv_equivalence_live",
+  "version": 1,
+  "timestamp": "2026-08-10T01:02:15.000807+00:00",
+  "pass": true,
+  "checks": [
+    {
+      "id": "KV4_layers",
+      "pass": true,
+      "detail": "kv=[10, 16, 22] full=[10, 16, 22] expected=[10, 16, 22]"
+    },
+    {
+      "id": "KV6_capture_method",
+      "pass": true,
+      "detail": "kv_method=shared_kv_prefill full_method=full_forward"
+    },
+    {
+      "id": "KV2_positions",
+      "pass": true,
+      "detail": "expected={'shared': 154, 'divergent': 155} kv={'shared': 154, 'divergent': 155} full={'shared': 154, 'divergent': 155}"
+    },
+    {
+      "id": "KV7_databus_positions",
+      "pass": true,
+      "detail": "pos={'shared': 154, 'divergent': 155}"
+    },
+    {
+      "id": "KV3_shared_identical",
+      "pass": true,
+      "detail": "ok"
+    },
+    {
+      "id": "KV8_cos_calm_L10_shared",
+      "pass": true,
+      "detail": "cos=0.99999992 min=0.99999"
+    },
+    {
+      "id": "KV9_relL2_calm_L10_shared",
+      "pass": true,
+      "detail": "rel_l2=0.00000000e+00 max=0.002"
+    },
+    {
+      "id": "KV8_cos_calm_L10_divergent",
+      "pass": true,
+      "detail": "cos=0.99999966 min=0.99999"
+    },
+    {
+      "id": "KV9_relL2_calm_L10_divergent",
+      "pass": true,
+      "detail": "rel_l2=7.16063826e-04 max=0.002"
+    },
+    {
+      "id": "KV8_cos_calm_L16_shared",
+      "pass": true,
+      "detail": "cos=0.99999989 min=0.99999"
+    },
+    {
+      "id": "KV9_relL2_calm_L16_shared",
+      "pass": true,
+      "detail": "rel_l2=0.00000000e+00 max=0.002"
+    },
+    {
+      "id": "KV8_cos_calm_L16_divergent",
+      "pass": true,
+      "detail": "cos=0.99999938 min=0.99999"
+    },
+    {
+      "id": "KV9_relL2_calm_L16_divergent",
+      "pass": true,
+      "detail": "rel_l2=8.72105533e-04 max=0.002"
+    },
+    {
+      "id": "KV8_cos_calm_L22_shared",
+      "pass": true,
+      "detail": "cos=0.99999971 min=0.99999"
+    },
+    {
+      "id": "KV9_relL2_calm_L22_shared",
+      "pass": true,
+      "detail": "rel_l2=0.00000000e+00 max=0.002"
+    },
+    {
+      "id": "KV8_cos_calm_L22_divergent",
+      "pass": true,
+      "detail": "cos=0.99999939 min=0.99999"
+    },
+    {
+      "id": "KV9_relL2_calm_L22_divergent",
+      "pass": true,
+      "detail": "rel_l2=8.36466175e-04 max=0.002"
+    },
+    {
+      "id": "KV8_cos_bad_L10_shared",
+      "pass": true,
+      "detail": "cos=0.99999992 min=0.99999"
+    },
+    {
+      "id": "KV9_relL2_bad_L10_shared",
+      "pass": true,
+      "detail": "rel_l2=0.00000000e+00 max=0.002"
+    },
+    {
+      "id": "KV8_cos_bad_L10_divergent",
+      "pass": true,
+      "detail": "cos=0.99999962 min=0.99999"
+    },
+    {
+      "id": "KV9_relL2_bad_L10_divergent",
+      "pass": true,
+      "detail": "rel_l2=5.02857053e-04 max=0.002"
+    },
+    {
+      "id": "KV8_cos_bad_L16_shared",
+      "pass": true,
+      "detail": "cos=0.99999989 min=0.99999"
+    },
+    {
+      "id": "KV9_relL2_bad_L16_shared",
+      "pass": true,
+      "detail": "rel_l2=0.00000000e+00 max=0.002"
+    },
+    {
+      "id": "KV8_cos_bad_L16_divergent",
+      "pass": true,
+      "detail": "cos=0.99999958 min=0.99999"
+    },
+    {
+      "id": "KV9_relL2_bad_L16_divergent",
+      "pass": true,
+      "detail": "rel_l2=6.94772056e-04 max=0.002"
+    },
+    {
+      "id": "KV8_cos_bad_L22_shared",
+      "pass": true,
+      "detail": "cos=0.99999971 min=0.99999"
+    },
+    {
+      "id": "KV9_relL2_bad_L22_shared",
+      "pass": true,
+      "detail": "rel_l2=0.00000000e+00 max=0.002"
+    },
+    {
+      "id": "KV8_cos_bad_L22_divergent",
+      "pass": true,
+      "detail": "cos=0.99999961 min=0.99999"
+    },
+    {
+      "id": "KV9_relL2_bad_L22_divergent",
+      "pass": true,
+      "detail": "rel_l2=8.25405749e-04 max=0.002"
+    },
+    {
+      "id": "KV10_divergent_full_calm",
+      "pass": true,
+      "detail": "layers=[10, 16, 22]"
+    },
+    {
+      "id": "KV10_divergent_kv_calm",
+      "pass": true,
+      "detail": "layers=[10, 16, 22]"
+    },
+    {
+      "id": "KV10_divergent_full_bad",
+      "pass": true,
+      "detail": "layers=[10, 16, 22]"
+    },
+    {
+      "id": "KV10_divergent_kv_bad",
+      "pass": true,
+      "detail": "layers=[10, 16, 22]"
+    }
+  ],
+  "sabotage": [
+    {
+      "id": "KV-S1",
+      "pass": true,
+      "detail": "prefix mismatch raised"
+    },
+    {
+      "id": "KV-S2",
+      "pass": true,
+      "detail": "perturbed KV fails cosine"
+    }
+  ],
+  "environment": {
+    "device": "xpu",
+    "model": "Qwen2.5-Coder-7B-Instruct",
+    "fixture": "practice_token_bucket_kv_method_fixture_only"
+  }
+}

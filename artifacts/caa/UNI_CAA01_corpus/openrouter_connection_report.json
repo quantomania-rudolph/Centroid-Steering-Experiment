@@ -1,0 +1,54 @@
+{
+  "generation_free_only": true,
+  "n_free_models": 4,
+  "free_models": [
+    "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "poolside/laguna-s-2.1:free",
+    "poolside/laguna-xs-2.1:free",
+    "cohere/north-mini-code:free"
+  ],
+  "generation_pings": [
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "tier": "free",
+      "ok": false,
+      "error_class": "client_error",
+      "detail": "{\"error\":{\"message\":\"Provider returned error\",\"code\":404,\"metadata\":{\"raw\":\"\",\"provider_name\":\"Nvidia\",\"is_byok\":false}},\"user_id\":\"user_3FFLIa4LesiLcvviWjqDDgvhcgX\"}",
+      "preview": ""
+    },
+    {
+      "model": "poolside/laguna-s-2.1:free",
+      "tier": "free",
+      "ok": true,
+      "error_class": null,
+      "detail": "",
+      "preview": "ok"
+    },
+    {
+      "model": "poolside/laguna-xs-2.1:free",
+      "tier": "free",
+      "ok": true,
+      "error_class": null,
+      "detail": "",
+      "preview": "None"
+    },
+    {
+      "model": "cohere/north-mini-code:free",
+      "tier": "free",
+      "ok": true,
+      "error_class": null,
+      "detail": "",
+      "preview": "None"
+    }
+  ],
+  "generation_ok": 3,
+  "generation_pass": true,
+  "qa_model": "deepseek/deepseek-chat",
+  "qa_ping": {
+    "ok": true,
+    "error_class": null,
+    "detail": "",
+    "preview": "ok"
+  },
+  "qa_pass": true
+}

@@ -1,0 +1,28 @@
+{
+  "alpha_0": 0.85,
+  "inject": false,
+  "elicit": true,
+  "confirm": {
+    "pass": false,
+    "rows": [
+      {
+        "slug": "unicaa01_p30_panic",
+        "pass": false,
+        "failure_class": "no_output",
+        "demo_ok": false,
+        "quality_ok": false,
+        "stats": {
+          "n": 4,
+          "mean_alpha": 0.21249999065190242,
+          "inject_count": 0,
+          "max_alpha": 0.8499999626076097,
+          "g_stream_count": 1,
+          "g_recipe_count": 1,
+          "inject_indices": []
+        },
+        "completion_tokens": 4,
+        "assistant_preview": "NotImplementedError"
+      }
+    ]
+  }
+}

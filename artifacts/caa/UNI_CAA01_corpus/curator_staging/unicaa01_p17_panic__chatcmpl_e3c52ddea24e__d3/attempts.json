@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "attempt_index": 0,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "457a4ccefb8413fa965c37a1361d8708339ccaa3c5bd4a1daf89d2913fd4d4f9",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": true,
+      "failed_checks": [],
+      "demo_result": {
+        "pass": true,
+        "actual_repr": "[1, 2, 3]",
+        "expected_repr": "[1, 2, 3]",
+        "error": "",
+        "pair_id": "p17_deque_queue"
+      },
+      "qa_verdict": "approve",
+      "qa_calls_so_far": 0
+    }
+  ]
+}

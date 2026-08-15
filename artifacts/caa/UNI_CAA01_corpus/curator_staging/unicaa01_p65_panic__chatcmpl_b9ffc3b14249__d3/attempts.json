@@ -1,0 +1,107 @@
+{
+  "attempts": [
+    {
+      "attempt_index": 0,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "3264802c0a69dde51e3f49a241a4c9b7636e1540cf2e67b76e6f33b3d781b82b",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": false,
+      "failed_checks": [
+        {
+          "id": "SY_ast_parse",
+          "pass": false,
+          "detail": "no fenced main.py block"
+        },
+        {
+          "id": "QA_MAIN_PY_PRESENT",
+          "pass": false,
+          "detail": "extracted_len=0"
+        }
+      ],
+      "demo_result": {
+        "pass": false,
+        "actual_repr": "",
+        "expected_repr": "",
+        "error": "no main.py"
+      },
+      "qa_verdict": null,
+      "qa_calls_so_far": 0
+    },
+    {
+      "attempt_index": 1,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "2314b9c0ff2a53884780b81d1c424c4d7f95f267c3e405daf5bbdf358410565f",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": false,
+      "failed_checks": [
+        {
+          "id": "CT_assemble",
+          "pass": false,
+          "detail": "prefix lock or CD divergence failed at d=3 (bad_token=19052 bad_text='merge')"
+        }
+      ],
+      "demo_result": {
+        "pass": false,
+        "actual_repr": "",
+        "expected_repr": "",
+        "error": "no main.py"
+      },
+      "qa_verdict": null,
+      "qa_calls_so_far": 0
+    },
+    {
+      "attempt_index": 2,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "a2cfd8a74e09f61526ed2c89020d010bb5448035ccbc36346daa9a84a3f86d10",
+      "bridge_used": true,
+      "sanitized": false,
+      "gate_pass": true,
+      "failed_checks": [
+        {
+          "id": "NARR_no_bridge_catalog",
+          "pass": false,
+          "detail": "hits=['thread-safe implementation with locks and heap pop logic.']"
+        },
+        {
+          "id": "NARR_no_cross_task_phrases",
+          "pass": false,
+          "detail": "hits=['thread-safe', 'heap pop']"
+        },
+        {
+          "id": "NARR_balanced_backticks",
+          "pass": false,
+          "detail": "backtick_count=3 narrative='thread-safe implementation with locks and heap pop logic. `merge_intervals` is n'"
+        }
+      ],
+      "demo_result": {
+        "pass": true,
+        "actual_repr": "[(1, 6)]",
+        "expected_repr": "[(1, 6)]",
+        "error": "",
+        "pair_id": "p65_interval_merge"
+      },
+      "qa_verdict": null,
+      "qa_calls_so_far": 0
+    },
+    {
+      "attempt_index": 3,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "51100c162510c554252e290e3f9662c990de3e3ff87bd4bc299010b9a3451a6e",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": true,
+      "failed_checks": [],
+      "demo_result": {
+        "pass": true,
+        "actual_repr": "[(1, 6)]",
+        "expected_repr": "[(1, 6)]",
+        "error": "",
+        "pair_id": "p65_interval_merge"
+      },
+      "qa_verdict": "approve",
+      "qa_calls_so_far": 0
+    }
+  ]
+}

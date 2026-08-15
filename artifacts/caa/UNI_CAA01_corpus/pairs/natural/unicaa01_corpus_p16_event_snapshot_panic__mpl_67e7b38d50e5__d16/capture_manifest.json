@@ -1,0 +1,28 @@
+{
+  "source": "natural",
+  "pair_slug": "unicaa01_corpus_p16_event_snapshot_panic__mpl_67e7b38d50e5__d16",
+  "vector_id": "UNI_CAA01",
+  "d": 16,
+  "prompt_len": 1848,
+  "layers": [
+    10,
+    16,
+    22
+  ],
+  "capture_method": "shared_kv_prefill",
+  "extraction_position": "divergent",
+  "calm_purity_pass": true,
+  "bad_purity_pass": true,
+  "pair_gate_pass": true,
+  "kv_live_gate_pass": true,
+  "kv_live_gate_timestamp": "2026-08-10T01:02:15.000807+00:00",
+  "sha256": {
+    "activations_at_d.pt": "42ce7c2580d024128a4158caccc26b20016fb42dfeb2c75604fe8b4d391dc033",
+    "matched_prefix_spec.json": "5497cae082c4fee3e891bc11c9c11b7f720a15a2f1593a40a2aa590962ef0a7f",
+    "admission_gate.json": "44e604378a05dc26d3135e1fed737d8a3edf25f08b458d4acef6505ea9d7eac4"
+  },
+  "notes": [
+    "mined from unicaa01_corpus_p16_event_snapshot_panic"
+  ],
+  "path_hint": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\pairs\\natural\\unicaa01_corpus_p16_event_snapshot_panic__mpl_67e7b38d50e5__d16"
+}

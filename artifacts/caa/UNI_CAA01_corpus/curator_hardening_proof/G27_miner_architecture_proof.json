@@ -1,0 +1,236 @@
+{
+  "pass": true,
+  "dry_run": {
+    "n_admitted": 39,
+    "n_rejected": 15,
+    "n_eligible": 54,
+    "admitted_slugs": [
+      "unicaa01_corpus_p01_priority_queue_panic__mpl_8b67ddd03286__d16",
+      "unicaa01_corpus_p02_lru_cache_panic__mpl_c6cf9e514eba__d9",
+      "unicaa01_corpus_p06_json_parse_panic__mpl_44fb68e7b5cd__d3",
+      "unicaa01_corpus_p10_config_validate_pani__mpl_ec2610a87318__d3",
+      "unicaa01_corpus_p12_fibonacci_panic__mpl_b743782d78b3__d12",
+      "unicaa01_corpus_p14_regex_email_panic__mpl_fe69aa9a2766__d10",
+      "unicaa01_corpus_p16_event_snapshot_panic__mpl_67e7b38d50e5__d16",
+      "unicaa01_corpus_p17_deque_queue_panic__mpl_e3c52ddea24e__d3",
+      "unicaa01_corpus_p18_trie_prefix_panic__mpl_2ba03f73cbb9__d3",
+      "unicaa01_corpus_p21_dijkstra_panic__mpl_2da782af8cb0__d3",
+      "unicaa01_corpus_p23_knapsack_panic__mpl_223fdd2deb20__d3",
+      "unicaa01_corpus_p25_edit_distance_panic__mpl_5f47c2976091__d3",
+      "unicaa01_corpus_p26_rle_compress_panic__mpl_80322492584d__d3",
+      "unicaa01_corpus_p27_base64_pad_panic__mpl_df7c0f5ed153__d3",
+      "unicaa01_corpus_p28_glob_match_panic__mpl_bbd3c08f5fca__d3",
+      "unicaa01_corpus_p29_cron_field_panic__mpl_8a8c056ebc55__d3",
+      "unicaa01_corpus_p32_xml_escape_panic__mpl_136d4681e144__d3",
+      "unicaa01_corpus_p33_html_strip_panic__mpl_5d81120833b1__d3",
+      "unicaa01_corpus_p35_cookie_jar_panic__mpl_221ce4afc2b4__d3",
+      "unicaa01_corpus_p39_bloom_filter_panic__mpl_2dd7949f151c__d3",
+      "unicaa01_corpus_p40_skip_list_panic__mpl_fb69d4daa220__d3",
+      "unicaa01_corpus_p42_semaphore_panic__mpl_6d7feca070ed__d8",
+      "unicaa01_corpus_p43_rwlock_panic__mpl_0c1386eff216__d7",
+      "unicaa01_corpus_p45_producer_consumer_pa__mpl_e8dcf81d0af7__d8",
+      "unicaa01_corpus_p48_idempotency_panic__mpl_4aabf5e536c8__d3",
+      "unicaa01_corpus_p49_saga_step_panic__mpl_a3aa397db5d9__d2",
+      "unicaa01_corpus_p50_outbox_panic__mpl_6f078e4d2153__d3",
+      "unicaa01_corpus_p51_memoize_panic__mpl_de8dd51a0f3e__d3",
+      "unicaa01_corpus_p52_lazy_property_panic__mpl_45ac8e8730a8__d8",
+      "unicaa01_corpus_p54_fsm_turnstile_panic__mpl_1170b3ad6d58__d8",
+      "unicaa01_corpus_p55_lexer_panic__mpl_e40ff3e0676f__d3",
+      "unicaa01_corpus_p56_shunting_yard_panic__mpl_17d1fcefd00c__d3",
+      "unicaa01_corpus_p57_expr_eval_panic__mpl_ad2d060f5ef6__d3",
+      "unicaa01_corpus_p58_diff_apply_panic__mpl_a3a63544106f__d3",
+      "unicaa01_corpus_p60_template_fmt_panic__mpl_1990b3d4152b__d3",
+      "unicaa01_corpus_p61_markdown_strip_panic__mpl_33a11d62d329__d3",
+      "unicaa01_corpus_p62_binary_search_panic__mpl_55716bdd6c36__d3",
+      "unicaa01_corpus_p63_heap_kth_panic__mpl_e98e0696f1c6__d3",
+      "unicaa01_corpus_p66_rot13_panic__mpl_f556133fbebe__d3"
+    ],
+    "rejections": [
+      {
+        "experiment": "unicaa01_corpus_p04_graph_bfs_panic",
+        "invocation_id": "chatcmpl-2665d408d246",
+        "task_slug": "unicaa01_p04_panic",
+        "reason": "missing_calm_tail",
+        "detail": "expected under C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails"
+      },
+      {
+        "experiment": "unicaa01_corpus_p07_csv_agg_panic",
+        "invocation_id": "chatcmpl-30255b182620",
+        "task_slug": "unicaa01_p07_panic",
+        "reason": "missing_calm_tail",
+        "detail": "expected under C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails"
+      },
+      {
+        "experiment": "unicaa01_corpus_p09_thread_pool_panic",
+        "invocation_id": "chatcmpl-ab4f64e17fde",
+        "task_slug": "unicaa01_p09_panic",
+        "reason": "missing_calm_tail",
+        "detail": "expected under C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails"
+      },
+      {
+        "experiment": "unicaa01_corpus_p12_fibonacci_panic",
+        "invocation_id": "chatcmpl-9fcda159903f",
+        "task_slug": "unicaa01_p12_panic",
+        "reason": "missing_calm_tail",
+        "detail": "expected under C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails"
+      },
+      {
+        "experiment": "unicaa01_corpus_p17_deque_queue_panic",
+        "invocation_id": "chatcmpl-f6cb780981eb",
+        "task_slug": "unicaa01_p17_panic",
+        "reason": "missing_calm_tail",
+        "detail": "expected under C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails"
+      },
+      {
+        "experiment": "unicaa01_corpus_p30_ini_parse_panic",
+        "invocation_id": "chatcmpl-d222a9ac16f1",
+        "task_slug": "unicaa01_p30_panic",
+        "reason": "missing_calm_tail",
+        "detail": "expected under C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails"
+      },
+      {
+        "experiment": "unicaa01_corpus_p31_kv_flat_panic",
+        "invocation_id": "chatcmpl-1b6f807a66ad",
+        "task_slug": "unicaa01_p31_panic",
+        "reason": "missing_calm_tail",
+        "detail": "expected under C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails"
+      },
+      {
+        "experiment": "unicaa01_corpus_p34_url_query_panic",
+        "invocation_id": "chatcmpl-0e4fa30316ca",
+        "task_slug": "unicaa01_p34_panic",
+        "reason": "missing_calm_tail",
+        "detail": "expected under C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails"
+      },
+      {
+        "experiment": "unicaa01_corpus_p37_hash_chain_panic",
+        "invocation_id": "chatcmpl-4e836a4fb67c",
+        "task_slug": "unicaa01_p37_panic",
+        "reason": "missing_calm_tail",
+        "detail": "expected under C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails"
+      },
+      {
+        "experiment": "unicaa01_corpus_p40_skip_list_panic",
+        "invocation_id": "chatcmpl-c378061644c0",
+        "task_slug": "unicaa01_p40_panic",
+        "reason": "missing_calm_tail",
+        "detail": "expected under C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails"
+      },
+      {
+        "experiment": "unicaa01_corpus_p43_rwlock_panic",
+        "invocation_id": "chatcmpl-aed493529bf9",
+        "task_slug": "unicaa01_p43_panic",
+        "reason": "missing_calm_tail",
+        "detail": "expected under C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails"
+      },
+      {
+        "experiment": "unicaa01_corpus_p43_rwlock_panic",
+        "invocation_id": "chatcmpl-a0919e91993b",
+        "task_slug": "unicaa01_p43_panic",
+        "reason": "missing_calm_tail",
+        "detail": "expected under C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails"
+      },
+      {
+        "experiment": "unicaa01_corpus_p48_idempotency_panic",
+        "invocation_id": "chatcmpl-f61140bfb11a",
+        "task_slug": "unicaa01_p48_panic",
+        "reason": "missing_calm_tail",
+        "detail": "expected under C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails"
+      },
+      {
+        "experiment": "unicaa01_corpus_p62_binary_search_panic",
+        "invocation_id": "chatcmpl-b3cb6761ff98",
+        "task_slug": "unicaa01_p62_panic",
+        "reason": "missing_calm_tail",
+        "detail": "expected under C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails"
+      },
+      {
+        "experiment": "unicaa01_corpus_p65_interval_merge_panic",
+        "invocation_id": "chatcmpl-b9ffc3b14249",
+        "task_slug": "unicaa01_p65_panic",
+        "reason": "missing_calm_tail",
+        "detail": "expected under C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails"
+      }
+    ]
+  },
+  "master": {
+    "pipeline_ready": false,
+    "capture_ready": false,
+    "capture_tooling_ready": true,
+    "production_ready": false,
+    "n_natural_admitted": 1,
+    "n_natural_by_root": {
+      "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus": 0,
+      "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01": 1
+    },
+    "blockers": [
+      "pipeline gates missing/fail: ['caa_provenance_schema_gate.json', 'caa_neutral_purity_gate.json']",
+      "need \u22653 admitted natural pairs for production_ready (have 1)",
+      "tau/sigma not calibrated (deferred)",
+      "live injection hook not wired (CAST \u00a73 deferred)"
+    ],
+    "master_rc": 1
+  },
+  "claims": [
+    {
+      "id": "DRY_gate_pass",
+      "pass": true,
+      "detail": "rc=0 pass=True"
+    },
+    {
+      "id": "DRY_validated_eq_ready_tails",
+      "pass": true,
+      "detail": "validated=39 ready_tails=39"
+    },
+    {
+      "id": "DRY_no_hard_rejects",
+      "pass": true,
+      "detail": "hard=[]"
+    },
+    {
+      "id": "DRY_missing_calm_only_quarantine",
+      "pass": true,
+      "detail": "n_missing_calm=15"
+    },
+    {
+      "id": "ARCH_natural_root_corpus",
+      "pass": true,
+      "detail": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\pairs\\natural"
+    },
+    {
+      "id": "ARCH_dry_run_does_not_write_activations",
+      "pass": true,
+      "detail": "before=0 after=0"
+    },
+    {
+      "id": "METRIC_mode_is_dry_run",
+      "pass": true,
+      "detail": "dry_run"
+    },
+    {
+      "id": "ARCH_master_discovers_both_roots",
+      "pass": true,
+      "detail": "corpus=0 legacy=1 both=1 by_root={'C:\\\\Users\\\\Rudol\\\\Desktop\\\\ThetaData_greeks\\\\J-Do It\\\\artifacts\\\\caa\\\\UNI_CAA01_corpus': 0, 'C:\\\\Users\\\\Rudol\\\\Desktop\\\\ThetaData_greeks\\\\J-Do It\\\\artifacts\\\\caa\\\\UNI_CAA01': 1}"
+    },
+    {
+      "id": "MASTER_counts_on_disk_only",
+      "pass": true,
+      "detail": "master_n=1 discover_both=1 by_root={'C:\\\\Users\\\\Rudol\\\\Desktop\\\\ThetaData_greeks\\\\J-Do It\\\\artifacts\\\\caa\\\\UNI_CAA01_corpus': 0, 'C:\\\\Users\\\\Rudol\\\\Desktop\\\\ThetaData_greeks\\\\J-Do It\\\\artifacts\\\\caa\\\\UNI_CAA01': 1}"
+    },
+    {
+      "id": "MASTER_explains_not_production",
+      "pass": true,
+      "detail": "production_ready=False capture_tooling_ready=True blockers=[\"pipeline gates missing/fail: ['caa_provenance_schema_gate.json', 'caa_neutral_purity_gate.json']\", 'need \u22653 admitted natural pairs for production_ready (have 1)', 'tau/sigma not calibrated (deferred)']"
+    },
+    {
+      "id": "MASTER_capture_tooling_ready",
+      "pass": true,
+      "detail": "capture_tooling_ready=True"
+    }
+  ],
+  "definitions": {
+    "dry_run": "Loads tokenizer, rebuilds calm tails from curated files, runs validate_pair for every eligible panic+calm candidate. Does NOT load the model or write activations.",
+    "live_capture": "Same validation, then loads Qwen on XPU, reconstructs prompt token ids, runs shared-KV activation capture for calm vs bad completions, writes pairs/natural/<slug>/{activations_at_d.pt, manifests, admission_gate}.",
+    "production_ready": "Master tier: capture_ready + \u22653 on-disk pool-eligible natural pairs + green neutral/identity/aggregate/live gates. Dry-run alone never flips this."
+  }
+}

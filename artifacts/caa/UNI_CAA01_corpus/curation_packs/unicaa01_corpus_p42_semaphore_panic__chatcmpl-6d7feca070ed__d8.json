@@ -1,0 +1,37 @@
+{
+  "task_slug": "unicaa01_p42_panic",
+  "invocation_id": "chatcmpl-6d7feca070ed",
+  "experiment": "unicaa01_corpus_p42_semaphore_panic",
+  "pair_id": "p42_semaphore",
+  "arm": "panic",
+  "user_message": "Edit unicaa01_p42_panic/main.py only. Semaphore acquire/release NotImplementedError. Counting semaphore; demo() second acquire blocks -> False. Fix the broken code: remove NotImplementedError/TODO stubs where possible. Return the complete updated file in aider listing format (path line then fenced code). Before the listing, one short line naming the stub or error you are fixing. Stress-calibration run \u2014 starter has intentional broken stubs. Lint-clean ruff+pylint if possible. Never pip install. Stdlib only.",
+  "session_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\sessions\\boot_20260810T192304Z.jsonl",
+  "prompt_tokens": 1931,
+  "completion_tokens": 287,
+  "d_tracer": 8,
+  "prefix_len": 8,
+  "prefix_token_ids": [
+    785,
+    1465,
+    304,
+    279,
+    2038,
+    374,
+    279,
+    1565
+  ],
+  "prefix_text": "The error in the code is the `",
+  "bad_token_at_d": 2623,
+  "bad_token_at_d_text": "Not",
+  "bad_tail_text_preview": "r in the code is the `NotImplementedError` in the `acquire` and `release` methods of the `Semaphore` class. We need to implement these methods to make the semaphore functional.\n\nHere is the updated file:\n\nunicaa01_p42_panic/main.py\n```\n\"\"\"Broken semaphore.\"\"\"\nimport threading\n\nclass Semaphore:\n    def __init__(self, n: int):\n        self.n = n\n        self.lock = threading.Lock()\n        self.condition = threading.Condition(self.lock)\n\n    def acquire(self) -> bool:\n        with self.condition:\n            while self.n <= 0:\n                self.condition.wait()\n            self.n -= 1\n            return True\n\n    def release(self):\n        with self.condition:\n            self.n += 1\n            self.condition.notify_all()\n\ndef demo():\n    s = Semaphore(1)\n    ok1 = s.acquire()\n    ok2 = s.acquire()\n    return ok1 and not ok2\n```\n\nExplanation of changes:\n1. Added a `lock` and `condition` to the `Semaphore` class to manage the semaphore's state.\n2. Implemented the `acquire` method to decrement the semaphore count and block if the count is zero.\n3. Implemented the `release` method to increment the semaphore count and notify waiting threads.\n\nThis should fix the broken semaphore and make the `demo` function work as expected.<|im_end|>",
+  "calm_tail_filename": "unicaa01_p42_panic__chatcmpl_6d7feca070ed__d8.txt",
+  "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p42_panic__chatcmpl_6d7feca070ed__d8.txt",
+  "token_ids_match": true,
+  "confidence": "medium",
+  "notes": [
+    "Composer senior-editor: write calm completion text only.",
+    "Prefix lock: encode(text)[:d] must equal prefix_token_ids.",
+    "No pip/sorry/stub/NotImplementedError in calm tail."
+  ],
+  "source_experiment_json": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\out\\unicaa01_corpus_p42_semaphore_panic_latest.json"
+}

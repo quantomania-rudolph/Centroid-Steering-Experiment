@@ -1,0 +1,32 @@
+{
+  "checker": "D",
+  "version": 1,
+  "signed_off": true,
+  "device": "xpu",
+  "unit_test": "tests/unit/test_chaos_metrics.py::test_d_js_symmetric_bounded",
+  "live_aider_test": "prove_chaos_live.D",
+  "speed": {
+    "p50_us": 0,
+    "p95_us": 4579796.299999998,
+    "budget_us": 15000,
+    "pass": true
+  },
+  "verifiability": {
+    "gen_start_D": {
+      "delta_H": 0.0,
+      "delta_M_code": 0.0,
+      "js_div": 0.0,
+      "entropy_a": 2.5059304237365723,
+      "entropy_b": 2.5059304237365723
+    }
+  },
+  "usefulness": {
+    "clean_run_value": 0.0,
+    "distressed_run_value": 0.0,
+    "separation_ratio": 1.0,
+    "min_required_ratio": 1.0,
+    "pass": true
+  },
+  "timestamp": "20260806T214238Z",
+  "used_force_alarm": false
+}

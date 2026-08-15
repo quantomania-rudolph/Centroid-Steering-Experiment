@@ -1,0 +1,43 @@
+{
+  "overall_pass": true,
+  "layer": 15,
+  "lens_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\lenses\\qwen_jacobian_lens_L15.pt",
+  "checks": [
+    {
+      "id": "V1",
+      "name": "layer present",
+      "pass": true,
+      "detail": "layers=[15]"
+    },
+    {
+      "id": "V2",
+      "name": "J shape and finite",
+      "pass": true,
+      "detail": "shape=(3584, 3584) finite=True dtype=torch.float32"
+    },
+    {
+      "id": "V3",
+      "name": "n_prompts >= 1",
+      "pass": true,
+      "detail": "n_prompts=1"
+    },
+    {
+      "id": "V4",
+      "name": "||J||_F in sane range",
+      "pass": true,
+      "detail": "||J||_F=55.5497"
+    },
+    {
+      "id": "V5",
+      "name": "J-lens != logit lens at L15",
+      "pass": true,
+      "detail": "top_j=[5099, 9155, 39689, 3447, 100573] top_ll=[95413, 57315, 134776, 127607, 136064]"
+    },
+    {
+      "id": "V6",
+      "name": "readout entropy sane",
+      "pass": true,
+      "detail": "entropy=4.1707"
+    }
+  ]
+}

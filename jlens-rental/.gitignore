@@ -1,0 +1,7 @@
+secrets/secrets.env
+output/
+bundle/
+*.pt
+*.zip
+__pycache__/
+*.log

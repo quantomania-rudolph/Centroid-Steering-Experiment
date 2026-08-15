@@ -1,0 +1,9 @@
+{
+  "gate_id": "G2_briefs",
+  "pass": true,
+  "evidence": {
+    "pass": true,
+    "n_briefs": 54,
+    "n_skipped": 0
+  }
+}

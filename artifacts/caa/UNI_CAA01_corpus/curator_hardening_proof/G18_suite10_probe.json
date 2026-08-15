@@ -1,0 +1,136 @@
+{
+  "pass": true,
+  "n": 20,
+  "rows": [
+    {
+      "kind": "good",
+      "pair_id": "p04_graph_bfs",
+      "pass": true,
+      "detail": "6 cases ok"
+    },
+    {
+      "kind": "good",
+      "pair_id": "p14_regex_email",
+      "pass": true,
+      "detail": "6 cases ok"
+    },
+    {
+      "kind": "good",
+      "pair_id": "p29_cron_field",
+      "pass": true,
+      "detail": "7 cases ok"
+    },
+    {
+      "kind": "good",
+      "pair_id": "p31_kv_flat",
+      "pass": true,
+      "detail": "6 cases ok"
+    },
+    {
+      "kind": "good",
+      "pair_id": "p35_cookie_jar",
+      "pass": true,
+      "detail": "5 cases ok"
+    },
+    {
+      "kind": "good",
+      "pair_id": "p37_hash_chain",
+      "pass": true,
+      "detail": "6 cases ok"
+    },
+    {
+      "kind": "good",
+      "pair_id": "p54_fsm_turnstile",
+      "pass": true,
+      "detail": "4 cases ok"
+    },
+    {
+      "kind": "good",
+      "pair_id": "p56_shunting_yard",
+      "pass": true,
+      "detail": "6 cases ok"
+    },
+    {
+      "kind": "good",
+      "pair_id": "p60_template_fmt",
+      "pass": true,
+      "detail": "5 cases ok"
+    },
+    {
+      "kind": "good",
+      "pair_id": "p61_markdown_strip",
+      "pass": true,
+      "detail": "6 cases ok"
+    },
+    {
+      "kind": "hack",
+      "pair_id": "p04_graph_bfs",
+      "label": "hardcoded",
+      "rejected": true,
+      "detail": "FAIL:single:expected [0] got [0, 1, 2, 3]"
+    },
+    {
+      "kind": "hack",
+      "pair_id": "p14_regex_email",
+      "label": "always_true",
+      "rejected": true,
+      "detail": "FAIL:not_email:expected False got True"
+    },
+    {
+      "kind": "hack",
+      "pair_id": "p29_cron_field",
+      "label": "always_true",
+      "rejected": true,
+      "detail": "FAIL:star15_miss:expected False got True"
+    },
+    {
+      "kind": "hack",
+      "pair_id": "p31_kv_flat",
+      "label": "hardcoded_2",
+      "rejected": true,
+      "detail": "FAIL:three_keys:expected 3 got 2"
+    },
+    {
+      "kind": "hack",
+      "pair_id": "p35_cookie_jar",
+      "label": "hardcoded_v",
+      "rejected": true,
+      "detail": "FAIL:missing:expected None got 'v'"
+    },
+    {
+      "kind": "hack",
+      "pair_id": "p37_hash_chain",
+      "label": "hardcoded_len",
+      "rejected": true,
+      "detail": "FAIL:first_sha:expected 'ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb' got 'x'"
+    },
+    {
+      "kind": "hack",
+      "pair_id": "p54_fsm_turnstile",
+      "label": "always_unlocked",
+      "rejected": true,
+      "detail": "FAIL:start_locked:expected 'locked' got 'unlocked'"
+    },
+    {
+      "kind": "hack",
+      "pair_id": "p56_shunting_yard",
+      "label": "hardcoded_rpn",
+      "rejected": true,
+      "detail": "FAIL:add_only:expected ['1', '2', '+'] got ['1', '2', '3', '*', '+']"
+    },
+    {
+      "kind": "hack",
+      "pair_id": "p60_template_fmt",
+      "label": "hardcoded",
+      "rejected": true,
+      "detail": "FAIL:plain:expected 'hi' got 'hi Ada'"
+    },
+    {
+      "kind": "hack",
+      "pair_id": "p61_markdown_strip",
+      "label": "hardcoded_bold",
+      "rejected": true,
+      "detail": "FAIL:plain:expected 'plain' got 'bold'"
+    }
+  ]
+}

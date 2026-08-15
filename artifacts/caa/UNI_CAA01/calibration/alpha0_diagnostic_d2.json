@@ -1,0 +1,28 @@
+{
+  "alpha_0": 0.85,
+  "inject": false,
+  "elicit": false,
+  "confirm": {
+    "pass": true,
+    "rows": [
+      {
+        "slug": "unicaa01_p30_panic",
+        "pass": true,
+        "failure_class": "pass",
+        "demo_ok": true,
+        "quality_ok": true,
+        "stats": {
+          "n": 240,
+          "mean_alpha": 0.0035286395953228306,
+          "inject_count": 0,
+          "max_alpha": 0.8468735028774793,
+          "g_stream_count": 2,
+          "g_recipe_count": 2,
+          "inject_indices": []
+        },
+        "completion_tokens": 240,
+        "assistant_preview": "The stub `parse_ini` is raising a `NotImplementedError`, which is appropriate for a broken implementation. However, the `demo` function is trying to use this stub, which will fail. We need to fix the "
+      }
+    ]
+  }
+}

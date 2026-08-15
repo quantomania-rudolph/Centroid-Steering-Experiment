@@ -1,0 +1,28 @@
+{
+  "source": "natural",
+  "pair_slug": "unicaa01_corpus_p45_producer_consumer_pa__mpl_e8dcf81d0af7__d8",
+  "vector_id": "UNI_CAA01",
+  "d": 8,
+  "prompt_len": 1953,
+  "layers": [
+    10,
+    16,
+    22
+  ],
+  "capture_method": "dual_full_forward",
+  "extraction_position": "divergent",
+  "calm_purity_pass": true,
+  "bad_purity_pass": true,
+  "pair_gate_pass": true,
+  "kv_live_gate_pass": true,
+  "kv_live_gate_timestamp": "2026-08-10T01:02:15.000807+00:00",
+  "sha256": {
+    "activations_at_d.pt": "195997affbf423954c42da1b97364f08cccd6c8b7f349b90a8aa04566b8fe5f3",
+    "matched_prefix_spec.json": "f24a6c978ff96219ee2c604f394202128850646d18c3694c3ac4b5357d1c3ae6",
+    "admission_gate.json": "2975b4748107c7b7b32ed1aa61bd9d2e8d1b79bd7717bef3d8837c26870dbb9c"
+  },
+  "notes": [
+    "mined from unicaa01_corpus_p45_producer_consumer_panic"
+  ],
+  "path_hint": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\pairs\\natural\\unicaa01_corpus_p45_producer_consumer_pa__mpl_e8dcf81d0af7__d8"
+}

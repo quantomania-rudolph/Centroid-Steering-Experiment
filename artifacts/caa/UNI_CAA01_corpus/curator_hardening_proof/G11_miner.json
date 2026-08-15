@@ -1,0 +1,9 @@
+{
+  "n_pilot_admitted": 1,
+  "n_admitted": 1,
+  "admitted_slugs": [
+    "unicaa01_corpus_p06_json_parse_panic__mpl_44fb68e7b5cd__d3"
+  ],
+  "includes_p06": true,
+  "pass": true
+}

@@ -1,0 +1,12 @@
+Fixing `render_template` to handle {{var}} substitution.
+unicaa01_p60_panic/main.py
+```python
+"""Template renderer."""
+def render_template(tpl: str, ctx: dict) -> str:
+    for key, value in ctx.items():
+        tpl = tpl.replace("{{" + key + "}}", str(value))
+    return tpl
+
+def demo():
+    return render_template("hi {{name}}", {"name": "Ada"})
+```

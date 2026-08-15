@@ -1,0 +1,54 @@
+{
+  "gate": "kv_equivalence_unit",
+  "version": 1,
+  "timestamp": "2026-08-10T01:52:39.412539+00:00",
+  "pass": true,
+  "checks": [
+    {
+      "id": "KV1",
+      "pass": true,
+      "detail": "pytest"
+    },
+    {
+      "id": "KV2",
+      "pass": true,
+      "detail": "pytest"
+    },
+    {
+      "id": "KV3",
+      "pass": true,
+      "detail": "pytest"
+    },
+    {
+      "id": "KV4",
+      "pass": true,
+      "detail": "pytest"
+    },
+    {
+      "id": "KV5",
+      "pass": true,
+      "detail": "pytest"
+    },
+    {
+      "id": "KV6",
+      "pass": true,
+      "detail": "pytest"
+    },
+    {
+      "id": "KV7",
+      "pass": true,
+      "detail": "pytest"
+    }
+  ],
+  "sabotage": [
+    {
+      "id": "KV-S1",
+      "pass": true,
+      "detail": "prefix mismatch unit"
+    }
+  ],
+  "environment": {
+    "tier": "unit",
+    "pytest": "passed"
+  }
+}

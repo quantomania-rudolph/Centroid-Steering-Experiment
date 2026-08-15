@@ -1,0 +1,720 @@
+{
+  "gate": "caa_natural_pair_live",
+  "version": 1,
+  "timestamp": "2026-08-12T07:15:04.975559+00:00",
+  "pass": false,
+  "checks": [
+    {
+      "id": "3B_tracer_scan",
+      "pass": true,
+      "detail": "scanned=325"
+    },
+    {
+      "id": "3B_eligible",
+      "pass": true,
+      "detail": "eligible=54"
+    },
+    {
+      "id": "3B_candidates",
+      "pass": true,
+      "detail": "candidates=54"
+    },
+    {
+      "id": "3B_with_calm_tail",
+      "pass": true,
+      "detail": "with_calm=39"
+    },
+    {
+      "id": "3B_validated_or_captured",
+      "pass": false,
+      "detail": "n_admitted=0 target=1 mode=scan (dry_run=pair_validated; capture=pool_eligible_on_disk)"
+    },
+    {
+      "id": "3B_no_validate_failures",
+      "pass": true,
+      "detail": "validate_or_coherence_fails=0"
+    },
+    {
+      "id": "3B_no_capture_failures",
+      "pass": true,
+      "detail": "capture_or_admission_fails=0"
+    }
+  ],
+  "sabotage": [
+    {
+      "id": "3B-block",
+      "pass": true,
+      "detail": "miner runs without crash"
+    }
+  ],
+  "environment": {
+    "mode": "scan",
+    "n_pair_validated_or_captured": 0,
+    "n_pool_eligible_on_disk": 0,
+    "admit_target": 1,
+    "metric_note": "dry_run n_admitted = pair-validated count; capture n_admitted = pool-eligible activations on disk; max_pairs = new admits this run (skips already pool-eligible)"
+  },
+  "mode": "scan",
+  "n_scanned": 325,
+  "n_eligible": 54,
+  "n_candidates": 54,
+  "n_admitted": 0,
+  "n_rejected": 15,
+  "candidates": [
+    {
+      "experiment": "unicaa01_corpus_p01_priority_queue_panic",
+      "invocation_id": "chatcmpl-8b67ddd03286",
+      "task_slug": "unicaa01_p01_panic",
+      "d_tracer": 16,
+      "prefix_len": 16,
+      "confidence": "medium",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p01_panic__chatcmpl_8b67ddd03286__d16.txt"
+    },
+    {
+      "experiment": "unicaa01_corpus_p02_lru_cache_panic",
+      "invocation_id": "chatcmpl-c6cf9e514eba",
+      "task_slug": "unicaa01_p02_panic",
+      "d_tracer": 9,
+      "prefix_len": 9,
+      "confidence": "medium",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p02_panic__chatcmpl_c6cf9e514eba__d9.txt"
+    },
+    {
+      "experiment": "unicaa01_corpus_p04_graph_bfs_panic",
+      "invocation_id": "chatcmpl-2665d408d246",
+      "task_slug": "unicaa01_p04_panic",
+      "d_tracer": 49,
+      "prefix_len": 49,
+      "confidence": "medium",
+      "token_ids_match": true,
+      "calm_tail_path": null
+    },
+    {
+      "experiment": "unicaa01_corpus_p06_json_parse_panic",
+      "invocation_id": "chatcmpl-44fb68e7b5cd",
+      "task_slug": "unicaa01_p06_panic",
+      "d_tracer": 3,
+      "prefix_len": 3,
+      "confidence": "medium",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p06_panic__chatcmpl_44fb68e7b5cd__d3.txt"
+    },
+    {
+      "experiment": "unicaa01_corpus_p07_csv_agg_panic",
+      "invocation_id": "chatcmpl-30255b182620",
+      "task_slug": "unicaa01_p07_panic",
+      "d_tracer": 3,
+      "prefix_len": 3,
+      "confidence": "medium",
+      "token_ids_match": true,
+      "calm_tail_path": null
+    },
+    {
+      "experiment": "unicaa01_corpus_p09_thread_pool_panic",
+      "invocation_id": "chatcmpl-ab4f64e17fde",
+      "task_slug": "unicaa01_p09_panic",
+      "d_tracer": 10,
+      "prefix_len": 10,
+      "confidence": "medium",
+      "token_ids_match": true,
+      "calm_tail_path": null
+    },
+    {
+      "experiment": "unicaa01_corpus_p10_config_validate_panic",
+      "invocation_id": "chatcmpl-ec2610a87318",
+      "task_slug": "unicaa01_p10_panic",
+      "d_tracer": 3,
+      "prefix_len": 3,
+      "confidence": "medium",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p10_panic__chatcmpl_ec2610a87318__d3.txt"
+    },
+    {
+      "experiment": "unicaa01_corpus_p12_fibonacci_panic",
+      "invocation_id": "chatcmpl-b743782d78b3",
+      "task_slug": "unicaa01_p12_panic",
+      "d_tracer": 12,
+      "prefix_len": 12,
+      "confidence": "medium",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p12_panic__chatcmpl_b743782d78b3__d12.txt"
+    },
+    {
+      "experiment": "unicaa01_corpus_p12_fibonacci_panic",
+      "invocation_id": "chatcmpl-9fcda159903f",
+      "task_slug": "unicaa01_p12_panic",
+      "d_tracer": 14,
+      "prefix_len": 14,
+      "confidence": "high",
+      "token_ids_match": true,
+      "calm_tail_path": null
+    },
+    {
+      "experiment": "unicaa01_corpus_p14_regex_email_panic",
+      "invocation_id": "chatcmpl-fe69aa9a2766",
+      "task_slug": "unicaa01_p14_panic",
+      "d_tracer": 10,
+      "prefix_len": 10,
+      "confidence": "medium",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p14_panic__chatcmpl_fe69aa9a2766__d10.txt"
+    },
+    {
+      "experiment": "unicaa01_corpus_p16_event_snapshot_panic",
+      "invocation_id": "chatcmpl-67e7b38d50e5",
+      "task_slug": "unicaa01_p16_panic",
+      "d_tracer": 16,
+      "prefix_len": 16,
+      "confidence": "medium",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p16_panic__chatcmpl_67e7b38d50e5__d16.txt"
+    },
+    {
+      "experiment": "unicaa01_corpus_p17_deque_queue_panic",
+      "invocation_id": "chatcmpl-e3c52ddea24e",
+      "task_slug": "unicaa01_p17_panic",
+      "d_tracer": 3,
+      "prefix_len": 3,
+      "confidence": "medium",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p17_panic__chatcmpl_e3c52ddea24e__d3.txt"
+    },
+    {
+      "experiment": "unicaa01_corpus_p17_deque_queue_panic",
+      "invocation_id": "chatcmpl-f6cb780981eb",
+      "task_slug": "unicaa01_p17_panic",
+      "d_tracer": 3,
+      "prefix_len": 3,
+      "confidence": "medium",
+      "token_ids_match": true,
+      "calm_tail_path": null
+    },
+    {
+      "experiment": "unicaa01_corpus_p18_trie_prefix_panic",
+      "invocation_id": "chatcmpl-2ba03f73cbb9",
+      "task_slug": "unicaa01_p18_panic",
+      "d_tracer": 3,
+      "prefix_len": 3,
+      "confidence": "high",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p18_panic__chatcmpl_2ba03f73cbb9__d3.txt"
+    },
+    {
+      "experiment": "unicaa01_corpus_p21_dijkstra_panic",
+      "invocation_id": "chatcmpl-2da782af8cb0",
+      "task_slug": "unicaa01_p21_panic",
+      "d_tracer": 3,
+      "prefix_len": 3,
+      "confidence": "high",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p21_panic__chatcmpl_2da782af8cb0__d3.txt"
+    },
+    {
+      "experiment": "unicaa01_corpus_p23_knapsack_panic",
+      "invocation_id": "chatcmpl-223fdd2deb20",
+      "task_slug": "unicaa01_p23_panic",
+      "d_tracer": 3,
+      "prefix_len": 3,
+      "confidence": "medium",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p23_panic__chatcmpl_223fdd2deb20__d3.txt"
+    },
+    {
+      "experiment": "unicaa01_corpus_p25_edit_distance_panic",
+      "invocation_id": "chatcmpl-5f47c2976091",
+      "task_slug": "unicaa01_p25_panic",
+      "d_tracer": 3,
+      "prefix_len": 3,
+      "confidence": "high",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p25_panic__chatcmpl_5f47c2976091__d3.txt"
+    },
+    {
+      "experiment": "unicaa01_corpus_p26_rle_compress_panic",
+      "invocation_id": "chatcmpl-80322492584d",
+      "task_slug": "unicaa01_p26_panic",
+      "d_tracer": 3,
+      "prefix_len": 3,
+      "confidence": "high",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p26_panic__chatcmpl_80322492584d__d3.txt"
+    },
+    {
+      "experiment": "unicaa01_corpus_p27_base64_pad_panic",
+      "invocation_id": "chatcmpl-df7c0f5ed153",
+      "task_slug": "unicaa01_p27_panic",
+      "d_tracer": 3,
+      "prefix_len": 3,
+      "confidence": "high",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p27_panic__chatcmpl_df7c0f5ed153__d3.txt"
+    },
+    {
+      "experiment": "unicaa01_corpus_p28_glob_match_panic",
+      "invocation_id": "chatcmpl-bbd3c08f5fca",
+      "task_slug": "unicaa01_p28_panic",
+      "d_tracer": 3,
+      "prefix_len": 3,
+      "confidence": "high",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p28_panic__chatcmpl_bbd3c08f5fca__d3.txt"
+    },
+    {
+      "experiment": "unicaa01_corpus_p29_cron_field_panic",
+      "invocation_id": "chatcmpl-8a8c056ebc55",
+      "task_slug": "unicaa01_p29_panic",
+      "d_tracer": 3,
+      "prefix_len": 3,
+      "confidence": "high",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p29_panic__chatcmpl_8a8c056ebc55__d3.txt"
+    },
+    {
+      "experiment": "unicaa01_corpus_p30_ini_parse_panic",
+      "invocation_id": "chatcmpl-d222a9ac16f1",
+      "task_slug": "unicaa01_p30_panic",
+      "d_tracer": 3,
+      "prefix_len": 3,
+      "confidence": "medium",
+      "token_ids_match": true,
+      "calm_tail_path": null
+    },
+    {
+      "experiment": "unicaa01_corpus_p31_kv_flat_panic",
+      "invocation_id": "chatcmpl-1b6f807a66ad",
+      "task_slug": "unicaa01_p31_panic",
+      "d_tracer": 11,
+      "prefix_len": 11,
+      "confidence": "medium",
+      "token_ids_match": true,
+      "calm_tail_path": null
+    },
+    {
+      "experiment": "unicaa01_corpus_p32_xml_escape_panic",
+      "invocation_id": "chatcmpl-136d4681e144",
+      "task_slug": "unicaa01_p32_panic",
+      "d_tracer": 3,
+      "prefix_len": 3,
+      "confidence": "medium",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p32_panic__chatcmpl_136d4681e144__d3.txt"
+    },
+    {
+      "experiment": "unicaa01_corpus_p33_html_strip_panic",
+      "invocation_id": "chatcmpl-5d81120833b1",
+      "task_slug": "unicaa01_p33_panic",
+      "d_tracer": 3,
+      "prefix_len": 3,
+      "confidence": "high",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p33_panic__chatcmpl_5d81120833b1__d3.txt"
+    },
+    {
+      "experiment": "unicaa01_corpus_p34_url_query_panic",
+      "invocation_id": "chatcmpl-0e4fa30316ca",
+      "task_slug": "unicaa01_p34_panic",
+      "d_tracer": 3,
+      "prefix_len": 3,
+      "confidence": "medium",
+      "token_ids_match": true,
+      "calm_tail_path": null
+    },
+    {
+      "experiment": "unicaa01_corpus_p35_cookie_jar_panic",
+      "invocation_id": "chatcmpl-221ce4afc2b4",
+      "task_slug": "unicaa01_p35_panic",
+      "d_tracer": 3,
+      "prefix_len": 3,
+      "confidence": "high",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p35_panic__chatcmpl_221ce4afc2b4__d3.txt"
+    },
+    {
+      "experiment": "unicaa01_corpus_p37_hash_chain_panic",
+      "invocation_id": "chatcmpl-4e836a4fb67c",
+      "task_slug": "unicaa01_p37_panic",
+      "d_tracer": 3,
+      "prefix_len": 3,
+      "confidence": "medium",
+      "token_ids_match": true,
+      "calm_tail_path": null
+    },
+    {
+      "experiment": "unicaa01_corpus_p39_bloom_filter_panic",
+      "invocation_id": "chatcmpl-2dd7949f151c",
+      "task_slug": "unicaa01_p39_panic",
+      "d_tracer": 3,
+      "prefix_len": 3,
+      "confidence": "high",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p39_panic__chatcmpl_2dd7949f151c__d3.txt"
+    },
+    {
+      "experiment": "unicaa01_corpus_p40_skip_list_panic",
+      "invocation_id": "chatcmpl-fb69d4daa220",
+      "task_slug": "unicaa01_p40_panic",
+      "d_tracer": 3,
+      "prefix_len": 3,
+      "confidence": "medium",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p40_panic__chatcmpl_fb69d4daa220__d3.txt"
+    },
+    {
+      "experiment": "unicaa01_corpus_p40_skip_list_panic",
+      "invocation_id": "chatcmpl-c378061644c0",
+      "task_slug": "unicaa01_p40_panic",
+      "d_tracer": 4,
+      "prefix_len": 4,
+      "confidence": "medium",
+      "token_ids_match": true,
+      "calm_tail_path": null
+    },
+    {
+      "experiment": "unicaa01_corpus_p42_semaphore_panic",
+      "invocation_id": "chatcmpl-6d7feca070ed",
+      "task_slug": "unicaa01_p42_panic",
+      "d_tracer": 8,
+      "prefix_len": 8,
+      "confidence": "medium",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p42_panic__chatcmpl_6d7feca070ed__d8.txt"
+    },
+    {
+      "experiment": "unicaa01_corpus_p43_rwlock_panic",
+      "invocation_id": "chatcmpl-0c1386eff216",
+      "task_slug": "unicaa01_p43_panic",
+      "d_tracer": 7,
+      "prefix_len": 7,
+      "confidence": "medium",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p43_panic__chatcmpl_0c1386eff216__d7.txt"
+    },
+    {
+      "experiment": "unicaa01_corpus_p43_rwlock_panic",
+      "invocation_id": "chatcmpl-aed493529bf9",
+      "task_slug": "unicaa01_p43_panic",
+      "d_tracer": 9,
+      "prefix_len": 9,
+      "confidence": "medium",
+      "token_ids_match": true,
+      "calm_tail_path": null
+    },
+    {
+      "experiment": "unicaa01_corpus_p43_rwlock_panic",
+      "invocation_id": "chatcmpl-a0919e91993b",
+      "task_slug": "unicaa01_p43_panic",
+      "d_tracer": 9,
+      "prefix_len": 9,
+      "confidence": "medium",
+      "token_ids_match": true,
+      "calm_tail_path": null
+    },
+    {
+      "experiment": "unicaa01_corpus_p45_producer_consumer_panic",
+      "invocation_id": "chatcmpl-e8dcf81d0af7",
+      "task_slug": "unicaa01_p45_panic",
+      "d_tracer": 8,
+      "prefix_len": 8,
+      "confidence": "medium",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p45_panic__chatcmpl_e8dcf81d0af7__d8.txt"
+    },
+    {
+      "experiment": "unicaa01_corpus_p48_idempotency_panic",
+      "invocation_id": "chatcmpl-4aabf5e536c8",
+      "task_slug": "unicaa01_p48_panic",
+      "d_tracer": 3,
+      "prefix_len": 3,
+      "confidence": "high",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p48_panic__chatcmpl_4aabf5e536c8__d3.txt"
+    },
+    {
+      "experiment": "unicaa01_corpus_p48_idempotency_panic",
+      "invocation_id": "chatcmpl-f61140bfb11a",
+      "task_slug": "unicaa01_p48_panic",
+      "d_tracer": 4,
+      "prefix_len": 4,
+      "confidence": "medium",
+      "token_ids_match": true,
+      "calm_tail_path": null
+    },
+    {
+      "experiment": "unicaa01_corpus_p49_saga_step_panic",
+      "invocation_id": "chatcmpl-a3aa397db5d9",
+      "task_slug": "unicaa01_p49_panic",
+      "d_tracer": 2,
+      "prefix_len": 2,
+      "confidence": "high",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p49_panic__chatcmpl_a3aa397db5d9__d2.txt"
+    },
+    {
+      "experiment": "unicaa01_corpus_p50_outbox_panic",
+      "invocation_id": "chatcmpl-6f078e4d2153",
+      "task_slug": "unicaa01_p50_panic",
+      "d_tracer": 3,
+      "prefix_len": 3,
+      "confidence": "high",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p50_panic__chatcmpl_6f078e4d2153__d3.txt"
+    },
+    {
+      "experiment": "unicaa01_corpus_p51_memoize_panic",
+      "invocation_id": "chatcmpl-de8dd51a0f3e",
+      "task_slug": "unicaa01_p51_panic",
+      "d_tracer": 3,
+      "prefix_len": 3,
+      "confidence": "high",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p51_panic__chatcmpl_de8dd51a0f3e__d3.txt"
+    },
+    {
+      "experiment": "unicaa01_corpus_p52_lazy_property_panic",
+      "invocation_id": "chatcmpl-45ac8e8730a8",
+      "task_slug": "unicaa01_p52_panic",
+      "d_tracer": 8,
+      "prefix_len": 8,
+      "confidence": "medium",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p52_panic__chatcmpl_45ac8e8730a8__d8.txt"
+    },
+    {
+      "experiment": "unicaa01_corpus_p54_fsm_turnstile_panic",
+      "invocation_id": "chatcmpl-1170b3ad6d58",
+      "task_slug": "unicaa01_p54_panic",
+      "d_tracer": 8,
+      "prefix_len": 8,
+      "confidence": "medium",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p54_panic__chatcmpl_1170b3ad6d58__d8.txt"
+    },
+    {
+      "experiment": "unicaa01_corpus_p55_lexer_panic",
+      "invocation_id": "chatcmpl-e40ff3e0676f",
+      "task_slug": "unicaa01_p55_panic",
+      "d_tracer": 3,
+      "prefix_len": 3,
+      "confidence": "high",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p55_panic__chatcmpl_e40ff3e0676f__d3.txt"
+    },
+    {
+      "experiment": "unicaa01_corpus_p56_shunting_yard_panic",
+      "invocation_id": "chatcmpl-17d1fcefd00c",
+      "task_slug": "unicaa01_p56_panic",
+      "d_tracer": 3,
+      "prefix_len": 3,
+      "confidence": "high",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p56_panic__chatcmpl_17d1fcefd00c__d3.txt"
+    },
+    {
+      "experiment": "unicaa01_corpus_p57_expr_eval_panic",
+      "invocation_id": "chatcmpl-ad2d060f5ef6",
+      "task_slug": "unicaa01_p57_panic",
+      "d_tracer": 3,
+      "prefix_len": 3,
+      "confidence": "high",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p57_panic__chatcmpl_ad2d060f5ef6__d3.txt"
+    },
+    {
+      "experiment": "unicaa01_corpus_p58_diff_apply_panic",
+      "invocation_id": "chatcmpl-a3a63544106f",
+      "task_slug": "unicaa01_p58_panic",
+      "d_tracer": 3,
+      "prefix_len": 3,
+      "confidence": "high",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p58_panic__chatcmpl_a3a63544106f__d3.txt"
+    },
+    {
+      "experiment": "unicaa01_corpus_p60_template_fmt_panic",
+      "invocation_id": "chatcmpl-1990b3d4152b",
+      "task_slug": "unicaa01_p60_panic",
+      "d_tracer": 3,
+      "prefix_len": 3,
+      "confidence": "high",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p60_panic__chatcmpl_1990b3d4152b__d3.txt"
+    },
+    {
+      "experiment": "unicaa01_corpus_p61_markdown_strip_panic",
+      "invocation_id": "chatcmpl-33a11d62d329",
+      "task_slug": "unicaa01_p61_panic",
+      "d_tracer": 3,
+      "prefix_len": 3,
+      "confidence": "high",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p61_panic__chatcmpl_33a11d62d329__d3.txt"
+    },
+    {
+      "experiment": "unicaa01_corpus_p62_binary_search_panic",
+      "invocation_id": "chatcmpl-55716bdd6c36",
+      "task_slug": "unicaa01_p62_panic",
+      "d_tracer": 3,
+      "prefix_len": 3,
+      "confidence": "high",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p62_panic__chatcmpl_55716bdd6c36__d3.txt"
+    },
+    {
+      "experiment": "unicaa01_corpus_p62_binary_search_panic",
+      "invocation_id": "chatcmpl-b3cb6761ff98",
+      "task_slug": "unicaa01_p62_panic",
+      "d_tracer": 4,
+      "prefix_len": 4,
+      "confidence": "medium",
+      "token_ids_match": true,
+      "calm_tail_path": null
+    },
+    {
+      "experiment": "unicaa01_corpus_p63_heap_kth_panic",
+      "invocation_id": "chatcmpl-e98e0696f1c6",
+      "task_slug": "unicaa01_p63_panic",
+      "d_tracer": 3,
+      "prefix_len": 3,
+      "confidence": "high",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p63_panic__chatcmpl_e98e0696f1c6__d3.txt"
+    },
+    {
+      "experiment": "unicaa01_corpus_p65_interval_merge_panic",
+      "invocation_id": "chatcmpl-b9ffc3b14249",
+      "task_slug": "unicaa01_p65_panic",
+      "d_tracer": 3,
+      "prefix_len": 3,
+      "confidence": "medium",
+      "token_ids_match": true,
+      "calm_tail_path": null
+    },
+    {
+      "experiment": "unicaa01_corpus_p66_rot13_panic",
+      "invocation_id": "chatcmpl-f556133fbebe",
+      "task_slug": "unicaa01_p66_panic",
+      "d_tracer": 3,
+      "prefix_len": 3,
+      "confidence": "high",
+      "token_ids_match": true,
+      "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p66_panic__chatcmpl_f556133fbebe__d3.txt"
+    }
+  ],
+  "rejections": [
+    {
+      "experiment": "unicaa01_corpus_p04_graph_bfs_panic",
+      "invocation_id": "chatcmpl-2665d408d246",
+      "task_slug": "unicaa01_p04_panic",
+      "reason": "missing_calm_tail",
+      "detail": "expected under C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails"
+    },
+    {
+      "experiment": "unicaa01_corpus_p07_csv_agg_panic",
+      "invocation_id": "chatcmpl-30255b182620",
+      "task_slug": "unicaa01_p07_panic",
+      "reason": "missing_calm_tail",
+      "detail": "expected under C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails"
+    },
+    {
+      "experiment": "unicaa01_corpus_p09_thread_pool_panic",
+      "invocation_id": "chatcmpl-ab4f64e17fde",
+      "task_slug": "unicaa01_p09_panic",
+      "reason": "missing_calm_tail",
+      "detail": "expected under C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails"
+    },
+    {
+      "experiment": "unicaa01_corpus_p12_fibonacci_panic",
+      "invocation_id": "chatcmpl-9fcda159903f",
+      "task_slug": "unicaa01_p12_panic",
+      "reason": "missing_calm_tail",
+      "detail": "expected under C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails"
+    },
+    {
+      "experiment": "unicaa01_corpus_p17_deque_queue_panic",
+      "invocation_id": "chatcmpl-f6cb780981eb",
+      "task_slug": "unicaa01_p17_panic",
+      "reason": "missing_calm_tail",
+      "detail": "expected under C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails"
+    },
+    {
+      "experiment": "unicaa01_corpus_p30_ini_parse_panic",
+      "invocation_id": "chatcmpl-d222a9ac16f1",
+      "task_slug": "unicaa01_p30_panic",
+      "reason": "missing_calm_tail",
+      "detail": "expected under C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails"
+    },
+    {
+      "experiment": "unicaa01_corpus_p31_kv_flat_panic",
+      "invocation_id": "chatcmpl-1b6f807a66ad",
+      "task_slug": "unicaa01_p31_panic",
+      "reason": "missing_calm_tail",
+      "detail": "expected under C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails"
+    },
+    {
+      "experiment": "unicaa01_corpus_p34_url_query_panic",
+      "invocation_id": "chatcmpl-0e4fa30316ca",
+      "task_slug": "unicaa01_p34_panic",
+      "reason": "missing_calm_tail",
+      "detail": "expected under C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails"
+    },
+    {
+      "experiment": "unicaa01_corpus_p37_hash_chain_panic",
+      "invocation_id": "chatcmpl-4e836a4fb67c",
+      "task_slug": "unicaa01_p37_panic",
+      "reason": "missing_calm_tail",
+      "detail": "expected under C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails"
+    },
+    {
+      "experiment": "unicaa01_corpus_p40_skip_list_panic",
+      "invocation_id": "chatcmpl-c378061644c0",
+      "task_slug": "unicaa01_p40_panic",
+      "reason": "missing_calm_tail",
+      "detail": "expected under C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails"
+    },
+    {
+      "experiment": "unicaa01_corpus_p43_rwlock_panic",
+      "invocation_id": "chatcmpl-aed493529bf9",
+      "task_slug": "unicaa01_p43_panic",
+      "reason": "missing_calm_tail",
+      "detail": "expected under C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails"
+    },
+    {
+      "experiment": "unicaa01_corpus_p43_rwlock_panic",
+      "invocation_id": "chatcmpl-a0919e91993b",
+      "task_slug": "unicaa01_p43_panic",
+      "reason": "missing_calm_tail",
+      "detail": "expected under C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails"
+    },
+    {
+      "experiment": "unicaa01_corpus_p48_idempotency_panic",
+      "invocation_id": "chatcmpl-f61140bfb11a",
+      "task_slug": "unicaa01_p48_panic",
+      "reason": "missing_calm_tail",
+      "detail": "expected under C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails"
+    },
+    {
+      "experiment": "unicaa01_corpus_p62_binary_search_panic",
+      "invocation_id": "chatcmpl-b3cb6761ff98",
+      "task_slug": "unicaa01_p62_panic",
+      "reason": "missing_calm_tail",
+      "detail": "expected under C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails"
+    },
+    {
+      "experiment": "unicaa01_corpus_p65_interval_merge_panic",
+      "invocation_id": "chatcmpl-b9ffc3b14249",
+      "task_slug": "unicaa01_p65_panic",
+      "reason": "missing_calm_tail",
+      "detail": "expected under C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails"
+    }
+  ],
+  "admitted_slugs": [],
+  "n_corpus_eligible": 54,
+  "n_with_calm_tail": 39,
+  "blockers": [],
+  "corpus_glob": "experiments/unicaa01_corpus/out/*_latest.json",
+  "natural_root": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\pairs\\natural",
+  "max_pairs": null,
+  "only_tasks": null
+}

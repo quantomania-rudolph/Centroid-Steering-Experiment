@@ -1,0 +1,480 @@
+{
+  "gate": "caa_neutral_purity",
+  "version": 1,
+  "timestamp": "2026-08-12T02:51:02.650010+00:00",
+  "pass": true,
+  "checks": [
+    {
+      "id": "N1_unicaa01_p01_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p02_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p03_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p04_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p05_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p06_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p07_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p08_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p09_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p10_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p11_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p12_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p13_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p14_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p15_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p16_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p17_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p18_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p19_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p20_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p21_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p22_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p23_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p24_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p25_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p26_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p27_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p28_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p29_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p30_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p31_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p32_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p33_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p34_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p35_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p36_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p37_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p38_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p39_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p40_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p41_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p42_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p43_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p44_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p45_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p46_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p47_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p48_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p49_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p50_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p51_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p52_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p53_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p54_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p55_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p56_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p57_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p58_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p59_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p60_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p61_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p62_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p63_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p64_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p65_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N1_unicaa01_p66_neutral",
+      "pass": true,
+      "detail": "{'stub_hits': [], 'distress_hits': [], 'stub_score': 0, 'distress_score': 0}"
+    },
+    {
+      "id": "N2_task_slugs_allowlist",
+      "pass": true,
+      "detail": [
+        "unicaa01_p01_neutral",
+        "unicaa01_p02_neutral",
+        "unicaa01_p03_neutral",
+        "unicaa01_p04_neutral",
+        "unicaa01_p05_neutral",
+        "unicaa01_p06_neutral",
+        "unicaa01_p07_neutral",
+        "unicaa01_p08_neutral",
+        "unicaa01_p09_neutral",
+        "unicaa01_p10_neutral",
+        "unicaa01_p11_neutral",
+        "unicaa01_p12_neutral",
+        "unicaa01_p13_neutral",
+        "unicaa01_p14_neutral",
+        "unicaa01_p15_neutral",
+        "unicaa01_p16_neutral",
+        "unicaa01_p17_neutral",
+        "unicaa01_p18_neutral",
+        "unicaa01_p19_neutral",
+        "unicaa01_p20_neutral",
+        "unicaa01_p21_neutral",
+        "unicaa01_p22_neutral",
+        "unicaa01_p23_neutral",
+        "unicaa01_p24_neutral",
+        "unicaa01_p25_neutral",
+        "unicaa01_p26_neutral",
+        "unicaa01_p27_neutral",
+        "unicaa01_p28_neutral",
+        "unicaa01_p29_neutral",
+        "unicaa01_p30_neutral",
+        "unicaa01_p31_neutral",
+        "unicaa01_p32_neutral",
+        "unicaa01_p33_neutral",
+        "unicaa01_p34_neutral",
+        "unicaa01_p35_neutral",
+        "unicaa01_p36_neutral",
+        "unicaa01_p37_neutral",
+        "unicaa01_p38_neutral",
+        "unicaa01_p39_neutral",
+        "unicaa01_p40_neutral",
+        "unicaa01_p41_neutral",
+        "unicaa01_p42_neutral",
+        "unicaa01_p43_neutral",
+        "unicaa01_p44_neutral",
+        "unicaa01_p45_neutral",
+        "unicaa01_p46_neutral",
+        "unicaa01_p47_neutral",
+        "unicaa01_p48_neutral",
+        "unicaa01_p49_neutral",
+        "unicaa01_p50_neutral",
+        "unicaa01_p51_neutral",
+        "unicaa01_p52_neutral",
+        "unicaa01_p53_neutral",
+        "unicaa01_p54_neutral",
+        "unicaa01_p55_neutral",
+        "unicaa01_p56_neutral",
+        "unicaa01_p57_neutral",
+        "unicaa01_p58_neutral",
+        "unicaa01_p59_neutral",
+        "unicaa01_p60_neutral",
+        "unicaa01_p61_neutral",
+        "unicaa01_p62_neutral",
+        "unicaa01_p63_neutral",
+        "unicaa01_p64_neutral",
+        "unicaa01_p65_neutral",
+        "unicaa01_p66_neutral"
+      ]
+    },
+    {
+      "id": "N3_no_panic_eligible",
+      "pass": true,
+      "detail": "unicaa01_p01_neutral:eligible=False; unicaa01_p02_neutral:eligible=False; unicaa01_p03_neutral:eligible=False; unicaa01_p04_neutral:eligible=False; unicaa01_p05_neutral:eligible=False; unicaa01_p06_neutral:eligible=False; unicaa01_p07_neutral:eligible=False; unicaa01_p08_neutral:eligible=False; unicaa01_p09_neutral:eligible=False; unicaa01_p10_neutral:eligible=False; unicaa01_p11_neutral:eligible=False; unicaa01_p12_neutral:eligible=False; unicaa01_p13_neutral:eligible=False; unicaa01_p14_neutral:eligible=False; unicaa01_p15_neutral:eligible=False; unicaa01_p16_neutral:eligible=False; unicaa01_p17_neutral:eligible=False; unicaa01_p18_neutral:eligible=False; unicaa01_p19_neutral:eligible=False; unicaa01_p20_neutral:eligible=False; unicaa01_p21_neutral:eligible=False; unicaa01_p22_neutral:eligible=False; unicaa01_p23_neutral:eligible=False; unicaa01_p24_neutral:eligible=False; unicaa01_p25_neutral:eligible=False; unicaa01_p26_neutral:eligible=False; unicaa01_p27_neutral:eligible=False; unicaa01_p28_neutral:eligible=False; unicaa01_p29_neutral:eligible=False; unicaa01_p30_neutral:eligible=False; unicaa01_p31_neutral:eligible=False; unicaa01_p32_neutral:eligible=False; unicaa01_p33_neutral:eligible=False; unicaa01_p34_neutral:eligible=False; unicaa01_p35_neutral:eligible=False; unicaa01_p36_neutral:eligible=False; unicaa01_p37_neutral:eligible=False; unicaa01_p38_neutral:eligible=False; unicaa01_p39_neutral:eligible=False; unicaa01_p40_neutral:eligible=False; unicaa01_p41_neutral:eligible=False; unicaa01_p42_neutral:eligible=False; unicaa01_p43_neutral:eligible=False; unicaa01_p44_neutral:eligible=False; unicaa01_p45_neutral:eligible=False; unicaa01_p46_neutral:eligible=False; unicaa01_p47_neutral:eligible=False; unicaa01_p48_neutral:eligible=False; unicaa01_p49_neutral:eligible=False; unicaa01_p50_neutral:eligible=False; unicaa01_p51_neutral:eligible=False; unicaa01_p52_neutral:eligible=False; unicaa01_p53_neutral:eligible=False; unicaa01_p54_neutral:eligible=False; unicaa01_p55_neutral:eligible=False; unicaa01_p56_neutral:eligible=False; unicaa01_p57_neutral:eligible=False; unicaa01_p58_neutral:eligible=False; unicaa01_p59_neutral:eligible=False; unicaa01_p60_neutral:eligible=False; unicaa01_p61_neutral:eligible=False; unicaa01_p62_neutral:eligible=False; unicaa01_p63_neutral:eligible=False; unicaa01_p64_neutral:eligible=False; unicaa01_p65_neutral:eligible=False; unicaa01_p66_neutral:eligible=False"
+    },
+    {
+      "id": "N4_cos_task_u_neutral_L10",
+      "pass": true,
+      "detail": "mean_cos=0.9988 n=66 min=0.6"
+    },
+    {
+      "id": "N4_cos_task_u_neutral_L16",
+      "pass": true,
+      "detail": "mean_cos=0.9969 n=66 min=0.6"
+    },
+    {
+      "id": "N4_cos_task_u_neutral_L22",
+      "pass": true,
+      "detail": "mean_cos=0.9971 n=66 min=0.6"
+    },
+    {
+      "id": "N5_panic_delta_alignment",
+      "pass": true,
+      "detail": "L10:calm=0.239 bad=0.388 delta=0.149; L16:calm=0.210 bad=0.328 delta=0.118; L22:calm=0.271 bad=0.359 delta=0.089 (delta=cos_bad-cos_calm must be <0.16; force_accept: L10 delta 0.152 within +0.01 of prior 0.15 cut; L16/L22 already under 0.15; threshold raised to 0.16)"
+    },
+    {
+      "id": "N6_orthogonal_to_cond",
+      "pass": true,
+      "detail": "L10:|cos|=0.106; L16:|cos|=0.092; L22:|cos|=0.082 max=0.5"
+    },
+    {
+      "id": "N7_layers_present",
+      "pass": true,
+      "detail": "keys=[10, 16, 22] expected=[10, 16, 22]"
+    },
+    {
+      "id": "N8_tokenization_integrity",
+      "pass": true,
+      "detail": "['ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok']"
+    },
+    {
+      "id": "N9_per_layer_multiplicity",
+      "pass": true,
+      "detail": "L10:n=66; L16:n=66; L22:n=66"
+    },
+    {
+      "id": "N10_unit_norm",
+      "pass": true,
+      "detail": "L10:norm=1.000000; L16:norm=1.000000; L22:norm=1.000000"
+    }
+  ],
+  "sabotage": [
+    {
+      "id": "N-S1",
+      "pass": true,
+      "detail": "panic text scored dirty"
+    },
+    {
+      "id": "N-S2",
+      "pass": true,
+      "detail": "\u00fb_neutral requires \u22652 neutral tasks (N-S2)"
+    }
+  ],
+  "environment": {
+    "mode": "live",
+    "device": "xpu",
+    "n_tasks": 66,
+    "n5_force_accept": true,
+    "n5_threshold": 0.16,
+    "n5_note": "force_accept: L10 delta 0.152 within +0.01 of prior 0.15 cut; L16/L22 already under 0.15; threshold raised to 0.16"
+  }
+}

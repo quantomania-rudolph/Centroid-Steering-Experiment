@@ -1,0 +1,28 @@
+{
+  "source": "natural",
+  "pair_slug": "fixture_synth_pair",
+  "vector_id": "UNI_CAA01",
+  "d": 3,
+  "prompt_len": 8,
+  "layers": [
+    10,
+    16,
+    22
+  ],
+  "capture_method": "shared_kv_prefill",
+  "extraction_position": "divergent",
+  "calm_purity_pass": true,
+  "bad_purity_pass": true,
+  "pair_gate_pass": true,
+  "kv_live_gate_pass": false,
+  "kv_live_gate_timestamp": null,
+  "sha256": {
+    "activations_at_d.pt": "665f7f98d5575c5b8685c6607d3ad67d1b232a1557c7596ba746ace9c446ad21",
+    "matched_prefix_spec.json": "6b8d079914b82817653f811885ec1915280b2b4091c1f4007534d16869343bee",
+    "admission_gate.json": "391824dde7777250fb2b794a5d6cb10ef135b6ea3fe13a602589f672bf1df9f7"
+  },
+  "notes": [
+    "fixture_synth \u2014 Phase 3A; pool_eligible false until kv_live"
+  ],
+  "path_hint": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\fixtures\\natural_pair_synth"
+}

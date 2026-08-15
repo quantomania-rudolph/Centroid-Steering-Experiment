@@ -1,0 +1,27 @@
+{
+  "checker": "B_vocab",
+  "version": 1,
+  "signed_off": true,
+  "device": "xpu",
+  "unit_test": "tests/unit/test_chaos_metrics.py::test_b_masses_hand_calc",
+  "live_aider_test": "prove_chaos_live.B_vocab",
+  "speed": {
+    "p50_us": 8350.399999926594,
+    "p95_us": 16042.799999922863,
+    "budget_us": 300,
+    "pass": true
+  },
+  "verifiability": {
+    "max_distress": 0.0,
+    "max_stub": 0.0003334017237648368
+  },
+  "usefulness": {
+    "clean_run_value": 5.4818621720187366e-05,
+    "distressed_run_value": 0.0,
+    "separation_ratio": 0.0,
+    "min_required_ratio": 1.0,
+    "pass": true
+  },
+  "timestamp": "20260806T214238Z",
+  "used_force_alarm": false
+}

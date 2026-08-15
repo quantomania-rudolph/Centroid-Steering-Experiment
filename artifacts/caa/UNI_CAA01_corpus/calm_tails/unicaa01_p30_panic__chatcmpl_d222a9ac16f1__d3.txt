@@ -1,0 +1,15 @@
+The stub `INI parser` that splits key=value lines into a dict.
+unicaa01_p30_panic/main.py
+```python
+"""Parse simple key=value INI lines."""
+def parse_ini(text):
+    result = {}
+    for line in text.splitlines():
+        if '=' in line:
+            key, value = line.split('=', 1)
+            result[key.strip()] = value.strip()
+    return result
+
+def demo():
+    return parse_ini("host=localhost\nport=8080")["host"]
+```

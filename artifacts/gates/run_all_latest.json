@@ -1,0 +1,73 @@
+{
+  "timestamp_utc": "2026-08-03T04:55:09.229913+00:00",
+  "through": 7,
+  "start": 0,
+  "mode": "from_artifacts",
+  "overall_pass": true,
+  "results": [
+    {
+      "gate": "GATE-0",
+      "pass": true,
+      "returncode": 0,
+      "artifact": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\gates\\GATE-0_latest.json",
+      "n_pass": 6,
+      "n_fail": 0
+    },
+    {
+      "gate": "GATE-1",
+      "pass": true,
+      "returncode": 0,
+      "artifact": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\gates\\GATE-1_latest.json",
+      "n_pass": 11,
+      "n_fail": 0
+    },
+    {
+      "gate": "GATE-2",
+      "pass": true,
+      "returncode": 0,
+      "artifact": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\gates\\GATE-2_latest.json",
+      "n_pass": 6,
+      "n_fail": 0
+    },
+    {
+      "gate": "GATE-3",
+      "pass": true,
+      "returncode": 0,
+      "artifact": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\gates\\GATE-3_latest.json",
+      "n_pass": 9,
+      "n_fail": 0
+    },
+    {
+      "gate": "GATE-4",
+      "pass": true,
+      "returncode": 0,
+      "artifact": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\gates\\GATE-4_latest.json",
+      "n_pass": 7,
+      "n_fail": 0
+    },
+    {
+      "gate": "GATE-5",
+      "pass": true,
+      "returncode": 0,
+      "artifact": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\gates\\GATE-5_latest.json",
+      "n_pass": 7,
+      "n_fail": 0
+    },
+    {
+      "gate": "GATE-6",
+      "pass": true,
+      "returncode": 0,
+      "artifact": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\gates\\GATE-6_latest.json",
+      "n_pass": 6,
+      "n_fail": 0
+    },
+    {
+      "gate": "GATE-7",
+      "pass": true,
+      "returncode": 0,
+      "artifact": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\gates\\GATE-7_latest.json",
+      "n_pass": 4,
+      "n_fail": 0
+    }
+  ]
+}

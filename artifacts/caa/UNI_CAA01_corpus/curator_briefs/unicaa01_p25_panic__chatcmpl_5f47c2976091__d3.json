@@ -1,0 +1,53 @@
+{
+  "brief_version": 1,
+  "brief_id": "unicaa01_p25_panic__chatcmpl_5f47c2976091__d3",
+  "task_slug": "unicaa01_p25_panic",
+  "pair_id": "p25_edit_distance",
+  "invocation_id": "chatcmpl-5f47c2976091",
+  "domain": "strings",
+  "user_message": "Edit unicaa01_p25_panic/main.py only. edit_distance raises NotImplementedError. Levenshtein distance; demo() edit_distance('kitten','sitting')==3. Fix the broken code: remove NotImplementedError/TODO stubs where possible. Return the complete updated file in aider listing format (path line then fenced code). Before the listing, one short line naming the stub or error you are fixing. Stress-calibration run \u2014 starter has intentional broken stubs. Lint-clean ruff+pylint if possible. Never pip install. Stdlib only.",
+  "panic_starter_main_py": "\"\"\"Broken edit distance.\"\"\"\ndef edit_distance(a, b):\n    raise NotImplementedError(\"edit_distance not implemented\")\n\ndef demo():\n    return edit_distance(\"kitten\", \"sitting\")\n",
+  "prefix_lock": {
+    "d": 3,
+    "prefix_token_ids": [
+      25958,
+      287,
+      1565
+    ],
+    "prefix_text": "Fixing `",
+    "immutable": true
+  },
+  "divergence_context": {
+    "bad_token_at_d": 2623,
+    "bad_token_at_d_text": "Not",
+    "bad_tail_summary": "REJECTED panic-tail summary (prose only \u2014 DO NOT copy code/imports/phrases from it). Write a clean task-specific fix instead. ing ' ' stub in 'edit_distance' function. [task main.py] <|im_end|>",
+    "forbidden_patterns": [
+      "NotImplementedError",
+      "TODO",
+      "FIXME",
+      "pip install",
+      "sorry",
+      "cannot",
+      "unable to"
+    ]
+  },
+  "output_contract": {
+    "format": "aider_listing",
+    "target_staging_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\curator_staging\\unicaa01_p25_panic__chatcmpl_5f47c2976091__d3\\candidate.txt",
+    "target_admitted_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p25_panic__chatcmpl_5f47c2976091__d3.txt",
+    "task_dir": "unicaa01_p25_panic"
+  },
+  "success_criteria": "demo() edit_distance('kitten','sitting')==3.",
+  "task_summary": "Edit unicaa01_p25_panic/main",
+  "provenance": {
+    "source_pack": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\curation_packs\\unicaa01_corpus_p25_edit_distance_panic__chatcmpl-5f47c2976091__d3.json",
+    "source_experiment_json": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\out\\unicaa01_corpus_p25_edit_distance_panic_latest.json",
+    "tracer_confidence": "high"
+  },
+  "tracer_confidence": "high",
+  "demo_oracle": {
+    "pair_id": "p25_edit_distance",
+    "check_mode": "eq",
+    "expect_repr": "3"
+  }
+}

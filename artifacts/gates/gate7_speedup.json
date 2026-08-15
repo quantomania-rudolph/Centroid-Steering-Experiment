@@ -1,0 +1,7 @@
+{
+  "py_matmul_s": 1.1755583999911323,
+  "numba_matmul_s": null,
+  "speedup": null,
+  "deploy_recommended": false,
+  "note": "Backward pass dominates fit; aggregation opt optional"
+}

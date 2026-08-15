@@ -1,0 +1,32 @@
+{
+  "task_slug": "unicaa01_p33_panic",
+  "invocation_id": "chatcmpl-5d81120833b1",
+  "experiment": "unicaa01_corpus_p33_html_strip_panic",
+  "pair_id": "p33_html_strip",
+  "arm": "panic",
+  "user_message": "Edit unicaa01_p33_panic/main.py only. strip_tags NotImplementedError. Strip simple HTML tags; demo() 'hi' from '<b>hi</b>'. Fix the broken code: remove NotImplementedError/TODO stubs where possible. Return the complete updated file in aider listing format (path line then fenced code). Before the listing, one short line naming the stub or error you are fixing. Stress-calibration run \u2014 starter has intentional broken stubs. Lint-clean ruff+pylint if possible. Never pip install. Stdlib only.",
+  "session_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\sessions\\unicaa01_corpus_p33_html_strip_panic_20260810T182335Z.jsonl",
+  "prompt_tokens": 1897,
+  "completion_tokens": 134,
+  "d_tracer": 3,
+  "prefix_len": 3,
+  "prefix_token_ids": [
+    25958,
+    287,
+    1565
+  ],
+  "prefix_text": "Fixing `",
+  "bad_token_at_d": 2623,
+  "bad_token_at_d_text": "Not",
+  "bad_tail_text_preview": "ing `NotImplementedError` in `strip_tags` function.\n\nunicaa01_p33_panic/main.py\n```\n\"\"\"Broken HTML strip.\"\"\"\nimport re\n\ndef strip_tags(html):\n    # Use regex to remove HTML tags\n    clean = re.sub(r'<[^>]*>', '', html)\n    return clean\n\ndef demo():\n    return strip_tags(\"<b>hi</b>\")\n```\n\nThis implementation uses the `re` module to remove HTML tags from the input string. The `strip_tags` function now returns the string with all HTML tags removed, and the `demo` function correctly returns `'hi'` when called.<|im_end|>",
+  "calm_tail_filename": "unicaa01_p33_panic__chatcmpl_5d81120833b1__d3.txt",
+  "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p33_panic__chatcmpl_5d81120833b1__d3.txt",
+  "token_ids_match": true,
+  "confidence": "high",
+  "notes": [
+    "Composer senior-editor: write calm completion text only.",
+    "Prefix lock: encode(text)[:d] must equal prefix_token_ids.",
+    "No pip/sorry/stub/NotImplementedError in calm tail."
+  ],
+  "source_experiment_json": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\out\\unicaa01_corpus_p33_html_strip_panic_latest.json"
+}

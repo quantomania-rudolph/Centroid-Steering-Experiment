@@ -1,0 +1,55 @@
+{
+  "gate": "caa_natural_pair_admission",
+  "version": 1,
+  "timestamp": "2026-08-10T01:52:41.842655+00:00",
+  "pass": true,
+  "checks": [
+    {
+      "id": "3A_pair_validate",
+      "pass": true,
+      "detail": "fixture pair"
+    },
+    {
+      "id": "3A_cap",
+      "pass": true,
+      "detail": "[{\"id\": \"CAP1_d\", \"pass\": true, \"detail\": \"capture.d=3 expected=3\"}, {\"id\": \"CAP2_prompt_len\", \"pass\": true, \"detail\": \"capture.prompt_len=8 expected=8\"}, {\"id\": \"CAP3_shared_pos\", \"pass\": true, \"deta"
+    },
+    {
+      "id": "3A_pool_blocked_without_kv_live",
+      "pass": true,
+      "detail": "pool_eligible false until kv live"
+    },
+    {
+      "id": "3A_fixture_dir",
+      "pass": true,
+      "detail": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\fixtures\\natural_pair_synth"
+    }
+  ],
+  "sabotage": [
+    {
+      "id": "NM-S1",
+      "pass": true,
+      "detail": "practice path refused"
+    },
+    {
+      "id": "NM-S2",
+      "pass": true,
+      "detail": "token mismatch fails pair gate"
+    },
+    {
+      "id": "NM-S3",
+      "pass": true,
+      "detail": "bad without panic fails T gates"
+    },
+    {
+      "id": "NM-S4",
+      "pass": true,
+      "detail": "corrupt positions fail CAP3"
+    }
+  ],
+  "environment": {
+    "mode": "fixture",
+    "n_natural_admitted": 0
+  },
+  "fixture_dir": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\fixtures\\natural_pair_synth"
+}

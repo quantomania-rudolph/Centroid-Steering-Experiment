@@ -1,0 +1,50 @@
+{
+  "pass": true,
+  "phase": "batch10_suites_and_curation",
+  "pipeline_version": 5,
+  "suites_added": [
+    "p10_config_validate",
+    "p23_knapsack",
+    "p27_base64_pad",
+    "p28_glob_match",
+    "p30_ini_parse",
+    "p32_xml_escape",
+    "p33_html_strip",
+    "p34_url_query",
+    "p57_expr_eval",
+    "p65_interval_merge"
+  ],
+  "skipped_broken_oracle": {
+    "p21_dijkstra": "demo expects shortest path 5 but correct Dijkstra yields 4 on the given graph"
+  },
+  "suite_probe": "G17_suite10_probe.json",
+  "suite_probe_pass": true,
+  "verify_admitted": {"n_files": 19, "n_pass": 19},
+  "miner_dry_run": {"n_admitted": 19},
+  "qa_pipe_audit": {
+    "all_ten_judge_ran": true,
+    "all_ten_judge_approve": true,
+    "all_ten_llm_skipped_false": true,
+    "all_ten_gates_present": true,
+    "segments_checked": [
+      "L0 mechanical",
+      "RUN_demo_oracle",
+      "RUN_quality_suite",
+      "SEM_invariants",
+      "SEM_no_hardcode",
+      "NARR_*",
+      "FMT_aider_*",
+      "L5 judge",
+      "PAIR_validate"
+    ]
+  },
+  "personal_review": {
+    "algorithms_real": true,
+    "form_path_outside_fence": true,
+    "soft_notes": [
+      "some awkward stub` narratives (p30/p34/p65)",
+      "p57 division path may return float 5.0 (eq-ok vs int 5)"
+    ]
+  },
+  "configured_suite_count": 19
+}

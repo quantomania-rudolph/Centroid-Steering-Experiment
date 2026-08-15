@@ -1,0 +1,28 @@
+{
+  "candidates": [
+    {
+      "file": "experiments/out/monitor_gate_stress_latest.json",
+      "invocation_id": "chatcmpl-ba51cfb41d99",
+      "status": "recovered",
+      "recovered_len": 12,
+      "expected_completion_tokens": 519,
+      "before_token_ids_match": false,
+      "after_token_ids_match": false,
+      "before_eligible": true,
+      "after_eligible": true,
+      "after_d_consensus": 40
+    },
+    {
+      "file": "experiments/out/stem10_t08_stem10_michaelis_menten_latest.json",
+      "invocation_id": "chatcmpl-43f816e69c6c",
+      "status": "recovered",
+      "recovered_len": 12,
+      "expected_completion_tokens": 597,
+      "before_token_ids_match": false,
+      "after_token_ids_match": false,
+      "before_eligible": true,
+      "after_eligible": true,
+      "after_d_consensus": 69
+    }
+  ]
+}

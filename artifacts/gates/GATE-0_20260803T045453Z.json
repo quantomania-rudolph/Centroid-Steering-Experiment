@@ -1,0 +1,46 @@
+{
+  "overall_pass": true,
+  "n_pass": 6,
+  "n_fail": 0,
+  "checks": [
+    {
+      "id": "G0.1",
+      "name": "XPU available",
+      "pass": true,
+      "detail": "xpu_available=True device='Intel(R) Arc(TM) 140V GPU (16GB)'"
+    },
+    {
+      "id": "G0.2",
+      "name": "XPU matmul smoke",
+      "pass": true,
+      "detail": "matmul_ok=True error=None"
+    },
+    {
+      "id": "G0.3",
+      "name": "Intel Arc / Intel GPU identity",
+      "pass": true,
+      "detail": "gpus=[{'name': 'Intel(R) Arc(TM) 140V GPU (16GB)', 'type': 'discrete', 'driver': '32.0.101.8826'}]"
+    },
+    {
+      "id": "G0.4",
+      "name": "CPU cores >= 8 (measured LG Gram)",
+      "pass": true,
+      "detail": "logical_cores=8"
+    },
+    {
+      "id": "G0.5",
+      "name": "System RAM >= 30 GB (32GB class, OS reserve OK)",
+      "pass": true,
+      "detail": "total_ram_gb=31.54"
+    },
+    {
+      "id": "G0.6",
+      "name": "SYCL GPU runtime",
+      "pass": true,
+      "detail": "sycl_gpus=0 xpu=True"
+    }
+  ],
+  "hardware_report_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\gates\\hardware_report.json",
+  "gate": "GATE-0",
+  "timestamp_utc": "2026-08-03T04:54:53.681101+00:00"
+}

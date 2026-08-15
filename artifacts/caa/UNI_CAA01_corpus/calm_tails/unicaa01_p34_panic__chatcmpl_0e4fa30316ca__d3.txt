@@ -1,0 +1,17 @@
+The stub `query parser` that splits ampersand pairs into a dict.
+
+unicaa01_p34_panic/main.py
+```python
+"""Parse URL query strings."""
+def parse_query(qs):
+    result = {}
+    if qs:
+        for pair in qs.split('&'):
+            if '=' in pair:
+                key, value = pair.split('=', 1)
+                result[key] = value
+    return result
+
+def demo():
+    return parse_query("a=1&b=2")["a"]
+```

@@ -1,0 +1,51 @@
+{
+  "overall_pass": true,
+  "n_pass": 7,
+  "n_fail": 0,
+  "checks": [
+    {
+      "id": "G4.1",
+      "name": "transport convention",
+      "pass": true,
+      "detail": "max_diff=0.0"
+    },
+    {
+      "id": "G4.2",
+      "name": "J_27 \u2248 I (identity baseline pending fit)",
+      "pass": true,
+      "detail": "no fitted lens yet; identity J used"
+    },
+    {
+      "id": "G4.3",
+      "name": "J-lens_27 \u2248 logit_lens_27 top-5",
+      "pass": true,
+      "detail": "agree_frac=1.0"
+    },
+    {
+      "id": "G4.4",
+      "name": "mid-layer logit vs J divergence",
+      "pass": true,
+      "detail": "identity baseline diverge_frac=0.0 (expected ~0)"
+    },
+    {
+      "id": "G4.5",
+      "name": "deterministic readout",
+      "pass": true,
+      "detail": "top1=[262, 257, 198, 2, 15692] top2=[262, 257, 198, 2, 15692]"
+    },
+    {
+      "id": "G4.6",
+      "name": "J-lens vectors shape",
+      "pass": true,
+      "detail": "W=(152064, 3584) J=(3584, 3584) => vectors (152064, 3584)"
+    },
+    {
+      "id": "G4.7",
+      "name": "apply latency < 2s",
+      "pass": true,
+      "detail": "elapsed_s=2.956 device=xpu"
+    }
+  ],
+  "gate": "GATE-4",
+  "timestamp_utc": "2026-08-03T02:57:39.865216+00:00"
+}

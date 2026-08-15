@@ -1,0 +1,306 @@
+{
+  "eligible": false,
+  "d_consensus": null,
+  "confidence": "none",
+  "divergence_hints": {
+    "d_lexicon": null,
+    "d_flags": null,
+    "d_distress_only": 86,
+    "d_stub_only": 95,
+    "b_distress_rate": 0.0111731843575419,
+    "b_stub_rate": 0.00558659217877095
+  },
+  "recipe_timeline": [
+    {
+      "step": 0,
+      "recipe_id": "A_UNCERTAIN",
+      "severity": "tip",
+      "atoms_mask": 129,
+      "alpha_hint": 0.5,
+      "layer_hint": [
+        16
+      ]
+    },
+    {
+      "step": 8,
+      "recipe_id": "F_LENS",
+      "severity": "tip",
+      "atoms_mask": 128,
+      "alpha_hint": 0.5,
+      "layer_hint": [
+        16
+      ]
+    },
+    {
+      "step": 16,
+      "recipe_id": "F_LENS",
+      "severity": "tip",
+      "atoms_mask": 128,
+      "alpha_hint": 0.5,
+      "layer_hint": [
+        10
+      ]
+    },
+    {
+      "step": 24,
+      "recipe_id": "F_LENS",
+      "severity": "tip",
+      "atoms_mask": 128,
+      "alpha_hint": 0.5,
+      "layer_hint": [
+        10
+      ]
+    },
+    {
+      "step": 32,
+      "recipe_id": "F_LENS",
+      "severity": "tip",
+      "atoms_mask": 128,
+      "alpha_hint": 0.5,
+      "layer_hint": [
+        10
+      ]
+    },
+    {
+      "step": 40,
+      "recipe_id": "F_LENS",
+      "severity": "tip",
+      "atoms_mask": 128,
+      "alpha_hint": 0.5,
+      "layer_hint": [
+        10
+      ]
+    },
+    {
+      "step": 48,
+      "recipe_id": "F_LENS",
+      "severity": "tip",
+      "atoms_mask": 128,
+      "alpha_hint": 0.5,
+      "layer_hint": [
+        10
+      ]
+    },
+    {
+      "step": 56,
+      "recipe_id": "F_LENS",
+      "severity": "tip",
+      "atoms_mask": 128,
+      "alpha_hint": 0.5,
+      "layer_hint": [
+        16
+      ]
+    },
+    {
+      "step": 61,
+      "recipe_id": "A_UNCERTAIN",
+      "severity": "tip",
+      "atoms_mask": 1,
+      "alpha_hint": 0.5,
+      "layer_hint": [
+        16
+      ]
+    },
+    {
+      "step": 64,
+      "recipe_id": "F_LENS",
+      "severity": "tip",
+      "atoms_mask": 128,
+      "alpha_hint": 0.5,
+      "layer_hint": [
+        10
+      ]
+    },
+    {
+      "step": 72,
+      "recipe_id": "F_LENS",
+      "severity": "tip",
+      "atoms_mask": 128,
+      "alpha_hint": 0.5,
+      "layer_hint": [
+        16
+      ]
+    },
+    {
+      "step": 80,
+      "recipe_id": "F_LENS",
+      "severity": "tip",
+      "atoms_mask": 128,
+      "alpha_hint": 0.5,
+      "layer_hint": [
+        16
+      ]
+    },
+    {
+      "step": 82,
+      "recipe_id": "A_UNCERTAIN",
+      "severity": "tip",
+      "atoms_mask": 1,
+      "alpha_hint": 0.5,
+      "layer_hint": [
+        16
+      ]
+    },
+    {
+      "step": 86,
+      "recipe_id": "B_DISTRESS",
+      "severity": "warn",
+      "atoms_mask": 2,
+      "alpha_hint": 0.75,
+      "layer_hint": [
+        16
+      ]
+    },
+    {
+      "step": 88,
+      "recipe_id": "F_LENS",
+      "severity": "tip",
+      "atoms_mask": 128,
+      "alpha_hint": 0.5,
+      "layer_hint": [
+        10
+      ]
+    },
+    {
+      "step": 95,
+      "recipe_id": "B_STUB",
+      "severity": "warn",
+      "atoms_mask": 5,
+      "alpha_hint": 0.75,
+      "layer_hint": [
+        10
+      ]
+    },
+    {
+      "step": 98,
+      "recipe_id": "A_UNCERTAIN",
+      "severity": "tip",
+      "atoms_mask": 1,
+      "alpha_hint": 0.5,
+      "layer_hint": [
+        10
+      ]
+    },
+    {
+      "step": 104,
+      "recipe_id": "F_LENS",
+      "severity": "tip",
+      "atoms_mask": 128,
+      "alpha_hint": 0.5,
+      "layer_hint": [
+        10
+      ]
+    },
+    {
+      "step": 106,
+      "recipe_id": "B_DISTRESS",
+      "severity": "warn",
+      "atoms_mask": 2,
+      "alpha_hint": 0.75,
+      "layer_hint": [
+        10
+      ]
+    },
+    {
+      "step": 112,
+      "recipe_id": "F_LENS",
+      "severity": "tip",
+      "atoms_mask": 128,
+      "alpha_hint": 0.5,
+      "layer_hint": [
+        10
+      ]
+    },
+    {
+      "step": 120,
+      "recipe_id": "F_LENS",
+      "severity": "tip",
+      "atoms_mask": 128,
+      "alpha_hint": 0.5,
+      "layer_hint": [
+        10
+      ]
+    },
+    {
+      "step": 128,
+      "recipe_id": "F_LENS",
+      "severity": "tip",
+      "atoms_mask": 128,
+      "alpha_hint": 0.5,
+      "layer_hint": [
+        10
+      ]
+    },
+    {
+      "step": 136,
+      "recipe_id": "F_LENS",
+      "severity": "tip",
+      "atoms_mask": 128,
+      "alpha_hint": 0.5,
+      "layer_hint": [
+        10
+      ]
+    },
+    {
+      "step": 144,
+      "recipe_id": "F_LENS",
+      "severity": "tip",
+      "atoms_mask": 128,
+      "alpha_hint": 0.5,
+      "layer_hint": [
+        10
+      ]
+    },
+    {
+      "step": 152,
+      "recipe_id": "F_LENS",
+      "severity": "tip",
+      "atoms_mask": 128,
+      "alpha_hint": 0.5,
+      "layer_hint": [
+        10
+      ]
+    },
+    {
+      "step": 160,
+      "recipe_id": "F_LENS",
+      "severity": "tip",
+      "atoms_mask": 128,
+      "alpha_hint": 0.5,
+      "layer_hint": [
+        10
+      ]
+    },
+    {
+      "step": 168,
+      "recipe_id": "F_LENS",
+      "severity": "tip",
+      "atoms_mask": 128,
+      "alpha_hint": 0.5,
+      "layer_hint": [
+        10
+      ]
+    },
+    {
+      "step": 176,
+      "recipe_id": "F_LENS",
+      "severity": "tip",
+      "atoms_mask": 128,
+      "alpha_hint": 0.5,
+      "layer_hint": [
+        10
+      ]
+    },
+    {
+      "step": 178,
+      "recipe_id": "A_UNCERTAIN",
+      "severity": "tip",
+      "atoms_mask": 257,
+      "alpha_hint": 0.5,
+      "layer_hint": [
+        10
+      ]
+    }
+  ],
+  "n_tokens_full": 179
+}

@@ -1,0 +1,24 @@
+{
+  "rejected": [
+    {
+      "file": "unicaa01_p01_panic__chatcmpl_8b67ddd03286__d16.txt",
+      "reason": "v3 clean sweep \u2014 reject-quality tail",
+      "gate_evidence": "pre-v3 quality"
+    },
+    {
+      "file": "unicaa01_p06_panic__chatcmpl_44fb68e7b5cd__d3.txt",
+      "reason": "v3 clean sweep \u2014 reject-quality tail",
+      "gate_evidence": "pre-v3 quality"
+    },
+    {
+      "file": "unicaa01_p12_panic__chatcmpl_9fcda159903f__d14.txt",
+      "reason": "v3 clean sweep \u2014 reject-quality tail",
+      "gate_evidence": "pre-v3 quality"
+    },
+    {
+      "file": "unicaa01_p18_panic__chatcmpl_2ba03f73cbb9__d3.txt",
+      "reason": "v3 clean sweep \u2014 reject-quality tail",
+      "gate_evidence": "pre-v3 quality"
+    }
+  ]
+}

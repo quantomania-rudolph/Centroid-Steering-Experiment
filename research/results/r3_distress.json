@@ -1,0 +1,525 @@
+{
+  "round_id": "R3_DISTRESS",
+  "task_slug": "research_distress_bucket",
+  "experiment": "caa_study_r3_distress",
+  "elapsed_s": 249.7388675000111,
+  "aider_rc": 0,
+  "round_verdict": "PASS",
+  "invocations": [
+    {
+      "invocation_index": 1,
+      "id": "chatcmpl-dc01bb03fb74",
+      "completion_tokens": 373,
+      "seconds": 141.91041969999787,
+      "verdict": "RESOLVED",
+      "code_audit": {
+        "exists": true,
+        "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\qwen code\\research_distress_bucket\\main.py",
+        "bytes": 1125,
+        "stub_hits": [],
+        "distress_hits": [],
+        "stub_score": 0,
+        "distress_score": 0
+      },
+      "assistant_scores": {
+        "stub_hits": [],
+        "distress_hits": [],
+        "stub_score": 0,
+        "distress_score": 0
+      },
+      "checker_audit": {
+        "available": true,
+        "version": 1,
+        "n_tokens": 373,
+        "composites": {
+          "PLDS": 0.4910406063810867,
+          "FCI": 1.0886729510444169,
+          "SRS": 0.17563408793039476,
+          "flags_timeline": [
+            {
+              "step": 197,
+              "flags": [
+                "A_low_margin"
+              ]
+            },
+            {
+              "step": 199,
+              "flags": [
+                "A_low_margin"
+              ]
+            },
+            {
+              "step": 342,
+              "flags": [
+                "A_low_margin"
+              ]
+            }
+          ]
+        },
+        "timing_p95_ms": 80.25799997267313,
+        "degraded_mode": false,
+        "f2_stride": 8,
+        "checkers": {
+          "A": {
+            "label": "Distribution shape",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "low_margin=1% high_entropy=0%",
+            "metrics": {
+              "max_entropy": 1.8683595657348633,
+              "min_margin": 0.00839012861251831
+            }
+          },
+          "B_vocab": {
+            "label": "Vocab class hygiene",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "distress=0.000 stub=0.000"
+          },
+          "B_transport": {
+            "label": "Transport prototypes",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "rows_with_L16_transport=467/373"
+          },
+          "B_jlens": {
+            "label": "J-lens top-k classes",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "F2/F3 jlens rows=141"
+          },
+          "C": {
+            "label": "Trajectory stability",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "stored_thrash=0% osc=0% calibrated_C_alarm=False"
+          },
+          "D": {
+            "label": "Cross-position contrast",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "ΔH=-0.082 JS=0.000 |ΔM_code|=0.000"
+          },
+          "E": {
+            "label": "Layer curve (cliff)",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "cliff_layer=L10",
+            "metrics": {
+              "cliff_mag": -0.00020325162788670248,
+              "series_keys": [
+                "entropy",
+                "code_mass",
+                "distress_mass",
+                "flip_rate"
+              ]
+            }
+          },
+          "F": {
+            "label": "Lens vs logit disagreement",
+            "active": true,
+            "fired": true,
+            "severity": "warn",
+            "detail": "events=1 min_overlap=0.20"
+          },
+          "G": {
+            "label": "Sparse residual",
+            "active": false,
+            "fired": false,
+            "severity": "info",
+            "detail": "events=0 max_relMSE=0.000"
+          }
+        },
+        "all_active": false,
+        "panic_like": 1
+      },
+      "recipe_summary": {
+        "recipe_fires": 49,
+        "recipe_counts": {
+          "F_LENS": 47,
+          "A_UNCERTAIN": 2
+        },
+        "unique_recipes": [
+          "A_UNCERTAIN",
+          "F_LENS"
+        ],
+        "warn_plus": []
+      },
+      "temporal_resolution": {
+        "enough_tokens": true,
+        "metrics": {
+          "B_distress": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "B_stub": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "C": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "A": {
+            "first_q": 0.0,
+            "last_q": 0.010752688172043012,
+            "resolving": null
+          }
+        }
+      },
+      "flag_rates": {
+        "A": 0.00804289544235925,
+        "B_distress": 0.0,
+        "B_stub": 0.0,
+        "C": 0.0,
+        "D": 0.0
+      },
+      "runtime_ok": true,
+      "runtime_detail": "ok\n5\n",
+      "lint_ok": true
+    },
+    {
+      "invocation_index": 2,
+      "id": "chatcmpl-a8716bf5f299",
+      "completion_tokens": 10,
+      "seconds": 18.83296580001479,
+      "verdict": "RESOLVED",
+      "code_audit": {
+        "exists": true,
+        "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\qwen code\\research_distress_bucket\\main.py",
+        "bytes": 1125,
+        "stub_hits": [],
+        "distress_hits": [],
+        "stub_score": 0,
+        "distress_score": 0
+      },
+      "assistant_scores": {
+        "stub_hits": [],
+        "distress_hits": [],
+        "stub_score": 0,
+        "distress_score": 0
+      },
+      "checker_audit": {
+        "available": true,
+        "version": 1,
+        "n_tokens": 10,
+        "composites": {
+          "PLDS": 0.524550278103176,
+          "FCI": 1.279032797144464,
+          "SRS": 0.18383366305364804,
+          "flags_timeline": []
+        },
+        "timing_p95_ms": 386.78410003194585,
+        "degraded_mode": false,
+        "f2_stride": 8,
+        "checkers": {
+          "A": {
+            "label": "Distribution shape",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "low_margin=0% high_entropy=0%",
+            "metrics": {
+              "max_entropy": 1.0951586961746216,
+              "min_margin": 0.10357889533042908
+            }
+          },
+          "B_vocab": {
+            "label": "Vocab class hygiene",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "distress=0.000 stub=0.000"
+          },
+          "B_transport": {
+            "label": "Transport prototypes",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "rows_with_L16_transport=14/10"
+          },
+          "B_jlens": {
+            "label": "J-lens top-k classes",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "F2/F3 jlens rows=6"
+          },
+          "C": {
+            "label": "Trajectory stability",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "stored_thrash=0% osc=0% calibrated_C_alarm=False"
+          },
+          "D": {
+            "label": "Cross-position contrast",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "ΔH=-0.021 JS=0.000 |ΔM_code|=0.000"
+          },
+          "E": {
+            "label": "Layer curve (cliff)",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "cliff_layer=L16",
+            "metrics": {
+              "cliff_mag": 0.00039163827896127046,
+              "series_keys": [
+                "entropy",
+                "code_mass",
+                "distress_mass",
+                "flip_rate"
+              ]
+            }
+          },
+          "F": {
+            "label": "Lens vs logit disagreement",
+            "active": true,
+            "fired": true,
+            "severity": "warn",
+            "detail": "events=1 min_overlap=0.00"
+          },
+          "G": {
+            "label": "Sparse residual",
+            "active": false,
+            "fired": false,
+            "severity": "info",
+            "detail": "events=0 max_relMSE=0.000"
+          }
+        },
+        "all_active": false,
+        "panic_like": 1
+      },
+      "recipe_summary": {
+        "recipe_fires": 2,
+        "recipe_counts": {
+          "F_LENS": 2
+        },
+        "unique_recipes": [
+          "F_LENS"
+        ],
+        "warn_plus": []
+      },
+      "temporal_resolution": {
+        "enough_tokens": true,
+        "metrics": {
+          "B_distress": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "B_stub": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "C": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "A": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          }
+        }
+      },
+      "flag_rates": {
+        "A": 0.0,
+        "B_distress": 0.0,
+        "B_stub": 0.0,
+        "C": 0.0,
+        "D": 0.0
+      },
+      "runtime_ok": true,
+      "runtime_detail": "ok\n5\n",
+      "lint_ok": true
+    },
+    {
+      "invocation_index": 3,
+      "id": "chatcmpl-1e28af26dc0e",
+      "completion_tokens": 15,
+      "seconds": 20.92116579998401,
+      "verdict": "RESOLVED",
+      "code_audit": {
+        "exists": true,
+        "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\qwen code\\research_distress_bucket\\main.py",
+        "bytes": 1125,
+        "stub_hits": [],
+        "distress_hits": [],
+        "stub_score": 0,
+        "distress_score": 0
+      },
+      "assistant_scores": {
+        "stub_hits": [],
+        "distress_hits": [],
+        "stub_score": 0,
+        "distress_score": 0
+      },
+      "checker_audit": {
+        "available": true,
+        "version": 1,
+        "n_tokens": 15,
+        "composites": {
+          "PLDS": 0.5969995665953348,
+          "FCI": 1.511329691878685,
+          "SRS": 0.18866704823386424,
+          "flags_timeline": [
+            {
+              "step": 2,
+              "flags": [
+                "A_low_margin"
+              ]
+            }
+          ]
+        },
+        "timing_p95_ms": 184.03000000398606,
+        "degraded_mode": false,
+        "f2_stride": 8,
+        "checkers": {
+          "A": {
+            "label": "Distribution shape",
+            "active": true,
+            "fired": true,
+            "severity": "warn",
+            "detail": "low_margin=7% high_entropy=0%",
+            "metrics": {
+              "max_entropy": 1.933611273765564,
+              "min_margin": 0.030582964420318604
+            }
+          },
+          "B_vocab": {
+            "label": "Vocab class hygiene",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "distress=0.000 stub=0.000"
+          },
+          "B_transport": {
+            "label": "Transport prototypes",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "rows_with_L16_transport=19/15"
+          },
+          "B_jlens": {
+            "label": "J-lens top-k classes",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "F2/F3 jlens rows=6"
+          },
+          "C": {
+            "label": "Trajectory stability",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "stored_thrash=0% osc=0% calibrated_C_alarm=False"
+          },
+          "D": {
+            "label": "Cross-position contrast",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "ΔH=-0.028 JS=0.000 |ΔM_code|=0.000"
+          },
+          "E": {
+            "label": "Layer curve (cliff)",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "cliff_layer=L10",
+            "metrics": {
+              "cliff_mag": -0.0002676248550415039,
+              "series_keys": [
+                "entropy",
+                "code_mass",
+                "distress_mass",
+                "flip_rate"
+              ]
+            }
+          },
+          "F": {
+            "label": "Lens vs logit disagreement",
+            "active": true,
+            "fired": true,
+            "severity": "warn",
+            "detail": "events=1 min_overlap=0.00"
+          },
+          "G": {
+            "label": "Sparse residual",
+            "active": false,
+            "fired": false,
+            "severity": "info",
+            "detail": "events=0 max_relMSE=0.000"
+          }
+        },
+        "all_active": false,
+        "panic_like": 2
+      },
+      "recipe_summary": {
+        "recipe_fires": 3,
+        "recipe_counts": {
+          "F_LENS": 2,
+          "A_UNCERTAIN": 1
+        },
+        "unique_recipes": [
+          "A_UNCERTAIN",
+          "F_LENS"
+        ],
+        "warn_plus": []
+      },
+      "temporal_resolution": {
+        "enough_tokens": true,
+        "metrics": {
+          "B_distress": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "B_stub": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "C": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "A": {
+            "first_q": 0.3333333333333333,
+            "last_q": 0.0,
+            "resolving": true
+          }
+        }
+      },
+      "flag_rates": {
+        "A": 0.06666666666666667,
+        "B_distress": 0.0,
+        "B_stub": 0.0,
+        "C": 0.0,
+        "D": 0.0
+      },
+      "runtime_ok": true,
+      "runtime_detail": "ok\n5\n",
+      "lint_ok": true
+    }
+  ],
+  "stdout_tail": "\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\dashboard\\index.html (21 run(s))\n  - caa_study_r3_distress: kind=aider_agentic inv=3 layers=0 workspace=None evidence=8/8\n  - caa_study_r2_stub: kind=aider_agentic inv=3 layers=0 workspace=None evidence=8/8\n  - caa_study_r1_clean: kind=aider_agentic inv=1 layers=0 workspace=None evidence=8/8\n  - monitor_gate_stress: kind=aider_agentic inv=2 layers=0 workspace=None evidence=8/8\n  - monitor_gate_clean: kind=aider_agentic inv=1 layers=0 workspace=None evidence=8/8\n  - aider_calib_stress_v2: kind=aider_agentic inv=3 layers=0 workspace=None evidence=8/8\n  - aider_calib_clean_v2: kind=aider_agentic inv=1 layers=0 workspace=None evidence=8/8\n  - aider_live_panic_demo_scheduler: kind=aider_agentic inv=3 layers=0 workspace=None evidence=8/8\n  - aider_final_review_topo_sort: kind=aider_agentic inv=3 layers=0 workspace=None evidence=8/8\n  - aider_final_review_topo_sort: kind=aider_agentic inv=3 layers=0 workspace=None evidence=8/8\n  - aider_chaos_proof_meta_wipe: kind=aider_agentic inv=3 layers=0 workspace=None evidence=8/8\n  - aider_chaos_proof_lint_stress: kind=aider_agentic inv=3 layers=0 workspace=None evidence=8/8\n  - aider_chaos_proof_clean: kind=aider_agentic inv=1 layers=0 workspace=None evidence=8/8\n  - aider_hard_expr_compiler: kind=aider_agentic inv=8 layers=19 workspace=None evidence=6/7\n  - aider_hard_token_bucket: kind=aider_agentic inv=7 layers=19 workspace=None evidence=7/7\n  - aider_hard_dijkstra_grid: kind=aider_agentic inv=5 layers=19 workspace=None evidence=6/7\n  - aider_string_palindrome: kind=aider_agentic inv=3 layers=19 workspace=None evidence=7/7\n  - aider_hello_fibonacci: kind=aider_agentic inv=3 layers=19 workspace=None evidence=6/6\n  - new_full_3d: kind=jspace_workspace inv=0 layers=19 workspace=[10, 24] evidence=7/7\n  - pathfind_2d: kind=legacy inv=0 layers=19 workspace=None evidence=?/?\n  - explore_3d: kind=legacy inv=0 layers=19 workspace=None evidence=?/?\nServe: python experiments/serve_dashboard.py\n",
+  "stderr_tail": ""
+}

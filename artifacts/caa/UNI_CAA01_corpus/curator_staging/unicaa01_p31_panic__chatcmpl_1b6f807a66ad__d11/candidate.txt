@@ -1,0 +1,16 @@
+The stub `parse_kv_lines` is raising a `stub` due to a missing implementation. The function should split the input text into lines, parse each line as a key-value pair separated by `=`, and return a list of tuples.
+
+unicaa01_p31_panic/main.py
+```python
+"""Fixed KV parser."""
+def parse_kv_lines(text):
+    result = []
+    for line in text.strip().split('\n'):
+        if '=' in line:
+            key, value = line.split('=', 1)
+            result.append((key.strip(), value.strip()))
+    return result
+
+def demo():
+    return len(parse_kv_lines("a=1\nb=2"))
+```

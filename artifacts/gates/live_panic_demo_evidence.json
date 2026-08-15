@@ -1,0 +1,136 @@
+{
+  "timestamp": "20260805T213659Z",
+  "device": "xpu",
+  "gpu_name": "Intel(R) Arc(TM) 140V GPU (16GB)",
+  "chaos_enabled": true,
+  "probe_layers": [
+    10,
+    16,
+    22
+  ],
+  "experiment": "aider_live_panic_demo_scheduler",
+  "aider_returncode": 0,
+  "n_invocations": 3,
+  "all_invocations_have_chaos": true,
+  "max_plds": 0.5691621051279071,
+  "panic_signals_union": [
+    "FLIP_P95=1.00",
+    "FOCUS_BREAK: prompt\u2192gen distribution shift (\u0394H/JS)",
+    "LOW_CODE_FOCUS: belief mass not on code tokens",
+    "LOW_CONFIDENCE: top-1 vs top-2 margin collapsed",
+    "TRAJECTORY_THRASH: high top-1 flip rate (model vacillating)"
+  ],
+  "invocations": [
+    {
+      "invocation_index": 1,
+      "completion_tokens": 532,
+      "chaos_token_rows": 532,
+      "PLDS": 0.5131443995478108,
+      "FCI": 1.1680075443933315,
+      "SRS": 0.1772899506713041,
+      "cliff_layer": 10,
+      "unique_flags": [
+        "A_low_margin",
+        "B_low_code",
+        "C_thrash",
+        "D_focus_break"
+      ],
+      "flag_count": 1076,
+      "max_distress_mass": 1.143049459528811e-07,
+      "p95_flip_rate": 1.0,
+      "min_margin": 0.0,
+      "gen_start_delta_H": 0.046695858240127563,
+      "gen_start_js": 0.0,
+      "n_F_disagreement": 1,
+      "n_G_sparse": 1,
+      "chaos_ms_per_token_p95": 29.597600019769743,
+      "hot_path_p95_us": 29597.600019769743,
+      "degraded_mode": false,
+      "panic_signals": [
+        "TRAJECTORY_THRASH: high top-1 flip rate (model vacillating)",
+        "LOW_CODE_FOCUS: belief mass not on code tokens",
+        "LOW_CONFIDENCE: top-1 vs top-2 margin collapsed",
+        "FOCUS_BREAK: prompt\u2192gen distribution shift (\u0394H/JS)",
+        "FLIP_P95=1.00"
+      ]
+    },
+    {
+      "invocation_index": 2,
+      "completion_tokens": 10,
+      "chaos_token_rows": 10,
+      "PLDS": 0.5691621051279071,
+      "FCI": 1.4405611003166996,
+      "SRS": 0.1872174640389858,
+      "cliff_layer": 16,
+      "unique_flags": [
+        "A_low_margin",
+        "B_low_code",
+        "C_thrash",
+        "D_focus_break"
+      ],
+      "flag_count": 20,
+      "max_distress_mass": 0.0,
+      "p95_flip_rate": 1.0,
+      "min_margin": 0.13095438480377197,
+      "gen_start_delta_H": 0.012824028730392456,
+      "gen_start_js": 0.0,
+      "n_F_disagreement": 1,
+      "n_G_sparse": 1,
+      "chaos_ms_per_token_p95": 34.135500027332455,
+      "hot_path_p95_us": 34135.500027332455,
+      "degraded_mode": false,
+      "panic_signals": [
+        "TRAJECTORY_THRASH: high top-1 flip rate (model vacillating)",
+        "LOW_CODE_FOCUS: belief mass not on code tokens",
+        "LOW_CONFIDENCE: top-1 vs top-2 margin collapsed",
+        "FOCUS_BREAK: prompt\u2192gen distribution shift (\u0394H/JS)",
+        "FLIP_P95=1.00"
+      ]
+    },
+    {
+      "invocation_index": 3,
+      "completion_tokens": 16,
+      "chaos_token_rows": 16,
+      "PLDS": 0.5560322565008424,
+      "FCI": 1.3058376657954796,
+      "SRS": 0.19615827204157804,
+      "cliff_layer": 10,
+      "unique_flags": [
+        "A_low_margin",
+        "B_low_code",
+        "C_thrash",
+        "D_focus_break"
+      ],
+      "flag_count": 33,
+      "max_distress_mass": 0.0,
+      "p95_flip_rate": 1.0,
+      "min_margin": 0.03881451487541199,
+      "gen_start_delta_H": 0.08004522323608398,
+      "gen_start_js": 0.0,
+      "n_F_disagreement": 1,
+      "n_G_sparse": 1,
+      "chaos_ms_per_token_p95": 28.580599988345057,
+      "hot_path_p95_us": 28580.599988345057,
+      "degraded_mode": false,
+      "panic_signals": [
+        "TRAJECTORY_THRASH: high top-1 flip rate (model vacillating)",
+        "LOW_CODE_FOCUS: belief mass not on code tokens",
+        "LOW_CONFIDENCE: top-1 vs top-2 margin collapsed",
+        "FOCUS_BREAK: prompt\u2192gen distribution shift (\u0394H/JS)",
+        "FLIP_P95=1.00"
+      ]
+    }
+  ],
+  "code_runs": true,
+  "code_output": "['alert', 'backup', 'email']",
+  "proof_checks": {
+    "xpu": true,
+    "chaos_on_every_inv": true,
+    "tokens_logged": true,
+    "F3_boundaries": true,
+    "panic_detected": true,
+    "hot_path_fast": true,
+    "no_force_alarm": true
+  },
+  "proof_ok": true
+}

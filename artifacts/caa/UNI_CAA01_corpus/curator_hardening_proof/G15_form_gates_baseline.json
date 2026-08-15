@@ -1,0 +1,89 @@
+{
+  "phase": "pre_redo_baseline",
+  "expect": "all four fail at least one new v5 form/prose gate",
+  "n": 4,
+  "all_fail_new_gates": true,
+  "rows": [
+    {
+      "brief_id": "unicaa01_p06_panic__chatcmpl_44fb68e7b5cd__d3",
+      "pair_id": "p06_json_parse",
+      "pipeline_version": 4,
+      "failed_new_gates": [
+        "NARR_balanced_backticks"
+      ],
+      "narr": {
+        "NARR_no_bridge_catalog": true,
+        "NARR_no_cross_task_phrases": true,
+        "NARR_tail_stub_distress_zero": true,
+        "NARR_continuation_grammar": true,
+        "NARR_balanced_backticks": false
+      },
+      "fmt": {
+        "FMT_aider_path_outside_fence": true,
+        "FMT_no_path_comment_in_fence": true
+      }
+    },
+    {
+      "brief_id": "unicaa01_p12_panic__chatcmpl_9fcda159903f__d14",
+      "pair_id": "p12_fibonacci",
+      "pipeline_version": 4,
+      "failed_new_gates": [
+        "NARR_continuation_grammar",
+        "NARR_balanced_backticks"
+      ],
+      "narr": {
+        "NARR_no_bridge_catalog": true,
+        "NARR_no_cross_task_phrases": true,
+        "NARR_tail_stub_distress_zero": true,
+        "NARR_continuation_grammar": false,
+        "NARR_balanced_backticks": false
+      },
+      "fmt": {
+        "FMT_aider_path_outside_fence": true,
+        "FMT_no_path_comment_in_fence": true
+      }
+    },
+    {
+      "brief_id": "unicaa01_p18_panic__chatcmpl_2ba03f73cbb9__d3",
+      "pair_id": "p18_trie_prefix",
+      "pipeline_version": 4,
+      "failed_new_gates": [
+        "NARR_balanced_backticks",
+        "FMT_aider_path_outside_fence",
+        "FMT_no_path_comment_in_fence"
+      ],
+      "narr": {
+        "NARR_no_bridge_catalog": true,
+        "NARR_no_cross_task_phrases": true,
+        "NARR_tail_stub_distress_zero": true,
+        "NARR_continuation_grammar": true,
+        "NARR_balanced_backticks": false
+      },
+      "fmt": {
+        "FMT_aider_path_outside_fence": false,
+        "FMT_no_path_comment_in_fence": false
+      }
+    },
+    {
+      "brief_id": "unicaa01_p26_panic__chatcmpl_80322492584d__d3",
+      "pair_id": "p26_rle_compress",
+      "pipeline_version": 4,
+      "failed_new_gates": [
+        "NARR_balanced_backticks",
+        "FMT_aider_path_outside_fence",
+        "FMT_no_path_comment_in_fence"
+      ],
+      "narr": {
+        "NARR_no_bridge_catalog": true,
+        "NARR_no_cross_task_phrases": true,
+        "NARR_tail_stub_distress_zero": true,
+        "NARR_continuation_grammar": true,
+        "NARR_balanced_backticks": false
+      },
+      "fmt": {
+        "FMT_aider_path_outside_fence": false,
+        "FMT_no_path_comment_in_fence": false
+      }
+    }
+  ]
+}

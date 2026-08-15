@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "attempt_index": 0,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "e12b25e322d7eb90370bf7bdbbb4066820731cdc94cb2c9eaa9071e328054bae",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": true,
+      "failed_checks": [],
+      "demo_result": {
+        "pass": true,
+        "actual_repr": "[1, 2]",
+        "expected_repr": "[1, 2]",
+        "error": "",
+        "pair_id": "p06_json_parse"
+      },
+      "qa_verdict": "approve",
+      "qa_calls_so_far": 0
+    }
+  ]
+}

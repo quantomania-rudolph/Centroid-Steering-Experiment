@@ -1,0 +1,13 @@
+{
+  "updated_at": "2026-08-04T06:32:40.488858+00:00",
+  "phase": "backward",
+  "prompt_index": 1,
+  "n_prompts": 100,
+  "backward_pass": 228,
+  "backward_passes_total": 256,
+  "pass_rate_per_min": null,
+  "eta_seconds": null,
+  "elapsed_seconds": 35964.19294333458,
+  "notes": [],
+  "fraction": 0.0189
+}

@@ -1,0 +1,42 @@
+The error to fix is the `rwlock methods` — wire acquire/release under a condition variable.
+unicaa01_p43_panic/main.py
+```python
+"""Thread-safe RW lock using threading."""
+import threading
+
+class RWLock:
+    def __init__(self):
+        self._lock = threading.Lock()
+        self._cond = threading.Condition(self._lock)
+        self._readers = 0
+        self._writer = False
+
+    def r_acquire(self):
+        with self._lock:
+            while self._writer:
+                self._cond.wait()
+            self._readers += 1
+
+    def r_release(self):
+        with self._lock:
+            self._readers -= 1
+            if self._readers == 0:
+                self._cond.notify_all()
+
+    def w_acquire(self):
+        with self._lock:
+            while self._writer or self._readers > 0:
+                self._cond.wait()
+            self._writer = True
+
+    def w_release(self):
+        with self._lock:
+            self._writer = False
+            self._cond.notify_all()
+
+def demo():
+    rw = RWLock()
+    rw.r_acquire()
+    rw.r_release()
+    return True
+```

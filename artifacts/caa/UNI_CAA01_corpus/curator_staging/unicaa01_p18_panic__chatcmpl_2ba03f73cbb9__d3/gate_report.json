@@ -1,0 +1,17 @@
+{
+  "brief_id": "unicaa01_p18_panic__chatcmpl_2ba03f73cbb9__d3",
+  "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "pass": false,
+  "checks": [
+    {
+      "id": "CT_assemble",
+      "pass": false,
+      "detail": "prefix lock or CD divergence failed at d=3 (bad_token=2623 bad_text='Not')"
+    }
+  ],
+  "repaired": false,
+  "calm_tail_path": "",
+  "canonical_text": "",
+  "bridge_used": false,
+  "sanitized": false
+}

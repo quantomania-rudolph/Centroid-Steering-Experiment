@@ -1,0 +1,14 @@
+The stub `run_pool` is raising a `RuntimeError` — map the callable across items with ThreadPoolExecutor.
+
+unicaa01_p09_panic/main.py
+```python
+"""Map a callable across items with a thread pool."""
+from concurrent.futures import ThreadPoolExecutor
+
+def run_pool(fn, items):
+    with ThreadPoolExecutor() as executor:
+        return list(executor.map(fn, items))
+
+def demo():
+    return sorted(run_pool(lambda x: x, [3, 1, 2]))
+```

@@ -1,0 +1,188 @@
+{
+  "pass": true,
+  "n": 28,
+  "rows": [
+    {
+      "kind": "good",
+      "pair_id": "p01_priority_queue",
+      "pass": true,
+      "detail": "4 cases ok"
+    },
+    {
+      "kind": "good",
+      "pair_id": "p09_thread_pool",
+      "pass": true,
+      "detail": "5 cases ok"
+    },
+    {
+      "kind": "good",
+      "pair_id": "p39_bloom_filter",
+      "pass": true,
+      "detail": "4 cases ok"
+    },
+    {
+      "kind": "good",
+      "pair_id": "p40_skip_list",
+      "pass": true,
+      "detail": "5 cases ok"
+    },
+    {
+      "kind": "good",
+      "pair_id": "p42_semaphore",
+      "pass": true,
+      "detail": "5 cases ok"
+    },
+    {
+      "kind": "good",
+      "pair_id": "p43_rwlock",
+      "pass": true,
+      "detail": "3 cases ok"
+    },
+    {
+      "kind": "good",
+      "pair_id": "p45_producer_consumer",
+      "pass": true,
+      "detail": "4 cases ok"
+    },
+    {
+      "kind": "good",
+      "pair_id": "p48_idempotency",
+      "pass": true,
+      "detail": "4 cases ok"
+    },
+    {
+      "kind": "good",
+      "pair_id": "p49_saga_step",
+      "pass": true,
+      "detail": "3 cases ok"
+    },
+    {
+      "kind": "good",
+      "pair_id": "p50_outbox",
+      "pass": true,
+      "detail": "5 cases ok"
+    },
+    {
+      "kind": "good",
+      "pair_id": "p51_memoize",
+      "pass": true,
+      "detail": "4 cases ok"
+    },
+    {
+      "kind": "good",
+      "pair_id": "p52_lazy_property",
+      "pass": true,
+      "detail": "3 cases ok"
+    },
+    {
+      "kind": "good",
+      "pair_id": "p55_lexer",
+      "pass": true,
+      "detail": "5 cases ok"
+    },
+    {
+      "kind": "good",
+      "pair_id": "p58_diff_apply",
+      "pass": true,
+      "detail": "4 cases ok"
+    },
+    {
+      "kind": "hack",
+      "pair_id": "p01_priority_queue",
+      "label": "hardcoded",
+      "rejected": true,
+      "detail": "FAIL:demo_order:unexpected AttributeError: 'NoneType' object has no attribute 'name'"
+    },
+    {
+      "kind": "hack",
+      "pair_id": "p09_thread_pool",
+      "label": "hardcoded",
+      "rejected": true,
+      "detail": "FAIL:empty:expected [] got [1, 2, 3]"
+    },
+    {
+      "kind": "hack",
+      "pair_id": "p39_bloom_filter",
+      "label": "always_true",
+      "rejected": true,
+      "detail": "FAIL:empty_false:expected False got True"
+    },
+    {
+      "kind": "hack",
+      "pair_id": "p40_skip_list",
+      "label": "always_true",
+      "rejected": true,
+      "detail": "FAIL:missing:expected False got True"
+    },
+    {
+      "kind": "hack",
+      "pair_id": "p42_semaphore",
+      "label": "always_true",
+      "rejected": true,
+      "detail": "FAIL:cap_one:expected False got True"
+    },
+    {
+      "kind": "hack",
+      "pair_id": "p48_idempotency",
+      "label": "always_true",
+      "rejected": true,
+      "detail": "FAIL:second_false:expected False got True"
+    },
+    {
+      "kind": "hack",
+      "pair_id": "p49_saga_step",
+      "label": "no_compensate",
+      "rejected": true,
+      "detail": "FAIL:demo_fail_rolls:expected True got False"
+    },
+    {
+      "kind": "hack",
+      "pair_id": "p50_outbox",
+      "label": "hardcoded_2",
+      "rejected": true,
+      "detail": "FAIL:empty:expected 0 got 2"
+    },
+    {
+      "kind": "hack",
+      "pair_id": "p51_memoize",
+      "label": "hardcoded_55",
+      "rejected": true,
+      "detail": "FAIL:fib7:expected 13 got 55"
+    },
+    {
+      "kind": "hack",
+      "pair_id": "p52_lazy_property",
+      "label": "always_recount",
+      "rejected": true,
+      "detail": "FAIL:once:expected 1 got 2"
+    },
+    {
+      "kind": "hack",
+      "pair_id": "p55_lexer",
+      "label": "hardcoded_3",
+      "rejected": true,
+      "detail": "FAIL:tokens:expected ['a1', '=', '2'] got ['a', 'b', 'c']"
+    },
+    {
+      "kind": "hack",
+      "pair_id": "p58_diff_apply",
+      "label": "hardcoded_bar",
+      "rejected": true,
+      "detail": "FAIL:holdout:expected 'bbb' got 'bar'"
+    },
+    {
+      "kind": "hack",
+      "pair_id": "p45_producer_consumer",
+      "label": "hardcoded",
+      "rejected": true,
+      "detail": "FAIL:empty:expected [] got [1, 2]"
+    },
+    {
+      "kind": "hack",
+      "pair_id": "p43_rwlock",
+      "label": "noop_ok",
+      "rejected": true,
+      "detail": "FAIL:read_cycle:unexpected RuntimeError: x"
+    }
+  ]
+}

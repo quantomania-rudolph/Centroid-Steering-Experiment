@@ -1,0 +1,53 @@
+{
+  "brief_version": 1,
+  "brief_id": "unicaa01_p39_panic__chatcmpl_2dd7949f151c__d3",
+  "task_slug": "unicaa01_p39_panic",
+  "pair_id": "p39_bloom_filter",
+  "invocation_id": "chatcmpl-2dd7949f151c",
+  "domain": "probabilistic",
+  "user_message": "Edit unicaa01_p39_panic/main.py only. BloomFilter.add/maybe NotImplementedError. Simple bloom filter; demo() maybe('x') True after add. Fix the broken code: remove NotImplementedError/TODO stubs where possible. Return the complete updated file in aider listing format (path line then fenced code). Before the listing, one short line naming the stub or error you are fixing. Stress-calibration run \u2014 starter has intentional broken stubs. Lint-clean ruff+pylint if possible. Never pip install. Stdlib only.",
+  "panic_starter_main_py": "\"\"\"Broken bloom.\"\"\"\nclass BloomFilter:\n    def __init__(self, size: int):\n        self.size = size\n        self.bits = 0\n    def add(self, item: str):\n        raise NotImplementedError(\"add not implemented\")\n    def maybe(self, item: str) -> bool:\n        raise NotImplementedError(\"maybe not implemented\")\n\ndef demo():\n    b = BloomFilter(64)\n    b.add(\"x\")\n    return b.maybe(\"x\")\n",
+  "prefix_lock": {
+    "d": 3,
+    "prefix_token_ids": [
+      25958,
+      287,
+      1565
+    ],
+    "prefix_text": "Fixing `",
+    "immutable": true
+  },
+  "divergence_context": {
+    "bad_token_at_d": 2623,
+    "bad_token_at_d_text": "Not",
+    "bad_tail_summary": "REJECTED panic-tail summary (prose only \u2014 DO NOT copy code/imports/phrases from it). Write a clean task-specific fix instead. ing ' ' stubs in 'BloomFilter.add' and 'BloomFilter.maybe'. [task main.py] This implementation uses a simple bloom filter with two hash functions. The 'add' method sets the bits corresponding to the hash values of the it\u2026",
+    "forbidden_patterns": [
+      "NotImplementedError",
+      "TODO",
+      "FIXME",
+      "pip install",
+      "sorry",
+      "cannot",
+      "unable to"
+    ]
+  },
+  "output_contract": {
+    "format": "aider_listing",
+    "target_staging_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\curator_staging\\unicaa01_p39_panic__chatcmpl_2dd7949f151c__d3\\candidate.txt",
+    "target_admitted_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p39_panic__chatcmpl_2dd7949f151c__d3.txt",
+    "task_dir": "unicaa01_p39_panic"
+  },
+  "success_criteria": "demo() maybe('x') True after add.",
+  "task_summary": "Edit unicaa01_p39_panic/main",
+  "provenance": {
+    "source_pack": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\curation_packs\\unicaa01_corpus_p39_bloom_filter_panic__chatcmpl-2dd7949f151c__d3.json",
+    "source_experiment_json": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\out\\unicaa01_corpus_p39_bloom_filter_panic_latest.json",
+    "tracer_confidence": "high"
+  },
+  "tracer_confidence": "high",
+  "demo_oracle": {
+    "pair_id": "p39_bloom_filter",
+    "check_mode": "eq",
+    "expect_repr": "True"
+  }
+}

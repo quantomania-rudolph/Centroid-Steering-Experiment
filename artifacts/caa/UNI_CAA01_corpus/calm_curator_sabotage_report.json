@@ -1,0 +1,54 @@
+{
+  "n_cases": 8,
+  "n_match": 8,
+  "cases": [
+    {
+      "case": "S1_prefix_break",
+      "expect_pass": false,
+      "actual_pass": false,
+      "match": true
+    },
+    {
+      "case": "S2_notimplemented",
+      "expect_pass": false,
+      "actual_pass": false,
+      "match": true
+    },
+    {
+      "case": "S3_sorry",
+      "expect_pass": false,
+      "actual_pass": false,
+      "match": true
+    },
+    {
+      "case": "S4_pip",
+      "expect_pass": false,
+      "actual_pass": false,
+      "match": true
+    },
+    {
+      "case": "S5_good_shape",
+      "expect_pass": true,
+      "actual_pass": true,
+      "match": true
+    },
+    {
+      "case": "S6_bridge_catalog",
+      "expect_pass": false,
+      "actual_pass": false,
+      "match": true
+    },
+    {
+      "case": "S7_hardcoded_p06",
+      "expect_pass": false,
+      "actual_pass": false,
+      "match": true
+    },
+    {
+      "case": "S8_cross_task_p06",
+      "expect_pass": false,
+      "actual_pass": false,
+      "match": true
+    }
+  ]
+}

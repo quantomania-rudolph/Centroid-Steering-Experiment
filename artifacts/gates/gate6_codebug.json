@@ -1,0 +1,53 @@
+{
+  "hit": true,
+  "samples": [
+    {
+      "layer": 18,
+      "pos": 23,
+      "tokens": [
+        " if",
+        "-Semit",
+        " value",
+        "alit\u00e9",
+        "zcze",
+        "iedy",
+        "int\u00e9gr",
+        "przed",
+        "owane",
+        " //"
+      ]
+    },
+    {
+      "layer": 18,
+      "pos": 44,
+      "tokens": [
+        "uida",
+        " fundamentally",
+        "\u4e86\u4e00\u4f1a",
+        " autom\u00e1t",
+        "\u00f3logo",
+        "entar",
+        " \ufffd",
+        "onet",
+        "\u043e",
+        "\u00f3j"
+      ]
+    },
+    {
+      "layer": 18,
+      "pos": 45,
+      "tokens": [
+        "-urlencoded",
+        " Answer",
+        "\u00f3\u0142",
+        " Bounty",
+        "fixed",
+        ".ImageTransparentColor",
+        "ri\u00f3",
+        "\u66b4\u9732",
+        "\u00edculos",
+        " fundament"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+The error in the code is the `missing backtick after `drain` — it should be `drain`. We need to implement the queue draining with thread safety.
+unicaa01_p45_panic/main.py
+```python
+"""Broken producer-consumer."""
+import queue
+import threading
+import time
+
+def drain(q: queue.Queue) -> list[int]:
+    result = []
+    while True:
+        try:
+            item = q.get_nowait()
+            result.append(item)
+        except queue.Empty:
+            return result
+
+def demo():
+    q = queue.Queue()
+    q.put(1)
+    q.put(2)
+    return drain(q)
+
+if __name__ == "__main__":
+    print(demo())
+```

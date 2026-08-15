@@ -1,0 +1,33 @@
+{
+  "overall_pass": true,
+  "n_pass": 4,
+  "n_fail": 0,
+  "checks": [
+    {
+      "id": "G7.1",
+      "name": "baseline recorded",
+      "pass": true,
+      "detail": "baseline={'tiny_fit_prompts': 3, 'note': 'Qwen throughput in fit_jacobian.py'}"
+    },
+    {
+      "id": "G7.2",
+      "name": "optimization gain documented",
+      "pass": true,
+      "detail": "py_s=1.3202 numba_s=None speedup=None"
+    },
+    {
+      "id": "G7.3",
+      "name": "Rust/Numba ROI",
+      "pass": true,
+      "detail": "deploy_recommended=False speedup=None"
+    },
+    {
+      "id": "G7.4",
+      "name": "correctness preserved note",
+      "pass": true,
+      "detail": "Re-run GATE-4 after any optimization; no opt applied that changes math"
+    }
+  ],
+  "gate": "GATE-7",
+  "timestamp_utc": "2026-08-03T02:49:52.347956+00:00"
+}

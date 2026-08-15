@@ -1,0 +1,50 @@
+{
+  "attempts": [
+    {
+      "attempt_index": 0,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "aac5c408b23b883a748df1b5fb165de2c7593ed12e5d9d11ac5d61b51fdda796",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": false,
+      "failed_checks": [
+        {
+          "id": "SY_ast_parse",
+          "pass": false,
+          "detail": "no fenced main.py block"
+        },
+        {
+          "id": "QA_MAIN_PY_PRESENT",
+          "pass": false,
+          "detail": "extracted_len=0"
+        }
+      ],
+      "demo_result": {
+        "pass": false,
+        "actual_repr": "",
+        "expected_repr": "",
+        "error": "no main.py"
+      },
+      "qa_verdict": null,
+      "qa_calls_so_far": 0
+    },
+    {
+      "attempt_index": 1,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "d128adff4996efa7ee5d38306362c02ad9b7c28073caa10185b1d14f1ccc2de1",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": true,
+      "failed_checks": [],
+      "demo_result": {
+        "pass": true,
+        "actual_repr": "True",
+        "expected_repr": "True",
+        "error": "",
+        "pair_id": "p40_skip_list"
+      },
+      "qa_verdict": "approve",
+      "qa_calls_so_far": 0
+    }
+  ]
+}

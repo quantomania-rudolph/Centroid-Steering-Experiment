@@ -1,0 +1,46 @@
+{
+  "attempts": [
+    {
+      "attempt_index": 0,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "59d534b8a0783e87ff1b156941ed4511445c7309f77220d67644978573e3d803",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": true,
+      "failed_checks": [
+        {
+          "id": "NARR_tail_stub_distress_zero",
+          "pass": false,
+          "detail": "stub=1 distress=0"
+        }
+      ],
+      "demo_result": {
+        "pass": true,
+        "actual_repr": "3",
+        "expected_repr": "3",
+        "error": "",
+        "pair_id": "p37_hash_chain"
+      },
+      "qa_verdict": null,
+      "qa_calls_so_far": 0
+    },
+    {
+      "attempt_index": 1,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "f6ef48b9c28f02eb38364e349fffebd6c1a1970675d2c555e2eda93e9daf0723",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": true,
+      "failed_checks": [],
+      "demo_result": {
+        "pass": true,
+        "actual_repr": "3",
+        "expected_repr": "3",
+        "error": "",
+        "pair_id": "p37_hash_chain"
+      },
+      "qa_verdict": "approve",
+      "qa_calls_so_far": 0
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "source": "natural",
+  "pair_slug": "unicaa01_corpus_p49_saga_step_panic__mpl_a3aa397db5d9__d2",
+  "vector_id": "UNI_CAA01",
+  "d": 2,
+  "prompt_len": 1963,
+  "layers": [
+    10,
+    16,
+    22
+  ],
+  "capture_method": "dual_full_forward",
+  "extraction_position": "divergent",
+  "calm_purity_pass": true,
+  "bad_purity_pass": true,
+  "pair_gate_pass": true,
+  "kv_live_gate_pass": true,
+  "kv_live_gate_timestamp": "2026-08-10T01:02:15.000807+00:00",
+  "sha256": {
+    "activations_at_d.pt": "9c309fa4123e77fe644e0604fca630fc96030310c1e6219a44d5d2b5c5660633",
+    "matched_prefix_spec.json": "d70df827e8e9a16bc83c02d79c33d46c6bb72f7d180c57c6f216d7255612d431",
+    "admission_gate.json": "8ec5a3b5016432ee8a5fc58c51fb405943d2e2b4c17fa6773fa5e59923846cd9"
+  },
+  "notes": [
+    "mined from unicaa01_corpus_p49_saga_step_panic"
+  ],
+  "path_hint": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\pairs\\natural\\unicaa01_corpus_p49_saga_step_panic__mpl_a3aa397db5d9__d2"
+}

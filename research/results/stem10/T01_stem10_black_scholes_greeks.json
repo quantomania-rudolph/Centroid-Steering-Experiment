@@ -1,0 +1,4454 @@
+{
+  "task_id": "T01",
+  "domain": "quant_finance",
+  "slug": "stem10_black_scholes_greeks",
+  "experiment": "stem10_t01_stem10_black_scholes_greeks",
+  "n_invocations": 3,
+  "invocations": [
+    {
+      "invocation_index": 1,
+      "id": "chatcmpl-993d79f93a76",
+      "completion_tokens": 760,
+      "seconds": 516.9381359999825,
+      "verdict": "RESOLVED",
+      "code_audit": {
+        "exists": true,
+        "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\qwen code\\stem10_black_scholes_greeks\\main.py",
+        "bytes": 1747,
+        "stub_hits": [],
+        "distress_hits": [],
+        "stub_score": 0,
+        "distress_score": 0
+      },
+      "assistant_scores": {
+        "stub_hits": [],
+        "distress_hits": [],
+        "stub_score": 0,
+        "distress_score": 0
+      },
+      "checker_audit": {
+        "available": true,
+        "version": 1,
+        "n_tokens": 382,
+        "composites": {
+          "PLDS": 0.49815642469724963,
+          "FCI": 1.1027432430389357,
+          "SRS": 0.17876596483609752,
+          "flags_timeline": [
+            {
+              "step": 85,
+              "flags": [
+                "A_high_entropy",
+                "A_low_margin"
+              ]
+            },
+            {
+              "step": 86,
+              "flags": [
+                "A_low_margin"
+              ]
+            },
+            {
+              "step": 87,
+              "flags": [
+                "A_low_margin"
+              ]
+            }
+          ]
+        },
+        "timing_p95_ms": 125.14230000670068,
+        "degraded_mode": true,
+        "f2_stride": 8,
+        "checkers": {
+          "A": {
+            "label": "Distribution shape",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "low_margin=1% high_entropy=0%",
+            "metrics": {
+              "max_entropy": 2.5419979095458984,
+              "min_margin": 0.0
+            }
+          },
+          "B_vocab": {
+            "label": "Vocab class hygiene",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "distress=0.000 stub=0.000"
+          },
+          "B_transport": {
+            "label": "Transport prototypes",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "rows_with_L16_transport=504/382"
+          },
+          "B_jlens": {
+            "label": "J-lens top-k classes",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "F2/F3 jlens rows=183"
+          },
+          "C": {
+            "label": "Trajectory stability",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "stored_thrash=0% osc=0% calibrated_C_alarm=False"
+          },
+          "D": {
+            "label": "Cross-position contrast",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "ΔH=-0.089 JS=0.000 |ΔM_code|=0.000"
+          },
+          "E": {
+            "label": "Layer curve (cliff)",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "cliff_layer=L10",
+            "metrics": {
+              "cliff_mag": -0.00016112381831834277,
+              "series_keys": [
+                "entropy",
+                "code_mass",
+                "distress_mass",
+                "flip_rate"
+              ]
+            }
+          },
+          "F": {
+            "label": "Lens vs logit disagreement",
+            "active": true,
+            "fired": true,
+            "severity": "warn",
+            "detail": "events=1 min_overlap=0.20"
+          },
+          "G": {
+            "label": "Sparse residual",
+            "active": false,
+            "fired": false,
+            "severity": "info",
+            "detail": "events=0 max_relMSE=0.000"
+          }
+        },
+        "all_active": false,
+        "panic_like": 1
+      },
+      "recipe_summary": {
+        "recipe_fires": 62,
+        "recipe_counts": {
+          "F_LENS": 61,
+          "A_UNCERTAIN": 1
+        },
+        "unique_recipes": [
+          "A_UNCERTAIN",
+          "F_LENS"
+        ],
+        "warn_plus": []
+      },
+      "temporal_resolution": {
+        "enough_tokens": true,
+        "metrics": {
+          "B_distress": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "B_stub": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "C": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "A": {
+            "first_q": 0.031578947368421054,
+            "last_q": 0.0,
+            "resolving": null
+          }
+        }
+      },
+      "flag_rates": {
+        "A": 0.007853403141361256,
+        "B_distress": 0.0,
+        "B_stub": 0.0,
+        "C": 0.0,
+        "D": 0.0
+      },
+      "monitor": {
+        "recipe_timeline": [
+          {
+            "step": 0,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 8,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 16,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 24,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 32,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 40,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 48,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 56,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 64,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 72,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 80,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 85,
+            "recipe_id": "A_UNCERTAIN",
+            "severity": "tip",
+            "atoms_mask": 1,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 88,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 96,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 104,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 112,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 120,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 128,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 136,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 144,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 152,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 160,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 168,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 176,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 184,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 192,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 200,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 208,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 216,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 224,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 232,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 240,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 248,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 256,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 264,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 272,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 280,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 288,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 296,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 304,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 312,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 320,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 328,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 336,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 344,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 352,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 360,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 368,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 376,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 384,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 392,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 400,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 408,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 416,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 424,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 432,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 440,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 448,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 456,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 464,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 472,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 480,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          }
+        ],
+        "events_tail": [
+          {
+            "seq": 696,
+            "t_ns": 251861069651000,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 696,
+            "token_id": 1341,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4964534549828781,
+              "FCI": 1.496453454982878,
+              "SRS": 0.17851857058889728
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 697,
+            "t_ns": 251861373128400,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 697,
+            "token_id": 861,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4964594344772954,
+              "FCI": 1.4964594344772955,
+              "SRS": 0.17854934627573266
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 698,
+            "t_ns": 251861669752900,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 698,
+            "token_id": 220,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49646453211911695,
+              "FCI": 1.496464532119117,
+              "SRS": 0.17858003390065014
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 699,
+            "t_ns": 251861984982000,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 699,
+            "token_id": 15,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49646988796323793,
+              "FCI": 1.4964698879632379,
+              "SRS": 0.17861063384906145
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 700,
+            "t_ns": 251862256309300,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 700,
+            "token_id": 13,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49611867195361925,
+              "FCI": 1.4961186719536193,
+              "SRS": 0.17835584263215143
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 701,
+            "t_ns": 251862533715200,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 701,
+            "token_id": 15,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49612737817703756,
+              "FCI": 1.4961273781770377,
+              "SRS": 0.1783866746304341
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 702,
+            "t_ns": 251862800538900,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 702,
+            "token_id": 16,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4961416037867691,
+              "FCI": 1.4961416037867692,
+              "SRS": 0.17841721105665345
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 703,
+            "t_ns": 251863070112900,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 703,
+            "token_id": 11,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4957952281404477,
+              "FCI": 1.4957952281404476,
+              "SRS": 0.17816405469675206
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 704,
+            "t_ns": 251863424124400,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 704,
+            "token_id": 342,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49580223014065056,
+              "FCI": 1.4958022301406506,
+              "SRS": 0.1781950276688134
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 705,
+            "t_ns": 251863725857800,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 705,
+            "token_id": 198,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49545701819272214,
+              "FCI": 1.495457018192722,
+              "SRS": 0.17794287399551598
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 706,
+            "t_ns": 251864020350100,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 706,
+            "token_id": 262,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49546344821544797,
+              "FCI": 1.4954634482154479,
+              "SRS": 0.17797407217519723
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 707,
+            "t_ns": 251864317083500,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 707,
+            "token_id": 1173,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49547775952932377,
+              "FCI": 1.4954777595293238,
+              "SRS": 0.1780051817273595
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 708,
+            "t_ns": 251864649340600,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 708,
+            "token_id": 3268,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.495484585139711,
+              "FCI": 1.495484585139711,
+              "SRS": 0.1780362039504003
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 709,
+            "t_ns": 251864999344300,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 709,
+            "token_id": 3623,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4954933766283874,
+              "FCI": 1.4954933766283873,
+              "SRS": 0.17806713824776607
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 710,
+            "t_ns": 251865356008500,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 710,
+            "token_id": 333,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49514815993527334,
+              "FCI": 1.4951481599352734,
+              "SRS": 0.17781669324192897
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 711,
+            "t_ns": 251865732100100,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 711,
+            "token_id": 1304,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4951549793957102,
+              "FCI": 1.4951549793957102,
+              "SRS": 0.1778478495712316
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 712,
+            "t_ns": 251866251366500,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 712,
+            "token_id": 606,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49516178320998316,
+              "FCI": 1.495161783209983,
+              "SRS": 0.17787891850463158
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 713,
+            "t_ns": 251866568309600,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 713,
+            "token_id": 563,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.495168570149991,
+              "FCI": 1.495168570149991,
+              "SRS": 0.17790990041148785
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 714,
+            "t_ns": 251867030893300,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 714,
+            "token_id": 621,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49517534682315967,
+              "FCI": 1.4951753468231597,
+              "SRS": 0.1779407955841739
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 715,
+            "t_ns": 251867384764800,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 715,
+            "token_id": 13265,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49518212894721736,
+              "FCI": 1.4951821289472174,
+              "SRS": 0.17797160452888872
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 716,
+            "t_ns": 251867882456700,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 716,
+            "token_id": 3817,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49518885799852225,
+              "FCI": 1.4951888579985222,
+              "SRS": 0.17800232753512457
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 717,
+            "t_ns": 251868238885800,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 717,
+            "token_id": 21082,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4951955778362154,
+              "FCI": 1.4951955778362154,
+              "SRS": 0.17803296496195586
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 718,
+            "t_ns": 251868641892400,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 718,
+            "token_id": 262,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49520232318536234,
+              "FCI": 1.4952023231853624,
+              "SRS": 0.17806351710280652
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 719,
+            "t_ns": 251868970473100,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 719,
+            "token_id": 1887,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4952090140531862,
+              "FCI": 1.4952090140531862,
+              "SRS": 0.17809398444016372
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 720,
+            "t_ns": 251869290103600,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 720,
+            "token_id": 741,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4952157353178629,
+              "FCI": 1.495215735317863,
+              "SRS": 0.1781243670974432
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 721,
+            "t_ns": 251869570579100,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 721,
+            "token_id": 13874,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4952622007052067,
+              "FCI": 1.4952622007052068,
+              "SRS": 0.17815466575797306
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 722,
+            "t_ns": 251869904435900,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 722,
+            "token_id": 19324,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4952733650746632,
+              "FCI": 1.4952733650746632,
+              "SRS": 0.17818488060478085
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 723,
+            "t_ns": 251870266623700,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 723,
+            "token_id": 1986,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49552576092675404,
+              "FCI": 1.495525760926754,
+              "SRS": 0.1782150006094334
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 724,
+            "t_ns": 251870539224400,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 724,
+            "token_id": 6049,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49600587488321923,
+              "FCI": 1.4960058748832192,
+              "SRS": 0.1782450488844549
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 725,
+            "t_ns": 251870864847900,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 725,
+            "token_id": 1034,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4961770756418662,
+              "FCI": 1.4961770756418662,
+              "SRS": 0.17827501438185922
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 726,
+            "t_ns": 251871155343100,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 726,
+            "token_id": 5646,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49662075687831664,
+              "FCI": 1.4966207568783165,
+              "SRS": 0.1783048974432322
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 727,
+            "t_ns": 251871435274200,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 727,
+            "token_id": 279,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49662854875273804,
+              "FCI": 1.496628548752738,
+              "SRS": 0.17833469834638044
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 728,
+            "t_ns": 251871704474400,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 728,
+            "token_id": 35965,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4969021245523413,
+              "FCI": 1.4969021245523413,
+              "SRS": 0.17836441755303836
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 729,
+            "t_ns": 251871965317300,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 729,
+            "token_id": 54079,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4970064859554544,
+              "FCI": 1.4970064859554544,
+              "SRS": 0.17839405533721228
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 730,
+            "t_ns": 251872264732200,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 730,
+            "token_id": 369,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4970106395829401,
+              "FCI": 1.4970106395829401,
+              "SRS": 0.17842360891721168
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 731,
+            "t_ns": 251872537065200,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 731,
+            "token_id": 1565,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49701482548756853,
+              "FCI": 1.4970148254875686,
+              "SRS": 0.17845308486131384
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 732,
+            "t_ns": 251872825327300,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 732,
+            "token_id": 67,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4970188987129538,
+              "FCI": 1.4970188987129538,
+              "SRS": 0.1784824803799205
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 733,
+            "t_ns": 251873089130500,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 733,
+            "token_id": 16,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4970229656941954,
+              "FCI": 1.4970229656941954,
+              "SRS": 0.17851179580174623
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 734,
+            "t_ns": 251873450209200,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 734,
+            "token_id": 63,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49702707027484777,
+              "FCI": 1.4970270702748478,
+              "SRS": 0.17854103145371664
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 735,
+            "t_ns": 251873816616100,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 735,
+            "token_id": 323,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49703112101210895,
+              "FCI": 1.497031121012109,
+              "SRS": 0.17857018765112284
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 736,
+            "t_ns": 251874249796500,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 736,
+            "token_id": 1565,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4970351566051822,
+              "FCI": 1.4970351566051823,
+              "SRS": 0.1785992647370779
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 737,
+            "t_ns": 251874581932100,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 737,
+            "token_id": 67,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.497039199001778,
+              "FCI": 1.497039199001778,
+              "SRS": 0.17862826302334203
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 738,
+            "t_ns": 251874903764700,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 738,
+            "token_id": 17,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4970432135534543,
+              "FCI": 1.4970432135534544,
+              "SRS": 0.17865718282980572
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 739,
+            "t_ns": 251875168199500,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 739,
+            "token_id": 7808,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49706994067054294,
+              "FCI": 1.497069940670543,
+              "SRS": 0.17868602432167488
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 740,
+            "t_ns": 251875485248600,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 740,
+            "token_id": 5169,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4973866866293943,
+              "FCI": 1.4973866866293943,
+              "SRS": 0.17871478812151068
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 741,
+            "t_ns": 251875757226800,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 741,
+            "token_id": 279,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49762661469394737,
+              "FCI": 1.4976266146939474,
+              "SRS": 0.1787434743908887
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 742,
+            "t_ns": 251876354373000,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 742,
+            "token_id": 21619,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.497631130867566,
+              "FCI": 1.497631130867566,
+              "SRS": 0.1787720834428525
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 743,
+            "t_ns": 251876619638400,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 743,
+            "token_id": 1667,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4976463524091871,
+              "FCI": 1.4976463524091872,
+              "SRS": 0.17879947080755465
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 744,
+            "t_ns": 251876874016200,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 744,
+            "token_id": 279,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49764952687526776,
+              "FCI": 1.4976495268752679,
+              "SRS": 0.1788279278846481
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 745,
+            "t_ns": 251877134978300,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 745,
+            "token_id": 5297,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49765274219349637,
+              "FCI": 1.4976527421934964,
+              "SRS": 0.1788563086783684
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 746,
+            "t_ns": 251877401612000,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 746,
+            "token_id": 4622,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49765589631752755,
+              "FCI": 1.4976558963175275,
+              "SRS": 0.17888461348602788
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 747,
+            "t_ns": 251877668481600,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 747,
+            "token_id": 18927,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.497787823033683,
+              "FCI": 1.497787823033683,
+              "SRS": 0.17891284261238347
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 748,
+            "t_ns": 251877920156400,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 748,
+            "token_id": 17457,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4977908509247596,
+              "FCI": 1.4977908509247597,
+              "SRS": 0.17894099635795932
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 749,
+            "t_ns": 251878297049100,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 749,
+            "token_id": 729,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4977938014429776,
+              "FCI": 1.4977938014429775,
+              "SRS": 0.17896907496693717
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 750,
+            "t_ns": 251878625513500,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 750,
+            "token_id": 11,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4974644233168833,
+              "FCI": 1.4974644233168832,
+              "SRS": 0.1787308044210075
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 751,
+            "t_ns": 251878899846600,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 751,
+            "token_id": 323,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49747057827852287,
+              "FCI": 1.497470578278523,
+              "SRS": 0.1787590879257668
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 752,
+            "t_ns": 251879170381000,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 752,
+            "token_id": 25351,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4978084198316106,
+              "FCI": 1.4978084198316106,
+              "SRS": 0.1787872963083355
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 753,
+            "t_ns": 251879435666200,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 753,
+            "token_id": 279,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.497890658662483,
+              "FCI": 1.497890658662483,
+              "SRS": 0.17881542986760826
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 754,
+            "t_ns": 251879665979700,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 754,
+            "token_id": 2038,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4979212160839634,
+              "FCI": 1.4979212160839634,
+              "SRS": 0.17884348890089619
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 755,
+            "t_ns": 251879922004600,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 755,
+            "token_id": 374,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.497998929612781,
+              "FCI": 1.497998929612781,
+              "SRS": 0.17887147370393733
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 756,
+            "t_ns": 251880172159000,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 756,
+            "token_id": 57920,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4980073676942253,
+              "FCI": 1.4980073676942254,
+              "SRS": 0.17889938457090704
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 757,
+            "t_ns": 251880468037700,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 757,
+            "token_id": 91800,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4980102111127462,
+              "FCI": 1.4980102111127462,
+              "SRS": 0.1789272217749564
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 758,
+            "t_ns": 251880735475800,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 758,
+            "token_id": 13,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49792562722291717,
+              "FCI": 1.497925627222917,
+              "SRS": 0.17873798850518338
+            },
+            "degraded_mode": true,
+            "flags": []
+          },
+          {
+            "seq": 759,
+            "t_ns": 251881005656300,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-993d79f93a76",
+            "step": 759,
+            "token_id": 151645,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49815642469725013,
+              "FCI": 1.49815642469725,
+              "SRS": 0.1787659648360976
+            },
+            "degraded_mode": true,
+            "flags": []
+          }
+        ],
+        "recipe_eval": {
+          "n": 503.0,
+          "p50_us": 4.3,
+          "p95_us": 35.8,
+          "max_us": 6791.7
+        },
+        "publish": {
+          "n": 503.0,
+          "p50_us": 38.6,
+          "p95_us": 120.3,
+          "max_us": 7052.2
+        },
+        "n_recipe_fires": 62
+      },
+      "runtime_ok": true,
+      "runtime_stderr": "",
+      "lint_ok": true
+    },
+    {
+      "invocation_index": 2,
+      "id": "chatcmpl-35f2ca979aed",
+      "completion_tokens": 16,
+      "seconds": 5.704705499985721,
+      "verdict": "RESOLVED",
+      "code_audit": {
+        "exists": true,
+        "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\qwen code\\stem10_black_scholes_greeks\\main.py",
+        "bytes": 1747,
+        "stub_hits": [],
+        "distress_hits": [],
+        "stub_score": 0,
+        "distress_score": 0
+      },
+      "assistant_scores": {
+        "stub_hits": [],
+        "distress_hits": [],
+        "stub_score": 0,
+        "distress_score": 0
+      },
+      "checker_audit": {
+        "available": true,
+        "version": 1,
+        "n_tokens": 16,
+        "composites": {
+          "PLDS": 0.5153466942305096,
+          "FCI": 1.1618553759273027,
+          "SRS": 0.19240628019894715,
+          "flags_timeline": []
+        },
+        "timing_p95_ms": 28.238099970621988,
+        "degraded_mode": false,
+        "f2_stride": 8,
+        "checkers": {
+          "A": {
+            "label": "Distribution shape",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "low_margin=0% high_entropy=0%",
+            "metrics": {
+              "max_entropy": 0.748295247554779,
+              "min_margin": 0.22016528248786926
+            }
+          },
+          "B_vocab": {
+            "label": "Vocab class hygiene",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "distress=0.000 stub=0.000"
+          },
+          "B_transport": {
+            "label": "Transport prototypes",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "rows_with_L16_transport=20/16"
+          },
+          "B_jlens": {
+            "label": "J-lens top-k classes",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "F2/F3 jlens rows=6"
+          },
+          "C": {
+            "label": "Trajectory stability",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "stored_thrash=0% osc=0% calibrated_C_alarm=False"
+          },
+          "D": {
+            "label": "Cross-position contrast",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "ΔH=-0.014 JS=0.000 |ΔM_code|=0.000"
+          },
+          "E": {
+            "label": "Layer curve (cliff)",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "cliff_layer=L16",
+            "metrics": {
+              "cliff_mag": 0.00029156357049942017,
+              "series_keys": [
+                "entropy",
+                "code_mass",
+                "distress_mass",
+                "flip_rate"
+              ]
+            }
+          },
+          "F": {
+            "label": "Lens vs logit disagreement",
+            "active": true,
+            "fired": true,
+            "severity": "warn",
+            "detail": "events=1 min_overlap=0.00"
+          },
+          "G": {
+            "label": "Sparse residual",
+            "active": false,
+            "fired": false,
+            "severity": "info",
+            "detail": "events=0 max_relMSE=0.000"
+          }
+        },
+        "all_active": false,
+        "panic_like": 1
+      },
+      "recipe_summary": {
+        "recipe_fires": 2,
+        "recipe_counts": {
+          "F_LENS": 2
+        },
+        "unique_recipes": [
+          "F_LENS"
+        ],
+        "warn_plus": []
+      },
+      "temporal_resolution": {
+        "enough_tokens": true,
+        "metrics": {
+          "B_distress": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "B_stub": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "C": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "A": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          }
+        }
+      },
+      "flag_rates": {
+        "A": 0.0,
+        "B_distress": 0.0,
+        "B_stub": 0.0,
+        "C": 0.0,
+        "D": 0.0
+      },
+      "monitor": {
+        "recipe_timeline": [
+          {
+            "step": 0,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 8,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          }
+        ],
+        "events_tail": [
+          {
+            "seq": 0,
+            "t_ns": 251882917875200,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-35f2ca979aed",
+            "step": 0,
+            "token_id": 44644,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.281956072896719,
+              "FCI": 0.281956072896719,
+              "SRS": 0.2
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 1,
+            "t_ns": 251883197249100,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-35f2ca979aed",
+            "step": 1,
+            "token_id": 25,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4087237622588873,
+              "FCI": 1.4087237622588873,
+              "SRS": 0.13936705589294435
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 2,
+            "t_ns": 251883489227000,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-35f2ca979aed",
+            "step": 2,
+            "token_id": 912,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.4695708913107713,
+              "FCI": 1.4695708913107712,
+              "SRS": 0.1595780372619629
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 3,
+            "t_ns": 251883724512500,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-35f2ca979aed",
+            "step": 3,
+            "token_id": 19101,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5236580120399594,
+              "FCI": 1.5236580120399594,
+              "SRS": 0.16968352794647218
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 4,
+            "t_ns": 251883984861700,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-35f2ca979aed",
+            "step": 4,
+            "token_id": 16,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5189411764232318,
+              "FCI": 1.518941176423232,
+              "SRS": 0.17574671747825052
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 5,
+            "t_ns": 251884257350900,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-35f2ca979aed",
+            "step": 5,
+            "token_id": 15,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5157857260924932,
+              "FCI": 1.5157857260924932,
+              "SRS": 0.17978893123187545
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 6,
+            "t_ns": 251884582043000,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-35f2ca979aed",
+            "step": 6,
+            "token_id": 40272,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5137906329927577,
+              "FCI": 1.5137906329927577,
+              "SRS": 0.18267622677017895
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 7,
+            "t_ns": 251884873443700,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-35f2ca979aed",
+            "step": 7,
+            "token_id": 643,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5120755441463983,
+              "FCI": 1.5120755441463984,
+              "SRS": 0.18484169842390658
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 8,
+            "t_ns": 251885356250800,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-35f2ca979aed",
+            "step": 8,
+            "token_id": 958,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.5107344425787231,
+              "FCI": 1.5107344425787232,
+              "SRS": 0.18652595415458362
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 9,
+            "t_ns": 251885712457900,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-35f2ca979aed",
+            "step": 9,
+            "token_id": 642,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5096613214651369,
+              "FCI": 1.5096613214651369,
+              "SRS": 0.18787335873912525
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 10,
+            "t_ns": 251886051361000,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-35f2ca979aed",
+            "step": 10,
+            "token_id": 1889,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5087973400601515,
+              "FCI": 1.5087973400601515,
+              "SRS": 0.18897578067193205
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 11,
+            "t_ns": 251886341154100,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-35f2ca979aed",
+            "step": 11,
+            "token_id": 765,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5080748863470034,
+              "FCI": 1.5080748863470035,
+              "SRS": 0.1898944656159377
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 12,
+            "t_ns": 251886654498500,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-35f2ca979aed",
+            "step": 12,
+            "token_id": 2787,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5074568029448038,
+              "FCI": 1.5074568029448039,
+              "SRS": 0.19067181441471173
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 13,
+            "t_ns": 251886987530400,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-35f2ca979aed",
+            "step": 13,
+            "token_id": 15351,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5131845012161387,
+              "FCI": 1.5131845012161387,
+              "SRS": 0.191323002428518
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 14,
+            "t_ns": 251887332440400,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-35f2ca979aed",
+            "step": 14,
+            "token_id": 7197,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5123079547042464,
+              "FCI": 1.5123079547042464,
+              "SRS": 0.19190145749440565
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 15,
+            "t_ns": 251887673885600,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-35f2ca979aed",
+            "step": 15,
+            "token_id": 151645,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5153466942305095,
+              "FCI": 1.5153466942305096,
+              "SRS": 0.19240628019894715
+            },
+            "degraded_mode": false,
+            "flags": []
+          }
+        ],
+        "recipe_eval": {
+          "n": 16.0,
+          "p50_us": 4.5,
+          "p95_us": 38.4,
+          "max_us": 38.4
+        },
+        "publish": {
+          "n": 16.0,
+          "p50_us": 40.1,
+          "p95_us": 102.7,
+          "max_us": 102.7
+        },
+        "n_recipe_fires": 2
+      },
+      "runtime_ok": true,
+      "runtime_stderr": "",
+      "lint_ok": true
+    },
+    {
+      "invocation_index": 3,
+      "id": "chatcmpl-b3229cd8f173",
+      "completion_tokens": 20,
+      "seconds": 8.655553699994925,
+      "verdict": "RESOLVED",
+      "code_audit": {
+        "exists": true,
+        "path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\qwen code\\stem10_black_scholes_greeks\\main.py",
+        "bytes": 1747,
+        "stub_hits": [],
+        "distress_hits": [],
+        "stub_score": 0,
+        "distress_score": 0
+      },
+      "assistant_scores": {
+        "stub_hits": [],
+        "distress_hits": [],
+        "stub_score": 0,
+        "distress_score": 0
+      },
+      "checker_audit": {
+        "available": true,
+        "version": 1,
+        "n_tokens": 20,
+        "composites": {
+          "PLDS": 0.5622460515228597,
+          "FCI": 1.4097323016948167,
+          "SRS": 0.17785854522205008,
+          "flags_timeline": []
+        },
+        "timing_p95_ms": 22.81810002750717,
+        "degraded_mode": false,
+        "f2_stride": 8,
+        "checkers": {
+          "A": {
+            "label": "Distribution shape",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "low_margin=0% high_entropy=0%",
+            "metrics": {
+              "max_entropy": 1.168297529220581,
+              "min_margin": 0.11184129118919373
+            }
+          },
+          "B_vocab": {
+            "label": "Vocab class hygiene",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "distress=0.000 stub=0.000"
+          },
+          "B_transport": {
+            "label": "Transport prototypes",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "rows_with_L16_transport=26/20"
+          },
+          "B_jlens": {
+            "label": "J-lens top-k classes",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "F2/F3 jlens rows=9"
+          },
+          "C": {
+            "label": "Trajectory stability",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "stored_thrash=0% osc=0% calibrated_C_alarm=False"
+          },
+          "D": {
+            "label": "Cross-position contrast",
+            "active": true,
+            "fired": false,
+            "severity": "ok",
+            "detail": "ΔH=-0.015 JS=0.000 |ΔM_code|=0.000"
+          },
+          "E": {
+            "label": "Layer curve (cliff)",
+            "active": true,
+            "fired": true,
+            "severity": "ok",
+            "detail": "cliff_layer=L10",
+            "metrics": {
+              "cliff_mag": -0.0003178914388020093,
+              "series_keys": [
+                "entropy",
+                "code_mass",
+                "distress_mass",
+                "flip_rate"
+              ]
+            }
+          },
+          "F": {
+            "label": "Lens vs logit disagreement",
+            "active": true,
+            "fired": true,
+            "severity": "warn",
+            "detail": "events=1 min_overlap=0.20"
+          },
+          "G": {
+            "label": "Sparse residual",
+            "active": false,
+            "fired": false,
+            "severity": "info",
+            "detail": "events=0 max_relMSE=0.000"
+          }
+        },
+        "all_active": false,
+        "panic_like": 1
+      },
+      "recipe_summary": {
+        "recipe_fires": 3,
+        "recipe_counts": {
+          "F_LENS": 3
+        },
+        "unique_recipes": [
+          "F_LENS"
+        ],
+        "warn_plus": []
+      },
+      "temporal_resolution": {
+        "enough_tokens": true,
+        "metrics": {
+          "B_distress": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "B_stub": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "C": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          },
+          "A": {
+            "first_q": 0.0,
+            "last_q": 0.0,
+            "resolving": null
+          }
+        }
+      },
+      "flag_rates": {
+        "A": 0.0,
+        "B_distress": 0.0,
+        "B_stub": 0.0,
+        "C": 0.0,
+        "D": 0.0
+      },
+      "monitor": {
+        "recipe_timeline": [
+          {
+            "step": 0,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 8,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          },
+          {
+            "step": 16,
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "atoms_mask": 128,
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ]
+          }
+        ],
+        "events_tail": [
+          {
+            "seq": 0,
+            "t_ns": 251892270808400,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-b3229cd8f173",
+            "step": 0,
+            "token_id": 5743,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.30408838743733213,
+              "FCI": 0.30408838743733213,
+              "SRS": 0.19998894615782775
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 1,
+            "t_ns": 251892616488000,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-b3229cd8f173",
+            "step": 1,
+            "token_id": 25,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.392896408114666,
+              "FCI": 1.392896408114666,
+              "SRS": 0.12609927497214812
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 2,
+            "t_ns": 251892898970000,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-b3229cd8f173",
+            "step": 2,
+            "token_id": 4396,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.49632216610765073,
+              "FCI": 1.4963221661076507,
+              "SRS": 0.15073284998143208
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 3,
+            "t_ns": 251893153060000,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-b3229cd8f173",
+            "step": 3,
+            "token_id": 5235,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5462456130851479,
+              "FCI": 1.5462456130851479,
+              "SRS": 0.16304963748607407
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 4,
+            "t_ns": 251893379813700,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-b3229cd8f173",
+            "step": 4,
+            "token_id": 6222,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5370360629861836,
+              "FCI": 1.5370360629861834,
+              "SRS": 0.1704396842882511
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 5,
+            "t_ns": 251893622768800,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-b3229cd8f173",
+            "step": 5,
+            "token_id": 958,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.530865311079919,
+              "FCI": 1.530865311079919,
+              "SRS": 0.17536640357354258
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 6,
+            "t_ns": 251893867069100,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-b3229cd8f173",
+            "step": 6,
+            "token_id": 642,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.526458303741332,
+              "FCI": 1.526458303741332,
+              "SRS": 0.17888548877732222
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 7,
+            "t_ns": 251894099191300,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-b3229cd8f173",
+            "step": 7,
+            "token_id": 294,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5362776345191111,
+              "FCI": 1.5362776345191111,
+              "SRS": 0.1814370255682448
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 8,
+            "t_ns": 251894496421500,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-b3229cd8f173",
+            "step": 8,
+            "token_id": 16,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.532247443643027,
+              "FCI": 1.5322474436430271,
+              "SRS": 0.18349957807630926
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 9,
+            "t_ns": 251894722769300,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-b3229cd8f173",
+            "step": 9,
+            "token_id": 3446,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5299144636708693,
+              "FCI": 1.5299144636708693,
+              "SRS": 0.18508397478628721
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 10,
+            "t_ns": 251894998560400,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-b3229cd8f173",
+            "step": 10,
+            "token_id": 17,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5271950685083923,
+              "FCI": 1.5271950685083922,
+              "SRS": 0.18643997698422948
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 11,
+            "t_ns": 251895232362800,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-b3229cd8f173",
+            "step": 11,
+            "token_id": 11,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5364801786765508,
+              "FCI": 1.536480178676551,
+              "SRS": 0.17957925952421583
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 12,
+            "t_ns": 251895473171300,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-b3229cd8f173",
+            "step": 12,
+            "token_id": 4211,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5350286788023484,
+              "FCI": 1.5350286788023484,
+              "SRS": 0.18115008571466076
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 13,
+            "t_ns": 251895697224300,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-b3229cd8f173",
+            "step": 13,
+            "token_id": 21619,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5326242551991894,
+              "FCI": 1.5326242551991895,
+              "SRS": 0.18249650816361357
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 14,
+            "t_ns": 251895934373800,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-b3229cd8f173",
+            "step": 14,
+            "token_id": 11,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5156590462959724,
+              "FCI": 1.5156590462959723,
+              "SRS": 0.17052228019195365
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 15,
+            "t_ns": 251896169845100,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-b3229cd8f173",
+            "step": 15,
+            "token_id": 323,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5328897797723223,
+              "FCI": 1.5328897797723222,
+              "SRS": 0.1723748431083636
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 16,
+            "t_ns": 251896549722900,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-b3229cd8f173",
+            "step": 16,
+            "token_id": 5978,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 1,
+              "G_oob": 0
+            },
+            "recipe_id": "F_LENS",
+            "severity": "tip",
+            "alpha_hint": 0.5,
+            "layer_hint": [
+              16
+            ],
+            "caa_tags": [
+              "F_LENS"
+            ],
+            "composites_rolling": {
+              "PLDS": 0.5481359328624884,
+              "FCI": 1.5481359328624884,
+              "SRS": 0.17399985233728338
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 17,
+            "t_ns": 251896770881900,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-b3229cd8f173",
+            "step": 17,
+            "token_id": 57920,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5599440651831459,
+              "FCI": 1.5599440651831458,
+              "SRS": 0.17544430498521207
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 18,
+            "t_ns": 251897013738800,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-b3229cd8f173",
+            "step": 18,
+            "token_id": 91800,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5599755708510089,
+              "FCI": 1.5599755708510088,
+              "SRS": 0.1767367099859904
+            },
+            "degraded_mode": false,
+            "flags": []
+          },
+          {
+            "seq": 19,
+            "t_ns": 251897252485600,
+            "session_id": "stem10_t01_stem10_black_scholes_greeks_20260806T024046Z",
+            "invocation_id": "chatcmpl-b3229cd8f173",
+            "step": 19,
+            "token_id": 151645,
+            "atoms": {
+              "A_uncertain": 0,
+              "B_distress": 0,
+              "B_stub": 0,
+              "B_junk": 0,
+              "C_osc": 0,
+              "D_break": 0,
+              "E_cliff": 0,
+              "F_disagree": 0,
+              "G_oob": 0
+            },
+            "recipe_id": null,
+            "severity": "none",
+            "alpha_hint": 0.0,
+            "layer_hint": [],
+            "caa_tags": [],
+            "composites_rolling": {
+              "PLDS": 0.5622460515228597,
+              "FCI": 1.5622460515228598,
+              "SRS": 0.17785854522205008
+            },
+            "degraded_mode": false,
+            "flags": []
+          }
+        ],
+        "recipe_eval": {
+          "n": 20.0,
+          "p50_us": 3.9,
+          "p95_us": 48.4,
+          "max_us": 48.4
+        },
+        "publish": {
+          "n": 20.0,
+          "p50_us": 36.8,
+          "p95_us": 119.9,
+          "max_us": 119.9
+        },
+        "n_recipe_fires": 3
+      },
+      "runtime_ok": true,
+      "runtime_stderr": "",
+      "lint_ok": true
+    }
+  ],
+  "evidence": {
+    "checks": [
+      {
+        "id": "A1",
+        "name": "at least one LLM invocation logged",
+        "pass": true,
+        "detail": "n_invocations=3"
+      },
+      {
+        "id": "A3",
+        "name": "J-space attached to invocations",
+        "pass": true,
+        "detail": "skip_jspace=True with_jspace=0/3"
+      },
+      {
+        "id": "A4",
+        "name": "nested invocations indexed",
+        "pass": true,
+        "detail": "indexed=3"
+      },
+      {
+        "id": "A5",
+        "name": "layer readouts for browsing",
+        "pass": true,
+        "detail": "skip_jspace=True n_layers=0"
+      },
+      {
+        "id": "C1",
+        "name": "chaos attached to invocations",
+        "pass": true,
+        "detail": "with_chaos=3/3 enabled=True"
+      },
+      {
+        "id": "A2",
+        "name": "aider process completed",
+        "pass": true,
+        "detail": "rc=0 seconds=552.0"
+      },
+      {
+        "id": "A6",
+        "name": "task main.py exists after run",
+        "pass": true,
+        "detail": "size=1807"
+      },
+      {
+        "id": "A7",
+        "name": "ruff+pylint pass on task files",
+        "pass": true,
+        "detail": "[{\"tool\": \"ruff\", \"rc\": 0}, {\"tool\": \"ruff_verify\", \"rc\": 0}, {\"tool\": \"pylint\", \"rc\": 0}]"
+      }
+    ],
+    "passed": 8,
+    "total": 8,
+    "overall_pass": true
+  },
+  "lint": {
+    "ok": true,
+    "checks": [
+      {
+        "tool": "ruff",
+        "file": "stem10_black_scholes_greeks\\main.py",
+        "returncode": 0,
+        "stdout": "\u001b[1;32mAll checks passed!\u001b[0m\n",
+        "stderr": "",
+        "pass": true
+      },
+      {
+        "tool": "ruff_verify",
+        "file": "stem10_black_scholes_greeks\\main.py",
+        "returncode": 0,
+        "stdout": "\u001b[1;32mAll checks passed!\u001b[0m\n",
+        "stderr": "",
+        "pass": true
+      },
+      {
+        "tool": "pylint",
+        "file": "stem10_black_scholes_greeks\\main.py",
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "",
+        "pass": true
+      }
+    ]
+  },
+  "aider": {
+    "returncode": 0,
+    "seconds": 552.0453222999931,
+    "stdout_tail": " tokens, auto refresh\nAdded stem10_black_scholes_greeks\\main.py to the chat.\n\nTo fix the Black-Scholes formulas for `d1` and `d2`, and to implement the gamma\nusing the standard normal probability density function, we need to make the \nfollowing changes:\n\n\n\n1. Correct the formulas for `d1` and `d2` to include `vol * sqrt(T)`.\n\n2. Implement the gamma using the standard normal probability density function.\n\n3. Ensure the code is lint-clean and follows the specified requirements.\n\n\n\nHere is the updated `stem10_black_scholes_greeks/main.py` file:\n\n\n\nstem10_black_scholes_greeks/main.py\n\n```diff\n@@ -1,6 +1,6 @@\n-\"\"\"Black-Scholes Greeks — broken d1/d2 and gamma.\"\"\"\n+\"\"\"Black-Scholes Greeks — fixed d1/d2 and gamma.\"\"\"\n \n from __future__ import annotations\n \n import math\n \n@@ -12,40 +12,47 @@\n     vol: float,\n     t_years: float,\n     *,\n     is_call: bool = True,\n ) -> dict[str, float]:\n-  \"\"\"Return price, delta, gamma, vega, theta for European option.\"\"\"\n-  if t_years <= 0 or vol <= 0:\n-    raise ValueError(\"t_years and vol must be positive\")\n-  # BUG: wrong d1 formula (missing vol*sqrt(T) in denominator structure)\n-  d1 = (math.log(spot / strike) + rate * t_years) / vol\n-  d2 = d1 - vol * math.sqrt(t_years)\n-  nd1 = 0.5 * (1.0 + math.erf(d1 / math.sqrt(2)))\n-  nd2 = 0.5 * (1.0 + math.erf(d2 / math.sqrt(2)))\n-  discount = math.exp(-rate * t_years)\n-  if is_call:\n-    price = spot * nd1 - strike * discount * nd2\n-    delta = nd1\n-  else:\n-    price = strike * discount * (1 - nd2) - spot * (1 - nd1)\n-    delta = nd1 - 1\n-  gamma = 0.0  # FIXME: implement gamma\n-  vega = spot * math.sqrt(t_years) * math.exp(-0.5 * d1 * d1) / math.sqrt(2 * \nmath.pi)\n-  theta = 0.0\n-  return {\"price\": price, \"delta\": delta, \"gamma\": gamma, \"vega\": vega, \n\"theta\": theta}\n+    \"\"\"Return price, delta, gamma, vega, theta for European option.\"\"\"\n+    if t_years <= 0 or vol <= 0:\n+        raise ValueError(\"t_years and vol must be positive\")\n+    \n+    # Corrected d1 and d2 formulas\n+    d1 = (math.log(spot / strike) + (rate + 0.5 * vol * vol) * t_years) / (vol\n* math.sqrt(t_years))\n+    d2 = d1 - vol * math.sqrt(t_years)\n+    \n+    nd1 = 0.5 * (1.0 + math.erf(d1 / math.sqrt(2)))\n+    nd2 = 0.5 * (1.0 + math.erf(d2 / math.sqrt(2)))\n+    discount = math.exp(-rate * t_years)\n+    \n+    if is_call:\n+        price = spot * nd1 - strike * discount * nd2\n+        delta = nd1\n+    else:\n+        price = strike * discount * (1 - nd2) - spot * (1 - nd1)\n+        delta = nd1 - 1\n+    \n+    # Implement gamma using the standard normal pdf\n+    gamma = math.exp(-0.5 * d1 * d1) / (vol * math.sqrt(t_years) * math.sqrt(2\n* math.pi))\n+    \n+    vega = spot * math.sqrt(t_years) * math.exp(-0.5 * d1 * d1) / math.sqrt(2 \n* math.pi)\n+    theta = -spot * vol * math.exp(-0.5 * d1 * d1) / (2 * math.sqrt(t_years * \nmath.pi)) - rate * strike * discount * nd2 + rate * spot * nd1\n+    \n+    return {\"price\": price, \"delta\": delta, \"gamma\": gamma, \"vega\": vega, \n\"theta\": theta}\n \n \n def demo() -> dict[str, float]:\n-  return black_scholes_greeks(100.0, 100.0, 0.05, 0.2, 1.0, is_call=True)\n+    return black_scholes_greeks(100.0, 100.0, 0.05, 0.2, 1.0, is_call=True)\n \n \n def main() -> None:\n-  g = demo()\n-  assert 9.0 < g[\"price\"] < 12.0, g\n-  assert 0.5 < g[\"delta\"] < 0.7, g\n-  assert g[\"gamma\"] > 0.01, g\n-  print(g)\n+    g = demo()\n+    assert 9.0 < g[\"price\"] < 12.0, g\n+    assert 0.5 < g[\"delta\"] < 0.7, g\n+    assert g[\"gamma\"] > 0.01, g\n+    print(g)\n \n \n if __name__ == \"__main__\":\n-  main()\n+    main()\n```\n\n\n\nThis updated file includes the corrected formulas for `d1` and `d2`, implements\nthe gamma using the standard normal probability density function, and ensures \nthe code is lint-clean.\n\nTokens: 2.3k sent, 760 received.\nCommitting stem10_black_scholes_greeks/main.py before applying edits.\nCommit 25e9155 feat: add stem10_black_scholes_greeks/main.py\nApplied edit to stem10_black_scholes_greeks/main.py\nCommit a2dd3f2 fix: correct Black-Scholes d1/d2, implement gamma, and ensure \nlint-clean\n",
+    "stderr_tail": "",
+    "cwd": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\qwen code",
+    "task_dir": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\qwen code\\stem10_black_scholes_greeks"
+  },
+  "success": true
+}

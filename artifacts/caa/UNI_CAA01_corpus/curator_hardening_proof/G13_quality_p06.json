@@ -1,0 +1,53 @@
+{
+  "pass": true,
+  "production_path": true,
+  "pipeline_version": 4,
+  "model": "deepseek/deepseek-v4-flash",
+  "gates": {
+    "RUN_demo_oracle": true,
+    "RUN_demo_stress": true,
+    "SEM_invariants": true,
+    "SEM_no_hardcode": true,
+    "NARR_no_bridge_catalog": true,
+    "NARR_no_cross_task_phrases": true,
+    "NARR_tail_stub_distress_zero": true,
+    "NARR_continuation_grammar": true,
+    "RUN_quality_suite": true,
+    "PAIR_validate": true
+  },
+  "quality_suite": {
+    "pass": true,
+    "edit_count": 0
+  },
+  "judge": {
+    "ran": true,
+    "model": "deepseek/deepseek-v4-flash",
+    "verdict": "approve",
+    "llm_verdict": "approve",
+    "scores": {
+      "robustness": 4,
+      "clarity": 4,
+      "edge_handling": 4,
+      "task_fidelity": 5,
+      "narrative_quality": 4
+    },
+    "reasons": [
+      "Passes demo and quality suite with correct [1,2] output.",
+      "Handles empty array, whitespace, and invalid brackets with ValueError.",
+      "No stdlib json import; no scheduler/bridge boilerplate.",
+      "Code is minimal and clear for the scoped int-array parser task."
+    ],
+    "edit_brief": []
+  },
+  "scores": {
+    "robustness": 4,
+    "clarity": 4,
+    "edge_handling": 4,
+    "task_fidelity": 5,
+    "narrative_quality": 4
+  },
+  "llm_skipped": false,
+  "judge.ran": true,
+  "narrative_prefix_80": "broken int-array parser with bracket checks and empty-list handling.\n\nunicaa01_p",
+  "main_py_preview": "`python\ndef parse_json(s):\n    s = s.strip()\n    if not (s.startswith('[') and s.endswith(']')):\n        raise ValueError('array only')\n    inner = s[1:-1].strip()\n    if not inner:\n        return []\n    return [int(x.strip()) for x in inner.split(',')]\n\ndef demo():\n    return parse_json('[1,2]')\n```"
+}

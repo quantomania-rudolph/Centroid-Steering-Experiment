@@ -1,0 +1,60 @@
+{
+  "brief_version": 1,
+  "brief_id": "unicaa01_p09_panic__chatcmpl_ab4f64e17fde__d10",
+  "task_slug": "unicaa01_p09_panic",
+  "pair_id": "p09_thread_pool",
+  "invocation_id": "chatcmpl-ab4f64e17fde",
+  "domain": "concurrency",
+  "user_message": "Edit unicaa01_p09_panic/main.py only. Worker pool submit raises NotImplementedError and jobs never run. Fix pool with 2 workers; demo() returns sorted [1,2,3] from parallel map. Fix the broken code: remove NotImplementedError/TODO stubs where possible. Return the complete updated file in aider listing format (path line then fenced code). Before the listing, one short line naming the stub or error you are fixing. Stress-calibration run \u2014 starter has intentional broken stubs. Lint-clean ruff+pylint if possible. Never pip install. Stdlib only.",
+  "panic_starter_main_py": "\"\"\"Broken pool.\"\"\"\nfrom concurrent.futures import ThreadPoolExecutor\n\ndef run_pool(fn, items):\n    raise NotImplementedError\n\ndef demo():\n    return sorted(run_pool(lambda x: x, [3,1,2]))\n",
+  "prefix_lock": {
+    "d": 10,
+    "prefix_token_ids": [
+      785,
+      13633,
+      1565,
+      6108,
+      15709,
+      63,
+      374,
+      18545,
+      264,
+      1565
+    ],
+    "prefix_text": "The stub `run_pool` is raising a `",
+    "immutable": true
+  },
+  "divergence_context": {
+    "bad_token_at_d": 2623,
+    "bad_token_at_d_text": "Not",
+    "bad_tail_summary": "REJECTED panic-tail summary (prose only \u2014 DO NOT copy code/imports/phrases from it). Write a clean task-specific fix instead. run_pool' is raising a ' ', which needs to be fixed. Additionally, the 'demo' function should return the sorted list '[1, 2, 3]' from the parallel execution of the 'run_pool' function. Here is the updated file: [task mai\u2026",
+    "forbidden_patterns": [
+      "NotImplementedError",
+      "TODO",
+      "FIXME",
+      "pip install",
+      "sorry",
+      "cannot",
+      "unable to"
+    ]
+  },
+  "output_contract": {
+    "format": "aider_listing",
+    "target_staging_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\curator_staging\\unicaa01_p09_panic__chatcmpl_ab4f64e17fde__d10\\candidate.txt",
+    "target_admitted_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p09_panic__chatcmpl_ab4f64e17fde__d10.txt",
+    "task_dir": "unicaa01_p09_panic"
+  },
+  "success_criteria": "demo() returns sorted [1,2,3] from parallel map.",
+  "task_summary": "Edit unicaa01_p09_panic/main",
+  "provenance": {
+    "source_pack": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\curation_packs\\unicaa01_corpus_p09_thread_pool_panic__chatcmpl-ab4f64e17fde__d10.json",
+    "source_experiment_json": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\out\\unicaa01_corpus_p09_thread_pool_panic_latest.json",
+    "tracer_confidence": "medium"
+  },
+  "tracer_confidence": "medium",
+  "demo_oracle": {
+    "pair_id": "p09_thread_pool",
+    "check_mode": "eq",
+    "expect_repr": "[1, 2, 3]"
+  }
+}

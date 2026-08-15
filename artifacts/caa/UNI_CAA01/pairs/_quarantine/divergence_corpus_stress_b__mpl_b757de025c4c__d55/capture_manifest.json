@@ -1,0 +1,28 @@
+{
+  "source": "natural",
+  "pair_slug": "divergence_corpus_stress_b__mpl_b757de025c4c__d55",
+  "vector_id": "UNI_CAA01",
+  "d": 55,
+  "prompt_len": 1948,
+  "layers": [
+    10,
+    16,
+    22
+  ],
+  "capture_method": "shared_kv_prefill",
+  "extraction_position": "divergent",
+  "calm_purity_pass": true,
+  "bad_purity_pass": true,
+  "pair_gate_pass": true,
+  "kv_live_gate_pass": true,
+  "kv_live_gate_timestamp": null,
+  "sha256": {
+    "activations_at_d.pt": "d5abc49dbaefff32202cabbb5dde2abee3303853485328a88d0f6eb21714e00c",
+    "matched_prefix_spec.json": "30441141bbd5ddf23172d63ad37d7f5ebd62a331c6727fd9b068127f85338c61",
+    "admission_gate.json": "f8d40bb8d9e77da273e0f4695843189e7060a6178c50a12a5828db2f41c87550"
+  },
+  "notes": [
+    "mined from divergence_corpus_stress_b"
+  ],
+  "path_hint": "artifacts\\caa\\UNI_CAA01\\pairs\\natural\\divergence_corpus_stress_b__mpl_b757de025c4c__d55"
+}

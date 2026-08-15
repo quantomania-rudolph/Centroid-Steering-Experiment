@@ -1,0 +1,78 @@
+{
+  "attempts": [
+    {
+      "attempt_index": 0,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "befcdee66009d90fb861ee2a5a5a65437f6efb71e6cee6f46b5f8bd44b5194c5",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": false,
+      "failed_checks": [
+        {
+          "id": "SY_ast_parse",
+          "pass": false,
+          "detail": "no fenced main.py block"
+        },
+        {
+          "id": "QA_MAIN_PY_PRESENT",
+          "pass": false,
+          "detail": "extracted_len=0"
+        }
+      ],
+      "demo_result": {
+        "pass": false,
+        "actual_repr": "",
+        "expected_repr": "",
+        "error": "no main.py"
+      },
+      "qa_verdict": null,
+      "qa_calls_so_far": 0
+    },
+    {
+      "attempt_index": 1,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "baaa4cad13e43291d26119c6591975a66a409d4555206d2054ec507e3fc2f797",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": false,
+      "failed_checks": [
+        {
+          "id": "SY_ast_parse",
+          "pass": false,
+          "detail": "no fenced main.py block"
+        },
+        {
+          "id": "QA_MAIN_PY_PRESENT",
+          "pass": false,
+          "detail": "extracted_len=0"
+        }
+      ],
+      "demo_result": {
+        "pass": false,
+        "actual_repr": "",
+        "expected_repr": "",
+        "error": "no main.py"
+      },
+      "qa_verdict": null,
+      "qa_calls_so_far": 0
+    },
+    {
+      "attempt_index": 2,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "a195731551727a91dcd70e32743722dbfaa3d3baa107237781b9fa31a6a7d79f",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": true,
+      "failed_checks": [],
+      "demo_result": {
+        "pass": true,
+        "actual_repr": "['alert', 'backup', 'email']",
+        "expected_repr": "['alert', 'backup', 'email']",
+        "error": "",
+        "pair_id": "p01_priority_queue"
+      },
+      "qa_verdict": "approve",
+      "qa_calls_so_far": 0
+    }
+  ]
+}

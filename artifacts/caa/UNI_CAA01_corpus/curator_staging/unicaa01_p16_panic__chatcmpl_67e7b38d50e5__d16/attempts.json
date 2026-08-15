@@ -1,0 +1,89 @@
+{
+  "attempts": [
+    {
+      "attempt_index": 0,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "dfe01311f51915e8915cc8ebc555ab73b9efdc2d87017d8ca9cd5b7bfbe3b071",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": false,
+      "failed_checks": [
+        {
+          "id": "CT_assemble",
+          "pass": false,
+          "detail": "prefix lock or CD divergence failed at d=16 (bad_token=2623 bad_text='Not')"
+        }
+      ],
+      "demo_result": {
+        "pass": false,
+        "actual_repr": "",
+        "expected_repr": "",
+        "error": "no main.py"
+      },
+      "qa_verdict": null,
+      "qa_calls_so_far": 0
+    },
+    {
+      "attempt_index": 1,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "ab9effb3e721ec326bfe11ef5f55c40e289d2f2f1656a0aa7a7356e6c336169c",
+      "bridge_used": true,
+      "sanitized": false,
+      "gate_pass": true,
+      "failed_checks": [
+        {
+          "id": "NARR_no_bridge_catalog",
+          "pass": false,
+          "detail": "hits=['thread-safe implementation with locks and heap pop logic.']"
+        },
+        {
+          "id": "NARR_no_cross_task_phrases",
+          "pass": false,
+          "detail": "hits=['heap pop', 'thread-safe']"
+        },
+        {
+          "id": "NARR_balanced_backticks",
+          "pass": false,
+          "detail": "backtick_count=7 narrative='thread-safe implementation with locks and heap pop logic. `ValueError` for unkno'"
+        }
+      ],
+      "demo_result": {
+        "pass": true,
+        "actual_repr": "25",
+        "expected_repr": "25",
+        "error": "",
+        "pair_id": "p16_event_snapshot"
+      },
+      "qa_verdict": null,
+      "qa_calls_so_far": 0
+    },
+    {
+      "attempt_index": 2,
+      "model": "deepseek/deepseek-v4-flash",
+      "suffix_sha256": "d059d225a876102117bfc58c1a69a8360f80fc3011a98e43415f92631fbe62f6",
+      "bridge_used": false,
+      "sanitized": false,
+      "gate_pass": false,
+      "failed_checks": [
+        {
+          "id": "CT_assemble",
+          "pass": false,
+          "detail": "prefix lock or CD divergence failed at d=16 (bad_token=2623 bad_text='Not')"
+        },
+        {
+          "id": "CD_unrecoverable",
+          "pass": false,
+          "detail": "CD still fails after bridge"
+        }
+      ],
+      "demo_result": {
+        "pass": false,
+        "actual_repr": "",
+        "expected_repr": "",
+        "error": "no main.py"
+      },
+      "qa_verdict": null,
+      "qa_calls_so_far": 0
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "task_slug": "unicaa01_p58_panic",
+  "invocation_id": "chatcmpl-a3a63544106f",
+  "experiment": "unicaa01_corpus_p58_diff_apply_panic",
+  "pair_id": "p58_diff_apply",
+  "arm": "panic",
+  "user_message": "Edit unicaa01_p58_panic/main.py only. apply_patch NotImplementedError for unified diff hunk. Apply single hunk patch; demo() 'bar' from foo->bar. Fix the broken code: remove NotImplementedError/TODO stubs where possible. Return the complete updated file in aider listing format (path line then fenced code). Before the listing, one short line naming the stub or error you are fixing. Stress-calibration run \u2014 starter has intentional broken stubs. Lint-clean ruff+pylint if possible. Never pip install. Stdlib only.",
+  "session_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\sessions\\unicaa01_corpus_p58_diff_apply_panic_20260810T223346Z.jsonl",
+  "prompt_tokens": 1960,
+  "completion_tokens": 192,
+  "d_tracer": 3,
+  "prefix_len": 3,
+  "prefix_token_ids": [
+    25958,
+    287,
+    1565
+  ],
+  "prefix_text": "Fixing `",
+  "bad_token_at_d": 2623,
+  "bad_token_at_d_text": "Not",
+  "bad_tail_text_preview": "ing `NotImplementedError` for unified diff hunk.\n\nunicaa01_p58_panic/main.py\n```\ndef apply_patch(text: str, patch: str) -> str:\n    lines = patch.split('\\n')\n    hunk = lines[0].split('@@')[1].strip()\n    start_line, end_line = map(int, hunk.split(' ')[1].split(','))\n    \n    # Extract the lines to be replaced\n    replace_lines = lines[1:end_line - start_line + 1]\n    \n    # Apply the patch\n    result_lines = text.split('\\n')\n    result_lines[start_line - 1:start_line - 1 + len(replace_lines)] = replace_lines\n    \n    return '\\n'.join(result_lines)\n\ndef demo():\n    p = \"@@ -1 +1 @@\\n-foo\\n+bar\"\n    return apply_patch(\"foo\", p)\n```<|im_end|>",
+  "calm_tail_filename": "unicaa01_p58_panic__chatcmpl_a3a63544106f__d3.txt",
+  "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p58_panic__chatcmpl_a3a63544106f__d3.txt",
+  "token_ids_match": true,
+  "confidence": "high",
+  "notes": [
+    "Composer senior-editor: write calm completion text only.",
+    "Prefix lock: encode(text)[:d] must equal prefix_token_ids.",
+    "No pip/sorry/stub/NotImplementedError in calm tail."
+  ],
+  "source_experiment_json": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\out\\unicaa01_corpus_p58_diff_apply_panic_latest.json"
+}

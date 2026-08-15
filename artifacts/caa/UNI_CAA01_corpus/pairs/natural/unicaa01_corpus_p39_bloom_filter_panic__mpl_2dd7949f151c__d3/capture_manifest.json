@@ -1,0 +1,28 @@
+{
+  "source": "natural",
+  "pair_slug": "unicaa01_corpus_p39_bloom_filter_panic__mpl_2dd7949f151c__d3",
+  "vector_id": "UNI_CAA01",
+  "d": 3,
+  "prompt_len": 1999,
+  "layers": [
+    10,
+    16,
+    22
+  ],
+  "capture_method": "dual_full_forward",
+  "extraction_position": "divergent",
+  "calm_purity_pass": true,
+  "bad_purity_pass": true,
+  "pair_gate_pass": true,
+  "kv_live_gate_pass": true,
+  "kv_live_gate_timestamp": "2026-08-10T01:02:15.000807+00:00",
+  "sha256": {
+    "activations_at_d.pt": "6cdcca51e8b60bbf47519131386285e543d05df1d78647ef156dd78f6d04ba62",
+    "matched_prefix_spec.json": "d6c02ac543640210c8ea193611226660f55dc3f172165f7ab2e558f7b108716c",
+    "admission_gate.json": "4db2c3a7374a01193972966655df92b129c8f1cbf6806e792e6476f61b9fd4e0"
+  },
+  "notes": [
+    "mined from unicaa01_corpus_p39_bloom_filter_panic"
+  ],
+  "path_hint": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\pairs\\natural\\unicaa01_corpus_p39_bloom_filter_panic__mpl_2dd7949f151c__d3"
+}

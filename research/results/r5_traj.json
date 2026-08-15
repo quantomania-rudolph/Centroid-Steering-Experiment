@@ -1,0 +1,11 @@
+{
+  "round_id": "R5_TRAJ",
+  "task_slug": "research_topo_broken",
+  "experiment": "caa_study_r5_traj",
+  "elapsed_s": 104.85431530000642,
+  "aider_rc": 0,
+  "round_verdict": "FAIL",
+  "invocations": [],
+  "stdout_tail": "\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\dashboard\\index.html (21 run(s))\n  - caa_study_r3_distress: kind=aider_agentic inv=3 layers=0 workspace=None evidence=8/8\n  - caa_study_r2_stub: kind=aider_agentic inv=3 layers=0 workspace=None evidence=8/8\n  - caa_study_r1_clean: kind=aider_agentic inv=1 layers=0 workspace=None evidence=8/8\n  - monitor_gate_stress: kind=aider_agentic inv=2 layers=0 workspace=None evidence=8/8\n  - monitor_gate_clean: kind=aider_agentic inv=1 layers=0 workspace=None evidence=8/8\n  - aider_calib_stress_v2: kind=aider_agentic inv=3 layers=0 workspace=None evidence=8/8\n  - aider_calib_clean_v2: kind=aider_agentic inv=1 layers=0 workspace=None evidence=8/8\n  - aider_live_panic_demo_scheduler: kind=aider_agentic inv=3 layers=0 workspace=None evidence=8/8\n  - aider_final_review_topo_sort: kind=aider_agentic inv=3 layers=0 workspace=None evidence=8/8\n  - aider_final_review_topo_sort: kind=aider_agentic inv=3 layers=0 workspace=None evidence=8/8\n  - aider_chaos_proof_meta_wipe: kind=aider_agentic inv=3 layers=0 workspace=None evidence=8/8\n  - aider_chaos_proof_lint_stress: kind=aider_agentic inv=3 layers=0 workspace=None evidence=8/8\n  - aider_chaos_proof_clean: kind=aider_agentic inv=1 layers=0 workspace=None evidence=8/8\n  - aider_hard_expr_compiler: kind=aider_agentic inv=8 layers=19 workspace=None evidence=6/7\n  - aider_hard_token_bucket: kind=aider_agentic inv=7 layers=19 workspace=None evidence=7/7\n  - aider_hard_dijkstra_grid: kind=aider_agentic inv=5 layers=19 workspace=None evidence=6/7\n  - aider_string_palindrome: kind=aider_agentic inv=3 layers=19 workspace=None evidence=7/7\n  - aider_hello_fibonacci: kind=aider_agentic inv=3 layers=19 workspace=None evidence=6/6\n  - new_full_3d: kind=jspace_workspace inv=0 layers=19 workspace=[10, 24] evidence=7/7\n  - pathfind_2d: kind=legacy inv=0 layers=19 workspace=None evidence=?/?\n  - explore_3d: kind=legacy inv=0 layers=19 workspace=None evidence=?/?\nServe: python experiments/serve_dashboard.py\n",
+  "stderr_tail": ""
+}

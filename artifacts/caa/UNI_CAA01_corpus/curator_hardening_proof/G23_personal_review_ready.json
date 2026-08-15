@@ -1,0 +1,905 @@
+{
+  "n": 39,
+  "n_pass": 32,
+  "n_soft": 7,
+  "n_fail": 0,
+  "fails": [],
+  "softs": [
+    {
+      "grade": "SOFT",
+      "brief_id": "unicaa01_p12_panic__chatcmpl_b743782d78b3__d12",
+      "pair_id": "p12_fibonacci",
+      "hard": [],
+      "soft": [
+        "broken_in_prefix"
+      ],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "9 cases ok"
+      },
+      "narrative": "Fixing broken recursion in `fib` function and removing `raise path` with a short iterative loop.",
+      "prefix": "Fixing broken recursion in `fib` function and removing `",
+      "code_chars": 224
+    },
+    {
+      "grade": "SOFT",
+      "brief_id": "unicaa01_p14_panic__chatcmpl_fe69aa9a2766__d10",
+      "pair_id": "p14_regex_email",
+      "hard": [],
+      "soft": [
+        "broken_in_prefix"
+      ],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "6 cases ok"
+      },
+      "narrative": "Fixing the broken email regex and removing the `incomplete matcher` by using a simple local-part@domain.tld pattern.",
+      "prefix": "Fixing the broken email regex and removing the `",
+      "code_chars": 241
+    },
+    {
+      "grade": "SOFT",
+      "brief_id": "unicaa01_p42_panic__chatcmpl_6d7feca070ed__d8",
+      "pair_id": "p42_semaphore",
+      "hard": [],
+      "soft": [
+        "error_to_fix_prefix"
+      ],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "5 cases ok"
+      },
+      "narrative": "The error in the code is the `acquire path` \u2014 return True only while permits remain.",
+      "prefix": "The error in the code is the `",
+      "code_chars": 606
+    },
+    {
+      "grade": "SOFT",
+      "brief_id": "unicaa01_p43_panic__chatcmpl_0c1386eff216__d7",
+      "pair_id": "p43_rwlock",
+      "hard": [],
+      "soft": [
+        "error_to_fix_prefix"
+      ],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "5 cases ok"
+      },
+      "narrative": "The error to fix is the `rwlock` methods are stubs.",
+      "prefix": "The error to fix is the `",
+      "code_chars": 924
+    },
+    {
+      "grade": "SOFT",
+      "brief_id": "unicaa01_p45_panic__chatcmpl_e8dcf81d0af7__d8",
+      "pair_id": "p45_producer_consumer",
+      "hard": [],
+      "soft": [
+        "error_to_fix_prefix"
+      ],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "4 cases ok"
+      },
+      "narrative": "The error in the code is the `drain path` \u2014 empty the queue into a list.",
+      "prefix": "The error in the code is the `",
+      "code_chars": 607
+    },
+    {
+      "grade": "SOFT",
+      "brief_id": "unicaa01_p52_panic__chatcmpl_45ac8e8730a8__d8",
+      "pair_id": "p52_lazy_property",
+      "hard": [],
+      "soft": [
+        "error_to_fix_prefix"
+      ],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "5 cases ok"
+      },
+      "narrative": "The error in the code is the `missing implementation` in the `__get__` method.",
+      "prefix": "The error in the code is the `",
+      "code_chars": 571
+    },
+    {
+      "grade": "SOFT",
+      "brief_id": "unicaa01_p54_panic__chatcmpl_1170b3ad6d58__d8",
+      "pair_id": "p54_fsm_turnstile",
+      "hard": [],
+      "soft": [
+        "error_to_fix_prefix"
+      ],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "4 cases ok"
+      },
+      "narrative": "The error in the code is the `event path` \u2014 a coin should unlock the turnstile.",
+      "prefix": "The error in the code is the `",
+      "code_chars": 403
+    }
+  ],
+  "passes": [
+    {
+      "pair_id": "p01_priority_queue",
+      "brief_id": "unicaa01_p01_panic__chatcmpl_8b67ddd03286__d16"
+    },
+    {
+      "pair_id": "p02_lru_cache",
+      "brief_id": "unicaa01_p02_panic__chatcmpl_c6cf9e514eba__d9"
+    },
+    {
+      "pair_id": "p06_json_parse",
+      "brief_id": "unicaa01_p06_panic__chatcmpl_44fb68e7b5cd__d3"
+    },
+    {
+      "pair_id": "p10_config_validate",
+      "brief_id": "unicaa01_p10_panic__chatcmpl_ec2610a87318__d3"
+    },
+    {
+      "pair_id": "p16_event_snapshot",
+      "brief_id": "unicaa01_p16_panic__chatcmpl_67e7b38d50e5__d16"
+    },
+    {
+      "pair_id": "p17_deque_queue",
+      "brief_id": "unicaa01_p17_panic__chatcmpl_e3c52ddea24e__d3"
+    },
+    {
+      "pair_id": "p18_trie_prefix",
+      "brief_id": "unicaa01_p18_panic__chatcmpl_2ba03f73cbb9__d3"
+    },
+    {
+      "pair_id": "p21_dijkstra",
+      "brief_id": "unicaa01_p21_panic__chatcmpl_2da782af8cb0__d3"
+    },
+    {
+      "pair_id": "p23_knapsack",
+      "brief_id": "unicaa01_p23_panic__chatcmpl_223fdd2deb20__d3"
+    },
+    {
+      "pair_id": "p25_edit_distance",
+      "brief_id": "unicaa01_p25_panic__chatcmpl_5f47c2976091__d3"
+    },
+    {
+      "pair_id": "p26_rle_compress",
+      "brief_id": "unicaa01_p26_panic__chatcmpl_80322492584d__d3"
+    },
+    {
+      "pair_id": "p27_base64_pad",
+      "brief_id": "unicaa01_p27_panic__chatcmpl_df7c0f5ed153__d3"
+    },
+    {
+      "pair_id": "p28_glob_match",
+      "brief_id": "unicaa01_p28_panic__chatcmpl_bbd3c08f5fca__d3"
+    },
+    {
+      "pair_id": "p29_cron_field",
+      "brief_id": "unicaa01_p29_panic__chatcmpl_8a8c056ebc55__d3"
+    },
+    {
+      "pair_id": "p32_xml_escape",
+      "brief_id": "unicaa01_p32_panic__chatcmpl_136d4681e144__d3"
+    },
+    {
+      "pair_id": "p33_html_strip",
+      "brief_id": "unicaa01_p33_panic__chatcmpl_5d81120833b1__d3"
+    },
+    {
+      "pair_id": "p35_cookie_jar",
+      "brief_id": "unicaa01_p35_panic__chatcmpl_221ce4afc2b4__d3"
+    },
+    {
+      "pair_id": "p39_bloom_filter",
+      "brief_id": "unicaa01_p39_panic__chatcmpl_2dd7949f151c__d3"
+    },
+    {
+      "pair_id": "p40_skip_list",
+      "brief_id": "unicaa01_p40_panic__chatcmpl_fb69d4daa220__d3"
+    },
+    {
+      "pair_id": "p48_idempotency",
+      "brief_id": "unicaa01_p48_panic__chatcmpl_4aabf5e536c8__d3"
+    },
+    {
+      "pair_id": "p49_saga_step",
+      "brief_id": "unicaa01_p49_panic__chatcmpl_a3aa397db5d9__d2"
+    },
+    {
+      "pair_id": "p50_outbox",
+      "brief_id": "unicaa01_p50_panic__chatcmpl_6f078e4d2153__d3"
+    },
+    {
+      "pair_id": "p51_memoize",
+      "brief_id": "unicaa01_p51_panic__chatcmpl_de8dd51a0f3e__d3"
+    },
+    {
+      "pair_id": "p55_lexer",
+      "brief_id": "unicaa01_p55_panic__chatcmpl_e40ff3e0676f__d3"
+    },
+    {
+      "pair_id": "p56_shunting_yard",
+      "brief_id": "unicaa01_p56_panic__chatcmpl_17d1fcefd00c__d3"
+    },
+    {
+      "pair_id": "p57_expr_eval",
+      "brief_id": "unicaa01_p57_panic__chatcmpl_ad2d060f5ef6__d3"
+    },
+    {
+      "pair_id": "p58_diff_apply",
+      "brief_id": "unicaa01_p58_panic__chatcmpl_a3a63544106f__d3"
+    },
+    {
+      "pair_id": "p60_template_fmt",
+      "brief_id": "unicaa01_p60_panic__chatcmpl_1990b3d4152b__d3"
+    },
+    {
+      "pair_id": "p61_markdown_strip",
+      "brief_id": "unicaa01_p61_panic__chatcmpl_33a11d62d329__d3"
+    },
+    {
+      "pair_id": "p62_binary_search",
+      "brief_id": "unicaa01_p62_panic__chatcmpl_55716bdd6c36__d3"
+    },
+    {
+      "pair_id": "p63_heap_kth",
+      "brief_id": "unicaa01_p63_panic__chatcmpl_e98e0696f1c6__d3"
+    },
+    {
+      "pair_id": "p66_rot13",
+      "brief_id": "unicaa01_p66_panic__chatcmpl_f556133fbebe__d3"
+    }
+  ],
+  "all": [
+    {
+      "grade": "PASS",
+      "brief_id": "unicaa01_p01_panic__chatcmpl_8b67ddd03286__d16",
+      "pair_id": "p01_priority_queue",
+      "hard": [],
+      "soft": [],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "4 cases ok"
+      },
+      "narrative": "The `run_next` method in the `Scheduler` class currently raises a `incomplete body` that needs a thread-safe pop from the heap.",
+      "prefix": "The `run_next` method in the `Scheduler` class currently raises a `",
+      "code_chars": 970
+    },
+    {
+      "grade": "PASS",
+      "brief_id": "unicaa01_p02_panic__chatcmpl_c6cf9e514eba__d9",
+      "pair_id": "p02_lru_cache",
+      "hard": [],
+      "soft": [],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "6 cases ok"
+      },
+      "narrative": "The `get()` method is raising a `KeyError` when the key is missing, but it should return None instead.",
+      "prefix": "The `get()` method is raising a `",
+      "code_chars": 621
+    },
+    {
+      "grade": "PASS",
+      "brief_id": "unicaa01_p06_panic__chatcmpl_44fb68e7b5cd__d3",
+      "pair_id": "p06_json_parse",
+      "hard": [],
+      "soft": [],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "6 cases ok"
+      },
+      "narrative": "Fixing `the parse_json function` to handle minimal JSON arrays.",
+      "prefix": "Fixing `",
+      "code_chars": 2004
+    },
+    {
+      "grade": "PASS",
+      "brief_id": "unicaa01_p10_panic__chatcmpl_ec2610a87318__d3",
+      "pair_id": "p10_config_validate",
+      "hard": [],
+      "soft": [],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "7 cases ok"
+      },
+      "narrative": "Fixing `config check` so invalid ports are rejected.",
+      "prefix": "Fixing `",
+      "code_chars": 247
+    },
+    {
+      "grade": "SOFT",
+      "brief_id": "unicaa01_p12_panic__chatcmpl_b743782d78b3__d12",
+      "pair_id": "p12_fibonacci",
+      "hard": [],
+      "soft": [
+        "broken_in_prefix"
+      ],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "9 cases ok"
+      },
+      "narrative": "Fixing broken recursion in `fib` function and removing `raise path` with a short iterative loop.",
+      "prefix": "Fixing broken recursion in `fib` function and removing `",
+      "code_chars": 224
+    },
+    {
+      "grade": "SOFT",
+      "brief_id": "unicaa01_p14_panic__chatcmpl_fe69aa9a2766__d10",
+      "pair_id": "p14_regex_email",
+      "hard": [],
+      "soft": [
+        "broken_in_prefix"
+      ],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "6 cases ok"
+      },
+      "narrative": "Fixing the broken email regex and removing the `incomplete matcher` by using a simple local-part@domain.tld pattern.",
+      "prefix": "Fixing the broken email regex and removing the `",
+      "code_chars": 241
+    },
+    {
+      "grade": "PASS",
+      "brief_id": "unicaa01_p16_panic__chatcmpl_67e7b38d50e5__d16",
+      "pair_id": "p16_event_snapshot",
+      "hard": [],
+      "soft": [],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "5 cases ok"
+      },
+      "narrative": "The `apply` method in the `Store` class is currently raising a `RuntimeError` that should instead fold add/sub events onto balance in order.",
+      "prefix": "The `apply` method in the `Store` class is currently raising a `",
+      "code_chars": 398
+    },
+    {
+      "grade": "PASS",
+      "brief_id": "unicaa01_p17_panic__chatcmpl_e3c52ddea24e__d3",
+      "pair_id": "p17_deque_queue",
+      "hard": [],
+      "soft": [],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "5 cases ok"
+      },
+      "narrative": "Fixing `deq` by delegating pop_left to deque's popleft.",
+      "prefix": "Fixing `",
+      "code_chars": 361
+    },
+    {
+      "grade": "PASS",
+      "brief_id": "unicaa01_p18_panic__chatcmpl_2ba03f73cbb9__d3",
+      "pair_id": "p18_trie_prefix",
+      "hard": [],
+      "soft": [],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "8 cases ok"
+      },
+      "narrative": "Fixing `Trie` insert and starts_with so prefix lookups work.",
+      "prefix": "Fixing `",
+      "code_chars": 581
+    },
+    {
+      "grade": "PASS",
+      "brief_id": "unicaa01_p21_panic__chatcmpl_2da782af8cb0__d3",
+      "pair_id": "p21_dijkstra",
+      "hard": [],
+      "soft": [],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "6 cases ok"
+      },
+      "narrative": "Fixing `dijkstra` so non-negative edges yield the true shortest distance.",
+      "prefix": "Fixing `",
+      "code_chars": 563
+    },
+    {
+      "grade": "PASS",
+      "brief_id": "unicaa01_p23_panic__chatcmpl_223fdd2deb20__d3",
+      "pair_id": "p23_knapsack",
+      "hard": [],
+      "soft": [],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "6 cases ok"
+      },
+      "narrative": "Fixing `max_val` knapsack path to return the optimal 0/1 value.",
+      "prefix": "Fixing `",
+      "code_chars": 318
+    },
+    {
+      "grade": "PASS",
+      "brief_id": "unicaa01_p25_panic__chatcmpl_5f47c2976091__d3",
+      "pair_id": "p25_edit_distance",
+      "hard": [],
+      "soft": [],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "8 cases ok"
+      },
+      "narrative": "Fixing `edit_distance` by implementing the classic Levenshtein DP algorithm.",
+      "prefix": "Fixing `",
+      "code_chars": 701
+    },
+    {
+      "grade": "PASS",
+      "brief_id": "unicaa01_p26_panic__chatcmpl_80322492584d__d3",
+      "pair_id": "p26_rle_compress",
+      "hard": [],
+      "soft": [],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "8 cases ok"
+      },
+      "narrative": "Fixing `rle_encode` to correctly count consecutive characters.",
+      "prefix": "Fixing `",
+      "code_chars": 416
+    },
+    {
+      "grade": "PASS",
+      "brief_id": "unicaa01_p27_panic__chatcmpl_df7c0f5ed153__d3",
+      "pair_id": "p27_base64_pad",
+      "hard": [],
+      "soft": [],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "5 cases ok"
+      },
+      "narrative": "Fixing `b64_encode` with a working base64 implementation.",
+      "prefix": "Fixing `",
+      "code_chars": 175
+    },
+    {
+      "grade": "PASS",
+      "brief_id": "unicaa01_p28_panic__chatcmpl_bbd3c08f5fca__d3",
+      "pair_id": "p28_glob_match",
+      "hard": [],
+      "soft": [],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "7 cases ok"
+      },
+      "narrative": "Fixing `glob_match` to handle wildcards.",
+      "prefix": "Fixing `",
+      "code_chars": 607
+    },
+    {
+      "grade": "PASS",
+      "brief_id": "unicaa01_p29_panic__chatcmpl_8a8c056ebc55__d3",
+      "pair_id": "p29_cron_field",
+      "hard": [],
+      "soft": [],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "7 cases ok"
+      },
+      "narrative": "Fixing `cron_minute_matches` now handles step patterns like `*/15`.",
+      "prefix": "Fixing `",
+      "code_chars": 549
+    },
+    {
+      "grade": "PASS",
+      "brief_id": "unicaa01_p32_panic__chatcmpl_136d4681e144__d3",
+      "pair_id": "p32_xml_escape",
+      "hard": [],
+      "soft": [],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "5 cases ok"
+      },
+      "narrative": "Fixing `escape` for XML reserved characters.",
+      "prefix": "Fixing `",
+      "code_chars": 402
+    },
+    {
+      "grade": "PASS",
+      "brief_id": "unicaa01_p33_panic__chatcmpl_5d81120833b1__d3",
+      "pair_id": "p33_html_strip",
+      "hard": [],
+      "soft": [],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "6 cases ok"
+      },
+      "narrative": "Fixing `strip_tags` to convert simple HTML tags to plain text.",
+      "prefix": "Fixing `",
+      "code_chars": 157
+    },
+    {
+      "grade": "PASS",
+      "brief_id": "unicaa01_p35_panic__chatcmpl_221ce4afc2b4__d3",
+      "pair_id": "p35_cookie_jar",
+      "hard": [],
+      "soft": [],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "5 cases ok"
+      },
+      "narrative": "Fixing `cookie_jar` by replacing stubs with real dict storage.",
+      "prefix": "Fixing `",
+      "code_chars": 260
+    },
+    {
+      "grade": "PASS",
+      "brief_id": "unicaa01_p39_panic__chatcmpl_2dd7949f151c__d3",
+      "pair_id": "p39_bloom_filter",
+      "hard": [],
+      "soft": [],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "4 cases ok"
+      },
+      "narrative": "Fixing `bloom` by implementing two hash functions and bitwise operations.",
+      "prefix": "Fixing `",
+      "code_chars": 646
+    },
+    {
+      "grade": "PASS",
+      "brief_id": "unicaa01_p40_panic__chatcmpl_fb69d4daa220__d3",
+      "pair_id": "p40_skip_list",
+      "hard": [],
+      "soft": [],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "5 cases ok"
+      },
+      "narrative": "Fixing `insert/contains` on a sorted item list.",
+      "prefix": "Fixing `",
+      "code_chars": 384
+    },
+    {
+      "grade": "SOFT",
+      "brief_id": "unicaa01_p42_panic__chatcmpl_6d7feca070ed__d8",
+      "pair_id": "p42_semaphore",
+      "hard": [],
+      "soft": [
+        "error_to_fix_prefix"
+      ],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "5 cases ok"
+      },
+      "narrative": "The error in the code is the `acquire path` \u2014 return True only while permits remain.",
+      "prefix": "The error in the code is the `",
+      "code_chars": 606
+    },
+    {
+      "grade": "SOFT",
+      "brief_id": "unicaa01_p43_panic__chatcmpl_0c1386eff216__d7",
+      "pair_id": "p43_rwlock",
+      "hard": [],
+      "soft": [
+        "error_to_fix_prefix"
+      ],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "5 cases ok"
+      },
+      "narrative": "The error to fix is the `rwlock` methods are stubs.",
+      "prefix": "The error to fix is the `",
+      "code_chars": 924
+    },
+    {
+      "grade": "SOFT",
+      "brief_id": "unicaa01_p45_panic__chatcmpl_e8dcf81d0af7__d8",
+      "pair_id": "p45_producer_consumer",
+      "hard": [],
+      "soft": [
+        "error_to_fix_prefix"
+      ],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "4 cases ok"
+      },
+      "narrative": "The error in the code is the `drain path` \u2014 empty the queue into a list.",
+      "prefix": "The error in the code is the `",
+      "code_chars": 607
+    },
+    {
+      "grade": "PASS",
+      "brief_id": "unicaa01_p48_panic__chatcmpl_4aabf5e536c8__d3",
+      "pair_id": "p48_idempotency",
+      "hard": [],
+      "soft": [],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "4 cases ok"
+      },
+      "narrative": "Fixing `put_if_absent` to track seen keys and reject repeats.",
+      "prefix": "Fixing `",
+      "code_chars": 393
+    },
+    {
+      "grade": "PASS",
+      "brief_id": "unicaa01_p49_panic__chatcmpl_a3aa397db5d9__d2",
+      "pair_id": "p49_saga_step",
+      "hard": [],
+      "soft": [],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "5 cases ok"
+      },
+      "narrative": "The `saga` is a simple compensation pattern.",
+      "prefix": "The `",
+      "code_chars": 463
+    },
+    {
+      "grade": "PASS",
+      "brief_id": "unicaa01_p50_panic__chatcmpl_6f078e4d2153__d3",
+      "pair_id": "p50_outbox",
+      "hard": [],
+      "soft": [],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "5 cases ok"
+      },
+      "narrative": "Fixing `drain` method to return pending events.",
+      "prefix": "Fixing `",
+      "code_chars": 337
+    },
+    {
+      "grade": "PASS",
+      "brief_id": "unicaa01_p51_panic__chatcmpl_de8dd51a0f3e__d3",
+      "pair_id": "p51_memoize",
+      "hard": [],
+      "soft": [],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "4 cases ok"
+      },
+      "narrative": "Fixing `memoize` by caching results in a dictionary.",
+      "prefix": "Fixing `",
+      "code_chars": 328
+    },
+    {
+      "grade": "SOFT",
+      "brief_id": "unicaa01_p52_panic__chatcmpl_45ac8e8730a8__d8",
+      "pair_id": "p52_lazy_property",
+      "hard": [],
+      "soft": [
+        "error_to_fix_prefix"
+      ],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "5 cases ok"
+      },
+      "narrative": "The error in the code is the `missing implementation` in the `__get__` method.",
+      "prefix": "The error in the code is the `",
+      "code_chars": 571
+    },
+    {
+      "grade": "SOFT",
+      "brief_id": "unicaa01_p54_panic__chatcmpl_1170b3ad6d58__d8",
+      "pair_id": "p54_fsm_turnstile",
+      "hard": [],
+      "soft": [
+        "error_to_fix_prefix"
+      ],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "4 cases ok"
+      },
+      "narrative": "The error in the code is the `event path` \u2014 a coin should unlock the turnstile.",
+      "prefix": "The error in the code is the `",
+      "code_chars": 403
+    },
+    {
+      "grade": "PASS",
+      "brief_id": "unicaa01_p55_panic__chatcmpl_e40ff3e0676f__d3",
+      "pair_id": "p55_lexer",
+      "hard": [],
+      "soft": [],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "5 cases ok"
+      },
+      "narrative": "Fixing `lexer` by implementing a simple whitespace split.",
+      "prefix": "Fixing `",
+      "code_chars": 126
+    },
+    {
+      "grade": "PASS",
+      "brief_id": "unicaa01_p56_panic__chatcmpl_17d1fcefd00c__d3",
+      "pair_id": "p56_shunting_yard",
+      "hard": [],
+      "soft": [],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "6 cases ok"
+      },
+      "narrative": "Fixing `shunting_yard` implementing RPN conversion.",
+      "prefix": "Fixing `",
+      "code_chars": 804
+    },
+    {
+      "grade": "PASS",
+      "brief_id": "unicaa01_p57_panic__chatcmpl_ad2d060f5ef6__d3",
+      "pair_id": "p57_expr_eval",
+      "hard": [],
+      "soft": [],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "6 cases ok"
+      },
+      "narrative": "Fixing `eval_rpn` with a stack-based approach.",
+      "prefix": "Fixing `",
+      "code_chars": 603
+    },
+    {
+      "grade": "PASS",
+      "brief_id": "unicaa01_p58_panic__chatcmpl_a3a63544106f__d3",
+      "pair_id": "p58_diff_apply",
+      "hard": [],
+      "soft": [],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "4 cases ok"
+      },
+      "narrative": "Fixing `diff` to apply unified diff patches.",
+      "prefix": "Fixing `",
+      "code_chars": 1161
+    },
+    {
+      "grade": "PASS",
+      "brief_id": "unicaa01_p60_panic__chatcmpl_1990b3d4152b__d3",
+      "pair_id": "p60_template_fmt",
+      "hard": [],
+      "soft": [],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "5 cases ok"
+      },
+      "narrative": "Fixing `render_template` to handle {{var}} substitution.",
+      "prefix": "Fixing `",
+      "code_chars": 252
+    },
+    {
+      "grade": "PASS",
+      "brief_id": "unicaa01_p61_panic__chatcmpl_33a11d62d329__d3",
+      "pair_id": "p61_markdown_strip",
+      "hard": [],
+      "soft": [],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "6 cases ok"
+      },
+      "narrative": "Fixing `md_to_text` to strip bold markers.",
+      "prefix": "Fixing `",
+      "code_chars": 145
+    },
+    {
+      "grade": "PASS",
+      "brief_id": "unicaa01_p62_panic__chatcmpl_55716bdd6c36__d3",
+      "pair_id": "p62_binary_search",
+      "hard": [],
+      "soft": [],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "9 cases ok"
+      },
+      "narrative": "Fixing `bisect_left` with a manual binary search.",
+      "prefix": "Fixing `",
+      "code_chars": 310
+    },
+    {
+      "grade": "PASS",
+      "brief_id": "unicaa01_p63_panic__chatcmpl_e98e0696f1c6__d3",
+      "pair_id": "p63_heap_kth",
+      "hard": [],
+      "soft": [],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "5 cases ok"
+      },
+      "narrative": "Fixing `fix` by sorting the list and picking the (k-1)th element.",
+      "prefix": "Fixing `",
+      "code_chars": 161
+    },
+    {
+      "grade": "PASS",
+      "brief_id": "unicaa01_p66_panic__chatcmpl_f556133fbebe__d3",
+      "pair_id": "p66_rot13",
+      "hard": [],
+      "soft": [],
+      "verify": true,
+      "suite": {
+        "id": "RUN_quality_suite",
+        "pass": true,
+        "detail": "7 cases ok"
+      },
+      "narrative": "Fixing `rot13` function to correctly apply the ROT13 cipher.",
+      "prefix": "Fixing `",
+      "code_chars": 416
+    }
+  ]
+}

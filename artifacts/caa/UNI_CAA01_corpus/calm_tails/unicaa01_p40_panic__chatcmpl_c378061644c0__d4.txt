@@ -1,0 +1,17 @@
+fix: Remove `blank methods` from SkipList.  
+unicaa01_p40_panic/main.py
+```python
+class SkipList:
+    def __init__(self):
+        self._items = []
+    def insert(self, x: int):
+        if x not in self._items:
+            self._items.append(x)
+    def contains(self, x: int) -> bool:
+        return x in self._items
+
+def demo():
+    s = SkipList()
+    s.insert(5)
+    return s.contains(5)
+```

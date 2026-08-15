@@ -1,0 +1,123 @@
+{
+  "claim": "XPU live natural extraction of p06 is pool-eligible high-quality Method B capture",
+  "pass": true,
+  "slug": "unicaa01_corpus_p06_json_parse_panic__mpl_44fb68e7b5cd__d3",
+  "device_path": "xpu hybrid device_map + dual_full_forward",
+  "admission_pass": true,
+  "pool_eligible": true,
+  "hash_verify": true,
+  "cap_integrity": true,
+  "cap_checks": [
+    {
+      "id": "CAP1_d",
+      "pass": true,
+      "detail": "capture.d=3 expected=3"
+    },
+    {
+      "id": "CAP2_prompt_len",
+      "pass": true,
+      "detail": "capture.prompt_len=1738 expected=1738"
+    },
+    {
+      "id": "CAP3_shared_pos",
+      "pass": true,
+      "detail": "got=1740 expected=1740"
+    },
+    {
+      "id": "CAP4_divergent_pos",
+      "pass": true,
+      "detail": "got=1741 expected=1741"
+    },
+    {
+      "id": "CAP5_both_arms_layers",
+      "pass": true,
+      "detail": "layers=[10, 16, 22]"
+    },
+    {
+      "id": "CAP6_shared_identical",
+      "pass": true,
+      "detail": "calm[L].shared == bad[L].shared"
+    },
+    {
+      "id": "CAP7_finite_activations",
+      "pass": true,
+      "detail": "all shared/divergent activation vectors non-empty and finite"
+    }
+  ],
+  "d": 3,
+  "prompt_len": 1738,
+  "positions": {
+    "shared": 1740,
+    "divergent": 1741
+  },
+  "capture_method": "dual_full_forward",
+  "layers": [
+    10,
+    16,
+    22
+  ],
+  "per_layer": [
+    {
+      "L": 10,
+      "calm_shared": {
+        "len": 3584,
+        "l2": 75.7117,
+        "finite": true
+      },
+      "calm_div": {
+        "len": 3584,
+        "l2": 76.6056,
+        "finite": true
+      },
+      "bad_shared_eq": true,
+      "bad_div": {
+        "len": 3584,
+        "l2": 69.981,
+        "finite": true
+      },
+      "div_diff_l2": 79.8084
+    },
+    {
+      "L": 16,
+      "calm_shared": {
+        "len": 3584,
+        "l2": 90.333,
+        "finite": true
+      },
+      "calm_div": {
+        "len": 3584,
+        "l2": 91.6881,
+        "finite": true
+      },
+      "bad_shared_eq": true,
+      "bad_div": {
+        "len": 3584,
+        "l2": 91.8302,
+        "finite": true
+      },
+      "div_diff_l2": 107.4748
+    },
+    {
+      "L": 22,
+      "calm_shared": {
+        "len": 3584,
+        "l2": 211.1305,
+        "finite": true
+      },
+      "calm_div": {
+        "len": 3584,
+        "l2": 207.7521,
+        "finite": true
+      },
+      "bad_shared_eq": true,
+      "bad_div": {
+        "len": 3584,
+        "l2": 232.1772,
+        "finite": true
+      },
+      "div_diff_l2": 225.3056
+    }
+  ],
+  "discover_includes": true,
+  "n_corpus_pool": 6
+}

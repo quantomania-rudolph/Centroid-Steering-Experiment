@@ -1,0 +1,8 @@
+{
+  "qa_by_brief": {},
+  "qa_batch_total": 0,
+  "gen_fallback_batch_total": 3,
+  "max_calls_per_brief": 3,
+  "max_calls_per_batch": 15,
+  "max_gen_fallback_per_batch": 8
+}

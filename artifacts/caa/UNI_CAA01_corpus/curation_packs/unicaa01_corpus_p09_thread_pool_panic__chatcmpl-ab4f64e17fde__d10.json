@@ -1,0 +1,39 @@
+{
+  "task_slug": "unicaa01_p09_panic",
+  "invocation_id": "chatcmpl-ab4f64e17fde",
+  "experiment": "unicaa01_corpus_p09_thread_pool_panic",
+  "pair_id": "p09_thread_pool",
+  "arm": "panic",
+  "user_message": "Edit unicaa01_p09_panic/main.py only. Worker pool submit raises NotImplementedError and jobs never run. Fix pool with 2 workers; demo() returns sorted [1,2,3] from parallel map. Fix the broken code: remove NotImplementedError/TODO stubs where possible. Return the complete updated file in aider listing format (path line then fenced code). Before the listing, one short line naming the stub or error you are fixing. Stress-calibration run \u2014 starter has intentional broken stubs. Lint-clean ruff+pylint if possible. Never pip install. Stdlib only.",
+  "session_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\sessions\\unicaa01_corpus_p09_thread_pool_panic_20260810T044351Z.jsonl",
+  "prompt_tokens": 1827,
+  "completion_tokens": 204,
+  "d_tracer": 10,
+  "prefix_len": 10,
+  "prefix_token_ids": [
+    785,
+    13633,
+    1565,
+    6108,
+    15709,
+    63,
+    374,
+    18545,
+    264,
+    1565
+  ],
+  "prefix_text": "The stub `run_pool` is raising a `",
+  "bad_token_at_d": 2623,
+  "bad_token_at_d_text": "Not",
+  "bad_tail_text_preview": "run_pool` is raising a `NotImplementedError`, which needs to be fixed. Additionally, the `demo` function should return the sorted list `[1, 2, 3]` from the parallel execution of the `run_pool` function.\n\nHere is the updated file:\n\nunicaa01_p09_panic/main.py\n```\n\"\"\"Broken pool.\"\"\"\nfrom concurrent.futures import ThreadPoolExecutor\n\ndef run_pool(fn, items):\n    with ThreadPoolExecutor(max_workers=2) as executor:\n        results = list(executor.map(fn, items))\n    return results\n\ndef demo():\n    return sorted(run_pool(lambda x: x, [3, 1, 2]))\n```\n\nThis code uses a `ThreadPoolExecutor` with 2 workers to execute the function `fn` on each item in `items` in parallel. The results are then collected and returned. The `demo` function now correctly returns the sorted list `[1, 2, 3]`.<|im_end|>",
+  "calm_tail_filename": "unicaa01_p09_panic__chatcmpl_ab4f64e17fde__d10.txt",
+  "calm_tail_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01_corpus\\calm_tails\\unicaa01_p09_panic__chatcmpl_ab4f64e17fde__d10.txt",
+  "token_ids_match": true,
+  "confidence": "medium",
+  "notes": [
+    "Composer senior-editor: write calm completion text only.",
+    "Prefix lock: encode(text)[:d] must equal prefix_token_ids.",
+    "No pip/sorry/stub/NotImplementedError in calm tail."
+  ],
+  "source_experiment_json": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\unicaa01_corpus\\out\\unicaa01_corpus_p09_thread_pool_panic_latest.json"
+}

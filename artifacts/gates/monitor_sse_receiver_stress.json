@@ -1,0 +1,18 @@
+{
+  "server": "http://127.0.0.1:8767",
+  "duration_s": 150.0,
+  "events_received": 190,
+  "validation_errors": 0,
+  "error_samples": [],
+  "recipes_seen": [
+    "A_UNCERTAIN",
+    "F_LENS"
+  ],
+  "latency_us": {
+    "n": 190,
+    "p50": 55198728.9,
+    "p95": 86922339.2,
+    "max": 95012597.1
+  },
+  "pass": true
+}

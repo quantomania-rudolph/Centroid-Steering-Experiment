@@ -1,0 +1,124 @@
+{
+  "gate": "cast_stream_live",
+  "version": 1,
+  "timestamp": "2026-08-14T02:23:16.667767+00:00",
+  "pass": true,
+  "checks": [
+    {
+      "id": "PRE1",
+      "pass": true,
+      "detail": "server ok"
+    },
+    {
+      "id": "PRE2",
+      "pass": true,
+      "detail": "shadow=True inject=False"
+    },
+    {
+      "id": "PRE3",
+      "pass": true,
+      "detail": "xpu"
+    },
+    {
+      "id": "A1",
+      "pass": true,
+      "detail": "{'n': 157, 'g_stream_rate': 0.0, 'gamma_median': 0.008988016274752398, 'inject_any': False, 'cast_eval_p95_us': 3387.9}"
+    },
+    {
+      "id": "A2",
+      "pass": true,
+      "detail": "gamma_median=0.008988016274752398"
+    },
+    {
+      "id": "A3",
+      "pass": true,
+      "detail": "no inject_applied on clean"
+    },
+    {
+      "id": "B1",
+      "pass": true,
+      "detail": "n=89 min=32 recipe_hits=1 stub_distress=True"
+    },
+    {
+      "id": "B2",
+      "pass": true,
+      "detail": "g_stream_rate=0.011235955056179775"
+    },
+    {
+      "id": "B3",
+      "pass": true,
+      "detail": "n_g_stream=1 panic_gamma_median=0.9999999168490568"
+    },
+    {
+      "id": "B4",
+      "pass": true,
+      "detail": "n_g_stream=1 c_plus_g_minus_rate=0.0000"
+    },
+    {
+      "id": "B5",
+      "pass": true,
+      "detail": "alpha_without_and_gates=0"
+    },
+    {
+      "id": "L1",
+      "pass": true,
+      "detail": "p95_us=1587.8"
+    },
+    {
+      "id": "SHADOW",
+      "pass": true,
+      "detail": "n_panic=89 missing_cast_shadow=0"
+    },
+    {
+      "id": "P1",
+      "pass": true,
+      "detail": "mismatch_rate=0.0000"
+    },
+    {
+      "id": "SSE1",
+      "pass": true,
+      "detail": "n_cast_sse=0 clean_shadow_n=157 panic_shadow_ok=True"
+    }
+  ],
+  "sabotage": [
+    {
+      "id": "CAST-S1",
+      "pass": true,
+      "detail": "sep_true=1.000 gamma_true_h=1.000 gamma_shuf_u=0.013"
+    },
+    {
+      "id": "CAST-S2",
+      "pass": true,
+      "detail": "clean_high_gamma_with_tau+1=0"
+    },
+    {
+      "id": "CAST-S3",
+      "pass": true,
+      "detail": "g_stream_at_step_10=True"
+    }
+  ],
+  "environment": {
+    "health": {
+      "ok": true,
+      "device": "xpu",
+      "gpu_name": "Intel(R) Arc(TM) 140V GPU (16GB)",
+      "refuses_cpu_fallback": true,
+      "session_id": "boot_20260814T021312Z",
+      "invocations": 0,
+      "session_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\aider_sessions\\boot_20260814T021312Z.jsonl",
+      "chaos_enabled": true,
+      "cast_shadow": true,
+      "cast_inject": false,
+      "cast_vector_id": "UNI_CAA01",
+      "degraded_mode": false,
+      "probe_layers": [
+        10,
+        16,
+        22
+      ],
+      "chaos_timing": {}
+    }
+  },
+  "clean_session": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\cast_stream_gate_clean_latest.json",
+  "panic_session": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\cast_stream_gate_panic_latest.json"
+}

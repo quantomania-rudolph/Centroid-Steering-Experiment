@@ -1,0 +1,16 @@
+# Production fit config (non-secret). Matches run_production_fit.py defaults.
+
+model_id: Qwen/Qwen2.5-Coder-7B-Instruct
+source_layers: "8-26"
+target_layer: 27
+n_prompts: 100
+max_seq_len: 128
+skip_first: 16
+dim_batch: 64
+dtype: bfloat16
+compile_model: false
+checkpoint_path: ckpt.pt
+# Quarter-pass (25/50/75/100%) + per-prompt checkpoints via checkpoint_fit.py
+checkpoint_every_prompts: 1
+out_file: qwen_jacobian_lens.pt
+prompts_file: corpus_100.json
