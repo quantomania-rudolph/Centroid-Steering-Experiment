@@ -2,7 +2,12 @@
 
 
 def parse_ini(text):
-    raise NotImplementedError("parse_ini not implemented")
+    result = {}
+    for line in text.split('\n'):
+        if '=' in line:
+            key, value = line.split('=', 1)
+            result[key.strip()] = value.strip()
+    return result
 
 
 def demo():
