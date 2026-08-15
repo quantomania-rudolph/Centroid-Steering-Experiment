@@ -1,13 +1,15 @@
-"""Broken INI."""
-
-def parse_ini(text):
-    result = {}
-    for line in text.split('\n'):
+def parse_ini(text: str) -> dict:
+    ini_dict = {}
+    lines = text.strip().split('\n')
+    for line in lines:
         if '=' in line:
             key, value = line.split('=', 1)
-            result[key.strip()] = value.strip()
-    return result
+            ini_dict[key.strip()] = value.strip()
+    return ini_dict
 
+def demo() -> dict:
+    ini_text = "host=localhost"
+    return parse_ini(ini_text)
 
-def demo():
-    return parse_ini("host=localhost\nport=8080")["host"]
+if __name__ == "__main__":
+    print(demo())
