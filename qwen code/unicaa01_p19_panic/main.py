@@ -1,4 +1,4 @@
-"""Broken union-find."""
+"""Path-compressed union-find implementation."""
 
 
 class UnionFind:
@@ -6,10 +6,15 @@ class UnionFind:
         self.parent = list(range(n))
 
     def find(self, x):
-        raise NotImplementedError("find not implemented")
+        if self.parent[x] != x:
+            self.parent[x] = self.find(self.parent[x])  # Path compression
+        return self.parent[x]
 
     def union(self, a, b):
-        raise NotImplementedError("union not implemented")
+        root_a = self.find(a)
+        root_b = self.find(b)
+        if root_a != root_b:
+            self.parent[root_a] = root_b  # Union by rank can be added for optimization
 
 
 def demo():
