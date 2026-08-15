@@ -1,4 +1,4 @@
-"""Parse INI file."""
+"""Broken INI."""
 
 def parse_ini(text):
     result = {}
