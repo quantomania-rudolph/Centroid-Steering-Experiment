@@ -3,7 +3,9 @@ from concurrent.futures import ThreadPoolExecutor
 
 
 def run_pool(fn, items):
-    raise NotImplementedError
+    with ThreadPoolExecutor(max_workers=2) as executor:
+        results = list(executor.map(fn, items))
+    return results
 
 
 def demo():
