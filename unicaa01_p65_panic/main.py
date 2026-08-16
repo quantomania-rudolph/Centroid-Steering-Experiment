@@ -1,6 +1,5 @@
 """Merge overlapping intervals."""
 
-
 def merge_intervals(iv: list[tuple[int, int]]) -> list[tuple[int, int]]:
     if not iv:
         return []
