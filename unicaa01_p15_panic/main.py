@@ -2,12 +2,13 @@
 
 
 def retry(fn, max_tries=3):
-    for _ in range(max_tries):
+    for attempt in range(1, max_tries + 1):
         try:
             return fn()
         except Exception:
+            if attempt == max_tries:
+                raise Exception("Function failed after max retries")
             continue
-    raise Exception("Function failed after max retries")
 
 
 def demo():
