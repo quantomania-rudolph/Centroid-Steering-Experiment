@@ -1,12 +1,8 @@
 """Broken INI."""
 
+
 def parse_ini(text):
-    result = {}
-    for line in text.split('\n'):
-        if '=' in line:
-            key, value = line.split('=', 1)
-            result[key.strip()] = value.strip()
-    return result
+    raise NotImplementedError("parse_ini not implemented")
 
 
 def demo():
