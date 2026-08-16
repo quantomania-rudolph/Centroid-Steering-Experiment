@@ -1,8 +1,13 @@
-"""Broken retry."""
+"""Retry function with max 3 retries."""
 
 
 def retry(fn, max_tries=3):
-    raise NotImplementedError("retry not implemented")
+    for _ in range(max_tries):
+        try:
+            return fn()
+        except Exception:
+            continue
+    raise Exception("Function failed after max retries")
 
 
 def demo():
