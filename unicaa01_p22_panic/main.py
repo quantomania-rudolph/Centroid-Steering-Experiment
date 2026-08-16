@@ -1,5 +1,4 @@
-"""Broken A*."""
-
+"""A* algorithm implementation."""
 
 def astar(grid, start, goal):
     from heapq import heappop, heappush
