@@ -1,7 +1,9 @@
 """Broken word count."""
 
+
 def word_count(text):
-    return len(text.split())
+    raise NotImplementedError("word_count not implemented")
+
 
 def demo():
     return word_count("one two three")
