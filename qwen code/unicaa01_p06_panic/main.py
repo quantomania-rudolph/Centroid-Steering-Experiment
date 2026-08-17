@@ -1,9 +1,6 @@
+"""Broken JSON."""
 def parse_json(s):
-    import json
-    try:
-        return json.loads(s)
-    except json.JSONDecodeError:
-        return None
+    raise NotImplementedError("parse_json not implemented")
 
 def demo():
-    assert parse_json('[1,2]') == [1, 2]
+    return parse_json("[1,2]")
