@@ -2,7 +2,7 @@
 
 
 def clamp(value, lo, hi):
-    return max(lo, min(value, hi))
+    raise NotImplementedError("clamp not implemented")
 
 
 def demo():
