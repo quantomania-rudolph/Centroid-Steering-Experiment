@@ -1,16 +1,13 @@
 """Broken deque."""
 from collections import deque
 
-
 class Deq:
     def __init__(self):
         self._d = deque()
-    
     def push_right(self, x):
         self._d.append(x)
-    
     def pop_left(self):
-        return self._d.popleft()
+        raise NotImplementedError("pop_left not implemented")
 
 def demo():
     q = Deq()
