@@ -1,6 +1,8 @@
-"""Broken config."""
 def validate_config(cfg):
-    raise NotImplementedError("validate_config not implemented")
+    port = cfg.get("port")
+    if port is not None and port > 65535:
+        return False
+    return True
 
 def demo():
-    return validate_config({"port": 99999})
+    return not validate_config({"port": 99999})
