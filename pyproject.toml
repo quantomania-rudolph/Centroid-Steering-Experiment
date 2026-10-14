@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "jlens-qwen"
 version = "0.1.0"
-description = "J-Lens pipeline for Qwen2.5-Coder-7B-Instruct on Intel Arc"
+description = "Centroid Steering Experiment — conditional activation steering for Qwen2.5-Coder-7B on Intel Arc (jlens-qwen package)"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [

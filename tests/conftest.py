@@ -1,4 +1,4 @@
-"""Pytest configuration for J-Do It."""
+"""Pytest configuration for Centroid Steering Experiment (jlens-qwen)."""
 
 from __future__ import annotations
 

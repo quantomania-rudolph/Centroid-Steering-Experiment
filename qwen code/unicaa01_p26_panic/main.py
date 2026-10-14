@@ -11,4 +11,7 @@ def rle_encode(s):
     return ''.join(encoded)
 
 def demo():
-    return rle_encode("aaabbc") == 'a3b2c1'
+    test_string = "aaabbc"
+    expected_output = "a3b2c1"
+    actual_output = rle_encode(test_string)
+    return actual_output == expected_output

@@ -1,0 +1,28 @@
+{
+  "verified_at_utc": "2026-10-14T21:50:56.782888+00:00",
+  "live_cast_pairs": 15,
+  "demo_panic_pass": 12,
+  "demo_neutral_pass": 5,
+  "demo_panic_pct": 80.0,
+  "demo_neutral_pct": 33.3,
+  "demo_lift_pp": 46.7,
+  "demo_relative_success_x": 2.4,
+  "avg_tokens_panic_inv1": 116,
+  "avg_tokens_neutral_inv1": 330,
+  "token_reduction_pct": 64.9,
+  "cast_alpha_0": 0.85,
+  "caa_natural_pairs": 39,
+  "corpus_scan": {
+    "n_files": 129,
+    "n_panic_ok": 56,
+    "n_neutral_ok": 60
+  },
+  "gates_pass": {
+    "cast_stream_live": true,
+    "cast_inject_live": true,
+    "caa_alpha0_4c": true,
+    "cast_oneoff_panic": true,
+    "cast_oneoff_b02": true
+  },
+  "repro_command": "python research/compute_resume_stats.py"
+}
