@@ -5,8 +5,12 @@
 **Public name:** Centroid Steering Experiment  
 **Repo folder / legacy codename:** `J-Do It` · Python package: `jlens-qwen` (J-Lens on Qwen2.5-Coder-7B-Instruct)
 
-**Resume-facing summary:** [CENTROID_STEERING_EXPERIMENT_RESUME.md](CENTROID_STEERING_EXPERIMENT_RESUME.md)  
-**Verified metrics (JSON):** [resume_metrics_snapshot.json](resume_metrics_snapshot.json) — refresh with `python research/compute_resume_stats.py`
+| Doc | Purpose |
+|-----|---------|
+| [FOR_REVIEWERS.md](FOR_REVIEWERS.md) | **Start here** — resume claims → files & commands |
+| [CENTROID_STEERING_EXPERIMENT_RESUME.md](CENTROID_STEERING_EXPERIMENT_RESUME.md) | Recruiter packet & bullets |
+| [resume_metrics_snapshot.json](resume_metrics_snapshot.json) | Frozen headline metrics — `python research/compute_resume_stats.py` |
+| [README.md](../README.md) | GitHub landing (mirrors headline + claim table) |
 
 ---
 

@@ -1,5 +1,161 @@
 {
-  "verified_at_utc": "2026-10-14T21:50:56.782888+00:00",
+  "verified_at_utc": "2026-10-14T23:01:46.258438+00:00",
+  "headline_inclusion_rule": "Corpus panic _latest.json with cast_enabled=true, cast_alpha_0=0.85, and inject_applied on at least one token in the richest invocation.",
+  "demo_scoring_rule": "Run on-disk main.py demo() via ORACLES in compute_resume_stats.py; full Aider session output, not inv1-only.",
+  "live_cast_pair_ids": [
+    "p08_rate_limiter",
+    "p09_thread_pool",
+    "p10_config_validate",
+    "p11_palindrome",
+    "p14_regex_email",
+    "p15_http_retry",
+    "p17_deque_queue",
+    "p27_base64_pad",
+    "p29_cron_field",
+    "p30_ini_parse",
+    "p32_xml_escape",
+    "p33_html_strip",
+    "p37_hash_chain",
+    "p45_producer_consumer",
+    "p46_circuit_breaker"
+  ],
+  "pair_details": [
+    {
+      "pair_id": "p08_rate_limiter",
+      "panic_session": "experiments/unicaa01_corpus/out/unicaa01_corpus_p08_rate_limiter_panic_latest.json",
+      "neutral_session": "experiments/unicaa01_corpus/out/unicaa01_corpus_p08_rate_limiter_neutral_latest.json",
+      "panic_task_slug": "unicaa01_p08_panic",
+      "demo_panic_pass": false,
+      "demo_neutral_pass": false,
+      "inject_count_logged": 1
+    },
+    {
+      "pair_id": "p09_thread_pool",
+      "panic_session": "experiments/unicaa01_corpus/out/unicaa01_corpus_p09_thread_pool_panic_latest.json",
+      "neutral_session": "experiments/unicaa01_corpus/out/unicaa01_corpus_p09_thread_pool_neutral_latest.json",
+      "panic_task_slug": "unicaa01_p09_panic",
+      "demo_panic_pass": true,
+      "demo_neutral_pass": true,
+      "inject_count_logged": 1
+    },
+    {
+      "pair_id": "p10_config_validate",
+      "panic_session": "experiments/unicaa01_corpus/out/unicaa01_corpus_p10_config_validate_panic_latest.json",
+      "neutral_session": "experiments/unicaa01_corpus/out/unicaa01_corpus_p10_config_validate_neutral_latest.json",
+      "panic_task_slug": "unicaa01_p10_panic",
+      "demo_panic_pass": false,
+      "demo_neutral_pass": true,
+      "inject_count_logged": 1
+    },
+    {
+      "pair_id": "p11_palindrome",
+      "panic_session": "experiments/unicaa01_corpus/out/unicaa01_corpus_p11_palindrome_panic_latest.json",
+      "neutral_session": "experiments/unicaa01_corpus/out/unicaa01_corpus_p11_palindrome_neutral_latest.json",
+      "panic_task_slug": "unicaa01_p11_panic",
+      "demo_panic_pass": true,
+      "demo_neutral_pass": true,
+      "inject_count_logged": 1
+    },
+    {
+      "pair_id": "p14_regex_email",
+      "panic_session": "experiments/unicaa01_corpus/out/unicaa01_corpus_p14_regex_email_panic_latest.json",
+      "neutral_session": "experiments/unicaa01_corpus/out/unicaa01_corpus_p14_regex_email_neutral_latest.json",
+      "panic_task_slug": "unicaa01_p14_panic",
+      "demo_panic_pass": true,
+      "demo_neutral_pass": false,
+      "inject_count_logged": 1
+    },
+    {
+      "pair_id": "p15_http_retry",
+      "panic_session": "experiments/unicaa01_corpus/out/unicaa01_corpus_p15_http_retry_panic_latest.json",
+      "neutral_session": "experiments/unicaa01_corpus/out/unicaa01_corpus_p15_http_retry_neutral_latest.json",
+      "panic_task_slug": "unicaa01_p15_panic",
+      "demo_panic_pass": true,
+      "demo_neutral_pass": true,
+      "inject_count_logged": 1
+    },
+    {
+      "pair_id": "p17_deque_queue",
+      "panic_session": "experiments/unicaa01_corpus/out/unicaa01_corpus_p17_deque_queue_panic_latest.json",
+      "neutral_session": "experiments/unicaa01_corpus/out/unicaa01_corpus_p17_deque_queue_neutral_latest.json",
+      "panic_task_slug": "unicaa01_p17_panic",
+      "demo_panic_pass": true,
+      "demo_neutral_pass": true,
+      "inject_count_logged": 1
+    },
+    {
+      "pair_id": "p27_base64_pad",
+      "panic_session": "experiments/unicaa01_corpus/out/unicaa01_corpus_p27_base64_pad_panic_latest.json",
+      "neutral_session": "experiments/unicaa01_corpus/out/unicaa01_corpus_p27_base64_pad_neutral_latest.json",
+      "panic_task_slug": "unicaa01_p27_panic",
+      "demo_panic_pass": true,
+      "demo_neutral_pass": false,
+      "inject_count_logged": 1
+    },
+    {
+      "pair_id": "p29_cron_field",
+      "panic_session": "experiments/unicaa01_corpus/out/unicaa01_corpus_p29_cron_field_panic_latest.json",
+      "neutral_session": "experiments/unicaa01_corpus/out/unicaa01_corpus_p29_cron_field_neutral_latest.json",
+      "panic_task_slug": "unicaa01_p29_panic",
+      "demo_panic_pass": true,
+      "demo_neutral_pass": false,
+      "inject_count_logged": 1
+    },
+    {
+      "pair_id": "p30_ini_parse",
+      "panic_session": "experiments/unicaa01_corpus/out/unicaa01_corpus_p30_ini_parse_panic_latest.json",
+      "neutral_session": "experiments/unicaa01_corpus/out/unicaa01_corpus_p30_ini_parse_neutral_latest.json",
+      "panic_task_slug": "unicaa01_p30_panic",
+      "demo_panic_pass": true,
+      "demo_neutral_pass": false,
+      "inject_count_logged": 1
+    },
+    {
+      "pair_id": "p32_xml_escape",
+      "panic_session": "experiments/unicaa01_corpus/out/unicaa01_corpus_p32_xml_escape_panic_latest.json",
+      "neutral_session": "experiments/unicaa01_corpus/out/unicaa01_corpus_p32_xml_escape_neutral_latest.json",
+      "panic_task_slug": "unicaa01_p32_panic",
+      "demo_panic_pass": true,
+      "demo_neutral_pass": false,
+      "inject_count_logged": 1
+    },
+    {
+      "pair_id": "p33_html_strip",
+      "panic_session": "experiments/unicaa01_corpus/out/unicaa01_corpus_p33_html_strip_panic_latest.json",
+      "neutral_session": "experiments/unicaa01_corpus/out/unicaa01_corpus_p33_html_strip_neutral_latest.json",
+      "panic_task_slug": "unicaa01_p33_panic",
+      "demo_panic_pass": true,
+      "demo_neutral_pass": false,
+      "inject_count_logged": 1
+    },
+    {
+      "pair_id": "p37_hash_chain",
+      "panic_session": "experiments/unicaa01_corpus/out/unicaa01_corpus_p37_hash_chain_panic_latest.json",
+      "neutral_session": "experiments/unicaa01_corpus/out/unicaa01_corpus_p37_hash_chain_neutral_latest.json",
+      "panic_task_slug": "unicaa01_p37_panic",
+      "demo_panic_pass": true,
+      "demo_neutral_pass": false,
+      "inject_count_logged": 1
+    },
+    {
+      "pair_id": "p45_producer_consumer",
+      "panic_session": "experiments/unicaa01_corpus/out/unicaa01_corpus_p45_producer_consumer_panic_latest.json",
+      "neutral_session": "experiments/unicaa01_corpus/out/unicaa01_corpus_p45_producer_consumer_neutral_latest.json",
+      "panic_task_slug": "unicaa01_p45_panic",
+      "demo_panic_pass": true,
+      "demo_neutral_pass": false,
+      "inject_count_logged": 1
+    },
+    {
+      "pair_id": "p46_circuit_breaker",
+      "panic_session": "experiments/unicaa01_corpus/out/unicaa01_corpus_p46_circuit_breaker_panic_latest.json",
+      "neutral_session": "experiments/unicaa01_corpus/out/unicaa01_corpus_p46_circuit_breaker_neutral_latest.json",
+      "panic_task_slug": "unicaa01_p46_panic",
+      "demo_panic_pass": null,
+      "demo_neutral_pass": null,
+      "inject_count_logged": 1
+    }
+  ],
   "live_cast_pairs": 15,
   "demo_panic_pass": 12,
   "demo_neutral_pass": 5,
@@ -22,7 +178,18 @@
     "cast_inject_live": true,
     "caa_alpha0_4c": true,
     "cast_oneoff_panic": true,
-    "cast_oneoff_b02": true
+    "cast_oneoff_b02": true,
+    "caa_steering_status": true
   },
-  "repro_command": "python research/compute_resume_stats.py"
+  "gate_artifact_paths": {
+    "cast_stream_live": "artifacts/gates/cast_stream_live_gate.json",
+    "cast_inject_live": "artifacts/gates/cast_inject_live_gate.json",
+    "caa_alpha0_4c": "artifacts/gates/caa_alpha0_4c_gate.json",
+    "cast_oneoff_panic": "artifacts/gates/cast_oneoff_panic_live_proof.json",
+    "cast_oneoff_b02": "artifacts/gates/cast_oneoff_b02_live_proof.json",
+    "caa_steering_status": "artifacts/gates/caa_steering_status.json"
+  },
+  "production_ready": false,
+  "repro_command": "python research/compute_resume_stats.py",
+  "reviewer_doc": "docs/FOR_REVIEWERS.md"
 }

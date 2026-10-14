@@ -81,21 +81,37 @@ def main() -> None:
     pan_ok = neu_ok = 0
     pan_tok: list[int] = []
     neu_tok: list[int] = []
+    pair_rows: list[dict] = []
     for pid in live:
         pan_p = OUT / f"unicaa01_corpus_{pid}_panic_latest.json"
         neu_p = OUT / f"unicaa01_corpus_{pid}_neutral_latest.json"
         pan_d = json.loads(pan_p.read_text(encoding="utf-8"))
         pan_tok.append((pan_d.get("invocations") or [{}])[0].get("completion_tokens") or 0)
         slug_p = pan_d.get("task_slug") or ""
-        r = run_demo(slug_p, pid)
-        if r is True:
+        r_pan = run_demo(slug_p, pid)
+        if r_pan is True:
             pan_ok += 1
+        r_neu: bool | None = None
         if neu_p.is_file():
             neu_d = json.loads(neu_p.read_text(encoding="utf-8"))
             neu_tok.append((neu_d.get("invocations") or [{}])[0].get("completion_tokens") or 0)
             slug_n = neu_d.get("task_slug") or ""
-            if run_demo(slug_n, pid) is True:
+            r_neu = run_demo(slug_n, pid)
+            if r_neu is True:
                 neu_ok += 1
+        pair_rows.append(
+            {
+                "pair_id": pid,
+                "panic_session": str(pan_p.relative_to(ROOT)).replace("\\", "/"),
+                "neutral_session": str(neu_p.relative_to(ROOT)).replace("\\", "/")
+                if neu_p.is_file()
+                else None,
+                "panic_task_slug": slug_p,
+                "demo_panic_pass": r_pan,
+                "demo_neutral_pass": r_neu,
+                "inject_count_logged": inject_count(pan_p),
+            }
+        )
 
     n = len(live)
     print("live_cast_pairs", n)
@@ -129,16 +145,28 @@ def main() -> None:
         alpha_0 = meta.get("alpha_0")
         n_pairs = meta.get("n_pairs")
 
-    gates = {
-        "cast_stream_live": _gate_pass(ROOT / "artifacts/gates/cast_stream_live_gate.json"),
-        "cast_inject_live": _gate_pass(ROOT / "artifacts/gates/cast_inject_live_gate.json"),
-        "caa_alpha0_4c": _gate_pass(ROOT / "artifacts/gates/caa_alpha0_4c_gate.json"),
-        "cast_oneoff_panic": _gate_pass(ROOT / "artifacts/gates/cast_oneoff_panic_live_proof.json"),
-        "cast_oneoff_b02": _gate_pass(ROOT / "artifacts/gates/cast_oneoff_b02_live_proof.json"),
+    gate_files = {
+        "cast_stream_live": "artifacts/gates/cast_stream_live_gate.json",
+        "cast_inject_live": "artifacts/gates/cast_inject_live_gate.json",
+        "caa_alpha0_4c": "artifacts/gates/caa_alpha0_4c_gate.json",
+        "cast_oneoff_panic": "artifacts/gates/cast_oneoff_panic_live_proof.json",
+        "cast_oneoff_b02": "artifacts/gates/cast_oneoff_b02_live_proof.json",
+        "caa_steering_status": "artifacts/gates/caa_steering_status.json",
     }
+    gates = {k: _gate_pass(ROOT / v) for k, v in gate_files.items()}
 
     snapshot = {
         "verified_at_utc": datetime.now(timezone.utc).isoformat(),
+        "headline_inclusion_rule": (
+            "Corpus panic _latest.json with cast_enabled=true, cast_alpha_0=0.85, "
+            "and inject_applied on at least one token in the richest invocation."
+        ),
+        "demo_scoring_rule": (
+            "Run on-disk main.py demo() via ORACLES in compute_resume_stats.py; "
+            "full Aider session output, not inv1-only."
+        ),
+        "live_cast_pair_ids": live,
+        "pair_details": pair_rows,
         "live_cast_pairs": n,
         "demo_panic_pass": pan_ok,
         "demo_neutral_pass": neu_ok,
@@ -153,11 +181,22 @@ def main() -> None:
         "caa_natural_pairs": n_pairs,
         "corpus_scan": scan,
         "gates_pass": gates,
+        "gate_artifact_paths": gate_files,
+        "production_ready": _read_json_field(
+            ROOT / "artifacts/gates/caa_steering_status.json", "production_ready"
+        ),
         "repro_command": "python research/compute_resume_stats.py",
+        "reviewer_doc": "docs/FOR_REVIEWERS.md",
     }
     out = ROOT / "docs/resume_metrics_snapshot.json"
     out.write_text(json.dumps(snapshot, indent=2) + "\n", encoding="utf-8")
     print("wrote", out.relative_to(ROOT))
+
+
+def _read_json_field(path: Path, key: str):
+    if not path.is_file():
+        return None
+    return json.loads(path.read_text(encoding="utf-8")).get(key)
 
 
 def _gate_pass(path: Path) -> bool | None:
