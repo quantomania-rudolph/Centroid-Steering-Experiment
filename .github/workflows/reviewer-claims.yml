@@ -1,0 +1,32 @@
+name: reviewer-claims
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install package
+        run: pip install -e .
+
+      - name: Reviewer unit tests
+        run: >
+          pytest
+          tests/unit/test_unicaa01_corpus_policy.py
+          tests/unit/test_cast_run_preflight.py
+          tests/unit/test_aider_watchdog.py
+          tests/unit/test_cast_oneoff_task.py
+          -q
+
+      - name: Frozen headline metrics (snapshot)
+        run: python research/validate_resume_snapshot.py

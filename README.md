@@ -1,6 +1,10 @@
 # Centroid Steering Experiment
 
+[![reviewer-claims](https://github.com/quantomania-rudolph/centroid-steering-experiment/actions/workflows/reviewer-claims.yml/badge.svg)](https://github.com/quantomania-rudolph/centroid-steering-experiment/actions/workflows/reviewer-claims.yml)
+
 **Portfolio demonstration** of **activation steering** for a local coding LLM (Qwen2.5-Coder-7B + Aider on Intel Arc). Shows end-to-end skills: contrast vectors, **gated** mid-generation injection, agent instrumentation, and measured outcomes—not a shipped copilot or formal benchmark.
+
+**GitHub About:** Portfolio — conditional activation steering for a coding agent. Reviewers → [docs/FOR_REVIEWERS.md](docs/FOR_REVIEWERS.md).
 
 | | |
 |---|---|
@@ -82,8 +86,8 @@ Python package name: **`jlens-qwen`** (Jacobian lens tooling; legacy *J-Lens*). 
 ## Setup
 
 ```powershell
-git clone https://github.com/quantomania-rudolph/J-Do-It.git
-cd J-Do-It
+git clone https://github.com/quantomania-rudolph/centroid-steering-experiment.git
+cd centroid-steering-experiment
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install torch==2.10.0 torchvision==0.25.0 torchaudio==2.10.0 --index-url https://download.pytorch.org/whl/xpu

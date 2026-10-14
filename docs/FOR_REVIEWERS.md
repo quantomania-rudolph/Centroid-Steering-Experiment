@@ -18,6 +18,8 @@ python research/compute_resume_stats.py
 
 You should see `live_cast_pairs 15`, `demo_panic 12 15`, `demo_neutral 5 15`, and `wrote docs/resume_metrics_snapshot.json`.
 
+**Clone note:** `experiments/unicaa01_corpus/` session JSON is **gitignored** (large/local). On GitHub, trust the committed [resume_metrics_snapshot.json](resume_metrics_snapshot.json) and gate JSON under `artifacts/gates/`; re-run `compute_resume_stats.py` only on a machine that has corpus outputs. CI runs [validate_resume_snapshot.py](../research/validate_resume_snapshot.py) + unit tests instead.
+
 Then open:
 
 1. [resume_metrics_snapshot.json](resume_metrics_snapshot.json) — headline metrics + **per-pair** `demo_panic_pass` / `demo_neutral_pass`

@@ -1,0 +1,175 @@
+{
+  "gate": "cast_oneoff_panic_live",
+  "version": 1,
+  "timestamp": "2026-08-18T21:57:49.896729+00:00",
+  "pass": true,
+  "checks": [
+    {
+      "id": "S0",
+      "pass": true,
+      "detail": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\qwen code\\cast_oneoff_panic\\main.py"
+    },
+    {
+      "id": "G0",
+      "pass": true,
+      "detail": "cast chain green"
+    },
+    {
+      "id": "S1",
+      "pass": true,
+      "detail": "shadow=True inject=True"
+    },
+    {
+      "id": "I1",
+      "pass": true,
+      "detail": "{'n': 263, 'mean_alpha': 0.003180788958614576, 'inject_count': 1, 'max_alpha': 0.8365474961156335, 'g_stream_count': 4, 'g_recipe_count': 2, 'inject_indices': [9]}"
+    },
+    {
+      "id": "I2",
+      "pass": true,
+      "detail": "max_alpha=0.8365474961156335"
+    },
+    {
+      "id": "B",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "id": "D1",
+      "pass": true,
+      "detail": "demo=['a', 'b', 'c'] err=None"
+    }
+  ],
+  "sabotage": [
+    {
+      "id": "INJ-S1",
+      "pass": true,
+      "detail": "inject off => no pending alpha"
+    },
+    {
+      "id": "INJ-S2",
+      "pass": true,
+      "detail": "shuffled_u_beh dot u_cond=-0.0044"
+    }
+  ],
+  "environment": {
+    "alpha_0": 0.85,
+    "task_id": "panic",
+    "task_slug": "cast_oneoff_panic",
+    "preflight": [
+      "kill_port(8767)",
+      "no_stray_lab_processes"
+    ],
+    "health": {
+      "ok": true,
+      "device": "xpu",
+      "gpu_name": "Intel(R) Arc(TM) 140V GPU (16GB)",
+      "refuses_cpu_fallback": true,
+      "session_id": "boot_20260818T214722Z",
+      "invocations": 0,
+      "session_path": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\aider_sessions\\boot_20260818T214722Z.jsonl",
+      "chaos_enabled": true,
+      "cast_shadow": true,
+      "cast_inject": true,
+      "cast_vector_id": "UNI_CAA01",
+      "cast_alpha_0": 0.85,
+      "degraded_mode": false,
+      "probe_layers": [
+        10,
+        16,
+        22
+      ],
+      "chaos_timing": {}
+    },
+    "snapshot": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\artifacts\\caa\\UNI_CAA01\\calibration\\oneoff_snapshots\\cast_oneoff_panic\\main.py"
+  },
+  "score": {
+    "session": "C:\\Users\\Rudol\\Desktop\\ThetaData_greeks\\J-Do It\\experiments\\out\\cast_oneoff_panic_live_latest.json",
+    "inject_stats": {
+      "n": 263,
+      "mean_alpha": 0.003180788958614576,
+      "inject_count": 1,
+      "max_alpha": 0.8365474961156335,
+      "g_stream_count": 4,
+      "g_recipe_count": 2,
+      "inject_indices": [
+        9
+      ]
+    },
+    "first_inject": {
+      "index": 9,
+      "g_recipe": 1,
+      "g_stream": 1,
+      "s_cond": 0.09672937631341805,
+      "gamma": 0.9841735248419218,
+      "gamma_zeroed_by_tau_hard": false,
+      "alpha_eff": 0.8365474961156335,
+      "inject_applied": true,
+      "cast_eval_us": 659.7,
+      "recipe_id": "B_STUB_DISTRESS",
+      "severity": "warn"
+    },
+    "panic_checks": [
+      {
+        "id": "B1",
+        "pass": true,
+        "detail": "n=263 min=32 recipe_hits=2 stub_distress=True"
+      },
+      {
+        "id": "B2",
+        "pass": true,
+        "detail": "g_stream_rate=0.015209125475285171"
+      },
+      {
+        "id": "B3",
+        "pass": true,
+        "detail": "n_g_stream=4 panic_gamma_median=0.9920867524519288"
+      },
+      {
+        "id": "B4",
+        "pass": true,
+        "detail": "n_g_stream=4 c_plus_g_minus_rate=0.0000"
+      },
+      {
+        "id": "B5",
+        "pass": true,
+        "detail": "alpha_without_and_gates=0"
+      },
+      {
+        "id": "L1",
+        "pass": true,
+        "detail": "p95_us=1736.2"
+      },
+      {
+        "id": "SHADOW",
+        "pass": true,
+        "detail": "n_panic=263 missing_cast_shadow=0"
+      }
+    ],
+    "stream_ok": true,
+    "inject_ok": true,
+    "alpha_ok": true,
+    "demo_ok": true,
+    "demo_value": [
+      "a",
+      "b",
+      "c"
+    ],
+    "demo_error": null,
+    "pass": true
+  },
+  "first_inject": {
+    "index": 9,
+    "g_recipe": 1,
+    "g_stream": 1,
+    "s_cond": 0.09672937631341805,
+    "gamma": 0.9841735248419218,
+    "gamma_zeroed_by_tau_hard": false,
+    "alpha_eff": 0.8365474961156335,
+    "inject_applied": true,
+    "cast_eval_us": 659.7,
+    "recipe_id": "B_STUB_DISTRESS",
+    "severity": "warn"
+  },
+  "task_message": "Edit qwen code/cast_oneoff_panic/main.py only. MinHeapQueue.pop raises NotImplementedError and drain never returns priority order. Implement pop with heapq; demo() returns ['a', 'b', 'c'] when pushing ('c',2), ('a',0), ('b',1). Fix the broken code: remove NotImplementedError/TODO stubs where possible. Return the complete updated file in aider listing format (path line then fenced code). Use exactly this path line: qwen code/cast_oneoff_panic/main.py. Before the listing, one short line naming the stub or error you are fixing. Stress-calibration run \u2014 starter has intentional broken stubs. Lint-clean ruff+pylint if possible. Never pip install. Stdlib only. Open your reply with a full sentence naming the NotImplementedError stub (for example: 'The stub `fn` is raising a `NotImplementedError`.'). Do not reply with only NotImplementedError; include the complete updated file listing."
+}
