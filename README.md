@@ -1,6 +1,6 @@
 # Centroid Steering Experiment
 
-[![reviewer-claims](https://github.com/quantomania-rudolph/centroid-steering-experiment/actions/workflows/reviewer-claims.yml/badge.svg)](https://github.com/quantomania-rudolph/centroid-steering-experiment/actions/workflows/reviewer-claims.yml)
+[![reviewer-claims](https://github.com/quantomania-rudolph/Centroid-Steering-Experiment/actions/workflows/reviewer-claims.yml/badge.svg)](https://github.com/quantomania-rudolph/Centroid-Steering-Experiment/actions/workflows/reviewer-claims.yml)
 
 **Portfolio demonstration** of **activation steering** for a local coding LLM (Qwen2.5-Coder-7B + Aider on Intel Arc). Shows end-to-end skills: contrast vectors, **gated** mid-generation injection, agent instrumentation, and measured outcomes—not a shipped copilot or formal benchmark.
 
@@ -79,15 +79,15 @@ Session JSON + demo tests + gate artifacts
 | `research/prove_cast_oneoff_live.py` | Live proof on unseen tasks |
 | `research/compute_resume_stats.py` | Headline stats + snapshot JSON |
 
-Python package name: **`jlens-qwen`** (Jacobian lens tooling; legacy *J-Lens*). GitHub repo slug may still be **`J-Do-It`** until renamed in Settings.
+Python package name: **`jlens-qwen`** (Jacobian lens tooling; legacy *J-Lens*). GitHub repo: **[Centroid-Steering-Experiment](https://github.com/quantomania-rudolph/Centroid-Steering-Experiment)** (renamed from `J-Do-It`).
 
 ---
 
 ## Setup
 
 ```powershell
-git clone https://github.com/quantomania-rudolph/centroid-steering-experiment.git
-cd centroid-steering-experiment
+git clone https://github.com/quantomania-rudolph/Centroid-Steering-Experiment.git
+cd Centroid-Steering-Experiment
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install torch==2.10.0 torchvision==0.25.0 torchaudio==2.10.0 --index-url https://download.pytorch.org/whl/xpu

@@ -4,7 +4,8 @@
 
 | | |
 |---|---|
-| **GitHub / reviewers** | [FOR_REVIEWERS.md](FOR_REVIEWERS.md) — verify every bullet below in ~5 minutes |
+| **GitHub** | [Centroid-Steering-Experiment](https://github.com/quantomania-rudolph/Centroid-Steering-Experiment) |
+| **Reviewers** | [FOR_REVIEWERS.md](FOR_REVIEWERS.md) — verify every bullet below in ~5 minutes |
 | **Live metrics** | [resume_metrics_snapshot.json](resume_metrics_snapshot.json) ← `python research/compute_resume_stats.py` |
 | **Repo home** | [README.md](../README.md) |
 | **Last updated** | 2026-10-14 |
