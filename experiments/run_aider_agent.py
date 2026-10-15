@@ -11,6 +11,7 @@ import json
 import os
 import subprocess
 import sys
+import threading
 import time
 import urllib.error
 import urllib.request
@@ -19,6 +20,15 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 QWEN_CODE = ROOT / "qwen code"
 SERVER = "http://127.0.0.1:8767"
+
+sys.path.insert(0, str(ROOT / "src"))
+from jlens_qwen.caa.cast_run_preflight import assert_aider_path_under_qwen_code
+
+# Empirical floor from cast_alpha0_4c sessions: healthy first LLM call ~187–333s on XPU.
+# 60s wall would fail every successful run; these caps kill 12–20min balloon generations.
+DEFAULT_AIDER_WALL_S = 600.0
+DEFAULT_MAX_INVOCATIONS = 3
+DEFAULT_PER_INVOCATION_TIMEOUT_S = 360.0
 
 
 def _http_json(method: str, url: str, payload: dict | None = None, timeout: float = 3600.0):
@@ -51,18 +61,12 @@ def wait_for_server(timeout_s: float = 900.0) -> dict:
 
 
 def _rel_aider_files(task_dir: Path, files: list[str]) -> list[str]:
-    """Files are relative to qwen-code git root."""
+    """Paths relative to the enclosing git repo (ROOT), not QWEN_CODE alone."""
     rel_files = []
     for f in files:
         p = Path(f)
-        if p.is_absolute():
-            rel_files.append(str(p.relative_to(QWEN_CODE)))
-        else:
-            candidate = task_dir / f
-            if candidate.is_file() or not (QWEN_CODE / f).exists():
-                rel_files.append(str(candidate.relative_to(QWEN_CODE)))
-            else:
-                rel_files.append(f)
+        candidate = p if p.is_absolute() else task_dir / f
+        rel_files.append(candidate.relative_to(ROOT).as_posix())
     return rel_files
 
 
@@ -73,6 +77,7 @@ def aider_argv(
     files: list[str],
     architect: bool,
     no_auto_lint: bool = False,
+    no_auto_commits: bool = False,
     server: str = SERVER,
     conf: Path | None = None,
 ) -> list[str]:
@@ -92,8 +97,11 @@ def aider_argv(
         "dummy-local-key",
         "--no-stream",
         "--yes-always",
-        "--auto-commits",
     ]
+    if no_auto_commits:
+        cmd.append("--no-auto-commits")
+    else:
+        cmd.append("--auto-commits")
     if no_auto_lint:
         cmd.append("--no-auto-lint")
     else:
@@ -148,6 +156,73 @@ def _kill_process_tree(proc: subprocess.Popen) -> None:
             os.killpg(os.getpgid(proc.pid), signal.SIGKILL)
 
 
+def _session_status() -> dict:
+    try:
+        with urllib.request.urlopen(f"{SERVER}/session/status", timeout=5) as resp:
+            return json.loads(resp.read().decode("utf-8"))
+    except (urllib.error.URLError, TimeoutError, OSError, json.JSONDecodeError):
+        return {}
+
+
+def _should_kill_on_invocation_stall(
+    *,
+    inv: int,
+    stall_s: float,
+    per_invocation_timeout_s: float,
+    generation_in_flight: bool,
+) -> bool:
+    """Stall between completed invocations only — not during first call or active generation."""
+    if generation_in_flight or inv == 0:
+        return False
+    return stall_s >= per_invocation_timeout_s
+
+
+def _watch_aider(
+    proc: subprocess.Popen,
+    *,
+    aider_timeout_s: float,
+    max_invocations: int,
+    per_invocation_timeout_s: float,
+    stop: threading.Event,
+) -> None:
+    """Kill Aider if it exceeds wall time, invocation count, or per-call stall."""
+    t0 = time.perf_counter()
+    last_inv = 0
+    last_inv_change = t0
+    while not stop.wait(15.0):
+        if proc.poll() is not None:
+            return
+        elapsed = time.perf_counter() - t0
+        if elapsed >= aider_timeout_s:
+            print(f"Aider watchdog: wall timeout {elapsed:.0f}s >= {aider_timeout_s:.0f}s", flush=True)
+            _kill_process_tree(proc)
+            return
+        status = _session_status()
+        inv = int(status.get("invocations") or 0)
+        in_flight = bool(status.get("generation_in_flight"))
+        stall_s = time.perf_counter() - last_inv_change
+        if inv > last_inv:
+            last_inv = inv
+            last_inv_change = time.perf_counter()
+        elif _should_kill_on_invocation_stall(
+            inv=inv,
+            stall_s=stall_s,
+            per_invocation_timeout_s=per_invocation_timeout_s,
+            generation_in_flight=in_flight,
+        ):
+            print(
+                f"Aider watchdog: no new invocation for {stall_s:.0f}s "
+                f"(inv={inv}, limit={per_invocation_timeout_s:.0f}s)",
+                flush=True,
+            )
+            _kill_process_tree(proc)
+            return
+        if inv >= max_invocations:
+            print(f"Aider watchdog: invocations {inv} >= {max_invocations}", flush=True)
+            _kill_process_tree(proc)
+            return
+
+
 def run_aider(
     *,
     task_dir: Path,
@@ -155,14 +230,21 @@ def run_aider(
     files: list[str],
     architect: bool,
     no_auto_lint: bool = False,
-    aider_timeout_s: float = 1200.0,
+    no_auto_commits: bool = False,
+    aider_timeout_s: float = DEFAULT_AIDER_WALL_S,
+    max_invocations: int = DEFAULT_MAX_INVOCATIONS,
+    per_invocation_timeout_s: float = DEFAULT_PER_INVOCATION_TIMEOUT_S,
 ) -> dict:
+    for f in files:
+        candidate = Path(f) if Path(f).is_absolute() else task_dir / f
+        assert_aider_path_under_qwen_code(candidate, QWEN_CODE)
     cmd = aider_argv(
         task_dir=task_dir,
         message=message,
         files=files,
         architect=architect,
         no_auto_lint=no_auto_lint,
+        no_auto_commits=no_auto_commits,
     )
 
     env = os.environ.copy()
@@ -176,7 +258,8 @@ def run_aider(
 
     t0 = time.perf_counter()
     popen_kw: dict = {
-        "cwd": str(QWEN_CODE),
+        # Git root is ROOT; file args are ROOT-relative (qwen code/...).
+        "cwd": str(ROOT),
         "env": env,
         "stdout": subprocess.PIPE,
         "stderr": subprocess.PIPE,
@@ -191,12 +274,28 @@ def run_aider(
 
     proc = subprocess.Popen(cmd, **popen_kw)
     timed_out = False
+    stop_watch = threading.Event()
+    watcher = threading.Thread(
+        target=_watch_aider,
+        kwargs={
+            "proc": proc,
+            "aider_timeout_s": aider_timeout_s,
+            "max_invocations": max_invocations,
+            "per_invocation_timeout_s": per_invocation_timeout_s,
+            "stop": stop_watch,
+        },
+        daemon=True,
+    )
+    watcher.start()
     try:
-        stdout, stderr = proc.communicate(timeout=aider_timeout_s)
+        stdout, stderr = proc.communicate(timeout=aider_timeout_s + 30)
     except subprocess.TimeoutExpired:
         timed_out = True
         _kill_process_tree(proc)
         stdout, stderr = proc.communicate(timeout=30)
+    finally:
+        stop_watch.set()
+        watcher.join(timeout=5)
     return {
         "returncode": proc.returncode,
         "seconds": time.perf_counter() - t0,
@@ -227,10 +326,30 @@ def main() -> int:
         help="Pass --no-auto-lint to Aider and skip lint-cmd hooks",
     )
     parser.add_argument(
+        "--no-auto-commits",
+        action="store_true",
+        help="Pass --no-auto-commits to Aider (avoids git index.lock failures)",
+    )
+    parser.add_argument(
         "--aider-timeout-s",
         type=float,
-        default=1200.0,
-        help="Kill Aider process tree after this many seconds (default 1200)",
+        default=DEFAULT_AIDER_WALL_S,
+        help=f"Kill Aider process tree after this many seconds (default {DEFAULT_AIDER_WALL_S:.0f})",
+    )
+    parser.add_argument(
+        "--max-invocations",
+        type=int,
+        default=DEFAULT_MAX_INVOCATIONS,
+        help=f"Kill Aider if server logs this many LLM invocations (default {DEFAULT_MAX_INVOCATIONS})",
+    )
+    parser.add_argument(
+        "--per-invocation-timeout-s",
+        type=float,
+        default=DEFAULT_PER_INVOCATION_TIMEOUT_S,
+        help=(
+            f"Kill Aider if one LLM call stalls this long (default {DEFAULT_PER_INVOCATION_TIMEOUT_S:.0f}; "
+            "healthy XPU calls need ~200–330s)"
+        ),
     )
     args = parser.parse_args()
 
@@ -268,7 +387,10 @@ def main() -> int:
         files=files,
         architect=args.architect,
         no_auto_lint=bool(args.no_auto_lint),
+        no_auto_commits=bool(args.no_auto_commits),
         aider_timeout_s=float(args.aider_timeout_s),
+        max_invocations=int(args.max_invocations),
+        per_invocation_timeout_s=float(args.per_invocation_timeout_s),
     )
     print(
         f"Aider done rc={result['returncode']} in {result['seconds']:.1f}s"
