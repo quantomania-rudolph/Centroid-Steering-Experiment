@@ -26,7 +26,7 @@ jobs:
           tests/unit/test_cast_run_preflight.py
           tests/unit/test_aider_watchdog.py
           tests/unit/test_cast_oneoff_task.py
-          -q
+          -v --tb=short
 
       - name: Frozen headline metrics (snapshot)
         run: python research/validate_resume_snapshot.py
